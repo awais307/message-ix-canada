@@ -1,0 +1,4 @@
+windcf.csv filter=lfs diff=lfs merge=lfs -text
+solarcf.csv filter=lfs diff=lfs merge=lfs -text
+**/windcf.csv filter=lfs diff=lfs merge=lfs -text
+**/solarcf.csv filter=lfs diff=lfs merge=lfs -text
