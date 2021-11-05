@@ -1,5 +1,7 @@
 import pandas as pd
 
+"""This function creates a dictionary of provincial parameter dataframes by copying national ones"""
+
 def generator(msg):
     
     provinces = ['Alberta',
