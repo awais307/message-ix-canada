@@ -3,7 +3,7 @@ import pandas as pd
 def generator(msg):
     """This function creates a dictionary of provincial parameter dataframes by copying national ones
     
-       msg: message_ix.Scenario
+       msg: message_ix.Scenario() instance
     """
     # Province names for creating dataframes
     provinces = ['Alberta',
@@ -63,20 +63,20 @@ def generator(msg):
         node_stuff = []
         year_stuff = []
 
-            # Iterate through columns of parameter dataframe
-            for col in msg.par(par).columns:
+        # Iterate through columns of parameter dataframe
+        for col in msg.par(par).columns:
 
-                # Check for node column (or some variation including string 'node')
-                if 'node' in col:
-                    node_stuff.append(col)
-                    
-                # Check for year column, make sure it contains integers
-                if 'year' in col and msg.par(par).dtypes[col] == 'int64':
-                    year_stuff.append(col)
+            # Check for node column (or some variation including string 'node')
+            if 'node' in col:
+                node_stuff.append(col)
 
-            if len(node_stuff) != 0:
-                # Add parameter and column values to dictionary
-                pars_to_change[par] = [node_stuff, year_stuff]
+            # Check for year column, make sure it contains integers
+            if 'year' in col and msg.par(par).dtypes[col] == 'int64':
+                year_stuff.append(col)
+
+        if len(node_stuff) != 0:
+            # Add parameter and column values to dictionary
+            pars_to_change[par] = [node_stuff, year_stuff]
     
     # Create dictionary with key = <parameter name> and value = provincial dataframe
     dfs = dict.fromkeys(pars_to_change.keys())
@@ -84,6 +84,8 @@ def generator(msg):
     for par in dfs:    
         # Copy canadian dataframe
         can_df = msg.par(par).copy()
+        
+        dfs[par] = can_df
         
         # Only need data for years after (and including) 2010
         for year_data in pars_to_change[par][1]:
@@ -101,7 +103,7 @@ def generator(msg):
 
             # Change node values to province
             for node_data in pars_to_change[par][0]:
-                df[node_data] = region
+                df[node_data] = prov
 
             # Append provincial data to parameter dataframe
             dfs[par] = dfs[par].append(df)
