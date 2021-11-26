@@ -26,31 +26,31 @@ def generator(msg):
     # Parameters already found with data
     found_pars = ['demand', 'historical_activity', 'historical_new_capacity']
 
-    # Economic parameters to skip for now
-    econ_pars = ['MERtoPPP', 
-             'abs_cost_activity_soft_lo',
-             'abs_cost_activity_soft_up',
-             'cost_MESSAGE',
-             'depr',
-             'drate',
-             'esub',
-             'fix_cost',
-             'gdp_calibrate',
-             'grow',
-             'interestrate',
-             'inv_cost',
-             'kgdp',
-             'kpvs',
-             'level_cost_activity_soft_lo',
-             'level_cost_activity_soft_up',
-             'level_cost_new_capacity_soft_up',
-             'price_MESSAGE',
-             'relation_cost',
-             'resource_cost',
-             'var_cost']
+#     # Economic parameters to skip for now
+#     econ_pars = ['MERtoPPP', 
+#              'abs_cost_activity_soft_lo',
+#              'abs_cost_activity_soft_up',
+#              'cost_MESSAGE',
+#              'depr',
+#              'drate',
+#              'esub',
+#              'fix_cost',
+#              'gdp_calibrate',
+#              'grow',
+#              'interestrate',
+#              'inv_cost',
+#              'kgdp',
+#              'kpvs',
+#              'level_cost_activity_soft_lo',
+#              'level_cost_activity_soft_up',
+#              'level_cost_new_capacity_soft_up',
+#              'price_MESSAGE',
+#              'relation_cost',
+#              'resource_cost',
+#              'var_cost']
 
     # Filter out un-needed parameters
-    filtered = [x for x in total_pars if x not in found_pars if x not in econ_pars]
+    filtered = [x for x in total_pars if x not in found_pars]
     filtered.sort()
     
     # Create dictionary to store parameter : <columns containing 'node'> pairs
@@ -87,19 +87,18 @@ def generator(msg):
         
         dfs[par] = can_df
         
-        # Only need data for years after (and including) 2010
-        for year_data in pars_to_change[par][1]:
-            can_df = can_df[can_df[year_data] >= 2010]
+#         # Only need data for years after (and including) 2010
+#         for year_data in pars_to_change[par][1]:
+#             can_df = can_df[can_df[year_data] >= 2010]
 
         for prov in provinces:
             
             # Create copy of Canadian dataframe
             df = msg.par(par).copy()
 
-            # Only need data for years after (and including) 2010
-            for year_data in pars_to_change[par][1]:
-
-                df = df[df[year_data] >= 2010]
+#             # Only need data for years after (and including) 2010
+#             for year_data in pars_to_change[par][1]:
+#                 df = df[df[year_data] >= 2010]
 
             # Change node values to province
             for node_data in pars_to_change[par][0]:
