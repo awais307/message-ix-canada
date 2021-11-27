@@ -204,10 +204,10 @@ def format_hist_act(DATA):
     pyam_msg_can.rename(unit = {'GWa': 'Gwa'}, inplace = True)
     
     # Read in gdp data for downscaling
-    gdp = pd.read_excel(DATA / 'provincial_sources' / 'pop_gdp_proj.xlsx',
-                        sheet_name = 'gdp_pop_proj')
+    gdp = pd.read_excel(DATA / 'provincial_sources' / 'pop_gdp.xlsx',
+                        sheet_name = 'pop_gdp_proj')
     
-    gdp = gdp[(gdp['variable'] == 'GDP (PPP)') & 
+    gdp = gdp[(gdp['variable'] == 'GDP') & 
               (gdp['year'] == 2015)].reset_index(drop = True)
     
     pyam_gdp = pyam.IamDataFrame(gdp,
@@ -254,7 +254,7 @@ def format_hist_act(DATA):
         pyam_total.downscale_region(value, region = 'Canada', proxy = 'loil_ppl', append = True)
     
     for value in downscale_dict['other']:
-        pyam_total.downscale_region(value, region = 'Canada', proxy = 'GDP (PPP)', append = True)
+        pyam_total.downscale_region(value, region = 'Canada', proxy = 'GDP', append = True)
     
     final = pyam_total.filter(variable = total_vars)
     
@@ -358,12 +358,35 @@ def format_hist_cap(DATA):
     
     hist_cap.to_csv(DATA / 'historical_capacity.csv', index = False)
 
+def format_gdp_pop(DATA):
+
+    msg_years = list(range(1990, 2061, 5))
+
+    data = pd.read_excel(DATA / 'provincial_sources' / 'pop_gdp.xlsx',
+                         sheet_name = 'pop_gdp_proj')
+
+    msg_data = data[(data['year'].isin(msg_years)) &
+                    (data['region'] != 'NWT and Nunavut')].set_index(['region', 'variable', 'year']).sort_index().reset_index()
+
+    gdp_pop_bound = make_df('bound_activity_lo',
+                            node_loc = msg_data['region'],
+                            technology = msg_data['variable'],
+                            year_act = msg_data['year'],
+                            mode = 'P',
+                            time = 'year',
+                            value = msg_data['value'],
+                            unit = msg_data['unit'])
+
+    gdp_pop_bound.to_csv(DATA / 'gdp_pop_bound.csv', index = False)
+
+    
 def main():
     
     DATA = Path().cwd().parent.parent / 'data'
     format_demand(DATA)
     format_hist_act(DATA)
     format_hist_cap(DATA)
+    format_gdp_pop(DATA)
 
 if __name__ == '__main__':
     main()
