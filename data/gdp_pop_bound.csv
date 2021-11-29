@@ -1,0 +1,421 @@
+node_loc,technology,year_act,mode,time,value,unit
+Alberta,GDP,1990,P,year,80.638696844641,Million 2005 USD
+Alberta,GDP,1995,P,year,92.434023548053,Million 2005 USD
+Alberta,GDP,2000,P,year,119.873158875533,Million 2005 USD
+Alberta,GDP,2005,P,year,217.884033613445,Million 2005 USD
+Alberta,GDP,2010,P,year,237.564705882353,Million 2005 USD
+Alberta,GDP,2015,P,year,283.251260504202,Million 2005 USD
+Alberta,GDP,2020,P,year,270.105882352941,Million 2005 USD
+Alberta,GDP,2025,P,year,319.232773109244,Million 2005 USD
+Alberta,GDP,2030,P,year,356.228571428571,Million 2005 USD
+Alberta,GDP,2035,P,year,385.173109243697,Million 2005 USD
+Alberta,GDP,2040,P,year,412.649579831933,Million 2005 USD
+Alberta,GDP,2045,P,year,442.305882352941,Million 2005 USD
+Alberta,GDP,2050,P,year,472.014285714286,Million 2005 USD
+Alberta,GDP,2055,P,year,503.718116370392,Million 2005 USD
+Alberta,GDP,2060,P,year,537.551401385596,Million 2005 USD
+Alberta,Population,1990,P,year,2.547788,million persons
+Alberta,Population,1995,P,year,2.734519,million persons
+Alberta,Population,2000,P,year,3.004198,million persons
+Alberta,Population,2005,P,year,3.3218,million persons
+Alberta,Population,2010,P,year,3.7321,million persons
+Alberta,Population,2015,P,year,4.1445,million persons
+Alberta,Population,2020,P,year,4.4311,million persons
+Alberta,Population,2025,P,year,4.7081,million persons
+Alberta,Population,2030,P,year,5.0727,million persons
+Alberta,Population,2035,P,year,5.3565,million persons
+Alberta,Population,2040,P,year,5.6391,million persons
+Alberta,Population,2045,P,year,5.9134,million persons
+Alberta,Population,2050,P,year,6.1771,million persons
+Alberta,Population,2055,P,year,6.45255934149559,million persons
+Alberta,Population,2060,P,year,6.74030241626685,million persons
+BritishColumbia,GDP,1990,P,year,104.196872309591,Million 2005 USD
+BritishColumbia,GDP,1995,P,year,127.685840255701,Million 2005 USD
+BritishColumbia,GDP,2000,P,year,161.172885250845,Million 2005 USD
+BritishColumbia,GDP,2005,P,year,163.411764705882,Million 2005 USD
+BritishColumbia,GDP,2010,P,year,177.940336134454,Million 2005 USD
+BritishColumbia,GDP,2015,P,year,202.948739495798,Million 2005 USD
+BritishColumbia,GDP,2020,P,year,216.857142857143,Million 2005 USD
+BritishColumbia,GDP,2025,P,year,252.13025210084,Million 2005 USD
+BritishColumbia,GDP,2030,P,year,288.881512605042,Million 2005 USD
+BritishColumbia,GDP,2035,P,year,328.198319327731,Million 2005 USD
+BritishColumbia,GDP,2040,P,year,364.711764705882,Million 2005 USD
+BritishColumbia,GDP,2045,P,year,403.005882352941,Million 2005 USD
+BritishColumbia,GDP,2050,P,year,432.58487394958,Million 2005 USD
+BritishColumbia,GDP,2055,P,year,464.334843147751,Million 2005 USD
+BritishColumbia,GDP,2060,P,year,498.415130867884,Million 2005 USD
+BritishColumbia,Population,1990,P,year,3.292111,million persons
+BritishColumbia,Population,1995,P,year,3.77739,million persons
+BritishColumbia,Population,2000,P,year,4.03923,million persons
+BritishColumbia,Population,2005,P,year,4.1961,million persons
+BritishColumbia,Population,2010,P,year,4.4655,million persons
+BritishColumbia,Population,2015,P,year,4.7764,million persons
+BritishColumbia,Population,2020,P,year,5.124,million persons
+BritishColumbia,Population,2025,P,year,5.4535,million persons
+BritishColumbia,Population,2030,P,year,5.7976,million persons
+BritishColumbia,Population,2035,P,year,6.1597,million persons
+BritishColumbia,Population,2040,P,year,6.4694,million persons
+BritishColumbia,Population,2045,P,year,6.7641,million persons
+BritishColumbia,Population,2050,P,year,7.0451,million persons
+BritishColumbia,Population,2055,P,year,7.33777354119543,million persons
+BritishColumbia,Population,2060,P,year,7.64260557577149,million persons
+Canada,GDP,1990,P,year,876.437632356035,Million 2005 USD
+Canada,GDP,1995,P,year,990.496136609902,Million 2005 USD
+Canada,GDP,2000,P,year,1224.41842631601,Million 2005 USD
+Canada,GDP,2005,P,year,1382.18066092437,Million 2005 USD
+Canada,GDP,2010,P,year,1463.60034201681,Million 2005 USD
+Canada,GDP,2015,P,year,1627.78827731092,Million 2005 USD
+Canada,GDP,2020,P,year,1654.10647184874,Million 2005 USD
+Canada,GDP,2025,P,year,1893.69847689076,Million 2005 USD
+Canada,GDP,2030,P,year,2089.6787710084,Million 2005 USD
+Canada,GDP,2035,P,year,2286.52252184874,Million 2005 USD
+Canada,GDP,2040,P,year,2461.21234411765,Million 2005 USD
+Canada,GDP,2045,P,year,2654.34247436975,Million 2005 USD
+Canada,GDP,2050,P,year,2838.91875,Million 2005 USD
+Canada,GDP,2055,P,year,3036.32999393389,Million 2005 USD
+Canada,GDP,2060,P,year,3247.46871746948,Million 2005 USD
+Canada,Population,1990,P,year,27.691138,million persons
+Canada,Population,1995,P,year,29.302311,million persons
+Canada,Population,2000,P,year,30.68573,million persons
+Canada,Population,2005,P,year,32.2438,million persons
+Canada,Population,2010,P,year,34.0049,million persons
+Canada,Population,2015,P,year,35.7029,million persons
+Canada,Population,2020,P,year,38.0358,million persons
+Canada,Population,2025,P,year,40.0902,million persons
+Canada,Population,2030,P,year,42.0595,million persons
+Canada,Population,2035,P,year,43.8629,million persons
+Canada,Population,2040,P,year,45.3994,million persons
+Canada,Population,2045,P,year,46.8225,million persons
+Canada,Population,2050,P,year,48.2094,million persons
+Canada,Population,2055,P,year,49.6373804978376,million persons
+Canada,Population,2060,P,year,51.1076583132565,million persons
+Manitoba,GDP,1990,P,year,34.987098182698,Million 2005 USD
+Manitoba,GDP,1995,P,year,38.1682766472948,Million 2005 USD
+Manitoba,GDP,2000,P,year,45.7799497666147,Million 2005 USD
+Manitoba,GDP,2005,P,year,42.2873949579832,Million 2005 USD
+Manitoba,GDP,2010,P,year,47.6697478991597,Million 2005 USD
+Manitoba,GDP,2015,P,year,53.4689075630252,Million 2005 USD
+Manitoba,GDP,2020,P,year,54.1134453781513,Million 2005 USD
+Manitoba,GDP,2025,P,year,59.2394957983193,Million 2005 USD
+Manitoba,GDP,2030,P,year,64.4689075630252,Million 2005 USD
+Manitoba,GDP,2035,P,year,69.318487394958,Million 2005 USD
+Manitoba,GDP,2040,P,year,73.0050420168067,Million 2005 USD
+Manitoba,GDP,2045,P,year,77.5159663865546,Million 2005 USD
+Manitoba,GDP,2050,P,year,81.846218487395,Million 2005 USD
+Manitoba,GDP,2055,P,year,86.4183702139632,Million 2005 USD
+Manitoba,GDP,2060,P,year,91.245934735369,Million 2005 USD
+Manitoba,Population,1990,P,year,1.105421,million persons
+Manitoba,Population,1995,P,year,1.12915,million persons
+Manitoba,Population,2000,P,year,1.147313,million persons
+Manitoba,Population,2005,P,year,1.1783,million persons
+Manitoba,Population,2010,P,year,1.2208,million persons
+Manitoba,Population,2015,P,year,1.2922,million persons
+Manitoba,Population,2020,P,year,1.3819,million persons
+Manitoba,Population,2025,P,year,1.4467,million persons
+Manitoba,Population,2030,P,year,1.519,million persons
+Manitoba,Population,2035,P,year,1.5968,million persons
+Manitoba,Population,2040,P,year,1.6597,million persons
+Manitoba,Population,2045,P,year,1.7172,million persons
+Manitoba,Population,2050,P,year,1.7771,million persons
+Manitoba,Population,2055,P,year,1.83908945376194,million persons
+Manitoba,Population,2060,P,year,1.90324124637802,million persons
+NewBrunswick,GDP,1990,P,year,23.4262879414386,Million 2005 USD
+NewBrunswick,GDP,1995,P,year,25.3838729755564,Million 2005 USD
+NewBrunswick,GDP,2000,P,year,29.9470419658719,Million 2005 USD
+NewBrunswick,GDP,2005,P,year,25.8117647058824,Million 2005 USD
+NewBrunswick,GDP,2010,P,year,26.9327731092437,Million 2005 USD
+NewBrunswick,GDP,2015,P,year,26.8521008403361,Million 2005 USD
+NewBrunswick,GDP,2020,P,year,27.1033613445378,Million 2005 USD
+NewBrunswick,GDP,2025,P,year,29.2436974789916,Million 2005 USD
+NewBrunswick,GDP,2030,P,year,31.2873949579832,Million 2005 USD
+NewBrunswick,GDP,2035,P,year,32.7067226890756,Million 2005 USD
+NewBrunswick,GDP,2040,P,year,33.7,Million 2005 USD
+NewBrunswick,GDP,2045,P,year,34.5243697478992,Million 2005 USD
+NewBrunswick,GDP,2050,P,year,35.1420168067227,Million 2005 USD
+NewBrunswick,GDP,2055,P,year,35.770713680273,Million 2005 USD
+NewBrunswick,GDP,2060,P,year,36.4106580516828,Million 2005 USD
+NewBrunswick,Population,1990,P,year,0.740156,million persons
+NewBrunswick,Population,1995,P,year,0.750943,million persons
+NewBrunswick,Population,2000,P,year,0.750517,million persons
+NewBrunswick,Population,2005,P,year,0.7481,million persons
+NewBrunswick,Population,2010,P,year,0.753,million persons
+NewBrunswick,Population,2015,P,year,0.7588,million persons
+NewBrunswick,Population,2020,P,year,0.7813,million persons
+NewBrunswick,Population,2025,P,year,0.8057,million persons
+NewBrunswick,Population,2030,P,year,0.831,million persons
+NewBrunswick,Population,2035,P,year,0.8475,million persons
+NewBrunswick,Population,2040,P,year,0.8564,million persons
+NewBrunswick,Population,2045,P,year,0.8604,million persons
+NewBrunswick,Population,2050,P,year,0.861,million persons
+NewBrunswick,Population,2055,P,year,0.861600418410042,million persons
+NewBrunswick,Population,2060,P,year,0.862201255521904,million persons
+NewfoundlandandLabrador,GDP,1990,P,year,18.2739706442595,Million 2005 USD
+NewfoundlandandLabrador,GDP,1995,P,year,19.1795294379358,Million 2005 USD
+NewfoundlandandLabrador,GDP,2000,P,year,21.0668378711655,Million 2005 USD
+NewfoundlandandLabrador,GDP,2005,P,year,25.3672268907563,Million 2005 USD
+NewfoundlandandLabrador,GDP,2010,P,year,27.427731092437,Million 2005 USD
+NewfoundlandandLabrador,GDP,2015,P,year,27.7016806722689,Million 2005 USD
+NewfoundlandandLabrador,GDP,2020,P,year,25.7058823529412,Million 2005 USD
+NewfoundlandandLabrador,GDP,2025,P,year,27.7201680672269,Million 2005 USD
+NewfoundlandandLabrador,GDP,2030,P,year,25.2243697478992,Million 2005 USD
+NewfoundlandandLabrador,GDP,2035,P,year,25.8899159663866,Million 2005 USD
+NewfoundlandandLabrador,GDP,2040,P,year,25.4210084033613,Million 2005 USD
+NewfoundlandandLabrador,GDP,2045,P,year,23.9764705882353,Million 2005 USD
+NewfoundlandandLabrador,GDP,2050,P,year,23.3529411764706,Million 2005 USD
+NewfoundlandandLabrador,GDP,2055,P,year,22.7456272008313,Million 2005 USD
+NewfoundlandandLabrador,GDP,2060,P,year,22.1541069644996,Million 2005 USD
+NewfoundlandandLabrador,Population,1990,P,year,0.577368,million persons
+NewfoundlandandLabrador,Population,1995,P,year,0.567397,million persons
+NewfoundlandandLabrador,Population,2000,P,year,0.527966,million persons
+NewfoundlandandLabrador,Population,2005,P,year,0.5143,million persons
+NewfoundlandandLabrador,Population,2010,P,year,0.522,million persons
+NewfoundlandandLabrador,Population,2015,P,year,0.5281,million persons
+NewfoundlandandLabrador,Population,2020,P,year,0.5203,million persons
+NewfoundlandandLabrador,Population,2025,P,year,0.5125,million persons
+NewfoundlandandLabrador,Population,2030,P,year,0.506,million persons
+NewfoundlandandLabrador,Population,2035,P,year,0.5017,million persons
+NewfoundlandandLabrador,Population,2040,P,year,0.4981,million persons
+NewfoundlandandLabrador,Population,2045,P,year,0.487,million persons
+NewfoundlandandLabrador,Population,2050,P,year,0.4805,million persons
+NewfoundlandandLabrador,Population,2055,P,year,0.474086755646817,million persons
+NewfoundlandandLabrador,Population,2060,P,year,0.467759109010874,million persons
+NorthwestTerritories,GDP,1990,P,year,1.18655554678645,Million 2005 USD
+NorthwestTerritories,GDP,1995,P,year,1.40051192317294,Million 2005 USD
+NorthwestTerritories,GDP,2000,P,year,1.61522824769924,Million 2005 USD
+NorthwestTerritories,GDP,2005,P,year,4.49243697478992,Million 2005 USD
+NorthwestTerritories,GDP,2010,P,year,4.06974789915966,Million 2005 USD
+NorthwestTerritories,GDP,2015,P,year,4.01596638655462,Million 2005 USD
+NorthwestTerritories,GDP,2020,P,year,3.70588235294118,Million 2005 USD
+NorthwestTerritories,GDP,2025,P,year,4.12689075630252,Million 2005 USD
+NorthwestTerritories,GDP,2030,P,year,4.37226890756303,Million 2005 USD
+NorthwestTerritories,GDP,2035,P,year,4.59663865546218,Million 2005 USD
+NorthwestTerritories,GDP,2040,P,year,4.7563025210084,Million 2005 USD
+NorthwestTerritories,GDP,2045,P,year,4.94201680672269,Million 2005 USD
+NorthwestTerritories,GDP,2050,P,year,5.13025210084034,Million 2005 USD
+NorthwestTerritories,GDP,2055,P,year,5.32565704397727,Million 2005 USD
+NorthwestTerritories,GDP,2060,P,year,5.52850471917722,Million 2005 USD
+NorthwestTerritories,Population,1990,P,year,0.037489345707809,million persons
+NorthwestTerritories,Population,1995,P,year,0.041432,million persons
+NorthwestTerritories,Population,2000,P,year,0.04048,million persons
+NorthwestTerritories,Population,2005,P,year,0.0434,million persons
+NorthwestTerritories,Population,2010,P,year,0.0433,million persons
+NorthwestTerritories,Population,2015,P,year,0.0442,million persons
+NorthwestTerritories,Population,2020,P,year,0.0451,million persons
+NorthwestTerritories,Population,2025,P,year,0.0467,million persons
+NorthwestTerritories,Population,2030,P,year,0.048,million persons
+NorthwestTerritories,Population,2035,P,year,0.0491,million persons
+NorthwestTerritories,Population,2040,P,year,0.0498,million persons
+NorthwestTerritories,Population,2045,P,year,0.0504,million persons
+NorthwestTerritories,Population,2050,P,year,0.0508,million persons
+NorthwestTerritories,Population,2055,P,year,0.051203174603175,million persons
+NorthwestTerritories,Population,2060,P,year,0.051609549004787,million persons
+NovaScotia,GDP,1990,P,year,28.8162053439691,Million 2005 USD
+NovaScotia,GDP,1995,P,year,31.3729273541047,Million 2005 USD
+NovaScotia,GDP,2000,P,year,37.2612168353447,Million 2005 USD
+NovaScotia,GDP,2005,P,year,29.8058823529412,Million 2005 USD
+NovaScotia,GDP,2010,P,year,31.9764705882353,Million 2005 USD
+NovaScotia,GDP,2015,P,year,32.2932773109244,Million 2005 USD
+NovaScotia,GDP,2020,P,year,33.3655462184874,Million 2005 USD
+NovaScotia,GDP,2025,P,year,37.0176470588235,Million 2005 USD
+NovaScotia,GDP,2030,P,year,39.7714285714286,Million 2005 USD
+NovaScotia,GDP,2035,P,year,42.5689075630252,Million 2005 USD
+NovaScotia,GDP,2040,P,year,44.7436974789916,Million 2005 USD
+NovaScotia,GDP,2045,P,year,46.5487394957983,Million 2005 USD
+NovaScotia,GDP,2050,P,year,48.2285714285714,Million 2005 USD
+NovaScotia,GDP,2055,P,year,49.9690244512586,Million 2005 USD
+NovaScotia,GDP,2060,P,year,51.7722862330373,Million 2005 USD
+NovaScotia,Population,1990,P,year,0.910451,million persons
+NovaScotia,Population,1995,P,year,0.92812,million persons
+NovaScotia,Population,2000,P,year,0.933821,million persons
+NovaScotia,Population,2005,P,year,0.9379,million persons
+NovaScotia,Population,2010,P,year,0.9421,million persons
+NovaScotia,Population,2015,P,year,0.9365,million persons
+NovaScotia,Population,2020,P,year,0.9784,million persons
+NovaScotia,Population,2025,P,year,1.0133,million persons
+NovaScotia,Population,2030,P,year,1.0376,million persons
+NovaScotia,Population,2035,P,year,1.056,million persons
+NovaScotia,Population,2040,P,year,1.066,million persons
+NovaScotia,Population,2045,P,year,1.0701,million persons
+NovaScotia,Population,2050,P,year,1.0732,million persons
+NovaScotia,Population,2055,P,year,1.07630898046911,million persons
+NovaScotia,Population,2060,P,year,1.0794269674231,million persons
+Nunavut,GDP,1990,P,year,0.678828416059988,Million 2005 USD
+Nunavut,GDP,1995,P,year,0.844322910238791,Million 2005 USD
+Nunavut,GDP,2000,P,year,1.09722199494155,Million 2005 USD
+Nunavut,GDP,2005,P,year,1.24453781512605,Million 2005 USD
+Nunavut,GDP,2010,P,year,1.71344537815126,Million 2005 USD
+Nunavut,GDP,2015,P,year,1.99327731092437,Million 2005 USD
+Nunavut,GDP,2020,P,year,2.62773109243698,Million 2005 USD
+Nunavut,GDP,2025,P,year,2.76554621848739,Million 2005 USD
+Nunavut,GDP,2030,P,year,2.96218487394958,Million 2005 USD
+Nunavut,GDP,2035,P,year,3.1344537815126,Million 2005 USD
+Nunavut,GDP,2040,P,year,3.40840336134454,Million 2005 USD
+Nunavut,GDP,2045,P,year,3.7218487394958,Million 2005 USD
+Nunavut,GDP,2050,P,year,4.04789915966387,Million 2005 USD
+Nunavut,GDP,2055,P,year,4.40251303953508,Million 2005 USD
+Nunavut,GDP,2060,P,year,4.78819266458354,Million 2005 USD
+Nunavut,Population,1990,P,year,0.021447654292191,million persons
+Nunavut,Population,1995,P,year,0.024978,million persons
+Nunavut,Population,2000,P,year,0.027498,million persons
+Nunavut,Population,2005,P,year,0.0303,million persons
+Nunavut,Population,2010,P,year,0.0334,million persons
+Nunavut,Population,2015,P,year,0.0365,million persons
+Nunavut,Population,2020,P,year,0.0393,million persons
+Nunavut,Population,2025,P,year,0.0414,million persons
+Nunavut,Population,2030,P,year,0.0432,million persons
+Nunavut,Population,2035,P,year,0.0449,million persons
+Nunavut,Population,2040,P,year,0.0466,million persons
+Nunavut,Population,2045,P,year,0.0481,million persons
+Nunavut,Population,2050,P,year,0.0494,million persons
+Nunavut,Population,2055,P,year,0.050735135135135,million persons
+Nunavut,Population,2060,P,year,0.052106355003652,million persons
+Ontario,GDP,1990,P,year,325.867958955515,Million 2005 USD
+Ontario,GDP,1995,P,year,370.143179659744,Million 2005 USD
+Ontario,GDP,2000,P,year,466.185277521297,Million 2005 USD
+Ontario,GDP,2005,P,year,538.331092436975,Million 2005 USD
+Ontario,GDP,2010,P,year,551.347058823529,Million 2005 USD
+Ontario,GDP,2015,P,year,609.198319327731,Million 2005 USD
+Ontario,GDP,2020,P,year,624.791596638655,Million 2005 USD
+Ontario,GDP,2025,P,year,713.631092436975,Million 2005 USD
+Ontario,GDP,2030,P,year,786.501680672269,Million 2005 USD
+Ontario,GDP,2035,P,year,862.086554621849,Million 2005 USD
+Ontario,GDP,2040,P,year,933.973109243698,Million 2005 USD
+Ontario,GDP,2045,P,year,1014.65630252101,Million 2005 USD
+Ontario,GDP,2050,P,year,1096.87058823529,Million 2005 USD
+Ontario,GDP,2055,P,year,1185.74642895959,Million 2005 USD
+Ontario,GDP,2060,P,year,1281.82358873572,Million 2005 USD
+Ontario,Population,1990,P,year,10.295832,million persons
+Ontario,Population,1995,P,year,10.950119,million persons
+Ontario,Population,2000,P,year,11.68329,million persons
+Ontario,Population,2005,P,year,12.5287,million persons
+Ontario,Population,2010,P,year,13.1358,million persons
+Ontario,Population,2015,P,year,13.7071,million persons
+Ontario,Population,2020,P,year,14.7864,million persons
+Ontario,Population,2025,P,year,15.7179,million persons
+Ontario,Population,2030,P,year,16.5259,million persons
+Ontario,Population,2035,P,year,17.258,million persons
+Ontario,Population,2040,P,year,17.8895,million persons
+Ontario,Population,2045,P,year,18.4632,million persons
+Ontario,Population,2050,P,year,19.0042,million persons
+Ontario,Population,2055,P,year,19.5610521274752,million persons
+Ontario,Population,2060,P,year,20.1342208740069,million persons
+PrinceEdwardIsland,GDP,1990,P,year,4.1273483599611,Million 2005 USD
+PrinceEdwardIsland,GDP,1995,P,year,4.54358491391413,Million 2005 USD
+PrinceEdwardIsland,GDP,2000,P,year,5.44541005344653,Million 2005 USD
+PrinceEdwardIsland,GDP,2005,P,year,4.30420168067227,Million 2005 USD
+PrinceEdwardIsland,GDP,2010,P,year,4.54789915966387,Million 2005 USD
+PrinceEdwardIsland,GDP,2015,P,year,4.84873949579832,Million 2005 USD
+PrinceEdwardIsland,GDP,2020,P,year,5.33109243697479,Million 2005 USD
+PrinceEdwardIsland,GDP,2025,P,year,6.12773109243698,Million 2005 USD
+PrinceEdwardIsland,GDP,2030,P,year,6.75378151260504,Million 2005 USD
+PrinceEdwardIsland,GDP,2035,P,year,7.53025210084034,Million 2005 USD
+PrinceEdwardIsland,GDP,2040,P,year,8.14201680672269,Million 2005 USD
+PrinceEdwardIsland,GDP,2045,P,year,8.73025210084034,Million 2005 USD
+PrinceEdwardIsland,GDP,2050,P,year,9.37142857142857,Million 2005 USD
+PrinceEdwardIsland,GDP,2055,P,year,10.0596950070817,Million 2005 USD
+PrinceEdwardIsland,GDP,2060,P,year,10.7985098391544,Million 2005 USD
+PrinceEdwardIsland,Population,1990,P,year,0.130404,million persons
+PrinceEdwardIsland,Population,1995,P,year,0.134415,million persons
+PrinceEdwardIsland,Population,2000,P,year,0.13647,million persons
+PrinceEdwardIsland,Population,2005,P,year,0.1381,million persons
+PrinceEdwardIsland,Population,2010,P,year,0.1417,million persons
+PrinceEdwardIsland,Population,2015,P,year,0.1445,million persons
+PrinceEdwardIsland,Population,2020,P,year,0.1592,million persons
+PrinceEdwardIsland,Population,2025,P,year,0.1716,million persons
+PrinceEdwardIsland,Population,2030,P,year,0.1841,million persons
+PrinceEdwardIsland,Population,2035,P,year,0.1964,million persons
+PrinceEdwardIsland,Population,2040,P,year,0.2063,million persons
+PrinceEdwardIsland,Population,2045,P,year,0.2148,million persons
+PrinceEdwardIsland,Population,2050,P,year,0.224,million persons
+PrinceEdwardIsland,Population,2055,P,year,0.233594040968343,million persons
+PrinceEdwardIsland,Population,2060,P,year,0.243598999892499,million persons
+Quebec,GDP,1990,P,year,221.457920706196,Million 2005 USD
+Quebec,GDP,1995,P,year,244.028825195419,Million 2005 USD
+Quebec,GDP,2000,P,year,293.55620237498,Million 2005 USD
+Quebec,GDP,2005,P,year,270.927731092437,Million 2005 USD
+Quebec,GDP,2010,P,year,289.860504201681,Million 2005 USD
+Quebec,GDP,2015,P,year,310.068907563025,Million 2005 USD
+Quebec,GDP,2020,P,year,320.347899159664,Million 2005 USD
+Quebec,GDP,2025,P,year,361.836134453782,Million 2005 USD
+Quebec,GDP,2030,P,year,394.774789915966,Million 2005 USD
+Quebec,GDP,2035,P,year,430.063865546219,Million 2005 USD
+Quebec,GDP,2040,P,year,455.38487394958,Million 2005 USD
+Quebec,GDP,2045,P,year,485.439495798319,Million 2005 USD
+Quebec,GDP,2050,P,year,514.613445378151,Million 2005 USD
+Quebec,GDP,2055,P,year,545.540691386175,Million 2005 USD
+Quebec,GDP,2060,P,year,578.326603455554,Million 2005 USD
+Quebec,Population,1990,P,year,6.996986,million persons
+Quebec,Population,1995,P,year,7.219219,million persons
+Quebec,Population,2000,P,year,7.356951,million persons
+Quebec,Population,2005,P,year,7.5815,million persons
+Quebec,Population,2010,P,year,7.9292,million persons
+Quebec,Population,2015,P,year,8.1753,million persons
+Quebec,Population,2020,P,year,8.5629,million persons
+Quebec,Population,2025,P,year,8.8774,million persons
+Quebec,Population,2030,P,year,9.1328,million persons
+Quebec,Population,2035,P,year,9.3639,million persons
+Quebec,Population,2040,P,year,9.5282,million persons
+Quebec,Population,2045,P,year,9.6718,million persons
+Quebec,Population,2050,P,year,9.8165,million persons
+Quebec,Population,2055,P,year,9.9633648596952,million persons
+Quebec,Population,2060,P,year,10.1124269675963,million persons
+Saskatchewan,GDP,1990,P,year,31.8950368143501,Million 2005 USD
+Saskatchewan,GDP,1995,P,year,34.2822211292477,Million 2005 USD
+Saskatchewan,GDP,2000,P,year,40.2037413387621,Million 2005 USD
+Saskatchewan,GDP,2005,P,year,57.4453781512605,Million 2005 USD
+Saskatchewan,GDP,2010,P,year,61.2193277310924,Million 2005 USD
+Saskatchewan,GDP,2015,P,year,70.6487394957983,Million 2005 USD
+Saskatchewan,GDP,2020,P,year,67.2949579831933,Million 2005 USD
+Saskatchewan,GDP,2025,P,year,77.6201680672269,Million 2005 USD
+Saskatchewan,GDP,2030,P,year,85.3327731092437,Million 2005 USD
+Saskatchewan,GDP,2035,P,year,92.0336134453781,Million 2005 USD
+Saskatchewan,GDP,2040,P,year,97.8966386554622,Million 2005 USD
+Saskatchewan,GDP,2045,P,year,105.365546218487,Million 2005 USD
+Saskatchewan,GDP,2050,P,year,111.931932773109,Million 2005 USD
+Saskatchewan,GDP,2055,P,year,118.90753689393,Million 2005 USD
+Saskatchewan,GDP,2060,P,year,126.317861041868,Million 2005 USD
+Saskatchewan,Population,1990,P,year,1.007727,million persons
+Saskatchewan,Population,1995,P,year,1.014187,million persons
+Saskatchewan,Population,2000,P,year,1.007565,million persons
+Saskatchewan,Population,2005,P,year,0.9935,million persons
+Saskatchewan,Population,2010,P,year,1.0514,million persons
+Saskatchewan,Population,2015,P,year,1.121,million persons
+Saskatchewan,Population,2020,P,year,1.1844,million persons
+Saskatchewan,Population,2025,P,year,1.2517,million persons
+Saskatchewan,Population,2030,P,year,1.316,million persons
+Saskatchewan,Population,2035,P,year,1.3852,million persons
+Saskatchewan,Population,2040,P,year,1.4419,million persons
+Saskatchewan,Population,2045,P,year,1.5125,million persons
+Saskatchewan,Population,2050,P,year,1.6001,million persons
+Saskatchewan,Population,2055,P,year,1.69277356033058,million persons
+Saskatchewan,Population,2060,P,year,1.7908145281884,million persons
+Yukon,GDP,1990,P,year,0.884852290569556,Million 2005 USD
+Yukon,GDP,1995,P,year,1.02902065951995,Million 2005 USD
+Yukon,GDP,2000,P,year,1.21425421950928,Million 2005 USD
+Yukon,GDP,2005,P,year,1.4655462184874,Million 2005 USD
+Yukon,GDP,2010,P,year,1.96890756302521,Million 2005 USD
+Yukon,GDP,2015,P,year,2.02436974789916,Million 2005 USD
+Yukon,GDP,2020,P,year,2.43109243697479,Million 2005 USD
+Yukon,GDP,2025,P,year,2.63613445378151,Million 2005 USD
+Yukon,GDP,2030,P,year,2.7109243697479,Million 2005 USD
+Yukon,GDP,2035,P,year,2.77478991596639,Million 2005 USD
+Yukon,GDP,2040,P,year,2.93781512605042,Million 2005 USD
+Yukon,GDP,2045,P,year,3.08991596638655,Million 2005 USD
+Yukon,GDP,2050,P,year,3.23109243697479,Million 2005 USD
+Yukon,GDP,2055,P,year,3.37871917872398,Million 2005 USD
+Yukon,GDP,2060,P,year,3.53309090078698,Million 2005 USD
+Yukon,Population,1990,P,year,0.027957,million persons
+Yukon,Population,1995,P,year,0.030442,million persons
+Yukon,Population,2000,P,year,0.030431,million persons
+Yukon,Population,2005,P,year,0.0319,million persons
+Yukon,Population,2010,P,year,0.0346,million persons
+Yukon,Population,2015,P,year,0.0377,million persons
+Yukon,Population,2020,P,year,0.0415,million persons
+Yukon,Population,2025,P,year,0.0437,million persons
+Yukon,Population,2030,P,year,0.0456,million persons
+Yukon,Population,2035,P,year,0.0472,million persons
+Yukon,Population,2040,P,year,0.0485,million persons
+Yukon,Population,2045,P,year,0.0494,million persons
+Yukon,Population,2050,P,year,0.0502,million persons
+Yukon,Population,2055,P,year,0.051012955465587,million persons
+Yukon,Population,2060,P,year,0.051839076201872,million persons
