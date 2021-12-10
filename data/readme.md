@@ -1,13 +1,16 @@
-This folder contains initial data used in MESSAGEix Canada 
+This folder contains input data for MESSAGEix Canada.
 
-| File/Directory| Description           | Source  |
-| ------------- |:-------------:| -----:|
+## Contents
+|Filename/Directory|Description|Source|
+|-|:-:|-:|
+| provincial\_sources/ | Contains data sources for demand.csv, historical\_activity.csv and historical\_capacity.csv | Various |
 | Canada_map.xlsx | A mapping excel file used for model |  |
-| MESSAGE_CANADA.csv | A sample csv output in pyam format |  |
-| Canada_GDP_1997-2020 | Canadian GDP from 1997-2020 | World Development Indicators |
-| GDP_Growth_2020-2022 | National and Provincial GDP growth projections from 2020-2022 | TD |
-| Pop_Projection_2020-2043 | Population projections for Canada and by province, 2020-2043 | StatCan |
-| provincial_sources | Data used for creating provincial MESSAGE parameters | Various |
-| demand.csv | Provincial/national useful energy demand data for MESSAGE | Various |
-| historical_activity.csv | Provincial/national energy technology data for MESSAGE | Various |
-| historical_capacity.csv | Provincial/national energy technology data for MESSAGE | Various |
+| demand.csv | Useful energy demand input data | Various |
+| historical\_activity.csv | Energy activity (generation, production, imports/exports, etc.) input data | Found in provincial\_sources/ |
+| historical\_capacity.csv | Energy generation and import/export capacity input data | Found in provincial\_sources/ |
+| gdp\_pop\_bound.csv | GDP and Population input data | Found in provincial\_sources/ |
+| MESSAGE\_CANADA.csv and MESSAGE\_CANADA_V1.csv | Sample csv outputs in pyam format |  |
+| MESSAGE\_CA\_\_test\_\_v#.csv | Parameter input data for national model **(useful as a checklist for data gathering)** | |
+| OECD\_SSP\_GDP\_PPP.xlsx and OECD\_SSP\_POP.xlsx | Projections of GDP and population to 2100 for OECD regions | |
+| Policies.xlsx | Provincial and Federal climate policy commitments | Found in file |
+

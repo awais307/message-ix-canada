@@ -1,0 +1,1 @@
+This folder contains unformatted data for several parameters of MESSAGEix. The data is formatted by running the format.py file in model/functions/, which returns dataframes that can be added as parameters to a MESSAGEix scenario.
