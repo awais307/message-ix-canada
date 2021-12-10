@@ -13,6 +13,11 @@ MESSAGEix can be installed by following the instructions [here](https://docs.mes
 
 The following is meant to get a future co-op student up to speed on the provincial MESSAGEix model, and lists all necessary skills to ensure a smooth transition. The section title have links to relevant documentation when applicable.
 
+
+### Data Sources
+
+To add data to the MESSAGEix model, it must first be in the correct format. All raw data is found in data/provincial_sources, which is formatted by running model/functions/format.py. This function returns dataframes which can be added to the model as parameters (using msg.add\_par(df)).
+
 ### [MESSAGEix](https://docs.messageix.org/en/stable/index.html)
 
 The following are the most important things to know (many are covered in the tutorials linked above):
