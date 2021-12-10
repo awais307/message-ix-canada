@@ -1,7 +1,7 @@
 This folder contains input data for MESSAGEix Canada.
 
-## File Directory
-|Filename|Description|Source|
+## Contents
+|Filename/Directory|Description|Source|
 |-|:-:|-:|
 | provincial\_sources/ | Contains data sources for demand.csv, historical\_activity.csv and historical\_capacity.csv | Various |
 | Canada_map.xlsx | A mapping excel file used for model |  |
