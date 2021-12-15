@@ -23,8 +23,8 @@ def generator(msg):
     # All (non-empty) parameters of the Canadian model
     total_pars = [par for par in msg.par_list() if not msg.par(par).empty]
 
-    # Parameters already found with data
-    found_pars = ['demand', 'historical_activity', 'historical_new_capacity']
+    # Parameters already found with data, and parameters manually copied
+    found_pars = ['demand', 'historical_activity', 'historical_new_capacity', 'output']
 
 #     # Economic parameters to skip for now
 #     econ_pars = ['MERtoPPP', 
@@ -81,6 +81,23 @@ def generator(msg):
     # Create dictionary with key = <parameter name> and value = provincial dataframe
     dfs = dict.fromkeys(pars_to_change.keys())
 
+    for prov in provinces:
+    
+        df = msg.par('output').copy()
+
+        df_world = df[df['node_dest'] == 'World'].copy()
+        df_other = df[df['node_dest'] != 'World'].copy()
+
+        df_world['node_loc'] = prov
+        df_other['node_loc'] = prov
+        df_other['node_dest'] = prov
+
+        df = df_other.append(df_world)
+
+        output_df = output_df.append(df)
+        
+    dfs['output'] = output_df
+    
     for par in dfs:    
         # Copy canadian dataframe
         can_df = msg.par(par).copy()
@@ -106,5 +123,8 @@ def generator(msg):
 
             # Append provincial data to parameter dataframe
             dfs[par] = dfs[par].append(df)
+        
+    # Generate output dataframe manually
+    output_df = pd.DataFrame(columns = msg.par('output').columns)
     
     return dfs
