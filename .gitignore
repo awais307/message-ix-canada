@@ -1,3 +1,4 @@
 
-*.pyc
 .DS_Store
+model/pre_process/__pycache__/__init__.cpython-38.pyc
+*.pyc
