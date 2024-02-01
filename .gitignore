@@ -2,3 +2,6 @@
 .DS_Store
 model/pre_process/__pycache__/__init__.cpython-38.pyc
 *.pyc
+ed_ma
+ssh_ma
+ssh_ma.pub
