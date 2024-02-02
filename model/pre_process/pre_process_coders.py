@@ -129,7 +129,7 @@ class CODERS_pull:
         if om_type == 'variable':
             cost_data['mode'] = 'M1'
             cost_data = cost_data[['node', 'technology', 'year_vtg', 'year_act', 'mode', 'value', 'unit']]
-        else:
+        elif om_type == 'fixed':
             cost_data = cost_data[['node', 'technology', 'year_vtg', 'year_act', 'value', 'unit']]
         
         if self.provincial:
@@ -142,12 +142,6 @@ class CODERS_pull:
                     i+=1
                 else:
                     result = pd.concat([result, prov_cost])
-        
-        if om_type == 'variable':
-            cost_data['mode'] = 'M1'
-            cost_data = cost_data[['node', 'technology', 'year_vtg', 'year_act', 'mode', 'value', 'unit']]
-        elif om_type == 'variable':
-            cost_data = cost_data[['node', 'technology', 'year_vtg', 'year_act', 'value', 'unit']]
 
         if om_type == 'fixed':
             result.to_csv(f'{self.root}\\data\\CODERS_data\\generator_fix_costs.csv', index=False)
@@ -156,12 +150,15 @@ class CODERS_pull:
 
 
     def CODERS_cost_evolution(self):
+        """
+        Pulls cost evolution data from CODERS, returns relative price change for each period
+        """
         cost_evolution = pd.DataFrame.from_dict(requests.get(f'{self.url}/generation_cost_evolution?key={self.key}').json())
         cost_evolution = cost_evolution.set_index(cost_evolution['gen_type'])
         cost_evolution = cost_evolution.loc[:, cost_evolution.columns.str.contains('CAD_per_kW')]
         base_cost = cost_evolution[f'{self.base_year}_CAD_per_kW']
         cost_series = pd.DataFrame()
-        for year in range(self.base_year, self.end_year+1, self.time_step):
+        for year in self.years:
             if year <= 2050:
                 cost_series[f'{year}'] = cost_evolution[f'{year}_CAD_per_kW'] / base_cost
             else:
@@ -169,7 +166,77 @@ class CODERS_pull:
         cost_series.index = cost_series.index.str.lower()
         cost_series = cost_series.drop(['hydro_annual'])
         return cost_series
+
+
+    def MESSAGE_create_generic_sheet(self, value):
+        """
+        Function for creating technical lifetime, construction time sheets in
+        MESSAGE format
+        """
+        data = {}
+
+        if value == 'technical_lifetime':
+            value = 'service_life'
+            unit = 'y'
+        elif value == 'construction_time':
+            unit = 'y'
+
+        for year in self.years:
+            for tech in self.gen_generic.index:
+                data[f'{tech}|{year}'] = self.gen_generic.loc[tech][value].copy()
+        data = pd.DataFrame.from_dict(data,orient='index').reset_index()
+        data.columns = ['index', 'value']
+        data[['technology', 'year_vtg']] = data['index'].str.split('|', expand=True)
+        data['node'] = 'Canada'
+        data['unit'] = unit
+        data = data[['node', 'technology', 'year_vtg', 'value', 'unit']]
+        
+        if self.provincial:
+            i = 0
+            for prov in self.provinces:
+                prov_data = data.copy()
+                prov_data['node'] = prov
+                if i == 0:
+                    result = pd.concat([data, prov_data])
+                    i+=1
+                else:
+                    result = pd.concat([result, prov_data])
+        pd.DataFrame.from_dict(result).to_csv(f'{self.root}\\data\\CODERS_data\\{value}.csv', index=False)
     
+    def MESSAGE_emission_factor(self):
+        """
+        Pulls emission factors from CODERS, creates csv in MESSAGE format
+        """
+        value = 'carbon_emissions'
+        unit = 'tC'
+        data = {}
+        for tech in self.gen_generic.index:
+            for year_vtg in self.years:
+                act_years = [year for year in self.years if year >= year_vtg and year <= self.end_year and year <= year_vtg + self.gen_generic.loc[tech].service_life]
+                for year_act in act_years:
+                    data[f'{tech}|{year_vtg}|{year_act}'] = self.gen_generic.loc[tech][value].copy()
+        data = pd.DataFrame.from_dict(data,orient='index').reset_index()
+        data.columns = ['index', 'value']
+        data[['technology', 'year_vtg', 'year_act']] = data['index'].str.split('|', expand=True)
+        data['node'] = 'Canada'
+        data['emission'] = 'TCE'
+        data['unit'] = unit
+        data['mode'] = 'M1'
+        data = data[['node', 'technology', 'year_vtg', 'year_act', 'mode', 'emission', 'value', 'unit']]
+        
+        if self.provincial:
+            i = 0
+            for prov in self.provinces:
+                prov_data= data.copy()
+                prov_data['node'] = prov
+                if i == 0:
+                    result = pd.concat([data, prov_data])
+                    i+=1
+                else:
+                    result = pd.concat([result, prov_data])
+
+        result.to_csv(f'{self.root}\\data\\CODERS_data\\{value}.csv', index=False)
+
 
     def MESSAGE_historical_capacity_raw(self, years=[2015,2020]):
         """
@@ -247,8 +314,11 @@ class CODERS_pull:
 
 if __name__ == '__main__':
     pull = CODERS_pull("vBiOGBwJ3hwNLpqh", base_year=2020, end_year=2060, time_step=5, provincial=True)
-    pull.MESSAGE_inv_costs(method='coders')
-    pull.MESSAGE_fix_var_cost(om_type='variable')
-    pull.MESSAGE_fix_var_cost(om_type='fixed')
+    #pull.MESSAGE_inv_costs(method='coders')
+    #pull.MESSAGE_fix_var_cost(om_type='variable')
+    #pull.MESSAGE_fix_var_cost(om_type='fixed')
+    #pull.MESSAGE_create_generic_sheet(value='technical_lifetime')
+    #pull.MESSAGE_create_generic_sheet(value='construction_time')
+    #pull.MESSAGE_emission_factor()
     #pull.MESSAGE_historical_capacity_raw([2015, 2020])
     #pull.MESSAGE_historical_activity_raw([2015, 2020])
