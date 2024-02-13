@@ -1,0 +1,7 @@
+# This file maps generator data for MESSAGE
+- technology: adipic_thermal
+  Description: Thermal destruction tech for adipic acid sector
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: 2
