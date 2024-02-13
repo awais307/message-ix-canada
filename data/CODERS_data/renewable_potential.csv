@@ -1,0 +1,1981 @@
+node,commodity,grade,level,year,value,unit
+British Columbia,wind_onshore,c1,renewable,2020,18.937963371181468,GWa
+British Columbia,wind_onshore,c2,renewable,2020,64.72619200123351,GWa
+British Columbia,wind_onshore,c3,renewable,2020,99.75784060409586,GWa
+British Columbia,wind_onshore,c4,renewable,2020,75.30567472966753,GWa
+British Columbia,wind_onshore,c5,renewable,2020,2.0759169368625896,GWa
+British Columbia,wind_onshore,c6,renewable,2020,0.9357621296112264,GWa
+British Columbia,wind_onshore,c7,renewable,2020,0.5003528474590442,GWa
+Alberta,wind_onshore,c1,renewable,2020,1.2620366288185318,GWa
+Alberta,wind_onshore,c2,renewable,2020,31.722658478719413,GWa
+Alberta,wind_onshore,c3,renewable,2020,88.74008970397094,GWa
+Alberta,wind_onshore,c4,renewable,2020,122.91940971249888,GWa
+Alberta,wind_onshore,c5,renewable,2020,10.798696566322176,GWa
+Alberta,wind_onshore,c6,renewable,2020,5.436943122396339,GWa
+Alberta,wind_onshore,c7,renewable,2020,2.8097143080408022,GWa
+Saskatchewan,wind_onshore,c1,renewable,2020,0.0,GWa
+Saskatchewan,wind_onshore,c2,renewable,2020,2.264480361890072,GWa
+Saskatchewan,wind_onshore,c3,renewable,2020,102.18150360555151,GWa
+Saskatchewan,wind_onshore,c4,renewable,2020,130.05520047104082,GWa
+Saskatchewan,wind_onshore,c5,renewable,2020,3.9076591984579627,GWa
+Saskatchewan,wind_onshore,c6,renewable,2020,0.7410593927879459,GWa
+Saskatchewan,wind_onshore,c7,renewable,2020,4.330804426551053,GWa
+Manitoba,wind_onshore,c1,renewable,2020,0.0,GWa
+Manitoba,wind_onshore,c2,renewable,2020,0.0,GWa
+Manitoba,wind_onshore,c3,renewable,2020,3.233677040084697,GWa
+Manitoba,wind_onshore,c4,renewable,2020,192.2237390167588,GWa
+Manitoba,wind_onshore,c5,renewable,2020,7.509274328915458,GWa
+Manitoba,wind_onshore,c6,renewable,2020,4.850755721247464,GWa
+Manitoba,wind_onshore,c7,renewable,2020,3.4367907070738806,GWa
+Ontario,wind_onshore,c1,renewable,2020,0.0,GWa
+Ontario,wind_onshore,c2,renewable,2020,10.58666915815701,GWa
+Ontario,wind_onshore,c3,renewable,2020,13.737942602015961,GWa
+Ontario,wind_onshore,c4,renewable,2020,15.487245101625215,GWa
+Ontario,wind_onshore,c5,renewable,2020,56.59426396004162,GWa
+Ontario,wind_onshore,c6,renewable,2020,17.260748813122518,GWa
+Ontario,wind_onshore,c7,renewable,2020,2.0610201382600892,GWa
+Quebec,wind_onshore,c1,renewable,2020,0.0,GWa
+Quebec,wind_onshore,c2,renewable,2020,0.0,GWa
+Quebec,wind_onshore,c3,renewable,2020,6.918898121880054,GWa
+Quebec,wind_onshore,c4,renewable,2020,6.6750872290096215,GWa
+Quebec,wind_onshore,c5,renewable,2020,25.1056324606567,GWa
+Quebec,wind_onshore,c6,renewable,2020,35.22813242741842,GWa
+Quebec,wind_onshore,c7,renewable,2020,10.795463602206866,GWa
+New Brunswick,wind_onshore,c1,renewable,2020,0.0,GWa
+New Brunswick,wind_onshore,c2,renewable,2020,0.0,GWa
+New Brunswick,wind_onshore,c3,renewable,2020,2.530048322400968,GWa
+New Brunswick,wind_onshore,c4,renewable,2020,5.833643739399093,GWa
+New Brunswick,wind_onshore,c5,renewable,2020,0.6159571845815883,GWa
+New Brunswick,wind_onshore,c6,renewable,2020,3.067522947183343,GWa
+New Brunswick,wind_onshore,c7,renewable,2020,0.49313536114732764,GWa
+Newfoundland and Labrador,wind_onshore,c1,renewable,2020,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c2,renewable,2020,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c3,renewable,2020,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c4,renewable,2020,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c5,renewable,2020,0.092599364161916,GWa
+Newfoundland and Labrador,wind_onshore,c6,renewable,2020,5.279075446232735,GWa
+Newfoundland and Labrador,wind_onshore,c7,renewable,2020,3.917562065364166,GWa
+Nova Scotia,wind_onshore,c1,renewable,2020,0.0,GWa
+Nova Scotia,wind_onshore,c2,renewable,2020,0.0,GWa
+Nova Scotia,wind_onshore,c3,renewable,2020,0.0,GWa
+Nova Scotia,wind_onshore,c4,renewable,2020,0.0,GWa
+Nova Scotia,wind_onshore,c5,renewable,2020,0.0,GWa
+Nova Scotia,wind_onshore,c6,renewable,2020,0.0,GWa
+Nova Scotia,wind_onshore,c7,renewable,2020,0.7904209346240781,GWa
+Prince Edward Island,wind_onshore,c1,renewable,2020,0.0,GWa
+Prince Edward Island,wind_onshore,c2,renewable,2020,0.0,GWa
+Prince Edward Island,wind_onshore,c3,renewable,2020,0.0,GWa
+Prince Edward Island,wind_onshore,c4,renewable,2020,0.0,GWa
+Prince Edward Island,wind_onshore,c5,renewable,2020,0.0,GWa
+Prince Edward Island,wind_onshore,c6,renewable,2020,0.0,GWa
+Prince Edward Island,wind_onshore,c7,renewable,2020,0.06473560927269288,GWa
+British Columbia,wind_onshore,c1,renewable,2025,18.937963371181468,GWa
+British Columbia,wind_onshore,c2,renewable,2025,64.72619200123351,GWa
+British Columbia,wind_onshore,c3,renewable,2025,99.75784060409586,GWa
+British Columbia,wind_onshore,c4,renewable,2025,75.30567472966753,GWa
+British Columbia,wind_onshore,c5,renewable,2025,2.0759169368625896,GWa
+British Columbia,wind_onshore,c6,renewable,2025,0.9357621296112264,GWa
+British Columbia,wind_onshore,c7,renewable,2025,0.5003528474590442,GWa
+Alberta,wind_onshore,c1,renewable,2025,1.2620366288185318,GWa
+Alberta,wind_onshore,c2,renewable,2025,31.722658478719413,GWa
+Alberta,wind_onshore,c3,renewable,2025,88.74008970397094,GWa
+Alberta,wind_onshore,c4,renewable,2025,122.91940971249888,GWa
+Alberta,wind_onshore,c5,renewable,2025,10.798696566322176,GWa
+Alberta,wind_onshore,c6,renewable,2025,5.436943122396339,GWa
+Alberta,wind_onshore,c7,renewable,2025,2.8097143080408022,GWa
+Saskatchewan,wind_onshore,c1,renewable,2025,0.0,GWa
+Saskatchewan,wind_onshore,c2,renewable,2025,2.264480361890072,GWa
+Saskatchewan,wind_onshore,c3,renewable,2025,102.18150360555151,GWa
+Saskatchewan,wind_onshore,c4,renewable,2025,130.05520047104082,GWa
+Saskatchewan,wind_onshore,c5,renewable,2025,3.9076591984579627,GWa
+Saskatchewan,wind_onshore,c6,renewable,2025,0.7410593927879459,GWa
+Saskatchewan,wind_onshore,c7,renewable,2025,4.330804426551053,GWa
+Manitoba,wind_onshore,c1,renewable,2025,0.0,GWa
+Manitoba,wind_onshore,c2,renewable,2025,0.0,GWa
+Manitoba,wind_onshore,c3,renewable,2025,3.233677040084697,GWa
+Manitoba,wind_onshore,c4,renewable,2025,192.2237390167588,GWa
+Manitoba,wind_onshore,c5,renewable,2025,7.509274328915458,GWa
+Manitoba,wind_onshore,c6,renewable,2025,4.850755721247464,GWa
+Manitoba,wind_onshore,c7,renewable,2025,3.4367907070738806,GWa
+Ontario,wind_onshore,c1,renewable,2025,0.0,GWa
+Ontario,wind_onshore,c2,renewable,2025,10.58666915815701,GWa
+Ontario,wind_onshore,c3,renewable,2025,13.737942602015961,GWa
+Ontario,wind_onshore,c4,renewable,2025,15.487245101625215,GWa
+Ontario,wind_onshore,c5,renewable,2025,56.59426396004162,GWa
+Ontario,wind_onshore,c6,renewable,2025,17.260748813122518,GWa
+Ontario,wind_onshore,c7,renewable,2025,2.0610201382600892,GWa
+Quebec,wind_onshore,c1,renewable,2025,0.0,GWa
+Quebec,wind_onshore,c2,renewable,2025,0.0,GWa
+Quebec,wind_onshore,c3,renewable,2025,6.918898121880054,GWa
+Quebec,wind_onshore,c4,renewable,2025,6.6750872290096215,GWa
+Quebec,wind_onshore,c5,renewable,2025,25.1056324606567,GWa
+Quebec,wind_onshore,c6,renewable,2025,35.22813242741842,GWa
+Quebec,wind_onshore,c7,renewable,2025,10.795463602206866,GWa
+New Brunswick,wind_onshore,c1,renewable,2025,0.0,GWa
+New Brunswick,wind_onshore,c2,renewable,2025,0.0,GWa
+New Brunswick,wind_onshore,c3,renewable,2025,2.530048322400968,GWa
+New Brunswick,wind_onshore,c4,renewable,2025,5.833643739399093,GWa
+New Brunswick,wind_onshore,c5,renewable,2025,0.6159571845815883,GWa
+New Brunswick,wind_onshore,c6,renewable,2025,3.067522947183343,GWa
+New Brunswick,wind_onshore,c7,renewable,2025,0.49313536114732764,GWa
+Newfoundland and Labrador,wind_onshore,c1,renewable,2025,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c2,renewable,2025,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c3,renewable,2025,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c4,renewable,2025,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c5,renewable,2025,0.092599364161916,GWa
+Newfoundland and Labrador,wind_onshore,c6,renewable,2025,5.279075446232735,GWa
+Newfoundland and Labrador,wind_onshore,c7,renewable,2025,3.917562065364166,GWa
+Nova Scotia,wind_onshore,c1,renewable,2025,0.0,GWa
+Nova Scotia,wind_onshore,c2,renewable,2025,0.0,GWa
+Nova Scotia,wind_onshore,c3,renewable,2025,0.0,GWa
+Nova Scotia,wind_onshore,c4,renewable,2025,0.0,GWa
+Nova Scotia,wind_onshore,c5,renewable,2025,0.0,GWa
+Nova Scotia,wind_onshore,c6,renewable,2025,0.0,GWa
+Nova Scotia,wind_onshore,c7,renewable,2025,0.7904209346240781,GWa
+Prince Edward Island,wind_onshore,c1,renewable,2025,0.0,GWa
+Prince Edward Island,wind_onshore,c2,renewable,2025,0.0,GWa
+Prince Edward Island,wind_onshore,c3,renewable,2025,0.0,GWa
+Prince Edward Island,wind_onshore,c4,renewable,2025,0.0,GWa
+Prince Edward Island,wind_onshore,c5,renewable,2025,0.0,GWa
+Prince Edward Island,wind_onshore,c6,renewable,2025,0.0,GWa
+Prince Edward Island,wind_onshore,c7,renewable,2025,0.06473560927269288,GWa
+British Columbia,wind_onshore,c1,renewable,2030,18.937963371181468,GWa
+British Columbia,wind_onshore,c2,renewable,2030,64.72619200123351,GWa
+British Columbia,wind_onshore,c3,renewable,2030,99.75784060409586,GWa
+British Columbia,wind_onshore,c4,renewable,2030,75.30567472966753,GWa
+British Columbia,wind_onshore,c5,renewable,2030,2.0759169368625896,GWa
+British Columbia,wind_onshore,c6,renewable,2030,0.9357621296112264,GWa
+British Columbia,wind_onshore,c7,renewable,2030,0.5003528474590442,GWa
+Alberta,wind_onshore,c1,renewable,2030,1.2620366288185318,GWa
+Alberta,wind_onshore,c2,renewable,2030,31.722658478719413,GWa
+Alberta,wind_onshore,c3,renewable,2030,88.74008970397094,GWa
+Alberta,wind_onshore,c4,renewable,2030,122.91940971249888,GWa
+Alberta,wind_onshore,c5,renewable,2030,10.798696566322176,GWa
+Alberta,wind_onshore,c6,renewable,2030,5.436943122396339,GWa
+Alberta,wind_onshore,c7,renewable,2030,2.8097143080408022,GWa
+Saskatchewan,wind_onshore,c1,renewable,2030,0.0,GWa
+Saskatchewan,wind_onshore,c2,renewable,2030,2.264480361890072,GWa
+Saskatchewan,wind_onshore,c3,renewable,2030,102.18150360555151,GWa
+Saskatchewan,wind_onshore,c4,renewable,2030,130.05520047104082,GWa
+Saskatchewan,wind_onshore,c5,renewable,2030,3.9076591984579627,GWa
+Saskatchewan,wind_onshore,c6,renewable,2030,0.7410593927879459,GWa
+Saskatchewan,wind_onshore,c7,renewable,2030,4.330804426551053,GWa
+Manitoba,wind_onshore,c1,renewable,2030,0.0,GWa
+Manitoba,wind_onshore,c2,renewable,2030,0.0,GWa
+Manitoba,wind_onshore,c3,renewable,2030,3.233677040084697,GWa
+Manitoba,wind_onshore,c4,renewable,2030,192.2237390167588,GWa
+Manitoba,wind_onshore,c5,renewable,2030,7.509274328915458,GWa
+Manitoba,wind_onshore,c6,renewable,2030,4.850755721247464,GWa
+Manitoba,wind_onshore,c7,renewable,2030,3.4367907070738806,GWa
+Ontario,wind_onshore,c1,renewable,2030,0.0,GWa
+Ontario,wind_onshore,c2,renewable,2030,10.58666915815701,GWa
+Ontario,wind_onshore,c3,renewable,2030,13.737942602015961,GWa
+Ontario,wind_onshore,c4,renewable,2030,15.487245101625215,GWa
+Ontario,wind_onshore,c5,renewable,2030,56.59426396004162,GWa
+Ontario,wind_onshore,c6,renewable,2030,17.260748813122518,GWa
+Ontario,wind_onshore,c7,renewable,2030,2.0610201382600892,GWa
+Quebec,wind_onshore,c1,renewable,2030,0.0,GWa
+Quebec,wind_onshore,c2,renewable,2030,0.0,GWa
+Quebec,wind_onshore,c3,renewable,2030,6.918898121880054,GWa
+Quebec,wind_onshore,c4,renewable,2030,6.6750872290096215,GWa
+Quebec,wind_onshore,c5,renewable,2030,25.1056324606567,GWa
+Quebec,wind_onshore,c6,renewable,2030,35.22813242741842,GWa
+Quebec,wind_onshore,c7,renewable,2030,10.795463602206866,GWa
+New Brunswick,wind_onshore,c1,renewable,2030,0.0,GWa
+New Brunswick,wind_onshore,c2,renewable,2030,0.0,GWa
+New Brunswick,wind_onshore,c3,renewable,2030,2.530048322400968,GWa
+New Brunswick,wind_onshore,c4,renewable,2030,5.833643739399093,GWa
+New Brunswick,wind_onshore,c5,renewable,2030,0.6159571845815883,GWa
+New Brunswick,wind_onshore,c6,renewable,2030,3.067522947183343,GWa
+New Brunswick,wind_onshore,c7,renewable,2030,0.49313536114732764,GWa
+Newfoundland and Labrador,wind_onshore,c1,renewable,2030,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c2,renewable,2030,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c3,renewable,2030,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c4,renewable,2030,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c5,renewable,2030,0.092599364161916,GWa
+Newfoundland and Labrador,wind_onshore,c6,renewable,2030,5.279075446232735,GWa
+Newfoundland and Labrador,wind_onshore,c7,renewable,2030,3.917562065364166,GWa
+Nova Scotia,wind_onshore,c1,renewable,2030,0.0,GWa
+Nova Scotia,wind_onshore,c2,renewable,2030,0.0,GWa
+Nova Scotia,wind_onshore,c3,renewable,2030,0.0,GWa
+Nova Scotia,wind_onshore,c4,renewable,2030,0.0,GWa
+Nova Scotia,wind_onshore,c5,renewable,2030,0.0,GWa
+Nova Scotia,wind_onshore,c6,renewable,2030,0.0,GWa
+Nova Scotia,wind_onshore,c7,renewable,2030,0.7904209346240781,GWa
+Prince Edward Island,wind_onshore,c1,renewable,2030,0.0,GWa
+Prince Edward Island,wind_onshore,c2,renewable,2030,0.0,GWa
+Prince Edward Island,wind_onshore,c3,renewable,2030,0.0,GWa
+Prince Edward Island,wind_onshore,c4,renewable,2030,0.0,GWa
+Prince Edward Island,wind_onshore,c5,renewable,2030,0.0,GWa
+Prince Edward Island,wind_onshore,c6,renewable,2030,0.0,GWa
+Prince Edward Island,wind_onshore,c7,renewable,2030,0.06473560927269288,GWa
+British Columbia,wind_onshore,c1,renewable,2035,18.937963371181468,GWa
+British Columbia,wind_onshore,c2,renewable,2035,64.72619200123351,GWa
+British Columbia,wind_onshore,c3,renewable,2035,99.75784060409586,GWa
+British Columbia,wind_onshore,c4,renewable,2035,75.30567472966753,GWa
+British Columbia,wind_onshore,c5,renewable,2035,2.0759169368625896,GWa
+British Columbia,wind_onshore,c6,renewable,2035,0.9357621296112264,GWa
+British Columbia,wind_onshore,c7,renewable,2035,0.5003528474590442,GWa
+Alberta,wind_onshore,c1,renewable,2035,1.2620366288185318,GWa
+Alberta,wind_onshore,c2,renewable,2035,31.722658478719413,GWa
+Alberta,wind_onshore,c3,renewable,2035,88.74008970397094,GWa
+Alberta,wind_onshore,c4,renewable,2035,122.91940971249888,GWa
+Alberta,wind_onshore,c5,renewable,2035,10.798696566322176,GWa
+Alberta,wind_onshore,c6,renewable,2035,5.436943122396339,GWa
+Alberta,wind_onshore,c7,renewable,2035,2.8097143080408022,GWa
+Saskatchewan,wind_onshore,c1,renewable,2035,0.0,GWa
+Saskatchewan,wind_onshore,c2,renewable,2035,2.264480361890072,GWa
+Saskatchewan,wind_onshore,c3,renewable,2035,102.18150360555151,GWa
+Saskatchewan,wind_onshore,c4,renewable,2035,130.05520047104082,GWa
+Saskatchewan,wind_onshore,c5,renewable,2035,3.9076591984579627,GWa
+Saskatchewan,wind_onshore,c6,renewable,2035,0.7410593927879459,GWa
+Saskatchewan,wind_onshore,c7,renewable,2035,4.330804426551053,GWa
+Manitoba,wind_onshore,c1,renewable,2035,0.0,GWa
+Manitoba,wind_onshore,c2,renewable,2035,0.0,GWa
+Manitoba,wind_onshore,c3,renewable,2035,3.233677040084697,GWa
+Manitoba,wind_onshore,c4,renewable,2035,192.2237390167588,GWa
+Manitoba,wind_onshore,c5,renewable,2035,7.509274328915458,GWa
+Manitoba,wind_onshore,c6,renewable,2035,4.850755721247464,GWa
+Manitoba,wind_onshore,c7,renewable,2035,3.4367907070738806,GWa
+Ontario,wind_onshore,c1,renewable,2035,0.0,GWa
+Ontario,wind_onshore,c2,renewable,2035,10.58666915815701,GWa
+Ontario,wind_onshore,c3,renewable,2035,13.737942602015961,GWa
+Ontario,wind_onshore,c4,renewable,2035,15.487245101625215,GWa
+Ontario,wind_onshore,c5,renewable,2035,56.59426396004162,GWa
+Ontario,wind_onshore,c6,renewable,2035,17.260748813122518,GWa
+Ontario,wind_onshore,c7,renewable,2035,2.0610201382600892,GWa
+Quebec,wind_onshore,c1,renewable,2035,0.0,GWa
+Quebec,wind_onshore,c2,renewable,2035,0.0,GWa
+Quebec,wind_onshore,c3,renewable,2035,6.918898121880054,GWa
+Quebec,wind_onshore,c4,renewable,2035,6.6750872290096215,GWa
+Quebec,wind_onshore,c5,renewable,2035,25.1056324606567,GWa
+Quebec,wind_onshore,c6,renewable,2035,35.22813242741842,GWa
+Quebec,wind_onshore,c7,renewable,2035,10.795463602206866,GWa
+New Brunswick,wind_onshore,c1,renewable,2035,0.0,GWa
+New Brunswick,wind_onshore,c2,renewable,2035,0.0,GWa
+New Brunswick,wind_onshore,c3,renewable,2035,2.530048322400968,GWa
+New Brunswick,wind_onshore,c4,renewable,2035,5.833643739399093,GWa
+New Brunswick,wind_onshore,c5,renewable,2035,0.6159571845815883,GWa
+New Brunswick,wind_onshore,c6,renewable,2035,3.067522947183343,GWa
+New Brunswick,wind_onshore,c7,renewable,2035,0.49313536114732764,GWa
+Newfoundland and Labrador,wind_onshore,c1,renewable,2035,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c2,renewable,2035,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c3,renewable,2035,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c4,renewable,2035,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c5,renewable,2035,0.092599364161916,GWa
+Newfoundland and Labrador,wind_onshore,c6,renewable,2035,5.279075446232735,GWa
+Newfoundland and Labrador,wind_onshore,c7,renewable,2035,3.917562065364166,GWa
+Nova Scotia,wind_onshore,c1,renewable,2035,0.0,GWa
+Nova Scotia,wind_onshore,c2,renewable,2035,0.0,GWa
+Nova Scotia,wind_onshore,c3,renewable,2035,0.0,GWa
+Nova Scotia,wind_onshore,c4,renewable,2035,0.0,GWa
+Nova Scotia,wind_onshore,c5,renewable,2035,0.0,GWa
+Nova Scotia,wind_onshore,c6,renewable,2035,0.0,GWa
+Nova Scotia,wind_onshore,c7,renewable,2035,0.7904209346240781,GWa
+Prince Edward Island,wind_onshore,c1,renewable,2035,0.0,GWa
+Prince Edward Island,wind_onshore,c2,renewable,2035,0.0,GWa
+Prince Edward Island,wind_onshore,c3,renewable,2035,0.0,GWa
+Prince Edward Island,wind_onshore,c4,renewable,2035,0.0,GWa
+Prince Edward Island,wind_onshore,c5,renewable,2035,0.0,GWa
+Prince Edward Island,wind_onshore,c6,renewable,2035,0.0,GWa
+Prince Edward Island,wind_onshore,c7,renewable,2035,0.06473560927269288,GWa
+British Columbia,wind_onshore,c1,renewable,2040,18.937963371181468,GWa
+British Columbia,wind_onshore,c2,renewable,2040,64.72619200123351,GWa
+British Columbia,wind_onshore,c3,renewable,2040,99.75784060409586,GWa
+British Columbia,wind_onshore,c4,renewable,2040,75.30567472966753,GWa
+British Columbia,wind_onshore,c5,renewable,2040,2.0759169368625896,GWa
+British Columbia,wind_onshore,c6,renewable,2040,0.9357621296112264,GWa
+British Columbia,wind_onshore,c7,renewable,2040,0.5003528474590442,GWa
+Alberta,wind_onshore,c1,renewable,2040,1.2620366288185318,GWa
+Alberta,wind_onshore,c2,renewable,2040,31.722658478719413,GWa
+Alberta,wind_onshore,c3,renewable,2040,88.74008970397094,GWa
+Alberta,wind_onshore,c4,renewable,2040,122.91940971249888,GWa
+Alberta,wind_onshore,c5,renewable,2040,10.798696566322176,GWa
+Alberta,wind_onshore,c6,renewable,2040,5.436943122396339,GWa
+Alberta,wind_onshore,c7,renewable,2040,2.8097143080408022,GWa
+Saskatchewan,wind_onshore,c1,renewable,2040,0.0,GWa
+Saskatchewan,wind_onshore,c2,renewable,2040,2.264480361890072,GWa
+Saskatchewan,wind_onshore,c3,renewable,2040,102.18150360555151,GWa
+Saskatchewan,wind_onshore,c4,renewable,2040,130.05520047104082,GWa
+Saskatchewan,wind_onshore,c5,renewable,2040,3.9076591984579627,GWa
+Saskatchewan,wind_onshore,c6,renewable,2040,0.7410593927879459,GWa
+Saskatchewan,wind_onshore,c7,renewable,2040,4.330804426551053,GWa
+Manitoba,wind_onshore,c1,renewable,2040,0.0,GWa
+Manitoba,wind_onshore,c2,renewable,2040,0.0,GWa
+Manitoba,wind_onshore,c3,renewable,2040,3.233677040084697,GWa
+Manitoba,wind_onshore,c4,renewable,2040,192.2237390167588,GWa
+Manitoba,wind_onshore,c5,renewable,2040,7.509274328915458,GWa
+Manitoba,wind_onshore,c6,renewable,2040,4.850755721247464,GWa
+Manitoba,wind_onshore,c7,renewable,2040,3.4367907070738806,GWa
+Ontario,wind_onshore,c1,renewable,2040,0.0,GWa
+Ontario,wind_onshore,c2,renewable,2040,10.58666915815701,GWa
+Ontario,wind_onshore,c3,renewable,2040,13.737942602015961,GWa
+Ontario,wind_onshore,c4,renewable,2040,15.487245101625215,GWa
+Ontario,wind_onshore,c5,renewable,2040,56.59426396004162,GWa
+Ontario,wind_onshore,c6,renewable,2040,17.260748813122518,GWa
+Ontario,wind_onshore,c7,renewable,2040,2.0610201382600892,GWa
+Quebec,wind_onshore,c1,renewable,2040,0.0,GWa
+Quebec,wind_onshore,c2,renewable,2040,0.0,GWa
+Quebec,wind_onshore,c3,renewable,2040,6.918898121880054,GWa
+Quebec,wind_onshore,c4,renewable,2040,6.6750872290096215,GWa
+Quebec,wind_onshore,c5,renewable,2040,25.1056324606567,GWa
+Quebec,wind_onshore,c6,renewable,2040,35.22813242741842,GWa
+Quebec,wind_onshore,c7,renewable,2040,10.795463602206866,GWa
+New Brunswick,wind_onshore,c1,renewable,2040,0.0,GWa
+New Brunswick,wind_onshore,c2,renewable,2040,0.0,GWa
+New Brunswick,wind_onshore,c3,renewable,2040,2.530048322400968,GWa
+New Brunswick,wind_onshore,c4,renewable,2040,5.833643739399093,GWa
+New Brunswick,wind_onshore,c5,renewable,2040,0.6159571845815883,GWa
+New Brunswick,wind_onshore,c6,renewable,2040,3.067522947183343,GWa
+New Brunswick,wind_onshore,c7,renewable,2040,0.49313536114732764,GWa
+Newfoundland and Labrador,wind_onshore,c1,renewable,2040,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c2,renewable,2040,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c3,renewable,2040,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c4,renewable,2040,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c5,renewable,2040,0.092599364161916,GWa
+Newfoundland and Labrador,wind_onshore,c6,renewable,2040,5.279075446232735,GWa
+Newfoundland and Labrador,wind_onshore,c7,renewable,2040,3.917562065364166,GWa
+Nova Scotia,wind_onshore,c1,renewable,2040,0.0,GWa
+Nova Scotia,wind_onshore,c2,renewable,2040,0.0,GWa
+Nova Scotia,wind_onshore,c3,renewable,2040,0.0,GWa
+Nova Scotia,wind_onshore,c4,renewable,2040,0.0,GWa
+Nova Scotia,wind_onshore,c5,renewable,2040,0.0,GWa
+Nova Scotia,wind_onshore,c6,renewable,2040,0.0,GWa
+Nova Scotia,wind_onshore,c7,renewable,2040,0.7904209346240781,GWa
+Prince Edward Island,wind_onshore,c1,renewable,2040,0.0,GWa
+Prince Edward Island,wind_onshore,c2,renewable,2040,0.0,GWa
+Prince Edward Island,wind_onshore,c3,renewable,2040,0.0,GWa
+Prince Edward Island,wind_onshore,c4,renewable,2040,0.0,GWa
+Prince Edward Island,wind_onshore,c5,renewable,2040,0.0,GWa
+Prince Edward Island,wind_onshore,c6,renewable,2040,0.0,GWa
+Prince Edward Island,wind_onshore,c7,renewable,2040,0.06473560927269288,GWa
+British Columbia,wind_onshore,c1,renewable,2045,18.937963371181468,GWa
+British Columbia,wind_onshore,c2,renewable,2045,64.72619200123351,GWa
+British Columbia,wind_onshore,c3,renewable,2045,99.75784060409586,GWa
+British Columbia,wind_onshore,c4,renewable,2045,75.30567472966753,GWa
+British Columbia,wind_onshore,c5,renewable,2045,2.0759169368625896,GWa
+British Columbia,wind_onshore,c6,renewable,2045,0.9357621296112264,GWa
+British Columbia,wind_onshore,c7,renewable,2045,0.5003528474590442,GWa
+Alberta,wind_onshore,c1,renewable,2045,1.2620366288185318,GWa
+Alberta,wind_onshore,c2,renewable,2045,31.722658478719413,GWa
+Alberta,wind_onshore,c3,renewable,2045,88.74008970397094,GWa
+Alberta,wind_onshore,c4,renewable,2045,122.91940971249888,GWa
+Alberta,wind_onshore,c5,renewable,2045,10.798696566322176,GWa
+Alberta,wind_onshore,c6,renewable,2045,5.436943122396339,GWa
+Alberta,wind_onshore,c7,renewable,2045,2.8097143080408022,GWa
+Saskatchewan,wind_onshore,c1,renewable,2045,0.0,GWa
+Saskatchewan,wind_onshore,c2,renewable,2045,2.264480361890072,GWa
+Saskatchewan,wind_onshore,c3,renewable,2045,102.18150360555151,GWa
+Saskatchewan,wind_onshore,c4,renewable,2045,130.05520047104082,GWa
+Saskatchewan,wind_onshore,c5,renewable,2045,3.9076591984579627,GWa
+Saskatchewan,wind_onshore,c6,renewable,2045,0.7410593927879459,GWa
+Saskatchewan,wind_onshore,c7,renewable,2045,4.330804426551053,GWa
+Manitoba,wind_onshore,c1,renewable,2045,0.0,GWa
+Manitoba,wind_onshore,c2,renewable,2045,0.0,GWa
+Manitoba,wind_onshore,c3,renewable,2045,3.233677040084697,GWa
+Manitoba,wind_onshore,c4,renewable,2045,192.2237390167588,GWa
+Manitoba,wind_onshore,c5,renewable,2045,7.509274328915458,GWa
+Manitoba,wind_onshore,c6,renewable,2045,4.850755721247464,GWa
+Manitoba,wind_onshore,c7,renewable,2045,3.4367907070738806,GWa
+Ontario,wind_onshore,c1,renewable,2045,0.0,GWa
+Ontario,wind_onshore,c2,renewable,2045,10.58666915815701,GWa
+Ontario,wind_onshore,c3,renewable,2045,13.737942602015961,GWa
+Ontario,wind_onshore,c4,renewable,2045,15.487245101625215,GWa
+Ontario,wind_onshore,c5,renewable,2045,56.59426396004162,GWa
+Ontario,wind_onshore,c6,renewable,2045,17.260748813122518,GWa
+Ontario,wind_onshore,c7,renewable,2045,2.0610201382600892,GWa
+Quebec,wind_onshore,c1,renewable,2045,0.0,GWa
+Quebec,wind_onshore,c2,renewable,2045,0.0,GWa
+Quebec,wind_onshore,c3,renewable,2045,6.918898121880054,GWa
+Quebec,wind_onshore,c4,renewable,2045,6.6750872290096215,GWa
+Quebec,wind_onshore,c5,renewable,2045,25.1056324606567,GWa
+Quebec,wind_onshore,c6,renewable,2045,35.22813242741842,GWa
+Quebec,wind_onshore,c7,renewable,2045,10.795463602206866,GWa
+New Brunswick,wind_onshore,c1,renewable,2045,0.0,GWa
+New Brunswick,wind_onshore,c2,renewable,2045,0.0,GWa
+New Brunswick,wind_onshore,c3,renewable,2045,2.530048322400968,GWa
+New Brunswick,wind_onshore,c4,renewable,2045,5.833643739399093,GWa
+New Brunswick,wind_onshore,c5,renewable,2045,0.6159571845815883,GWa
+New Brunswick,wind_onshore,c6,renewable,2045,3.067522947183343,GWa
+New Brunswick,wind_onshore,c7,renewable,2045,0.49313536114732764,GWa
+Newfoundland and Labrador,wind_onshore,c1,renewable,2045,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c2,renewable,2045,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c3,renewable,2045,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c4,renewable,2045,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c5,renewable,2045,0.092599364161916,GWa
+Newfoundland and Labrador,wind_onshore,c6,renewable,2045,5.279075446232735,GWa
+Newfoundland and Labrador,wind_onshore,c7,renewable,2045,3.917562065364166,GWa
+Nova Scotia,wind_onshore,c1,renewable,2045,0.0,GWa
+Nova Scotia,wind_onshore,c2,renewable,2045,0.0,GWa
+Nova Scotia,wind_onshore,c3,renewable,2045,0.0,GWa
+Nova Scotia,wind_onshore,c4,renewable,2045,0.0,GWa
+Nova Scotia,wind_onshore,c5,renewable,2045,0.0,GWa
+Nova Scotia,wind_onshore,c6,renewable,2045,0.0,GWa
+Nova Scotia,wind_onshore,c7,renewable,2045,0.7904209346240781,GWa
+Prince Edward Island,wind_onshore,c1,renewable,2045,0.0,GWa
+Prince Edward Island,wind_onshore,c2,renewable,2045,0.0,GWa
+Prince Edward Island,wind_onshore,c3,renewable,2045,0.0,GWa
+Prince Edward Island,wind_onshore,c4,renewable,2045,0.0,GWa
+Prince Edward Island,wind_onshore,c5,renewable,2045,0.0,GWa
+Prince Edward Island,wind_onshore,c6,renewable,2045,0.0,GWa
+Prince Edward Island,wind_onshore,c7,renewable,2045,0.06473560927269288,GWa
+British Columbia,wind_onshore,c1,renewable,2050,18.937963371181468,GWa
+British Columbia,wind_onshore,c2,renewable,2050,64.72619200123351,GWa
+British Columbia,wind_onshore,c3,renewable,2050,99.75784060409586,GWa
+British Columbia,wind_onshore,c4,renewable,2050,75.30567472966753,GWa
+British Columbia,wind_onshore,c5,renewable,2050,2.0759169368625896,GWa
+British Columbia,wind_onshore,c6,renewable,2050,0.9357621296112264,GWa
+British Columbia,wind_onshore,c7,renewable,2050,0.5003528474590442,GWa
+Alberta,wind_onshore,c1,renewable,2050,1.2620366288185318,GWa
+Alberta,wind_onshore,c2,renewable,2050,31.722658478719413,GWa
+Alberta,wind_onshore,c3,renewable,2050,88.74008970397094,GWa
+Alberta,wind_onshore,c4,renewable,2050,122.91940971249888,GWa
+Alberta,wind_onshore,c5,renewable,2050,10.798696566322176,GWa
+Alberta,wind_onshore,c6,renewable,2050,5.436943122396339,GWa
+Alberta,wind_onshore,c7,renewable,2050,2.8097143080408022,GWa
+Saskatchewan,wind_onshore,c1,renewable,2050,0.0,GWa
+Saskatchewan,wind_onshore,c2,renewable,2050,2.264480361890072,GWa
+Saskatchewan,wind_onshore,c3,renewable,2050,102.18150360555151,GWa
+Saskatchewan,wind_onshore,c4,renewable,2050,130.05520047104082,GWa
+Saskatchewan,wind_onshore,c5,renewable,2050,3.9076591984579627,GWa
+Saskatchewan,wind_onshore,c6,renewable,2050,0.7410593927879459,GWa
+Saskatchewan,wind_onshore,c7,renewable,2050,4.330804426551053,GWa
+Manitoba,wind_onshore,c1,renewable,2050,0.0,GWa
+Manitoba,wind_onshore,c2,renewable,2050,0.0,GWa
+Manitoba,wind_onshore,c3,renewable,2050,3.233677040084697,GWa
+Manitoba,wind_onshore,c4,renewable,2050,192.2237390167588,GWa
+Manitoba,wind_onshore,c5,renewable,2050,7.509274328915458,GWa
+Manitoba,wind_onshore,c6,renewable,2050,4.850755721247464,GWa
+Manitoba,wind_onshore,c7,renewable,2050,3.4367907070738806,GWa
+Ontario,wind_onshore,c1,renewable,2050,0.0,GWa
+Ontario,wind_onshore,c2,renewable,2050,10.58666915815701,GWa
+Ontario,wind_onshore,c3,renewable,2050,13.737942602015961,GWa
+Ontario,wind_onshore,c4,renewable,2050,15.487245101625215,GWa
+Ontario,wind_onshore,c5,renewable,2050,56.59426396004162,GWa
+Ontario,wind_onshore,c6,renewable,2050,17.260748813122518,GWa
+Ontario,wind_onshore,c7,renewable,2050,2.0610201382600892,GWa
+Quebec,wind_onshore,c1,renewable,2050,0.0,GWa
+Quebec,wind_onshore,c2,renewable,2050,0.0,GWa
+Quebec,wind_onshore,c3,renewable,2050,6.918898121880054,GWa
+Quebec,wind_onshore,c4,renewable,2050,6.6750872290096215,GWa
+Quebec,wind_onshore,c5,renewable,2050,25.1056324606567,GWa
+Quebec,wind_onshore,c6,renewable,2050,35.22813242741842,GWa
+Quebec,wind_onshore,c7,renewable,2050,10.795463602206866,GWa
+New Brunswick,wind_onshore,c1,renewable,2050,0.0,GWa
+New Brunswick,wind_onshore,c2,renewable,2050,0.0,GWa
+New Brunswick,wind_onshore,c3,renewable,2050,2.530048322400968,GWa
+New Brunswick,wind_onshore,c4,renewable,2050,5.833643739399093,GWa
+New Brunswick,wind_onshore,c5,renewable,2050,0.6159571845815883,GWa
+New Brunswick,wind_onshore,c6,renewable,2050,3.067522947183343,GWa
+New Brunswick,wind_onshore,c7,renewable,2050,0.49313536114732764,GWa
+Newfoundland and Labrador,wind_onshore,c1,renewable,2050,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c2,renewable,2050,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c3,renewable,2050,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c4,renewable,2050,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c5,renewable,2050,0.092599364161916,GWa
+Newfoundland and Labrador,wind_onshore,c6,renewable,2050,5.279075446232735,GWa
+Newfoundland and Labrador,wind_onshore,c7,renewable,2050,3.917562065364166,GWa
+Nova Scotia,wind_onshore,c1,renewable,2050,0.0,GWa
+Nova Scotia,wind_onshore,c2,renewable,2050,0.0,GWa
+Nova Scotia,wind_onshore,c3,renewable,2050,0.0,GWa
+Nova Scotia,wind_onshore,c4,renewable,2050,0.0,GWa
+Nova Scotia,wind_onshore,c5,renewable,2050,0.0,GWa
+Nova Scotia,wind_onshore,c6,renewable,2050,0.0,GWa
+Nova Scotia,wind_onshore,c7,renewable,2050,0.7904209346240781,GWa
+Prince Edward Island,wind_onshore,c1,renewable,2050,0.0,GWa
+Prince Edward Island,wind_onshore,c2,renewable,2050,0.0,GWa
+Prince Edward Island,wind_onshore,c3,renewable,2050,0.0,GWa
+Prince Edward Island,wind_onshore,c4,renewable,2050,0.0,GWa
+Prince Edward Island,wind_onshore,c5,renewable,2050,0.0,GWa
+Prince Edward Island,wind_onshore,c6,renewable,2050,0.0,GWa
+Prince Edward Island,wind_onshore,c7,renewable,2050,0.06473560927269288,GWa
+British Columbia,wind_onshore,c1,renewable,2055,18.937963371181468,GWa
+British Columbia,wind_onshore,c2,renewable,2055,64.72619200123351,GWa
+British Columbia,wind_onshore,c3,renewable,2055,99.75784060409586,GWa
+British Columbia,wind_onshore,c4,renewable,2055,75.30567472966753,GWa
+British Columbia,wind_onshore,c5,renewable,2055,2.0759169368625896,GWa
+British Columbia,wind_onshore,c6,renewable,2055,0.9357621296112264,GWa
+British Columbia,wind_onshore,c7,renewable,2055,0.5003528474590442,GWa
+Alberta,wind_onshore,c1,renewable,2055,1.2620366288185318,GWa
+Alberta,wind_onshore,c2,renewable,2055,31.722658478719413,GWa
+Alberta,wind_onshore,c3,renewable,2055,88.74008970397094,GWa
+Alberta,wind_onshore,c4,renewable,2055,122.91940971249888,GWa
+Alberta,wind_onshore,c5,renewable,2055,10.798696566322176,GWa
+Alberta,wind_onshore,c6,renewable,2055,5.436943122396339,GWa
+Alberta,wind_onshore,c7,renewable,2055,2.8097143080408022,GWa
+Saskatchewan,wind_onshore,c1,renewable,2055,0.0,GWa
+Saskatchewan,wind_onshore,c2,renewable,2055,2.264480361890072,GWa
+Saskatchewan,wind_onshore,c3,renewable,2055,102.18150360555151,GWa
+Saskatchewan,wind_onshore,c4,renewable,2055,130.05520047104082,GWa
+Saskatchewan,wind_onshore,c5,renewable,2055,3.9076591984579627,GWa
+Saskatchewan,wind_onshore,c6,renewable,2055,0.7410593927879459,GWa
+Saskatchewan,wind_onshore,c7,renewable,2055,4.330804426551053,GWa
+Manitoba,wind_onshore,c1,renewable,2055,0.0,GWa
+Manitoba,wind_onshore,c2,renewable,2055,0.0,GWa
+Manitoba,wind_onshore,c3,renewable,2055,3.233677040084697,GWa
+Manitoba,wind_onshore,c4,renewable,2055,192.2237390167588,GWa
+Manitoba,wind_onshore,c5,renewable,2055,7.509274328915458,GWa
+Manitoba,wind_onshore,c6,renewable,2055,4.850755721247464,GWa
+Manitoba,wind_onshore,c7,renewable,2055,3.4367907070738806,GWa
+Ontario,wind_onshore,c1,renewable,2055,0.0,GWa
+Ontario,wind_onshore,c2,renewable,2055,10.58666915815701,GWa
+Ontario,wind_onshore,c3,renewable,2055,13.737942602015961,GWa
+Ontario,wind_onshore,c4,renewable,2055,15.487245101625215,GWa
+Ontario,wind_onshore,c5,renewable,2055,56.59426396004162,GWa
+Ontario,wind_onshore,c6,renewable,2055,17.260748813122518,GWa
+Ontario,wind_onshore,c7,renewable,2055,2.0610201382600892,GWa
+Quebec,wind_onshore,c1,renewable,2055,0.0,GWa
+Quebec,wind_onshore,c2,renewable,2055,0.0,GWa
+Quebec,wind_onshore,c3,renewable,2055,6.918898121880054,GWa
+Quebec,wind_onshore,c4,renewable,2055,6.6750872290096215,GWa
+Quebec,wind_onshore,c5,renewable,2055,25.1056324606567,GWa
+Quebec,wind_onshore,c6,renewable,2055,35.22813242741842,GWa
+Quebec,wind_onshore,c7,renewable,2055,10.795463602206866,GWa
+New Brunswick,wind_onshore,c1,renewable,2055,0.0,GWa
+New Brunswick,wind_onshore,c2,renewable,2055,0.0,GWa
+New Brunswick,wind_onshore,c3,renewable,2055,2.530048322400968,GWa
+New Brunswick,wind_onshore,c4,renewable,2055,5.833643739399093,GWa
+New Brunswick,wind_onshore,c5,renewable,2055,0.6159571845815883,GWa
+New Brunswick,wind_onshore,c6,renewable,2055,3.067522947183343,GWa
+New Brunswick,wind_onshore,c7,renewable,2055,0.49313536114732764,GWa
+Newfoundland and Labrador,wind_onshore,c1,renewable,2055,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c2,renewable,2055,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c3,renewable,2055,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c4,renewable,2055,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c5,renewable,2055,0.092599364161916,GWa
+Newfoundland and Labrador,wind_onshore,c6,renewable,2055,5.279075446232735,GWa
+Newfoundland and Labrador,wind_onshore,c7,renewable,2055,3.917562065364166,GWa
+Nova Scotia,wind_onshore,c1,renewable,2055,0.0,GWa
+Nova Scotia,wind_onshore,c2,renewable,2055,0.0,GWa
+Nova Scotia,wind_onshore,c3,renewable,2055,0.0,GWa
+Nova Scotia,wind_onshore,c4,renewable,2055,0.0,GWa
+Nova Scotia,wind_onshore,c5,renewable,2055,0.0,GWa
+Nova Scotia,wind_onshore,c6,renewable,2055,0.0,GWa
+Nova Scotia,wind_onshore,c7,renewable,2055,0.7904209346240781,GWa
+Prince Edward Island,wind_onshore,c1,renewable,2055,0.0,GWa
+Prince Edward Island,wind_onshore,c2,renewable,2055,0.0,GWa
+Prince Edward Island,wind_onshore,c3,renewable,2055,0.0,GWa
+Prince Edward Island,wind_onshore,c4,renewable,2055,0.0,GWa
+Prince Edward Island,wind_onshore,c5,renewable,2055,0.0,GWa
+Prince Edward Island,wind_onshore,c6,renewable,2055,0.0,GWa
+Prince Edward Island,wind_onshore,c7,renewable,2055,0.06473560927269288,GWa
+British Columbia,wind_onshore,c1,renewable,2060,18.937963371181468,GWa
+British Columbia,wind_onshore,c2,renewable,2060,64.72619200123351,GWa
+British Columbia,wind_onshore,c3,renewable,2060,99.75784060409586,GWa
+British Columbia,wind_onshore,c4,renewable,2060,75.30567472966753,GWa
+British Columbia,wind_onshore,c5,renewable,2060,2.0759169368625896,GWa
+British Columbia,wind_onshore,c6,renewable,2060,0.9357621296112264,GWa
+British Columbia,wind_onshore,c7,renewable,2060,0.5003528474590442,GWa
+Alberta,wind_onshore,c1,renewable,2060,1.2620366288185318,GWa
+Alberta,wind_onshore,c2,renewable,2060,31.722658478719413,GWa
+Alberta,wind_onshore,c3,renewable,2060,88.74008970397094,GWa
+Alberta,wind_onshore,c4,renewable,2060,122.91940971249888,GWa
+Alberta,wind_onshore,c5,renewable,2060,10.798696566322176,GWa
+Alberta,wind_onshore,c6,renewable,2060,5.436943122396339,GWa
+Alberta,wind_onshore,c7,renewable,2060,2.8097143080408022,GWa
+Saskatchewan,wind_onshore,c1,renewable,2060,0.0,GWa
+Saskatchewan,wind_onshore,c2,renewable,2060,2.264480361890072,GWa
+Saskatchewan,wind_onshore,c3,renewable,2060,102.18150360555151,GWa
+Saskatchewan,wind_onshore,c4,renewable,2060,130.05520047104082,GWa
+Saskatchewan,wind_onshore,c5,renewable,2060,3.9076591984579627,GWa
+Saskatchewan,wind_onshore,c6,renewable,2060,0.7410593927879459,GWa
+Saskatchewan,wind_onshore,c7,renewable,2060,4.330804426551053,GWa
+Manitoba,wind_onshore,c1,renewable,2060,0.0,GWa
+Manitoba,wind_onshore,c2,renewable,2060,0.0,GWa
+Manitoba,wind_onshore,c3,renewable,2060,3.233677040084697,GWa
+Manitoba,wind_onshore,c4,renewable,2060,192.2237390167588,GWa
+Manitoba,wind_onshore,c5,renewable,2060,7.509274328915458,GWa
+Manitoba,wind_onshore,c6,renewable,2060,4.850755721247464,GWa
+Manitoba,wind_onshore,c7,renewable,2060,3.4367907070738806,GWa
+Ontario,wind_onshore,c1,renewable,2060,0.0,GWa
+Ontario,wind_onshore,c2,renewable,2060,10.58666915815701,GWa
+Ontario,wind_onshore,c3,renewable,2060,13.737942602015961,GWa
+Ontario,wind_onshore,c4,renewable,2060,15.487245101625215,GWa
+Ontario,wind_onshore,c5,renewable,2060,56.59426396004162,GWa
+Ontario,wind_onshore,c6,renewable,2060,17.260748813122518,GWa
+Ontario,wind_onshore,c7,renewable,2060,2.0610201382600892,GWa
+Quebec,wind_onshore,c1,renewable,2060,0.0,GWa
+Quebec,wind_onshore,c2,renewable,2060,0.0,GWa
+Quebec,wind_onshore,c3,renewable,2060,6.918898121880054,GWa
+Quebec,wind_onshore,c4,renewable,2060,6.6750872290096215,GWa
+Quebec,wind_onshore,c5,renewable,2060,25.1056324606567,GWa
+Quebec,wind_onshore,c6,renewable,2060,35.22813242741842,GWa
+Quebec,wind_onshore,c7,renewable,2060,10.795463602206866,GWa
+New Brunswick,wind_onshore,c1,renewable,2060,0.0,GWa
+New Brunswick,wind_onshore,c2,renewable,2060,0.0,GWa
+New Brunswick,wind_onshore,c3,renewable,2060,2.530048322400968,GWa
+New Brunswick,wind_onshore,c4,renewable,2060,5.833643739399093,GWa
+New Brunswick,wind_onshore,c5,renewable,2060,0.6159571845815883,GWa
+New Brunswick,wind_onshore,c6,renewable,2060,3.067522947183343,GWa
+New Brunswick,wind_onshore,c7,renewable,2060,0.49313536114732764,GWa
+Newfoundland and Labrador,wind_onshore,c1,renewable,2060,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c2,renewable,2060,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c3,renewable,2060,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c4,renewable,2060,0.0,GWa
+Newfoundland and Labrador,wind_onshore,c5,renewable,2060,0.092599364161916,GWa
+Newfoundland and Labrador,wind_onshore,c6,renewable,2060,5.279075446232735,GWa
+Newfoundland and Labrador,wind_onshore,c7,renewable,2060,3.917562065364166,GWa
+Nova Scotia,wind_onshore,c1,renewable,2060,0.0,GWa
+Nova Scotia,wind_onshore,c2,renewable,2060,0.0,GWa
+Nova Scotia,wind_onshore,c3,renewable,2060,0.0,GWa
+Nova Scotia,wind_onshore,c4,renewable,2060,0.0,GWa
+Nova Scotia,wind_onshore,c5,renewable,2060,0.0,GWa
+Nova Scotia,wind_onshore,c6,renewable,2060,0.0,GWa
+Nova Scotia,wind_onshore,c7,renewable,2060,0.7904209346240781,GWa
+Prince Edward Island,wind_onshore,c1,renewable,2060,0.0,GWa
+Prince Edward Island,wind_onshore,c2,renewable,2060,0.0,GWa
+Prince Edward Island,wind_onshore,c3,renewable,2060,0.0,GWa
+Prince Edward Island,wind_onshore,c4,renewable,2060,0.0,GWa
+Prince Edward Island,wind_onshore,c5,renewable,2060,0.0,GWa
+Prince Edward Island,wind_onshore,c6,renewable,2060,0.0,GWa
+Prince Edward Island,wind_onshore,c7,renewable,2060,0.06473560927269288,GWa
+British Columbia,wind_offshore,c1,renewable,2020,0.0,GWa
+British Columbia,wind_offshore,c2,renewable,2020,4.0,GWa
+British Columbia,wind_offshore,c3,renewable,2020,99.0,GWa
+British Columbia,wind_offshore,c4,renewable,2020,0.0,GWa
+British Columbia,wind_offshore,c5,renewable,2020,135.45626107837376,GWa
+British Columbia,wind_offshore,c6,renewable,2020,53.14096140552704,GWa
+British Columbia,wind_offshore,c7,renewable,2020,148.54062352268153,GWa
+Alberta,wind_offshore,c1,renewable,2020,0.0,GWa
+Alberta,wind_offshore,c2,renewable,2020,0.0,GWa
+Alberta,wind_offshore,c3,renewable,2020,0.0,GWa
+Alberta,wind_offshore,c4,renewable,2020,0.0,GWa
+Alberta,wind_offshore,c5,renewable,2020,0.0,GWa
+Alberta,wind_offshore,c6,renewable,2020,0.0,GWa
+Alberta,wind_offshore,c7,renewable,2020,0.0,GWa
+Saskatchewan,wind_offshore,c1,renewable,2020,0.0,GWa
+Saskatchewan,wind_offshore,c2,renewable,2020,0.0,GWa
+Saskatchewan,wind_offshore,c3,renewable,2020,0.0,GWa
+Saskatchewan,wind_offshore,c4,renewable,2020,0.0,GWa
+Saskatchewan,wind_offshore,c5,renewable,2020,0.0,GWa
+Saskatchewan,wind_offshore,c6,renewable,2020,0.0,GWa
+Saskatchewan,wind_offshore,c7,renewable,2020,0.0,GWa
+Manitoba,wind_offshore,c1,renewable,2020,0.0,GWa
+Manitoba,wind_offshore,c2,renewable,2020,0.0,GWa
+Manitoba,wind_offshore,c3,renewable,2020,0.0,GWa
+Manitoba,wind_offshore,c4,renewable,2020,0.0,GWa
+Manitoba,wind_offshore,c5,renewable,2020,0.0,GWa
+Manitoba,wind_offshore,c6,renewable,2020,0.0,GWa
+Manitoba,wind_offshore,c7,renewable,2020,64.17038338669643,GWa
+Ontario,wind_offshore,c1,renewable,2020,0.0,GWa
+Ontario,wind_offshore,c2,renewable,2020,0.0,GWa
+Ontario,wind_offshore,c3,renewable,2020,0.0,GWa
+Ontario,wind_offshore,c4,renewable,2020,0.0,GWa
+Ontario,wind_offshore,c5,renewable,2020,464.26356604534783,GWa
+Ontario,wind_offshore,c6,renewable,2020,524.7373187287814,GWa
+Ontario,wind_offshore,c7,renewable,2020,324.8400044199394,GWa
+Quebec,wind_offshore,c1,renewable,2020,0.0,GWa
+Quebec,wind_offshore,c2,renewable,2020,0.0,GWa
+Quebec,wind_offshore,c3,renewable,2020,0.0,GWa
+Quebec,wind_offshore,c4,renewable,2020,0.0,GWa
+Quebec,wind_offshore,c5,renewable,2020,253.395659423431,GWa
+Quebec,wind_offshore,c6,renewable,2020,417.99973141410857,GWa
+Quebec,wind_offshore,c7,renewable,2020,450.68182182289445,GWa
+New Brunswick,wind_offshore,c1,renewable,2020,0.0,GWa
+New Brunswick,wind_offshore,c2,renewable,2020,0.0,GWa
+New Brunswick,wind_offshore,c3,renewable,2020,0.0,GWa
+New Brunswick,wind_offshore,c4,renewable,2020,0.0,GWa
+New Brunswick,wind_offshore,c5,renewable,2020,0.0,GWa
+New Brunswick,wind_offshore,c6,renewable,2020,0.0,GWa
+New Brunswick,wind_offshore,c7,renewable,2020,32.937785203793894,GWa
+Newfoundland and Labrador,wind_offshore,c1,renewable,2020,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c2,renewable,2020,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c3,renewable,2020,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c4,renewable,2020,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c5,renewable,2020,67.88451345284744,GWa
+Newfoundland and Labrador,wind_offshore,c6,renewable,2020,178.1219884515829,GWa
+Newfoundland and Labrador,wind_offshore,c7,renewable,2020,353.54597927780395,GWa
+Nova Scotia,wind_offshore,c1,renewable,2020,0.0,GWa
+Nova Scotia,wind_offshore,c2,renewable,2020,0.0,GWa
+Nova Scotia,wind_offshore,c3,renewable,2020,0.0,GWa
+Nova Scotia,wind_offshore,c4,renewable,2020,0.0,GWa
+Nova Scotia,wind_offshore,c5,renewable,2020,0.0,GWa
+Nova Scotia,wind_offshore,c6,renewable,2020,0.0,GWa
+Nova Scotia,wind_offshore,c7,renewable,2020,164.26007575216283,GWa
+Prince Edward Island,wind_offshore,c1,renewable,2020,0.0,GWa
+Prince Edward Island,wind_offshore,c2,renewable,2020,0.0,GWa
+Prince Edward Island,wind_offshore,c3,renewable,2020,0.0,GWa
+Prince Edward Island,wind_offshore,c4,renewable,2020,0.0,GWa
+Prince Edward Island,wind_offshore,c5,renewable,2020,0.0,GWa
+Prince Edward Island,wind_offshore,c6,renewable,2020,0.0,GWa
+Prince Edward Island,wind_offshore,c7,renewable,2020,43.02332661402781,GWa
+British Columbia,wind_offshore,c1,renewable,2025,0.0,GWa
+British Columbia,wind_offshore,c2,renewable,2025,4.0,GWa
+British Columbia,wind_offshore,c3,renewable,2025,99.0,GWa
+British Columbia,wind_offshore,c4,renewable,2025,0.0,GWa
+British Columbia,wind_offshore,c5,renewable,2025,135.45626107837376,GWa
+British Columbia,wind_offshore,c6,renewable,2025,53.14096140552704,GWa
+British Columbia,wind_offshore,c7,renewable,2025,148.54062352268153,GWa
+Alberta,wind_offshore,c1,renewable,2025,0.0,GWa
+Alberta,wind_offshore,c2,renewable,2025,0.0,GWa
+Alberta,wind_offshore,c3,renewable,2025,0.0,GWa
+Alberta,wind_offshore,c4,renewable,2025,0.0,GWa
+Alberta,wind_offshore,c5,renewable,2025,0.0,GWa
+Alberta,wind_offshore,c6,renewable,2025,0.0,GWa
+Alberta,wind_offshore,c7,renewable,2025,0.0,GWa
+Saskatchewan,wind_offshore,c1,renewable,2025,0.0,GWa
+Saskatchewan,wind_offshore,c2,renewable,2025,0.0,GWa
+Saskatchewan,wind_offshore,c3,renewable,2025,0.0,GWa
+Saskatchewan,wind_offshore,c4,renewable,2025,0.0,GWa
+Saskatchewan,wind_offshore,c5,renewable,2025,0.0,GWa
+Saskatchewan,wind_offshore,c6,renewable,2025,0.0,GWa
+Saskatchewan,wind_offshore,c7,renewable,2025,0.0,GWa
+Manitoba,wind_offshore,c1,renewable,2025,0.0,GWa
+Manitoba,wind_offshore,c2,renewable,2025,0.0,GWa
+Manitoba,wind_offshore,c3,renewable,2025,0.0,GWa
+Manitoba,wind_offshore,c4,renewable,2025,0.0,GWa
+Manitoba,wind_offshore,c5,renewable,2025,0.0,GWa
+Manitoba,wind_offshore,c6,renewable,2025,0.0,GWa
+Manitoba,wind_offshore,c7,renewable,2025,64.17038338669643,GWa
+Ontario,wind_offshore,c1,renewable,2025,0.0,GWa
+Ontario,wind_offshore,c2,renewable,2025,0.0,GWa
+Ontario,wind_offshore,c3,renewable,2025,0.0,GWa
+Ontario,wind_offshore,c4,renewable,2025,0.0,GWa
+Ontario,wind_offshore,c5,renewable,2025,464.26356604534783,GWa
+Ontario,wind_offshore,c6,renewable,2025,524.7373187287814,GWa
+Ontario,wind_offshore,c7,renewable,2025,324.8400044199394,GWa
+Quebec,wind_offshore,c1,renewable,2025,0.0,GWa
+Quebec,wind_offshore,c2,renewable,2025,0.0,GWa
+Quebec,wind_offshore,c3,renewable,2025,0.0,GWa
+Quebec,wind_offshore,c4,renewable,2025,0.0,GWa
+Quebec,wind_offshore,c5,renewable,2025,253.395659423431,GWa
+Quebec,wind_offshore,c6,renewable,2025,417.99973141410857,GWa
+Quebec,wind_offshore,c7,renewable,2025,450.68182182289445,GWa
+New Brunswick,wind_offshore,c1,renewable,2025,0.0,GWa
+New Brunswick,wind_offshore,c2,renewable,2025,0.0,GWa
+New Brunswick,wind_offshore,c3,renewable,2025,0.0,GWa
+New Brunswick,wind_offshore,c4,renewable,2025,0.0,GWa
+New Brunswick,wind_offshore,c5,renewable,2025,0.0,GWa
+New Brunswick,wind_offshore,c6,renewable,2025,0.0,GWa
+New Brunswick,wind_offshore,c7,renewable,2025,32.937785203793894,GWa
+Newfoundland and Labrador,wind_offshore,c1,renewable,2025,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c2,renewable,2025,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c3,renewable,2025,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c4,renewable,2025,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c5,renewable,2025,67.88451345284744,GWa
+Newfoundland and Labrador,wind_offshore,c6,renewable,2025,178.1219884515829,GWa
+Newfoundland and Labrador,wind_offshore,c7,renewable,2025,353.54597927780395,GWa
+Nova Scotia,wind_offshore,c1,renewable,2025,0.0,GWa
+Nova Scotia,wind_offshore,c2,renewable,2025,0.0,GWa
+Nova Scotia,wind_offshore,c3,renewable,2025,0.0,GWa
+Nova Scotia,wind_offshore,c4,renewable,2025,0.0,GWa
+Nova Scotia,wind_offshore,c5,renewable,2025,0.0,GWa
+Nova Scotia,wind_offshore,c6,renewable,2025,0.0,GWa
+Nova Scotia,wind_offshore,c7,renewable,2025,164.26007575216283,GWa
+Prince Edward Island,wind_offshore,c1,renewable,2025,0.0,GWa
+Prince Edward Island,wind_offshore,c2,renewable,2025,0.0,GWa
+Prince Edward Island,wind_offshore,c3,renewable,2025,0.0,GWa
+Prince Edward Island,wind_offshore,c4,renewable,2025,0.0,GWa
+Prince Edward Island,wind_offshore,c5,renewable,2025,0.0,GWa
+Prince Edward Island,wind_offshore,c6,renewable,2025,0.0,GWa
+Prince Edward Island,wind_offshore,c7,renewable,2025,43.02332661402781,GWa
+British Columbia,wind_offshore,c1,renewable,2030,0.0,GWa
+British Columbia,wind_offshore,c2,renewable,2030,4.0,GWa
+British Columbia,wind_offshore,c3,renewable,2030,99.0,GWa
+British Columbia,wind_offshore,c4,renewable,2030,0.0,GWa
+British Columbia,wind_offshore,c5,renewable,2030,135.45626107837376,GWa
+British Columbia,wind_offshore,c6,renewable,2030,53.14096140552704,GWa
+British Columbia,wind_offshore,c7,renewable,2030,148.54062352268153,GWa
+Alberta,wind_offshore,c1,renewable,2030,0.0,GWa
+Alberta,wind_offshore,c2,renewable,2030,0.0,GWa
+Alberta,wind_offshore,c3,renewable,2030,0.0,GWa
+Alberta,wind_offshore,c4,renewable,2030,0.0,GWa
+Alberta,wind_offshore,c5,renewable,2030,0.0,GWa
+Alberta,wind_offshore,c6,renewable,2030,0.0,GWa
+Alberta,wind_offshore,c7,renewable,2030,0.0,GWa
+Saskatchewan,wind_offshore,c1,renewable,2030,0.0,GWa
+Saskatchewan,wind_offshore,c2,renewable,2030,0.0,GWa
+Saskatchewan,wind_offshore,c3,renewable,2030,0.0,GWa
+Saskatchewan,wind_offshore,c4,renewable,2030,0.0,GWa
+Saskatchewan,wind_offshore,c5,renewable,2030,0.0,GWa
+Saskatchewan,wind_offshore,c6,renewable,2030,0.0,GWa
+Saskatchewan,wind_offshore,c7,renewable,2030,0.0,GWa
+Manitoba,wind_offshore,c1,renewable,2030,0.0,GWa
+Manitoba,wind_offshore,c2,renewable,2030,0.0,GWa
+Manitoba,wind_offshore,c3,renewable,2030,0.0,GWa
+Manitoba,wind_offshore,c4,renewable,2030,0.0,GWa
+Manitoba,wind_offshore,c5,renewable,2030,0.0,GWa
+Manitoba,wind_offshore,c6,renewable,2030,0.0,GWa
+Manitoba,wind_offshore,c7,renewable,2030,64.17038338669643,GWa
+Ontario,wind_offshore,c1,renewable,2030,0.0,GWa
+Ontario,wind_offshore,c2,renewable,2030,0.0,GWa
+Ontario,wind_offshore,c3,renewable,2030,0.0,GWa
+Ontario,wind_offshore,c4,renewable,2030,0.0,GWa
+Ontario,wind_offshore,c5,renewable,2030,464.26356604534783,GWa
+Ontario,wind_offshore,c6,renewable,2030,524.7373187287814,GWa
+Ontario,wind_offshore,c7,renewable,2030,324.8400044199394,GWa
+Quebec,wind_offshore,c1,renewable,2030,0.0,GWa
+Quebec,wind_offshore,c2,renewable,2030,0.0,GWa
+Quebec,wind_offshore,c3,renewable,2030,0.0,GWa
+Quebec,wind_offshore,c4,renewable,2030,0.0,GWa
+Quebec,wind_offshore,c5,renewable,2030,253.395659423431,GWa
+Quebec,wind_offshore,c6,renewable,2030,417.99973141410857,GWa
+Quebec,wind_offshore,c7,renewable,2030,450.68182182289445,GWa
+New Brunswick,wind_offshore,c1,renewable,2030,0.0,GWa
+New Brunswick,wind_offshore,c2,renewable,2030,0.0,GWa
+New Brunswick,wind_offshore,c3,renewable,2030,0.0,GWa
+New Brunswick,wind_offshore,c4,renewable,2030,0.0,GWa
+New Brunswick,wind_offshore,c5,renewable,2030,0.0,GWa
+New Brunswick,wind_offshore,c6,renewable,2030,0.0,GWa
+New Brunswick,wind_offshore,c7,renewable,2030,32.937785203793894,GWa
+Newfoundland and Labrador,wind_offshore,c1,renewable,2030,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c2,renewable,2030,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c3,renewable,2030,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c4,renewable,2030,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c5,renewable,2030,67.88451345284744,GWa
+Newfoundland and Labrador,wind_offshore,c6,renewable,2030,178.1219884515829,GWa
+Newfoundland and Labrador,wind_offshore,c7,renewable,2030,353.54597927780395,GWa
+Nova Scotia,wind_offshore,c1,renewable,2030,0.0,GWa
+Nova Scotia,wind_offshore,c2,renewable,2030,0.0,GWa
+Nova Scotia,wind_offshore,c3,renewable,2030,0.0,GWa
+Nova Scotia,wind_offshore,c4,renewable,2030,0.0,GWa
+Nova Scotia,wind_offshore,c5,renewable,2030,0.0,GWa
+Nova Scotia,wind_offshore,c6,renewable,2030,0.0,GWa
+Nova Scotia,wind_offshore,c7,renewable,2030,164.26007575216283,GWa
+Prince Edward Island,wind_offshore,c1,renewable,2030,0.0,GWa
+Prince Edward Island,wind_offshore,c2,renewable,2030,0.0,GWa
+Prince Edward Island,wind_offshore,c3,renewable,2030,0.0,GWa
+Prince Edward Island,wind_offshore,c4,renewable,2030,0.0,GWa
+Prince Edward Island,wind_offshore,c5,renewable,2030,0.0,GWa
+Prince Edward Island,wind_offshore,c6,renewable,2030,0.0,GWa
+Prince Edward Island,wind_offshore,c7,renewable,2030,43.02332661402781,GWa
+British Columbia,wind_offshore,c1,renewable,2035,0.0,GWa
+British Columbia,wind_offshore,c2,renewable,2035,4.0,GWa
+British Columbia,wind_offshore,c3,renewable,2035,99.0,GWa
+British Columbia,wind_offshore,c4,renewable,2035,0.0,GWa
+British Columbia,wind_offshore,c5,renewable,2035,135.45626107837376,GWa
+British Columbia,wind_offshore,c6,renewable,2035,53.14096140552704,GWa
+British Columbia,wind_offshore,c7,renewable,2035,148.54062352268153,GWa
+Alberta,wind_offshore,c1,renewable,2035,0.0,GWa
+Alberta,wind_offshore,c2,renewable,2035,0.0,GWa
+Alberta,wind_offshore,c3,renewable,2035,0.0,GWa
+Alberta,wind_offshore,c4,renewable,2035,0.0,GWa
+Alberta,wind_offshore,c5,renewable,2035,0.0,GWa
+Alberta,wind_offshore,c6,renewable,2035,0.0,GWa
+Alberta,wind_offshore,c7,renewable,2035,0.0,GWa
+Saskatchewan,wind_offshore,c1,renewable,2035,0.0,GWa
+Saskatchewan,wind_offshore,c2,renewable,2035,0.0,GWa
+Saskatchewan,wind_offshore,c3,renewable,2035,0.0,GWa
+Saskatchewan,wind_offshore,c4,renewable,2035,0.0,GWa
+Saskatchewan,wind_offshore,c5,renewable,2035,0.0,GWa
+Saskatchewan,wind_offshore,c6,renewable,2035,0.0,GWa
+Saskatchewan,wind_offshore,c7,renewable,2035,0.0,GWa
+Manitoba,wind_offshore,c1,renewable,2035,0.0,GWa
+Manitoba,wind_offshore,c2,renewable,2035,0.0,GWa
+Manitoba,wind_offshore,c3,renewable,2035,0.0,GWa
+Manitoba,wind_offshore,c4,renewable,2035,0.0,GWa
+Manitoba,wind_offshore,c5,renewable,2035,0.0,GWa
+Manitoba,wind_offshore,c6,renewable,2035,0.0,GWa
+Manitoba,wind_offshore,c7,renewable,2035,64.17038338669643,GWa
+Ontario,wind_offshore,c1,renewable,2035,0.0,GWa
+Ontario,wind_offshore,c2,renewable,2035,0.0,GWa
+Ontario,wind_offshore,c3,renewable,2035,0.0,GWa
+Ontario,wind_offshore,c4,renewable,2035,0.0,GWa
+Ontario,wind_offshore,c5,renewable,2035,464.26356604534783,GWa
+Ontario,wind_offshore,c6,renewable,2035,524.7373187287814,GWa
+Ontario,wind_offshore,c7,renewable,2035,324.8400044199394,GWa
+Quebec,wind_offshore,c1,renewable,2035,0.0,GWa
+Quebec,wind_offshore,c2,renewable,2035,0.0,GWa
+Quebec,wind_offshore,c3,renewable,2035,0.0,GWa
+Quebec,wind_offshore,c4,renewable,2035,0.0,GWa
+Quebec,wind_offshore,c5,renewable,2035,253.395659423431,GWa
+Quebec,wind_offshore,c6,renewable,2035,417.99973141410857,GWa
+Quebec,wind_offshore,c7,renewable,2035,450.68182182289445,GWa
+New Brunswick,wind_offshore,c1,renewable,2035,0.0,GWa
+New Brunswick,wind_offshore,c2,renewable,2035,0.0,GWa
+New Brunswick,wind_offshore,c3,renewable,2035,0.0,GWa
+New Brunswick,wind_offshore,c4,renewable,2035,0.0,GWa
+New Brunswick,wind_offshore,c5,renewable,2035,0.0,GWa
+New Brunswick,wind_offshore,c6,renewable,2035,0.0,GWa
+New Brunswick,wind_offshore,c7,renewable,2035,32.937785203793894,GWa
+Newfoundland and Labrador,wind_offshore,c1,renewable,2035,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c2,renewable,2035,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c3,renewable,2035,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c4,renewable,2035,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c5,renewable,2035,67.88451345284744,GWa
+Newfoundland and Labrador,wind_offshore,c6,renewable,2035,178.1219884515829,GWa
+Newfoundland and Labrador,wind_offshore,c7,renewable,2035,353.54597927780395,GWa
+Nova Scotia,wind_offshore,c1,renewable,2035,0.0,GWa
+Nova Scotia,wind_offshore,c2,renewable,2035,0.0,GWa
+Nova Scotia,wind_offshore,c3,renewable,2035,0.0,GWa
+Nova Scotia,wind_offshore,c4,renewable,2035,0.0,GWa
+Nova Scotia,wind_offshore,c5,renewable,2035,0.0,GWa
+Nova Scotia,wind_offshore,c6,renewable,2035,0.0,GWa
+Nova Scotia,wind_offshore,c7,renewable,2035,164.26007575216283,GWa
+Prince Edward Island,wind_offshore,c1,renewable,2035,0.0,GWa
+Prince Edward Island,wind_offshore,c2,renewable,2035,0.0,GWa
+Prince Edward Island,wind_offshore,c3,renewable,2035,0.0,GWa
+Prince Edward Island,wind_offshore,c4,renewable,2035,0.0,GWa
+Prince Edward Island,wind_offshore,c5,renewable,2035,0.0,GWa
+Prince Edward Island,wind_offshore,c6,renewable,2035,0.0,GWa
+Prince Edward Island,wind_offshore,c7,renewable,2035,43.02332661402781,GWa
+British Columbia,wind_offshore,c1,renewable,2040,0.0,GWa
+British Columbia,wind_offshore,c2,renewable,2040,4.0,GWa
+British Columbia,wind_offshore,c3,renewable,2040,99.0,GWa
+British Columbia,wind_offshore,c4,renewable,2040,0.0,GWa
+British Columbia,wind_offshore,c5,renewable,2040,135.45626107837376,GWa
+British Columbia,wind_offshore,c6,renewable,2040,53.14096140552704,GWa
+British Columbia,wind_offshore,c7,renewable,2040,148.54062352268153,GWa
+Alberta,wind_offshore,c1,renewable,2040,0.0,GWa
+Alberta,wind_offshore,c2,renewable,2040,0.0,GWa
+Alberta,wind_offshore,c3,renewable,2040,0.0,GWa
+Alberta,wind_offshore,c4,renewable,2040,0.0,GWa
+Alberta,wind_offshore,c5,renewable,2040,0.0,GWa
+Alberta,wind_offshore,c6,renewable,2040,0.0,GWa
+Alberta,wind_offshore,c7,renewable,2040,0.0,GWa
+Saskatchewan,wind_offshore,c1,renewable,2040,0.0,GWa
+Saskatchewan,wind_offshore,c2,renewable,2040,0.0,GWa
+Saskatchewan,wind_offshore,c3,renewable,2040,0.0,GWa
+Saskatchewan,wind_offshore,c4,renewable,2040,0.0,GWa
+Saskatchewan,wind_offshore,c5,renewable,2040,0.0,GWa
+Saskatchewan,wind_offshore,c6,renewable,2040,0.0,GWa
+Saskatchewan,wind_offshore,c7,renewable,2040,0.0,GWa
+Manitoba,wind_offshore,c1,renewable,2040,0.0,GWa
+Manitoba,wind_offshore,c2,renewable,2040,0.0,GWa
+Manitoba,wind_offshore,c3,renewable,2040,0.0,GWa
+Manitoba,wind_offshore,c4,renewable,2040,0.0,GWa
+Manitoba,wind_offshore,c5,renewable,2040,0.0,GWa
+Manitoba,wind_offshore,c6,renewable,2040,0.0,GWa
+Manitoba,wind_offshore,c7,renewable,2040,64.17038338669643,GWa
+Ontario,wind_offshore,c1,renewable,2040,0.0,GWa
+Ontario,wind_offshore,c2,renewable,2040,0.0,GWa
+Ontario,wind_offshore,c3,renewable,2040,0.0,GWa
+Ontario,wind_offshore,c4,renewable,2040,0.0,GWa
+Ontario,wind_offshore,c5,renewable,2040,464.26356604534783,GWa
+Ontario,wind_offshore,c6,renewable,2040,524.7373187287814,GWa
+Ontario,wind_offshore,c7,renewable,2040,324.8400044199394,GWa
+Quebec,wind_offshore,c1,renewable,2040,0.0,GWa
+Quebec,wind_offshore,c2,renewable,2040,0.0,GWa
+Quebec,wind_offshore,c3,renewable,2040,0.0,GWa
+Quebec,wind_offshore,c4,renewable,2040,0.0,GWa
+Quebec,wind_offshore,c5,renewable,2040,253.395659423431,GWa
+Quebec,wind_offshore,c6,renewable,2040,417.99973141410857,GWa
+Quebec,wind_offshore,c7,renewable,2040,450.68182182289445,GWa
+New Brunswick,wind_offshore,c1,renewable,2040,0.0,GWa
+New Brunswick,wind_offshore,c2,renewable,2040,0.0,GWa
+New Brunswick,wind_offshore,c3,renewable,2040,0.0,GWa
+New Brunswick,wind_offshore,c4,renewable,2040,0.0,GWa
+New Brunswick,wind_offshore,c5,renewable,2040,0.0,GWa
+New Brunswick,wind_offshore,c6,renewable,2040,0.0,GWa
+New Brunswick,wind_offshore,c7,renewable,2040,32.937785203793894,GWa
+Newfoundland and Labrador,wind_offshore,c1,renewable,2040,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c2,renewable,2040,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c3,renewable,2040,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c4,renewable,2040,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c5,renewable,2040,67.88451345284744,GWa
+Newfoundland and Labrador,wind_offshore,c6,renewable,2040,178.1219884515829,GWa
+Newfoundland and Labrador,wind_offshore,c7,renewable,2040,353.54597927780395,GWa
+Nova Scotia,wind_offshore,c1,renewable,2040,0.0,GWa
+Nova Scotia,wind_offshore,c2,renewable,2040,0.0,GWa
+Nova Scotia,wind_offshore,c3,renewable,2040,0.0,GWa
+Nova Scotia,wind_offshore,c4,renewable,2040,0.0,GWa
+Nova Scotia,wind_offshore,c5,renewable,2040,0.0,GWa
+Nova Scotia,wind_offshore,c6,renewable,2040,0.0,GWa
+Nova Scotia,wind_offshore,c7,renewable,2040,164.26007575216283,GWa
+Prince Edward Island,wind_offshore,c1,renewable,2040,0.0,GWa
+Prince Edward Island,wind_offshore,c2,renewable,2040,0.0,GWa
+Prince Edward Island,wind_offshore,c3,renewable,2040,0.0,GWa
+Prince Edward Island,wind_offshore,c4,renewable,2040,0.0,GWa
+Prince Edward Island,wind_offshore,c5,renewable,2040,0.0,GWa
+Prince Edward Island,wind_offshore,c6,renewable,2040,0.0,GWa
+Prince Edward Island,wind_offshore,c7,renewable,2040,43.02332661402781,GWa
+British Columbia,wind_offshore,c1,renewable,2045,0.0,GWa
+British Columbia,wind_offshore,c2,renewable,2045,4.0,GWa
+British Columbia,wind_offshore,c3,renewable,2045,99.0,GWa
+British Columbia,wind_offshore,c4,renewable,2045,0.0,GWa
+British Columbia,wind_offshore,c5,renewable,2045,135.45626107837376,GWa
+British Columbia,wind_offshore,c6,renewable,2045,53.14096140552704,GWa
+British Columbia,wind_offshore,c7,renewable,2045,148.54062352268153,GWa
+Alberta,wind_offshore,c1,renewable,2045,0.0,GWa
+Alberta,wind_offshore,c2,renewable,2045,0.0,GWa
+Alberta,wind_offshore,c3,renewable,2045,0.0,GWa
+Alberta,wind_offshore,c4,renewable,2045,0.0,GWa
+Alberta,wind_offshore,c5,renewable,2045,0.0,GWa
+Alberta,wind_offshore,c6,renewable,2045,0.0,GWa
+Alberta,wind_offshore,c7,renewable,2045,0.0,GWa
+Saskatchewan,wind_offshore,c1,renewable,2045,0.0,GWa
+Saskatchewan,wind_offshore,c2,renewable,2045,0.0,GWa
+Saskatchewan,wind_offshore,c3,renewable,2045,0.0,GWa
+Saskatchewan,wind_offshore,c4,renewable,2045,0.0,GWa
+Saskatchewan,wind_offshore,c5,renewable,2045,0.0,GWa
+Saskatchewan,wind_offshore,c6,renewable,2045,0.0,GWa
+Saskatchewan,wind_offshore,c7,renewable,2045,0.0,GWa
+Manitoba,wind_offshore,c1,renewable,2045,0.0,GWa
+Manitoba,wind_offshore,c2,renewable,2045,0.0,GWa
+Manitoba,wind_offshore,c3,renewable,2045,0.0,GWa
+Manitoba,wind_offshore,c4,renewable,2045,0.0,GWa
+Manitoba,wind_offshore,c5,renewable,2045,0.0,GWa
+Manitoba,wind_offshore,c6,renewable,2045,0.0,GWa
+Manitoba,wind_offshore,c7,renewable,2045,64.17038338669643,GWa
+Ontario,wind_offshore,c1,renewable,2045,0.0,GWa
+Ontario,wind_offshore,c2,renewable,2045,0.0,GWa
+Ontario,wind_offshore,c3,renewable,2045,0.0,GWa
+Ontario,wind_offshore,c4,renewable,2045,0.0,GWa
+Ontario,wind_offshore,c5,renewable,2045,464.26356604534783,GWa
+Ontario,wind_offshore,c6,renewable,2045,524.7373187287814,GWa
+Ontario,wind_offshore,c7,renewable,2045,324.8400044199394,GWa
+Quebec,wind_offshore,c1,renewable,2045,0.0,GWa
+Quebec,wind_offshore,c2,renewable,2045,0.0,GWa
+Quebec,wind_offshore,c3,renewable,2045,0.0,GWa
+Quebec,wind_offshore,c4,renewable,2045,0.0,GWa
+Quebec,wind_offshore,c5,renewable,2045,253.395659423431,GWa
+Quebec,wind_offshore,c6,renewable,2045,417.99973141410857,GWa
+Quebec,wind_offshore,c7,renewable,2045,450.68182182289445,GWa
+New Brunswick,wind_offshore,c1,renewable,2045,0.0,GWa
+New Brunswick,wind_offshore,c2,renewable,2045,0.0,GWa
+New Brunswick,wind_offshore,c3,renewable,2045,0.0,GWa
+New Brunswick,wind_offshore,c4,renewable,2045,0.0,GWa
+New Brunswick,wind_offshore,c5,renewable,2045,0.0,GWa
+New Brunswick,wind_offshore,c6,renewable,2045,0.0,GWa
+New Brunswick,wind_offshore,c7,renewable,2045,32.937785203793894,GWa
+Newfoundland and Labrador,wind_offshore,c1,renewable,2045,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c2,renewable,2045,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c3,renewable,2045,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c4,renewable,2045,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c5,renewable,2045,67.88451345284744,GWa
+Newfoundland and Labrador,wind_offshore,c6,renewable,2045,178.1219884515829,GWa
+Newfoundland and Labrador,wind_offshore,c7,renewable,2045,353.54597927780395,GWa
+Nova Scotia,wind_offshore,c1,renewable,2045,0.0,GWa
+Nova Scotia,wind_offshore,c2,renewable,2045,0.0,GWa
+Nova Scotia,wind_offshore,c3,renewable,2045,0.0,GWa
+Nova Scotia,wind_offshore,c4,renewable,2045,0.0,GWa
+Nova Scotia,wind_offshore,c5,renewable,2045,0.0,GWa
+Nova Scotia,wind_offshore,c6,renewable,2045,0.0,GWa
+Nova Scotia,wind_offshore,c7,renewable,2045,164.26007575216283,GWa
+Prince Edward Island,wind_offshore,c1,renewable,2045,0.0,GWa
+Prince Edward Island,wind_offshore,c2,renewable,2045,0.0,GWa
+Prince Edward Island,wind_offshore,c3,renewable,2045,0.0,GWa
+Prince Edward Island,wind_offshore,c4,renewable,2045,0.0,GWa
+Prince Edward Island,wind_offshore,c5,renewable,2045,0.0,GWa
+Prince Edward Island,wind_offshore,c6,renewable,2045,0.0,GWa
+Prince Edward Island,wind_offshore,c7,renewable,2045,43.02332661402781,GWa
+British Columbia,wind_offshore,c1,renewable,2050,0.0,GWa
+British Columbia,wind_offshore,c2,renewable,2050,4.0,GWa
+British Columbia,wind_offshore,c3,renewable,2050,99.0,GWa
+British Columbia,wind_offshore,c4,renewable,2050,0.0,GWa
+British Columbia,wind_offshore,c5,renewable,2050,135.45626107837376,GWa
+British Columbia,wind_offshore,c6,renewable,2050,53.14096140552704,GWa
+British Columbia,wind_offshore,c7,renewable,2050,148.54062352268153,GWa
+Alberta,wind_offshore,c1,renewable,2050,0.0,GWa
+Alberta,wind_offshore,c2,renewable,2050,0.0,GWa
+Alberta,wind_offshore,c3,renewable,2050,0.0,GWa
+Alberta,wind_offshore,c4,renewable,2050,0.0,GWa
+Alberta,wind_offshore,c5,renewable,2050,0.0,GWa
+Alberta,wind_offshore,c6,renewable,2050,0.0,GWa
+Alberta,wind_offshore,c7,renewable,2050,0.0,GWa
+Saskatchewan,wind_offshore,c1,renewable,2050,0.0,GWa
+Saskatchewan,wind_offshore,c2,renewable,2050,0.0,GWa
+Saskatchewan,wind_offshore,c3,renewable,2050,0.0,GWa
+Saskatchewan,wind_offshore,c4,renewable,2050,0.0,GWa
+Saskatchewan,wind_offshore,c5,renewable,2050,0.0,GWa
+Saskatchewan,wind_offshore,c6,renewable,2050,0.0,GWa
+Saskatchewan,wind_offshore,c7,renewable,2050,0.0,GWa
+Manitoba,wind_offshore,c1,renewable,2050,0.0,GWa
+Manitoba,wind_offshore,c2,renewable,2050,0.0,GWa
+Manitoba,wind_offshore,c3,renewable,2050,0.0,GWa
+Manitoba,wind_offshore,c4,renewable,2050,0.0,GWa
+Manitoba,wind_offshore,c5,renewable,2050,0.0,GWa
+Manitoba,wind_offshore,c6,renewable,2050,0.0,GWa
+Manitoba,wind_offshore,c7,renewable,2050,64.17038338669643,GWa
+Ontario,wind_offshore,c1,renewable,2050,0.0,GWa
+Ontario,wind_offshore,c2,renewable,2050,0.0,GWa
+Ontario,wind_offshore,c3,renewable,2050,0.0,GWa
+Ontario,wind_offshore,c4,renewable,2050,0.0,GWa
+Ontario,wind_offshore,c5,renewable,2050,464.26356604534783,GWa
+Ontario,wind_offshore,c6,renewable,2050,524.7373187287814,GWa
+Ontario,wind_offshore,c7,renewable,2050,324.8400044199394,GWa
+Quebec,wind_offshore,c1,renewable,2050,0.0,GWa
+Quebec,wind_offshore,c2,renewable,2050,0.0,GWa
+Quebec,wind_offshore,c3,renewable,2050,0.0,GWa
+Quebec,wind_offshore,c4,renewable,2050,0.0,GWa
+Quebec,wind_offshore,c5,renewable,2050,253.395659423431,GWa
+Quebec,wind_offshore,c6,renewable,2050,417.99973141410857,GWa
+Quebec,wind_offshore,c7,renewable,2050,450.68182182289445,GWa
+New Brunswick,wind_offshore,c1,renewable,2050,0.0,GWa
+New Brunswick,wind_offshore,c2,renewable,2050,0.0,GWa
+New Brunswick,wind_offshore,c3,renewable,2050,0.0,GWa
+New Brunswick,wind_offshore,c4,renewable,2050,0.0,GWa
+New Brunswick,wind_offshore,c5,renewable,2050,0.0,GWa
+New Brunswick,wind_offshore,c6,renewable,2050,0.0,GWa
+New Brunswick,wind_offshore,c7,renewable,2050,32.937785203793894,GWa
+Newfoundland and Labrador,wind_offshore,c1,renewable,2050,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c2,renewable,2050,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c3,renewable,2050,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c4,renewable,2050,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c5,renewable,2050,67.88451345284744,GWa
+Newfoundland and Labrador,wind_offshore,c6,renewable,2050,178.1219884515829,GWa
+Newfoundland and Labrador,wind_offshore,c7,renewable,2050,353.54597927780395,GWa
+Nova Scotia,wind_offshore,c1,renewable,2050,0.0,GWa
+Nova Scotia,wind_offshore,c2,renewable,2050,0.0,GWa
+Nova Scotia,wind_offshore,c3,renewable,2050,0.0,GWa
+Nova Scotia,wind_offshore,c4,renewable,2050,0.0,GWa
+Nova Scotia,wind_offshore,c5,renewable,2050,0.0,GWa
+Nova Scotia,wind_offshore,c6,renewable,2050,0.0,GWa
+Nova Scotia,wind_offshore,c7,renewable,2050,164.26007575216283,GWa
+Prince Edward Island,wind_offshore,c1,renewable,2050,0.0,GWa
+Prince Edward Island,wind_offshore,c2,renewable,2050,0.0,GWa
+Prince Edward Island,wind_offshore,c3,renewable,2050,0.0,GWa
+Prince Edward Island,wind_offshore,c4,renewable,2050,0.0,GWa
+Prince Edward Island,wind_offshore,c5,renewable,2050,0.0,GWa
+Prince Edward Island,wind_offshore,c6,renewable,2050,0.0,GWa
+Prince Edward Island,wind_offshore,c7,renewable,2050,43.02332661402781,GWa
+British Columbia,wind_offshore,c1,renewable,2055,0.0,GWa
+British Columbia,wind_offshore,c2,renewable,2055,4.0,GWa
+British Columbia,wind_offshore,c3,renewable,2055,99.0,GWa
+British Columbia,wind_offshore,c4,renewable,2055,0.0,GWa
+British Columbia,wind_offshore,c5,renewable,2055,135.45626107837376,GWa
+British Columbia,wind_offshore,c6,renewable,2055,53.14096140552704,GWa
+British Columbia,wind_offshore,c7,renewable,2055,148.54062352268153,GWa
+Alberta,wind_offshore,c1,renewable,2055,0.0,GWa
+Alberta,wind_offshore,c2,renewable,2055,0.0,GWa
+Alberta,wind_offshore,c3,renewable,2055,0.0,GWa
+Alberta,wind_offshore,c4,renewable,2055,0.0,GWa
+Alberta,wind_offshore,c5,renewable,2055,0.0,GWa
+Alberta,wind_offshore,c6,renewable,2055,0.0,GWa
+Alberta,wind_offshore,c7,renewable,2055,0.0,GWa
+Saskatchewan,wind_offshore,c1,renewable,2055,0.0,GWa
+Saskatchewan,wind_offshore,c2,renewable,2055,0.0,GWa
+Saskatchewan,wind_offshore,c3,renewable,2055,0.0,GWa
+Saskatchewan,wind_offshore,c4,renewable,2055,0.0,GWa
+Saskatchewan,wind_offshore,c5,renewable,2055,0.0,GWa
+Saskatchewan,wind_offshore,c6,renewable,2055,0.0,GWa
+Saskatchewan,wind_offshore,c7,renewable,2055,0.0,GWa
+Manitoba,wind_offshore,c1,renewable,2055,0.0,GWa
+Manitoba,wind_offshore,c2,renewable,2055,0.0,GWa
+Manitoba,wind_offshore,c3,renewable,2055,0.0,GWa
+Manitoba,wind_offshore,c4,renewable,2055,0.0,GWa
+Manitoba,wind_offshore,c5,renewable,2055,0.0,GWa
+Manitoba,wind_offshore,c6,renewable,2055,0.0,GWa
+Manitoba,wind_offshore,c7,renewable,2055,64.17038338669643,GWa
+Ontario,wind_offshore,c1,renewable,2055,0.0,GWa
+Ontario,wind_offshore,c2,renewable,2055,0.0,GWa
+Ontario,wind_offshore,c3,renewable,2055,0.0,GWa
+Ontario,wind_offshore,c4,renewable,2055,0.0,GWa
+Ontario,wind_offshore,c5,renewable,2055,464.26356604534783,GWa
+Ontario,wind_offshore,c6,renewable,2055,524.7373187287814,GWa
+Ontario,wind_offshore,c7,renewable,2055,324.8400044199394,GWa
+Quebec,wind_offshore,c1,renewable,2055,0.0,GWa
+Quebec,wind_offshore,c2,renewable,2055,0.0,GWa
+Quebec,wind_offshore,c3,renewable,2055,0.0,GWa
+Quebec,wind_offshore,c4,renewable,2055,0.0,GWa
+Quebec,wind_offshore,c5,renewable,2055,253.395659423431,GWa
+Quebec,wind_offshore,c6,renewable,2055,417.99973141410857,GWa
+Quebec,wind_offshore,c7,renewable,2055,450.68182182289445,GWa
+New Brunswick,wind_offshore,c1,renewable,2055,0.0,GWa
+New Brunswick,wind_offshore,c2,renewable,2055,0.0,GWa
+New Brunswick,wind_offshore,c3,renewable,2055,0.0,GWa
+New Brunswick,wind_offshore,c4,renewable,2055,0.0,GWa
+New Brunswick,wind_offshore,c5,renewable,2055,0.0,GWa
+New Brunswick,wind_offshore,c6,renewable,2055,0.0,GWa
+New Brunswick,wind_offshore,c7,renewable,2055,32.937785203793894,GWa
+Newfoundland and Labrador,wind_offshore,c1,renewable,2055,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c2,renewable,2055,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c3,renewable,2055,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c4,renewable,2055,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c5,renewable,2055,67.88451345284744,GWa
+Newfoundland and Labrador,wind_offshore,c6,renewable,2055,178.1219884515829,GWa
+Newfoundland and Labrador,wind_offshore,c7,renewable,2055,353.54597927780395,GWa
+Nova Scotia,wind_offshore,c1,renewable,2055,0.0,GWa
+Nova Scotia,wind_offshore,c2,renewable,2055,0.0,GWa
+Nova Scotia,wind_offshore,c3,renewable,2055,0.0,GWa
+Nova Scotia,wind_offshore,c4,renewable,2055,0.0,GWa
+Nova Scotia,wind_offshore,c5,renewable,2055,0.0,GWa
+Nova Scotia,wind_offshore,c6,renewable,2055,0.0,GWa
+Nova Scotia,wind_offshore,c7,renewable,2055,164.26007575216283,GWa
+Prince Edward Island,wind_offshore,c1,renewable,2055,0.0,GWa
+Prince Edward Island,wind_offshore,c2,renewable,2055,0.0,GWa
+Prince Edward Island,wind_offshore,c3,renewable,2055,0.0,GWa
+Prince Edward Island,wind_offshore,c4,renewable,2055,0.0,GWa
+Prince Edward Island,wind_offshore,c5,renewable,2055,0.0,GWa
+Prince Edward Island,wind_offshore,c6,renewable,2055,0.0,GWa
+Prince Edward Island,wind_offshore,c7,renewable,2055,43.02332661402781,GWa
+British Columbia,wind_offshore,c1,renewable,2060,0.0,GWa
+British Columbia,wind_offshore,c2,renewable,2060,4.0,GWa
+British Columbia,wind_offshore,c3,renewable,2060,99.0,GWa
+British Columbia,wind_offshore,c4,renewable,2060,0.0,GWa
+British Columbia,wind_offshore,c5,renewable,2060,135.45626107837376,GWa
+British Columbia,wind_offshore,c6,renewable,2060,53.14096140552704,GWa
+British Columbia,wind_offshore,c7,renewable,2060,148.54062352268153,GWa
+Alberta,wind_offshore,c1,renewable,2060,0.0,GWa
+Alberta,wind_offshore,c2,renewable,2060,0.0,GWa
+Alberta,wind_offshore,c3,renewable,2060,0.0,GWa
+Alberta,wind_offshore,c4,renewable,2060,0.0,GWa
+Alberta,wind_offshore,c5,renewable,2060,0.0,GWa
+Alberta,wind_offshore,c6,renewable,2060,0.0,GWa
+Alberta,wind_offshore,c7,renewable,2060,0.0,GWa
+Saskatchewan,wind_offshore,c1,renewable,2060,0.0,GWa
+Saskatchewan,wind_offshore,c2,renewable,2060,0.0,GWa
+Saskatchewan,wind_offshore,c3,renewable,2060,0.0,GWa
+Saskatchewan,wind_offshore,c4,renewable,2060,0.0,GWa
+Saskatchewan,wind_offshore,c5,renewable,2060,0.0,GWa
+Saskatchewan,wind_offshore,c6,renewable,2060,0.0,GWa
+Saskatchewan,wind_offshore,c7,renewable,2060,0.0,GWa
+Manitoba,wind_offshore,c1,renewable,2060,0.0,GWa
+Manitoba,wind_offshore,c2,renewable,2060,0.0,GWa
+Manitoba,wind_offshore,c3,renewable,2060,0.0,GWa
+Manitoba,wind_offshore,c4,renewable,2060,0.0,GWa
+Manitoba,wind_offshore,c5,renewable,2060,0.0,GWa
+Manitoba,wind_offshore,c6,renewable,2060,0.0,GWa
+Manitoba,wind_offshore,c7,renewable,2060,64.17038338669643,GWa
+Ontario,wind_offshore,c1,renewable,2060,0.0,GWa
+Ontario,wind_offshore,c2,renewable,2060,0.0,GWa
+Ontario,wind_offshore,c3,renewable,2060,0.0,GWa
+Ontario,wind_offshore,c4,renewable,2060,0.0,GWa
+Ontario,wind_offshore,c5,renewable,2060,464.26356604534783,GWa
+Ontario,wind_offshore,c6,renewable,2060,524.7373187287814,GWa
+Ontario,wind_offshore,c7,renewable,2060,324.8400044199394,GWa
+Quebec,wind_offshore,c1,renewable,2060,0.0,GWa
+Quebec,wind_offshore,c2,renewable,2060,0.0,GWa
+Quebec,wind_offshore,c3,renewable,2060,0.0,GWa
+Quebec,wind_offshore,c4,renewable,2060,0.0,GWa
+Quebec,wind_offshore,c5,renewable,2060,253.395659423431,GWa
+Quebec,wind_offshore,c6,renewable,2060,417.99973141410857,GWa
+Quebec,wind_offshore,c7,renewable,2060,450.68182182289445,GWa
+New Brunswick,wind_offshore,c1,renewable,2060,0.0,GWa
+New Brunswick,wind_offshore,c2,renewable,2060,0.0,GWa
+New Brunswick,wind_offshore,c3,renewable,2060,0.0,GWa
+New Brunswick,wind_offshore,c4,renewable,2060,0.0,GWa
+New Brunswick,wind_offshore,c5,renewable,2060,0.0,GWa
+New Brunswick,wind_offshore,c6,renewable,2060,0.0,GWa
+New Brunswick,wind_offshore,c7,renewable,2060,32.937785203793894,GWa
+Newfoundland and Labrador,wind_offshore,c1,renewable,2060,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c2,renewable,2060,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c3,renewable,2060,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c4,renewable,2060,0.0,GWa
+Newfoundland and Labrador,wind_offshore,c5,renewable,2060,67.88451345284744,GWa
+Newfoundland and Labrador,wind_offshore,c6,renewable,2060,178.1219884515829,GWa
+Newfoundland and Labrador,wind_offshore,c7,renewable,2060,353.54597927780395,GWa
+Nova Scotia,wind_offshore,c1,renewable,2060,0.0,GWa
+Nova Scotia,wind_offshore,c2,renewable,2060,0.0,GWa
+Nova Scotia,wind_offshore,c3,renewable,2060,0.0,GWa
+Nova Scotia,wind_offshore,c4,renewable,2060,0.0,GWa
+Nova Scotia,wind_offshore,c5,renewable,2060,0.0,GWa
+Nova Scotia,wind_offshore,c6,renewable,2060,0.0,GWa
+Nova Scotia,wind_offshore,c7,renewable,2060,164.26007575216283,GWa
+Prince Edward Island,wind_offshore,c1,renewable,2060,0.0,GWa
+Prince Edward Island,wind_offshore,c2,renewable,2060,0.0,GWa
+Prince Edward Island,wind_offshore,c3,renewable,2060,0.0,GWa
+Prince Edward Island,wind_offshore,c4,renewable,2060,0.0,GWa
+Prince Edward Island,wind_offshore,c5,renewable,2060,0.0,GWa
+Prince Edward Island,wind_offshore,c6,renewable,2060,0.0,GWa
+Prince Edward Island,wind_offshore,c7,renewable,2060,43.02332661402781,GWa
+British Columbia,solar_pv,c1,renewable,2020,0.0,GWa
+British Columbia,solar_pv,c2,renewable,2020,0.0,GWa
+British Columbia,solar_pv,c3,renewable,2020,0.0,GWa
+British Columbia,solar_pv,c4,renewable,2020,50.20893787897204,GWa
+British Columbia,solar_pv,c5,renewable,2020,961.9189002265477,GWa
+British Columbia,solar_pv,c6,renewable,2020,49.55282449631517,GWa
+British Columbia,solar_pv,c7,renewable,2020,67.013889168055,GWa
+British Columbia,solar_pv,c8,renewable,2020,0.0,GWa
+Alberta,solar_pv,c1,renewable,2020,0.0,GWa
+Alberta,solar_pv,c2,renewable,2020,0.0,GWa
+Alberta,solar_pv,c3,renewable,2020,0.0,GWa
+Alberta,solar_pv,c4,renewable,2020,17.342546370822472,GWa
+Alberta,solar_pv,c5,renewable,2020,606.336784823702,GWa
+Alberta,solar_pv,c6,renewable,2020,42.957549884891954,GWa
+Alberta,solar_pv,c7,renewable,2020,238.2047400137789,GWa
+Alberta,solar_pv,c8,renewable,2020,0.0,GWa
+Saskatchewan,solar_pv,c1,renewable,2020,0.0,GWa
+Saskatchewan,solar_pv,c2,renewable,2020,0.0,GWa
+Saskatchewan,solar_pv,c3,renewable,2020,0.0,GWa
+Saskatchewan,solar_pv,c4,renewable,2020,30.970313625847705,GWa
+Saskatchewan,solar_pv,c5,renewable,2020,222.60746377331046,GWa
+Saskatchewan,solar_pv,c6,renewable,2020,19.372707617378044,GWa
+Saskatchewan,solar_pv,c7,renewable,2020,365.2023601368616,GWa
+Saskatchewan,solar_pv,c8,renewable,2020,0.0,GWa
+Manitoba,solar_pv,c1,renewable,2020,0.0,GWa
+Manitoba,solar_pv,c2,renewable,2020,0.0,GWa
+Manitoba,solar_pv,c3,renewable,2020,0.0,GWa
+Manitoba,solar_pv,c4,renewable,2020,62.828223845919,GWa
+Manitoba,solar_pv,c5,renewable,2020,181.44574250618257,GWa
+Manitoba,solar_pv,c6,renewable,2020,21.83098323040065,GWa
+Manitoba,solar_pv,c7,renewable,2020,139.2356887930582,GWa
+Manitoba,solar_pv,c8,renewable,2020,0.0,GWa
+Ontario,solar_pv,c1,renewable,2020,0.0,GWa
+Ontario,solar_pv,c2,renewable,2020,0.0,GWa
+Ontario,solar_pv,c3,renewable,2020,0.0,GWa
+Ontario,solar_pv,c4,renewable,2020,73.06214854843094,GWa
+Ontario,solar_pv,c5,renewable,2020,662.6631295893903,GWa
+Ontario,solar_pv,c6,renewable,2020,92.68147862057023,GWa
+Ontario,solar_pv,c7,renewable,2020,16.343321888246383,GWa
+Ontario,solar_pv,c8,renewable,2020,0.0,GWa
+Quebec,solar_pv,c1,renewable,2020,0.0,GWa
+Quebec,solar_pv,c2,renewable,2020,0.0,GWa
+Quebec,solar_pv,c3,renewable,2020,0.0,GWa
+Quebec,solar_pv,c4,renewable,2020,155.32066639404275,GWa
+Quebec,solar_pv,c5,renewable,2020,865.1157774600814,GWa
+Quebec,solar_pv,c6,renewable,2020,65.0603894008106,GWa
+Quebec,solar_pv,c7,renewable,2020,0.0,GWa
+Quebec,solar_pv,c8,renewable,2020,0.0,GWa
+New Brunswick,solar_pv,c1,renewable,2020,0.0,GWa
+New Brunswick,solar_pv,c2,renewable,2020,0.0,GWa
+New Brunswick,solar_pv,c3,renewable,2020,0.0,GWa
+New Brunswick,solar_pv,c4,renewable,2020,0.0,GWa
+New Brunswick,solar_pv,c5,renewable,2020,16.750114378091258,GWa
+New Brunswick,solar_pv,c6,renewable,2020,23.563096650620302,GWa
+New Brunswick,solar_pv,c7,renewable,2020,0.0,GWa
+New Brunswick,solar_pv,c8,renewable,2020,0.0,GWa
+Newfoundland and Labrador,solar_pv,c1,renewable,2020,0.0,GWa
+Newfoundland and Labrador,solar_pv,c2,renewable,2020,0.0,GWa
+Newfoundland and Labrador,solar_pv,c3,renewable,2020,0.0,GWa
+Newfoundland and Labrador,solar_pv,c4,renewable,2020,51.26716333596508,GWa
+Newfoundland and Labrador,solar_pv,c5,renewable,2020,193.95630284927165,GWa
+Newfoundland and Labrador,solar_pv,c6,renewable,2020,0.0,GWa
+Newfoundland and Labrador,solar_pv,c7,renewable,2020,0.0,GWa
+Newfoundland and Labrador,solar_pv,c8,renewable,2020,0.0,GWa
+Nova Scotia,solar_pv,c1,renewable,2020,0.0,GWa
+Nova Scotia,solar_pv,c2,renewable,2020,0.0,GWa
+Nova Scotia,solar_pv,c3,renewable,2020,0.0,GWa
+Nova Scotia,solar_pv,c4,renewable,2020,0.0,GWa
+Nova Scotia,solar_pv,c5,renewable,2020,22.934214962387806,GWa
+Nova Scotia,solar_pv,c6,renewable,2020,16.534594373370215,GWa
+Nova Scotia,solar_pv,c7,renewable,2020,0.0,GWa
+Nova Scotia,solar_pv,c8,renewable,2020,0.0,GWa
+Prince Edward Island,solar_pv,c1,renewable,2020,0.0,GWa
+Prince Edward Island,solar_pv,c2,renewable,2020,0.0,GWa
+Prince Edward Island,solar_pv,c3,renewable,2020,0.0,GWa
+Prince Edward Island,solar_pv,c4,renewable,2020,0.0,GWa
+Prince Edward Island,solar_pv,c5,renewable,2020,1.2715694310341443,GWa
+Prince Edward Island,solar_pv,c6,renewable,2020,1.4463757256428198,GWa
+Prince Edward Island,solar_pv,c7,renewable,2020,0.0,GWa
+Prince Edward Island,solar_pv,c8,renewable,2020,0.0,GWa
+British Columbia,solar_pv,c1,renewable,2025,0.0,GWa
+British Columbia,solar_pv,c2,renewable,2025,0.0,GWa
+British Columbia,solar_pv,c3,renewable,2025,0.0,GWa
+British Columbia,solar_pv,c4,renewable,2025,50.20893787897204,GWa
+British Columbia,solar_pv,c5,renewable,2025,961.9189002265477,GWa
+British Columbia,solar_pv,c6,renewable,2025,49.55282449631517,GWa
+British Columbia,solar_pv,c7,renewable,2025,67.013889168055,GWa
+British Columbia,solar_pv,c8,renewable,2025,0.0,GWa
+Alberta,solar_pv,c1,renewable,2025,0.0,GWa
+Alberta,solar_pv,c2,renewable,2025,0.0,GWa
+Alberta,solar_pv,c3,renewable,2025,0.0,GWa
+Alberta,solar_pv,c4,renewable,2025,17.342546370822472,GWa
+Alberta,solar_pv,c5,renewable,2025,606.336784823702,GWa
+Alberta,solar_pv,c6,renewable,2025,42.957549884891954,GWa
+Alberta,solar_pv,c7,renewable,2025,238.2047400137789,GWa
+Alberta,solar_pv,c8,renewable,2025,0.0,GWa
+Saskatchewan,solar_pv,c1,renewable,2025,0.0,GWa
+Saskatchewan,solar_pv,c2,renewable,2025,0.0,GWa
+Saskatchewan,solar_pv,c3,renewable,2025,0.0,GWa
+Saskatchewan,solar_pv,c4,renewable,2025,30.970313625847705,GWa
+Saskatchewan,solar_pv,c5,renewable,2025,222.60746377331046,GWa
+Saskatchewan,solar_pv,c6,renewable,2025,19.372707617378044,GWa
+Saskatchewan,solar_pv,c7,renewable,2025,365.2023601368616,GWa
+Saskatchewan,solar_pv,c8,renewable,2025,0.0,GWa
+Manitoba,solar_pv,c1,renewable,2025,0.0,GWa
+Manitoba,solar_pv,c2,renewable,2025,0.0,GWa
+Manitoba,solar_pv,c3,renewable,2025,0.0,GWa
+Manitoba,solar_pv,c4,renewable,2025,62.828223845919,GWa
+Manitoba,solar_pv,c5,renewable,2025,181.44574250618257,GWa
+Manitoba,solar_pv,c6,renewable,2025,21.83098323040065,GWa
+Manitoba,solar_pv,c7,renewable,2025,139.2356887930582,GWa
+Manitoba,solar_pv,c8,renewable,2025,0.0,GWa
+Ontario,solar_pv,c1,renewable,2025,0.0,GWa
+Ontario,solar_pv,c2,renewable,2025,0.0,GWa
+Ontario,solar_pv,c3,renewable,2025,0.0,GWa
+Ontario,solar_pv,c4,renewable,2025,73.06214854843094,GWa
+Ontario,solar_pv,c5,renewable,2025,662.6631295893903,GWa
+Ontario,solar_pv,c6,renewable,2025,92.68147862057023,GWa
+Ontario,solar_pv,c7,renewable,2025,16.343321888246383,GWa
+Ontario,solar_pv,c8,renewable,2025,0.0,GWa
+Quebec,solar_pv,c1,renewable,2025,0.0,GWa
+Quebec,solar_pv,c2,renewable,2025,0.0,GWa
+Quebec,solar_pv,c3,renewable,2025,0.0,GWa
+Quebec,solar_pv,c4,renewable,2025,155.32066639404275,GWa
+Quebec,solar_pv,c5,renewable,2025,865.1157774600814,GWa
+Quebec,solar_pv,c6,renewable,2025,65.0603894008106,GWa
+Quebec,solar_pv,c7,renewable,2025,0.0,GWa
+Quebec,solar_pv,c8,renewable,2025,0.0,GWa
+New Brunswick,solar_pv,c1,renewable,2025,0.0,GWa
+New Brunswick,solar_pv,c2,renewable,2025,0.0,GWa
+New Brunswick,solar_pv,c3,renewable,2025,0.0,GWa
+New Brunswick,solar_pv,c4,renewable,2025,0.0,GWa
+New Brunswick,solar_pv,c5,renewable,2025,16.750114378091258,GWa
+New Brunswick,solar_pv,c6,renewable,2025,23.563096650620302,GWa
+New Brunswick,solar_pv,c7,renewable,2025,0.0,GWa
+New Brunswick,solar_pv,c8,renewable,2025,0.0,GWa
+Newfoundland and Labrador,solar_pv,c1,renewable,2025,0.0,GWa
+Newfoundland and Labrador,solar_pv,c2,renewable,2025,0.0,GWa
+Newfoundland and Labrador,solar_pv,c3,renewable,2025,0.0,GWa
+Newfoundland and Labrador,solar_pv,c4,renewable,2025,51.26716333596508,GWa
+Newfoundland and Labrador,solar_pv,c5,renewable,2025,193.95630284927165,GWa
+Newfoundland and Labrador,solar_pv,c6,renewable,2025,0.0,GWa
+Newfoundland and Labrador,solar_pv,c7,renewable,2025,0.0,GWa
+Newfoundland and Labrador,solar_pv,c8,renewable,2025,0.0,GWa
+Nova Scotia,solar_pv,c1,renewable,2025,0.0,GWa
+Nova Scotia,solar_pv,c2,renewable,2025,0.0,GWa
+Nova Scotia,solar_pv,c3,renewable,2025,0.0,GWa
+Nova Scotia,solar_pv,c4,renewable,2025,0.0,GWa
+Nova Scotia,solar_pv,c5,renewable,2025,22.934214962387806,GWa
+Nova Scotia,solar_pv,c6,renewable,2025,16.534594373370215,GWa
+Nova Scotia,solar_pv,c7,renewable,2025,0.0,GWa
+Nova Scotia,solar_pv,c8,renewable,2025,0.0,GWa
+Prince Edward Island,solar_pv,c1,renewable,2025,0.0,GWa
+Prince Edward Island,solar_pv,c2,renewable,2025,0.0,GWa
+Prince Edward Island,solar_pv,c3,renewable,2025,0.0,GWa
+Prince Edward Island,solar_pv,c4,renewable,2025,0.0,GWa
+Prince Edward Island,solar_pv,c5,renewable,2025,1.2715694310341443,GWa
+Prince Edward Island,solar_pv,c6,renewable,2025,1.4463757256428198,GWa
+Prince Edward Island,solar_pv,c7,renewable,2025,0.0,GWa
+Prince Edward Island,solar_pv,c8,renewable,2025,0.0,GWa
+British Columbia,solar_pv,c1,renewable,2030,0.0,GWa
+British Columbia,solar_pv,c2,renewable,2030,0.0,GWa
+British Columbia,solar_pv,c3,renewable,2030,0.0,GWa
+British Columbia,solar_pv,c4,renewable,2030,50.20893787897204,GWa
+British Columbia,solar_pv,c5,renewable,2030,961.9189002265477,GWa
+British Columbia,solar_pv,c6,renewable,2030,49.55282449631517,GWa
+British Columbia,solar_pv,c7,renewable,2030,67.013889168055,GWa
+British Columbia,solar_pv,c8,renewable,2030,0.0,GWa
+Alberta,solar_pv,c1,renewable,2030,0.0,GWa
+Alberta,solar_pv,c2,renewable,2030,0.0,GWa
+Alberta,solar_pv,c3,renewable,2030,0.0,GWa
+Alberta,solar_pv,c4,renewable,2030,17.342546370822472,GWa
+Alberta,solar_pv,c5,renewable,2030,606.336784823702,GWa
+Alberta,solar_pv,c6,renewable,2030,42.957549884891954,GWa
+Alberta,solar_pv,c7,renewable,2030,238.2047400137789,GWa
+Alberta,solar_pv,c8,renewable,2030,0.0,GWa
+Saskatchewan,solar_pv,c1,renewable,2030,0.0,GWa
+Saskatchewan,solar_pv,c2,renewable,2030,0.0,GWa
+Saskatchewan,solar_pv,c3,renewable,2030,0.0,GWa
+Saskatchewan,solar_pv,c4,renewable,2030,30.970313625847705,GWa
+Saskatchewan,solar_pv,c5,renewable,2030,222.60746377331046,GWa
+Saskatchewan,solar_pv,c6,renewable,2030,19.372707617378044,GWa
+Saskatchewan,solar_pv,c7,renewable,2030,365.2023601368616,GWa
+Saskatchewan,solar_pv,c8,renewable,2030,0.0,GWa
+Manitoba,solar_pv,c1,renewable,2030,0.0,GWa
+Manitoba,solar_pv,c2,renewable,2030,0.0,GWa
+Manitoba,solar_pv,c3,renewable,2030,0.0,GWa
+Manitoba,solar_pv,c4,renewable,2030,62.828223845919,GWa
+Manitoba,solar_pv,c5,renewable,2030,181.44574250618257,GWa
+Manitoba,solar_pv,c6,renewable,2030,21.83098323040065,GWa
+Manitoba,solar_pv,c7,renewable,2030,139.2356887930582,GWa
+Manitoba,solar_pv,c8,renewable,2030,0.0,GWa
+Ontario,solar_pv,c1,renewable,2030,0.0,GWa
+Ontario,solar_pv,c2,renewable,2030,0.0,GWa
+Ontario,solar_pv,c3,renewable,2030,0.0,GWa
+Ontario,solar_pv,c4,renewable,2030,73.06214854843094,GWa
+Ontario,solar_pv,c5,renewable,2030,662.6631295893903,GWa
+Ontario,solar_pv,c6,renewable,2030,92.68147862057023,GWa
+Ontario,solar_pv,c7,renewable,2030,16.343321888246383,GWa
+Ontario,solar_pv,c8,renewable,2030,0.0,GWa
+Quebec,solar_pv,c1,renewable,2030,0.0,GWa
+Quebec,solar_pv,c2,renewable,2030,0.0,GWa
+Quebec,solar_pv,c3,renewable,2030,0.0,GWa
+Quebec,solar_pv,c4,renewable,2030,155.32066639404275,GWa
+Quebec,solar_pv,c5,renewable,2030,865.1157774600814,GWa
+Quebec,solar_pv,c6,renewable,2030,65.0603894008106,GWa
+Quebec,solar_pv,c7,renewable,2030,0.0,GWa
+Quebec,solar_pv,c8,renewable,2030,0.0,GWa
+New Brunswick,solar_pv,c1,renewable,2030,0.0,GWa
+New Brunswick,solar_pv,c2,renewable,2030,0.0,GWa
+New Brunswick,solar_pv,c3,renewable,2030,0.0,GWa
+New Brunswick,solar_pv,c4,renewable,2030,0.0,GWa
+New Brunswick,solar_pv,c5,renewable,2030,16.750114378091258,GWa
+New Brunswick,solar_pv,c6,renewable,2030,23.563096650620302,GWa
+New Brunswick,solar_pv,c7,renewable,2030,0.0,GWa
+New Brunswick,solar_pv,c8,renewable,2030,0.0,GWa
+Newfoundland and Labrador,solar_pv,c1,renewable,2030,0.0,GWa
+Newfoundland and Labrador,solar_pv,c2,renewable,2030,0.0,GWa
+Newfoundland and Labrador,solar_pv,c3,renewable,2030,0.0,GWa
+Newfoundland and Labrador,solar_pv,c4,renewable,2030,51.26716333596508,GWa
+Newfoundland and Labrador,solar_pv,c5,renewable,2030,193.95630284927165,GWa
+Newfoundland and Labrador,solar_pv,c6,renewable,2030,0.0,GWa
+Newfoundland and Labrador,solar_pv,c7,renewable,2030,0.0,GWa
+Newfoundland and Labrador,solar_pv,c8,renewable,2030,0.0,GWa
+Nova Scotia,solar_pv,c1,renewable,2030,0.0,GWa
+Nova Scotia,solar_pv,c2,renewable,2030,0.0,GWa
+Nova Scotia,solar_pv,c3,renewable,2030,0.0,GWa
+Nova Scotia,solar_pv,c4,renewable,2030,0.0,GWa
+Nova Scotia,solar_pv,c5,renewable,2030,22.934214962387806,GWa
+Nova Scotia,solar_pv,c6,renewable,2030,16.534594373370215,GWa
+Nova Scotia,solar_pv,c7,renewable,2030,0.0,GWa
+Nova Scotia,solar_pv,c8,renewable,2030,0.0,GWa
+Prince Edward Island,solar_pv,c1,renewable,2030,0.0,GWa
+Prince Edward Island,solar_pv,c2,renewable,2030,0.0,GWa
+Prince Edward Island,solar_pv,c3,renewable,2030,0.0,GWa
+Prince Edward Island,solar_pv,c4,renewable,2030,0.0,GWa
+Prince Edward Island,solar_pv,c5,renewable,2030,1.2715694310341443,GWa
+Prince Edward Island,solar_pv,c6,renewable,2030,1.4463757256428198,GWa
+Prince Edward Island,solar_pv,c7,renewable,2030,0.0,GWa
+Prince Edward Island,solar_pv,c8,renewable,2030,0.0,GWa
+British Columbia,solar_pv,c1,renewable,2035,0.0,GWa
+British Columbia,solar_pv,c2,renewable,2035,0.0,GWa
+British Columbia,solar_pv,c3,renewable,2035,0.0,GWa
+British Columbia,solar_pv,c4,renewable,2035,50.20893787897204,GWa
+British Columbia,solar_pv,c5,renewable,2035,961.9189002265477,GWa
+British Columbia,solar_pv,c6,renewable,2035,49.55282449631517,GWa
+British Columbia,solar_pv,c7,renewable,2035,67.013889168055,GWa
+British Columbia,solar_pv,c8,renewable,2035,0.0,GWa
+Alberta,solar_pv,c1,renewable,2035,0.0,GWa
+Alberta,solar_pv,c2,renewable,2035,0.0,GWa
+Alberta,solar_pv,c3,renewable,2035,0.0,GWa
+Alberta,solar_pv,c4,renewable,2035,17.342546370822472,GWa
+Alberta,solar_pv,c5,renewable,2035,606.336784823702,GWa
+Alberta,solar_pv,c6,renewable,2035,42.957549884891954,GWa
+Alberta,solar_pv,c7,renewable,2035,238.2047400137789,GWa
+Alberta,solar_pv,c8,renewable,2035,0.0,GWa
+Saskatchewan,solar_pv,c1,renewable,2035,0.0,GWa
+Saskatchewan,solar_pv,c2,renewable,2035,0.0,GWa
+Saskatchewan,solar_pv,c3,renewable,2035,0.0,GWa
+Saskatchewan,solar_pv,c4,renewable,2035,30.970313625847705,GWa
+Saskatchewan,solar_pv,c5,renewable,2035,222.60746377331046,GWa
+Saskatchewan,solar_pv,c6,renewable,2035,19.372707617378044,GWa
+Saskatchewan,solar_pv,c7,renewable,2035,365.2023601368616,GWa
+Saskatchewan,solar_pv,c8,renewable,2035,0.0,GWa
+Manitoba,solar_pv,c1,renewable,2035,0.0,GWa
+Manitoba,solar_pv,c2,renewable,2035,0.0,GWa
+Manitoba,solar_pv,c3,renewable,2035,0.0,GWa
+Manitoba,solar_pv,c4,renewable,2035,62.828223845919,GWa
+Manitoba,solar_pv,c5,renewable,2035,181.44574250618257,GWa
+Manitoba,solar_pv,c6,renewable,2035,21.83098323040065,GWa
+Manitoba,solar_pv,c7,renewable,2035,139.2356887930582,GWa
+Manitoba,solar_pv,c8,renewable,2035,0.0,GWa
+Ontario,solar_pv,c1,renewable,2035,0.0,GWa
+Ontario,solar_pv,c2,renewable,2035,0.0,GWa
+Ontario,solar_pv,c3,renewable,2035,0.0,GWa
+Ontario,solar_pv,c4,renewable,2035,73.06214854843094,GWa
+Ontario,solar_pv,c5,renewable,2035,662.6631295893903,GWa
+Ontario,solar_pv,c6,renewable,2035,92.68147862057023,GWa
+Ontario,solar_pv,c7,renewable,2035,16.343321888246383,GWa
+Ontario,solar_pv,c8,renewable,2035,0.0,GWa
+Quebec,solar_pv,c1,renewable,2035,0.0,GWa
+Quebec,solar_pv,c2,renewable,2035,0.0,GWa
+Quebec,solar_pv,c3,renewable,2035,0.0,GWa
+Quebec,solar_pv,c4,renewable,2035,155.32066639404275,GWa
+Quebec,solar_pv,c5,renewable,2035,865.1157774600814,GWa
+Quebec,solar_pv,c6,renewable,2035,65.0603894008106,GWa
+Quebec,solar_pv,c7,renewable,2035,0.0,GWa
+Quebec,solar_pv,c8,renewable,2035,0.0,GWa
+New Brunswick,solar_pv,c1,renewable,2035,0.0,GWa
+New Brunswick,solar_pv,c2,renewable,2035,0.0,GWa
+New Brunswick,solar_pv,c3,renewable,2035,0.0,GWa
+New Brunswick,solar_pv,c4,renewable,2035,0.0,GWa
+New Brunswick,solar_pv,c5,renewable,2035,16.750114378091258,GWa
+New Brunswick,solar_pv,c6,renewable,2035,23.563096650620302,GWa
+New Brunswick,solar_pv,c7,renewable,2035,0.0,GWa
+New Brunswick,solar_pv,c8,renewable,2035,0.0,GWa
+Newfoundland and Labrador,solar_pv,c1,renewable,2035,0.0,GWa
+Newfoundland and Labrador,solar_pv,c2,renewable,2035,0.0,GWa
+Newfoundland and Labrador,solar_pv,c3,renewable,2035,0.0,GWa
+Newfoundland and Labrador,solar_pv,c4,renewable,2035,51.26716333596508,GWa
+Newfoundland and Labrador,solar_pv,c5,renewable,2035,193.95630284927165,GWa
+Newfoundland and Labrador,solar_pv,c6,renewable,2035,0.0,GWa
+Newfoundland and Labrador,solar_pv,c7,renewable,2035,0.0,GWa
+Newfoundland and Labrador,solar_pv,c8,renewable,2035,0.0,GWa
+Nova Scotia,solar_pv,c1,renewable,2035,0.0,GWa
+Nova Scotia,solar_pv,c2,renewable,2035,0.0,GWa
+Nova Scotia,solar_pv,c3,renewable,2035,0.0,GWa
+Nova Scotia,solar_pv,c4,renewable,2035,0.0,GWa
+Nova Scotia,solar_pv,c5,renewable,2035,22.934214962387806,GWa
+Nova Scotia,solar_pv,c6,renewable,2035,16.534594373370215,GWa
+Nova Scotia,solar_pv,c7,renewable,2035,0.0,GWa
+Nova Scotia,solar_pv,c8,renewable,2035,0.0,GWa
+Prince Edward Island,solar_pv,c1,renewable,2035,0.0,GWa
+Prince Edward Island,solar_pv,c2,renewable,2035,0.0,GWa
+Prince Edward Island,solar_pv,c3,renewable,2035,0.0,GWa
+Prince Edward Island,solar_pv,c4,renewable,2035,0.0,GWa
+Prince Edward Island,solar_pv,c5,renewable,2035,1.2715694310341443,GWa
+Prince Edward Island,solar_pv,c6,renewable,2035,1.4463757256428198,GWa
+Prince Edward Island,solar_pv,c7,renewable,2035,0.0,GWa
+Prince Edward Island,solar_pv,c8,renewable,2035,0.0,GWa
+British Columbia,solar_pv,c1,renewable,2040,0.0,GWa
+British Columbia,solar_pv,c2,renewable,2040,0.0,GWa
+British Columbia,solar_pv,c3,renewable,2040,0.0,GWa
+British Columbia,solar_pv,c4,renewable,2040,50.20893787897204,GWa
+British Columbia,solar_pv,c5,renewable,2040,961.9189002265477,GWa
+British Columbia,solar_pv,c6,renewable,2040,49.55282449631517,GWa
+British Columbia,solar_pv,c7,renewable,2040,67.013889168055,GWa
+British Columbia,solar_pv,c8,renewable,2040,0.0,GWa
+Alberta,solar_pv,c1,renewable,2040,0.0,GWa
+Alberta,solar_pv,c2,renewable,2040,0.0,GWa
+Alberta,solar_pv,c3,renewable,2040,0.0,GWa
+Alberta,solar_pv,c4,renewable,2040,17.342546370822472,GWa
+Alberta,solar_pv,c5,renewable,2040,606.336784823702,GWa
+Alberta,solar_pv,c6,renewable,2040,42.957549884891954,GWa
+Alberta,solar_pv,c7,renewable,2040,238.2047400137789,GWa
+Alberta,solar_pv,c8,renewable,2040,0.0,GWa
+Saskatchewan,solar_pv,c1,renewable,2040,0.0,GWa
+Saskatchewan,solar_pv,c2,renewable,2040,0.0,GWa
+Saskatchewan,solar_pv,c3,renewable,2040,0.0,GWa
+Saskatchewan,solar_pv,c4,renewable,2040,30.970313625847705,GWa
+Saskatchewan,solar_pv,c5,renewable,2040,222.60746377331046,GWa
+Saskatchewan,solar_pv,c6,renewable,2040,19.372707617378044,GWa
+Saskatchewan,solar_pv,c7,renewable,2040,365.2023601368616,GWa
+Saskatchewan,solar_pv,c8,renewable,2040,0.0,GWa
+Manitoba,solar_pv,c1,renewable,2040,0.0,GWa
+Manitoba,solar_pv,c2,renewable,2040,0.0,GWa
+Manitoba,solar_pv,c3,renewable,2040,0.0,GWa
+Manitoba,solar_pv,c4,renewable,2040,62.828223845919,GWa
+Manitoba,solar_pv,c5,renewable,2040,181.44574250618257,GWa
+Manitoba,solar_pv,c6,renewable,2040,21.83098323040065,GWa
+Manitoba,solar_pv,c7,renewable,2040,139.2356887930582,GWa
+Manitoba,solar_pv,c8,renewable,2040,0.0,GWa
+Ontario,solar_pv,c1,renewable,2040,0.0,GWa
+Ontario,solar_pv,c2,renewable,2040,0.0,GWa
+Ontario,solar_pv,c3,renewable,2040,0.0,GWa
+Ontario,solar_pv,c4,renewable,2040,73.06214854843094,GWa
+Ontario,solar_pv,c5,renewable,2040,662.6631295893903,GWa
+Ontario,solar_pv,c6,renewable,2040,92.68147862057023,GWa
+Ontario,solar_pv,c7,renewable,2040,16.343321888246383,GWa
+Ontario,solar_pv,c8,renewable,2040,0.0,GWa
+Quebec,solar_pv,c1,renewable,2040,0.0,GWa
+Quebec,solar_pv,c2,renewable,2040,0.0,GWa
+Quebec,solar_pv,c3,renewable,2040,0.0,GWa
+Quebec,solar_pv,c4,renewable,2040,155.32066639404275,GWa
+Quebec,solar_pv,c5,renewable,2040,865.1157774600814,GWa
+Quebec,solar_pv,c6,renewable,2040,65.0603894008106,GWa
+Quebec,solar_pv,c7,renewable,2040,0.0,GWa
+Quebec,solar_pv,c8,renewable,2040,0.0,GWa
+New Brunswick,solar_pv,c1,renewable,2040,0.0,GWa
+New Brunswick,solar_pv,c2,renewable,2040,0.0,GWa
+New Brunswick,solar_pv,c3,renewable,2040,0.0,GWa
+New Brunswick,solar_pv,c4,renewable,2040,0.0,GWa
+New Brunswick,solar_pv,c5,renewable,2040,16.750114378091258,GWa
+New Brunswick,solar_pv,c6,renewable,2040,23.563096650620302,GWa
+New Brunswick,solar_pv,c7,renewable,2040,0.0,GWa
+New Brunswick,solar_pv,c8,renewable,2040,0.0,GWa
+Newfoundland and Labrador,solar_pv,c1,renewable,2040,0.0,GWa
+Newfoundland and Labrador,solar_pv,c2,renewable,2040,0.0,GWa
+Newfoundland and Labrador,solar_pv,c3,renewable,2040,0.0,GWa
+Newfoundland and Labrador,solar_pv,c4,renewable,2040,51.26716333596508,GWa
+Newfoundland and Labrador,solar_pv,c5,renewable,2040,193.95630284927165,GWa
+Newfoundland and Labrador,solar_pv,c6,renewable,2040,0.0,GWa
+Newfoundland and Labrador,solar_pv,c7,renewable,2040,0.0,GWa
+Newfoundland and Labrador,solar_pv,c8,renewable,2040,0.0,GWa
+Nova Scotia,solar_pv,c1,renewable,2040,0.0,GWa
+Nova Scotia,solar_pv,c2,renewable,2040,0.0,GWa
+Nova Scotia,solar_pv,c3,renewable,2040,0.0,GWa
+Nova Scotia,solar_pv,c4,renewable,2040,0.0,GWa
+Nova Scotia,solar_pv,c5,renewable,2040,22.934214962387806,GWa
+Nova Scotia,solar_pv,c6,renewable,2040,16.534594373370215,GWa
+Nova Scotia,solar_pv,c7,renewable,2040,0.0,GWa
+Nova Scotia,solar_pv,c8,renewable,2040,0.0,GWa
+Prince Edward Island,solar_pv,c1,renewable,2040,0.0,GWa
+Prince Edward Island,solar_pv,c2,renewable,2040,0.0,GWa
+Prince Edward Island,solar_pv,c3,renewable,2040,0.0,GWa
+Prince Edward Island,solar_pv,c4,renewable,2040,0.0,GWa
+Prince Edward Island,solar_pv,c5,renewable,2040,1.2715694310341443,GWa
+Prince Edward Island,solar_pv,c6,renewable,2040,1.4463757256428198,GWa
+Prince Edward Island,solar_pv,c7,renewable,2040,0.0,GWa
+Prince Edward Island,solar_pv,c8,renewable,2040,0.0,GWa
+British Columbia,solar_pv,c1,renewable,2045,0.0,GWa
+British Columbia,solar_pv,c2,renewable,2045,0.0,GWa
+British Columbia,solar_pv,c3,renewable,2045,0.0,GWa
+British Columbia,solar_pv,c4,renewable,2045,50.20893787897204,GWa
+British Columbia,solar_pv,c5,renewable,2045,961.9189002265477,GWa
+British Columbia,solar_pv,c6,renewable,2045,49.55282449631517,GWa
+British Columbia,solar_pv,c7,renewable,2045,67.013889168055,GWa
+British Columbia,solar_pv,c8,renewable,2045,0.0,GWa
+Alberta,solar_pv,c1,renewable,2045,0.0,GWa
+Alberta,solar_pv,c2,renewable,2045,0.0,GWa
+Alberta,solar_pv,c3,renewable,2045,0.0,GWa
+Alberta,solar_pv,c4,renewable,2045,17.342546370822472,GWa
+Alberta,solar_pv,c5,renewable,2045,606.336784823702,GWa
+Alberta,solar_pv,c6,renewable,2045,42.957549884891954,GWa
+Alberta,solar_pv,c7,renewable,2045,238.2047400137789,GWa
+Alberta,solar_pv,c8,renewable,2045,0.0,GWa
+Saskatchewan,solar_pv,c1,renewable,2045,0.0,GWa
+Saskatchewan,solar_pv,c2,renewable,2045,0.0,GWa
+Saskatchewan,solar_pv,c3,renewable,2045,0.0,GWa
+Saskatchewan,solar_pv,c4,renewable,2045,30.970313625847705,GWa
+Saskatchewan,solar_pv,c5,renewable,2045,222.60746377331046,GWa
+Saskatchewan,solar_pv,c6,renewable,2045,19.372707617378044,GWa
+Saskatchewan,solar_pv,c7,renewable,2045,365.2023601368616,GWa
+Saskatchewan,solar_pv,c8,renewable,2045,0.0,GWa
+Manitoba,solar_pv,c1,renewable,2045,0.0,GWa
+Manitoba,solar_pv,c2,renewable,2045,0.0,GWa
+Manitoba,solar_pv,c3,renewable,2045,0.0,GWa
+Manitoba,solar_pv,c4,renewable,2045,62.828223845919,GWa
+Manitoba,solar_pv,c5,renewable,2045,181.44574250618257,GWa
+Manitoba,solar_pv,c6,renewable,2045,21.83098323040065,GWa
+Manitoba,solar_pv,c7,renewable,2045,139.2356887930582,GWa
+Manitoba,solar_pv,c8,renewable,2045,0.0,GWa
+Ontario,solar_pv,c1,renewable,2045,0.0,GWa
+Ontario,solar_pv,c2,renewable,2045,0.0,GWa
+Ontario,solar_pv,c3,renewable,2045,0.0,GWa
+Ontario,solar_pv,c4,renewable,2045,73.06214854843094,GWa
+Ontario,solar_pv,c5,renewable,2045,662.6631295893903,GWa
+Ontario,solar_pv,c6,renewable,2045,92.68147862057023,GWa
+Ontario,solar_pv,c7,renewable,2045,16.343321888246383,GWa
+Ontario,solar_pv,c8,renewable,2045,0.0,GWa
+Quebec,solar_pv,c1,renewable,2045,0.0,GWa
+Quebec,solar_pv,c2,renewable,2045,0.0,GWa
+Quebec,solar_pv,c3,renewable,2045,0.0,GWa
+Quebec,solar_pv,c4,renewable,2045,155.32066639404275,GWa
+Quebec,solar_pv,c5,renewable,2045,865.1157774600814,GWa
+Quebec,solar_pv,c6,renewable,2045,65.0603894008106,GWa
+Quebec,solar_pv,c7,renewable,2045,0.0,GWa
+Quebec,solar_pv,c8,renewable,2045,0.0,GWa
+New Brunswick,solar_pv,c1,renewable,2045,0.0,GWa
+New Brunswick,solar_pv,c2,renewable,2045,0.0,GWa
+New Brunswick,solar_pv,c3,renewable,2045,0.0,GWa
+New Brunswick,solar_pv,c4,renewable,2045,0.0,GWa
+New Brunswick,solar_pv,c5,renewable,2045,16.750114378091258,GWa
+New Brunswick,solar_pv,c6,renewable,2045,23.563096650620302,GWa
+New Brunswick,solar_pv,c7,renewable,2045,0.0,GWa
+New Brunswick,solar_pv,c8,renewable,2045,0.0,GWa
+Newfoundland and Labrador,solar_pv,c1,renewable,2045,0.0,GWa
+Newfoundland and Labrador,solar_pv,c2,renewable,2045,0.0,GWa
+Newfoundland and Labrador,solar_pv,c3,renewable,2045,0.0,GWa
+Newfoundland and Labrador,solar_pv,c4,renewable,2045,51.26716333596508,GWa
+Newfoundland and Labrador,solar_pv,c5,renewable,2045,193.95630284927165,GWa
+Newfoundland and Labrador,solar_pv,c6,renewable,2045,0.0,GWa
+Newfoundland and Labrador,solar_pv,c7,renewable,2045,0.0,GWa
+Newfoundland and Labrador,solar_pv,c8,renewable,2045,0.0,GWa
+Nova Scotia,solar_pv,c1,renewable,2045,0.0,GWa
+Nova Scotia,solar_pv,c2,renewable,2045,0.0,GWa
+Nova Scotia,solar_pv,c3,renewable,2045,0.0,GWa
+Nova Scotia,solar_pv,c4,renewable,2045,0.0,GWa
+Nova Scotia,solar_pv,c5,renewable,2045,22.934214962387806,GWa
+Nova Scotia,solar_pv,c6,renewable,2045,16.534594373370215,GWa
+Nova Scotia,solar_pv,c7,renewable,2045,0.0,GWa
+Nova Scotia,solar_pv,c8,renewable,2045,0.0,GWa
+Prince Edward Island,solar_pv,c1,renewable,2045,0.0,GWa
+Prince Edward Island,solar_pv,c2,renewable,2045,0.0,GWa
+Prince Edward Island,solar_pv,c3,renewable,2045,0.0,GWa
+Prince Edward Island,solar_pv,c4,renewable,2045,0.0,GWa
+Prince Edward Island,solar_pv,c5,renewable,2045,1.2715694310341443,GWa
+Prince Edward Island,solar_pv,c6,renewable,2045,1.4463757256428198,GWa
+Prince Edward Island,solar_pv,c7,renewable,2045,0.0,GWa
+Prince Edward Island,solar_pv,c8,renewable,2045,0.0,GWa
+British Columbia,solar_pv,c1,renewable,2050,0.0,GWa
+British Columbia,solar_pv,c2,renewable,2050,0.0,GWa
+British Columbia,solar_pv,c3,renewable,2050,0.0,GWa
+British Columbia,solar_pv,c4,renewable,2050,50.20893787897204,GWa
+British Columbia,solar_pv,c5,renewable,2050,961.9189002265477,GWa
+British Columbia,solar_pv,c6,renewable,2050,49.55282449631517,GWa
+British Columbia,solar_pv,c7,renewable,2050,67.013889168055,GWa
+British Columbia,solar_pv,c8,renewable,2050,0.0,GWa
+Alberta,solar_pv,c1,renewable,2050,0.0,GWa
+Alberta,solar_pv,c2,renewable,2050,0.0,GWa
+Alberta,solar_pv,c3,renewable,2050,0.0,GWa
+Alberta,solar_pv,c4,renewable,2050,17.342546370822472,GWa
+Alberta,solar_pv,c5,renewable,2050,606.336784823702,GWa
+Alberta,solar_pv,c6,renewable,2050,42.957549884891954,GWa
+Alberta,solar_pv,c7,renewable,2050,238.2047400137789,GWa
+Alberta,solar_pv,c8,renewable,2050,0.0,GWa
+Saskatchewan,solar_pv,c1,renewable,2050,0.0,GWa
+Saskatchewan,solar_pv,c2,renewable,2050,0.0,GWa
+Saskatchewan,solar_pv,c3,renewable,2050,0.0,GWa
+Saskatchewan,solar_pv,c4,renewable,2050,30.970313625847705,GWa
+Saskatchewan,solar_pv,c5,renewable,2050,222.60746377331046,GWa
+Saskatchewan,solar_pv,c6,renewable,2050,19.372707617378044,GWa
+Saskatchewan,solar_pv,c7,renewable,2050,365.2023601368616,GWa
+Saskatchewan,solar_pv,c8,renewable,2050,0.0,GWa
+Manitoba,solar_pv,c1,renewable,2050,0.0,GWa
+Manitoba,solar_pv,c2,renewable,2050,0.0,GWa
+Manitoba,solar_pv,c3,renewable,2050,0.0,GWa
+Manitoba,solar_pv,c4,renewable,2050,62.828223845919,GWa
+Manitoba,solar_pv,c5,renewable,2050,181.44574250618257,GWa
+Manitoba,solar_pv,c6,renewable,2050,21.83098323040065,GWa
+Manitoba,solar_pv,c7,renewable,2050,139.2356887930582,GWa
+Manitoba,solar_pv,c8,renewable,2050,0.0,GWa
+Ontario,solar_pv,c1,renewable,2050,0.0,GWa
+Ontario,solar_pv,c2,renewable,2050,0.0,GWa
+Ontario,solar_pv,c3,renewable,2050,0.0,GWa
+Ontario,solar_pv,c4,renewable,2050,73.06214854843094,GWa
+Ontario,solar_pv,c5,renewable,2050,662.6631295893903,GWa
+Ontario,solar_pv,c6,renewable,2050,92.68147862057023,GWa
+Ontario,solar_pv,c7,renewable,2050,16.343321888246383,GWa
+Ontario,solar_pv,c8,renewable,2050,0.0,GWa
+Quebec,solar_pv,c1,renewable,2050,0.0,GWa
+Quebec,solar_pv,c2,renewable,2050,0.0,GWa
+Quebec,solar_pv,c3,renewable,2050,0.0,GWa
+Quebec,solar_pv,c4,renewable,2050,155.32066639404275,GWa
+Quebec,solar_pv,c5,renewable,2050,865.1157774600814,GWa
+Quebec,solar_pv,c6,renewable,2050,65.0603894008106,GWa
+Quebec,solar_pv,c7,renewable,2050,0.0,GWa
+Quebec,solar_pv,c8,renewable,2050,0.0,GWa
+New Brunswick,solar_pv,c1,renewable,2050,0.0,GWa
+New Brunswick,solar_pv,c2,renewable,2050,0.0,GWa
+New Brunswick,solar_pv,c3,renewable,2050,0.0,GWa
+New Brunswick,solar_pv,c4,renewable,2050,0.0,GWa
+New Brunswick,solar_pv,c5,renewable,2050,16.750114378091258,GWa
+New Brunswick,solar_pv,c6,renewable,2050,23.563096650620302,GWa
+New Brunswick,solar_pv,c7,renewable,2050,0.0,GWa
+New Brunswick,solar_pv,c8,renewable,2050,0.0,GWa
+Newfoundland and Labrador,solar_pv,c1,renewable,2050,0.0,GWa
+Newfoundland and Labrador,solar_pv,c2,renewable,2050,0.0,GWa
+Newfoundland and Labrador,solar_pv,c3,renewable,2050,0.0,GWa
+Newfoundland and Labrador,solar_pv,c4,renewable,2050,51.26716333596508,GWa
+Newfoundland and Labrador,solar_pv,c5,renewable,2050,193.95630284927165,GWa
+Newfoundland and Labrador,solar_pv,c6,renewable,2050,0.0,GWa
+Newfoundland and Labrador,solar_pv,c7,renewable,2050,0.0,GWa
+Newfoundland and Labrador,solar_pv,c8,renewable,2050,0.0,GWa
+Nova Scotia,solar_pv,c1,renewable,2050,0.0,GWa
+Nova Scotia,solar_pv,c2,renewable,2050,0.0,GWa
+Nova Scotia,solar_pv,c3,renewable,2050,0.0,GWa
+Nova Scotia,solar_pv,c4,renewable,2050,0.0,GWa
+Nova Scotia,solar_pv,c5,renewable,2050,22.934214962387806,GWa
+Nova Scotia,solar_pv,c6,renewable,2050,16.534594373370215,GWa
+Nova Scotia,solar_pv,c7,renewable,2050,0.0,GWa
+Nova Scotia,solar_pv,c8,renewable,2050,0.0,GWa
+Prince Edward Island,solar_pv,c1,renewable,2050,0.0,GWa
+Prince Edward Island,solar_pv,c2,renewable,2050,0.0,GWa
+Prince Edward Island,solar_pv,c3,renewable,2050,0.0,GWa
+Prince Edward Island,solar_pv,c4,renewable,2050,0.0,GWa
+Prince Edward Island,solar_pv,c5,renewable,2050,1.2715694310341443,GWa
+Prince Edward Island,solar_pv,c6,renewable,2050,1.4463757256428198,GWa
+Prince Edward Island,solar_pv,c7,renewable,2050,0.0,GWa
+Prince Edward Island,solar_pv,c8,renewable,2050,0.0,GWa
+British Columbia,solar_pv,c1,renewable,2055,0.0,GWa
+British Columbia,solar_pv,c2,renewable,2055,0.0,GWa
+British Columbia,solar_pv,c3,renewable,2055,0.0,GWa
+British Columbia,solar_pv,c4,renewable,2055,50.20893787897204,GWa
+British Columbia,solar_pv,c5,renewable,2055,961.9189002265477,GWa
+British Columbia,solar_pv,c6,renewable,2055,49.55282449631517,GWa
+British Columbia,solar_pv,c7,renewable,2055,67.013889168055,GWa
+British Columbia,solar_pv,c8,renewable,2055,0.0,GWa
+Alberta,solar_pv,c1,renewable,2055,0.0,GWa
+Alberta,solar_pv,c2,renewable,2055,0.0,GWa
+Alberta,solar_pv,c3,renewable,2055,0.0,GWa
+Alberta,solar_pv,c4,renewable,2055,17.342546370822472,GWa
+Alberta,solar_pv,c5,renewable,2055,606.336784823702,GWa
+Alberta,solar_pv,c6,renewable,2055,42.957549884891954,GWa
+Alberta,solar_pv,c7,renewable,2055,238.2047400137789,GWa
+Alberta,solar_pv,c8,renewable,2055,0.0,GWa
+Saskatchewan,solar_pv,c1,renewable,2055,0.0,GWa
+Saskatchewan,solar_pv,c2,renewable,2055,0.0,GWa
+Saskatchewan,solar_pv,c3,renewable,2055,0.0,GWa
+Saskatchewan,solar_pv,c4,renewable,2055,30.970313625847705,GWa
+Saskatchewan,solar_pv,c5,renewable,2055,222.60746377331046,GWa
+Saskatchewan,solar_pv,c6,renewable,2055,19.372707617378044,GWa
+Saskatchewan,solar_pv,c7,renewable,2055,365.2023601368616,GWa
+Saskatchewan,solar_pv,c8,renewable,2055,0.0,GWa
+Manitoba,solar_pv,c1,renewable,2055,0.0,GWa
+Manitoba,solar_pv,c2,renewable,2055,0.0,GWa
+Manitoba,solar_pv,c3,renewable,2055,0.0,GWa
+Manitoba,solar_pv,c4,renewable,2055,62.828223845919,GWa
+Manitoba,solar_pv,c5,renewable,2055,181.44574250618257,GWa
+Manitoba,solar_pv,c6,renewable,2055,21.83098323040065,GWa
+Manitoba,solar_pv,c7,renewable,2055,139.2356887930582,GWa
+Manitoba,solar_pv,c8,renewable,2055,0.0,GWa
+Ontario,solar_pv,c1,renewable,2055,0.0,GWa
+Ontario,solar_pv,c2,renewable,2055,0.0,GWa
+Ontario,solar_pv,c3,renewable,2055,0.0,GWa
+Ontario,solar_pv,c4,renewable,2055,73.06214854843094,GWa
+Ontario,solar_pv,c5,renewable,2055,662.6631295893903,GWa
+Ontario,solar_pv,c6,renewable,2055,92.68147862057023,GWa
+Ontario,solar_pv,c7,renewable,2055,16.343321888246383,GWa
+Ontario,solar_pv,c8,renewable,2055,0.0,GWa
+Quebec,solar_pv,c1,renewable,2055,0.0,GWa
+Quebec,solar_pv,c2,renewable,2055,0.0,GWa
+Quebec,solar_pv,c3,renewable,2055,0.0,GWa
+Quebec,solar_pv,c4,renewable,2055,155.32066639404275,GWa
+Quebec,solar_pv,c5,renewable,2055,865.1157774600814,GWa
+Quebec,solar_pv,c6,renewable,2055,65.0603894008106,GWa
+Quebec,solar_pv,c7,renewable,2055,0.0,GWa
+Quebec,solar_pv,c8,renewable,2055,0.0,GWa
+New Brunswick,solar_pv,c1,renewable,2055,0.0,GWa
+New Brunswick,solar_pv,c2,renewable,2055,0.0,GWa
+New Brunswick,solar_pv,c3,renewable,2055,0.0,GWa
+New Brunswick,solar_pv,c4,renewable,2055,0.0,GWa
+New Brunswick,solar_pv,c5,renewable,2055,16.750114378091258,GWa
+New Brunswick,solar_pv,c6,renewable,2055,23.563096650620302,GWa
+New Brunswick,solar_pv,c7,renewable,2055,0.0,GWa
+New Brunswick,solar_pv,c8,renewable,2055,0.0,GWa
+Newfoundland and Labrador,solar_pv,c1,renewable,2055,0.0,GWa
+Newfoundland and Labrador,solar_pv,c2,renewable,2055,0.0,GWa
+Newfoundland and Labrador,solar_pv,c3,renewable,2055,0.0,GWa
+Newfoundland and Labrador,solar_pv,c4,renewable,2055,51.26716333596508,GWa
+Newfoundland and Labrador,solar_pv,c5,renewable,2055,193.95630284927165,GWa
+Newfoundland and Labrador,solar_pv,c6,renewable,2055,0.0,GWa
+Newfoundland and Labrador,solar_pv,c7,renewable,2055,0.0,GWa
+Newfoundland and Labrador,solar_pv,c8,renewable,2055,0.0,GWa
+Nova Scotia,solar_pv,c1,renewable,2055,0.0,GWa
+Nova Scotia,solar_pv,c2,renewable,2055,0.0,GWa
+Nova Scotia,solar_pv,c3,renewable,2055,0.0,GWa
+Nova Scotia,solar_pv,c4,renewable,2055,0.0,GWa
+Nova Scotia,solar_pv,c5,renewable,2055,22.934214962387806,GWa
+Nova Scotia,solar_pv,c6,renewable,2055,16.534594373370215,GWa
+Nova Scotia,solar_pv,c7,renewable,2055,0.0,GWa
+Nova Scotia,solar_pv,c8,renewable,2055,0.0,GWa
+Prince Edward Island,solar_pv,c1,renewable,2055,0.0,GWa
+Prince Edward Island,solar_pv,c2,renewable,2055,0.0,GWa
+Prince Edward Island,solar_pv,c3,renewable,2055,0.0,GWa
+Prince Edward Island,solar_pv,c4,renewable,2055,0.0,GWa
+Prince Edward Island,solar_pv,c5,renewable,2055,1.2715694310341443,GWa
+Prince Edward Island,solar_pv,c6,renewable,2055,1.4463757256428198,GWa
+Prince Edward Island,solar_pv,c7,renewable,2055,0.0,GWa
+Prince Edward Island,solar_pv,c8,renewable,2055,0.0,GWa
+British Columbia,solar_pv,c1,renewable,2060,0.0,GWa
+British Columbia,solar_pv,c2,renewable,2060,0.0,GWa
+British Columbia,solar_pv,c3,renewable,2060,0.0,GWa
+British Columbia,solar_pv,c4,renewable,2060,50.20893787897204,GWa
+British Columbia,solar_pv,c5,renewable,2060,961.9189002265477,GWa
+British Columbia,solar_pv,c6,renewable,2060,49.55282449631517,GWa
+British Columbia,solar_pv,c7,renewable,2060,67.013889168055,GWa
+British Columbia,solar_pv,c8,renewable,2060,0.0,GWa
+Alberta,solar_pv,c1,renewable,2060,0.0,GWa
+Alberta,solar_pv,c2,renewable,2060,0.0,GWa
+Alberta,solar_pv,c3,renewable,2060,0.0,GWa
+Alberta,solar_pv,c4,renewable,2060,17.342546370822472,GWa
+Alberta,solar_pv,c5,renewable,2060,606.336784823702,GWa
+Alberta,solar_pv,c6,renewable,2060,42.957549884891954,GWa
+Alberta,solar_pv,c7,renewable,2060,238.2047400137789,GWa
+Alberta,solar_pv,c8,renewable,2060,0.0,GWa
+Saskatchewan,solar_pv,c1,renewable,2060,0.0,GWa
+Saskatchewan,solar_pv,c2,renewable,2060,0.0,GWa
+Saskatchewan,solar_pv,c3,renewable,2060,0.0,GWa
+Saskatchewan,solar_pv,c4,renewable,2060,30.970313625847705,GWa
+Saskatchewan,solar_pv,c5,renewable,2060,222.60746377331046,GWa
+Saskatchewan,solar_pv,c6,renewable,2060,19.372707617378044,GWa
+Saskatchewan,solar_pv,c7,renewable,2060,365.2023601368616,GWa
+Saskatchewan,solar_pv,c8,renewable,2060,0.0,GWa
+Manitoba,solar_pv,c1,renewable,2060,0.0,GWa
+Manitoba,solar_pv,c2,renewable,2060,0.0,GWa
+Manitoba,solar_pv,c3,renewable,2060,0.0,GWa
+Manitoba,solar_pv,c4,renewable,2060,62.828223845919,GWa
+Manitoba,solar_pv,c5,renewable,2060,181.44574250618257,GWa
+Manitoba,solar_pv,c6,renewable,2060,21.83098323040065,GWa
+Manitoba,solar_pv,c7,renewable,2060,139.2356887930582,GWa
+Manitoba,solar_pv,c8,renewable,2060,0.0,GWa
+Ontario,solar_pv,c1,renewable,2060,0.0,GWa
+Ontario,solar_pv,c2,renewable,2060,0.0,GWa
+Ontario,solar_pv,c3,renewable,2060,0.0,GWa
+Ontario,solar_pv,c4,renewable,2060,73.06214854843094,GWa
+Ontario,solar_pv,c5,renewable,2060,662.6631295893903,GWa
+Ontario,solar_pv,c6,renewable,2060,92.68147862057023,GWa
+Ontario,solar_pv,c7,renewable,2060,16.343321888246383,GWa
+Ontario,solar_pv,c8,renewable,2060,0.0,GWa
+Quebec,solar_pv,c1,renewable,2060,0.0,GWa
+Quebec,solar_pv,c2,renewable,2060,0.0,GWa
+Quebec,solar_pv,c3,renewable,2060,0.0,GWa
+Quebec,solar_pv,c4,renewable,2060,155.32066639404275,GWa
+Quebec,solar_pv,c5,renewable,2060,865.1157774600814,GWa
+Quebec,solar_pv,c6,renewable,2060,65.0603894008106,GWa
+Quebec,solar_pv,c7,renewable,2060,0.0,GWa
+Quebec,solar_pv,c8,renewable,2060,0.0,GWa
+New Brunswick,solar_pv,c1,renewable,2060,0.0,GWa
+New Brunswick,solar_pv,c2,renewable,2060,0.0,GWa
+New Brunswick,solar_pv,c3,renewable,2060,0.0,GWa
+New Brunswick,solar_pv,c4,renewable,2060,0.0,GWa
+New Brunswick,solar_pv,c5,renewable,2060,16.750114378091258,GWa
+New Brunswick,solar_pv,c6,renewable,2060,23.563096650620302,GWa
+New Brunswick,solar_pv,c7,renewable,2060,0.0,GWa
+New Brunswick,solar_pv,c8,renewable,2060,0.0,GWa
+Newfoundland and Labrador,solar_pv,c1,renewable,2060,0.0,GWa
+Newfoundland and Labrador,solar_pv,c2,renewable,2060,0.0,GWa
+Newfoundland and Labrador,solar_pv,c3,renewable,2060,0.0,GWa
+Newfoundland and Labrador,solar_pv,c4,renewable,2060,51.26716333596508,GWa
+Newfoundland and Labrador,solar_pv,c5,renewable,2060,193.95630284927165,GWa
+Newfoundland and Labrador,solar_pv,c6,renewable,2060,0.0,GWa
+Newfoundland and Labrador,solar_pv,c7,renewable,2060,0.0,GWa
+Newfoundland and Labrador,solar_pv,c8,renewable,2060,0.0,GWa
+Nova Scotia,solar_pv,c1,renewable,2060,0.0,GWa
+Nova Scotia,solar_pv,c2,renewable,2060,0.0,GWa
+Nova Scotia,solar_pv,c3,renewable,2060,0.0,GWa
+Nova Scotia,solar_pv,c4,renewable,2060,0.0,GWa
+Nova Scotia,solar_pv,c5,renewable,2060,22.934214962387806,GWa
+Nova Scotia,solar_pv,c6,renewable,2060,16.534594373370215,GWa
+Nova Scotia,solar_pv,c7,renewable,2060,0.0,GWa
+Nova Scotia,solar_pv,c8,renewable,2060,0.0,GWa
+Prince Edward Island,solar_pv,c1,renewable,2060,0.0,GWa
+Prince Edward Island,solar_pv,c2,renewable,2060,0.0,GWa
+Prince Edward Island,solar_pv,c3,renewable,2060,0.0,GWa
+Prince Edward Island,solar_pv,c4,renewable,2060,0.0,GWa
+Prince Edward Island,solar_pv,c5,renewable,2060,1.2715694310341443,GWa
+Prince Edward Island,solar_pv,c6,renewable,2060,1.4463757256428198,GWa
+Prince Edward Island,solar_pv,c7,renewable,2060,0.0,GWa
+Prince Edward Island,solar_pv,c8,renewable,2060,0.0,GWa
