@@ -2,7 +2,6 @@ import pandas as pd
 import requests
 import os
 import math
-from pre_process_IP_transmission import pre_process_IP_lines
 
 class CODERS_pull:
     """
