@@ -2,6 +2,7 @@ import pandas as pd
 import requests
 import os
 import math
+from pre_process_IP_transmission import pre_process_IP_lines
 
 class CODERS_pull:
     """
@@ -55,6 +56,9 @@ class CODERS_pull:
         generators = pd.merge(generators, self.gen_generic['MESSAGE_tech'], left_on='updated_gen_type', right_index=True)
         self.generators = generators
         self.provinces = generators.operating_region.unique()
+        self.prov_short = {}
+        for prov in self.provinces:
+            self.prov_short[prov] = generators[generators.operating_region == prov]['province'].iloc[0]
 
 
     def MESSAGE_inv_costs(self, method='coders'):
@@ -311,10 +315,6 @@ class CODERS_pull:
             result = result[result.index == 'Canada']
         # saving to excel
         pd.DataFrame.from_dict(result).to_excel(f'{self.root}\\data\\CODERS_data\\historical_activity_raw_CODERS.xlsx')
-     
-
-    def MESSAGE_resource_potential(self):
-        return
 
 
     def MESSAGE_electricity_demand(self):
@@ -344,10 +344,66 @@ class CODERS_pull:
         demand.to_csv(f'{self.root}\\data\\CODERS_data\\demand.csv', index=True)
 
 
-    def MESSAGE_technology_outputs(self):
+    def MESSAGE_interprovincial_lines(self):
+        """
+        Creates the input and output data for interprovincial lines. Treats each line between two provinces as a technology,
+        assigned to the Canada node. 2 modes of operation are used, from the first province (a) to the second province (b) and
+        vice versa to allow bilateral trade of electricity.
+        """     
+        # Get line capacity data and name lines
+        line_data = pd.DataFrame.from_dict(requests.get(f'{self.url}/transfer_capacities_copper?key={self.key}').json())
+        efficiency = pd.DataFrame.from_dict(requests.get(f'{self.url}/CA_system_parameters?key={self.key}').json())
+        
+        # take average input efficiency for all provinces
+        efficiency = round(1/(1-efficiency.system_line_losses_percent.mean()),2)
+
+        line_data['avg_capacity'] = (line_data.ttc_summer + line_data.ttc_winter) / 2
+        line_data[['prov_from', 'prov_a']] = line_data.balancing_area_from.str.split('.',n=1,expand=True)
+        line_data[['prov_to', 'prov_b']] = line_data.balancing_area_to.str.split('.',n=1,expand=True)
+        line_data = line_data.set_index('electr_trans_' + line_data.replace(self.prov_short).prov_from + '_' + line_data.replace(self.prov_short).prov_to)
+        line_data = line_data[['prov_to', 'prov_from', 'avg_capacity']]
+        line_data['efficiency'] = efficiency
+        
+        # create input sheet
+        lines_input = {}
+        for line in line_data.index:
+            for year_vtg in self.years:
+                act_years = [year for year in self.years if year >= year_vtg and year <= self.end_year]
+                for year_act in act_years:
+                    lines_input[f'{line}|{year_vtg}|{year_act}|a->b|{line_data.at[line,"prov_from"]}|{line_data.at[line,"prov_to"]}'] = line_data.at[line,'efficiency']
+                    lines_input[f'{line}|{year_vtg}|{year_act}|b->a|{line_data.at[line,"prov_to"]}|{line_data.at[line,"prov_from"]}'] = line_data.at[line,'efficiency']
+        lines_input = pd.DataFrame.from_dict(lines_input, orient='index',columns=['value']).reset_index()
+        lines_input[['technology', 'year_vtg', 'year_act', 'mode', 'node_origin', 'node_dest']] = lines_input['index'].str.split('|', expand=True)
+        lines_input = pd.merge(lines_input, line_data, left_on='technology', right_index=True)
+        lines_input['node_loc'] = 'Canada'
+        lines_input['commodity'] = 'electr'
+        lines_input['level'] = 'secondary'
+        lines_input['time'] = 'year'
+        lines_input['time_origin'] = 'year'
+        lines_input['unit'] = '%'
+        temp = lines_input[['node_loc', 'technology', 'year_vtg', 'year_act', 'mode', 'node_origin', 'commodity', 'level', 'time', 'time_origin', 'value', 'unit']]
+        temp.to_csv(f'{self.root}\\data\\CODERS_data\\transmission_inputs.csv',index=False)
+
+        # create output sheet
+        lines_input['value'] = 1
+        temp = lines_input[['node_loc', 'technology', 'year_vtg', 'year_act', 'mode', 'node_dest', 'commodity', 'level', 'time', 'time_origin', 'value', 'unit']]
+        temp.to_csv(f'{self.root}\\data\\CODERS_data\\transmission_outputs.csv',index=False)
+    
+
+    def international_lines(self):
+        line_data = pd.DataFrame.from_dict(requests.get(f'{self.url}/interty_capacity?key={self.key}').json())
+        line_data = line_data.loc[~(line_data.country_from == line_data.country_to)]
+        
+    
+    def save_sets(self):
+        """
+        Saves the sets of technologies, nodes to csv files
+        IS THIS NECCESSARY OR DOES MESSAGE DO THIS AUTOMATICALLY
+        """
         return
 
 if __name__ == '__main__':
+
     pull = CODERS_pull("vBiOGBwJ3hwNLpqh", base_year=2020, end_year=2060, time_step=5, provincial=True)
     #pull.MESSAGE_inv_costs(method='coders')
     #pull.MESSAGE_fix_var_cost(om_type='variable')
@@ -358,3 +414,5 @@ if __name__ == '__main__':
     #pull.MESSAGE_historical_capacity_raw([2015, 2020])
     #pull.MESSAGE_historical_activity_raw([2015, 2020])
     #pull.MESSAGE_electricity_demand()
+    pull.MESSAGE_interprovincial_lines()
+    #pull.international_lines()
