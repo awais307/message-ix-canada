@@ -1,0 +1,2971 @@
+node,technology,year_vtg,value,unit
+Canada,biogas,2020,3,y
+Canada,biomass,2020,4,y
+Canada,biomass_cg,2020,4,y
+Canada,coal,2020,4,y
+Canada,coal_ccs,2020,4,y
+Canada,diesel_ct,2020,2,y
+Canada,diesel_st,2020,2,y
+Canada,gasoline_ct,2020,2,y
+Canada,geothermal,2020,4,y
+Canada,h2blue_ct,2020,2,y
+Canada,h2green_ct,2020,2,y
+Canada,hydro_daily,2020,4,y
+Canada,hydro_monthly,2020,8,y
+Canada,hydro_run,2020,4,y
+Canada,msw,2020,4,y
+Canada,ng_cc,2020,3,y
+Canada,ng_ccs,2020,3,y
+Canada,ng_cg,2020,3,y
+Canada,ng_sc,2020,2,y
+Canada,nuclear,2020,6,y
+Canada,nuclear_smr,2020,6,y
+Canada,oil_ct,2020,2,y
+Canada,oil_st,2020,2,y
+Canada,solar_pv,2020,2,y
+Canada,solar_recon,2020,1,y
+Canada,storage_lithium,2020,1,y
+Canada,storage_pump,2020,8,y
+Canada,wind_ofs,2020,4,y
+Canada,wind_ons,2020,3,y
+Canada,wind_recon,2020,2,y
+Canada,biogas,2025,3,y
+Canada,biomass,2025,4,y
+Canada,biomass_cg,2025,4,y
+Canada,coal,2025,4,y
+Canada,coal_ccs,2025,4,y
+Canada,diesel_ct,2025,2,y
+Canada,diesel_st,2025,2,y
+Canada,gasoline_ct,2025,2,y
+Canada,geothermal,2025,4,y
+Canada,h2blue_ct,2025,2,y
+Canada,h2green_ct,2025,2,y
+Canada,hydro_daily,2025,4,y
+Canada,hydro_monthly,2025,8,y
+Canada,hydro_run,2025,4,y
+Canada,msw,2025,4,y
+Canada,ng_cc,2025,3,y
+Canada,ng_ccs,2025,3,y
+Canada,ng_cg,2025,3,y
+Canada,ng_sc,2025,2,y
+Canada,nuclear,2025,6,y
+Canada,nuclear_smr,2025,6,y
+Canada,oil_ct,2025,2,y
+Canada,oil_st,2025,2,y
+Canada,solar_pv,2025,2,y
+Canada,solar_recon,2025,1,y
+Canada,storage_lithium,2025,1,y
+Canada,storage_pump,2025,8,y
+Canada,wind_ofs,2025,4,y
+Canada,wind_ons,2025,3,y
+Canada,wind_recon,2025,2,y
+Canada,biogas,2030,3,y
+Canada,biomass,2030,4,y
+Canada,biomass_cg,2030,4,y
+Canada,coal,2030,4,y
+Canada,coal_ccs,2030,4,y
+Canada,diesel_ct,2030,2,y
+Canada,diesel_st,2030,2,y
+Canada,gasoline_ct,2030,2,y
+Canada,geothermal,2030,4,y
+Canada,h2blue_ct,2030,2,y
+Canada,h2green_ct,2030,2,y
+Canada,hydro_daily,2030,4,y
+Canada,hydro_monthly,2030,8,y
+Canada,hydro_run,2030,4,y
+Canada,msw,2030,4,y
+Canada,ng_cc,2030,3,y
+Canada,ng_ccs,2030,3,y
+Canada,ng_cg,2030,3,y
+Canada,ng_sc,2030,2,y
+Canada,nuclear,2030,6,y
+Canada,nuclear_smr,2030,6,y
+Canada,oil_ct,2030,2,y
+Canada,oil_st,2030,2,y
+Canada,solar_pv,2030,2,y
+Canada,solar_recon,2030,1,y
+Canada,storage_lithium,2030,1,y
+Canada,storage_pump,2030,8,y
+Canada,wind_ofs,2030,4,y
+Canada,wind_ons,2030,3,y
+Canada,wind_recon,2030,2,y
+Canada,biogas,2035,3,y
+Canada,biomass,2035,4,y
+Canada,biomass_cg,2035,4,y
+Canada,coal,2035,4,y
+Canada,coal_ccs,2035,4,y
+Canada,diesel_ct,2035,2,y
+Canada,diesel_st,2035,2,y
+Canada,gasoline_ct,2035,2,y
+Canada,geothermal,2035,4,y
+Canada,h2blue_ct,2035,2,y
+Canada,h2green_ct,2035,2,y
+Canada,hydro_daily,2035,4,y
+Canada,hydro_monthly,2035,8,y
+Canada,hydro_run,2035,4,y
+Canada,msw,2035,4,y
+Canada,ng_cc,2035,3,y
+Canada,ng_ccs,2035,3,y
+Canada,ng_cg,2035,3,y
+Canada,ng_sc,2035,2,y
+Canada,nuclear,2035,6,y
+Canada,nuclear_smr,2035,6,y
+Canada,oil_ct,2035,2,y
+Canada,oil_st,2035,2,y
+Canada,solar_pv,2035,2,y
+Canada,solar_recon,2035,1,y
+Canada,storage_lithium,2035,1,y
+Canada,storage_pump,2035,8,y
+Canada,wind_ofs,2035,4,y
+Canada,wind_ons,2035,3,y
+Canada,wind_recon,2035,2,y
+Canada,biogas,2040,3,y
+Canada,biomass,2040,4,y
+Canada,biomass_cg,2040,4,y
+Canada,coal,2040,4,y
+Canada,coal_ccs,2040,4,y
+Canada,diesel_ct,2040,2,y
+Canada,diesel_st,2040,2,y
+Canada,gasoline_ct,2040,2,y
+Canada,geothermal,2040,4,y
+Canada,h2blue_ct,2040,2,y
+Canada,h2green_ct,2040,2,y
+Canada,hydro_daily,2040,4,y
+Canada,hydro_monthly,2040,8,y
+Canada,hydro_run,2040,4,y
+Canada,msw,2040,4,y
+Canada,ng_cc,2040,3,y
+Canada,ng_ccs,2040,3,y
+Canada,ng_cg,2040,3,y
+Canada,ng_sc,2040,2,y
+Canada,nuclear,2040,6,y
+Canada,nuclear_smr,2040,6,y
+Canada,oil_ct,2040,2,y
+Canada,oil_st,2040,2,y
+Canada,solar_pv,2040,2,y
+Canada,solar_recon,2040,1,y
+Canada,storage_lithium,2040,1,y
+Canada,storage_pump,2040,8,y
+Canada,wind_ofs,2040,4,y
+Canada,wind_ons,2040,3,y
+Canada,wind_recon,2040,2,y
+Canada,biogas,2045,3,y
+Canada,biomass,2045,4,y
+Canada,biomass_cg,2045,4,y
+Canada,coal,2045,4,y
+Canada,coal_ccs,2045,4,y
+Canada,diesel_ct,2045,2,y
+Canada,diesel_st,2045,2,y
+Canada,gasoline_ct,2045,2,y
+Canada,geothermal,2045,4,y
+Canada,h2blue_ct,2045,2,y
+Canada,h2green_ct,2045,2,y
+Canada,hydro_daily,2045,4,y
+Canada,hydro_monthly,2045,8,y
+Canada,hydro_run,2045,4,y
+Canada,msw,2045,4,y
+Canada,ng_cc,2045,3,y
+Canada,ng_ccs,2045,3,y
+Canada,ng_cg,2045,3,y
+Canada,ng_sc,2045,2,y
+Canada,nuclear,2045,6,y
+Canada,nuclear_smr,2045,6,y
+Canada,oil_ct,2045,2,y
+Canada,oil_st,2045,2,y
+Canada,solar_pv,2045,2,y
+Canada,solar_recon,2045,1,y
+Canada,storage_lithium,2045,1,y
+Canada,storage_pump,2045,8,y
+Canada,wind_ofs,2045,4,y
+Canada,wind_ons,2045,3,y
+Canada,wind_recon,2045,2,y
+Canada,biogas,2050,3,y
+Canada,biomass,2050,4,y
+Canada,biomass_cg,2050,4,y
+Canada,coal,2050,4,y
+Canada,coal_ccs,2050,4,y
+Canada,diesel_ct,2050,2,y
+Canada,diesel_st,2050,2,y
+Canada,gasoline_ct,2050,2,y
+Canada,geothermal,2050,4,y
+Canada,h2blue_ct,2050,2,y
+Canada,h2green_ct,2050,2,y
+Canada,hydro_daily,2050,4,y
+Canada,hydro_monthly,2050,8,y
+Canada,hydro_run,2050,4,y
+Canada,msw,2050,4,y
+Canada,ng_cc,2050,3,y
+Canada,ng_ccs,2050,3,y
+Canada,ng_cg,2050,3,y
+Canada,ng_sc,2050,2,y
+Canada,nuclear,2050,6,y
+Canada,nuclear_smr,2050,6,y
+Canada,oil_ct,2050,2,y
+Canada,oil_st,2050,2,y
+Canada,solar_pv,2050,2,y
+Canada,solar_recon,2050,1,y
+Canada,storage_lithium,2050,1,y
+Canada,storage_pump,2050,8,y
+Canada,wind_ofs,2050,4,y
+Canada,wind_ons,2050,3,y
+Canada,wind_recon,2050,2,y
+Canada,biogas,2055,3,y
+Canada,biomass,2055,4,y
+Canada,biomass_cg,2055,4,y
+Canada,coal,2055,4,y
+Canada,coal_ccs,2055,4,y
+Canada,diesel_ct,2055,2,y
+Canada,diesel_st,2055,2,y
+Canada,gasoline_ct,2055,2,y
+Canada,geothermal,2055,4,y
+Canada,h2blue_ct,2055,2,y
+Canada,h2green_ct,2055,2,y
+Canada,hydro_daily,2055,4,y
+Canada,hydro_monthly,2055,8,y
+Canada,hydro_run,2055,4,y
+Canada,msw,2055,4,y
+Canada,ng_cc,2055,3,y
+Canada,ng_ccs,2055,3,y
+Canada,ng_cg,2055,3,y
+Canada,ng_sc,2055,2,y
+Canada,nuclear,2055,6,y
+Canada,nuclear_smr,2055,6,y
+Canada,oil_ct,2055,2,y
+Canada,oil_st,2055,2,y
+Canada,solar_pv,2055,2,y
+Canada,solar_recon,2055,1,y
+Canada,storage_lithium,2055,1,y
+Canada,storage_pump,2055,8,y
+Canada,wind_ofs,2055,4,y
+Canada,wind_ons,2055,3,y
+Canada,wind_recon,2055,2,y
+Canada,biogas,2060,3,y
+Canada,biomass,2060,4,y
+Canada,biomass_cg,2060,4,y
+Canada,coal,2060,4,y
+Canada,coal_ccs,2060,4,y
+Canada,diesel_ct,2060,2,y
+Canada,diesel_st,2060,2,y
+Canada,gasoline_ct,2060,2,y
+Canada,geothermal,2060,4,y
+Canada,h2blue_ct,2060,2,y
+Canada,h2green_ct,2060,2,y
+Canada,hydro_daily,2060,4,y
+Canada,hydro_monthly,2060,8,y
+Canada,hydro_run,2060,4,y
+Canada,msw,2060,4,y
+Canada,ng_cc,2060,3,y
+Canada,ng_ccs,2060,3,y
+Canada,ng_cg,2060,3,y
+Canada,ng_sc,2060,2,y
+Canada,nuclear,2060,6,y
+Canada,nuclear_smr,2060,6,y
+Canada,oil_ct,2060,2,y
+Canada,oil_st,2060,2,y
+Canada,solar_pv,2060,2,y
+Canada,solar_recon,2060,1,y
+Canada,storage_lithium,2060,1,y
+Canada,storage_pump,2060,8,y
+Canada,wind_ofs,2060,4,y
+Canada,wind_ons,2060,3,y
+Canada,wind_recon,2060,2,y
+Alberta,biogas,2020,3,y
+Alberta,biomass,2020,4,y
+Alberta,biomass_cg,2020,4,y
+Alberta,coal,2020,4,y
+Alberta,coal_ccs,2020,4,y
+Alberta,diesel_ct,2020,2,y
+Alberta,diesel_st,2020,2,y
+Alberta,gasoline_ct,2020,2,y
+Alberta,geothermal,2020,4,y
+Alberta,h2blue_ct,2020,2,y
+Alberta,h2green_ct,2020,2,y
+Alberta,hydro_daily,2020,4,y
+Alberta,hydro_monthly,2020,8,y
+Alberta,hydro_run,2020,4,y
+Alberta,msw,2020,4,y
+Alberta,ng_cc,2020,3,y
+Alberta,ng_ccs,2020,3,y
+Alberta,ng_cg,2020,3,y
+Alberta,ng_sc,2020,2,y
+Alberta,nuclear,2020,6,y
+Alberta,nuclear_smr,2020,6,y
+Alberta,oil_ct,2020,2,y
+Alberta,oil_st,2020,2,y
+Alberta,solar_pv,2020,2,y
+Alberta,solar_recon,2020,1,y
+Alberta,storage_lithium,2020,1,y
+Alberta,storage_pump,2020,8,y
+Alberta,wind_ofs,2020,4,y
+Alberta,wind_ons,2020,3,y
+Alberta,wind_recon,2020,2,y
+Alberta,biogas,2025,3,y
+Alberta,biomass,2025,4,y
+Alberta,biomass_cg,2025,4,y
+Alberta,coal,2025,4,y
+Alberta,coal_ccs,2025,4,y
+Alberta,diesel_ct,2025,2,y
+Alberta,diesel_st,2025,2,y
+Alberta,gasoline_ct,2025,2,y
+Alberta,geothermal,2025,4,y
+Alberta,h2blue_ct,2025,2,y
+Alberta,h2green_ct,2025,2,y
+Alberta,hydro_daily,2025,4,y
+Alberta,hydro_monthly,2025,8,y
+Alberta,hydro_run,2025,4,y
+Alberta,msw,2025,4,y
+Alberta,ng_cc,2025,3,y
+Alberta,ng_ccs,2025,3,y
+Alberta,ng_cg,2025,3,y
+Alberta,ng_sc,2025,2,y
+Alberta,nuclear,2025,6,y
+Alberta,nuclear_smr,2025,6,y
+Alberta,oil_ct,2025,2,y
+Alberta,oil_st,2025,2,y
+Alberta,solar_pv,2025,2,y
+Alberta,solar_recon,2025,1,y
+Alberta,storage_lithium,2025,1,y
+Alberta,storage_pump,2025,8,y
+Alberta,wind_ofs,2025,4,y
+Alberta,wind_ons,2025,3,y
+Alberta,wind_recon,2025,2,y
+Alberta,biogas,2030,3,y
+Alberta,biomass,2030,4,y
+Alberta,biomass_cg,2030,4,y
+Alberta,coal,2030,4,y
+Alberta,coal_ccs,2030,4,y
+Alberta,diesel_ct,2030,2,y
+Alberta,diesel_st,2030,2,y
+Alberta,gasoline_ct,2030,2,y
+Alberta,geothermal,2030,4,y
+Alberta,h2blue_ct,2030,2,y
+Alberta,h2green_ct,2030,2,y
+Alberta,hydro_daily,2030,4,y
+Alberta,hydro_monthly,2030,8,y
+Alberta,hydro_run,2030,4,y
+Alberta,msw,2030,4,y
+Alberta,ng_cc,2030,3,y
+Alberta,ng_ccs,2030,3,y
+Alberta,ng_cg,2030,3,y
+Alberta,ng_sc,2030,2,y
+Alberta,nuclear,2030,6,y
+Alberta,nuclear_smr,2030,6,y
+Alberta,oil_ct,2030,2,y
+Alberta,oil_st,2030,2,y
+Alberta,solar_pv,2030,2,y
+Alberta,solar_recon,2030,1,y
+Alberta,storage_lithium,2030,1,y
+Alberta,storage_pump,2030,8,y
+Alberta,wind_ofs,2030,4,y
+Alberta,wind_ons,2030,3,y
+Alberta,wind_recon,2030,2,y
+Alberta,biogas,2035,3,y
+Alberta,biomass,2035,4,y
+Alberta,biomass_cg,2035,4,y
+Alberta,coal,2035,4,y
+Alberta,coal_ccs,2035,4,y
+Alberta,diesel_ct,2035,2,y
+Alberta,diesel_st,2035,2,y
+Alberta,gasoline_ct,2035,2,y
+Alberta,geothermal,2035,4,y
+Alberta,h2blue_ct,2035,2,y
+Alberta,h2green_ct,2035,2,y
+Alberta,hydro_daily,2035,4,y
+Alberta,hydro_monthly,2035,8,y
+Alberta,hydro_run,2035,4,y
+Alberta,msw,2035,4,y
+Alberta,ng_cc,2035,3,y
+Alberta,ng_ccs,2035,3,y
+Alberta,ng_cg,2035,3,y
+Alberta,ng_sc,2035,2,y
+Alberta,nuclear,2035,6,y
+Alberta,nuclear_smr,2035,6,y
+Alberta,oil_ct,2035,2,y
+Alberta,oil_st,2035,2,y
+Alberta,solar_pv,2035,2,y
+Alberta,solar_recon,2035,1,y
+Alberta,storage_lithium,2035,1,y
+Alberta,storage_pump,2035,8,y
+Alberta,wind_ofs,2035,4,y
+Alberta,wind_ons,2035,3,y
+Alberta,wind_recon,2035,2,y
+Alberta,biogas,2040,3,y
+Alberta,biomass,2040,4,y
+Alberta,biomass_cg,2040,4,y
+Alberta,coal,2040,4,y
+Alberta,coal_ccs,2040,4,y
+Alberta,diesel_ct,2040,2,y
+Alberta,diesel_st,2040,2,y
+Alberta,gasoline_ct,2040,2,y
+Alberta,geothermal,2040,4,y
+Alberta,h2blue_ct,2040,2,y
+Alberta,h2green_ct,2040,2,y
+Alberta,hydro_daily,2040,4,y
+Alberta,hydro_monthly,2040,8,y
+Alberta,hydro_run,2040,4,y
+Alberta,msw,2040,4,y
+Alberta,ng_cc,2040,3,y
+Alberta,ng_ccs,2040,3,y
+Alberta,ng_cg,2040,3,y
+Alberta,ng_sc,2040,2,y
+Alberta,nuclear,2040,6,y
+Alberta,nuclear_smr,2040,6,y
+Alberta,oil_ct,2040,2,y
+Alberta,oil_st,2040,2,y
+Alberta,solar_pv,2040,2,y
+Alberta,solar_recon,2040,1,y
+Alberta,storage_lithium,2040,1,y
+Alberta,storage_pump,2040,8,y
+Alberta,wind_ofs,2040,4,y
+Alberta,wind_ons,2040,3,y
+Alberta,wind_recon,2040,2,y
+Alberta,biogas,2045,3,y
+Alberta,biomass,2045,4,y
+Alberta,biomass_cg,2045,4,y
+Alberta,coal,2045,4,y
+Alberta,coal_ccs,2045,4,y
+Alberta,diesel_ct,2045,2,y
+Alberta,diesel_st,2045,2,y
+Alberta,gasoline_ct,2045,2,y
+Alberta,geothermal,2045,4,y
+Alberta,h2blue_ct,2045,2,y
+Alberta,h2green_ct,2045,2,y
+Alberta,hydro_daily,2045,4,y
+Alberta,hydro_monthly,2045,8,y
+Alberta,hydro_run,2045,4,y
+Alberta,msw,2045,4,y
+Alberta,ng_cc,2045,3,y
+Alberta,ng_ccs,2045,3,y
+Alberta,ng_cg,2045,3,y
+Alberta,ng_sc,2045,2,y
+Alberta,nuclear,2045,6,y
+Alberta,nuclear_smr,2045,6,y
+Alberta,oil_ct,2045,2,y
+Alberta,oil_st,2045,2,y
+Alberta,solar_pv,2045,2,y
+Alberta,solar_recon,2045,1,y
+Alberta,storage_lithium,2045,1,y
+Alberta,storage_pump,2045,8,y
+Alberta,wind_ofs,2045,4,y
+Alberta,wind_ons,2045,3,y
+Alberta,wind_recon,2045,2,y
+Alberta,biogas,2050,3,y
+Alberta,biomass,2050,4,y
+Alberta,biomass_cg,2050,4,y
+Alberta,coal,2050,4,y
+Alberta,coal_ccs,2050,4,y
+Alberta,diesel_ct,2050,2,y
+Alberta,diesel_st,2050,2,y
+Alberta,gasoline_ct,2050,2,y
+Alberta,geothermal,2050,4,y
+Alberta,h2blue_ct,2050,2,y
+Alberta,h2green_ct,2050,2,y
+Alberta,hydro_daily,2050,4,y
+Alberta,hydro_monthly,2050,8,y
+Alberta,hydro_run,2050,4,y
+Alberta,msw,2050,4,y
+Alberta,ng_cc,2050,3,y
+Alberta,ng_ccs,2050,3,y
+Alberta,ng_cg,2050,3,y
+Alberta,ng_sc,2050,2,y
+Alberta,nuclear,2050,6,y
+Alberta,nuclear_smr,2050,6,y
+Alberta,oil_ct,2050,2,y
+Alberta,oil_st,2050,2,y
+Alberta,solar_pv,2050,2,y
+Alberta,solar_recon,2050,1,y
+Alberta,storage_lithium,2050,1,y
+Alberta,storage_pump,2050,8,y
+Alberta,wind_ofs,2050,4,y
+Alberta,wind_ons,2050,3,y
+Alberta,wind_recon,2050,2,y
+Alberta,biogas,2055,3,y
+Alberta,biomass,2055,4,y
+Alberta,biomass_cg,2055,4,y
+Alberta,coal,2055,4,y
+Alberta,coal_ccs,2055,4,y
+Alberta,diesel_ct,2055,2,y
+Alberta,diesel_st,2055,2,y
+Alberta,gasoline_ct,2055,2,y
+Alberta,geothermal,2055,4,y
+Alberta,h2blue_ct,2055,2,y
+Alberta,h2green_ct,2055,2,y
+Alberta,hydro_daily,2055,4,y
+Alberta,hydro_monthly,2055,8,y
+Alberta,hydro_run,2055,4,y
+Alberta,msw,2055,4,y
+Alberta,ng_cc,2055,3,y
+Alberta,ng_ccs,2055,3,y
+Alberta,ng_cg,2055,3,y
+Alberta,ng_sc,2055,2,y
+Alberta,nuclear,2055,6,y
+Alberta,nuclear_smr,2055,6,y
+Alberta,oil_ct,2055,2,y
+Alberta,oil_st,2055,2,y
+Alberta,solar_pv,2055,2,y
+Alberta,solar_recon,2055,1,y
+Alberta,storage_lithium,2055,1,y
+Alberta,storage_pump,2055,8,y
+Alberta,wind_ofs,2055,4,y
+Alberta,wind_ons,2055,3,y
+Alberta,wind_recon,2055,2,y
+Alberta,biogas,2060,3,y
+Alberta,biomass,2060,4,y
+Alberta,biomass_cg,2060,4,y
+Alberta,coal,2060,4,y
+Alberta,coal_ccs,2060,4,y
+Alberta,diesel_ct,2060,2,y
+Alberta,diesel_st,2060,2,y
+Alberta,gasoline_ct,2060,2,y
+Alberta,geothermal,2060,4,y
+Alberta,h2blue_ct,2060,2,y
+Alberta,h2green_ct,2060,2,y
+Alberta,hydro_daily,2060,4,y
+Alberta,hydro_monthly,2060,8,y
+Alberta,hydro_run,2060,4,y
+Alberta,msw,2060,4,y
+Alberta,ng_cc,2060,3,y
+Alberta,ng_ccs,2060,3,y
+Alberta,ng_cg,2060,3,y
+Alberta,ng_sc,2060,2,y
+Alberta,nuclear,2060,6,y
+Alberta,nuclear_smr,2060,6,y
+Alberta,oil_ct,2060,2,y
+Alberta,oil_st,2060,2,y
+Alberta,solar_pv,2060,2,y
+Alberta,solar_recon,2060,1,y
+Alberta,storage_lithium,2060,1,y
+Alberta,storage_pump,2060,8,y
+Alberta,wind_ofs,2060,4,y
+Alberta,wind_ons,2060,3,y
+Alberta,wind_recon,2060,2,y
+British Columbia,biogas,2020,3,y
+British Columbia,biomass,2020,4,y
+British Columbia,biomass_cg,2020,4,y
+British Columbia,coal,2020,4,y
+British Columbia,coal_ccs,2020,4,y
+British Columbia,diesel_ct,2020,2,y
+British Columbia,diesel_st,2020,2,y
+British Columbia,gasoline_ct,2020,2,y
+British Columbia,geothermal,2020,4,y
+British Columbia,h2blue_ct,2020,2,y
+British Columbia,h2green_ct,2020,2,y
+British Columbia,hydro_daily,2020,4,y
+British Columbia,hydro_monthly,2020,8,y
+British Columbia,hydro_run,2020,4,y
+British Columbia,msw,2020,4,y
+British Columbia,ng_cc,2020,3,y
+British Columbia,ng_ccs,2020,3,y
+British Columbia,ng_cg,2020,3,y
+British Columbia,ng_sc,2020,2,y
+British Columbia,nuclear,2020,6,y
+British Columbia,nuclear_smr,2020,6,y
+British Columbia,oil_ct,2020,2,y
+British Columbia,oil_st,2020,2,y
+British Columbia,solar_pv,2020,2,y
+British Columbia,solar_recon,2020,1,y
+British Columbia,storage_lithium,2020,1,y
+British Columbia,storage_pump,2020,8,y
+British Columbia,wind_ofs,2020,4,y
+British Columbia,wind_ons,2020,3,y
+British Columbia,wind_recon,2020,2,y
+British Columbia,biogas,2025,3,y
+British Columbia,biomass,2025,4,y
+British Columbia,biomass_cg,2025,4,y
+British Columbia,coal,2025,4,y
+British Columbia,coal_ccs,2025,4,y
+British Columbia,diesel_ct,2025,2,y
+British Columbia,diesel_st,2025,2,y
+British Columbia,gasoline_ct,2025,2,y
+British Columbia,geothermal,2025,4,y
+British Columbia,h2blue_ct,2025,2,y
+British Columbia,h2green_ct,2025,2,y
+British Columbia,hydro_daily,2025,4,y
+British Columbia,hydro_monthly,2025,8,y
+British Columbia,hydro_run,2025,4,y
+British Columbia,msw,2025,4,y
+British Columbia,ng_cc,2025,3,y
+British Columbia,ng_ccs,2025,3,y
+British Columbia,ng_cg,2025,3,y
+British Columbia,ng_sc,2025,2,y
+British Columbia,nuclear,2025,6,y
+British Columbia,nuclear_smr,2025,6,y
+British Columbia,oil_ct,2025,2,y
+British Columbia,oil_st,2025,2,y
+British Columbia,solar_pv,2025,2,y
+British Columbia,solar_recon,2025,1,y
+British Columbia,storage_lithium,2025,1,y
+British Columbia,storage_pump,2025,8,y
+British Columbia,wind_ofs,2025,4,y
+British Columbia,wind_ons,2025,3,y
+British Columbia,wind_recon,2025,2,y
+British Columbia,biogas,2030,3,y
+British Columbia,biomass,2030,4,y
+British Columbia,biomass_cg,2030,4,y
+British Columbia,coal,2030,4,y
+British Columbia,coal_ccs,2030,4,y
+British Columbia,diesel_ct,2030,2,y
+British Columbia,diesel_st,2030,2,y
+British Columbia,gasoline_ct,2030,2,y
+British Columbia,geothermal,2030,4,y
+British Columbia,h2blue_ct,2030,2,y
+British Columbia,h2green_ct,2030,2,y
+British Columbia,hydro_daily,2030,4,y
+British Columbia,hydro_monthly,2030,8,y
+British Columbia,hydro_run,2030,4,y
+British Columbia,msw,2030,4,y
+British Columbia,ng_cc,2030,3,y
+British Columbia,ng_ccs,2030,3,y
+British Columbia,ng_cg,2030,3,y
+British Columbia,ng_sc,2030,2,y
+British Columbia,nuclear,2030,6,y
+British Columbia,nuclear_smr,2030,6,y
+British Columbia,oil_ct,2030,2,y
+British Columbia,oil_st,2030,2,y
+British Columbia,solar_pv,2030,2,y
+British Columbia,solar_recon,2030,1,y
+British Columbia,storage_lithium,2030,1,y
+British Columbia,storage_pump,2030,8,y
+British Columbia,wind_ofs,2030,4,y
+British Columbia,wind_ons,2030,3,y
+British Columbia,wind_recon,2030,2,y
+British Columbia,biogas,2035,3,y
+British Columbia,biomass,2035,4,y
+British Columbia,biomass_cg,2035,4,y
+British Columbia,coal,2035,4,y
+British Columbia,coal_ccs,2035,4,y
+British Columbia,diesel_ct,2035,2,y
+British Columbia,diesel_st,2035,2,y
+British Columbia,gasoline_ct,2035,2,y
+British Columbia,geothermal,2035,4,y
+British Columbia,h2blue_ct,2035,2,y
+British Columbia,h2green_ct,2035,2,y
+British Columbia,hydro_daily,2035,4,y
+British Columbia,hydro_monthly,2035,8,y
+British Columbia,hydro_run,2035,4,y
+British Columbia,msw,2035,4,y
+British Columbia,ng_cc,2035,3,y
+British Columbia,ng_ccs,2035,3,y
+British Columbia,ng_cg,2035,3,y
+British Columbia,ng_sc,2035,2,y
+British Columbia,nuclear,2035,6,y
+British Columbia,nuclear_smr,2035,6,y
+British Columbia,oil_ct,2035,2,y
+British Columbia,oil_st,2035,2,y
+British Columbia,solar_pv,2035,2,y
+British Columbia,solar_recon,2035,1,y
+British Columbia,storage_lithium,2035,1,y
+British Columbia,storage_pump,2035,8,y
+British Columbia,wind_ofs,2035,4,y
+British Columbia,wind_ons,2035,3,y
+British Columbia,wind_recon,2035,2,y
+British Columbia,biogas,2040,3,y
+British Columbia,biomass,2040,4,y
+British Columbia,biomass_cg,2040,4,y
+British Columbia,coal,2040,4,y
+British Columbia,coal_ccs,2040,4,y
+British Columbia,diesel_ct,2040,2,y
+British Columbia,diesel_st,2040,2,y
+British Columbia,gasoline_ct,2040,2,y
+British Columbia,geothermal,2040,4,y
+British Columbia,h2blue_ct,2040,2,y
+British Columbia,h2green_ct,2040,2,y
+British Columbia,hydro_daily,2040,4,y
+British Columbia,hydro_monthly,2040,8,y
+British Columbia,hydro_run,2040,4,y
+British Columbia,msw,2040,4,y
+British Columbia,ng_cc,2040,3,y
+British Columbia,ng_ccs,2040,3,y
+British Columbia,ng_cg,2040,3,y
+British Columbia,ng_sc,2040,2,y
+British Columbia,nuclear,2040,6,y
+British Columbia,nuclear_smr,2040,6,y
+British Columbia,oil_ct,2040,2,y
+British Columbia,oil_st,2040,2,y
+British Columbia,solar_pv,2040,2,y
+British Columbia,solar_recon,2040,1,y
+British Columbia,storage_lithium,2040,1,y
+British Columbia,storage_pump,2040,8,y
+British Columbia,wind_ofs,2040,4,y
+British Columbia,wind_ons,2040,3,y
+British Columbia,wind_recon,2040,2,y
+British Columbia,biogas,2045,3,y
+British Columbia,biomass,2045,4,y
+British Columbia,biomass_cg,2045,4,y
+British Columbia,coal,2045,4,y
+British Columbia,coal_ccs,2045,4,y
+British Columbia,diesel_ct,2045,2,y
+British Columbia,diesel_st,2045,2,y
+British Columbia,gasoline_ct,2045,2,y
+British Columbia,geothermal,2045,4,y
+British Columbia,h2blue_ct,2045,2,y
+British Columbia,h2green_ct,2045,2,y
+British Columbia,hydro_daily,2045,4,y
+British Columbia,hydro_monthly,2045,8,y
+British Columbia,hydro_run,2045,4,y
+British Columbia,msw,2045,4,y
+British Columbia,ng_cc,2045,3,y
+British Columbia,ng_ccs,2045,3,y
+British Columbia,ng_cg,2045,3,y
+British Columbia,ng_sc,2045,2,y
+British Columbia,nuclear,2045,6,y
+British Columbia,nuclear_smr,2045,6,y
+British Columbia,oil_ct,2045,2,y
+British Columbia,oil_st,2045,2,y
+British Columbia,solar_pv,2045,2,y
+British Columbia,solar_recon,2045,1,y
+British Columbia,storage_lithium,2045,1,y
+British Columbia,storage_pump,2045,8,y
+British Columbia,wind_ofs,2045,4,y
+British Columbia,wind_ons,2045,3,y
+British Columbia,wind_recon,2045,2,y
+British Columbia,biogas,2050,3,y
+British Columbia,biomass,2050,4,y
+British Columbia,biomass_cg,2050,4,y
+British Columbia,coal,2050,4,y
+British Columbia,coal_ccs,2050,4,y
+British Columbia,diesel_ct,2050,2,y
+British Columbia,diesel_st,2050,2,y
+British Columbia,gasoline_ct,2050,2,y
+British Columbia,geothermal,2050,4,y
+British Columbia,h2blue_ct,2050,2,y
+British Columbia,h2green_ct,2050,2,y
+British Columbia,hydro_daily,2050,4,y
+British Columbia,hydro_monthly,2050,8,y
+British Columbia,hydro_run,2050,4,y
+British Columbia,msw,2050,4,y
+British Columbia,ng_cc,2050,3,y
+British Columbia,ng_ccs,2050,3,y
+British Columbia,ng_cg,2050,3,y
+British Columbia,ng_sc,2050,2,y
+British Columbia,nuclear,2050,6,y
+British Columbia,nuclear_smr,2050,6,y
+British Columbia,oil_ct,2050,2,y
+British Columbia,oil_st,2050,2,y
+British Columbia,solar_pv,2050,2,y
+British Columbia,solar_recon,2050,1,y
+British Columbia,storage_lithium,2050,1,y
+British Columbia,storage_pump,2050,8,y
+British Columbia,wind_ofs,2050,4,y
+British Columbia,wind_ons,2050,3,y
+British Columbia,wind_recon,2050,2,y
+British Columbia,biogas,2055,3,y
+British Columbia,biomass,2055,4,y
+British Columbia,biomass_cg,2055,4,y
+British Columbia,coal,2055,4,y
+British Columbia,coal_ccs,2055,4,y
+British Columbia,diesel_ct,2055,2,y
+British Columbia,diesel_st,2055,2,y
+British Columbia,gasoline_ct,2055,2,y
+British Columbia,geothermal,2055,4,y
+British Columbia,h2blue_ct,2055,2,y
+British Columbia,h2green_ct,2055,2,y
+British Columbia,hydro_daily,2055,4,y
+British Columbia,hydro_monthly,2055,8,y
+British Columbia,hydro_run,2055,4,y
+British Columbia,msw,2055,4,y
+British Columbia,ng_cc,2055,3,y
+British Columbia,ng_ccs,2055,3,y
+British Columbia,ng_cg,2055,3,y
+British Columbia,ng_sc,2055,2,y
+British Columbia,nuclear,2055,6,y
+British Columbia,nuclear_smr,2055,6,y
+British Columbia,oil_ct,2055,2,y
+British Columbia,oil_st,2055,2,y
+British Columbia,solar_pv,2055,2,y
+British Columbia,solar_recon,2055,1,y
+British Columbia,storage_lithium,2055,1,y
+British Columbia,storage_pump,2055,8,y
+British Columbia,wind_ofs,2055,4,y
+British Columbia,wind_ons,2055,3,y
+British Columbia,wind_recon,2055,2,y
+British Columbia,biogas,2060,3,y
+British Columbia,biomass,2060,4,y
+British Columbia,biomass_cg,2060,4,y
+British Columbia,coal,2060,4,y
+British Columbia,coal_ccs,2060,4,y
+British Columbia,diesel_ct,2060,2,y
+British Columbia,diesel_st,2060,2,y
+British Columbia,gasoline_ct,2060,2,y
+British Columbia,geothermal,2060,4,y
+British Columbia,h2blue_ct,2060,2,y
+British Columbia,h2green_ct,2060,2,y
+British Columbia,hydro_daily,2060,4,y
+British Columbia,hydro_monthly,2060,8,y
+British Columbia,hydro_run,2060,4,y
+British Columbia,msw,2060,4,y
+British Columbia,ng_cc,2060,3,y
+British Columbia,ng_ccs,2060,3,y
+British Columbia,ng_cg,2060,3,y
+British Columbia,ng_sc,2060,2,y
+British Columbia,nuclear,2060,6,y
+British Columbia,nuclear_smr,2060,6,y
+British Columbia,oil_ct,2060,2,y
+British Columbia,oil_st,2060,2,y
+British Columbia,solar_pv,2060,2,y
+British Columbia,solar_recon,2060,1,y
+British Columbia,storage_lithium,2060,1,y
+British Columbia,storage_pump,2060,8,y
+British Columbia,wind_ofs,2060,4,y
+British Columbia,wind_ons,2060,3,y
+British Columbia,wind_recon,2060,2,y
+New Brunswick,biogas,2020,3,y
+New Brunswick,biomass,2020,4,y
+New Brunswick,biomass_cg,2020,4,y
+New Brunswick,coal,2020,4,y
+New Brunswick,coal_ccs,2020,4,y
+New Brunswick,diesel_ct,2020,2,y
+New Brunswick,diesel_st,2020,2,y
+New Brunswick,gasoline_ct,2020,2,y
+New Brunswick,geothermal,2020,4,y
+New Brunswick,h2blue_ct,2020,2,y
+New Brunswick,h2green_ct,2020,2,y
+New Brunswick,hydro_daily,2020,4,y
+New Brunswick,hydro_monthly,2020,8,y
+New Brunswick,hydro_run,2020,4,y
+New Brunswick,msw,2020,4,y
+New Brunswick,ng_cc,2020,3,y
+New Brunswick,ng_ccs,2020,3,y
+New Brunswick,ng_cg,2020,3,y
+New Brunswick,ng_sc,2020,2,y
+New Brunswick,nuclear,2020,6,y
+New Brunswick,nuclear_smr,2020,6,y
+New Brunswick,oil_ct,2020,2,y
+New Brunswick,oil_st,2020,2,y
+New Brunswick,solar_pv,2020,2,y
+New Brunswick,solar_recon,2020,1,y
+New Brunswick,storage_lithium,2020,1,y
+New Brunswick,storage_pump,2020,8,y
+New Brunswick,wind_ofs,2020,4,y
+New Brunswick,wind_ons,2020,3,y
+New Brunswick,wind_recon,2020,2,y
+New Brunswick,biogas,2025,3,y
+New Brunswick,biomass,2025,4,y
+New Brunswick,biomass_cg,2025,4,y
+New Brunswick,coal,2025,4,y
+New Brunswick,coal_ccs,2025,4,y
+New Brunswick,diesel_ct,2025,2,y
+New Brunswick,diesel_st,2025,2,y
+New Brunswick,gasoline_ct,2025,2,y
+New Brunswick,geothermal,2025,4,y
+New Brunswick,h2blue_ct,2025,2,y
+New Brunswick,h2green_ct,2025,2,y
+New Brunswick,hydro_daily,2025,4,y
+New Brunswick,hydro_monthly,2025,8,y
+New Brunswick,hydro_run,2025,4,y
+New Brunswick,msw,2025,4,y
+New Brunswick,ng_cc,2025,3,y
+New Brunswick,ng_ccs,2025,3,y
+New Brunswick,ng_cg,2025,3,y
+New Brunswick,ng_sc,2025,2,y
+New Brunswick,nuclear,2025,6,y
+New Brunswick,nuclear_smr,2025,6,y
+New Brunswick,oil_ct,2025,2,y
+New Brunswick,oil_st,2025,2,y
+New Brunswick,solar_pv,2025,2,y
+New Brunswick,solar_recon,2025,1,y
+New Brunswick,storage_lithium,2025,1,y
+New Brunswick,storage_pump,2025,8,y
+New Brunswick,wind_ofs,2025,4,y
+New Brunswick,wind_ons,2025,3,y
+New Brunswick,wind_recon,2025,2,y
+New Brunswick,biogas,2030,3,y
+New Brunswick,biomass,2030,4,y
+New Brunswick,biomass_cg,2030,4,y
+New Brunswick,coal,2030,4,y
+New Brunswick,coal_ccs,2030,4,y
+New Brunswick,diesel_ct,2030,2,y
+New Brunswick,diesel_st,2030,2,y
+New Brunswick,gasoline_ct,2030,2,y
+New Brunswick,geothermal,2030,4,y
+New Brunswick,h2blue_ct,2030,2,y
+New Brunswick,h2green_ct,2030,2,y
+New Brunswick,hydro_daily,2030,4,y
+New Brunswick,hydro_monthly,2030,8,y
+New Brunswick,hydro_run,2030,4,y
+New Brunswick,msw,2030,4,y
+New Brunswick,ng_cc,2030,3,y
+New Brunswick,ng_ccs,2030,3,y
+New Brunswick,ng_cg,2030,3,y
+New Brunswick,ng_sc,2030,2,y
+New Brunswick,nuclear,2030,6,y
+New Brunswick,nuclear_smr,2030,6,y
+New Brunswick,oil_ct,2030,2,y
+New Brunswick,oil_st,2030,2,y
+New Brunswick,solar_pv,2030,2,y
+New Brunswick,solar_recon,2030,1,y
+New Brunswick,storage_lithium,2030,1,y
+New Brunswick,storage_pump,2030,8,y
+New Brunswick,wind_ofs,2030,4,y
+New Brunswick,wind_ons,2030,3,y
+New Brunswick,wind_recon,2030,2,y
+New Brunswick,biogas,2035,3,y
+New Brunswick,biomass,2035,4,y
+New Brunswick,biomass_cg,2035,4,y
+New Brunswick,coal,2035,4,y
+New Brunswick,coal_ccs,2035,4,y
+New Brunswick,diesel_ct,2035,2,y
+New Brunswick,diesel_st,2035,2,y
+New Brunswick,gasoline_ct,2035,2,y
+New Brunswick,geothermal,2035,4,y
+New Brunswick,h2blue_ct,2035,2,y
+New Brunswick,h2green_ct,2035,2,y
+New Brunswick,hydro_daily,2035,4,y
+New Brunswick,hydro_monthly,2035,8,y
+New Brunswick,hydro_run,2035,4,y
+New Brunswick,msw,2035,4,y
+New Brunswick,ng_cc,2035,3,y
+New Brunswick,ng_ccs,2035,3,y
+New Brunswick,ng_cg,2035,3,y
+New Brunswick,ng_sc,2035,2,y
+New Brunswick,nuclear,2035,6,y
+New Brunswick,nuclear_smr,2035,6,y
+New Brunswick,oil_ct,2035,2,y
+New Brunswick,oil_st,2035,2,y
+New Brunswick,solar_pv,2035,2,y
+New Brunswick,solar_recon,2035,1,y
+New Brunswick,storage_lithium,2035,1,y
+New Brunswick,storage_pump,2035,8,y
+New Brunswick,wind_ofs,2035,4,y
+New Brunswick,wind_ons,2035,3,y
+New Brunswick,wind_recon,2035,2,y
+New Brunswick,biogas,2040,3,y
+New Brunswick,biomass,2040,4,y
+New Brunswick,biomass_cg,2040,4,y
+New Brunswick,coal,2040,4,y
+New Brunswick,coal_ccs,2040,4,y
+New Brunswick,diesel_ct,2040,2,y
+New Brunswick,diesel_st,2040,2,y
+New Brunswick,gasoline_ct,2040,2,y
+New Brunswick,geothermal,2040,4,y
+New Brunswick,h2blue_ct,2040,2,y
+New Brunswick,h2green_ct,2040,2,y
+New Brunswick,hydro_daily,2040,4,y
+New Brunswick,hydro_monthly,2040,8,y
+New Brunswick,hydro_run,2040,4,y
+New Brunswick,msw,2040,4,y
+New Brunswick,ng_cc,2040,3,y
+New Brunswick,ng_ccs,2040,3,y
+New Brunswick,ng_cg,2040,3,y
+New Brunswick,ng_sc,2040,2,y
+New Brunswick,nuclear,2040,6,y
+New Brunswick,nuclear_smr,2040,6,y
+New Brunswick,oil_ct,2040,2,y
+New Brunswick,oil_st,2040,2,y
+New Brunswick,solar_pv,2040,2,y
+New Brunswick,solar_recon,2040,1,y
+New Brunswick,storage_lithium,2040,1,y
+New Brunswick,storage_pump,2040,8,y
+New Brunswick,wind_ofs,2040,4,y
+New Brunswick,wind_ons,2040,3,y
+New Brunswick,wind_recon,2040,2,y
+New Brunswick,biogas,2045,3,y
+New Brunswick,biomass,2045,4,y
+New Brunswick,biomass_cg,2045,4,y
+New Brunswick,coal,2045,4,y
+New Brunswick,coal_ccs,2045,4,y
+New Brunswick,diesel_ct,2045,2,y
+New Brunswick,diesel_st,2045,2,y
+New Brunswick,gasoline_ct,2045,2,y
+New Brunswick,geothermal,2045,4,y
+New Brunswick,h2blue_ct,2045,2,y
+New Brunswick,h2green_ct,2045,2,y
+New Brunswick,hydro_daily,2045,4,y
+New Brunswick,hydro_monthly,2045,8,y
+New Brunswick,hydro_run,2045,4,y
+New Brunswick,msw,2045,4,y
+New Brunswick,ng_cc,2045,3,y
+New Brunswick,ng_ccs,2045,3,y
+New Brunswick,ng_cg,2045,3,y
+New Brunswick,ng_sc,2045,2,y
+New Brunswick,nuclear,2045,6,y
+New Brunswick,nuclear_smr,2045,6,y
+New Brunswick,oil_ct,2045,2,y
+New Brunswick,oil_st,2045,2,y
+New Brunswick,solar_pv,2045,2,y
+New Brunswick,solar_recon,2045,1,y
+New Brunswick,storage_lithium,2045,1,y
+New Brunswick,storage_pump,2045,8,y
+New Brunswick,wind_ofs,2045,4,y
+New Brunswick,wind_ons,2045,3,y
+New Brunswick,wind_recon,2045,2,y
+New Brunswick,biogas,2050,3,y
+New Brunswick,biomass,2050,4,y
+New Brunswick,biomass_cg,2050,4,y
+New Brunswick,coal,2050,4,y
+New Brunswick,coal_ccs,2050,4,y
+New Brunswick,diesel_ct,2050,2,y
+New Brunswick,diesel_st,2050,2,y
+New Brunswick,gasoline_ct,2050,2,y
+New Brunswick,geothermal,2050,4,y
+New Brunswick,h2blue_ct,2050,2,y
+New Brunswick,h2green_ct,2050,2,y
+New Brunswick,hydro_daily,2050,4,y
+New Brunswick,hydro_monthly,2050,8,y
+New Brunswick,hydro_run,2050,4,y
+New Brunswick,msw,2050,4,y
+New Brunswick,ng_cc,2050,3,y
+New Brunswick,ng_ccs,2050,3,y
+New Brunswick,ng_cg,2050,3,y
+New Brunswick,ng_sc,2050,2,y
+New Brunswick,nuclear,2050,6,y
+New Brunswick,nuclear_smr,2050,6,y
+New Brunswick,oil_ct,2050,2,y
+New Brunswick,oil_st,2050,2,y
+New Brunswick,solar_pv,2050,2,y
+New Brunswick,solar_recon,2050,1,y
+New Brunswick,storage_lithium,2050,1,y
+New Brunswick,storage_pump,2050,8,y
+New Brunswick,wind_ofs,2050,4,y
+New Brunswick,wind_ons,2050,3,y
+New Brunswick,wind_recon,2050,2,y
+New Brunswick,biogas,2055,3,y
+New Brunswick,biomass,2055,4,y
+New Brunswick,biomass_cg,2055,4,y
+New Brunswick,coal,2055,4,y
+New Brunswick,coal_ccs,2055,4,y
+New Brunswick,diesel_ct,2055,2,y
+New Brunswick,diesel_st,2055,2,y
+New Brunswick,gasoline_ct,2055,2,y
+New Brunswick,geothermal,2055,4,y
+New Brunswick,h2blue_ct,2055,2,y
+New Brunswick,h2green_ct,2055,2,y
+New Brunswick,hydro_daily,2055,4,y
+New Brunswick,hydro_monthly,2055,8,y
+New Brunswick,hydro_run,2055,4,y
+New Brunswick,msw,2055,4,y
+New Brunswick,ng_cc,2055,3,y
+New Brunswick,ng_ccs,2055,3,y
+New Brunswick,ng_cg,2055,3,y
+New Brunswick,ng_sc,2055,2,y
+New Brunswick,nuclear,2055,6,y
+New Brunswick,nuclear_smr,2055,6,y
+New Brunswick,oil_ct,2055,2,y
+New Brunswick,oil_st,2055,2,y
+New Brunswick,solar_pv,2055,2,y
+New Brunswick,solar_recon,2055,1,y
+New Brunswick,storage_lithium,2055,1,y
+New Brunswick,storage_pump,2055,8,y
+New Brunswick,wind_ofs,2055,4,y
+New Brunswick,wind_ons,2055,3,y
+New Brunswick,wind_recon,2055,2,y
+New Brunswick,biogas,2060,3,y
+New Brunswick,biomass,2060,4,y
+New Brunswick,biomass_cg,2060,4,y
+New Brunswick,coal,2060,4,y
+New Brunswick,coal_ccs,2060,4,y
+New Brunswick,diesel_ct,2060,2,y
+New Brunswick,diesel_st,2060,2,y
+New Brunswick,gasoline_ct,2060,2,y
+New Brunswick,geothermal,2060,4,y
+New Brunswick,h2blue_ct,2060,2,y
+New Brunswick,h2green_ct,2060,2,y
+New Brunswick,hydro_daily,2060,4,y
+New Brunswick,hydro_monthly,2060,8,y
+New Brunswick,hydro_run,2060,4,y
+New Brunswick,msw,2060,4,y
+New Brunswick,ng_cc,2060,3,y
+New Brunswick,ng_ccs,2060,3,y
+New Brunswick,ng_cg,2060,3,y
+New Brunswick,ng_sc,2060,2,y
+New Brunswick,nuclear,2060,6,y
+New Brunswick,nuclear_smr,2060,6,y
+New Brunswick,oil_ct,2060,2,y
+New Brunswick,oil_st,2060,2,y
+New Brunswick,solar_pv,2060,2,y
+New Brunswick,solar_recon,2060,1,y
+New Brunswick,storage_lithium,2060,1,y
+New Brunswick,storage_pump,2060,8,y
+New Brunswick,wind_ofs,2060,4,y
+New Brunswick,wind_ons,2060,3,y
+New Brunswick,wind_recon,2060,2,y
+Newfoundland and Labrador,biogas,2020,3,y
+Newfoundland and Labrador,biomass,2020,4,y
+Newfoundland and Labrador,biomass_cg,2020,4,y
+Newfoundland and Labrador,coal,2020,4,y
+Newfoundland and Labrador,coal_ccs,2020,4,y
+Newfoundland and Labrador,diesel_ct,2020,2,y
+Newfoundland and Labrador,diesel_st,2020,2,y
+Newfoundland and Labrador,gasoline_ct,2020,2,y
+Newfoundland and Labrador,geothermal,2020,4,y
+Newfoundland and Labrador,h2blue_ct,2020,2,y
+Newfoundland and Labrador,h2green_ct,2020,2,y
+Newfoundland and Labrador,hydro_daily,2020,4,y
+Newfoundland and Labrador,hydro_monthly,2020,8,y
+Newfoundland and Labrador,hydro_run,2020,4,y
+Newfoundland and Labrador,msw,2020,4,y
+Newfoundland and Labrador,ng_cc,2020,3,y
+Newfoundland and Labrador,ng_ccs,2020,3,y
+Newfoundland and Labrador,ng_cg,2020,3,y
+Newfoundland and Labrador,ng_sc,2020,2,y
+Newfoundland and Labrador,nuclear,2020,6,y
+Newfoundland and Labrador,nuclear_smr,2020,6,y
+Newfoundland and Labrador,oil_ct,2020,2,y
+Newfoundland and Labrador,oil_st,2020,2,y
+Newfoundland and Labrador,solar_pv,2020,2,y
+Newfoundland and Labrador,solar_recon,2020,1,y
+Newfoundland and Labrador,storage_lithium,2020,1,y
+Newfoundland and Labrador,storage_pump,2020,8,y
+Newfoundland and Labrador,wind_ofs,2020,4,y
+Newfoundland and Labrador,wind_ons,2020,3,y
+Newfoundland and Labrador,wind_recon,2020,2,y
+Newfoundland and Labrador,biogas,2025,3,y
+Newfoundland and Labrador,biomass,2025,4,y
+Newfoundland and Labrador,biomass_cg,2025,4,y
+Newfoundland and Labrador,coal,2025,4,y
+Newfoundland and Labrador,coal_ccs,2025,4,y
+Newfoundland and Labrador,diesel_ct,2025,2,y
+Newfoundland and Labrador,diesel_st,2025,2,y
+Newfoundland and Labrador,gasoline_ct,2025,2,y
+Newfoundland and Labrador,geothermal,2025,4,y
+Newfoundland and Labrador,h2blue_ct,2025,2,y
+Newfoundland and Labrador,h2green_ct,2025,2,y
+Newfoundland and Labrador,hydro_daily,2025,4,y
+Newfoundland and Labrador,hydro_monthly,2025,8,y
+Newfoundland and Labrador,hydro_run,2025,4,y
+Newfoundland and Labrador,msw,2025,4,y
+Newfoundland and Labrador,ng_cc,2025,3,y
+Newfoundland and Labrador,ng_ccs,2025,3,y
+Newfoundland and Labrador,ng_cg,2025,3,y
+Newfoundland and Labrador,ng_sc,2025,2,y
+Newfoundland and Labrador,nuclear,2025,6,y
+Newfoundland and Labrador,nuclear_smr,2025,6,y
+Newfoundland and Labrador,oil_ct,2025,2,y
+Newfoundland and Labrador,oil_st,2025,2,y
+Newfoundland and Labrador,solar_pv,2025,2,y
+Newfoundland and Labrador,solar_recon,2025,1,y
+Newfoundland and Labrador,storage_lithium,2025,1,y
+Newfoundland and Labrador,storage_pump,2025,8,y
+Newfoundland and Labrador,wind_ofs,2025,4,y
+Newfoundland and Labrador,wind_ons,2025,3,y
+Newfoundland and Labrador,wind_recon,2025,2,y
+Newfoundland and Labrador,biogas,2030,3,y
+Newfoundland and Labrador,biomass,2030,4,y
+Newfoundland and Labrador,biomass_cg,2030,4,y
+Newfoundland and Labrador,coal,2030,4,y
+Newfoundland and Labrador,coal_ccs,2030,4,y
+Newfoundland and Labrador,diesel_ct,2030,2,y
+Newfoundland and Labrador,diesel_st,2030,2,y
+Newfoundland and Labrador,gasoline_ct,2030,2,y
+Newfoundland and Labrador,geothermal,2030,4,y
+Newfoundland and Labrador,h2blue_ct,2030,2,y
+Newfoundland and Labrador,h2green_ct,2030,2,y
+Newfoundland and Labrador,hydro_daily,2030,4,y
+Newfoundland and Labrador,hydro_monthly,2030,8,y
+Newfoundland and Labrador,hydro_run,2030,4,y
+Newfoundland and Labrador,msw,2030,4,y
+Newfoundland and Labrador,ng_cc,2030,3,y
+Newfoundland and Labrador,ng_ccs,2030,3,y
+Newfoundland and Labrador,ng_cg,2030,3,y
+Newfoundland and Labrador,ng_sc,2030,2,y
+Newfoundland and Labrador,nuclear,2030,6,y
+Newfoundland and Labrador,nuclear_smr,2030,6,y
+Newfoundland and Labrador,oil_ct,2030,2,y
+Newfoundland and Labrador,oil_st,2030,2,y
+Newfoundland and Labrador,solar_pv,2030,2,y
+Newfoundland and Labrador,solar_recon,2030,1,y
+Newfoundland and Labrador,storage_lithium,2030,1,y
+Newfoundland and Labrador,storage_pump,2030,8,y
+Newfoundland and Labrador,wind_ofs,2030,4,y
+Newfoundland and Labrador,wind_ons,2030,3,y
+Newfoundland and Labrador,wind_recon,2030,2,y
+Newfoundland and Labrador,biogas,2035,3,y
+Newfoundland and Labrador,biomass,2035,4,y
+Newfoundland and Labrador,biomass_cg,2035,4,y
+Newfoundland and Labrador,coal,2035,4,y
+Newfoundland and Labrador,coal_ccs,2035,4,y
+Newfoundland and Labrador,diesel_ct,2035,2,y
+Newfoundland and Labrador,diesel_st,2035,2,y
+Newfoundland and Labrador,gasoline_ct,2035,2,y
+Newfoundland and Labrador,geothermal,2035,4,y
+Newfoundland and Labrador,h2blue_ct,2035,2,y
+Newfoundland and Labrador,h2green_ct,2035,2,y
+Newfoundland and Labrador,hydro_daily,2035,4,y
+Newfoundland and Labrador,hydro_monthly,2035,8,y
+Newfoundland and Labrador,hydro_run,2035,4,y
+Newfoundland and Labrador,msw,2035,4,y
+Newfoundland and Labrador,ng_cc,2035,3,y
+Newfoundland and Labrador,ng_ccs,2035,3,y
+Newfoundland and Labrador,ng_cg,2035,3,y
+Newfoundland and Labrador,ng_sc,2035,2,y
+Newfoundland and Labrador,nuclear,2035,6,y
+Newfoundland and Labrador,nuclear_smr,2035,6,y
+Newfoundland and Labrador,oil_ct,2035,2,y
+Newfoundland and Labrador,oil_st,2035,2,y
+Newfoundland and Labrador,solar_pv,2035,2,y
+Newfoundland and Labrador,solar_recon,2035,1,y
+Newfoundland and Labrador,storage_lithium,2035,1,y
+Newfoundland and Labrador,storage_pump,2035,8,y
+Newfoundland and Labrador,wind_ofs,2035,4,y
+Newfoundland and Labrador,wind_ons,2035,3,y
+Newfoundland and Labrador,wind_recon,2035,2,y
+Newfoundland and Labrador,biogas,2040,3,y
+Newfoundland and Labrador,biomass,2040,4,y
+Newfoundland and Labrador,biomass_cg,2040,4,y
+Newfoundland and Labrador,coal,2040,4,y
+Newfoundland and Labrador,coal_ccs,2040,4,y
+Newfoundland and Labrador,diesel_ct,2040,2,y
+Newfoundland and Labrador,diesel_st,2040,2,y
+Newfoundland and Labrador,gasoline_ct,2040,2,y
+Newfoundland and Labrador,geothermal,2040,4,y
+Newfoundland and Labrador,h2blue_ct,2040,2,y
+Newfoundland and Labrador,h2green_ct,2040,2,y
+Newfoundland and Labrador,hydro_daily,2040,4,y
+Newfoundland and Labrador,hydro_monthly,2040,8,y
+Newfoundland and Labrador,hydro_run,2040,4,y
+Newfoundland and Labrador,msw,2040,4,y
+Newfoundland and Labrador,ng_cc,2040,3,y
+Newfoundland and Labrador,ng_ccs,2040,3,y
+Newfoundland and Labrador,ng_cg,2040,3,y
+Newfoundland and Labrador,ng_sc,2040,2,y
+Newfoundland and Labrador,nuclear,2040,6,y
+Newfoundland and Labrador,nuclear_smr,2040,6,y
+Newfoundland and Labrador,oil_ct,2040,2,y
+Newfoundland and Labrador,oil_st,2040,2,y
+Newfoundland and Labrador,solar_pv,2040,2,y
+Newfoundland and Labrador,solar_recon,2040,1,y
+Newfoundland and Labrador,storage_lithium,2040,1,y
+Newfoundland and Labrador,storage_pump,2040,8,y
+Newfoundland and Labrador,wind_ofs,2040,4,y
+Newfoundland and Labrador,wind_ons,2040,3,y
+Newfoundland and Labrador,wind_recon,2040,2,y
+Newfoundland and Labrador,biogas,2045,3,y
+Newfoundland and Labrador,biomass,2045,4,y
+Newfoundland and Labrador,biomass_cg,2045,4,y
+Newfoundland and Labrador,coal,2045,4,y
+Newfoundland and Labrador,coal_ccs,2045,4,y
+Newfoundland and Labrador,diesel_ct,2045,2,y
+Newfoundland and Labrador,diesel_st,2045,2,y
+Newfoundland and Labrador,gasoline_ct,2045,2,y
+Newfoundland and Labrador,geothermal,2045,4,y
+Newfoundland and Labrador,h2blue_ct,2045,2,y
+Newfoundland and Labrador,h2green_ct,2045,2,y
+Newfoundland and Labrador,hydro_daily,2045,4,y
+Newfoundland and Labrador,hydro_monthly,2045,8,y
+Newfoundland and Labrador,hydro_run,2045,4,y
+Newfoundland and Labrador,msw,2045,4,y
+Newfoundland and Labrador,ng_cc,2045,3,y
+Newfoundland and Labrador,ng_ccs,2045,3,y
+Newfoundland and Labrador,ng_cg,2045,3,y
+Newfoundland and Labrador,ng_sc,2045,2,y
+Newfoundland and Labrador,nuclear,2045,6,y
+Newfoundland and Labrador,nuclear_smr,2045,6,y
+Newfoundland and Labrador,oil_ct,2045,2,y
+Newfoundland and Labrador,oil_st,2045,2,y
+Newfoundland and Labrador,solar_pv,2045,2,y
+Newfoundland and Labrador,solar_recon,2045,1,y
+Newfoundland and Labrador,storage_lithium,2045,1,y
+Newfoundland and Labrador,storage_pump,2045,8,y
+Newfoundland and Labrador,wind_ofs,2045,4,y
+Newfoundland and Labrador,wind_ons,2045,3,y
+Newfoundland and Labrador,wind_recon,2045,2,y
+Newfoundland and Labrador,biogas,2050,3,y
+Newfoundland and Labrador,biomass,2050,4,y
+Newfoundland and Labrador,biomass_cg,2050,4,y
+Newfoundland and Labrador,coal,2050,4,y
+Newfoundland and Labrador,coal_ccs,2050,4,y
+Newfoundland and Labrador,diesel_ct,2050,2,y
+Newfoundland and Labrador,diesel_st,2050,2,y
+Newfoundland and Labrador,gasoline_ct,2050,2,y
+Newfoundland and Labrador,geothermal,2050,4,y
+Newfoundland and Labrador,h2blue_ct,2050,2,y
+Newfoundland and Labrador,h2green_ct,2050,2,y
+Newfoundland and Labrador,hydro_daily,2050,4,y
+Newfoundland and Labrador,hydro_monthly,2050,8,y
+Newfoundland and Labrador,hydro_run,2050,4,y
+Newfoundland and Labrador,msw,2050,4,y
+Newfoundland and Labrador,ng_cc,2050,3,y
+Newfoundland and Labrador,ng_ccs,2050,3,y
+Newfoundland and Labrador,ng_cg,2050,3,y
+Newfoundland and Labrador,ng_sc,2050,2,y
+Newfoundland and Labrador,nuclear,2050,6,y
+Newfoundland and Labrador,nuclear_smr,2050,6,y
+Newfoundland and Labrador,oil_ct,2050,2,y
+Newfoundland and Labrador,oil_st,2050,2,y
+Newfoundland and Labrador,solar_pv,2050,2,y
+Newfoundland and Labrador,solar_recon,2050,1,y
+Newfoundland and Labrador,storage_lithium,2050,1,y
+Newfoundland and Labrador,storage_pump,2050,8,y
+Newfoundland and Labrador,wind_ofs,2050,4,y
+Newfoundland and Labrador,wind_ons,2050,3,y
+Newfoundland and Labrador,wind_recon,2050,2,y
+Newfoundland and Labrador,biogas,2055,3,y
+Newfoundland and Labrador,biomass,2055,4,y
+Newfoundland and Labrador,biomass_cg,2055,4,y
+Newfoundland and Labrador,coal,2055,4,y
+Newfoundland and Labrador,coal_ccs,2055,4,y
+Newfoundland and Labrador,diesel_ct,2055,2,y
+Newfoundland and Labrador,diesel_st,2055,2,y
+Newfoundland and Labrador,gasoline_ct,2055,2,y
+Newfoundland and Labrador,geothermal,2055,4,y
+Newfoundland and Labrador,h2blue_ct,2055,2,y
+Newfoundland and Labrador,h2green_ct,2055,2,y
+Newfoundland and Labrador,hydro_daily,2055,4,y
+Newfoundland and Labrador,hydro_monthly,2055,8,y
+Newfoundland and Labrador,hydro_run,2055,4,y
+Newfoundland and Labrador,msw,2055,4,y
+Newfoundland and Labrador,ng_cc,2055,3,y
+Newfoundland and Labrador,ng_ccs,2055,3,y
+Newfoundland and Labrador,ng_cg,2055,3,y
+Newfoundland and Labrador,ng_sc,2055,2,y
+Newfoundland and Labrador,nuclear,2055,6,y
+Newfoundland and Labrador,nuclear_smr,2055,6,y
+Newfoundland and Labrador,oil_ct,2055,2,y
+Newfoundland and Labrador,oil_st,2055,2,y
+Newfoundland and Labrador,solar_pv,2055,2,y
+Newfoundland and Labrador,solar_recon,2055,1,y
+Newfoundland and Labrador,storage_lithium,2055,1,y
+Newfoundland and Labrador,storage_pump,2055,8,y
+Newfoundland and Labrador,wind_ofs,2055,4,y
+Newfoundland and Labrador,wind_ons,2055,3,y
+Newfoundland and Labrador,wind_recon,2055,2,y
+Newfoundland and Labrador,biogas,2060,3,y
+Newfoundland and Labrador,biomass,2060,4,y
+Newfoundland and Labrador,biomass_cg,2060,4,y
+Newfoundland and Labrador,coal,2060,4,y
+Newfoundland and Labrador,coal_ccs,2060,4,y
+Newfoundland and Labrador,diesel_ct,2060,2,y
+Newfoundland and Labrador,diesel_st,2060,2,y
+Newfoundland and Labrador,gasoline_ct,2060,2,y
+Newfoundland and Labrador,geothermal,2060,4,y
+Newfoundland and Labrador,h2blue_ct,2060,2,y
+Newfoundland and Labrador,h2green_ct,2060,2,y
+Newfoundland and Labrador,hydro_daily,2060,4,y
+Newfoundland and Labrador,hydro_monthly,2060,8,y
+Newfoundland and Labrador,hydro_run,2060,4,y
+Newfoundland and Labrador,msw,2060,4,y
+Newfoundland and Labrador,ng_cc,2060,3,y
+Newfoundland and Labrador,ng_ccs,2060,3,y
+Newfoundland and Labrador,ng_cg,2060,3,y
+Newfoundland and Labrador,ng_sc,2060,2,y
+Newfoundland and Labrador,nuclear,2060,6,y
+Newfoundland and Labrador,nuclear_smr,2060,6,y
+Newfoundland and Labrador,oil_ct,2060,2,y
+Newfoundland and Labrador,oil_st,2060,2,y
+Newfoundland and Labrador,solar_pv,2060,2,y
+Newfoundland and Labrador,solar_recon,2060,1,y
+Newfoundland and Labrador,storage_lithium,2060,1,y
+Newfoundland and Labrador,storage_pump,2060,8,y
+Newfoundland and Labrador,wind_ofs,2060,4,y
+Newfoundland and Labrador,wind_ons,2060,3,y
+Newfoundland and Labrador,wind_recon,2060,2,y
+Nova Scotia,biogas,2020,3,y
+Nova Scotia,biomass,2020,4,y
+Nova Scotia,biomass_cg,2020,4,y
+Nova Scotia,coal,2020,4,y
+Nova Scotia,coal_ccs,2020,4,y
+Nova Scotia,diesel_ct,2020,2,y
+Nova Scotia,diesel_st,2020,2,y
+Nova Scotia,gasoline_ct,2020,2,y
+Nova Scotia,geothermal,2020,4,y
+Nova Scotia,h2blue_ct,2020,2,y
+Nova Scotia,h2green_ct,2020,2,y
+Nova Scotia,hydro_daily,2020,4,y
+Nova Scotia,hydro_monthly,2020,8,y
+Nova Scotia,hydro_run,2020,4,y
+Nova Scotia,msw,2020,4,y
+Nova Scotia,ng_cc,2020,3,y
+Nova Scotia,ng_ccs,2020,3,y
+Nova Scotia,ng_cg,2020,3,y
+Nova Scotia,ng_sc,2020,2,y
+Nova Scotia,nuclear,2020,6,y
+Nova Scotia,nuclear_smr,2020,6,y
+Nova Scotia,oil_ct,2020,2,y
+Nova Scotia,oil_st,2020,2,y
+Nova Scotia,solar_pv,2020,2,y
+Nova Scotia,solar_recon,2020,1,y
+Nova Scotia,storage_lithium,2020,1,y
+Nova Scotia,storage_pump,2020,8,y
+Nova Scotia,wind_ofs,2020,4,y
+Nova Scotia,wind_ons,2020,3,y
+Nova Scotia,wind_recon,2020,2,y
+Nova Scotia,biogas,2025,3,y
+Nova Scotia,biomass,2025,4,y
+Nova Scotia,biomass_cg,2025,4,y
+Nova Scotia,coal,2025,4,y
+Nova Scotia,coal_ccs,2025,4,y
+Nova Scotia,diesel_ct,2025,2,y
+Nova Scotia,diesel_st,2025,2,y
+Nova Scotia,gasoline_ct,2025,2,y
+Nova Scotia,geothermal,2025,4,y
+Nova Scotia,h2blue_ct,2025,2,y
+Nova Scotia,h2green_ct,2025,2,y
+Nova Scotia,hydro_daily,2025,4,y
+Nova Scotia,hydro_monthly,2025,8,y
+Nova Scotia,hydro_run,2025,4,y
+Nova Scotia,msw,2025,4,y
+Nova Scotia,ng_cc,2025,3,y
+Nova Scotia,ng_ccs,2025,3,y
+Nova Scotia,ng_cg,2025,3,y
+Nova Scotia,ng_sc,2025,2,y
+Nova Scotia,nuclear,2025,6,y
+Nova Scotia,nuclear_smr,2025,6,y
+Nova Scotia,oil_ct,2025,2,y
+Nova Scotia,oil_st,2025,2,y
+Nova Scotia,solar_pv,2025,2,y
+Nova Scotia,solar_recon,2025,1,y
+Nova Scotia,storage_lithium,2025,1,y
+Nova Scotia,storage_pump,2025,8,y
+Nova Scotia,wind_ofs,2025,4,y
+Nova Scotia,wind_ons,2025,3,y
+Nova Scotia,wind_recon,2025,2,y
+Nova Scotia,biogas,2030,3,y
+Nova Scotia,biomass,2030,4,y
+Nova Scotia,biomass_cg,2030,4,y
+Nova Scotia,coal,2030,4,y
+Nova Scotia,coal_ccs,2030,4,y
+Nova Scotia,diesel_ct,2030,2,y
+Nova Scotia,diesel_st,2030,2,y
+Nova Scotia,gasoline_ct,2030,2,y
+Nova Scotia,geothermal,2030,4,y
+Nova Scotia,h2blue_ct,2030,2,y
+Nova Scotia,h2green_ct,2030,2,y
+Nova Scotia,hydro_daily,2030,4,y
+Nova Scotia,hydro_monthly,2030,8,y
+Nova Scotia,hydro_run,2030,4,y
+Nova Scotia,msw,2030,4,y
+Nova Scotia,ng_cc,2030,3,y
+Nova Scotia,ng_ccs,2030,3,y
+Nova Scotia,ng_cg,2030,3,y
+Nova Scotia,ng_sc,2030,2,y
+Nova Scotia,nuclear,2030,6,y
+Nova Scotia,nuclear_smr,2030,6,y
+Nova Scotia,oil_ct,2030,2,y
+Nova Scotia,oil_st,2030,2,y
+Nova Scotia,solar_pv,2030,2,y
+Nova Scotia,solar_recon,2030,1,y
+Nova Scotia,storage_lithium,2030,1,y
+Nova Scotia,storage_pump,2030,8,y
+Nova Scotia,wind_ofs,2030,4,y
+Nova Scotia,wind_ons,2030,3,y
+Nova Scotia,wind_recon,2030,2,y
+Nova Scotia,biogas,2035,3,y
+Nova Scotia,biomass,2035,4,y
+Nova Scotia,biomass_cg,2035,4,y
+Nova Scotia,coal,2035,4,y
+Nova Scotia,coal_ccs,2035,4,y
+Nova Scotia,diesel_ct,2035,2,y
+Nova Scotia,diesel_st,2035,2,y
+Nova Scotia,gasoline_ct,2035,2,y
+Nova Scotia,geothermal,2035,4,y
+Nova Scotia,h2blue_ct,2035,2,y
+Nova Scotia,h2green_ct,2035,2,y
+Nova Scotia,hydro_daily,2035,4,y
+Nova Scotia,hydro_monthly,2035,8,y
+Nova Scotia,hydro_run,2035,4,y
+Nova Scotia,msw,2035,4,y
+Nova Scotia,ng_cc,2035,3,y
+Nova Scotia,ng_ccs,2035,3,y
+Nova Scotia,ng_cg,2035,3,y
+Nova Scotia,ng_sc,2035,2,y
+Nova Scotia,nuclear,2035,6,y
+Nova Scotia,nuclear_smr,2035,6,y
+Nova Scotia,oil_ct,2035,2,y
+Nova Scotia,oil_st,2035,2,y
+Nova Scotia,solar_pv,2035,2,y
+Nova Scotia,solar_recon,2035,1,y
+Nova Scotia,storage_lithium,2035,1,y
+Nova Scotia,storage_pump,2035,8,y
+Nova Scotia,wind_ofs,2035,4,y
+Nova Scotia,wind_ons,2035,3,y
+Nova Scotia,wind_recon,2035,2,y
+Nova Scotia,biogas,2040,3,y
+Nova Scotia,biomass,2040,4,y
+Nova Scotia,biomass_cg,2040,4,y
+Nova Scotia,coal,2040,4,y
+Nova Scotia,coal_ccs,2040,4,y
+Nova Scotia,diesel_ct,2040,2,y
+Nova Scotia,diesel_st,2040,2,y
+Nova Scotia,gasoline_ct,2040,2,y
+Nova Scotia,geothermal,2040,4,y
+Nova Scotia,h2blue_ct,2040,2,y
+Nova Scotia,h2green_ct,2040,2,y
+Nova Scotia,hydro_daily,2040,4,y
+Nova Scotia,hydro_monthly,2040,8,y
+Nova Scotia,hydro_run,2040,4,y
+Nova Scotia,msw,2040,4,y
+Nova Scotia,ng_cc,2040,3,y
+Nova Scotia,ng_ccs,2040,3,y
+Nova Scotia,ng_cg,2040,3,y
+Nova Scotia,ng_sc,2040,2,y
+Nova Scotia,nuclear,2040,6,y
+Nova Scotia,nuclear_smr,2040,6,y
+Nova Scotia,oil_ct,2040,2,y
+Nova Scotia,oil_st,2040,2,y
+Nova Scotia,solar_pv,2040,2,y
+Nova Scotia,solar_recon,2040,1,y
+Nova Scotia,storage_lithium,2040,1,y
+Nova Scotia,storage_pump,2040,8,y
+Nova Scotia,wind_ofs,2040,4,y
+Nova Scotia,wind_ons,2040,3,y
+Nova Scotia,wind_recon,2040,2,y
+Nova Scotia,biogas,2045,3,y
+Nova Scotia,biomass,2045,4,y
+Nova Scotia,biomass_cg,2045,4,y
+Nova Scotia,coal,2045,4,y
+Nova Scotia,coal_ccs,2045,4,y
+Nova Scotia,diesel_ct,2045,2,y
+Nova Scotia,diesel_st,2045,2,y
+Nova Scotia,gasoline_ct,2045,2,y
+Nova Scotia,geothermal,2045,4,y
+Nova Scotia,h2blue_ct,2045,2,y
+Nova Scotia,h2green_ct,2045,2,y
+Nova Scotia,hydro_daily,2045,4,y
+Nova Scotia,hydro_monthly,2045,8,y
+Nova Scotia,hydro_run,2045,4,y
+Nova Scotia,msw,2045,4,y
+Nova Scotia,ng_cc,2045,3,y
+Nova Scotia,ng_ccs,2045,3,y
+Nova Scotia,ng_cg,2045,3,y
+Nova Scotia,ng_sc,2045,2,y
+Nova Scotia,nuclear,2045,6,y
+Nova Scotia,nuclear_smr,2045,6,y
+Nova Scotia,oil_ct,2045,2,y
+Nova Scotia,oil_st,2045,2,y
+Nova Scotia,solar_pv,2045,2,y
+Nova Scotia,solar_recon,2045,1,y
+Nova Scotia,storage_lithium,2045,1,y
+Nova Scotia,storage_pump,2045,8,y
+Nova Scotia,wind_ofs,2045,4,y
+Nova Scotia,wind_ons,2045,3,y
+Nova Scotia,wind_recon,2045,2,y
+Nova Scotia,biogas,2050,3,y
+Nova Scotia,biomass,2050,4,y
+Nova Scotia,biomass_cg,2050,4,y
+Nova Scotia,coal,2050,4,y
+Nova Scotia,coal_ccs,2050,4,y
+Nova Scotia,diesel_ct,2050,2,y
+Nova Scotia,diesel_st,2050,2,y
+Nova Scotia,gasoline_ct,2050,2,y
+Nova Scotia,geothermal,2050,4,y
+Nova Scotia,h2blue_ct,2050,2,y
+Nova Scotia,h2green_ct,2050,2,y
+Nova Scotia,hydro_daily,2050,4,y
+Nova Scotia,hydro_monthly,2050,8,y
+Nova Scotia,hydro_run,2050,4,y
+Nova Scotia,msw,2050,4,y
+Nova Scotia,ng_cc,2050,3,y
+Nova Scotia,ng_ccs,2050,3,y
+Nova Scotia,ng_cg,2050,3,y
+Nova Scotia,ng_sc,2050,2,y
+Nova Scotia,nuclear,2050,6,y
+Nova Scotia,nuclear_smr,2050,6,y
+Nova Scotia,oil_ct,2050,2,y
+Nova Scotia,oil_st,2050,2,y
+Nova Scotia,solar_pv,2050,2,y
+Nova Scotia,solar_recon,2050,1,y
+Nova Scotia,storage_lithium,2050,1,y
+Nova Scotia,storage_pump,2050,8,y
+Nova Scotia,wind_ofs,2050,4,y
+Nova Scotia,wind_ons,2050,3,y
+Nova Scotia,wind_recon,2050,2,y
+Nova Scotia,biogas,2055,3,y
+Nova Scotia,biomass,2055,4,y
+Nova Scotia,biomass_cg,2055,4,y
+Nova Scotia,coal,2055,4,y
+Nova Scotia,coal_ccs,2055,4,y
+Nova Scotia,diesel_ct,2055,2,y
+Nova Scotia,diesel_st,2055,2,y
+Nova Scotia,gasoline_ct,2055,2,y
+Nova Scotia,geothermal,2055,4,y
+Nova Scotia,h2blue_ct,2055,2,y
+Nova Scotia,h2green_ct,2055,2,y
+Nova Scotia,hydro_daily,2055,4,y
+Nova Scotia,hydro_monthly,2055,8,y
+Nova Scotia,hydro_run,2055,4,y
+Nova Scotia,msw,2055,4,y
+Nova Scotia,ng_cc,2055,3,y
+Nova Scotia,ng_ccs,2055,3,y
+Nova Scotia,ng_cg,2055,3,y
+Nova Scotia,ng_sc,2055,2,y
+Nova Scotia,nuclear,2055,6,y
+Nova Scotia,nuclear_smr,2055,6,y
+Nova Scotia,oil_ct,2055,2,y
+Nova Scotia,oil_st,2055,2,y
+Nova Scotia,solar_pv,2055,2,y
+Nova Scotia,solar_recon,2055,1,y
+Nova Scotia,storage_lithium,2055,1,y
+Nova Scotia,storage_pump,2055,8,y
+Nova Scotia,wind_ofs,2055,4,y
+Nova Scotia,wind_ons,2055,3,y
+Nova Scotia,wind_recon,2055,2,y
+Nova Scotia,biogas,2060,3,y
+Nova Scotia,biomass,2060,4,y
+Nova Scotia,biomass_cg,2060,4,y
+Nova Scotia,coal,2060,4,y
+Nova Scotia,coal_ccs,2060,4,y
+Nova Scotia,diesel_ct,2060,2,y
+Nova Scotia,diesel_st,2060,2,y
+Nova Scotia,gasoline_ct,2060,2,y
+Nova Scotia,geothermal,2060,4,y
+Nova Scotia,h2blue_ct,2060,2,y
+Nova Scotia,h2green_ct,2060,2,y
+Nova Scotia,hydro_daily,2060,4,y
+Nova Scotia,hydro_monthly,2060,8,y
+Nova Scotia,hydro_run,2060,4,y
+Nova Scotia,msw,2060,4,y
+Nova Scotia,ng_cc,2060,3,y
+Nova Scotia,ng_ccs,2060,3,y
+Nova Scotia,ng_cg,2060,3,y
+Nova Scotia,ng_sc,2060,2,y
+Nova Scotia,nuclear,2060,6,y
+Nova Scotia,nuclear_smr,2060,6,y
+Nova Scotia,oil_ct,2060,2,y
+Nova Scotia,oil_st,2060,2,y
+Nova Scotia,solar_pv,2060,2,y
+Nova Scotia,solar_recon,2060,1,y
+Nova Scotia,storage_lithium,2060,1,y
+Nova Scotia,storage_pump,2060,8,y
+Nova Scotia,wind_ofs,2060,4,y
+Nova Scotia,wind_ons,2060,3,y
+Nova Scotia,wind_recon,2060,2,y
+Ontario,biogas,2020,3,y
+Ontario,biomass,2020,4,y
+Ontario,biomass_cg,2020,4,y
+Ontario,coal,2020,4,y
+Ontario,coal_ccs,2020,4,y
+Ontario,diesel_ct,2020,2,y
+Ontario,diesel_st,2020,2,y
+Ontario,gasoline_ct,2020,2,y
+Ontario,geothermal,2020,4,y
+Ontario,h2blue_ct,2020,2,y
+Ontario,h2green_ct,2020,2,y
+Ontario,hydro_daily,2020,4,y
+Ontario,hydro_monthly,2020,8,y
+Ontario,hydro_run,2020,4,y
+Ontario,msw,2020,4,y
+Ontario,ng_cc,2020,3,y
+Ontario,ng_ccs,2020,3,y
+Ontario,ng_cg,2020,3,y
+Ontario,ng_sc,2020,2,y
+Ontario,nuclear,2020,6,y
+Ontario,nuclear_smr,2020,6,y
+Ontario,oil_ct,2020,2,y
+Ontario,oil_st,2020,2,y
+Ontario,solar_pv,2020,2,y
+Ontario,solar_recon,2020,1,y
+Ontario,storage_lithium,2020,1,y
+Ontario,storage_pump,2020,8,y
+Ontario,wind_ofs,2020,4,y
+Ontario,wind_ons,2020,3,y
+Ontario,wind_recon,2020,2,y
+Ontario,biogas,2025,3,y
+Ontario,biomass,2025,4,y
+Ontario,biomass_cg,2025,4,y
+Ontario,coal,2025,4,y
+Ontario,coal_ccs,2025,4,y
+Ontario,diesel_ct,2025,2,y
+Ontario,diesel_st,2025,2,y
+Ontario,gasoline_ct,2025,2,y
+Ontario,geothermal,2025,4,y
+Ontario,h2blue_ct,2025,2,y
+Ontario,h2green_ct,2025,2,y
+Ontario,hydro_daily,2025,4,y
+Ontario,hydro_monthly,2025,8,y
+Ontario,hydro_run,2025,4,y
+Ontario,msw,2025,4,y
+Ontario,ng_cc,2025,3,y
+Ontario,ng_ccs,2025,3,y
+Ontario,ng_cg,2025,3,y
+Ontario,ng_sc,2025,2,y
+Ontario,nuclear,2025,6,y
+Ontario,nuclear_smr,2025,6,y
+Ontario,oil_ct,2025,2,y
+Ontario,oil_st,2025,2,y
+Ontario,solar_pv,2025,2,y
+Ontario,solar_recon,2025,1,y
+Ontario,storage_lithium,2025,1,y
+Ontario,storage_pump,2025,8,y
+Ontario,wind_ofs,2025,4,y
+Ontario,wind_ons,2025,3,y
+Ontario,wind_recon,2025,2,y
+Ontario,biogas,2030,3,y
+Ontario,biomass,2030,4,y
+Ontario,biomass_cg,2030,4,y
+Ontario,coal,2030,4,y
+Ontario,coal_ccs,2030,4,y
+Ontario,diesel_ct,2030,2,y
+Ontario,diesel_st,2030,2,y
+Ontario,gasoline_ct,2030,2,y
+Ontario,geothermal,2030,4,y
+Ontario,h2blue_ct,2030,2,y
+Ontario,h2green_ct,2030,2,y
+Ontario,hydro_daily,2030,4,y
+Ontario,hydro_monthly,2030,8,y
+Ontario,hydro_run,2030,4,y
+Ontario,msw,2030,4,y
+Ontario,ng_cc,2030,3,y
+Ontario,ng_ccs,2030,3,y
+Ontario,ng_cg,2030,3,y
+Ontario,ng_sc,2030,2,y
+Ontario,nuclear,2030,6,y
+Ontario,nuclear_smr,2030,6,y
+Ontario,oil_ct,2030,2,y
+Ontario,oil_st,2030,2,y
+Ontario,solar_pv,2030,2,y
+Ontario,solar_recon,2030,1,y
+Ontario,storage_lithium,2030,1,y
+Ontario,storage_pump,2030,8,y
+Ontario,wind_ofs,2030,4,y
+Ontario,wind_ons,2030,3,y
+Ontario,wind_recon,2030,2,y
+Ontario,biogas,2035,3,y
+Ontario,biomass,2035,4,y
+Ontario,biomass_cg,2035,4,y
+Ontario,coal,2035,4,y
+Ontario,coal_ccs,2035,4,y
+Ontario,diesel_ct,2035,2,y
+Ontario,diesel_st,2035,2,y
+Ontario,gasoline_ct,2035,2,y
+Ontario,geothermal,2035,4,y
+Ontario,h2blue_ct,2035,2,y
+Ontario,h2green_ct,2035,2,y
+Ontario,hydro_daily,2035,4,y
+Ontario,hydro_monthly,2035,8,y
+Ontario,hydro_run,2035,4,y
+Ontario,msw,2035,4,y
+Ontario,ng_cc,2035,3,y
+Ontario,ng_ccs,2035,3,y
+Ontario,ng_cg,2035,3,y
+Ontario,ng_sc,2035,2,y
+Ontario,nuclear,2035,6,y
+Ontario,nuclear_smr,2035,6,y
+Ontario,oil_ct,2035,2,y
+Ontario,oil_st,2035,2,y
+Ontario,solar_pv,2035,2,y
+Ontario,solar_recon,2035,1,y
+Ontario,storage_lithium,2035,1,y
+Ontario,storage_pump,2035,8,y
+Ontario,wind_ofs,2035,4,y
+Ontario,wind_ons,2035,3,y
+Ontario,wind_recon,2035,2,y
+Ontario,biogas,2040,3,y
+Ontario,biomass,2040,4,y
+Ontario,biomass_cg,2040,4,y
+Ontario,coal,2040,4,y
+Ontario,coal_ccs,2040,4,y
+Ontario,diesel_ct,2040,2,y
+Ontario,diesel_st,2040,2,y
+Ontario,gasoline_ct,2040,2,y
+Ontario,geothermal,2040,4,y
+Ontario,h2blue_ct,2040,2,y
+Ontario,h2green_ct,2040,2,y
+Ontario,hydro_daily,2040,4,y
+Ontario,hydro_monthly,2040,8,y
+Ontario,hydro_run,2040,4,y
+Ontario,msw,2040,4,y
+Ontario,ng_cc,2040,3,y
+Ontario,ng_ccs,2040,3,y
+Ontario,ng_cg,2040,3,y
+Ontario,ng_sc,2040,2,y
+Ontario,nuclear,2040,6,y
+Ontario,nuclear_smr,2040,6,y
+Ontario,oil_ct,2040,2,y
+Ontario,oil_st,2040,2,y
+Ontario,solar_pv,2040,2,y
+Ontario,solar_recon,2040,1,y
+Ontario,storage_lithium,2040,1,y
+Ontario,storage_pump,2040,8,y
+Ontario,wind_ofs,2040,4,y
+Ontario,wind_ons,2040,3,y
+Ontario,wind_recon,2040,2,y
+Ontario,biogas,2045,3,y
+Ontario,biomass,2045,4,y
+Ontario,biomass_cg,2045,4,y
+Ontario,coal,2045,4,y
+Ontario,coal_ccs,2045,4,y
+Ontario,diesel_ct,2045,2,y
+Ontario,diesel_st,2045,2,y
+Ontario,gasoline_ct,2045,2,y
+Ontario,geothermal,2045,4,y
+Ontario,h2blue_ct,2045,2,y
+Ontario,h2green_ct,2045,2,y
+Ontario,hydro_daily,2045,4,y
+Ontario,hydro_monthly,2045,8,y
+Ontario,hydro_run,2045,4,y
+Ontario,msw,2045,4,y
+Ontario,ng_cc,2045,3,y
+Ontario,ng_ccs,2045,3,y
+Ontario,ng_cg,2045,3,y
+Ontario,ng_sc,2045,2,y
+Ontario,nuclear,2045,6,y
+Ontario,nuclear_smr,2045,6,y
+Ontario,oil_ct,2045,2,y
+Ontario,oil_st,2045,2,y
+Ontario,solar_pv,2045,2,y
+Ontario,solar_recon,2045,1,y
+Ontario,storage_lithium,2045,1,y
+Ontario,storage_pump,2045,8,y
+Ontario,wind_ofs,2045,4,y
+Ontario,wind_ons,2045,3,y
+Ontario,wind_recon,2045,2,y
+Ontario,biogas,2050,3,y
+Ontario,biomass,2050,4,y
+Ontario,biomass_cg,2050,4,y
+Ontario,coal,2050,4,y
+Ontario,coal_ccs,2050,4,y
+Ontario,diesel_ct,2050,2,y
+Ontario,diesel_st,2050,2,y
+Ontario,gasoline_ct,2050,2,y
+Ontario,geothermal,2050,4,y
+Ontario,h2blue_ct,2050,2,y
+Ontario,h2green_ct,2050,2,y
+Ontario,hydro_daily,2050,4,y
+Ontario,hydro_monthly,2050,8,y
+Ontario,hydro_run,2050,4,y
+Ontario,msw,2050,4,y
+Ontario,ng_cc,2050,3,y
+Ontario,ng_ccs,2050,3,y
+Ontario,ng_cg,2050,3,y
+Ontario,ng_sc,2050,2,y
+Ontario,nuclear,2050,6,y
+Ontario,nuclear_smr,2050,6,y
+Ontario,oil_ct,2050,2,y
+Ontario,oil_st,2050,2,y
+Ontario,solar_pv,2050,2,y
+Ontario,solar_recon,2050,1,y
+Ontario,storage_lithium,2050,1,y
+Ontario,storage_pump,2050,8,y
+Ontario,wind_ofs,2050,4,y
+Ontario,wind_ons,2050,3,y
+Ontario,wind_recon,2050,2,y
+Ontario,biogas,2055,3,y
+Ontario,biomass,2055,4,y
+Ontario,biomass_cg,2055,4,y
+Ontario,coal,2055,4,y
+Ontario,coal_ccs,2055,4,y
+Ontario,diesel_ct,2055,2,y
+Ontario,diesel_st,2055,2,y
+Ontario,gasoline_ct,2055,2,y
+Ontario,geothermal,2055,4,y
+Ontario,h2blue_ct,2055,2,y
+Ontario,h2green_ct,2055,2,y
+Ontario,hydro_daily,2055,4,y
+Ontario,hydro_monthly,2055,8,y
+Ontario,hydro_run,2055,4,y
+Ontario,msw,2055,4,y
+Ontario,ng_cc,2055,3,y
+Ontario,ng_ccs,2055,3,y
+Ontario,ng_cg,2055,3,y
+Ontario,ng_sc,2055,2,y
+Ontario,nuclear,2055,6,y
+Ontario,nuclear_smr,2055,6,y
+Ontario,oil_ct,2055,2,y
+Ontario,oil_st,2055,2,y
+Ontario,solar_pv,2055,2,y
+Ontario,solar_recon,2055,1,y
+Ontario,storage_lithium,2055,1,y
+Ontario,storage_pump,2055,8,y
+Ontario,wind_ofs,2055,4,y
+Ontario,wind_ons,2055,3,y
+Ontario,wind_recon,2055,2,y
+Ontario,biogas,2060,3,y
+Ontario,biomass,2060,4,y
+Ontario,biomass_cg,2060,4,y
+Ontario,coal,2060,4,y
+Ontario,coal_ccs,2060,4,y
+Ontario,diesel_ct,2060,2,y
+Ontario,diesel_st,2060,2,y
+Ontario,gasoline_ct,2060,2,y
+Ontario,geothermal,2060,4,y
+Ontario,h2blue_ct,2060,2,y
+Ontario,h2green_ct,2060,2,y
+Ontario,hydro_daily,2060,4,y
+Ontario,hydro_monthly,2060,8,y
+Ontario,hydro_run,2060,4,y
+Ontario,msw,2060,4,y
+Ontario,ng_cc,2060,3,y
+Ontario,ng_ccs,2060,3,y
+Ontario,ng_cg,2060,3,y
+Ontario,ng_sc,2060,2,y
+Ontario,nuclear,2060,6,y
+Ontario,nuclear_smr,2060,6,y
+Ontario,oil_ct,2060,2,y
+Ontario,oil_st,2060,2,y
+Ontario,solar_pv,2060,2,y
+Ontario,solar_recon,2060,1,y
+Ontario,storage_lithium,2060,1,y
+Ontario,storage_pump,2060,8,y
+Ontario,wind_ofs,2060,4,y
+Ontario,wind_ons,2060,3,y
+Ontario,wind_recon,2060,2,y
+Quebec,biogas,2020,3,y
+Quebec,biomass,2020,4,y
+Quebec,biomass_cg,2020,4,y
+Quebec,coal,2020,4,y
+Quebec,coal_ccs,2020,4,y
+Quebec,diesel_ct,2020,2,y
+Quebec,diesel_st,2020,2,y
+Quebec,gasoline_ct,2020,2,y
+Quebec,geothermal,2020,4,y
+Quebec,h2blue_ct,2020,2,y
+Quebec,h2green_ct,2020,2,y
+Quebec,hydro_daily,2020,4,y
+Quebec,hydro_monthly,2020,8,y
+Quebec,hydro_run,2020,4,y
+Quebec,msw,2020,4,y
+Quebec,ng_cc,2020,3,y
+Quebec,ng_ccs,2020,3,y
+Quebec,ng_cg,2020,3,y
+Quebec,ng_sc,2020,2,y
+Quebec,nuclear,2020,6,y
+Quebec,nuclear_smr,2020,6,y
+Quebec,oil_ct,2020,2,y
+Quebec,oil_st,2020,2,y
+Quebec,solar_pv,2020,2,y
+Quebec,solar_recon,2020,1,y
+Quebec,storage_lithium,2020,1,y
+Quebec,storage_pump,2020,8,y
+Quebec,wind_ofs,2020,4,y
+Quebec,wind_ons,2020,3,y
+Quebec,wind_recon,2020,2,y
+Quebec,biogas,2025,3,y
+Quebec,biomass,2025,4,y
+Quebec,biomass_cg,2025,4,y
+Quebec,coal,2025,4,y
+Quebec,coal_ccs,2025,4,y
+Quebec,diesel_ct,2025,2,y
+Quebec,diesel_st,2025,2,y
+Quebec,gasoline_ct,2025,2,y
+Quebec,geothermal,2025,4,y
+Quebec,h2blue_ct,2025,2,y
+Quebec,h2green_ct,2025,2,y
+Quebec,hydro_daily,2025,4,y
+Quebec,hydro_monthly,2025,8,y
+Quebec,hydro_run,2025,4,y
+Quebec,msw,2025,4,y
+Quebec,ng_cc,2025,3,y
+Quebec,ng_ccs,2025,3,y
+Quebec,ng_cg,2025,3,y
+Quebec,ng_sc,2025,2,y
+Quebec,nuclear,2025,6,y
+Quebec,nuclear_smr,2025,6,y
+Quebec,oil_ct,2025,2,y
+Quebec,oil_st,2025,2,y
+Quebec,solar_pv,2025,2,y
+Quebec,solar_recon,2025,1,y
+Quebec,storage_lithium,2025,1,y
+Quebec,storage_pump,2025,8,y
+Quebec,wind_ofs,2025,4,y
+Quebec,wind_ons,2025,3,y
+Quebec,wind_recon,2025,2,y
+Quebec,biogas,2030,3,y
+Quebec,biomass,2030,4,y
+Quebec,biomass_cg,2030,4,y
+Quebec,coal,2030,4,y
+Quebec,coal_ccs,2030,4,y
+Quebec,diesel_ct,2030,2,y
+Quebec,diesel_st,2030,2,y
+Quebec,gasoline_ct,2030,2,y
+Quebec,geothermal,2030,4,y
+Quebec,h2blue_ct,2030,2,y
+Quebec,h2green_ct,2030,2,y
+Quebec,hydro_daily,2030,4,y
+Quebec,hydro_monthly,2030,8,y
+Quebec,hydro_run,2030,4,y
+Quebec,msw,2030,4,y
+Quebec,ng_cc,2030,3,y
+Quebec,ng_ccs,2030,3,y
+Quebec,ng_cg,2030,3,y
+Quebec,ng_sc,2030,2,y
+Quebec,nuclear,2030,6,y
+Quebec,nuclear_smr,2030,6,y
+Quebec,oil_ct,2030,2,y
+Quebec,oil_st,2030,2,y
+Quebec,solar_pv,2030,2,y
+Quebec,solar_recon,2030,1,y
+Quebec,storage_lithium,2030,1,y
+Quebec,storage_pump,2030,8,y
+Quebec,wind_ofs,2030,4,y
+Quebec,wind_ons,2030,3,y
+Quebec,wind_recon,2030,2,y
+Quebec,biogas,2035,3,y
+Quebec,biomass,2035,4,y
+Quebec,biomass_cg,2035,4,y
+Quebec,coal,2035,4,y
+Quebec,coal_ccs,2035,4,y
+Quebec,diesel_ct,2035,2,y
+Quebec,diesel_st,2035,2,y
+Quebec,gasoline_ct,2035,2,y
+Quebec,geothermal,2035,4,y
+Quebec,h2blue_ct,2035,2,y
+Quebec,h2green_ct,2035,2,y
+Quebec,hydro_daily,2035,4,y
+Quebec,hydro_monthly,2035,8,y
+Quebec,hydro_run,2035,4,y
+Quebec,msw,2035,4,y
+Quebec,ng_cc,2035,3,y
+Quebec,ng_ccs,2035,3,y
+Quebec,ng_cg,2035,3,y
+Quebec,ng_sc,2035,2,y
+Quebec,nuclear,2035,6,y
+Quebec,nuclear_smr,2035,6,y
+Quebec,oil_ct,2035,2,y
+Quebec,oil_st,2035,2,y
+Quebec,solar_pv,2035,2,y
+Quebec,solar_recon,2035,1,y
+Quebec,storage_lithium,2035,1,y
+Quebec,storage_pump,2035,8,y
+Quebec,wind_ofs,2035,4,y
+Quebec,wind_ons,2035,3,y
+Quebec,wind_recon,2035,2,y
+Quebec,biogas,2040,3,y
+Quebec,biomass,2040,4,y
+Quebec,biomass_cg,2040,4,y
+Quebec,coal,2040,4,y
+Quebec,coal_ccs,2040,4,y
+Quebec,diesel_ct,2040,2,y
+Quebec,diesel_st,2040,2,y
+Quebec,gasoline_ct,2040,2,y
+Quebec,geothermal,2040,4,y
+Quebec,h2blue_ct,2040,2,y
+Quebec,h2green_ct,2040,2,y
+Quebec,hydro_daily,2040,4,y
+Quebec,hydro_monthly,2040,8,y
+Quebec,hydro_run,2040,4,y
+Quebec,msw,2040,4,y
+Quebec,ng_cc,2040,3,y
+Quebec,ng_ccs,2040,3,y
+Quebec,ng_cg,2040,3,y
+Quebec,ng_sc,2040,2,y
+Quebec,nuclear,2040,6,y
+Quebec,nuclear_smr,2040,6,y
+Quebec,oil_ct,2040,2,y
+Quebec,oil_st,2040,2,y
+Quebec,solar_pv,2040,2,y
+Quebec,solar_recon,2040,1,y
+Quebec,storage_lithium,2040,1,y
+Quebec,storage_pump,2040,8,y
+Quebec,wind_ofs,2040,4,y
+Quebec,wind_ons,2040,3,y
+Quebec,wind_recon,2040,2,y
+Quebec,biogas,2045,3,y
+Quebec,biomass,2045,4,y
+Quebec,biomass_cg,2045,4,y
+Quebec,coal,2045,4,y
+Quebec,coal_ccs,2045,4,y
+Quebec,diesel_ct,2045,2,y
+Quebec,diesel_st,2045,2,y
+Quebec,gasoline_ct,2045,2,y
+Quebec,geothermal,2045,4,y
+Quebec,h2blue_ct,2045,2,y
+Quebec,h2green_ct,2045,2,y
+Quebec,hydro_daily,2045,4,y
+Quebec,hydro_monthly,2045,8,y
+Quebec,hydro_run,2045,4,y
+Quebec,msw,2045,4,y
+Quebec,ng_cc,2045,3,y
+Quebec,ng_ccs,2045,3,y
+Quebec,ng_cg,2045,3,y
+Quebec,ng_sc,2045,2,y
+Quebec,nuclear,2045,6,y
+Quebec,nuclear_smr,2045,6,y
+Quebec,oil_ct,2045,2,y
+Quebec,oil_st,2045,2,y
+Quebec,solar_pv,2045,2,y
+Quebec,solar_recon,2045,1,y
+Quebec,storage_lithium,2045,1,y
+Quebec,storage_pump,2045,8,y
+Quebec,wind_ofs,2045,4,y
+Quebec,wind_ons,2045,3,y
+Quebec,wind_recon,2045,2,y
+Quebec,biogas,2050,3,y
+Quebec,biomass,2050,4,y
+Quebec,biomass_cg,2050,4,y
+Quebec,coal,2050,4,y
+Quebec,coal_ccs,2050,4,y
+Quebec,diesel_ct,2050,2,y
+Quebec,diesel_st,2050,2,y
+Quebec,gasoline_ct,2050,2,y
+Quebec,geothermal,2050,4,y
+Quebec,h2blue_ct,2050,2,y
+Quebec,h2green_ct,2050,2,y
+Quebec,hydro_daily,2050,4,y
+Quebec,hydro_monthly,2050,8,y
+Quebec,hydro_run,2050,4,y
+Quebec,msw,2050,4,y
+Quebec,ng_cc,2050,3,y
+Quebec,ng_ccs,2050,3,y
+Quebec,ng_cg,2050,3,y
+Quebec,ng_sc,2050,2,y
+Quebec,nuclear,2050,6,y
+Quebec,nuclear_smr,2050,6,y
+Quebec,oil_ct,2050,2,y
+Quebec,oil_st,2050,2,y
+Quebec,solar_pv,2050,2,y
+Quebec,solar_recon,2050,1,y
+Quebec,storage_lithium,2050,1,y
+Quebec,storage_pump,2050,8,y
+Quebec,wind_ofs,2050,4,y
+Quebec,wind_ons,2050,3,y
+Quebec,wind_recon,2050,2,y
+Quebec,biogas,2055,3,y
+Quebec,biomass,2055,4,y
+Quebec,biomass_cg,2055,4,y
+Quebec,coal,2055,4,y
+Quebec,coal_ccs,2055,4,y
+Quebec,diesel_ct,2055,2,y
+Quebec,diesel_st,2055,2,y
+Quebec,gasoline_ct,2055,2,y
+Quebec,geothermal,2055,4,y
+Quebec,h2blue_ct,2055,2,y
+Quebec,h2green_ct,2055,2,y
+Quebec,hydro_daily,2055,4,y
+Quebec,hydro_monthly,2055,8,y
+Quebec,hydro_run,2055,4,y
+Quebec,msw,2055,4,y
+Quebec,ng_cc,2055,3,y
+Quebec,ng_ccs,2055,3,y
+Quebec,ng_cg,2055,3,y
+Quebec,ng_sc,2055,2,y
+Quebec,nuclear,2055,6,y
+Quebec,nuclear_smr,2055,6,y
+Quebec,oil_ct,2055,2,y
+Quebec,oil_st,2055,2,y
+Quebec,solar_pv,2055,2,y
+Quebec,solar_recon,2055,1,y
+Quebec,storage_lithium,2055,1,y
+Quebec,storage_pump,2055,8,y
+Quebec,wind_ofs,2055,4,y
+Quebec,wind_ons,2055,3,y
+Quebec,wind_recon,2055,2,y
+Quebec,biogas,2060,3,y
+Quebec,biomass,2060,4,y
+Quebec,biomass_cg,2060,4,y
+Quebec,coal,2060,4,y
+Quebec,coal_ccs,2060,4,y
+Quebec,diesel_ct,2060,2,y
+Quebec,diesel_st,2060,2,y
+Quebec,gasoline_ct,2060,2,y
+Quebec,geothermal,2060,4,y
+Quebec,h2blue_ct,2060,2,y
+Quebec,h2green_ct,2060,2,y
+Quebec,hydro_daily,2060,4,y
+Quebec,hydro_monthly,2060,8,y
+Quebec,hydro_run,2060,4,y
+Quebec,msw,2060,4,y
+Quebec,ng_cc,2060,3,y
+Quebec,ng_ccs,2060,3,y
+Quebec,ng_cg,2060,3,y
+Quebec,ng_sc,2060,2,y
+Quebec,nuclear,2060,6,y
+Quebec,nuclear_smr,2060,6,y
+Quebec,oil_ct,2060,2,y
+Quebec,oil_st,2060,2,y
+Quebec,solar_pv,2060,2,y
+Quebec,solar_recon,2060,1,y
+Quebec,storage_lithium,2060,1,y
+Quebec,storage_pump,2060,8,y
+Quebec,wind_ofs,2060,4,y
+Quebec,wind_ons,2060,3,y
+Quebec,wind_recon,2060,2,y
+Saskatchewan,biogas,2020,3,y
+Saskatchewan,biomass,2020,4,y
+Saskatchewan,biomass_cg,2020,4,y
+Saskatchewan,coal,2020,4,y
+Saskatchewan,coal_ccs,2020,4,y
+Saskatchewan,diesel_ct,2020,2,y
+Saskatchewan,diesel_st,2020,2,y
+Saskatchewan,gasoline_ct,2020,2,y
+Saskatchewan,geothermal,2020,4,y
+Saskatchewan,h2blue_ct,2020,2,y
+Saskatchewan,h2green_ct,2020,2,y
+Saskatchewan,hydro_daily,2020,4,y
+Saskatchewan,hydro_monthly,2020,8,y
+Saskatchewan,hydro_run,2020,4,y
+Saskatchewan,msw,2020,4,y
+Saskatchewan,ng_cc,2020,3,y
+Saskatchewan,ng_ccs,2020,3,y
+Saskatchewan,ng_cg,2020,3,y
+Saskatchewan,ng_sc,2020,2,y
+Saskatchewan,nuclear,2020,6,y
+Saskatchewan,nuclear_smr,2020,6,y
+Saskatchewan,oil_ct,2020,2,y
+Saskatchewan,oil_st,2020,2,y
+Saskatchewan,solar_pv,2020,2,y
+Saskatchewan,solar_recon,2020,1,y
+Saskatchewan,storage_lithium,2020,1,y
+Saskatchewan,storage_pump,2020,8,y
+Saskatchewan,wind_ofs,2020,4,y
+Saskatchewan,wind_ons,2020,3,y
+Saskatchewan,wind_recon,2020,2,y
+Saskatchewan,biogas,2025,3,y
+Saskatchewan,biomass,2025,4,y
+Saskatchewan,biomass_cg,2025,4,y
+Saskatchewan,coal,2025,4,y
+Saskatchewan,coal_ccs,2025,4,y
+Saskatchewan,diesel_ct,2025,2,y
+Saskatchewan,diesel_st,2025,2,y
+Saskatchewan,gasoline_ct,2025,2,y
+Saskatchewan,geothermal,2025,4,y
+Saskatchewan,h2blue_ct,2025,2,y
+Saskatchewan,h2green_ct,2025,2,y
+Saskatchewan,hydro_daily,2025,4,y
+Saskatchewan,hydro_monthly,2025,8,y
+Saskatchewan,hydro_run,2025,4,y
+Saskatchewan,msw,2025,4,y
+Saskatchewan,ng_cc,2025,3,y
+Saskatchewan,ng_ccs,2025,3,y
+Saskatchewan,ng_cg,2025,3,y
+Saskatchewan,ng_sc,2025,2,y
+Saskatchewan,nuclear,2025,6,y
+Saskatchewan,nuclear_smr,2025,6,y
+Saskatchewan,oil_ct,2025,2,y
+Saskatchewan,oil_st,2025,2,y
+Saskatchewan,solar_pv,2025,2,y
+Saskatchewan,solar_recon,2025,1,y
+Saskatchewan,storage_lithium,2025,1,y
+Saskatchewan,storage_pump,2025,8,y
+Saskatchewan,wind_ofs,2025,4,y
+Saskatchewan,wind_ons,2025,3,y
+Saskatchewan,wind_recon,2025,2,y
+Saskatchewan,biogas,2030,3,y
+Saskatchewan,biomass,2030,4,y
+Saskatchewan,biomass_cg,2030,4,y
+Saskatchewan,coal,2030,4,y
+Saskatchewan,coal_ccs,2030,4,y
+Saskatchewan,diesel_ct,2030,2,y
+Saskatchewan,diesel_st,2030,2,y
+Saskatchewan,gasoline_ct,2030,2,y
+Saskatchewan,geothermal,2030,4,y
+Saskatchewan,h2blue_ct,2030,2,y
+Saskatchewan,h2green_ct,2030,2,y
+Saskatchewan,hydro_daily,2030,4,y
+Saskatchewan,hydro_monthly,2030,8,y
+Saskatchewan,hydro_run,2030,4,y
+Saskatchewan,msw,2030,4,y
+Saskatchewan,ng_cc,2030,3,y
+Saskatchewan,ng_ccs,2030,3,y
+Saskatchewan,ng_cg,2030,3,y
+Saskatchewan,ng_sc,2030,2,y
+Saskatchewan,nuclear,2030,6,y
+Saskatchewan,nuclear_smr,2030,6,y
+Saskatchewan,oil_ct,2030,2,y
+Saskatchewan,oil_st,2030,2,y
+Saskatchewan,solar_pv,2030,2,y
+Saskatchewan,solar_recon,2030,1,y
+Saskatchewan,storage_lithium,2030,1,y
+Saskatchewan,storage_pump,2030,8,y
+Saskatchewan,wind_ofs,2030,4,y
+Saskatchewan,wind_ons,2030,3,y
+Saskatchewan,wind_recon,2030,2,y
+Saskatchewan,biogas,2035,3,y
+Saskatchewan,biomass,2035,4,y
+Saskatchewan,biomass_cg,2035,4,y
+Saskatchewan,coal,2035,4,y
+Saskatchewan,coal_ccs,2035,4,y
+Saskatchewan,diesel_ct,2035,2,y
+Saskatchewan,diesel_st,2035,2,y
+Saskatchewan,gasoline_ct,2035,2,y
+Saskatchewan,geothermal,2035,4,y
+Saskatchewan,h2blue_ct,2035,2,y
+Saskatchewan,h2green_ct,2035,2,y
+Saskatchewan,hydro_daily,2035,4,y
+Saskatchewan,hydro_monthly,2035,8,y
+Saskatchewan,hydro_run,2035,4,y
+Saskatchewan,msw,2035,4,y
+Saskatchewan,ng_cc,2035,3,y
+Saskatchewan,ng_ccs,2035,3,y
+Saskatchewan,ng_cg,2035,3,y
+Saskatchewan,ng_sc,2035,2,y
+Saskatchewan,nuclear,2035,6,y
+Saskatchewan,nuclear_smr,2035,6,y
+Saskatchewan,oil_ct,2035,2,y
+Saskatchewan,oil_st,2035,2,y
+Saskatchewan,solar_pv,2035,2,y
+Saskatchewan,solar_recon,2035,1,y
+Saskatchewan,storage_lithium,2035,1,y
+Saskatchewan,storage_pump,2035,8,y
+Saskatchewan,wind_ofs,2035,4,y
+Saskatchewan,wind_ons,2035,3,y
+Saskatchewan,wind_recon,2035,2,y
+Saskatchewan,biogas,2040,3,y
+Saskatchewan,biomass,2040,4,y
+Saskatchewan,biomass_cg,2040,4,y
+Saskatchewan,coal,2040,4,y
+Saskatchewan,coal_ccs,2040,4,y
+Saskatchewan,diesel_ct,2040,2,y
+Saskatchewan,diesel_st,2040,2,y
+Saskatchewan,gasoline_ct,2040,2,y
+Saskatchewan,geothermal,2040,4,y
+Saskatchewan,h2blue_ct,2040,2,y
+Saskatchewan,h2green_ct,2040,2,y
+Saskatchewan,hydro_daily,2040,4,y
+Saskatchewan,hydro_monthly,2040,8,y
+Saskatchewan,hydro_run,2040,4,y
+Saskatchewan,msw,2040,4,y
+Saskatchewan,ng_cc,2040,3,y
+Saskatchewan,ng_ccs,2040,3,y
+Saskatchewan,ng_cg,2040,3,y
+Saskatchewan,ng_sc,2040,2,y
+Saskatchewan,nuclear,2040,6,y
+Saskatchewan,nuclear_smr,2040,6,y
+Saskatchewan,oil_ct,2040,2,y
+Saskatchewan,oil_st,2040,2,y
+Saskatchewan,solar_pv,2040,2,y
+Saskatchewan,solar_recon,2040,1,y
+Saskatchewan,storage_lithium,2040,1,y
+Saskatchewan,storage_pump,2040,8,y
+Saskatchewan,wind_ofs,2040,4,y
+Saskatchewan,wind_ons,2040,3,y
+Saskatchewan,wind_recon,2040,2,y
+Saskatchewan,biogas,2045,3,y
+Saskatchewan,biomass,2045,4,y
+Saskatchewan,biomass_cg,2045,4,y
+Saskatchewan,coal,2045,4,y
+Saskatchewan,coal_ccs,2045,4,y
+Saskatchewan,diesel_ct,2045,2,y
+Saskatchewan,diesel_st,2045,2,y
+Saskatchewan,gasoline_ct,2045,2,y
+Saskatchewan,geothermal,2045,4,y
+Saskatchewan,h2blue_ct,2045,2,y
+Saskatchewan,h2green_ct,2045,2,y
+Saskatchewan,hydro_daily,2045,4,y
+Saskatchewan,hydro_monthly,2045,8,y
+Saskatchewan,hydro_run,2045,4,y
+Saskatchewan,msw,2045,4,y
+Saskatchewan,ng_cc,2045,3,y
+Saskatchewan,ng_ccs,2045,3,y
+Saskatchewan,ng_cg,2045,3,y
+Saskatchewan,ng_sc,2045,2,y
+Saskatchewan,nuclear,2045,6,y
+Saskatchewan,nuclear_smr,2045,6,y
+Saskatchewan,oil_ct,2045,2,y
+Saskatchewan,oil_st,2045,2,y
+Saskatchewan,solar_pv,2045,2,y
+Saskatchewan,solar_recon,2045,1,y
+Saskatchewan,storage_lithium,2045,1,y
+Saskatchewan,storage_pump,2045,8,y
+Saskatchewan,wind_ofs,2045,4,y
+Saskatchewan,wind_ons,2045,3,y
+Saskatchewan,wind_recon,2045,2,y
+Saskatchewan,biogas,2050,3,y
+Saskatchewan,biomass,2050,4,y
+Saskatchewan,biomass_cg,2050,4,y
+Saskatchewan,coal,2050,4,y
+Saskatchewan,coal_ccs,2050,4,y
+Saskatchewan,diesel_ct,2050,2,y
+Saskatchewan,diesel_st,2050,2,y
+Saskatchewan,gasoline_ct,2050,2,y
+Saskatchewan,geothermal,2050,4,y
+Saskatchewan,h2blue_ct,2050,2,y
+Saskatchewan,h2green_ct,2050,2,y
+Saskatchewan,hydro_daily,2050,4,y
+Saskatchewan,hydro_monthly,2050,8,y
+Saskatchewan,hydro_run,2050,4,y
+Saskatchewan,msw,2050,4,y
+Saskatchewan,ng_cc,2050,3,y
+Saskatchewan,ng_ccs,2050,3,y
+Saskatchewan,ng_cg,2050,3,y
+Saskatchewan,ng_sc,2050,2,y
+Saskatchewan,nuclear,2050,6,y
+Saskatchewan,nuclear_smr,2050,6,y
+Saskatchewan,oil_ct,2050,2,y
+Saskatchewan,oil_st,2050,2,y
+Saskatchewan,solar_pv,2050,2,y
+Saskatchewan,solar_recon,2050,1,y
+Saskatchewan,storage_lithium,2050,1,y
+Saskatchewan,storage_pump,2050,8,y
+Saskatchewan,wind_ofs,2050,4,y
+Saskatchewan,wind_ons,2050,3,y
+Saskatchewan,wind_recon,2050,2,y
+Saskatchewan,biogas,2055,3,y
+Saskatchewan,biomass,2055,4,y
+Saskatchewan,biomass_cg,2055,4,y
+Saskatchewan,coal,2055,4,y
+Saskatchewan,coal_ccs,2055,4,y
+Saskatchewan,diesel_ct,2055,2,y
+Saskatchewan,diesel_st,2055,2,y
+Saskatchewan,gasoline_ct,2055,2,y
+Saskatchewan,geothermal,2055,4,y
+Saskatchewan,h2blue_ct,2055,2,y
+Saskatchewan,h2green_ct,2055,2,y
+Saskatchewan,hydro_daily,2055,4,y
+Saskatchewan,hydro_monthly,2055,8,y
+Saskatchewan,hydro_run,2055,4,y
+Saskatchewan,msw,2055,4,y
+Saskatchewan,ng_cc,2055,3,y
+Saskatchewan,ng_ccs,2055,3,y
+Saskatchewan,ng_cg,2055,3,y
+Saskatchewan,ng_sc,2055,2,y
+Saskatchewan,nuclear,2055,6,y
+Saskatchewan,nuclear_smr,2055,6,y
+Saskatchewan,oil_ct,2055,2,y
+Saskatchewan,oil_st,2055,2,y
+Saskatchewan,solar_pv,2055,2,y
+Saskatchewan,solar_recon,2055,1,y
+Saskatchewan,storage_lithium,2055,1,y
+Saskatchewan,storage_pump,2055,8,y
+Saskatchewan,wind_ofs,2055,4,y
+Saskatchewan,wind_ons,2055,3,y
+Saskatchewan,wind_recon,2055,2,y
+Saskatchewan,biogas,2060,3,y
+Saskatchewan,biomass,2060,4,y
+Saskatchewan,biomass_cg,2060,4,y
+Saskatchewan,coal,2060,4,y
+Saskatchewan,coal_ccs,2060,4,y
+Saskatchewan,diesel_ct,2060,2,y
+Saskatchewan,diesel_st,2060,2,y
+Saskatchewan,gasoline_ct,2060,2,y
+Saskatchewan,geothermal,2060,4,y
+Saskatchewan,h2blue_ct,2060,2,y
+Saskatchewan,h2green_ct,2060,2,y
+Saskatchewan,hydro_daily,2060,4,y
+Saskatchewan,hydro_monthly,2060,8,y
+Saskatchewan,hydro_run,2060,4,y
+Saskatchewan,msw,2060,4,y
+Saskatchewan,ng_cc,2060,3,y
+Saskatchewan,ng_ccs,2060,3,y
+Saskatchewan,ng_cg,2060,3,y
+Saskatchewan,ng_sc,2060,2,y
+Saskatchewan,nuclear,2060,6,y
+Saskatchewan,nuclear_smr,2060,6,y
+Saskatchewan,oil_ct,2060,2,y
+Saskatchewan,oil_st,2060,2,y
+Saskatchewan,solar_pv,2060,2,y
+Saskatchewan,solar_recon,2060,1,y
+Saskatchewan,storage_lithium,2060,1,y
+Saskatchewan,storage_pump,2060,8,y
+Saskatchewan,wind_ofs,2060,4,y
+Saskatchewan,wind_ons,2060,3,y
+Saskatchewan,wind_recon,2060,2,y
+Manitoba,biogas,2020,3,y
+Manitoba,biomass,2020,4,y
+Manitoba,biomass_cg,2020,4,y
+Manitoba,coal,2020,4,y
+Manitoba,coal_ccs,2020,4,y
+Manitoba,diesel_ct,2020,2,y
+Manitoba,diesel_st,2020,2,y
+Manitoba,gasoline_ct,2020,2,y
+Manitoba,geothermal,2020,4,y
+Manitoba,h2blue_ct,2020,2,y
+Manitoba,h2green_ct,2020,2,y
+Manitoba,hydro_daily,2020,4,y
+Manitoba,hydro_monthly,2020,8,y
+Manitoba,hydro_run,2020,4,y
+Manitoba,msw,2020,4,y
+Manitoba,ng_cc,2020,3,y
+Manitoba,ng_ccs,2020,3,y
+Manitoba,ng_cg,2020,3,y
+Manitoba,ng_sc,2020,2,y
+Manitoba,nuclear,2020,6,y
+Manitoba,nuclear_smr,2020,6,y
+Manitoba,oil_ct,2020,2,y
+Manitoba,oil_st,2020,2,y
+Manitoba,solar_pv,2020,2,y
+Manitoba,solar_recon,2020,1,y
+Manitoba,storage_lithium,2020,1,y
+Manitoba,storage_pump,2020,8,y
+Manitoba,wind_ofs,2020,4,y
+Manitoba,wind_ons,2020,3,y
+Manitoba,wind_recon,2020,2,y
+Manitoba,biogas,2025,3,y
+Manitoba,biomass,2025,4,y
+Manitoba,biomass_cg,2025,4,y
+Manitoba,coal,2025,4,y
+Manitoba,coal_ccs,2025,4,y
+Manitoba,diesel_ct,2025,2,y
+Manitoba,diesel_st,2025,2,y
+Manitoba,gasoline_ct,2025,2,y
+Manitoba,geothermal,2025,4,y
+Manitoba,h2blue_ct,2025,2,y
+Manitoba,h2green_ct,2025,2,y
+Manitoba,hydro_daily,2025,4,y
+Manitoba,hydro_monthly,2025,8,y
+Manitoba,hydro_run,2025,4,y
+Manitoba,msw,2025,4,y
+Manitoba,ng_cc,2025,3,y
+Manitoba,ng_ccs,2025,3,y
+Manitoba,ng_cg,2025,3,y
+Manitoba,ng_sc,2025,2,y
+Manitoba,nuclear,2025,6,y
+Manitoba,nuclear_smr,2025,6,y
+Manitoba,oil_ct,2025,2,y
+Manitoba,oil_st,2025,2,y
+Manitoba,solar_pv,2025,2,y
+Manitoba,solar_recon,2025,1,y
+Manitoba,storage_lithium,2025,1,y
+Manitoba,storage_pump,2025,8,y
+Manitoba,wind_ofs,2025,4,y
+Manitoba,wind_ons,2025,3,y
+Manitoba,wind_recon,2025,2,y
+Manitoba,biogas,2030,3,y
+Manitoba,biomass,2030,4,y
+Manitoba,biomass_cg,2030,4,y
+Manitoba,coal,2030,4,y
+Manitoba,coal_ccs,2030,4,y
+Manitoba,diesel_ct,2030,2,y
+Manitoba,diesel_st,2030,2,y
+Manitoba,gasoline_ct,2030,2,y
+Manitoba,geothermal,2030,4,y
+Manitoba,h2blue_ct,2030,2,y
+Manitoba,h2green_ct,2030,2,y
+Manitoba,hydro_daily,2030,4,y
+Manitoba,hydro_monthly,2030,8,y
+Manitoba,hydro_run,2030,4,y
+Manitoba,msw,2030,4,y
+Manitoba,ng_cc,2030,3,y
+Manitoba,ng_ccs,2030,3,y
+Manitoba,ng_cg,2030,3,y
+Manitoba,ng_sc,2030,2,y
+Manitoba,nuclear,2030,6,y
+Manitoba,nuclear_smr,2030,6,y
+Manitoba,oil_ct,2030,2,y
+Manitoba,oil_st,2030,2,y
+Manitoba,solar_pv,2030,2,y
+Manitoba,solar_recon,2030,1,y
+Manitoba,storage_lithium,2030,1,y
+Manitoba,storage_pump,2030,8,y
+Manitoba,wind_ofs,2030,4,y
+Manitoba,wind_ons,2030,3,y
+Manitoba,wind_recon,2030,2,y
+Manitoba,biogas,2035,3,y
+Manitoba,biomass,2035,4,y
+Manitoba,biomass_cg,2035,4,y
+Manitoba,coal,2035,4,y
+Manitoba,coal_ccs,2035,4,y
+Manitoba,diesel_ct,2035,2,y
+Manitoba,diesel_st,2035,2,y
+Manitoba,gasoline_ct,2035,2,y
+Manitoba,geothermal,2035,4,y
+Manitoba,h2blue_ct,2035,2,y
+Manitoba,h2green_ct,2035,2,y
+Manitoba,hydro_daily,2035,4,y
+Manitoba,hydro_monthly,2035,8,y
+Manitoba,hydro_run,2035,4,y
+Manitoba,msw,2035,4,y
+Manitoba,ng_cc,2035,3,y
+Manitoba,ng_ccs,2035,3,y
+Manitoba,ng_cg,2035,3,y
+Manitoba,ng_sc,2035,2,y
+Manitoba,nuclear,2035,6,y
+Manitoba,nuclear_smr,2035,6,y
+Manitoba,oil_ct,2035,2,y
+Manitoba,oil_st,2035,2,y
+Manitoba,solar_pv,2035,2,y
+Manitoba,solar_recon,2035,1,y
+Manitoba,storage_lithium,2035,1,y
+Manitoba,storage_pump,2035,8,y
+Manitoba,wind_ofs,2035,4,y
+Manitoba,wind_ons,2035,3,y
+Manitoba,wind_recon,2035,2,y
+Manitoba,biogas,2040,3,y
+Manitoba,biomass,2040,4,y
+Manitoba,biomass_cg,2040,4,y
+Manitoba,coal,2040,4,y
+Manitoba,coal_ccs,2040,4,y
+Manitoba,diesel_ct,2040,2,y
+Manitoba,diesel_st,2040,2,y
+Manitoba,gasoline_ct,2040,2,y
+Manitoba,geothermal,2040,4,y
+Manitoba,h2blue_ct,2040,2,y
+Manitoba,h2green_ct,2040,2,y
+Manitoba,hydro_daily,2040,4,y
+Manitoba,hydro_monthly,2040,8,y
+Manitoba,hydro_run,2040,4,y
+Manitoba,msw,2040,4,y
+Manitoba,ng_cc,2040,3,y
+Manitoba,ng_ccs,2040,3,y
+Manitoba,ng_cg,2040,3,y
+Manitoba,ng_sc,2040,2,y
+Manitoba,nuclear,2040,6,y
+Manitoba,nuclear_smr,2040,6,y
+Manitoba,oil_ct,2040,2,y
+Manitoba,oil_st,2040,2,y
+Manitoba,solar_pv,2040,2,y
+Manitoba,solar_recon,2040,1,y
+Manitoba,storage_lithium,2040,1,y
+Manitoba,storage_pump,2040,8,y
+Manitoba,wind_ofs,2040,4,y
+Manitoba,wind_ons,2040,3,y
+Manitoba,wind_recon,2040,2,y
+Manitoba,biogas,2045,3,y
+Manitoba,biomass,2045,4,y
+Manitoba,biomass_cg,2045,4,y
+Manitoba,coal,2045,4,y
+Manitoba,coal_ccs,2045,4,y
+Manitoba,diesel_ct,2045,2,y
+Manitoba,diesel_st,2045,2,y
+Manitoba,gasoline_ct,2045,2,y
+Manitoba,geothermal,2045,4,y
+Manitoba,h2blue_ct,2045,2,y
+Manitoba,h2green_ct,2045,2,y
+Manitoba,hydro_daily,2045,4,y
+Manitoba,hydro_monthly,2045,8,y
+Manitoba,hydro_run,2045,4,y
+Manitoba,msw,2045,4,y
+Manitoba,ng_cc,2045,3,y
+Manitoba,ng_ccs,2045,3,y
+Manitoba,ng_cg,2045,3,y
+Manitoba,ng_sc,2045,2,y
+Manitoba,nuclear,2045,6,y
+Manitoba,nuclear_smr,2045,6,y
+Manitoba,oil_ct,2045,2,y
+Manitoba,oil_st,2045,2,y
+Manitoba,solar_pv,2045,2,y
+Manitoba,solar_recon,2045,1,y
+Manitoba,storage_lithium,2045,1,y
+Manitoba,storage_pump,2045,8,y
+Manitoba,wind_ofs,2045,4,y
+Manitoba,wind_ons,2045,3,y
+Manitoba,wind_recon,2045,2,y
+Manitoba,biogas,2050,3,y
+Manitoba,biomass,2050,4,y
+Manitoba,biomass_cg,2050,4,y
+Manitoba,coal,2050,4,y
+Manitoba,coal_ccs,2050,4,y
+Manitoba,diesel_ct,2050,2,y
+Manitoba,diesel_st,2050,2,y
+Manitoba,gasoline_ct,2050,2,y
+Manitoba,geothermal,2050,4,y
+Manitoba,h2blue_ct,2050,2,y
+Manitoba,h2green_ct,2050,2,y
+Manitoba,hydro_daily,2050,4,y
+Manitoba,hydro_monthly,2050,8,y
+Manitoba,hydro_run,2050,4,y
+Manitoba,msw,2050,4,y
+Manitoba,ng_cc,2050,3,y
+Manitoba,ng_ccs,2050,3,y
+Manitoba,ng_cg,2050,3,y
+Manitoba,ng_sc,2050,2,y
+Manitoba,nuclear,2050,6,y
+Manitoba,nuclear_smr,2050,6,y
+Manitoba,oil_ct,2050,2,y
+Manitoba,oil_st,2050,2,y
+Manitoba,solar_pv,2050,2,y
+Manitoba,solar_recon,2050,1,y
+Manitoba,storage_lithium,2050,1,y
+Manitoba,storage_pump,2050,8,y
+Manitoba,wind_ofs,2050,4,y
+Manitoba,wind_ons,2050,3,y
+Manitoba,wind_recon,2050,2,y
+Manitoba,biogas,2055,3,y
+Manitoba,biomass,2055,4,y
+Manitoba,biomass_cg,2055,4,y
+Manitoba,coal,2055,4,y
+Manitoba,coal_ccs,2055,4,y
+Manitoba,diesel_ct,2055,2,y
+Manitoba,diesel_st,2055,2,y
+Manitoba,gasoline_ct,2055,2,y
+Manitoba,geothermal,2055,4,y
+Manitoba,h2blue_ct,2055,2,y
+Manitoba,h2green_ct,2055,2,y
+Manitoba,hydro_daily,2055,4,y
+Manitoba,hydro_monthly,2055,8,y
+Manitoba,hydro_run,2055,4,y
+Manitoba,msw,2055,4,y
+Manitoba,ng_cc,2055,3,y
+Manitoba,ng_ccs,2055,3,y
+Manitoba,ng_cg,2055,3,y
+Manitoba,ng_sc,2055,2,y
+Manitoba,nuclear,2055,6,y
+Manitoba,nuclear_smr,2055,6,y
+Manitoba,oil_ct,2055,2,y
+Manitoba,oil_st,2055,2,y
+Manitoba,solar_pv,2055,2,y
+Manitoba,solar_recon,2055,1,y
+Manitoba,storage_lithium,2055,1,y
+Manitoba,storage_pump,2055,8,y
+Manitoba,wind_ofs,2055,4,y
+Manitoba,wind_ons,2055,3,y
+Manitoba,wind_recon,2055,2,y
+Manitoba,biogas,2060,3,y
+Manitoba,biomass,2060,4,y
+Manitoba,biomass_cg,2060,4,y
+Manitoba,coal,2060,4,y
+Manitoba,coal_ccs,2060,4,y
+Manitoba,diesel_ct,2060,2,y
+Manitoba,diesel_st,2060,2,y
+Manitoba,gasoline_ct,2060,2,y
+Manitoba,geothermal,2060,4,y
+Manitoba,h2blue_ct,2060,2,y
+Manitoba,h2green_ct,2060,2,y
+Manitoba,hydro_daily,2060,4,y
+Manitoba,hydro_monthly,2060,8,y
+Manitoba,hydro_run,2060,4,y
+Manitoba,msw,2060,4,y
+Manitoba,ng_cc,2060,3,y
+Manitoba,ng_ccs,2060,3,y
+Manitoba,ng_cg,2060,3,y
+Manitoba,ng_sc,2060,2,y
+Manitoba,nuclear,2060,6,y
+Manitoba,nuclear_smr,2060,6,y
+Manitoba,oil_ct,2060,2,y
+Manitoba,oil_st,2060,2,y
+Manitoba,solar_pv,2060,2,y
+Manitoba,solar_recon,2060,1,y
+Manitoba,storage_lithium,2060,1,y
+Manitoba,storage_pump,2060,8,y
+Manitoba,wind_ofs,2060,4,y
+Manitoba,wind_ons,2060,3,y
+Manitoba,wind_recon,2060,2,y
+Prince Edward Island,biogas,2020,3,y
+Prince Edward Island,biomass,2020,4,y
+Prince Edward Island,biomass_cg,2020,4,y
+Prince Edward Island,coal,2020,4,y
+Prince Edward Island,coal_ccs,2020,4,y
+Prince Edward Island,diesel_ct,2020,2,y
+Prince Edward Island,diesel_st,2020,2,y
+Prince Edward Island,gasoline_ct,2020,2,y
+Prince Edward Island,geothermal,2020,4,y
+Prince Edward Island,h2blue_ct,2020,2,y
+Prince Edward Island,h2green_ct,2020,2,y
+Prince Edward Island,hydro_daily,2020,4,y
+Prince Edward Island,hydro_monthly,2020,8,y
+Prince Edward Island,hydro_run,2020,4,y
+Prince Edward Island,msw,2020,4,y
+Prince Edward Island,ng_cc,2020,3,y
+Prince Edward Island,ng_ccs,2020,3,y
+Prince Edward Island,ng_cg,2020,3,y
+Prince Edward Island,ng_sc,2020,2,y
+Prince Edward Island,nuclear,2020,6,y
+Prince Edward Island,nuclear_smr,2020,6,y
+Prince Edward Island,oil_ct,2020,2,y
+Prince Edward Island,oil_st,2020,2,y
+Prince Edward Island,solar_pv,2020,2,y
+Prince Edward Island,solar_recon,2020,1,y
+Prince Edward Island,storage_lithium,2020,1,y
+Prince Edward Island,storage_pump,2020,8,y
+Prince Edward Island,wind_ofs,2020,4,y
+Prince Edward Island,wind_ons,2020,3,y
+Prince Edward Island,wind_recon,2020,2,y
+Prince Edward Island,biogas,2025,3,y
+Prince Edward Island,biomass,2025,4,y
+Prince Edward Island,biomass_cg,2025,4,y
+Prince Edward Island,coal,2025,4,y
+Prince Edward Island,coal_ccs,2025,4,y
+Prince Edward Island,diesel_ct,2025,2,y
+Prince Edward Island,diesel_st,2025,2,y
+Prince Edward Island,gasoline_ct,2025,2,y
+Prince Edward Island,geothermal,2025,4,y
+Prince Edward Island,h2blue_ct,2025,2,y
+Prince Edward Island,h2green_ct,2025,2,y
+Prince Edward Island,hydro_daily,2025,4,y
+Prince Edward Island,hydro_monthly,2025,8,y
+Prince Edward Island,hydro_run,2025,4,y
+Prince Edward Island,msw,2025,4,y
+Prince Edward Island,ng_cc,2025,3,y
+Prince Edward Island,ng_ccs,2025,3,y
+Prince Edward Island,ng_cg,2025,3,y
+Prince Edward Island,ng_sc,2025,2,y
+Prince Edward Island,nuclear,2025,6,y
+Prince Edward Island,nuclear_smr,2025,6,y
+Prince Edward Island,oil_ct,2025,2,y
+Prince Edward Island,oil_st,2025,2,y
+Prince Edward Island,solar_pv,2025,2,y
+Prince Edward Island,solar_recon,2025,1,y
+Prince Edward Island,storage_lithium,2025,1,y
+Prince Edward Island,storage_pump,2025,8,y
+Prince Edward Island,wind_ofs,2025,4,y
+Prince Edward Island,wind_ons,2025,3,y
+Prince Edward Island,wind_recon,2025,2,y
+Prince Edward Island,biogas,2030,3,y
+Prince Edward Island,biomass,2030,4,y
+Prince Edward Island,biomass_cg,2030,4,y
+Prince Edward Island,coal,2030,4,y
+Prince Edward Island,coal_ccs,2030,4,y
+Prince Edward Island,diesel_ct,2030,2,y
+Prince Edward Island,diesel_st,2030,2,y
+Prince Edward Island,gasoline_ct,2030,2,y
+Prince Edward Island,geothermal,2030,4,y
+Prince Edward Island,h2blue_ct,2030,2,y
+Prince Edward Island,h2green_ct,2030,2,y
+Prince Edward Island,hydro_daily,2030,4,y
+Prince Edward Island,hydro_monthly,2030,8,y
+Prince Edward Island,hydro_run,2030,4,y
+Prince Edward Island,msw,2030,4,y
+Prince Edward Island,ng_cc,2030,3,y
+Prince Edward Island,ng_ccs,2030,3,y
+Prince Edward Island,ng_cg,2030,3,y
+Prince Edward Island,ng_sc,2030,2,y
+Prince Edward Island,nuclear,2030,6,y
+Prince Edward Island,nuclear_smr,2030,6,y
+Prince Edward Island,oil_ct,2030,2,y
+Prince Edward Island,oil_st,2030,2,y
+Prince Edward Island,solar_pv,2030,2,y
+Prince Edward Island,solar_recon,2030,1,y
+Prince Edward Island,storage_lithium,2030,1,y
+Prince Edward Island,storage_pump,2030,8,y
+Prince Edward Island,wind_ofs,2030,4,y
+Prince Edward Island,wind_ons,2030,3,y
+Prince Edward Island,wind_recon,2030,2,y
+Prince Edward Island,biogas,2035,3,y
+Prince Edward Island,biomass,2035,4,y
+Prince Edward Island,biomass_cg,2035,4,y
+Prince Edward Island,coal,2035,4,y
+Prince Edward Island,coal_ccs,2035,4,y
+Prince Edward Island,diesel_ct,2035,2,y
+Prince Edward Island,diesel_st,2035,2,y
+Prince Edward Island,gasoline_ct,2035,2,y
+Prince Edward Island,geothermal,2035,4,y
+Prince Edward Island,h2blue_ct,2035,2,y
+Prince Edward Island,h2green_ct,2035,2,y
+Prince Edward Island,hydro_daily,2035,4,y
+Prince Edward Island,hydro_monthly,2035,8,y
+Prince Edward Island,hydro_run,2035,4,y
+Prince Edward Island,msw,2035,4,y
+Prince Edward Island,ng_cc,2035,3,y
+Prince Edward Island,ng_ccs,2035,3,y
+Prince Edward Island,ng_cg,2035,3,y
+Prince Edward Island,ng_sc,2035,2,y
+Prince Edward Island,nuclear,2035,6,y
+Prince Edward Island,nuclear_smr,2035,6,y
+Prince Edward Island,oil_ct,2035,2,y
+Prince Edward Island,oil_st,2035,2,y
+Prince Edward Island,solar_pv,2035,2,y
+Prince Edward Island,solar_recon,2035,1,y
+Prince Edward Island,storage_lithium,2035,1,y
+Prince Edward Island,storage_pump,2035,8,y
+Prince Edward Island,wind_ofs,2035,4,y
+Prince Edward Island,wind_ons,2035,3,y
+Prince Edward Island,wind_recon,2035,2,y
+Prince Edward Island,biogas,2040,3,y
+Prince Edward Island,biomass,2040,4,y
+Prince Edward Island,biomass_cg,2040,4,y
+Prince Edward Island,coal,2040,4,y
+Prince Edward Island,coal_ccs,2040,4,y
+Prince Edward Island,diesel_ct,2040,2,y
+Prince Edward Island,diesel_st,2040,2,y
+Prince Edward Island,gasoline_ct,2040,2,y
+Prince Edward Island,geothermal,2040,4,y
+Prince Edward Island,h2blue_ct,2040,2,y
+Prince Edward Island,h2green_ct,2040,2,y
+Prince Edward Island,hydro_daily,2040,4,y
+Prince Edward Island,hydro_monthly,2040,8,y
+Prince Edward Island,hydro_run,2040,4,y
+Prince Edward Island,msw,2040,4,y
+Prince Edward Island,ng_cc,2040,3,y
+Prince Edward Island,ng_ccs,2040,3,y
+Prince Edward Island,ng_cg,2040,3,y
+Prince Edward Island,ng_sc,2040,2,y
+Prince Edward Island,nuclear,2040,6,y
+Prince Edward Island,nuclear_smr,2040,6,y
+Prince Edward Island,oil_ct,2040,2,y
+Prince Edward Island,oil_st,2040,2,y
+Prince Edward Island,solar_pv,2040,2,y
+Prince Edward Island,solar_recon,2040,1,y
+Prince Edward Island,storage_lithium,2040,1,y
+Prince Edward Island,storage_pump,2040,8,y
+Prince Edward Island,wind_ofs,2040,4,y
+Prince Edward Island,wind_ons,2040,3,y
+Prince Edward Island,wind_recon,2040,2,y
+Prince Edward Island,biogas,2045,3,y
+Prince Edward Island,biomass,2045,4,y
+Prince Edward Island,biomass_cg,2045,4,y
+Prince Edward Island,coal,2045,4,y
+Prince Edward Island,coal_ccs,2045,4,y
+Prince Edward Island,diesel_ct,2045,2,y
+Prince Edward Island,diesel_st,2045,2,y
+Prince Edward Island,gasoline_ct,2045,2,y
+Prince Edward Island,geothermal,2045,4,y
+Prince Edward Island,h2blue_ct,2045,2,y
+Prince Edward Island,h2green_ct,2045,2,y
+Prince Edward Island,hydro_daily,2045,4,y
+Prince Edward Island,hydro_monthly,2045,8,y
+Prince Edward Island,hydro_run,2045,4,y
+Prince Edward Island,msw,2045,4,y
+Prince Edward Island,ng_cc,2045,3,y
+Prince Edward Island,ng_ccs,2045,3,y
+Prince Edward Island,ng_cg,2045,3,y
+Prince Edward Island,ng_sc,2045,2,y
+Prince Edward Island,nuclear,2045,6,y
+Prince Edward Island,nuclear_smr,2045,6,y
+Prince Edward Island,oil_ct,2045,2,y
+Prince Edward Island,oil_st,2045,2,y
+Prince Edward Island,solar_pv,2045,2,y
+Prince Edward Island,solar_recon,2045,1,y
+Prince Edward Island,storage_lithium,2045,1,y
+Prince Edward Island,storage_pump,2045,8,y
+Prince Edward Island,wind_ofs,2045,4,y
+Prince Edward Island,wind_ons,2045,3,y
+Prince Edward Island,wind_recon,2045,2,y
+Prince Edward Island,biogas,2050,3,y
+Prince Edward Island,biomass,2050,4,y
+Prince Edward Island,biomass_cg,2050,4,y
+Prince Edward Island,coal,2050,4,y
+Prince Edward Island,coal_ccs,2050,4,y
+Prince Edward Island,diesel_ct,2050,2,y
+Prince Edward Island,diesel_st,2050,2,y
+Prince Edward Island,gasoline_ct,2050,2,y
+Prince Edward Island,geothermal,2050,4,y
+Prince Edward Island,h2blue_ct,2050,2,y
+Prince Edward Island,h2green_ct,2050,2,y
+Prince Edward Island,hydro_daily,2050,4,y
+Prince Edward Island,hydro_monthly,2050,8,y
+Prince Edward Island,hydro_run,2050,4,y
+Prince Edward Island,msw,2050,4,y
+Prince Edward Island,ng_cc,2050,3,y
+Prince Edward Island,ng_ccs,2050,3,y
+Prince Edward Island,ng_cg,2050,3,y
+Prince Edward Island,ng_sc,2050,2,y
+Prince Edward Island,nuclear,2050,6,y
+Prince Edward Island,nuclear_smr,2050,6,y
+Prince Edward Island,oil_ct,2050,2,y
+Prince Edward Island,oil_st,2050,2,y
+Prince Edward Island,solar_pv,2050,2,y
+Prince Edward Island,solar_recon,2050,1,y
+Prince Edward Island,storage_lithium,2050,1,y
+Prince Edward Island,storage_pump,2050,8,y
+Prince Edward Island,wind_ofs,2050,4,y
+Prince Edward Island,wind_ons,2050,3,y
+Prince Edward Island,wind_recon,2050,2,y
+Prince Edward Island,biogas,2055,3,y
+Prince Edward Island,biomass,2055,4,y
+Prince Edward Island,biomass_cg,2055,4,y
+Prince Edward Island,coal,2055,4,y
+Prince Edward Island,coal_ccs,2055,4,y
+Prince Edward Island,diesel_ct,2055,2,y
+Prince Edward Island,diesel_st,2055,2,y
+Prince Edward Island,gasoline_ct,2055,2,y
+Prince Edward Island,geothermal,2055,4,y
+Prince Edward Island,h2blue_ct,2055,2,y
+Prince Edward Island,h2green_ct,2055,2,y
+Prince Edward Island,hydro_daily,2055,4,y
+Prince Edward Island,hydro_monthly,2055,8,y
+Prince Edward Island,hydro_run,2055,4,y
+Prince Edward Island,msw,2055,4,y
+Prince Edward Island,ng_cc,2055,3,y
+Prince Edward Island,ng_ccs,2055,3,y
+Prince Edward Island,ng_cg,2055,3,y
+Prince Edward Island,ng_sc,2055,2,y
+Prince Edward Island,nuclear,2055,6,y
+Prince Edward Island,nuclear_smr,2055,6,y
+Prince Edward Island,oil_ct,2055,2,y
+Prince Edward Island,oil_st,2055,2,y
+Prince Edward Island,solar_pv,2055,2,y
+Prince Edward Island,solar_recon,2055,1,y
+Prince Edward Island,storage_lithium,2055,1,y
+Prince Edward Island,storage_pump,2055,8,y
+Prince Edward Island,wind_ofs,2055,4,y
+Prince Edward Island,wind_ons,2055,3,y
+Prince Edward Island,wind_recon,2055,2,y
+Prince Edward Island,biogas,2060,3,y
+Prince Edward Island,biomass,2060,4,y
+Prince Edward Island,biomass_cg,2060,4,y
+Prince Edward Island,coal,2060,4,y
+Prince Edward Island,coal_ccs,2060,4,y
+Prince Edward Island,diesel_ct,2060,2,y
+Prince Edward Island,diesel_st,2060,2,y
+Prince Edward Island,gasoline_ct,2060,2,y
+Prince Edward Island,geothermal,2060,4,y
+Prince Edward Island,h2blue_ct,2060,2,y
+Prince Edward Island,h2green_ct,2060,2,y
+Prince Edward Island,hydro_daily,2060,4,y
+Prince Edward Island,hydro_monthly,2060,8,y
+Prince Edward Island,hydro_run,2060,4,y
+Prince Edward Island,msw,2060,4,y
+Prince Edward Island,ng_cc,2060,3,y
+Prince Edward Island,ng_ccs,2060,3,y
+Prince Edward Island,ng_cg,2060,3,y
+Prince Edward Island,ng_sc,2060,2,y
+Prince Edward Island,nuclear,2060,6,y
+Prince Edward Island,nuclear_smr,2060,6,y
+Prince Edward Island,oil_ct,2060,2,y
+Prince Edward Island,oil_st,2060,2,y
+Prince Edward Island,solar_pv,2060,2,y
+Prince Edward Island,solar_recon,2060,1,y
+Prince Edward Island,storage_lithium,2060,1,y
+Prince Edward Island,storage_pump,2060,8,y
+Prince Edward Island,wind_ofs,2060,4,y
+Prince Edward Island,wind_ons,2060,3,y
+Prince Edward Island,wind_recon,2060,2,y

@@ -1,0 +1,1981 @@
+node,commodity,grade,level,year,value,unit
+British Columbia,wind_onshore,c1,renewable,2020,0.18,-
+British Columbia,wind_onshore,c2,renewable,2020,0.2,-
+British Columbia,wind_onshore,c3,renewable,2020,0.24,-
+British Columbia,wind_onshore,c4,renewable,2020,0.28,-
+British Columbia,wind_onshore,c5,renewable,2020,0.32,-
+British Columbia,wind_onshore,c6,renewable,2020,0.36,-
+British Columbia,wind_onshore,c7,renewable,2020,1.0,-
+Alberta,wind_onshore,c1,renewable,2020,0.18,-
+Alberta,wind_onshore,c2,renewable,2020,0.2,-
+Alberta,wind_onshore,c3,renewable,2020,0.24,-
+Alberta,wind_onshore,c4,renewable,2020,0.28,-
+Alberta,wind_onshore,c5,renewable,2020,0.32,-
+Alberta,wind_onshore,c6,renewable,2020,0.36,-
+Alberta,wind_onshore,c7,renewable,2020,1.0,-
+Saskatchewan,wind_onshore,c1,renewable,2020,0.18,-
+Saskatchewan,wind_onshore,c2,renewable,2020,0.2,-
+Saskatchewan,wind_onshore,c3,renewable,2020,0.24,-
+Saskatchewan,wind_onshore,c4,renewable,2020,0.28,-
+Saskatchewan,wind_onshore,c5,renewable,2020,0.32,-
+Saskatchewan,wind_onshore,c6,renewable,2020,0.36,-
+Saskatchewan,wind_onshore,c7,renewable,2020,1.0,-
+Manitoba,wind_onshore,c1,renewable,2020,0.18,-
+Manitoba,wind_onshore,c2,renewable,2020,0.2,-
+Manitoba,wind_onshore,c3,renewable,2020,0.24,-
+Manitoba,wind_onshore,c4,renewable,2020,0.28,-
+Manitoba,wind_onshore,c5,renewable,2020,0.32,-
+Manitoba,wind_onshore,c6,renewable,2020,0.36,-
+Manitoba,wind_onshore,c7,renewable,2020,1.0,-
+Ontario,wind_onshore,c1,renewable,2020,0.18,-
+Ontario,wind_onshore,c2,renewable,2020,0.2,-
+Ontario,wind_onshore,c3,renewable,2020,0.24,-
+Ontario,wind_onshore,c4,renewable,2020,0.28,-
+Ontario,wind_onshore,c5,renewable,2020,0.32,-
+Ontario,wind_onshore,c6,renewable,2020,0.36,-
+Ontario,wind_onshore,c7,renewable,2020,1.0,-
+Quebec,wind_onshore,c1,renewable,2020,0.18,-
+Quebec,wind_onshore,c2,renewable,2020,0.2,-
+Quebec,wind_onshore,c3,renewable,2020,0.24,-
+Quebec,wind_onshore,c4,renewable,2020,0.28,-
+Quebec,wind_onshore,c5,renewable,2020,0.32,-
+Quebec,wind_onshore,c6,renewable,2020,0.36,-
+Quebec,wind_onshore,c7,renewable,2020,1.0,-
+New Brunswick,wind_onshore,c1,renewable,2020,0.18,-
+New Brunswick,wind_onshore,c2,renewable,2020,0.2,-
+New Brunswick,wind_onshore,c3,renewable,2020,0.24,-
+New Brunswick,wind_onshore,c4,renewable,2020,0.28,-
+New Brunswick,wind_onshore,c5,renewable,2020,0.32,-
+New Brunswick,wind_onshore,c6,renewable,2020,0.36,-
+New Brunswick,wind_onshore,c7,renewable,2020,1.0,-
+Newfoundland and Labrador,wind_onshore,c1,renewable,2020,0.18,-
+Newfoundland and Labrador,wind_onshore,c2,renewable,2020,0.2,-
+Newfoundland and Labrador,wind_onshore,c3,renewable,2020,0.24,-
+Newfoundland and Labrador,wind_onshore,c4,renewable,2020,0.28,-
+Newfoundland and Labrador,wind_onshore,c5,renewable,2020,0.32,-
+Newfoundland and Labrador,wind_onshore,c6,renewable,2020,0.36,-
+Newfoundland and Labrador,wind_onshore,c7,renewable,2020,1.0,-
+Nova Scotia,wind_onshore,c1,renewable,2020,0.18,-
+Nova Scotia,wind_onshore,c2,renewable,2020,0.2,-
+Nova Scotia,wind_onshore,c3,renewable,2020,0.24,-
+Nova Scotia,wind_onshore,c4,renewable,2020,0.28,-
+Nova Scotia,wind_onshore,c5,renewable,2020,0.32,-
+Nova Scotia,wind_onshore,c6,renewable,2020,0.36,-
+Nova Scotia,wind_onshore,c7,renewable,2020,1.0,-
+Prince Edward Island,wind_onshore,c1,renewable,2020,0.18,-
+Prince Edward Island,wind_onshore,c2,renewable,2020,0.2,-
+Prince Edward Island,wind_onshore,c3,renewable,2020,0.24,-
+Prince Edward Island,wind_onshore,c4,renewable,2020,0.28,-
+Prince Edward Island,wind_onshore,c5,renewable,2020,0.32,-
+Prince Edward Island,wind_onshore,c6,renewable,2020,0.36,-
+Prince Edward Island,wind_onshore,c7,renewable,2020,1.0,-
+British Columbia,wind_onshore,c1,renewable,2025,0.18,-
+British Columbia,wind_onshore,c2,renewable,2025,0.2,-
+British Columbia,wind_onshore,c3,renewable,2025,0.24,-
+British Columbia,wind_onshore,c4,renewable,2025,0.28,-
+British Columbia,wind_onshore,c5,renewable,2025,0.32,-
+British Columbia,wind_onshore,c6,renewable,2025,0.36,-
+British Columbia,wind_onshore,c7,renewable,2025,1.0,-
+Alberta,wind_onshore,c1,renewable,2025,0.18,-
+Alberta,wind_onshore,c2,renewable,2025,0.2,-
+Alberta,wind_onshore,c3,renewable,2025,0.24,-
+Alberta,wind_onshore,c4,renewable,2025,0.28,-
+Alberta,wind_onshore,c5,renewable,2025,0.32,-
+Alberta,wind_onshore,c6,renewable,2025,0.36,-
+Alberta,wind_onshore,c7,renewable,2025,1.0,-
+Saskatchewan,wind_onshore,c1,renewable,2025,0.18,-
+Saskatchewan,wind_onshore,c2,renewable,2025,0.2,-
+Saskatchewan,wind_onshore,c3,renewable,2025,0.24,-
+Saskatchewan,wind_onshore,c4,renewable,2025,0.28,-
+Saskatchewan,wind_onshore,c5,renewable,2025,0.32,-
+Saskatchewan,wind_onshore,c6,renewable,2025,0.36,-
+Saskatchewan,wind_onshore,c7,renewable,2025,1.0,-
+Manitoba,wind_onshore,c1,renewable,2025,0.18,-
+Manitoba,wind_onshore,c2,renewable,2025,0.2,-
+Manitoba,wind_onshore,c3,renewable,2025,0.24,-
+Manitoba,wind_onshore,c4,renewable,2025,0.28,-
+Manitoba,wind_onshore,c5,renewable,2025,0.32,-
+Manitoba,wind_onshore,c6,renewable,2025,0.36,-
+Manitoba,wind_onshore,c7,renewable,2025,1.0,-
+Ontario,wind_onshore,c1,renewable,2025,0.18,-
+Ontario,wind_onshore,c2,renewable,2025,0.2,-
+Ontario,wind_onshore,c3,renewable,2025,0.24,-
+Ontario,wind_onshore,c4,renewable,2025,0.28,-
+Ontario,wind_onshore,c5,renewable,2025,0.32,-
+Ontario,wind_onshore,c6,renewable,2025,0.36,-
+Ontario,wind_onshore,c7,renewable,2025,1.0,-
+Quebec,wind_onshore,c1,renewable,2025,0.18,-
+Quebec,wind_onshore,c2,renewable,2025,0.2,-
+Quebec,wind_onshore,c3,renewable,2025,0.24,-
+Quebec,wind_onshore,c4,renewable,2025,0.28,-
+Quebec,wind_onshore,c5,renewable,2025,0.32,-
+Quebec,wind_onshore,c6,renewable,2025,0.36,-
+Quebec,wind_onshore,c7,renewable,2025,1.0,-
+New Brunswick,wind_onshore,c1,renewable,2025,0.18,-
+New Brunswick,wind_onshore,c2,renewable,2025,0.2,-
+New Brunswick,wind_onshore,c3,renewable,2025,0.24,-
+New Brunswick,wind_onshore,c4,renewable,2025,0.28,-
+New Brunswick,wind_onshore,c5,renewable,2025,0.32,-
+New Brunswick,wind_onshore,c6,renewable,2025,0.36,-
+New Brunswick,wind_onshore,c7,renewable,2025,1.0,-
+Newfoundland and Labrador,wind_onshore,c1,renewable,2025,0.18,-
+Newfoundland and Labrador,wind_onshore,c2,renewable,2025,0.2,-
+Newfoundland and Labrador,wind_onshore,c3,renewable,2025,0.24,-
+Newfoundland and Labrador,wind_onshore,c4,renewable,2025,0.28,-
+Newfoundland and Labrador,wind_onshore,c5,renewable,2025,0.32,-
+Newfoundland and Labrador,wind_onshore,c6,renewable,2025,0.36,-
+Newfoundland and Labrador,wind_onshore,c7,renewable,2025,1.0,-
+Nova Scotia,wind_onshore,c1,renewable,2025,0.18,-
+Nova Scotia,wind_onshore,c2,renewable,2025,0.2,-
+Nova Scotia,wind_onshore,c3,renewable,2025,0.24,-
+Nova Scotia,wind_onshore,c4,renewable,2025,0.28,-
+Nova Scotia,wind_onshore,c5,renewable,2025,0.32,-
+Nova Scotia,wind_onshore,c6,renewable,2025,0.36,-
+Nova Scotia,wind_onshore,c7,renewable,2025,1.0,-
+Prince Edward Island,wind_onshore,c1,renewable,2025,0.18,-
+Prince Edward Island,wind_onshore,c2,renewable,2025,0.2,-
+Prince Edward Island,wind_onshore,c3,renewable,2025,0.24,-
+Prince Edward Island,wind_onshore,c4,renewable,2025,0.28,-
+Prince Edward Island,wind_onshore,c5,renewable,2025,0.32,-
+Prince Edward Island,wind_onshore,c6,renewable,2025,0.36,-
+Prince Edward Island,wind_onshore,c7,renewable,2025,1.0,-
+British Columbia,wind_onshore,c1,renewable,2030,0.18,-
+British Columbia,wind_onshore,c2,renewable,2030,0.2,-
+British Columbia,wind_onshore,c3,renewable,2030,0.24,-
+British Columbia,wind_onshore,c4,renewable,2030,0.28,-
+British Columbia,wind_onshore,c5,renewable,2030,0.32,-
+British Columbia,wind_onshore,c6,renewable,2030,0.36,-
+British Columbia,wind_onshore,c7,renewable,2030,1.0,-
+Alberta,wind_onshore,c1,renewable,2030,0.18,-
+Alberta,wind_onshore,c2,renewable,2030,0.2,-
+Alberta,wind_onshore,c3,renewable,2030,0.24,-
+Alberta,wind_onshore,c4,renewable,2030,0.28,-
+Alberta,wind_onshore,c5,renewable,2030,0.32,-
+Alberta,wind_onshore,c6,renewable,2030,0.36,-
+Alberta,wind_onshore,c7,renewable,2030,1.0,-
+Saskatchewan,wind_onshore,c1,renewable,2030,0.18,-
+Saskatchewan,wind_onshore,c2,renewable,2030,0.2,-
+Saskatchewan,wind_onshore,c3,renewable,2030,0.24,-
+Saskatchewan,wind_onshore,c4,renewable,2030,0.28,-
+Saskatchewan,wind_onshore,c5,renewable,2030,0.32,-
+Saskatchewan,wind_onshore,c6,renewable,2030,0.36,-
+Saskatchewan,wind_onshore,c7,renewable,2030,1.0,-
+Manitoba,wind_onshore,c1,renewable,2030,0.18,-
+Manitoba,wind_onshore,c2,renewable,2030,0.2,-
+Manitoba,wind_onshore,c3,renewable,2030,0.24,-
+Manitoba,wind_onshore,c4,renewable,2030,0.28,-
+Manitoba,wind_onshore,c5,renewable,2030,0.32,-
+Manitoba,wind_onshore,c6,renewable,2030,0.36,-
+Manitoba,wind_onshore,c7,renewable,2030,1.0,-
+Ontario,wind_onshore,c1,renewable,2030,0.18,-
+Ontario,wind_onshore,c2,renewable,2030,0.2,-
+Ontario,wind_onshore,c3,renewable,2030,0.24,-
+Ontario,wind_onshore,c4,renewable,2030,0.28,-
+Ontario,wind_onshore,c5,renewable,2030,0.32,-
+Ontario,wind_onshore,c6,renewable,2030,0.36,-
+Ontario,wind_onshore,c7,renewable,2030,1.0,-
+Quebec,wind_onshore,c1,renewable,2030,0.18,-
+Quebec,wind_onshore,c2,renewable,2030,0.2,-
+Quebec,wind_onshore,c3,renewable,2030,0.24,-
+Quebec,wind_onshore,c4,renewable,2030,0.28,-
+Quebec,wind_onshore,c5,renewable,2030,0.32,-
+Quebec,wind_onshore,c6,renewable,2030,0.36,-
+Quebec,wind_onshore,c7,renewable,2030,1.0,-
+New Brunswick,wind_onshore,c1,renewable,2030,0.18,-
+New Brunswick,wind_onshore,c2,renewable,2030,0.2,-
+New Brunswick,wind_onshore,c3,renewable,2030,0.24,-
+New Brunswick,wind_onshore,c4,renewable,2030,0.28,-
+New Brunswick,wind_onshore,c5,renewable,2030,0.32,-
+New Brunswick,wind_onshore,c6,renewable,2030,0.36,-
+New Brunswick,wind_onshore,c7,renewable,2030,1.0,-
+Newfoundland and Labrador,wind_onshore,c1,renewable,2030,0.18,-
+Newfoundland and Labrador,wind_onshore,c2,renewable,2030,0.2,-
+Newfoundland and Labrador,wind_onshore,c3,renewable,2030,0.24,-
+Newfoundland and Labrador,wind_onshore,c4,renewable,2030,0.28,-
+Newfoundland and Labrador,wind_onshore,c5,renewable,2030,0.32,-
+Newfoundland and Labrador,wind_onshore,c6,renewable,2030,0.36,-
+Newfoundland and Labrador,wind_onshore,c7,renewable,2030,1.0,-
+Nova Scotia,wind_onshore,c1,renewable,2030,0.18,-
+Nova Scotia,wind_onshore,c2,renewable,2030,0.2,-
+Nova Scotia,wind_onshore,c3,renewable,2030,0.24,-
+Nova Scotia,wind_onshore,c4,renewable,2030,0.28,-
+Nova Scotia,wind_onshore,c5,renewable,2030,0.32,-
+Nova Scotia,wind_onshore,c6,renewable,2030,0.36,-
+Nova Scotia,wind_onshore,c7,renewable,2030,1.0,-
+Prince Edward Island,wind_onshore,c1,renewable,2030,0.18,-
+Prince Edward Island,wind_onshore,c2,renewable,2030,0.2,-
+Prince Edward Island,wind_onshore,c3,renewable,2030,0.24,-
+Prince Edward Island,wind_onshore,c4,renewable,2030,0.28,-
+Prince Edward Island,wind_onshore,c5,renewable,2030,0.32,-
+Prince Edward Island,wind_onshore,c6,renewable,2030,0.36,-
+Prince Edward Island,wind_onshore,c7,renewable,2030,1.0,-
+British Columbia,wind_onshore,c1,renewable,2035,0.18,-
+British Columbia,wind_onshore,c2,renewable,2035,0.2,-
+British Columbia,wind_onshore,c3,renewable,2035,0.24,-
+British Columbia,wind_onshore,c4,renewable,2035,0.28,-
+British Columbia,wind_onshore,c5,renewable,2035,0.32,-
+British Columbia,wind_onshore,c6,renewable,2035,0.36,-
+British Columbia,wind_onshore,c7,renewable,2035,1.0,-
+Alberta,wind_onshore,c1,renewable,2035,0.18,-
+Alberta,wind_onshore,c2,renewable,2035,0.2,-
+Alberta,wind_onshore,c3,renewable,2035,0.24,-
+Alberta,wind_onshore,c4,renewable,2035,0.28,-
+Alberta,wind_onshore,c5,renewable,2035,0.32,-
+Alberta,wind_onshore,c6,renewable,2035,0.36,-
+Alberta,wind_onshore,c7,renewable,2035,1.0,-
+Saskatchewan,wind_onshore,c1,renewable,2035,0.18,-
+Saskatchewan,wind_onshore,c2,renewable,2035,0.2,-
+Saskatchewan,wind_onshore,c3,renewable,2035,0.24,-
+Saskatchewan,wind_onshore,c4,renewable,2035,0.28,-
+Saskatchewan,wind_onshore,c5,renewable,2035,0.32,-
+Saskatchewan,wind_onshore,c6,renewable,2035,0.36,-
+Saskatchewan,wind_onshore,c7,renewable,2035,1.0,-
+Manitoba,wind_onshore,c1,renewable,2035,0.18,-
+Manitoba,wind_onshore,c2,renewable,2035,0.2,-
+Manitoba,wind_onshore,c3,renewable,2035,0.24,-
+Manitoba,wind_onshore,c4,renewable,2035,0.28,-
+Manitoba,wind_onshore,c5,renewable,2035,0.32,-
+Manitoba,wind_onshore,c6,renewable,2035,0.36,-
+Manitoba,wind_onshore,c7,renewable,2035,1.0,-
+Ontario,wind_onshore,c1,renewable,2035,0.18,-
+Ontario,wind_onshore,c2,renewable,2035,0.2,-
+Ontario,wind_onshore,c3,renewable,2035,0.24,-
+Ontario,wind_onshore,c4,renewable,2035,0.28,-
+Ontario,wind_onshore,c5,renewable,2035,0.32,-
+Ontario,wind_onshore,c6,renewable,2035,0.36,-
+Ontario,wind_onshore,c7,renewable,2035,1.0,-
+Quebec,wind_onshore,c1,renewable,2035,0.18,-
+Quebec,wind_onshore,c2,renewable,2035,0.2,-
+Quebec,wind_onshore,c3,renewable,2035,0.24,-
+Quebec,wind_onshore,c4,renewable,2035,0.28,-
+Quebec,wind_onshore,c5,renewable,2035,0.32,-
+Quebec,wind_onshore,c6,renewable,2035,0.36,-
+Quebec,wind_onshore,c7,renewable,2035,1.0,-
+New Brunswick,wind_onshore,c1,renewable,2035,0.18,-
+New Brunswick,wind_onshore,c2,renewable,2035,0.2,-
+New Brunswick,wind_onshore,c3,renewable,2035,0.24,-
+New Brunswick,wind_onshore,c4,renewable,2035,0.28,-
+New Brunswick,wind_onshore,c5,renewable,2035,0.32,-
+New Brunswick,wind_onshore,c6,renewable,2035,0.36,-
+New Brunswick,wind_onshore,c7,renewable,2035,1.0,-
+Newfoundland and Labrador,wind_onshore,c1,renewable,2035,0.18,-
+Newfoundland and Labrador,wind_onshore,c2,renewable,2035,0.2,-
+Newfoundland and Labrador,wind_onshore,c3,renewable,2035,0.24,-
+Newfoundland and Labrador,wind_onshore,c4,renewable,2035,0.28,-
+Newfoundland and Labrador,wind_onshore,c5,renewable,2035,0.32,-
+Newfoundland and Labrador,wind_onshore,c6,renewable,2035,0.36,-
+Newfoundland and Labrador,wind_onshore,c7,renewable,2035,1.0,-
+Nova Scotia,wind_onshore,c1,renewable,2035,0.18,-
+Nova Scotia,wind_onshore,c2,renewable,2035,0.2,-
+Nova Scotia,wind_onshore,c3,renewable,2035,0.24,-
+Nova Scotia,wind_onshore,c4,renewable,2035,0.28,-
+Nova Scotia,wind_onshore,c5,renewable,2035,0.32,-
+Nova Scotia,wind_onshore,c6,renewable,2035,0.36,-
+Nova Scotia,wind_onshore,c7,renewable,2035,1.0,-
+Prince Edward Island,wind_onshore,c1,renewable,2035,0.18,-
+Prince Edward Island,wind_onshore,c2,renewable,2035,0.2,-
+Prince Edward Island,wind_onshore,c3,renewable,2035,0.24,-
+Prince Edward Island,wind_onshore,c4,renewable,2035,0.28,-
+Prince Edward Island,wind_onshore,c5,renewable,2035,0.32,-
+Prince Edward Island,wind_onshore,c6,renewable,2035,0.36,-
+Prince Edward Island,wind_onshore,c7,renewable,2035,1.0,-
+British Columbia,wind_onshore,c1,renewable,2040,0.18,-
+British Columbia,wind_onshore,c2,renewable,2040,0.2,-
+British Columbia,wind_onshore,c3,renewable,2040,0.24,-
+British Columbia,wind_onshore,c4,renewable,2040,0.28,-
+British Columbia,wind_onshore,c5,renewable,2040,0.32,-
+British Columbia,wind_onshore,c6,renewable,2040,0.36,-
+British Columbia,wind_onshore,c7,renewable,2040,1.0,-
+Alberta,wind_onshore,c1,renewable,2040,0.18,-
+Alberta,wind_onshore,c2,renewable,2040,0.2,-
+Alberta,wind_onshore,c3,renewable,2040,0.24,-
+Alberta,wind_onshore,c4,renewable,2040,0.28,-
+Alberta,wind_onshore,c5,renewable,2040,0.32,-
+Alberta,wind_onshore,c6,renewable,2040,0.36,-
+Alberta,wind_onshore,c7,renewable,2040,1.0,-
+Saskatchewan,wind_onshore,c1,renewable,2040,0.18,-
+Saskatchewan,wind_onshore,c2,renewable,2040,0.2,-
+Saskatchewan,wind_onshore,c3,renewable,2040,0.24,-
+Saskatchewan,wind_onshore,c4,renewable,2040,0.28,-
+Saskatchewan,wind_onshore,c5,renewable,2040,0.32,-
+Saskatchewan,wind_onshore,c6,renewable,2040,0.36,-
+Saskatchewan,wind_onshore,c7,renewable,2040,1.0,-
+Manitoba,wind_onshore,c1,renewable,2040,0.18,-
+Manitoba,wind_onshore,c2,renewable,2040,0.2,-
+Manitoba,wind_onshore,c3,renewable,2040,0.24,-
+Manitoba,wind_onshore,c4,renewable,2040,0.28,-
+Manitoba,wind_onshore,c5,renewable,2040,0.32,-
+Manitoba,wind_onshore,c6,renewable,2040,0.36,-
+Manitoba,wind_onshore,c7,renewable,2040,1.0,-
+Ontario,wind_onshore,c1,renewable,2040,0.18,-
+Ontario,wind_onshore,c2,renewable,2040,0.2,-
+Ontario,wind_onshore,c3,renewable,2040,0.24,-
+Ontario,wind_onshore,c4,renewable,2040,0.28,-
+Ontario,wind_onshore,c5,renewable,2040,0.32,-
+Ontario,wind_onshore,c6,renewable,2040,0.36,-
+Ontario,wind_onshore,c7,renewable,2040,1.0,-
+Quebec,wind_onshore,c1,renewable,2040,0.18,-
+Quebec,wind_onshore,c2,renewable,2040,0.2,-
+Quebec,wind_onshore,c3,renewable,2040,0.24,-
+Quebec,wind_onshore,c4,renewable,2040,0.28,-
+Quebec,wind_onshore,c5,renewable,2040,0.32,-
+Quebec,wind_onshore,c6,renewable,2040,0.36,-
+Quebec,wind_onshore,c7,renewable,2040,1.0,-
+New Brunswick,wind_onshore,c1,renewable,2040,0.18,-
+New Brunswick,wind_onshore,c2,renewable,2040,0.2,-
+New Brunswick,wind_onshore,c3,renewable,2040,0.24,-
+New Brunswick,wind_onshore,c4,renewable,2040,0.28,-
+New Brunswick,wind_onshore,c5,renewable,2040,0.32,-
+New Brunswick,wind_onshore,c6,renewable,2040,0.36,-
+New Brunswick,wind_onshore,c7,renewable,2040,1.0,-
+Newfoundland and Labrador,wind_onshore,c1,renewable,2040,0.18,-
+Newfoundland and Labrador,wind_onshore,c2,renewable,2040,0.2,-
+Newfoundland and Labrador,wind_onshore,c3,renewable,2040,0.24,-
+Newfoundland and Labrador,wind_onshore,c4,renewable,2040,0.28,-
+Newfoundland and Labrador,wind_onshore,c5,renewable,2040,0.32,-
+Newfoundland and Labrador,wind_onshore,c6,renewable,2040,0.36,-
+Newfoundland and Labrador,wind_onshore,c7,renewable,2040,1.0,-
+Nova Scotia,wind_onshore,c1,renewable,2040,0.18,-
+Nova Scotia,wind_onshore,c2,renewable,2040,0.2,-
+Nova Scotia,wind_onshore,c3,renewable,2040,0.24,-
+Nova Scotia,wind_onshore,c4,renewable,2040,0.28,-
+Nova Scotia,wind_onshore,c5,renewable,2040,0.32,-
+Nova Scotia,wind_onshore,c6,renewable,2040,0.36,-
+Nova Scotia,wind_onshore,c7,renewable,2040,1.0,-
+Prince Edward Island,wind_onshore,c1,renewable,2040,0.18,-
+Prince Edward Island,wind_onshore,c2,renewable,2040,0.2,-
+Prince Edward Island,wind_onshore,c3,renewable,2040,0.24,-
+Prince Edward Island,wind_onshore,c4,renewable,2040,0.28,-
+Prince Edward Island,wind_onshore,c5,renewable,2040,0.32,-
+Prince Edward Island,wind_onshore,c6,renewable,2040,0.36,-
+Prince Edward Island,wind_onshore,c7,renewable,2040,1.0,-
+British Columbia,wind_onshore,c1,renewable,2045,0.18,-
+British Columbia,wind_onshore,c2,renewable,2045,0.2,-
+British Columbia,wind_onshore,c3,renewable,2045,0.24,-
+British Columbia,wind_onshore,c4,renewable,2045,0.28,-
+British Columbia,wind_onshore,c5,renewable,2045,0.32,-
+British Columbia,wind_onshore,c6,renewable,2045,0.36,-
+British Columbia,wind_onshore,c7,renewable,2045,1.0,-
+Alberta,wind_onshore,c1,renewable,2045,0.18,-
+Alberta,wind_onshore,c2,renewable,2045,0.2,-
+Alberta,wind_onshore,c3,renewable,2045,0.24,-
+Alberta,wind_onshore,c4,renewable,2045,0.28,-
+Alberta,wind_onshore,c5,renewable,2045,0.32,-
+Alberta,wind_onshore,c6,renewable,2045,0.36,-
+Alberta,wind_onshore,c7,renewable,2045,1.0,-
+Saskatchewan,wind_onshore,c1,renewable,2045,0.18,-
+Saskatchewan,wind_onshore,c2,renewable,2045,0.2,-
+Saskatchewan,wind_onshore,c3,renewable,2045,0.24,-
+Saskatchewan,wind_onshore,c4,renewable,2045,0.28,-
+Saskatchewan,wind_onshore,c5,renewable,2045,0.32,-
+Saskatchewan,wind_onshore,c6,renewable,2045,0.36,-
+Saskatchewan,wind_onshore,c7,renewable,2045,1.0,-
+Manitoba,wind_onshore,c1,renewable,2045,0.18,-
+Manitoba,wind_onshore,c2,renewable,2045,0.2,-
+Manitoba,wind_onshore,c3,renewable,2045,0.24,-
+Manitoba,wind_onshore,c4,renewable,2045,0.28,-
+Manitoba,wind_onshore,c5,renewable,2045,0.32,-
+Manitoba,wind_onshore,c6,renewable,2045,0.36,-
+Manitoba,wind_onshore,c7,renewable,2045,1.0,-
+Ontario,wind_onshore,c1,renewable,2045,0.18,-
+Ontario,wind_onshore,c2,renewable,2045,0.2,-
+Ontario,wind_onshore,c3,renewable,2045,0.24,-
+Ontario,wind_onshore,c4,renewable,2045,0.28,-
+Ontario,wind_onshore,c5,renewable,2045,0.32,-
+Ontario,wind_onshore,c6,renewable,2045,0.36,-
+Ontario,wind_onshore,c7,renewable,2045,1.0,-
+Quebec,wind_onshore,c1,renewable,2045,0.18,-
+Quebec,wind_onshore,c2,renewable,2045,0.2,-
+Quebec,wind_onshore,c3,renewable,2045,0.24,-
+Quebec,wind_onshore,c4,renewable,2045,0.28,-
+Quebec,wind_onshore,c5,renewable,2045,0.32,-
+Quebec,wind_onshore,c6,renewable,2045,0.36,-
+Quebec,wind_onshore,c7,renewable,2045,1.0,-
+New Brunswick,wind_onshore,c1,renewable,2045,0.18,-
+New Brunswick,wind_onshore,c2,renewable,2045,0.2,-
+New Brunswick,wind_onshore,c3,renewable,2045,0.24,-
+New Brunswick,wind_onshore,c4,renewable,2045,0.28,-
+New Brunswick,wind_onshore,c5,renewable,2045,0.32,-
+New Brunswick,wind_onshore,c6,renewable,2045,0.36,-
+New Brunswick,wind_onshore,c7,renewable,2045,1.0,-
+Newfoundland and Labrador,wind_onshore,c1,renewable,2045,0.18,-
+Newfoundland and Labrador,wind_onshore,c2,renewable,2045,0.2,-
+Newfoundland and Labrador,wind_onshore,c3,renewable,2045,0.24,-
+Newfoundland and Labrador,wind_onshore,c4,renewable,2045,0.28,-
+Newfoundland and Labrador,wind_onshore,c5,renewable,2045,0.32,-
+Newfoundland and Labrador,wind_onshore,c6,renewable,2045,0.36,-
+Newfoundland and Labrador,wind_onshore,c7,renewable,2045,1.0,-
+Nova Scotia,wind_onshore,c1,renewable,2045,0.18,-
+Nova Scotia,wind_onshore,c2,renewable,2045,0.2,-
+Nova Scotia,wind_onshore,c3,renewable,2045,0.24,-
+Nova Scotia,wind_onshore,c4,renewable,2045,0.28,-
+Nova Scotia,wind_onshore,c5,renewable,2045,0.32,-
+Nova Scotia,wind_onshore,c6,renewable,2045,0.36,-
+Nova Scotia,wind_onshore,c7,renewable,2045,1.0,-
+Prince Edward Island,wind_onshore,c1,renewable,2045,0.18,-
+Prince Edward Island,wind_onshore,c2,renewable,2045,0.2,-
+Prince Edward Island,wind_onshore,c3,renewable,2045,0.24,-
+Prince Edward Island,wind_onshore,c4,renewable,2045,0.28,-
+Prince Edward Island,wind_onshore,c5,renewable,2045,0.32,-
+Prince Edward Island,wind_onshore,c6,renewable,2045,0.36,-
+Prince Edward Island,wind_onshore,c7,renewable,2045,1.0,-
+British Columbia,wind_onshore,c1,renewable,2050,0.18,-
+British Columbia,wind_onshore,c2,renewable,2050,0.2,-
+British Columbia,wind_onshore,c3,renewable,2050,0.24,-
+British Columbia,wind_onshore,c4,renewable,2050,0.28,-
+British Columbia,wind_onshore,c5,renewable,2050,0.32,-
+British Columbia,wind_onshore,c6,renewable,2050,0.36,-
+British Columbia,wind_onshore,c7,renewable,2050,1.0,-
+Alberta,wind_onshore,c1,renewable,2050,0.18,-
+Alberta,wind_onshore,c2,renewable,2050,0.2,-
+Alberta,wind_onshore,c3,renewable,2050,0.24,-
+Alberta,wind_onshore,c4,renewable,2050,0.28,-
+Alberta,wind_onshore,c5,renewable,2050,0.32,-
+Alberta,wind_onshore,c6,renewable,2050,0.36,-
+Alberta,wind_onshore,c7,renewable,2050,1.0,-
+Saskatchewan,wind_onshore,c1,renewable,2050,0.18,-
+Saskatchewan,wind_onshore,c2,renewable,2050,0.2,-
+Saskatchewan,wind_onshore,c3,renewable,2050,0.24,-
+Saskatchewan,wind_onshore,c4,renewable,2050,0.28,-
+Saskatchewan,wind_onshore,c5,renewable,2050,0.32,-
+Saskatchewan,wind_onshore,c6,renewable,2050,0.36,-
+Saskatchewan,wind_onshore,c7,renewable,2050,1.0,-
+Manitoba,wind_onshore,c1,renewable,2050,0.18,-
+Manitoba,wind_onshore,c2,renewable,2050,0.2,-
+Manitoba,wind_onshore,c3,renewable,2050,0.24,-
+Manitoba,wind_onshore,c4,renewable,2050,0.28,-
+Manitoba,wind_onshore,c5,renewable,2050,0.32,-
+Manitoba,wind_onshore,c6,renewable,2050,0.36,-
+Manitoba,wind_onshore,c7,renewable,2050,1.0,-
+Ontario,wind_onshore,c1,renewable,2050,0.18,-
+Ontario,wind_onshore,c2,renewable,2050,0.2,-
+Ontario,wind_onshore,c3,renewable,2050,0.24,-
+Ontario,wind_onshore,c4,renewable,2050,0.28,-
+Ontario,wind_onshore,c5,renewable,2050,0.32,-
+Ontario,wind_onshore,c6,renewable,2050,0.36,-
+Ontario,wind_onshore,c7,renewable,2050,1.0,-
+Quebec,wind_onshore,c1,renewable,2050,0.18,-
+Quebec,wind_onshore,c2,renewable,2050,0.2,-
+Quebec,wind_onshore,c3,renewable,2050,0.24,-
+Quebec,wind_onshore,c4,renewable,2050,0.28,-
+Quebec,wind_onshore,c5,renewable,2050,0.32,-
+Quebec,wind_onshore,c6,renewable,2050,0.36,-
+Quebec,wind_onshore,c7,renewable,2050,1.0,-
+New Brunswick,wind_onshore,c1,renewable,2050,0.18,-
+New Brunswick,wind_onshore,c2,renewable,2050,0.2,-
+New Brunswick,wind_onshore,c3,renewable,2050,0.24,-
+New Brunswick,wind_onshore,c4,renewable,2050,0.28,-
+New Brunswick,wind_onshore,c5,renewable,2050,0.32,-
+New Brunswick,wind_onshore,c6,renewable,2050,0.36,-
+New Brunswick,wind_onshore,c7,renewable,2050,1.0,-
+Newfoundland and Labrador,wind_onshore,c1,renewable,2050,0.18,-
+Newfoundland and Labrador,wind_onshore,c2,renewable,2050,0.2,-
+Newfoundland and Labrador,wind_onshore,c3,renewable,2050,0.24,-
+Newfoundland and Labrador,wind_onshore,c4,renewable,2050,0.28,-
+Newfoundland and Labrador,wind_onshore,c5,renewable,2050,0.32,-
+Newfoundland and Labrador,wind_onshore,c6,renewable,2050,0.36,-
+Newfoundland and Labrador,wind_onshore,c7,renewable,2050,1.0,-
+Nova Scotia,wind_onshore,c1,renewable,2050,0.18,-
+Nova Scotia,wind_onshore,c2,renewable,2050,0.2,-
+Nova Scotia,wind_onshore,c3,renewable,2050,0.24,-
+Nova Scotia,wind_onshore,c4,renewable,2050,0.28,-
+Nova Scotia,wind_onshore,c5,renewable,2050,0.32,-
+Nova Scotia,wind_onshore,c6,renewable,2050,0.36,-
+Nova Scotia,wind_onshore,c7,renewable,2050,1.0,-
+Prince Edward Island,wind_onshore,c1,renewable,2050,0.18,-
+Prince Edward Island,wind_onshore,c2,renewable,2050,0.2,-
+Prince Edward Island,wind_onshore,c3,renewable,2050,0.24,-
+Prince Edward Island,wind_onshore,c4,renewable,2050,0.28,-
+Prince Edward Island,wind_onshore,c5,renewable,2050,0.32,-
+Prince Edward Island,wind_onshore,c6,renewable,2050,0.36,-
+Prince Edward Island,wind_onshore,c7,renewable,2050,1.0,-
+British Columbia,wind_onshore,c1,renewable,2055,0.18,-
+British Columbia,wind_onshore,c2,renewable,2055,0.2,-
+British Columbia,wind_onshore,c3,renewable,2055,0.24,-
+British Columbia,wind_onshore,c4,renewable,2055,0.28,-
+British Columbia,wind_onshore,c5,renewable,2055,0.32,-
+British Columbia,wind_onshore,c6,renewable,2055,0.36,-
+British Columbia,wind_onshore,c7,renewable,2055,1.0,-
+Alberta,wind_onshore,c1,renewable,2055,0.18,-
+Alberta,wind_onshore,c2,renewable,2055,0.2,-
+Alberta,wind_onshore,c3,renewable,2055,0.24,-
+Alberta,wind_onshore,c4,renewable,2055,0.28,-
+Alberta,wind_onshore,c5,renewable,2055,0.32,-
+Alberta,wind_onshore,c6,renewable,2055,0.36,-
+Alberta,wind_onshore,c7,renewable,2055,1.0,-
+Saskatchewan,wind_onshore,c1,renewable,2055,0.18,-
+Saskatchewan,wind_onshore,c2,renewable,2055,0.2,-
+Saskatchewan,wind_onshore,c3,renewable,2055,0.24,-
+Saskatchewan,wind_onshore,c4,renewable,2055,0.28,-
+Saskatchewan,wind_onshore,c5,renewable,2055,0.32,-
+Saskatchewan,wind_onshore,c6,renewable,2055,0.36,-
+Saskatchewan,wind_onshore,c7,renewable,2055,1.0,-
+Manitoba,wind_onshore,c1,renewable,2055,0.18,-
+Manitoba,wind_onshore,c2,renewable,2055,0.2,-
+Manitoba,wind_onshore,c3,renewable,2055,0.24,-
+Manitoba,wind_onshore,c4,renewable,2055,0.28,-
+Manitoba,wind_onshore,c5,renewable,2055,0.32,-
+Manitoba,wind_onshore,c6,renewable,2055,0.36,-
+Manitoba,wind_onshore,c7,renewable,2055,1.0,-
+Ontario,wind_onshore,c1,renewable,2055,0.18,-
+Ontario,wind_onshore,c2,renewable,2055,0.2,-
+Ontario,wind_onshore,c3,renewable,2055,0.24,-
+Ontario,wind_onshore,c4,renewable,2055,0.28,-
+Ontario,wind_onshore,c5,renewable,2055,0.32,-
+Ontario,wind_onshore,c6,renewable,2055,0.36,-
+Ontario,wind_onshore,c7,renewable,2055,1.0,-
+Quebec,wind_onshore,c1,renewable,2055,0.18,-
+Quebec,wind_onshore,c2,renewable,2055,0.2,-
+Quebec,wind_onshore,c3,renewable,2055,0.24,-
+Quebec,wind_onshore,c4,renewable,2055,0.28,-
+Quebec,wind_onshore,c5,renewable,2055,0.32,-
+Quebec,wind_onshore,c6,renewable,2055,0.36,-
+Quebec,wind_onshore,c7,renewable,2055,1.0,-
+New Brunswick,wind_onshore,c1,renewable,2055,0.18,-
+New Brunswick,wind_onshore,c2,renewable,2055,0.2,-
+New Brunswick,wind_onshore,c3,renewable,2055,0.24,-
+New Brunswick,wind_onshore,c4,renewable,2055,0.28,-
+New Brunswick,wind_onshore,c5,renewable,2055,0.32,-
+New Brunswick,wind_onshore,c6,renewable,2055,0.36,-
+New Brunswick,wind_onshore,c7,renewable,2055,1.0,-
+Newfoundland and Labrador,wind_onshore,c1,renewable,2055,0.18,-
+Newfoundland and Labrador,wind_onshore,c2,renewable,2055,0.2,-
+Newfoundland and Labrador,wind_onshore,c3,renewable,2055,0.24,-
+Newfoundland and Labrador,wind_onshore,c4,renewable,2055,0.28,-
+Newfoundland and Labrador,wind_onshore,c5,renewable,2055,0.32,-
+Newfoundland and Labrador,wind_onshore,c6,renewable,2055,0.36,-
+Newfoundland and Labrador,wind_onshore,c7,renewable,2055,1.0,-
+Nova Scotia,wind_onshore,c1,renewable,2055,0.18,-
+Nova Scotia,wind_onshore,c2,renewable,2055,0.2,-
+Nova Scotia,wind_onshore,c3,renewable,2055,0.24,-
+Nova Scotia,wind_onshore,c4,renewable,2055,0.28,-
+Nova Scotia,wind_onshore,c5,renewable,2055,0.32,-
+Nova Scotia,wind_onshore,c6,renewable,2055,0.36,-
+Nova Scotia,wind_onshore,c7,renewable,2055,1.0,-
+Prince Edward Island,wind_onshore,c1,renewable,2055,0.18,-
+Prince Edward Island,wind_onshore,c2,renewable,2055,0.2,-
+Prince Edward Island,wind_onshore,c3,renewable,2055,0.24,-
+Prince Edward Island,wind_onshore,c4,renewable,2055,0.28,-
+Prince Edward Island,wind_onshore,c5,renewable,2055,0.32,-
+Prince Edward Island,wind_onshore,c6,renewable,2055,0.36,-
+Prince Edward Island,wind_onshore,c7,renewable,2055,1.0,-
+British Columbia,wind_onshore,c1,renewable,2060,0.18,-
+British Columbia,wind_onshore,c2,renewable,2060,0.2,-
+British Columbia,wind_onshore,c3,renewable,2060,0.24,-
+British Columbia,wind_onshore,c4,renewable,2060,0.28,-
+British Columbia,wind_onshore,c5,renewable,2060,0.32,-
+British Columbia,wind_onshore,c6,renewable,2060,0.36,-
+British Columbia,wind_onshore,c7,renewable,2060,1.0,-
+Alberta,wind_onshore,c1,renewable,2060,0.18,-
+Alberta,wind_onshore,c2,renewable,2060,0.2,-
+Alberta,wind_onshore,c3,renewable,2060,0.24,-
+Alberta,wind_onshore,c4,renewable,2060,0.28,-
+Alberta,wind_onshore,c5,renewable,2060,0.32,-
+Alberta,wind_onshore,c6,renewable,2060,0.36,-
+Alberta,wind_onshore,c7,renewable,2060,1.0,-
+Saskatchewan,wind_onshore,c1,renewable,2060,0.18,-
+Saskatchewan,wind_onshore,c2,renewable,2060,0.2,-
+Saskatchewan,wind_onshore,c3,renewable,2060,0.24,-
+Saskatchewan,wind_onshore,c4,renewable,2060,0.28,-
+Saskatchewan,wind_onshore,c5,renewable,2060,0.32,-
+Saskatchewan,wind_onshore,c6,renewable,2060,0.36,-
+Saskatchewan,wind_onshore,c7,renewable,2060,1.0,-
+Manitoba,wind_onshore,c1,renewable,2060,0.18,-
+Manitoba,wind_onshore,c2,renewable,2060,0.2,-
+Manitoba,wind_onshore,c3,renewable,2060,0.24,-
+Manitoba,wind_onshore,c4,renewable,2060,0.28,-
+Manitoba,wind_onshore,c5,renewable,2060,0.32,-
+Manitoba,wind_onshore,c6,renewable,2060,0.36,-
+Manitoba,wind_onshore,c7,renewable,2060,1.0,-
+Ontario,wind_onshore,c1,renewable,2060,0.18,-
+Ontario,wind_onshore,c2,renewable,2060,0.2,-
+Ontario,wind_onshore,c3,renewable,2060,0.24,-
+Ontario,wind_onshore,c4,renewable,2060,0.28,-
+Ontario,wind_onshore,c5,renewable,2060,0.32,-
+Ontario,wind_onshore,c6,renewable,2060,0.36,-
+Ontario,wind_onshore,c7,renewable,2060,1.0,-
+Quebec,wind_onshore,c1,renewable,2060,0.18,-
+Quebec,wind_onshore,c2,renewable,2060,0.2,-
+Quebec,wind_onshore,c3,renewable,2060,0.24,-
+Quebec,wind_onshore,c4,renewable,2060,0.28,-
+Quebec,wind_onshore,c5,renewable,2060,0.32,-
+Quebec,wind_onshore,c6,renewable,2060,0.36,-
+Quebec,wind_onshore,c7,renewable,2060,1.0,-
+New Brunswick,wind_onshore,c1,renewable,2060,0.18,-
+New Brunswick,wind_onshore,c2,renewable,2060,0.2,-
+New Brunswick,wind_onshore,c3,renewable,2060,0.24,-
+New Brunswick,wind_onshore,c4,renewable,2060,0.28,-
+New Brunswick,wind_onshore,c5,renewable,2060,0.32,-
+New Brunswick,wind_onshore,c6,renewable,2060,0.36,-
+New Brunswick,wind_onshore,c7,renewable,2060,1.0,-
+Newfoundland and Labrador,wind_onshore,c1,renewable,2060,0.18,-
+Newfoundland and Labrador,wind_onshore,c2,renewable,2060,0.2,-
+Newfoundland and Labrador,wind_onshore,c3,renewable,2060,0.24,-
+Newfoundland and Labrador,wind_onshore,c4,renewable,2060,0.28,-
+Newfoundland and Labrador,wind_onshore,c5,renewable,2060,0.32,-
+Newfoundland and Labrador,wind_onshore,c6,renewable,2060,0.36,-
+Newfoundland and Labrador,wind_onshore,c7,renewable,2060,1.0,-
+Nova Scotia,wind_onshore,c1,renewable,2060,0.18,-
+Nova Scotia,wind_onshore,c2,renewable,2060,0.2,-
+Nova Scotia,wind_onshore,c3,renewable,2060,0.24,-
+Nova Scotia,wind_onshore,c4,renewable,2060,0.28,-
+Nova Scotia,wind_onshore,c5,renewable,2060,0.32,-
+Nova Scotia,wind_onshore,c6,renewable,2060,0.36,-
+Nova Scotia,wind_onshore,c7,renewable,2060,1.0,-
+Prince Edward Island,wind_onshore,c1,renewable,2060,0.18,-
+Prince Edward Island,wind_onshore,c2,renewable,2060,0.2,-
+Prince Edward Island,wind_onshore,c3,renewable,2060,0.24,-
+Prince Edward Island,wind_onshore,c4,renewable,2060,0.28,-
+Prince Edward Island,wind_onshore,c5,renewable,2060,0.32,-
+Prince Edward Island,wind_onshore,c6,renewable,2060,0.36,-
+Prince Edward Island,wind_onshore,c7,renewable,2060,1.0,-
+British Columbia,wind_offshore,c1,renewable,2020,0.18,-
+British Columbia,wind_offshore,c2,renewable,2020,0.2,-
+British Columbia,wind_offshore,c3,renewable,2020,0.24,-
+British Columbia,wind_offshore,c4,renewable,2020,0.28,-
+British Columbia,wind_offshore,c5,renewable,2020,0.32,-
+British Columbia,wind_offshore,c6,renewable,2020,0.36,-
+British Columbia,wind_offshore,c7,renewable,2020,1.0,-
+Alberta,wind_offshore,c1,renewable,2020,0.18,-
+Alberta,wind_offshore,c2,renewable,2020,0.2,-
+Alberta,wind_offshore,c3,renewable,2020,0.24,-
+Alberta,wind_offshore,c4,renewable,2020,0.28,-
+Alberta,wind_offshore,c5,renewable,2020,0.32,-
+Alberta,wind_offshore,c6,renewable,2020,0.36,-
+Alberta,wind_offshore,c7,renewable,2020,1.0,-
+Saskatchewan,wind_offshore,c1,renewable,2020,0.18,-
+Saskatchewan,wind_offshore,c2,renewable,2020,0.2,-
+Saskatchewan,wind_offshore,c3,renewable,2020,0.24,-
+Saskatchewan,wind_offshore,c4,renewable,2020,0.28,-
+Saskatchewan,wind_offshore,c5,renewable,2020,0.32,-
+Saskatchewan,wind_offshore,c6,renewable,2020,0.36,-
+Saskatchewan,wind_offshore,c7,renewable,2020,1.0,-
+Manitoba,wind_offshore,c1,renewable,2020,0.18,-
+Manitoba,wind_offshore,c2,renewable,2020,0.2,-
+Manitoba,wind_offshore,c3,renewable,2020,0.24,-
+Manitoba,wind_offshore,c4,renewable,2020,0.28,-
+Manitoba,wind_offshore,c5,renewable,2020,0.32,-
+Manitoba,wind_offshore,c6,renewable,2020,0.36,-
+Manitoba,wind_offshore,c7,renewable,2020,1.0,-
+Ontario,wind_offshore,c1,renewable,2020,0.18,-
+Ontario,wind_offshore,c2,renewable,2020,0.2,-
+Ontario,wind_offshore,c3,renewable,2020,0.24,-
+Ontario,wind_offshore,c4,renewable,2020,0.28,-
+Ontario,wind_offshore,c5,renewable,2020,0.32,-
+Ontario,wind_offshore,c6,renewable,2020,0.36,-
+Ontario,wind_offshore,c7,renewable,2020,1.0,-
+Quebec,wind_offshore,c1,renewable,2020,0.18,-
+Quebec,wind_offshore,c2,renewable,2020,0.2,-
+Quebec,wind_offshore,c3,renewable,2020,0.24,-
+Quebec,wind_offshore,c4,renewable,2020,0.28,-
+Quebec,wind_offshore,c5,renewable,2020,0.32,-
+Quebec,wind_offshore,c6,renewable,2020,0.36,-
+Quebec,wind_offshore,c7,renewable,2020,1.0,-
+New Brunswick,wind_offshore,c1,renewable,2020,0.18,-
+New Brunswick,wind_offshore,c2,renewable,2020,0.2,-
+New Brunswick,wind_offshore,c3,renewable,2020,0.24,-
+New Brunswick,wind_offshore,c4,renewable,2020,0.28,-
+New Brunswick,wind_offshore,c5,renewable,2020,0.32,-
+New Brunswick,wind_offshore,c6,renewable,2020,0.36,-
+New Brunswick,wind_offshore,c7,renewable,2020,1.0,-
+Newfoundland and Labrador,wind_offshore,c1,renewable,2020,0.18,-
+Newfoundland and Labrador,wind_offshore,c2,renewable,2020,0.2,-
+Newfoundland and Labrador,wind_offshore,c3,renewable,2020,0.24,-
+Newfoundland and Labrador,wind_offshore,c4,renewable,2020,0.28,-
+Newfoundland and Labrador,wind_offshore,c5,renewable,2020,0.32,-
+Newfoundland and Labrador,wind_offshore,c6,renewable,2020,0.36,-
+Newfoundland and Labrador,wind_offshore,c7,renewable,2020,1.0,-
+Nova Scotia,wind_offshore,c1,renewable,2020,0.18,-
+Nova Scotia,wind_offshore,c2,renewable,2020,0.2,-
+Nova Scotia,wind_offshore,c3,renewable,2020,0.24,-
+Nova Scotia,wind_offshore,c4,renewable,2020,0.28,-
+Nova Scotia,wind_offshore,c5,renewable,2020,0.32,-
+Nova Scotia,wind_offshore,c6,renewable,2020,0.36,-
+Nova Scotia,wind_offshore,c7,renewable,2020,1.0,-
+Prince Edward Island,wind_offshore,c1,renewable,2020,0.18,-
+Prince Edward Island,wind_offshore,c2,renewable,2020,0.2,-
+Prince Edward Island,wind_offshore,c3,renewable,2020,0.24,-
+Prince Edward Island,wind_offshore,c4,renewable,2020,0.28,-
+Prince Edward Island,wind_offshore,c5,renewable,2020,0.32,-
+Prince Edward Island,wind_offshore,c6,renewable,2020,0.36,-
+Prince Edward Island,wind_offshore,c7,renewable,2020,1.0,-
+British Columbia,wind_offshore,c1,renewable,2025,0.18,-
+British Columbia,wind_offshore,c2,renewable,2025,0.2,-
+British Columbia,wind_offshore,c3,renewable,2025,0.24,-
+British Columbia,wind_offshore,c4,renewable,2025,0.28,-
+British Columbia,wind_offshore,c5,renewable,2025,0.32,-
+British Columbia,wind_offshore,c6,renewable,2025,0.36,-
+British Columbia,wind_offshore,c7,renewable,2025,1.0,-
+Alberta,wind_offshore,c1,renewable,2025,0.18,-
+Alberta,wind_offshore,c2,renewable,2025,0.2,-
+Alberta,wind_offshore,c3,renewable,2025,0.24,-
+Alberta,wind_offshore,c4,renewable,2025,0.28,-
+Alberta,wind_offshore,c5,renewable,2025,0.32,-
+Alberta,wind_offshore,c6,renewable,2025,0.36,-
+Alberta,wind_offshore,c7,renewable,2025,1.0,-
+Saskatchewan,wind_offshore,c1,renewable,2025,0.18,-
+Saskatchewan,wind_offshore,c2,renewable,2025,0.2,-
+Saskatchewan,wind_offshore,c3,renewable,2025,0.24,-
+Saskatchewan,wind_offshore,c4,renewable,2025,0.28,-
+Saskatchewan,wind_offshore,c5,renewable,2025,0.32,-
+Saskatchewan,wind_offshore,c6,renewable,2025,0.36,-
+Saskatchewan,wind_offshore,c7,renewable,2025,1.0,-
+Manitoba,wind_offshore,c1,renewable,2025,0.18,-
+Manitoba,wind_offshore,c2,renewable,2025,0.2,-
+Manitoba,wind_offshore,c3,renewable,2025,0.24,-
+Manitoba,wind_offshore,c4,renewable,2025,0.28,-
+Manitoba,wind_offshore,c5,renewable,2025,0.32,-
+Manitoba,wind_offshore,c6,renewable,2025,0.36,-
+Manitoba,wind_offshore,c7,renewable,2025,1.0,-
+Ontario,wind_offshore,c1,renewable,2025,0.18,-
+Ontario,wind_offshore,c2,renewable,2025,0.2,-
+Ontario,wind_offshore,c3,renewable,2025,0.24,-
+Ontario,wind_offshore,c4,renewable,2025,0.28,-
+Ontario,wind_offshore,c5,renewable,2025,0.32,-
+Ontario,wind_offshore,c6,renewable,2025,0.36,-
+Ontario,wind_offshore,c7,renewable,2025,1.0,-
+Quebec,wind_offshore,c1,renewable,2025,0.18,-
+Quebec,wind_offshore,c2,renewable,2025,0.2,-
+Quebec,wind_offshore,c3,renewable,2025,0.24,-
+Quebec,wind_offshore,c4,renewable,2025,0.28,-
+Quebec,wind_offshore,c5,renewable,2025,0.32,-
+Quebec,wind_offshore,c6,renewable,2025,0.36,-
+Quebec,wind_offshore,c7,renewable,2025,1.0,-
+New Brunswick,wind_offshore,c1,renewable,2025,0.18,-
+New Brunswick,wind_offshore,c2,renewable,2025,0.2,-
+New Brunswick,wind_offshore,c3,renewable,2025,0.24,-
+New Brunswick,wind_offshore,c4,renewable,2025,0.28,-
+New Brunswick,wind_offshore,c5,renewable,2025,0.32,-
+New Brunswick,wind_offshore,c6,renewable,2025,0.36,-
+New Brunswick,wind_offshore,c7,renewable,2025,1.0,-
+Newfoundland and Labrador,wind_offshore,c1,renewable,2025,0.18,-
+Newfoundland and Labrador,wind_offshore,c2,renewable,2025,0.2,-
+Newfoundland and Labrador,wind_offshore,c3,renewable,2025,0.24,-
+Newfoundland and Labrador,wind_offshore,c4,renewable,2025,0.28,-
+Newfoundland and Labrador,wind_offshore,c5,renewable,2025,0.32,-
+Newfoundland and Labrador,wind_offshore,c6,renewable,2025,0.36,-
+Newfoundland and Labrador,wind_offshore,c7,renewable,2025,1.0,-
+Nova Scotia,wind_offshore,c1,renewable,2025,0.18,-
+Nova Scotia,wind_offshore,c2,renewable,2025,0.2,-
+Nova Scotia,wind_offshore,c3,renewable,2025,0.24,-
+Nova Scotia,wind_offshore,c4,renewable,2025,0.28,-
+Nova Scotia,wind_offshore,c5,renewable,2025,0.32,-
+Nova Scotia,wind_offshore,c6,renewable,2025,0.36,-
+Nova Scotia,wind_offshore,c7,renewable,2025,1.0,-
+Prince Edward Island,wind_offshore,c1,renewable,2025,0.18,-
+Prince Edward Island,wind_offshore,c2,renewable,2025,0.2,-
+Prince Edward Island,wind_offshore,c3,renewable,2025,0.24,-
+Prince Edward Island,wind_offshore,c4,renewable,2025,0.28,-
+Prince Edward Island,wind_offshore,c5,renewable,2025,0.32,-
+Prince Edward Island,wind_offshore,c6,renewable,2025,0.36,-
+Prince Edward Island,wind_offshore,c7,renewable,2025,1.0,-
+British Columbia,wind_offshore,c1,renewable,2030,0.18,-
+British Columbia,wind_offshore,c2,renewable,2030,0.2,-
+British Columbia,wind_offshore,c3,renewable,2030,0.24,-
+British Columbia,wind_offshore,c4,renewable,2030,0.28,-
+British Columbia,wind_offshore,c5,renewable,2030,0.32,-
+British Columbia,wind_offshore,c6,renewable,2030,0.36,-
+British Columbia,wind_offshore,c7,renewable,2030,1.0,-
+Alberta,wind_offshore,c1,renewable,2030,0.18,-
+Alberta,wind_offshore,c2,renewable,2030,0.2,-
+Alberta,wind_offshore,c3,renewable,2030,0.24,-
+Alberta,wind_offshore,c4,renewable,2030,0.28,-
+Alberta,wind_offshore,c5,renewable,2030,0.32,-
+Alberta,wind_offshore,c6,renewable,2030,0.36,-
+Alberta,wind_offshore,c7,renewable,2030,1.0,-
+Saskatchewan,wind_offshore,c1,renewable,2030,0.18,-
+Saskatchewan,wind_offshore,c2,renewable,2030,0.2,-
+Saskatchewan,wind_offshore,c3,renewable,2030,0.24,-
+Saskatchewan,wind_offshore,c4,renewable,2030,0.28,-
+Saskatchewan,wind_offshore,c5,renewable,2030,0.32,-
+Saskatchewan,wind_offshore,c6,renewable,2030,0.36,-
+Saskatchewan,wind_offshore,c7,renewable,2030,1.0,-
+Manitoba,wind_offshore,c1,renewable,2030,0.18,-
+Manitoba,wind_offshore,c2,renewable,2030,0.2,-
+Manitoba,wind_offshore,c3,renewable,2030,0.24,-
+Manitoba,wind_offshore,c4,renewable,2030,0.28,-
+Manitoba,wind_offshore,c5,renewable,2030,0.32,-
+Manitoba,wind_offshore,c6,renewable,2030,0.36,-
+Manitoba,wind_offshore,c7,renewable,2030,1.0,-
+Ontario,wind_offshore,c1,renewable,2030,0.18,-
+Ontario,wind_offshore,c2,renewable,2030,0.2,-
+Ontario,wind_offshore,c3,renewable,2030,0.24,-
+Ontario,wind_offshore,c4,renewable,2030,0.28,-
+Ontario,wind_offshore,c5,renewable,2030,0.32,-
+Ontario,wind_offshore,c6,renewable,2030,0.36,-
+Ontario,wind_offshore,c7,renewable,2030,1.0,-
+Quebec,wind_offshore,c1,renewable,2030,0.18,-
+Quebec,wind_offshore,c2,renewable,2030,0.2,-
+Quebec,wind_offshore,c3,renewable,2030,0.24,-
+Quebec,wind_offshore,c4,renewable,2030,0.28,-
+Quebec,wind_offshore,c5,renewable,2030,0.32,-
+Quebec,wind_offshore,c6,renewable,2030,0.36,-
+Quebec,wind_offshore,c7,renewable,2030,1.0,-
+New Brunswick,wind_offshore,c1,renewable,2030,0.18,-
+New Brunswick,wind_offshore,c2,renewable,2030,0.2,-
+New Brunswick,wind_offshore,c3,renewable,2030,0.24,-
+New Brunswick,wind_offshore,c4,renewable,2030,0.28,-
+New Brunswick,wind_offshore,c5,renewable,2030,0.32,-
+New Brunswick,wind_offshore,c6,renewable,2030,0.36,-
+New Brunswick,wind_offshore,c7,renewable,2030,1.0,-
+Newfoundland and Labrador,wind_offshore,c1,renewable,2030,0.18,-
+Newfoundland and Labrador,wind_offshore,c2,renewable,2030,0.2,-
+Newfoundland and Labrador,wind_offshore,c3,renewable,2030,0.24,-
+Newfoundland and Labrador,wind_offshore,c4,renewable,2030,0.28,-
+Newfoundland and Labrador,wind_offshore,c5,renewable,2030,0.32,-
+Newfoundland and Labrador,wind_offshore,c6,renewable,2030,0.36,-
+Newfoundland and Labrador,wind_offshore,c7,renewable,2030,1.0,-
+Nova Scotia,wind_offshore,c1,renewable,2030,0.18,-
+Nova Scotia,wind_offshore,c2,renewable,2030,0.2,-
+Nova Scotia,wind_offshore,c3,renewable,2030,0.24,-
+Nova Scotia,wind_offshore,c4,renewable,2030,0.28,-
+Nova Scotia,wind_offshore,c5,renewable,2030,0.32,-
+Nova Scotia,wind_offshore,c6,renewable,2030,0.36,-
+Nova Scotia,wind_offshore,c7,renewable,2030,1.0,-
+Prince Edward Island,wind_offshore,c1,renewable,2030,0.18,-
+Prince Edward Island,wind_offshore,c2,renewable,2030,0.2,-
+Prince Edward Island,wind_offshore,c3,renewable,2030,0.24,-
+Prince Edward Island,wind_offshore,c4,renewable,2030,0.28,-
+Prince Edward Island,wind_offshore,c5,renewable,2030,0.32,-
+Prince Edward Island,wind_offshore,c6,renewable,2030,0.36,-
+Prince Edward Island,wind_offshore,c7,renewable,2030,1.0,-
+British Columbia,wind_offshore,c1,renewable,2035,0.18,-
+British Columbia,wind_offshore,c2,renewable,2035,0.2,-
+British Columbia,wind_offshore,c3,renewable,2035,0.24,-
+British Columbia,wind_offshore,c4,renewable,2035,0.28,-
+British Columbia,wind_offshore,c5,renewable,2035,0.32,-
+British Columbia,wind_offshore,c6,renewable,2035,0.36,-
+British Columbia,wind_offshore,c7,renewable,2035,1.0,-
+Alberta,wind_offshore,c1,renewable,2035,0.18,-
+Alberta,wind_offshore,c2,renewable,2035,0.2,-
+Alberta,wind_offshore,c3,renewable,2035,0.24,-
+Alberta,wind_offshore,c4,renewable,2035,0.28,-
+Alberta,wind_offshore,c5,renewable,2035,0.32,-
+Alberta,wind_offshore,c6,renewable,2035,0.36,-
+Alberta,wind_offshore,c7,renewable,2035,1.0,-
+Saskatchewan,wind_offshore,c1,renewable,2035,0.18,-
+Saskatchewan,wind_offshore,c2,renewable,2035,0.2,-
+Saskatchewan,wind_offshore,c3,renewable,2035,0.24,-
+Saskatchewan,wind_offshore,c4,renewable,2035,0.28,-
+Saskatchewan,wind_offshore,c5,renewable,2035,0.32,-
+Saskatchewan,wind_offshore,c6,renewable,2035,0.36,-
+Saskatchewan,wind_offshore,c7,renewable,2035,1.0,-
+Manitoba,wind_offshore,c1,renewable,2035,0.18,-
+Manitoba,wind_offshore,c2,renewable,2035,0.2,-
+Manitoba,wind_offshore,c3,renewable,2035,0.24,-
+Manitoba,wind_offshore,c4,renewable,2035,0.28,-
+Manitoba,wind_offshore,c5,renewable,2035,0.32,-
+Manitoba,wind_offshore,c6,renewable,2035,0.36,-
+Manitoba,wind_offshore,c7,renewable,2035,1.0,-
+Ontario,wind_offshore,c1,renewable,2035,0.18,-
+Ontario,wind_offshore,c2,renewable,2035,0.2,-
+Ontario,wind_offshore,c3,renewable,2035,0.24,-
+Ontario,wind_offshore,c4,renewable,2035,0.28,-
+Ontario,wind_offshore,c5,renewable,2035,0.32,-
+Ontario,wind_offshore,c6,renewable,2035,0.36,-
+Ontario,wind_offshore,c7,renewable,2035,1.0,-
+Quebec,wind_offshore,c1,renewable,2035,0.18,-
+Quebec,wind_offshore,c2,renewable,2035,0.2,-
+Quebec,wind_offshore,c3,renewable,2035,0.24,-
+Quebec,wind_offshore,c4,renewable,2035,0.28,-
+Quebec,wind_offshore,c5,renewable,2035,0.32,-
+Quebec,wind_offshore,c6,renewable,2035,0.36,-
+Quebec,wind_offshore,c7,renewable,2035,1.0,-
+New Brunswick,wind_offshore,c1,renewable,2035,0.18,-
+New Brunswick,wind_offshore,c2,renewable,2035,0.2,-
+New Brunswick,wind_offshore,c3,renewable,2035,0.24,-
+New Brunswick,wind_offshore,c4,renewable,2035,0.28,-
+New Brunswick,wind_offshore,c5,renewable,2035,0.32,-
+New Brunswick,wind_offshore,c6,renewable,2035,0.36,-
+New Brunswick,wind_offshore,c7,renewable,2035,1.0,-
+Newfoundland and Labrador,wind_offshore,c1,renewable,2035,0.18,-
+Newfoundland and Labrador,wind_offshore,c2,renewable,2035,0.2,-
+Newfoundland and Labrador,wind_offshore,c3,renewable,2035,0.24,-
+Newfoundland and Labrador,wind_offshore,c4,renewable,2035,0.28,-
+Newfoundland and Labrador,wind_offshore,c5,renewable,2035,0.32,-
+Newfoundland and Labrador,wind_offshore,c6,renewable,2035,0.36,-
+Newfoundland and Labrador,wind_offshore,c7,renewable,2035,1.0,-
+Nova Scotia,wind_offshore,c1,renewable,2035,0.18,-
+Nova Scotia,wind_offshore,c2,renewable,2035,0.2,-
+Nova Scotia,wind_offshore,c3,renewable,2035,0.24,-
+Nova Scotia,wind_offshore,c4,renewable,2035,0.28,-
+Nova Scotia,wind_offshore,c5,renewable,2035,0.32,-
+Nova Scotia,wind_offshore,c6,renewable,2035,0.36,-
+Nova Scotia,wind_offshore,c7,renewable,2035,1.0,-
+Prince Edward Island,wind_offshore,c1,renewable,2035,0.18,-
+Prince Edward Island,wind_offshore,c2,renewable,2035,0.2,-
+Prince Edward Island,wind_offshore,c3,renewable,2035,0.24,-
+Prince Edward Island,wind_offshore,c4,renewable,2035,0.28,-
+Prince Edward Island,wind_offshore,c5,renewable,2035,0.32,-
+Prince Edward Island,wind_offshore,c6,renewable,2035,0.36,-
+Prince Edward Island,wind_offshore,c7,renewable,2035,1.0,-
+British Columbia,wind_offshore,c1,renewable,2040,0.18,-
+British Columbia,wind_offshore,c2,renewable,2040,0.2,-
+British Columbia,wind_offshore,c3,renewable,2040,0.24,-
+British Columbia,wind_offshore,c4,renewable,2040,0.28,-
+British Columbia,wind_offshore,c5,renewable,2040,0.32,-
+British Columbia,wind_offshore,c6,renewable,2040,0.36,-
+British Columbia,wind_offshore,c7,renewable,2040,1.0,-
+Alberta,wind_offshore,c1,renewable,2040,0.18,-
+Alberta,wind_offshore,c2,renewable,2040,0.2,-
+Alberta,wind_offshore,c3,renewable,2040,0.24,-
+Alberta,wind_offshore,c4,renewable,2040,0.28,-
+Alberta,wind_offshore,c5,renewable,2040,0.32,-
+Alberta,wind_offshore,c6,renewable,2040,0.36,-
+Alberta,wind_offshore,c7,renewable,2040,1.0,-
+Saskatchewan,wind_offshore,c1,renewable,2040,0.18,-
+Saskatchewan,wind_offshore,c2,renewable,2040,0.2,-
+Saskatchewan,wind_offshore,c3,renewable,2040,0.24,-
+Saskatchewan,wind_offshore,c4,renewable,2040,0.28,-
+Saskatchewan,wind_offshore,c5,renewable,2040,0.32,-
+Saskatchewan,wind_offshore,c6,renewable,2040,0.36,-
+Saskatchewan,wind_offshore,c7,renewable,2040,1.0,-
+Manitoba,wind_offshore,c1,renewable,2040,0.18,-
+Manitoba,wind_offshore,c2,renewable,2040,0.2,-
+Manitoba,wind_offshore,c3,renewable,2040,0.24,-
+Manitoba,wind_offshore,c4,renewable,2040,0.28,-
+Manitoba,wind_offshore,c5,renewable,2040,0.32,-
+Manitoba,wind_offshore,c6,renewable,2040,0.36,-
+Manitoba,wind_offshore,c7,renewable,2040,1.0,-
+Ontario,wind_offshore,c1,renewable,2040,0.18,-
+Ontario,wind_offshore,c2,renewable,2040,0.2,-
+Ontario,wind_offshore,c3,renewable,2040,0.24,-
+Ontario,wind_offshore,c4,renewable,2040,0.28,-
+Ontario,wind_offshore,c5,renewable,2040,0.32,-
+Ontario,wind_offshore,c6,renewable,2040,0.36,-
+Ontario,wind_offshore,c7,renewable,2040,1.0,-
+Quebec,wind_offshore,c1,renewable,2040,0.18,-
+Quebec,wind_offshore,c2,renewable,2040,0.2,-
+Quebec,wind_offshore,c3,renewable,2040,0.24,-
+Quebec,wind_offshore,c4,renewable,2040,0.28,-
+Quebec,wind_offshore,c5,renewable,2040,0.32,-
+Quebec,wind_offshore,c6,renewable,2040,0.36,-
+Quebec,wind_offshore,c7,renewable,2040,1.0,-
+New Brunswick,wind_offshore,c1,renewable,2040,0.18,-
+New Brunswick,wind_offshore,c2,renewable,2040,0.2,-
+New Brunswick,wind_offshore,c3,renewable,2040,0.24,-
+New Brunswick,wind_offshore,c4,renewable,2040,0.28,-
+New Brunswick,wind_offshore,c5,renewable,2040,0.32,-
+New Brunswick,wind_offshore,c6,renewable,2040,0.36,-
+New Brunswick,wind_offshore,c7,renewable,2040,1.0,-
+Newfoundland and Labrador,wind_offshore,c1,renewable,2040,0.18,-
+Newfoundland and Labrador,wind_offshore,c2,renewable,2040,0.2,-
+Newfoundland and Labrador,wind_offshore,c3,renewable,2040,0.24,-
+Newfoundland and Labrador,wind_offshore,c4,renewable,2040,0.28,-
+Newfoundland and Labrador,wind_offshore,c5,renewable,2040,0.32,-
+Newfoundland and Labrador,wind_offshore,c6,renewable,2040,0.36,-
+Newfoundland and Labrador,wind_offshore,c7,renewable,2040,1.0,-
+Nova Scotia,wind_offshore,c1,renewable,2040,0.18,-
+Nova Scotia,wind_offshore,c2,renewable,2040,0.2,-
+Nova Scotia,wind_offshore,c3,renewable,2040,0.24,-
+Nova Scotia,wind_offshore,c4,renewable,2040,0.28,-
+Nova Scotia,wind_offshore,c5,renewable,2040,0.32,-
+Nova Scotia,wind_offshore,c6,renewable,2040,0.36,-
+Nova Scotia,wind_offshore,c7,renewable,2040,1.0,-
+Prince Edward Island,wind_offshore,c1,renewable,2040,0.18,-
+Prince Edward Island,wind_offshore,c2,renewable,2040,0.2,-
+Prince Edward Island,wind_offshore,c3,renewable,2040,0.24,-
+Prince Edward Island,wind_offshore,c4,renewable,2040,0.28,-
+Prince Edward Island,wind_offshore,c5,renewable,2040,0.32,-
+Prince Edward Island,wind_offshore,c6,renewable,2040,0.36,-
+Prince Edward Island,wind_offshore,c7,renewable,2040,1.0,-
+British Columbia,wind_offshore,c1,renewable,2045,0.18,-
+British Columbia,wind_offshore,c2,renewable,2045,0.2,-
+British Columbia,wind_offshore,c3,renewable,2045,0.24,-
+British Columbia,wind_offshore,c4,renewable,2045,0.28,-
+British Columbia,wind_offshore,c5,renewable,2045,0.32,-
+British Columbia,wind_offshore,c6,renewable,2045,0.36,-
+British Columbia,wind_offshore,c7,renewable,2045,1.0,-
+Alberta,wind_offshore,c1,renewable,2045,0.18,-
+Alberta,wind_offshore,c2,renewable,2045,0.2,-
+Alberta,wind_offshore,c3,renewable,2045,0.24,-
+Alberta,wind_offshore,c4,renewable,2045,0.28,-
+Alberta,wind_offshore,c5,renewable,2045,0.32,-
+Alberta,wind_offshore,c6,renewable,2045,0.36,-
+Alberta,wind_offshore,c7,renewable,2045,1.0,-
+Saskatchewan,wind_offshore,c1,renewable,2045,0.18,-
+Saskatchewan,wind_offshore,c2,renewable,2045,0.2,-
+Saskatchewan,wind_offshore,c3,renewable,2045,0.24,-
+Saskatchewan,wind_offshore,c4,renewable,2045,0.28,-
+Saskatchewan,wind_offshore,c5,renewable,2045,0.32,-
+Saskatchewan,wind_offshore,c6,renewable,2045,0.36,-
+Saskatchewan,wind_offshore,c7,renewable,2045,1.0,-
+Manitoba,wind_offshore,c1,renewable,2045,0.18,-
+Manitoba,wind_offshore,c2,renewable,2045,0.2,-
+Manitoba,wind_offshore,c3,renewable,2045,0.24,-
+Manitoba,wind_offshore,c4,renewable,2045,0.28,-
+Manitoba,wind_offshore,c5,renewable,2045,0.32,-
+Manitoba,wind_offshore,c6,renewable,2045,0.36,-
+Manitoba,wind_offshore,c7,renewable,2045,1.0,-
+Ontario,wind_offshore,c1,renewable,2045,0.18,-
+Ontario,wind_offshore,c2,renewable,2045,0.2,-
+Ontario,wind_offshore,c3,renewable,2045,0.24,-
+Ontario,wind_offshore,c4,renewable,2045,0.28,-
+Ontario,wind_offshore,c5,renewable,2045,0.32,-
+Ontario,wind_offshore,c6,renewable,2045,0.36,-
+Ontario,wind_offshore,c7,renewable,2045,1.0,-
+Quebec,wind_offshore,c1,renewable,2045,0.18,-
+Quebec,wind_offshore,c2,renewable,2045,0.2,-
+Quebec,wind_offshore,c3,renewable,2045,0.24,-
+Quebec,wind_offshore,c4,renewable,2045,0.28,-
+Quebec,wind_offshore,c5,renewable,2045,0.32,-
+Quebec,wind_offshore,c6,renewable,2045,0.36,-
+Quebec,wind_offshore,c7,renewable,2045,1.0,-
+New Brunswick,wind_offshore,c1,renewable,2045,0.18,-
+New Brunswick,wind_offshore,c2,renewable,2045,0.2,-
+New Brunswick,wind_offshore,c3,renewable,2045,0.24,-
+New Brunswick,wind_offshore,c4,renewable,2045,0.28,-
+New Brunswick,wind_offshore,c5,renewable,2045,0.32,-
+New Brunswick,wind_offshore,c6,renewable,2045,0.36,-
+New Brunswick,wind_offshore,c7,renewable,2045,1.0,-
+Newfoundland and Labrador,wind_offshore,c1,renewable,2045,0.18,-
+Newfoundland and Labrador,wind_offshore,c2,renewable,2045,0.2,-
+Newfoundland and Labrador,wind_offshore,c3,renewable,2045,0.24,-
+Newfoundland and Labrador,wind_offshore,c4,renewable,2045,0.28,-
+Newfoundland and Labrador,wind_offshore,c5,renewable,2045,0.32,-
+Newfoundland and Labrador,wind_offshore,c6,renewable,2045,0.36,-
+Newfoundland and Labrador,wind_offshore,c7,renewable,2045,1.0,-
+Nova Scotia,wind_offshore,c1,renewable,2045,0.18,-
+Nova Scotia,wind_offshore,c2,renewable,2045,0.2,-
+Nova Scotia,wind_offshore,c3,renewable,2045,0.24,-
+Nova Scotia,wind_offshore,c4,renewable,2045,0.28,-
+Nova Scotia,wind_offshore,c5,renewable,2045,0.32,-
+Nova Scotia,wind_offshore,c6,renewable,2045,0.36,-
+Nova Scotia,wind_offshore,c7,renewable,2045,1.0,-
+Prince Edward Island,wind_offshore,c1,renewable,2045,0.18,-
+Prince Edward Island,wind_offshore,c2,renewable,2045,0.2,-
+Prince Edward Island,wind_offshore,c3,renewable,2045,0.24,-
+Prince Edward Island,wind_offshore,c4,renewable,2045,0.28,-
+Prince Edward Island,wind_offshore,c5,renewable,2045,0.32,-
+Prince Edward Island,wind_offshore,c6,renewable,2045,0.36,-
+Prince Edward Island,wind_offshore,c7,renewable,2045,1.0,-
+British Columbia,wind_offshore,c1,renewable,2050,0.18,-
+British Columbia,wind_offshore,c2,renewable,2050,0.2,-
+British Columbia,wind_offshore,c3,renewable,2050,0.24,-
+British Columbia,wind_offshore,c4,renewable,2050,0.28,-
+British Columbia,wind_offshore,c5,renewable,2050,0.32,-
+British Columbia,wind_offshore,c6,renewable,2050,0.36,-
+British Columbia,wind_offshore,c7,renewable,2050,1.0,-
+Alberta,wind_offshore,c1,renewable,2050,0.18,-
+Alberta,wind_offshore,c2,renewable,2050,0.2,-
+Alberta,wind_offshore,c3,renewable,2050,0.24,-
+Alberta,wind_offshore,c4,renewable,2050,0.28,-
+Alberta,wind_offshore,c5,renewable,2050,0.32,-
+Alberta,wind_offshore,c6,renewable,2050,0.36,-
+Alberta,wind_offshore,c7,renewable,2050,1.0,-
+Saskatchewan,wind_offshore,c1,renewable,2050,0.18,-
+Saskatchewan,wind_offshore,c2,renewable,2050,0.2,-
+Saskatchewan,wind_offshore,c3,renewable,2050,0.24,-
+Saskatchewan,wind_offshore,c4,renewable,2050,0.28,-
+Saskatchewan,wind_offshore,c5,renewable,2050,0.32,-
+Saskatchewan,wind_offshore,c6,renewable,2050,0.36,-
+Saskatchewan,wind_offshore,c7,renewable,2050,1.0,-
+Manitoba,wind_offshore,c1,renewable,2050,0.18,-
+Manitoba,wind_offshore,c2,renewable,2050,0.2,-
+Manitoba,wind_offshore,c3,renewable,2050,0.24,-
+Manitoba,wind_offshore,c4,renewable,2050,0.28,-
+Manitoba,wind_offshore,c5,renewable,2050,0.32,-
+Manitoba,wind_offshore,c6,renewable,2050,0.36,-
+Manitoba,wind_offshore,c7,renewable,2050,1.0,-
+Ontario,wind_offshore,c1,renewable,2050,0.18,-
+Ontario,wind_offshore,c2,renewable,2050,0.2,-
+Ontario,wind_offshore,c3,renewable,2050,0.24,-
+Ontario,wind_offshore,c4,renewable,2050,0.28,-
+Ontario,wind_offshore,c5,renewable,2050,0.32,-
+Ontario,wind_offshore,c6,renewable,2050,0.36,-
+Ontario,wind_offshore,c7,renewable,2050,1.0,-
+Quebec,wind_offshore,c1,renewable,2050,0.18,-
+Quebec,wind_offshore,c2,renewable,2050,0.2,-
+Quebec,wind_offshore,c3,renewable,2050,0.24,-
+Quebec,wind_offshore,c4,renewable,2050,0.28,-
+Quebec,wind_offshore,c5,renewable,2050,0.32,-
+Quebec,wind_offshore,c6,renewable,2050,0.36,-
+Quebec,wind_offshore,c7,renewable,2050,1.0,-
+New Brunswick,wind_offshore,c1,renewable,2050,0.18,-
+New Brunswick,wind_offshore,c2,renewable,2050,0.2,-
+New Brunswick,wind_offshore,c3,renewable,2050,0.24,-
+New Brunswick,wind_offshore,c4,renewable,2050,0.28,-
+New Brunswick,wind_offshore,c5,renewable,2050,0.32,-
+New Brunswick,wind_offshore,c6,renewable,2050,0.36,-
+New Brunswick,wind_offshore,c7,renewable,2050,1.0,-
+Newfoundland and Labrador,wind_offshore,c1,renewable,2050,0.18,-
+Newfoundland and Labrador,wind_offshore,c2,renewable,2050,0.2,-
+Newfoundland and Labrador,wind_offshore,c3,renewable,2050,0.24,-
+Newfoundland and Labrador,wind_offshore,c4,renewable,2050,0.28,-
+Newfoundland and Labrador,wind_offshore,c5,renewable,2050,0.32,-
+Newfoundland and Labrador,wind_offshore,c6,renewable,2050,0.36,-
+Newfoundland and Labrador,wind_offshore,c7,renewable,2050,1.0,-
+Nova Scotia,wind_offshore,c1,renewable,2050,0.18,-
+Nova Scotia,wind_offshore,c2,renewable,2050,0.2,-
+Nova Scotia,wind_offshore,c3,renewable,2050,0.24,-
+Nova Scotia,wind_offshore,c4,renewable,2050,0.28,-
+Nova Scotia,wind_offshore,c5,renewable,2050,0.32,-
+Nova Scotia,wind_offshore,c6,renewable,2050,0.36,-
+Nova Scotia,wind_offshore,c7,renewable,2050,1.0,-
+Prince Edward Island,wind_offshore,c1,renewable,2050,0.18,-
+Prince Edward Island,wind_offshore,c2,renewable,2050,0.2,-
+Prince Edward Island,wind_offshore,c3,renewable,2050,0.24,-
+Prince Edward Island,wind_offshore,c4,renewable,2050,0.28,-
+Prince Edward Island,wind_offshore,c5,renewable,2050,0.32,-
+Prince Edward Island,wind_offshore,c6,renewable,2050,0.36,-
+Prince Edward Island,wind_offshore,c7,renewable,2050,1.0,-
+British Columbia,wind_offshore,c1,renewable,2055,0.18,-
+British Columbia,wind_offshore,c2,renewable,2055,0.2,-
+British Columbia,wind_offshore,c3,renewable,2055,0.24,-
+British Columbia,wind_offshore,c4,renewable,2055,0.28,-
+British Columbia,wind_offshore,c5,renewable,2055,0.32,-
+British Columbia,wind_offshore,c6,renewable,2055,0.36,-
+British Columbia,wind_offshore,c7,renewable,2055,1.0,-
+Alberta,wind_offshore,c1,renewable,2055,0.18,-
+Alberta,wind_offshore,c2,renewable,2055,0.2,-
+Alberta,wind_offshore,c3,renewable,2055,0.24,-
+Alberta,wind_offshore,c4,renewable,2055,0.28,-
+Alberta,wind_offshore,c5,renewable,2055,0.32,-
+Alberta,wind_offshore,c6,renewable,2055,0.36,-
+Alberta,wind_offshore,c7,renewable,2055,1.0,-
+Saskatchewan,wind_offshore,c1,renewable,2055,0.18,-
+Saskatchewan,wind_offshore,c2,renewable,2055,0.2,-
+Saskatchewan,wind_offshore,c3,renewable,2055,0.24,-
+Saskatchewan,wind_offshore,c4,renewable,2055,0.28,-
+Saskatchewan,wind_offshore,c5,renewable,2055,0.32,-
+Saskatchewan,wind_offshore,c6,renewable,2055,0.36,-
+Saskatchewan,wind_offshore,c7,renewable,2055,1.0,-
+Manitoba,wind_offshore,c1,renewable,2055,0.18,-
+Manitoba,wind_offshore,c2,renewable,2055,0.2,-
+Manitoba,wind_offshore,c3,renewable,2055,0.24,-
+Manitoba,wind_offshore,c4,renewable,2055,0.28,-
+Manitoba,wind_offshore,c5,renewable,2055,0.32,-
+Manitoba,wind_offshore,c6,renewable,2055,0.36,-
+Manitoba,wind_offshore,c7,renewable,2055,1.0,-
+Ontario,wind_offshore,c1,renewable,2055,0.18,-
+Ontario,wind_offshore,c2,renewable,2055,0.2,-
+Ontario,wind_offshore,c3,renewable,2055,0.24,-
+Ontario,wind_offshore,c4,renewable,2055,0.28,-
+Ontario,wind_offshore,c5,renewable,2055,0.32,-
+Ontario,wind_offshore,c6,renewable,2055,0.36,-
+Ontario,wind_offshore,c7,renewable,2055,1.0,-
+Quebec,wind_offshore,c1,renewable,2055,0.18,-
+Quebec,wind_offshore,c2,renewable,2055,0.2,-
+Quebec,wind_offshore,c3,renewable,2055,0.24,-
+Quebec,wind_offshore,c4,renewable,2055,0.28,-
+Quebec,wind_offshore,c5,renewable,2055,0.32,-
+Quebec,wind_offshore,c6,renewable,2055,0.36,-
+Quebec,wind_offshore,c7,renewable,2055,1.0,-
+New Brunswick,wind_offshore,c1,renewable,2055,0.18,-
+New Brunswick,wind_offshore,c2,renewable,2055,0.2,-
+New Brunswick,wind_offshore,c3,renewable,2055,0.24,-
+New Brunswick,wind_offshore,c4,renewable,2055,0.28,-
+New Brunswick,wind_offshore,c5,renewable,2055,0.32,-
+New Brunswick,wind_offshore,c6,renewable,2055,0.36,-
+New Brunswick,wind_offshore,c7,renewable,2055,1.0,-
+Newfoundland and Labrador,wind_offshore,c1,renewable,2055,0.18,-
+Newfoundland and Labrador,wind_offshore,c2,renewable,2055,0.2,-
+Newfoundland and Labrador,wind_offshore,c3,renewable,2055,0.24,-
+Newfoundland and Labrador,wind_offshore,c4,renewable,2055,0.28,-
+Newfoundland and Labrador,wind_offshore,c5,renewable,2055,0.32,-
+Newfoundland and Labrador,wind_offshore,c6,renewable,2055,0.36,-
+Newfoundland and Labrador,wind_offshore,c7,renewable,2055,1.0,-
+Nova Scotia,wind_offshore,c1,renewable,2055,0.18,-
+Nova Scotia,wind_offshore,c2,renewable,2055,0.2,-
+Nova Scotia,wind_offshore,c3,renewable,2055,0.24,-
+Nova Scotia,wind_offshore,c4,renewable,2055,0.28,-
+Nova Scotia,wind_offshore,c5,renewable,2055,0.32,-
+Nova Scotia,wind_offshore,c6,renewable,2055,0.36,-
+Nova Scotia,wind_offshore,c7,renewable,2055,1.0,-
+Prince Edward Island,wind_offshore,c1,renewable,2055,0.18,-
+Prince Edward Island,wind_offshore,c2,renewable,2055,0.2,-
+Prince Edward Island,wind_offshore,c3,renewable,2055,0.24,-
+Prince Edward Island,wind_offshore,c4,renewable,2055,0.28,-
+Prince Edward Island,wind_offshore,c5,renewable,2055,0.32,-
+Prince Edward Island,wind_offshore,c6,renewable,2055,0.36,-
+Prince Edward Island,wind_offshore,c7,renewable,2055,1.0,-
+British Columbia,wind_offshore,c1,renewable,2060,0.18,-
+British Columbia,wind_offshore,c2,renewable,2060,0.2,-
+British Columbia,wind_offshore,c3,renewable,2060,0.24,-
+British Columbia,wind_offshore,c4,renewable,2060,0.28,-
+British Columbia,wind_offshore,c5,renewable,2060,0.32,-
+British Columbia,wind_offshore,c6,renewable,2060,0.36,-
+British Columbia,wind_offshore,c7,renewable,2060,1.0,-
+Alberta,wind_offshore,c1,renewable,2060,0.18,-
+Alberta,wind_offshore,c2,renewable,2060,0.2,-
+Alberta,wind_offshore,c3,renewable,2060,0.24,-
+Alberta,wind_offshore,c4,renewable,2060,0.28,-
+Alberta,wind_offshore,c5,renewable,2060,0.32,-
+Alberta,wind_offshore,c6,renewable,2060,0.36,-
+Alberta,wind_offshore,c7,renewable,2060,1.0,-
+Saskatchewan,wind_offshore,c1,renewable,2060,0.18,-
+Saskatchewan,wind_offshore,c2,renewable,2060,0.2,-
+Saskatchewan,wind_offshore,c3,renewable,2060,0.24,-
+Saskatchewan,wind_offshore,c4,renewable,2060,0.28,-
+Saskatchewan,wind_offshore,c5,renewable,2060,0.32,-
+Saskatchewan,wind_offshore,c6,renewable,2060,0.36,-
+Saskatchewan,wind_offshore,c7,renewable,2060,1.0,-
+Manitoba,wind_offshore,c1,renewable,2060,0.18,-
+Manitoba,wind_offshore,c2,renewable,2060,0.2,-
+Manitoba,wind_offshore,c3,renewable,2060,0.24,-
+Manitoba,wind_offshore,c4,renewable,2060,0.28,-
+Manitoba,wind_offshore,c5,renewable,2060,0.32,-
+Manitoba,wind_offshore,c6,renewable,2060,0.36,-
+Manitoba,wind_offshore,c7,renewable,2060,1.0,-
+Ontario,wind_offshore,c1,renewable,2060,0.18,-
+Ontario,wind_offshore,c2,renewable,2060,0.2,-
+Ontario,wind_offshore,c3,renewable,2060,0.24,-
+Ontario,wind_offshore,c4,renewable,2060,0.28,-
+Ontario,wind_offshore,c5,renewable,2060,0.32,-
+Ontario,wind_offshore,c6,renewable,2060,0.36,-
+Ontario,wind_offshore,c7,renewable,2060,1.0,-
+Quebec,wind_offshore,c1,renewable,2060,0.18,-
+Quebec,wind_offshore,c2,renewable,2060,0.2,-
+Quebec,wind_offshore,c3,renewable,2060,0.24,-
+Quebec,wind_offshore,c4,renewable,2060,0.28,-
+Quebec,wind_offshore,c5,renewable,2060,0.32,-
+Quebec,wind_offshore,c6,renewable,2060,0.36,-
+Quebec,wind_offshore,c7,renewable,2060,1.0,-
+New Brunswick,wind_offshore,c1,renewable,2060,0.18,-
+New Brunswick,wind_offshore,c2,renewable,2060,0.2,-
+New Brunswick,wind_offshore,c3,renewable,2060,0.24,-
+New Brunswick,wind_offshore,c4,renewable,2060,0.28,-
+New Brunswick,wind_offshore,c5,renewable,2060,0.32,-
+New Brunswick,wind_offshore,c6,renewable,2060,0.36,-
+New Brunswick,wind_offshore,c7,renewable,2060,1.0,-
+Newfoundland and Labrador,wind_offshore,c1,renewable,2060,0.18,-
+Newfoundland and Labrador,wind_offshore,c2,renewable,2060,0.2,-
+Newfoundland and Labrador,wind_offshore,c3,renewable,2060,0.24,-
+Newfoundland and Labrador,wind_offshore,c4,renewable,2060,0.28,-
+Newfoundland and Labrador,wind_offshore,c5,renewable,2060,0.32,-
+Newfoundland and Labrador,wind_offshore,c6,renewable,2060,0.36,-
+Newfoundland and Labrador,wind_offshore,c7,renewable,2060,1.0,-
+Nova Scotia,wind_offshore,c1,renewable,2060,0.18,-
+Nova Scotia,wind_offshore,c2,renewable,2060,0.2,-
+Nova Scotia,wind_offshore,c3,renewable,2060,0.24,-
+Nova Scotia,wind_offshore,c4,renewable,2060,0.28,-
+Nova Scotia,wind_offshore,c5,renewable,2060,0.32,-
+Nova Scotia,wind_offshore,c6,renewable,2060,0.36,-
+Nova Scotia,wind_offshore,c7,renewable,2060,1.0,-
+Prince Edward Island,wind_offshore,c1,renewable,2060,0.18,-
+Prince Edward Island,wind_offshore,c2,renewable,2060,0.2,-
+Prince Edward Island,wind_offshore,c3,renewable,2060,0.24,-
+Prince Edward Island,wind_offshore,c4,renewable,2060,0.28,-
+Prince Edward Island,wind_offshore,c5,renewable,2060,0.32,-
+Prince Edward Island,wind_offshore,c6,renewable,2060,0.36,-
+Prince Edward Island,wind_offshore,c7,renewable,2060,1.0,-
+British Columbia,solar_pv,c1,renewable,2020,0.08,-
+British Columbia,solar_pv,c2,renewable,2020,0.1,-
+British Columbia,solar_pv,c3,renewable,2020,0.13,-
+British Columbia,solar_pv,c4,renewable,2020,0.15,-
+British Columbia,solar_pv,c5,renewable,2020,0.17,-
+British Columbia,solar_pv,c6,renewable,2020,0.19,-
+British Columbia,solar_pv,c7,renewable,2020,0.22,-
+British Columbia,solar_pv,c8,renewable,2020,1.0,-
+Alberta,solar_pv,c1,renewable,2020,0.08,-
+Alberta,solar_pv,c2,renewable,2020,0.1,-
+Alberta,solar_pv,c3,renewable,2020,0.13,-
+Alberta,solar_pv,c4,renewable,2020,0.15,-
+Alberta,solar_pv,c5,renewable,2020,0.17,-
+Alberta,solar_pv,c6,renewable,2020,0.19,-
+Alberta,solar_pv,c7,renewable,2020,0.22,-
+Alberta,solar_pv,c8,renewable,2020,1.0,-
+Saskatchewan,solar_pv,c1,renewable,2020,0.08,-
+Saskatchewan,solar_pv,c2,renewable,2020,0.1,-
+Saskatchewan,solar_pv,c3,renewable,2020,0.13,-
+Saskatchewan,solar_pv,c4,renewable,2020,0.15,-
+Saskatchewan,solar_pv,c5,renewable,2020,0.17,-
+Saskatchewan,solar_pv,c6,renewable,2020,0.19,-
+Saskatchewan,solar_pv,c7,renewable,2020,0.22,-
+Saskatchewan,solar_pv,c8,renewable,2020,1.0,-
+Manitoba,solar_pv,c1,renewable,2020,0.08,-
+Manitoba,solar_pv,c2,renewable,2020,0.1,-
+Manitoba,solar_pv,c3,renewable,2020,0.13,-
+Manitoba,solar_pv,c4,renewable,2020,0.15,-
+Manitoba,solar_pv,c5,renewable,2020,0.17,-
+Manitoba,solar_pv,c6,renewable,2020,0.19,-
+Manitoba,solar_pv,c7,renewable,2020,0.22,-
+Manitoba,solar_pv,c8,renewable,2020,1.0,-
+Ontario,solar_pv,c1,renewable,2020,0.08,-
+Ontario,solar_pv,c2,renewable,2020,0.1,-
+Ontario,solar_pv,c3,renewable,2020,0.13,-
+Ontario,solar_pv,c4,renewable,2020,0.15,-
+Ontario,solar_pv,c5,renewable,2020,0.17,-
+Ontario,solar_pv,c6,renewable,2020,0.19,-
+Ontario,solar_pv,c7,renewable,2020,0.22,-
+Ontario,solar_pv,c8,renewable,2020,1.0,-
+Quebec,solar_pv,c1,renewable,2020,0.08,-
+Quebec,solar_pv,c2,renewable,2020,0.1,-
+Quebec,solar_pv,c3,renewable,2020,0.13,-
+Quebec,solar_pv,c4,renewable,2020,0.15,-
+Quebec,solar_pv,c5,renewable,2020,0.17,-
+Quebec,solar_pv,c6,renewable,2020,0.19,-
+Quebec,solar_pv,c7,renewable,2020,0.22,-
+Quebec,solar_pv,c8,renewable,2020,1.0,-
+New Brunswick,solar_pv,c1,renewable,2020,0.08,-
+New Brunswick,solar_pv,c2,renewable,2020,0.1,-
+New Brunswick,solar_pv,c3,renewable,2020,0.13,-
+New Brunswick,solar_pv,c4,renewable,2020,0.15,-
+New Brunswick,solar_pv,c5,renewable,2020,0.17,-
+New Brunswick,solar_pv,c6,renewable,2020,0.19,-
+New Brunswick,solar_pv,c7,renewable,2020,0.22,-
+New Brunswick,solar_pv,c8,renewable,2020,1.0,-
+Newfoundland and Labrador,solar_pv,c1,renewable,2020,0.08,-
+Newfoundland and Labrador,solar_pv,c2,renewable,2020,0.1,-
+Newfoundland and Labrador,solar_pv,c3,renewable,2020,0.13,-
+Newfoundland and Labrador,solar_pv,c4,renewable,2020,0.15,-
+Newfoundland and Labrador,solar_pv,c5,renewable,2020,0.17,-
+Newfoundland and Labrador,solar_pv,c6,renewable,2020,0.19,-
+Newfoundland and Labrador,solar_pv,c7,renewable,2020,0.22,-
+Newfoundland and Labrador,solar_pv,c8,renewable,2020,1.0,-
+Nova Scotia,solar_pv,c1,renewable,2020,0.08,-
+Nova Scotia,solar_pv,c2,renewable,2020,0.1,-
+Nova Scotia,solar_pv,c3,renewable,2020,0.13,-
+Nova Scotia,solar_pv,c4,renewable,2020,0.15,-
+Nova Scotia,solar_pv,c5,renewable,2020,0.17,-
+Nova Scotia,solar_pv,c6,renewable,2020,0.19,-
+Nova Scotia,solar_pv,c7,renewable,2020,0.22,-
+Nova Scotia,solar_pv,c8,renewable,2020,1.0,-
+Prince Edward Island,solar_pv,c1,renewable,2020,0.08,-
+Prince Edward Island,solar_pv,c2,renewable,2020,0.1,-
+Prince Edward Island,solar_pv,c3,renewable,2020,0.13,-
+Prince Edward Island,solar_pv,c4,renewable,2020,0.15,-
+Prince Edward Island,solar_pv,c5,renewable,2020,0.17,-
+Prince Edward Island,solar_pv,c6,renewable,2020,0.19,-
+Prince Edward Island,solar_pv,c7,renewable,2020,0.22,-
+Prince Edward Island,solar_pv,c8,renewable,2020,1.0,-
+British Columbia,solar_pv,c1,renewable,2025,0.08,-
+British Columbia,solar_pv,c2,renewable,2025,0.1,-
+British Columbia,solar_pv,c3,renewable,2025,0.13,-
+British Columbia,solar_pv,c4,renewable,2025,0.15,-
+British Columbia,solar_pv,c5,renewable,2025,0.17,-
+British Columbia,solar_pv,c6,renewable,2025,0.19,-
+British Columbia,solar_pv,c7,renewable,2025,0.22,-
+British Columbia,solar_pv,c8,renewable,2025,1.0,-
+Alberta,solar_pv,c1,renewable,2025,0.08,-
+Alberta,solar_pv,c2,renewable,2025,0.1,-
+Alberta,solar_pv,c3,renewable,2025,0.13,-
+Alberta,solar_pv,c4,renewable,2025,0.15,-
+Alberta,solar_pv,c5,renewable,2025,0.17,-
+Alberta,solar_pv,c6,renewable,2025,0.19,-
+Alberta,solar_pv,c7,renewable,2025,0.22,-
+Alberta,solar_pv,c8,renewable,2025,1.0,-
+Saskatchewan,solar_pv,c1,renewable,2025,0.08,-
+Saskatchewan,solar_pv,c2,renewable,2025,0.1,-
+Saskatchewan,solar_pv,c3,renewable,2025,0.13,-
+Saskatchewan,solar_pv,c4,renewable,2025,0.15,-
+Saskatchewan,solar_pv,c5,renewable,2025,0.17,-
+Saskatchewan,solar_pv,c6,renewable,2025,0.19,-
+Saskatchewan,solar_pv,c7,renewable,2025,0.22,-
+Saskatchewan,solar_pv,c8,renewable,2025,1.0,-
+Manitoba,solar_pv,c1,renewable,2025,0.08,-
+Manitoba,solar_pv,c2,renewable,2025,0.1,-
+Manitoba,solar_pv,c3,renewable,2025,0.13,-
+Manitoba,solar_pv,c4,renewable,2025,0.15,-
+Manitoba,solar_pv,c5,renewable,2025,0.17,-
+Manitoba,solar_pv,c6,renewable,2025,0.19,-
+Manitoba,solar_pv,c7,renewable,2025,0.22,-
+Manitoba,solar_pv,c8,renewable,2025,1.0,-
+Ontario,solar_pv,c1,renewable,2025,0.08,-
+Ontario,solar_pv,c2,renewable,2025,0.1,-
+Ontario,solar_pv,c3,renewable,2025,0.13,-
+Ontario,solar_pv,c4,renewable,2025,0.15,-
+Ontario,solar_pv,c5,renewable,2025,0.17,-
+Ontario,solar_pv,c6,renewable,2025,0.19,-
+Ontario,solar_pv,c7,renewable,2025,0.22,-
+Ontario,solar_pv,c8,renewable,2025,1.0,-
+Quebec,solar_pv,c1,renewable,2025,0.08,-
+Quebec,solar_pv,c2,renewable,2025,0.1,-
+Quebec,solar_pv,c3,renewable,2025,0.13,-
+Quebec,solar_pv,c4,renewable,2025,0.15,-
+Quebec,solar_pv,c5,renewable,2025,0.17,-
+Quebec,solar_pv,c6,renewable,2025,0.19,-
+Quebec,solar_pv,c7,renewable,2025,0.22,-
+Quebec,solar_pv,c8,renewable,2025,1.0,-
+New Brunswick,solar_pv,c1,renewable,2025,0.08,-
+New Brunswick,solar_pv,c2,renewable,2025,0.1,-
+New Brunswick,solar_pv,c3,renewable,2025,0.13,-
+New Brunswick,solar_pv,c4,renewable,2025,0.15,-
+New Brunswick,solar_pv,c5,renewable,2025,0.17,-
+New Brunswick,solar_pv,c6,renewable,2025,0.19,-
+New Brunswick,solar_pv,c7,renewable,2025,0.22,-
+New Brunswick,solar_pv,c8,renewable,2025,1.0,-
+Newfoundland and Labrador,solar_pv,c1,renewable,2025,0.08,-
+Newfoundland and Labrador,solar_pv,c2,renewable,2025,0.1,-
+Newfoundland and Labrador,solar_pv,c3,renewable,2025,0.13,-
+Newfoundland and Labrador,solar_pv,c4,renewable,2025,0.15,-
+Newfoundland and Labrador,solar_pv,c5,renewable,2025,0.17,-
+Newfoundland and Labrador,solar_pv,c6,renewable,2025,0.19,-
+Newfoundland and Labrador,solar_pv,c7,renewable,2025,0.22,-
+Newfoundland and Labrador,solar_pv,c8,renewable,2025,1.0,-
+Nova Scotia,solar_pv,c1,renewable,2025,0.08,-
+Nova Scotia,solar_pv,c2,renewable,2025,0.1,-
+Nova Scotia,solar_pv,c3,renewable,2025,0.13,-
+Nova Scotia,solar_pv,c4,renewable,2025,0.15,-
+Nova Scotia,solar_pv,c5,renewable,2025,0.17,-
+Nova Scotia,solar_pv,c6,renewable,2025,0.19,-
+Nova Scotia,solar_pv,c7,renewable,2025,0.22,-
+Nova Scotia,solar_pv,c8,renewable,2025,1.0,-
+Prince Edward Island,solar_pv,c1,renewable,2025,0.08,-
+Prince Edward Island,solar_pv,c2,renewable,2025,0.1,-
+Prince Edward Island,solar_pv,c3,renewable,2025,0.13,-
+Prince Edward Island,solar_pv,c4,renewable,2025,0.15,-
+Prince Edward Island,solar_pv,c5,renewable,2025,0.17,-
+Prince Edward Island,solar_pv,c6,renewable,2025,0.19,-
+Prince Edward Island,solar_pv,c7,renewable,2025,0.22,-
+Prince Edward Island,solar_pv,c8,renewable,2025,1.0,-
+British Columbia,solar_pv,c1,renewable,2030,0.08,-
+British Columbia,solar_pv,c2,renewable,2030,0.1,-
+British Columbia,solar_pv,c3,renewable,2030,0.13,-
+British Columbia,solar_pv,c4,renewable,2030,0.15,-
+British Columbia,solar_pv,c5,renewable,2030,0.17,-
+British Columbia,solar_pv,c6,renewable,2030,0.19,-
+British Columbia,solar_pv,c7,renewable,2030,0.22,-
+British Columbia,solar_pv,c8,renewable,2030,1.0,-
+Alberta,solar_pv,c1,renewable,2030,0.08,-
+Alberta,solar_pv,c2,renewable,2030,0.1,-
+Alberta,solar_pv,c3,renewable,2030,0.13,-
+Alberta,solar_pv,c4,renewable,2030,0.15,-
+Alberta,solar_pv,c5,renewable,2030,0.17,-
+Alberta,solar_pv,c6,renewable,2030,0.19,-
+Alberta,solar_pv,c7,renewable,2030,0.22,-
+Alberta,solar_pv,c8,renewable,2030,1.0,-
+Saskatchewan,solar_pv,c1,renewable,2030,0.08,-
+Saskatchewan,solar_pv,c2,renewable,2030,0.1,-
+Saskatchewan,solar_pv,c3,renewable,2030,0.13,-
+Saskatchewan,solar_pv,c4,renewable,2030,0.15,-
+Saskatchewan,solar_pv,c5,renewable,2030,0.17,-
+Saskatchewan,solar_pv,c6,renewable,2030,0.19,-
+Saskatchewan,solar_pv,c7,renewable,2030,0.22,-
+Saskatchewan,solar_pv,c8,renewable,2030,1.0,-
+Manitoba,solar_pv,c1,renewable,2030,0.08,-
+Manitoba,solar_pv,c2,renewable,2030,0.1,-
+Manitoba,solar_pv,c3,renewable,2030,0.13,-
+Manitoba,solar_pv,c4,renewable,2030,0.15,-
+Manitoba,solar_pv,c5,renewable,2030,0.17,-
+Manitoba,solar_pv,c6,renewable,2030,0.19,-
+Manitoba,solar_pv,c7,renewable,2030,0.22,-
+Manitoba,solar_pv,c8,renewable,2030,1.0,-
+Ontario,solar_pv,c1,renewable,2030,0.08,-
+Ontario,solar_pv,c2,renewable,2030,0.1,-
+Ontario,solar_pv,c3,renewable,2030,0.13,-
+Ontario,solar_pv,c4,renewable,2030,0.15,-
+Ontario,solar_pv,c5,renewable,2030,0.17,-
+Ontario,solar_pv,c6,renewable,2030,0.19,-
+Ontario,solar_pv,c7,renewable,2030,0.22,-
+Ontario,solar_pv,c8,renewable,2030,1.0,-
+Quebec,solar_pv,c1,renewable,2030,0.08,-
+Quebec,solar_pv,c2,renewable,2030,0.1,-
+Quebec,solar_pv,c3,renewable,2030,0.13,-
+Quebec,solar_pv,c4,renewable,2030,0.15,-
+Quebec,solar_pv,c5,renewable,2030,0.17,-
+Quebec,solar_pv,c6,renewable,2030,0.19,-
+Quebec,solar_pv,c7,renewable,2030,0.22,-
+Quebec,solar_pv,c8,renewable,2030,1.0,-
+New Brunswick,solar_pv,c1,renewable,2030,0.08,-
+New Brunswick,solar_pv,c2,renewable,2030,0.1,-
+New Brunswick,solar_pv,c3,renewable,2030,0.13,-
+New Brunswick,solar_pv,c4,renewable,2030,0.15,-
+New Brunswick,solar_pv,c5,renewable,2030,0.17,-
+New Brunswick,solar_pv,c6,renewable,2030,0.19,-
+New Brunswick,solar_pv,c7,renewable,2030,0.22,-
+New Brunswick,solar_pv,c8,renewable,2030,1.0,-
+Newfoundland and Labrador,solar_pv,c1,renewable,2030,0.08,-
+Newfoundland and Labrador,solar_pv,c2,renewable,2030,0.1,-
+Newfoundland and Labrador,solar_pv,c3,renewable,2030,0.13,-
+Newfoundland and Labrador,solar_pv,c4,renewable,2030,0.15,-
+Newfoundland and Labrador,solar_pv,c5,renewable,2030,0.17,-
+Newfoundland and Labrador,solar_pv,c6,renewable,2030,0.19,-
+Newfoundland and Labrador,solar_pv,c7,renewable,2030,0.22,-
+Newfoundland and Labrador,solar_pv,c8,renewable,2030,1.0,-
+Nova Scotia,solar_pv,c1,renewable,2030,0.08,-
+Nova Scotia,solar_pv,c2,renewable,2030,0.1,-
+Nova Scotia,solar_pv,c3,renewable,2030,0.13,-
+Nova Scotia,solar_pv,c4,renewable,2030,0.15,-
+Nova Scotia,solar_pv,c5,renewable,2030,0.17,-
+Nova Scotia,solar_pv,c6,renewable,2030,0.19,-
+Nova Scotia,solar_pv,c7,renewable,2030,0.22,-
+Nova Scotia,solar_pv,c8,renewable,2030,1.0,-
+Prince Edward Island,solar_pv,c1,renewable,2030,0.08,-
+Prince Edward Island,solar_pv,c2,renewable,2030,0.1,-
+Prince Edward Island,solar_pv,c3,renewable,2030,0.13,-
+Prince Edward Island,solar_pv,c4,renewable,2030,0.15,-
+Prince Edward Island,solar_pv,c5,renewable,2030,0.17,-
+Prince Edward Island,solar_pv,c6,renewable,2030,0.19,-
+Prince Edward Island,solar_pv,c7,renewable,2030,0.22,-
+Prince Edward Island,solar_pv,c8,renewable,2030,1.0,-
+British Columbia,solar_pv,c1,renewable,2035,0.08,-
+British Columbia,solar_pv,c2,renewable,2035,0.1,-
+British Columbia,solar_pv,c3,renewable,2035,0.13,-
+British Columbia,solar_pv,c4,renewable,2035,0.15,-
+British Columbia,solar_pv,c5,renewable,2035,0.17,-
+British Columbia,solar_pv,c6,renewable,2035,0.19,-
+British Columbia,solar_pv,c7,renewable,2035,0.22,-
+British Columbia,solar_pv,c8,renewable,2035,1.0,-
+Alberta,solar_pv,c1,renewable,2035,0.08,-
+Alberta,solar_pv,c2,renewable,2035,0.1,-
+Alberta,solar_pv,c3,renewable,2035,0.13,-
+Alberta,solar_pv,c4,renewable,2035,0.15,-
+Alberta,solar_pv,c5,renewable,2035,0.17,-
+Alberta,solar_pv,c6,renewable,2035,0.19,-
+Alberta,solar_pv,c7,renewable,2035,0.22,-
+Alberta,solar_pv,c8,renewable,2035,1.0,-
+Saskatchewan,solar_pv,c1,renewable,2035,0.08,-
+Saskatchewan,solar_pv,c2,renewable,2035,0.1,-
+Saskatchewan,solar_pv,c3,renewable,2035,0.13,-
+Saskatchewan,solar_pv,c4,renewable,2035,0.15,-
+Saskatchewan,solar_pv,c5,renewable,2035,0.17,-
+Saskatchewan,solar_pv,c6,renewable,2035,0.19,-
+Saskatchewan,solar_pv,c7,renewable,2035,0.22,-
+Saskatchewan,solar_pv,c8,renewable,2035,1.0,-
+Manitoba,solar_pv,c1,renewable,2035,0.08,-
+Manitoba,solar_pv,c2,renewable,2035,0.1,-
+Manitoba,solar_pv,c3,renewable,2035,0.13,-
+Manitoba,solar_pv,c4,renewable,2035,0.15,-
+Manitoba,solar_pv,c5,renewable,2035,0.17,-
+Manitoba,solar_pv,c6,renewable,2035,0.19,-
+Manitoba,solar_pv,c7,renewable,2035,0.22,-
+Manitoba,solar_pv,c8,renewable,2035,1.0,-
+Ontario,solar_pv,c1,renewable,2035,0.08,-
+Ontario,solar_pv,c2,renewable,2035,0.1,-
+Ontario,solar_pv,c3,renewable,2035,0.13,-
+Ontario,solar_pv,c4,renewable,2035,0.15,-
+Ontario,solar_pv,c5,renewable,2035,0.17,-
+Ontario,solar_pv,c6,renewable,2035,0.19,-
+Ontario,solar_pv,c7,renewable,2035,0.22,-
+Ontario,solar_pv,c8,renewable,2035,1.0,-
+Quebec,solar_pv,c1,renewable,2035,0.08,-
+Quebec,solar_pv,c2,renewable,2035,0.1,-
+Quebec,solar_pv,c3,renewable,2035,0.13,-
+Quebec,solar_pv,c4,renewable,2035,0.15,-
+Quebec,solar_pv,c5,renewable,2035,0.17,-
+Quebec,solar_pv,c6,renewable,2035,0.19,-
+Quebec,solar_pv,c7,renewable,2035,0.22,-
+Quebec,solar_pv,c8,renewable,2035,1.0,-
+New Brunswick,solar_pv,c1,renewable,2035,0.08,-
+New Brunswick,solar_pv,c2,renewable,2035,0.1,-
+New Brunswick,solar_pv,c3,renewable,2035,0.13,-
+New Brunswick,solar_pv,c4,renewable,2035,0.15,-
+New Brunswick,solar_pv,c5,renewable,2035,0.17,-
+New Brunswick,solar_pv,c6,renewable,2035,0.19,-
+New Brunswick,solar_pv,c7,renewable,2035,0.22,-
+New Brunswick,solar_pv,c8,renewable,2035,1.0,-
+Newfoundland and Labrador,solar_pv,c1,renewable,2035,0.08,-
+Newfoundland and Labrador,solar_pv,c2,renewable,2035,0.1,-
+Newfoundland and Labrador,solar_pv,c3,renewable,2035,0.13,-
+Newfoundland and Labrador,solar_pv,c4,renewable,2035,0.15,-
+Newfoundland and Labrador,solar_pv,c5,renewable,2035,0.17,-
+Newfoundland and Labrador,solar_pv,c6,renewable,2035,0.19,-
+Newfoundland and Labrador,solar_pv,c7,renewable,2035,0.22,-
+Newfoundland and Labrador,solar_pv,c8,renewable,2035,1.0,-
+Nova Scotia,solar_pv,c1,renewable,2035,0.08,-
+Nova Scotia,solar_pv,c2,renewable,2035,0.1,-
+Nova Scotia,solar_pv,c3,renewable,2035,0.13,-
+Nova Scotia,solar_pv,c4,renewable,2035,0.15,-
+Nova Scotia,solar_pv,c5,renewable,2035,0.17,-
+Nova Scotia,solar_pv,c6,renewable,2035,0.19,-
+Nova Scotia,solar_pv,c7,renewable,2035,0.22,-
+Nova Scotia,solar_pv,c8,renewable,2035,1.0,-
+Prince Edward Island,solar_pv,c1,renewable,2035,0.08,-
+Prince Edward Island,solar_pv,c2,renewable,2035,0.1,-
+Prince Edward Island,solar_pv,c3,renewable,2035,0.13,-
+Prince Edward Island,solar_pv,c4,renewable,2035,0.15,-
+Prince Edward Island,solar_pv,c5,renewable,2035,0.17,-
+Prince Edward Island,solar_pv,c6,renewable,2035,0.19,-
+Prince Edward Island,solar_pv,c7,renewable,2035,0.22,-
+Prince Edward Island,solar_pv,c8,renewable,2035,1.0,-
+British Columbia,solar_pv,c1,renewable,2040,0.08,-
+British Columbia,solar_pv,c2,renewable,2040,0.1,-
+British Columbia,solar_pv,c3,renewable,2040,0.13,-
+British Columbia,solar_pv,c4,renewable,2040,0.15,-
+British Columbia,solar_pv,c5,renewable,2040,0.17,-
+British Columbia,solar_pv,c6,renewable,2040,0.19,-
+British Columbia,solar_pv,c7,renewable,2040,0.22,-
+British Columbia,solar_pv,c8,renewable,2040,1.0,-
+Alberta,solar_pv,c1,renewable,2040,0.08,-
+Alberta,solar_pv,c2,renewable,2040,0.1,-
+Alberta,solar_pv,c3,renewable,2040,0.13,-
+Alberta,solar_pv,c4,renewable,2040,0.15,-
+Alberta,solar_pv,c5,renewable,2040,0.17,-
+Alberta,solar_pv,c6,renewable,2040,0.19,-
+Alberta,solar_pv,c7,renewable,2040,0.22,-
+Alberta,solar_pv,c8,renewable,2040,1.0,-
+Saskatchewan,solar_pv,c1,renewable,2040,0.08,-
+Saskatchewan,solar_pv,c2,renewable,2040,0.1,-
+Saskatchewan,solar_pv,c3,renewable,2040,0.13,-
+Saskatchewan,solar_pv,c4,renewable,2040,0.15,-
+Saskatchewan,solar_pv,c5,renewable,2040,0.17,-
+Saskatchewan,solar_pv,c6,renewable,2040,0.19,-
+Saskatchewan,solar_pv,c7,renewable,2040,0.22,-
+Saskatchewan,solar_pv,c8,renewable,2040,1.0,-
+Manitoba,solar_pv,c1,renewable,2040,0.08,-
+Manitoba,solar_pv,c2,renewable,2040,0.1,-
+Manitoba,solar_pv,c3,renewable,2040,0.13,-
+Manitoba,solar_pv,c4,renewable,2040,0.15,-
+Manitoba,solar_pv,c5,renewable,2040,0.17,-
+Manitoba,solar_pv,c6,renewable,2040,0.19,-
+Manitoba,solar_pv,c7,renewable,2040,0.22,-
+Manitoba,solar_pv,c8,renewable,2040,1.0,-
+Ontario,solar_pv,c1,renewable,2040,0.08,-
+Ontario,solar_pv,c2,renewable,2040,0.1,-
+Ontario,solar_pv,c3,renewable,2040,0.13,-
+Ontario,solar_pv,c4,renewable,2040,0.15,-
+Ontario,solar_pv,c5,renewable,2040,0.17,-
+Ontario,solar_pv,c6,renewable,2040,0.19,-
+Ontario,solar_pv,c7,renewable,2040,0.22,-
+Ontario,solar_pv,c8,renewable,2040,1.0,-
+Quebec,solar_pv,c1,renewable,2040,0.08,-
+Quebec,solar_pv,c2,renewable,2040,0.1,-
+Quebec,solar_pv,c3,renewable,2040,0.13,-
+Quebec,solar_pv,c4,renewable,2040,0.15,-
+Quebec,solar_pv,c5,renewable,2040,0.17,-
+Quebec,solar_pv,c6,renewable,2040,0.19,-
+Quebec,solar_pv,c7,renewable,2040,0.22,-
+Quebec,solar_pv,c8,renewable,2040,1.0,-
+New Brunswick,solar_pv,c1,renewable,2040,0.08,-
+New Brunswick,solar_pv,c2,renewable,2040,0.1,-
+New Brunswick,solar_pv,c3,renewable,2040,0.13,-
+New Brunswick,solar_pv,c4,renewable,2040,0.15,-
+New Brunswick,solar_pv,c5,renewable,2040,0.17,-
+New Brunswick,solar_pv,c6,renewable,2040,0.19,-
+New Brunswick,solar_pv,c7,renewable,2040,0.22,-
+New Brunswick,solar_pv,c8,renewable,2040,1.0,-
+Newfoundland and Labrador,solar_pv,c1,renewable,2040,0.08,-
+Newfoundland and Labrador,solar_pv,c2,renewable,2040,0.1,-
+Newfoundland and Labrador,solar_pv,c3,renewable,2040,0.13,-
+Newfoundland and Labrador,solar_pv,c4,renewable,2040,0.15,-
+Newfoundland and Labrador,solar_pv,c5,renewable,2040,0.17,-
+Newfoundland and Labrador,solar_pv,c6,renewable,2040,0.19,-
+Newfoundland and Labrador,solar_pv,c7,renewable,2040,0.22,-
+Newfoundland and Labrador,solar_pv,c8,renewable,2040,1.0,-
+Nova Scotia,solar_pv,c1,renewable,2040,0.08,-
+Nova Scotia,solar_pv,c2,renewable,2040,0.1,-
+Nova Scotia,solar_pv,c3,renewable,2040,0.13,-
+Nova Scotia,solar_pv,c4,renewable,2040,0.15,-
+Nova Scotia,solar_pv,c5,renewable,2040,0.17,-
+Nova Scotia,solar_pv,c6,renewable,2040,0.19,-
+Nova Scotia,solar_pv,c7,renewable,2040,0.22,-
+Nova Scotia,solar_pv,c8,renewable,2040,1.0,-
+Prince Edward Island,solar_pv,c1,renewable,2040,0.08,-
+Prince Edward Island,solar_pv,c2,renewable,2040,0.1,-
+Prince Edward Island,solar_pv,c3,renewable,2040,0.13,-
+Prince Edward Island,solar_pv,c4,renewable,2040,0.15,-
+Prince Edward Island,solar_pv,c5,renewable,2040,0.17,-
+Prince Edward Island,solar_pv,c6,renewable,2040,0.19,-
+Prince Edward Island,solar_pv,c7,renewable,2040,0.22,-
+Prince Edward Island,solar_pv,c8,renewable,2040,1.0,-
+British Columbia,solar_pv,c1,renewable,2045,0.08,-
+British Columbia,solar_pv,c2,renewable,2045,0.1,-
+British Columbia,solar_pv,c3,renewable,2045,0.13,-
+British Columbia,solar_pv,c4,renewable,2045,0.15,-
+British Columbia,solar_pv,c5,renewable,2045,0.17,-
+British Columbia,solar_pv,c6,renewable,2045,0.19,-
+British Columbia,solar_pv,c7,renewable,2045,0.22,-
+British Columbia,solar_pv,c8,renewable,2045,1.0,-
+Alberta,solar_pv,c1,renewable,2045,0.08,-
+Alberta,solar_pv,c2,renewable,2045,0.1,-
+Alberta,solar_pv,c3,renewable,2045,0.13,-
+Alberta,solar_pv,c4,renewable,2045,0.15,-
+Alberta,solar_pv,c5,renewable,2045,0.17,-
+Alberta,solar_pv,c6,renewable,2045,0.19,-
+Alberta,solar_pv,c7,renewable,2045,0.22,-
+Alberta,solar_pv,c8,renewable,2045,1.0,-
+Saskatchewan,solar_pv,c1,renewable,2045,0.08,-
+Saskatchewan,solar_pv,c2,renewable,2045,0.1,-
+Saskatchewan,solar_pv,c3,renewable,2045,0.13,-
+Saskatchewan,solar_pv,c4,renewable,2045,0.15,-
+Saskatchewan,solar_pv,c5,renewable,2045,0.17,-
+Saskatchewan,solar_pv,c6,renewable,2045,0.19,-
+Saskatchewan,solar_pv,c7,renewable,2045,0.22,-
+Saskatchewan,solar_pv,c8,renewable,2045,1.0,-
+Manitoba,solar_pv,c1,renewable,2045,0.08,-
+Manitoba,solar_pv,c2,renewable,2045,0.1,-
+Manitoba,solar_pv,c3,renewable,2045,0.13,-
+Manitoba,solar_pv,c4,renewable,2045,0.15,-
+Manitoba,solar_pv,c5,renewable,2045,0.17,-
+Manitoba,solar_pv,c6,renewable,2045,0.19,-
+Manitoba,solar_pv,c7,renewable,2045,0.22,-
+Manitoba,solar_pv,c8,renewable,2045,1.0,-
+Ontario,solar_pv,c1,renewable,2045,0.08,-
+Ontario,solar_pv,c2,renewable,2045,0.1,-
+Ontario,solar_pv,c3,renewable,2045,0.13,-
+Ontario,solar_pv,c4,renewable,2045,0.15,-
+Ontario,solar_pv,c5,renewable,2045,0.17,-
+Ontario,solar_pv,c6,renewable,2045,0.19,-
+Ontario,solar_pv,c7,renewable,2045,0.22,-
+Ontario,solar_pv,c8,renewable,2045,1.0,-
+Quebec,solar_pv,c1,renewable,2045,0.08,-
+Quebec,solar_pv,c2,renewable,2045,0.1,-
+Quebec,solar_pv,c3,renewable,2045,0.13,-
+Quebec,solar_pv,c4,renewable,2045,0.15,-
+Quebec,solar_pv,c5,renewable,2045,0.17,-
+Quebec,solar_pv,c6,renewable,2045,0.19,-
+Quebec,solar_pv,c7,renewable,2045,0.22,-
+Quebec,solar_pv,c8,renewable,2045,1.0,-
+New Brunswick,solar_pv,c1,renewable,2045,0.08,-
+New Brunswick,solar_pv,c2,renewable,2045,0.1,-
+New Brunswick,solar_pv,c3,renewable,2045,0.13,-
+New Brunswick,solar_pv,c4,renewable,2045,0.15,-
+New Brunswick,solar_pv,c5,renewable,2045,0.17,-
+New Brunswick,solar_pv,c6,renewable,2045,0.19,-
+New Brunswick,solar_pv,c7,renewable,2045,0.22,-
+New Brunswick,solar_pv,c8,renewable,2045,1.0,-
+Newfoundland and Labrador,solar_pv,c1,renewable,2045,0.08,-
+Newfoundland and Labrador,solar_pv,c2,renewable,2045,0.1,-
+Newfoundland and Labrador,solar_pv,c3,renewable,2045,0.13,-
+Newfoundland and Labrador,solar_pv,c4,renewable,2045,0.15,-
+Newfoundland and Labrador,solar_pv,c5,renewable,2045,0.17,-
+Newfoundland and Labrador,solar_pv,c6,renewable,2045,0.19,-
+Newfoundland and Labrador,solar_pv,c7,renewable,2045,0.22,-
+Newfoundland and Labrador,solar_pv,c8,renewable,2045,1.0,-
+Nova Scotia,solar_pv,c1,renewable,2045,0.08,-
+Nova Scotia,solar_pv,c2,renewable,2045,0.1,-
+Nova Scotia,solar_pv,c3,renewable,2045,0.13,-
+Nova Scotia,solar_pv,c4,renewable,2045,0.15,-
+Nova Scotia,solar_pv,c5,renewable,2045,0.17,-
+Nova Scotia,solar_pv,c6,renewable,2045,0.19,-
+Nova Scotia,solar_pv,c7,renewable,2045,0.22,-
+Nova Scotia,solar_pv,c8,renewable,2045,1.0,-
+Prince Edward Island,solar_pv,c1,renewable,2045,0.08,-
+Prince Edward Island,solar_pv,c2,renewable,2045,0.1,-
+Prince Edward Island,solar_pv,c3,renewable,2045,0.13,-
+Prince Edward Island,solar_pv,c4,renewable,2045,0.15,-
+Prince Edward Island,solar_pv,c5,renewable,2045,0.17,-
+Prince Edward Island,solar_pv,c6,renewable,2045,0.19,-
+Prince Edward Island,solar_pv,c7,renewable,2045,0.22,-
+Prince Edward Island,solar_pv,c8,renewable,2045,1.0,-
+British Columbia,solar_pv,c1,renewable,2050,0.08,-
+British Columbia,solar_pv,c2,renewable,2050,0.1,-
+British Columbia,solar_pv,c3,renewable,2050,0.13,-
+British Columbia,solar_pv,c4,renewable,2050,0.15,-
+British Columbia,solar_pv,c5,renewable,2050,0.17,-
+British Columbia,solar_pv,c6,renewable,2050,0.19,-
+British Columbia,solar_pv,c7,renewable,2050,0.22,-
+British Columbia,solar_pv,c8,renewable,2050,1.0,-
+Alberta,solar_pv,c1,renewable,2050,0.08,-
+Alberta,solar_pv,c2,renewable,2050,0.1,-
+Alberta,solar_pv,c3,renewable,2050,0.13,-
+Alberta,solar_pv,c4,renewable,2050,0.15,-
+Alberta,solar_pv,c5,renewable,2050,0.17,-
+Alberta,solar_pv,c6,renewable,2050,0.19,-
+Alberta,solar_pv,c7,renewable,2050,0.22,-
+Alberta,solar_pv,c8,renewable,2050,1.0,-
+Saskatchewan,solar_pv,c1,renewable,2050,0.08,-
+Saskatchewan,solar_pv,c2,renewable,2050,0.1,-
+Saskatchewan,solar_pv,c3,renewable,2050,0.13,-
+Saskatchewan,solar_pv,c4,renewable,2050,0.15,-
+Saskatchewan,solar_pv,c5,renewable,2050,0.17,-
+Saskatchewan,solar_pv,c6,renewable,2050,0.19,-
+Saskatchewan,solar_pv,c7,renewable,2050,0.22,-
+Saskatchewan,solar_pv,c8,renewable,2050,1.0,-
+Manitoba,solar_pv,c1,renewable,2050,0.08,-
+Manitoba,solar_pv,c2,renewable,2050,0.1,-
+Manitoba,solar_pv,c3,renewable,2050,0.13,-
+Manitoba,solar_pv,c4,renewable,2050,0.15,-
+Manitoba,solar_pv,c5,renewable,2050,0.17,-
+Manitoba,solar_pv,c6,renewable,2050,0.19,-
+Manitoba,solar_pv,c7,renewable,2050,0.22,-
+Manitoba,solar_pv,c8,renewable,2050,1.0,-
+Ontario,solar_pv,c1,renewable,2050,0.08,-
+Ontario,solar_pv,c2,renewable,2050,0.1,-
+Ontario,solar_pv,c3,renewable,2050,0.13,-
+Ontario,solar_pv,c4,renewable,2050,0.15,-
+Ontario,solar_pv,c5,renewable,2050,0.17,-
+Ontario,solar_pv,c6,renewable,2050,0.19,-
+Ontario,solar_pv,c7,renewable,2050,0.22,-
+Ontario,solar_pv,c8,renewable,2050,1.0,-
+Quebec,solar_pv,c1,renewable,2050,0.08,-
+Quebec,solar_pv,c2,renewable,2050,0.1,-
+Quebec,solar_pv,c3,renewable,2050,0.13,-
+Quebec,solar_pv,c4,renewable,2050,0.15,-
+Quebec,solar_pv,c5,renewable,2050,0.17,-
+Quebec,solar_pv,c6,renewable,2050,0.19,-
+Quebec,solar_pv,c7,renewable,2050,0.22,-
+Quebec,solar_pv,c8,renewable,2050,1.0,-
+New Brunswick,solar_pv,c1,renewable,2050,0.08,-
+New Brunswick,solar_pv,c2,renewable,2050,0.1,-
+New Brunswick,solar_pv,c3,renewable,2050,0.13,-
+New Brunswick,solar_pv,c4,renewable,2050,0.15,-
+New Brunswick,solar_pv,c5,renewable,2050,0.17,-
+New Brunswick,solar_pv,c6,renewable,2050,0.19,-
+New Brunswick,solar_pv,c7,renewable,2050,0.22,-
+New Brunswick,solar_pv,c8,renewable,2050,1.0,-
+Newfoundland and Labrador,solar_pv,c1,renewable,2050,0.08,-
+Newfoundland and Labrador,solar_pv,c2,renewable,2050,0.1,-
+Newfoundland and Labrador,solar_pv,c3,renewable,2050,0.13,-
+Newfoundland and Labrador,solar_pv,c4,renewable,2050,0.15,-
+Newfoundland and Labrador,solar_pv,c5,renewable,2050,0.17,-
+Newfoundland and Labrador,solar_pv,c6,renewable,2050,0.19,-
+Newfoundland and Labrador,solar_pv,c7,renewable,2050,0.22,-
+Newfoundland and Labrador,solar_pv,c8,renewable,2050,1.0,-
+Nova Scotia,solar_pv,c1,renewable,2050,0.08,-
+Nova Scotia,solar_pv,c2,renewable,2050,0.1,-
+Nova Scotia,solar_pv,c3,renewable,2050,0.13,-
+Nova Scotia,solar_pv,c4,renewable,2050,0.15,-
+Nova Scotia,solar_pv,c5,renewable,2050,0.17,-
+Nova Scotia,solar_pv,c6,renewable,2050,0.19,-
+Nova Scotia,solar_pv,c7,renewable,2050,0.22,-
+Nova Scotia,solar_pv,c8,renewable,2050,1.0,-
+Prince Edward Island,solar_pv,c1,renewable,2050,0.08,-
+Prince Edward Island,solar_pv,c2,renewable,2050,0.1,-
+Prince Edward Island,solar_pv,c3,renewable,2050,0.13,-
+Prince Edward Island,solar_pv,c4,renewable,2050,0.15,-
+Prince Edward Island,solar_pv,c5,renewable,2050,0.17,-
+Prince Edward Island,solar_pv,c6,renewable,2050,0.19,-
+Prince Edward Island,solar_pv,c7,renewable,2050,0.22,-
+Prince Edward Island,solar_pv,c8,renewable,2050,1.0,-
+British Columbia,solar_pv,c1,renewable,2055,0.08,-
+British Columbia,solar_pv,c2,renewable,2055,0.1,-
+British Columbia,solar_pv,c3,renewable,2055,0.13,-
+British Columbia,solar_pv,c4,renewable,2055,0.15,-
+British Columbia,solar_pv,c5,renewable,2055,0.17,-
+British Columbia,solar_pv,c6,renewable,2055,0.19,-
+British Columbia,solar_pv,c7,renewable,2055,0.22,-
+British Columbia,solar_pv,c8,renewable,2055,1.0,-
+Alberta,solar_pv,c1,renewable,2055,0.08,-
+Alberta,solar_pv,c2,renewable,2055,0.1,-
+Alberta,solar_pv,c3,renewable,2055,0.13,-
+Alberta,solar_pv,c4,renewable,2055,0.15,-
+Alberta,solar_pv,c5,renewable,2055,0.17,-
+Alberta,solar_pv,c6,renewable,2055,0.19,-
+Alberta,solar_pv,c7,renewable,2055,0.22,-
+Alberta,solar_pv,c8,renewable,2055,1.0,-
+Saskatchewan,solar_pv,c1,renewable,2055,0.08,-
+Saskatchewan,solar_pv,c2,renewable,2055,0.1,-
+Saskatchewan,solar_pv,c3,renewable,2055,0.13,-
+Saskatchewan,solar_pv,c4,renewable,2055,0.15,-
+Saskatchewan,solar_pv,c5,renewable,2055,0.17,-
+Saskatchewan,solar_pv,c6,renewable,2055,0.19,-
+Saskatchewan,solar_pv,c7,renewable,2055,0.22,-
+Saskatchewan,solar_pv,c8,renewable,2055,1.0,-
+Manitoba,solar_pv,c1,renewable,2055,0.08,-
+Manitoba,solar_pv,c2,renewable,2055,0.1,-
+Manitoba,solar_pv,c3,renewable,2055,0.13,-
+Manitoba,solar_pv,c4,renewable,2055,0.15,-
+Manitoba,solar_pv,c5,renewable,2055,0.17,-
+Manitoba,solar_pv,c6,renewable,2055,0.19,-
+Manitoba,solar_pv,c7,renewable,2055,0.22,-
+Manitoba,solar_pv,c8,renewable,2055,1.0,-
+Ontario,solar_pv,c1,renewable,2055,0.08,-
+Ontario,solar_pv,c2,renewable,2055,0.1,-
+Ontario,solar_pv,c3,renewable,2055,0.13,-
+Ontario,solar_pv,c4,renewable,2055,0.15,-
+Ontario,solar_pv,c5,renewable,2055,0.17,-
+Ontario,solar_pv,c6,renewable,2055,0.19,-
+Ontario,solar_pv,c7,renewable,2055,0.22,-
+Ontario,solar_pv,c8,renewable,2055,1.0,-
+Quebec,solar_pv,c1,renewable,2055,0.08,-
+Quebec,solar_pv,c2,renewable,2055,0.1,-
+Quebec,solar_pv,c3,renewable,2055,0.13,-
+Quebec,solar_pv,c4,renewable,2055,0.15,-
+Quebec,solar_pv,c5,renewable,2055,0.17,-
+Quebec,solar_pv,c6,renewable,2055,0.19,-
+Quebec,solar_pv,c7,renewable,2055,0.22,-
+Quebec,solar_pv,c8,renewable,2055,1.0,-
+New Brunswick,solar_pv,c1,renewable,2055,0.08,-
+New Brunswick,solar_pv,c2,renewable,2055,0.1,-
+New Brunswick,solar_pv,c3,renewable,2055,0.13,-
+New Brunswick,solar_pv,c4,renewable,2055,0.15,-
+New Brunswick,solar_pv,c5,renewable,2055,0.17,-
+New Brunswick,solar_pv,c6,renewable,2055,0.19,-
+New Brunswick,solar_pv,c7,renewable,2055,0.22,-
+New Brunswick,solar_pv,c8,renewable,2055,1.0,-
+Newfoundland and Labrador,solar_pv,c1,renewable,2055,0.08,-
+Newfoundland and Labrador,solar_pv,c2,renewable,2055,0.1,-
+Newfoundland and Labrador,solar_pv,c3,renewable,2055,0.13,-
+Newfoundland and Labrador,solar_pv,c4,renewable,2055,0.15,-
+Newfoundland and Labrador,solar_pv,c5,renewable,2055,0.17,-
+Newfoundland and Labrador,solar_pv,c6,renewable,2055,0.19,-
+Newfoundland and Labrador,solar_pv,c7,renewable,2055,0.22,-
+Newfoundland and Labrador,solar_pv,c8,renewable,2055,1.0,-
+Nova Scotia,solar_pv,c1,renewable,2055,0.08,-
+Nova Scotia,solar_pv,c2,renewable,2055,0.1,-
+Nova Scotia,solar_pv,c3,renewable,2055,0.13,-
+Nova Scotia,solar_pv,c4,renewable,2055,0.15,-
+Nova Scotia,solar_pv,c5,renewable,2055,0.17,-
+Nova Scotia,solar_pv,c6,renewable,2055,0.19,-
+Nova Scotia,solar_pv,c7,renewable,2055,0.22,-
+Nova Scotia,solar_pv,c8,renewable,2055,1.0,-
+Prince Edward Island,solar_pv,c1,renewable,2055,0.08,-
+Prince Edward Island,solar_pv,c2,renewable,2055,0.1,-
+Prince Edward Island,solar_pv,c3,renewable,2055,0.13,-
+Prince Edward Island,solar_pv,c4,renewable,2055,0.15,-
+Prince Edward Island,solar_pv,c5,renewable,2055,0.17,-
+Prince Edward Island,solar_pv,c6,renewable,2055,0.19,-
+Prince Edward Island,solar_pv,c7,renewable,2055,0.22,-
+Prince Edward Island,solar_pv,c8,renewable,2055,1.0,-
+British Columbia,solar_pv,c1,renewable,2060,0.08,-
+British Columbia,solar_pv,c2,renewable,2060,0.1,-
+British Columbia,solar_pv,c3,renewable,2060,0.13,-
+British Columbia,solar_pv,c4,renewable,2060,0.15,-
+British Columbia,solar_pv,c5,renewable,2060,0.17,-
+British Columbia,solar_pv,c6,renewable,2060,0.19,-
+British Columbia,solar_pv,c7,renewable,2060,0.22,-
+British Columbia,solar_pv,c8,renewable,2060,1.0,-
+Alberta,solar_pv,c1,renewable,2060,0.08,-
+Alberta,solar_pv,c2,renewable,2060,0.1,-
+Alberta,solar_pv,c3,renewable,2060,0.13,-
+Alberta,solar_pv,c4,renewable,2060,0.15,-
+Alberta,solar_pv,c5,renewable,2060,0.17,-
+Alberta,solar_pv,c6,renewable,2060,0.19,-
+Alberta,solar_pv,c7,renewable,2060,0.22,-
+Alberta,solar_pv,c8,renewable,2060,1.0,-
+Saskatchewan,solar_pv,c1,renewable,2060,0.08,-
+Saskatchewan,solar_pv,c2,renewable,2060,0.1,-
+Saskatchewan,solar_pv,c3,renewable,2060,0.13,-
+Saskatchewan,solar_pv,c4,renewable,2060,0.15,-
+Saskatchewan,solar_pv,c5,renewable,2060,0.17,-
+Saskatchewan,solar_pv,c6,renewable,2060,0.19,-
+Saskatchewan,solar_pv,c7,renewable,2060,0.22,-
+Saskatchewan,solar_pv,c8,renewable,2060,1.0,-
+Manitoba,solar_pv,c1,renewable,2060,0.08,-
+Manitoba,solar_pv,c2,renewable,2060,0.1,-
+Manitoba,solar_pv,c3,renewable,2060,0.13,-
+Manitoba,solar_pv,c4,renewable,2060,0.15,-
+Manitoba,solar_pv,c5,renewable,2060,0.17,-
+Manitoba,solar_pv,c6,renewable,2060,0.19,-
+Manitoba,solar_pv,c7,renewable,2060,0.22,-
+Manitoba,solar_pv,c8,renewable,2060,1.0,-
+Ontario,solar_pv,c1,renewable,2060,0.08,-
+Ontario,solar_pv,c2,renewable,2060,0.1,-
+Ontario,solar_pv,c3,renewable,2060,0.13,-
+Ontario,solar_pv,c4,renewable,2060,0.15,-
+Ontario,solar_pv,c5,renewable,2060,0.17,-
+Ontario,solar_pv,c6,renewable,2060,0.19,-
+Ontario,solar_pv,c7,renewable,2060,0.22,-
+Ontario,solar_pv,c8,renewable,2060,1.0,-
+Quebec,solar_pv,c1,renewable,2060,0.08,-
+Quebec,solar_pv,c2,renewable,2060,0.1,-
+Quebec,solar_pv,c3,renewable,2060,0.13,-
+Quebec,solar_pv,c4,renewable,2060,0.15,-
+Quebec,solar_pv,c5,renewable,2060,0.17,-
+Quebec,solar_pv,c6,renewable,2060,0.19,-
+Quebec,solar_pv,c7,renewable,2060,0.22,-
+Quebec,solar_pv,c8,renewable,2060,1.0,-
+New Brunswick,solar_pv,c1,renewable,2060,0.08,-
+New Brunswick,solar_pv,c2,renewable,2060,0.1,-
+New Brunswick,solar_pv,c3,renewable,2060,0.13,-
+New Brunswick,solar_pv,c4,renewable,2060,0.15,-
+New Brunswick,solar_pv,c5,renewable,2060,0.17,-
+New Brunswick,solar_pv,c6,renewable,2060,0.19,-
+New Brunswick,solar_pv,c7,renewable,2060,0.22,-
+New Brunswick,solar_pv,c8,renewable,2060,1.0,-
+Newfoundland and Labrador,solar_pv,c1,renewable,2060,0.08,-
+Newfoundland and Labrador,solar_pv,c2,renewable,2060,0.1,-
+Newfoundland and Labrador,solar_pv,c3,renewable,2060,0.13,-
+Newfoundland and Labrador,solar_pv,c4,renewable,2060,0.15,-
+Newfoundland and Labrador,solar_pv,c5,renewable,2060,0.17,-
+Newfoundland and Labrador,solar_pv,c6,renewable,2060,0.19,-
+Newfoundland and Labrador,solar_pv,c7,renewable,2060,0.22,-
+Newfoundland and Labrador,solar_pv,c8,renewable,2060,1.0,-
+Nova Scotia,solar_pv,c1,renewable,2060,0.08,-
+Nova Scotia,solar_pv,c2,renewable,2060,0.1,-
+Nova Scotia,solar_pv,c3,renewable,2060,0.13,-
+Nova Scotia,solar_pv,c4,renewable,2060,0.15,-
+Nova Scotia,solar_pv,c5,renewable,2060,0.17,-
+Nova Scotia,solar_pv,c6,renewable,2060,0.19,-
+Nova Scotia,solar_pv,c7,renewable,2060,0.22,-
+Nova Scotia,solar_pv,c8,renewable,2060,1.0,-
+Prince Edward Island,solar_pv,c1,renewable,2060,0.08,-
+Prince Edward Island,solar_pv,c2,renewable,2060,0.1,-
+Prince Edward Island,solar_pv,c3,renewable,2060,0.13,-
+Prince Edward Island,solar_pv,c4,renewable,2060,0.15,-
+Prince Edward Island,solar_pv,c5,renewable,2060,0.17,-
+Prince Edward Island,solar_pv,c6,renewable,2060,0.19,-
+Prince Edward Island,solar_pv,c7,renewable,2060,0.22,-
+Prince Edward Island,solar_pv,c8,renewable,2060,1.0,-
