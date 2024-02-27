@@ -1,0 +1,91 @@
+node,commodity,level,year,time,value,unit
+Alberta,electr,useful,2020,year,83114,MWa
+British Columbia,electr,useful,2020,year,56113,MWa
+New Brunswick,electr,useful,2020,year,13953,MWa
+Newfoundland and Labrador,electr,useful,2020,year,10786,MWa
+Nova Scotia,electr,useful,2020,year,11350,MWa
+Ontario,electr,useful,2020,year,132225,MWa
+Quebec,electr,useful,2020,year,188000,MWa
+Saskatchewan,electr,useful,2020,year,25422,MWa
+Manitoba,electr,useful,2020,year,25666,MWa
+Prince Edward Island,electr,useful,2020,year,1596,MWa
+Alberta,electr,useful,2025,year,88274,MWa
+British Columbia,electr,useful,2025,year,61696,MWa
+New Brunswick,electr,useful,2025,year,14884,MWa
+Newfoundland and Labrador,electr,useful,2025,year,10962,MWa
+Nova Scotia,electr,useful,2025,year,11391,MWa
+Ontario,electr,useful,2025,year,144080,MWa
+Quebec,electr,useful,2025,year,196200,MWa
+Saskatchewan,electr,useful,2025,year,26632,MWa
+Manitoba,electr,useful,2025,year,26171,MWa
+Prince Edward Island,electr,useful,2025,year,1798,MWa
+Alberta,electr,useful,2030,year,91022,MWa
+British Columbia,electr,useful,2030,year,63657,MWa
+New Brunswick,electr,useful,2030,year,14944,MWa
+Newfoundland and Labrador,electr,useful,2030,year,11211,MWa
+Nova Scotia,electr,useful,2030,year,11100,MWa
+Ontario,electr,useful,2030,year,151660,MWa
+Quebec,electr,useful,2030,year,201000,MWa
+Saskatchewan,electr,useful,2030,year,28088,MWa
+Manitoba,electr,useful,2030,year,26933,MWa
+Prince Edward Island,electr,useful,2030,year,1972,MWa
+Alberta,electr,useful,2035,year,92503,MWa
+British Columbia,electr,useful,2035,year,65322,MWa
+New Brunswick,electr,useful,2035,year,15064,MWa
+Newfoundland and Labrador,electr,useful,2035,year,11502,MWa
+Nova Scotia,electr,useful,2035,year,11240,MWa
+Ontario,electr,useful,2035,year,160160,MWa
+Quebec,electr,useful,2035,year,208261,MWa
+Saskatchewan,electr,useful,2035,year,29825,MWa
+Manitoba,electr,useful,2035,year,28676,MWa
+Prince Edward Island,electr,useful,2035,year,2197,MWa
+Alberta,electr,useful,2040,year,93110,MWa
+British Columbia,electr,useful,2040,year,67387,MWa
+New Brunswick,electr,useful,2040,year,15258,MWa
+Newfoundland and Labrador,electr,useful,2040,year,11801,MWa
+Nova Scotia,electr,useful,2040,year,11670,MWa
+Ontario,electr,useful,2040,year,165640,MWa
+Quebec,electr,useful,2040,year,215783,MWa
+Saskatchewan,electr,useful,2040,year,31666,MWa
+Manitoba,electr,useful,2040,year,30479,MWa
+Prince Edward Island,electr,useful,2040,year,2448,MWa
+Alberta,electr,useful,2045,year,93453,MWa
+British Columbia,electr,useful,2045,year,69333,MWa
+New Brunswick,electr,useful,2045,year,15418,MWa
+Newfoundland and Labrador,electr,useful,2045,year,12107,MWa
+Nova Scotia,electr,useful,2045,year,12072,MWa
+Ontario,electr,useful,2045,year,173106,MWa
+Quebec,electr,useful,2045,year,223578,MWa
+Saskatchewan,electr,useful,2045,year,33579,MWa
+Manitoba,electr,useful,2045,year,32185,MWa
+Prince Edward Island,electr,useful,2045,year,2728,MWa
+Alberta,electr,useful,2050,year,94039,MWa
+British Columbia,electr,useful,2050,year,71336,MWa
+New Brunswick,electr,useful,2050,year,15579,MWa
+Newfoundland and Labrador,electr,useful,2050,year,12421,MWa
+Nova Scotia,electr,useful,2050,year,12511,MWa
+Ontario,electr,useful,2050,year,180909,MWa
+Quebec,electr,useful,2050,year,231654,MWa
+Saskatchewan,electr,useful,2050,year,35608,MWa
+Manitoba,electr,useful,2050,year,33987,MWa
+Prince Edward Island,electr,useful,2050,year,3039,MWa
+Alberta,electr,useful,2055,year,94039,MWa
+British Columbia,electr,useful,2055,year,71336,MWa
+New Brunswick,electr,useful,2055,year,15579,MWa
+Newfoundland and Labrador,electr,useful,2055,year,12421,MWa
+Nova Scotia,electr,useful,2055,year,12511,MWa
+Ontario,electr,useful,2055,year,180909,MWa
+Quebec,electr,useful,2055,year,231654,MWa
+Saskatchewan,electr,useful,2055,year,35608,MWa
+Manitoba,electr,useful,2055,year,33987,MWa
+Prince Edward Island,electr,useful,2055,year,3039,MWa
+Alberta,electr,useful,2060,year,94039,MWa
+British Columbia,electr,useful,2060,year,71336,MWa
+New Brunswick,electr,useful,2060,year,15579,MWa
+Newfoundland and Labrador,electr,useful,2060,year,12421,MWa
+Nova Scotia,electr,useful,2060,year,12511,MWa
+Ontario,electr,useful,2060,year,180909,MWa
+Quebec,electr,useful,2060,year,231654,MWa
+Saskatchewan,electr,useful,2060,year,35608,MWa
+Manitoba,electr,useful,2060,year,33987,MWa
+Prince Edward Island,electr,useful,2060,year,3039,MWa

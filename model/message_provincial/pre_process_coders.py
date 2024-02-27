@@ -65,12 +65,23 @@ class CODERS_pull:
             self.prov_short[prov] = generators[generators.operating_region == prov]['province'].iloc[0]
 
 
+    def run_all_electr_gen(self):
+        self.electr_gen_inv_costs(method='coders')
+        self.electr_gen_fix_var_cost(om_type='variable')
+        self.electr_gen_fix_var_cost(om_type='fixed')
+        self.electr_gen_create_generic_sheet(value='technical_lifetime')
+        self.electr_gen_create_generic_sheet(value='construction_time')
+        self.electr_gen_emission_factor()
+        self.electr_gen_historical_new_capacity()
+        self.electr_gen_historical_activity_raw()
+
+
     def electr_gen_inv_costs(self, method='coders'):
         """
         Pulls investment cost data from CODERS and creates inv_cost csv file in MESSAGE format
         """
         costs = self.gen_generic[['MESSAGE_tech', 'year']]
-        costs['capital_cost_USD_per_MW'] = self.gen_generic['capital_cost_CAD_per_kW'].copy() / 1.3 * 1000
+        costs['capital_cost_USD_per_MW'] = self.gen_generic['capital_cost_CAD_per_kW'] / 1.3 * 1000
 
         if method == 'coders':
             cost_evolution = self.CODERS_cost_evolution()
@@ -89,7 +100,8 @@ class CODERS_pull:
                     coders_tech = 'ng_sc'
                 else:
                     coders_tech = tech
-                cost_data[f'{tech}|{year}'] = cost_evolution.loc[f'{tech}', f'{year}'] * costs.loc[coders_tech, 'capital_cost_USD_per_kW']
+                mes_tech = costs.loc[coders_tech, 'MESSAGE_tech']
+                cost_data[f'{mes_tech}|{year}'] = cost_evolution.loc[f'{tech}', f'{year}'] * costs.loc[coders_tech, 'capital_cost_USD_per_MW']
         cost_data = pd.DataFrame.from_dict(cost_data,orient='index').reset_index()
         cost_data.columns = ['index', 'value']
         cost_data[['technology', 'year_vtg']] = cost_data['index'].str.split('|', expand=True)
@@ -107,6 +119,7 @@ class CODERS_pull:
                     i+=1
                 else:
                     result = pd.concat([result, prov_cost])
+            cost_data = cost_data[~(cost_data.node == 'Canada')]
 
         result.to_csv(f'{self.root}\\data\\CODERS_data\\electr_gen_inv_costs.csv', index=False)
 
@@ -118,24 +131,27 @@ class CODERS_pull:
         costs = self.gen_generic[['MESSAGE_tech', 'year']]
         if om_type == 'fixed':
             unit = 'MWyear'
+            msg_unit = 'MW'
         elif om_type == 'variable':
             unit = 'MWh'
+            msg_unit = unit
 
-        costs[f'{om_type}_om_cost_USD_per_{unit}'] = self.gen_generic[f'{om_type}_om_cost_CAD_per_{unit}'].copy() / 1.3
+        costs[f'{om_type}_om_cost_USD_per_{unit}'] = self.gen_generic[f'{om_type}_om_cost_CAD_per_{unit}'] / 1.3
 
         cost_data = {}
         for tech in costs.index:
+            mes_tech = costs.loc[tech, 'MESSAGE_tech']
             for year_vtg in self.years:
                 act_years = [year for year in self.years if year >= year_vtg and year <= self.end_year and year <= year_vtg + self.gen_generic.loc[tech].service_life]
                 for year_act in act_years:
-                    cost_data[f'{tech}|{year_vtg}|{year_act}'] = costs.loc[tech, f'{om_type}_om_cost_USD_per_{unit}'].copy()
+                    cost_data[f'{mes_tech}|{year_vtg}|{year_act}'] = costs.loc[tech, f'{om_type}_om_cost_USD_per_{unit}']
         cost_data = pd.DataFrame.from_dict(cost_data,orient='index').reset_index()
         cost_data.columns = ['index', 'value']
         cost_data[['technology', 'year_vtg', 'year_act']] = cost_data['index'].str.split('|', expand=True)
         cost_data['node'] = 'Canada'
-        cost_data['unit'] = f'USD/{unit}'
+        cost_data['unit'] = f'USD/{msg_unit}'
         if om_type == 'variable':
-            cost_data['mode'] = 'M1'
+            cost_data['mode'] = 'default'
             cost_data = cost_data[['node', 'technology', 'year_vtg', 'year_act', 'mode', 'value', 'unit']]
         elif om_type == 'fixed':
             cost_data = cost_data[['node', 'technology', 'year_vtg', 'year_act', 'value', 'unit']]
@@ -150,6 +166,7 @@ class CODERS_pull:
                     i+=1
                 else:
                     result = pd.concat([result, prov_cost])
+            result = result[~(result.node == 'Canada')]
 
         if om_type == 'fixed':
             result.to_csv(f'{self.root}\\data\\CODERS_data\\electr_gen_fix_costs.csv', index=False)
@@ -182,7 +199,6 @@ class CODERS_pull:
         MESSAGE format
         """
         data = {}
-
         if value == 'technical_lifetime':
             name = value
             value = 'service_life'
@@ -193,7 +209,8 @@ class CODERS_pull:
 
         for year in self.years:
             for tech in self.gen_generic.index:
-                data[f'{tech}|{year}'] = self.gen_generic.loc[tech][value].copy()
+                mes_tech = self.gen_generic.loc[tech, 'MESSAGE_tech']
+                data[f'{mes_tech}|{year}'] = self.gen_generic.loc[tech][value]
         data = pd.DataFrame.from_dict(data,orient='index').reset_index()
         data.columns = ['index', 'value']
         data[['technology', 'year_vtg']] = data['index'].str.split('|', expand=True)
@@ -211,7 +228,8 @@ class CODERS_pull:
                     i+=1
                 else:
                     result = pd.concat([result, prov_data])
-        pd.DataFrame.from_dict(result).to_csv(f'{self.root}\\data\\CODERS_data\\electr_gen_{name}.csv', index=False)
+            result = result[~(result.node == 'Canada')]
+        result.to_csv(f'{self.root}\\data\\CODERS_data\\electr_gen_{name}.csv', index=False)
     
 
     def electr_gen_emission_factor(self):
@@ -222,17 +240,18 @@ class CODERS_pull:
         unit = 'tC'
         data = {}
         for tech in self.gen_generic.index:
+            mes_tech = self.gen_generic.loc[tech, 'MESSAGE_tech']
             for year_vtg in self.years:
                 act_years = [year for year in self.years if year >= year_vtg and year <= self.end_year and year <= year_vtg + self.gen_generic.loc[tech].service_life]
                 for year_act in act_years:
-                    data[f'{tech}|{year_vtg}|{year_act}'] = self.gen_generic.loc[tech][value].copy()
+                    data[f'{mes_tech}|{year_vtg}|{year_act}'] = self.gen_generic.loc[tech][value]
         data = pd.DataFrame.from_dict(data,orient='index').reset_index()
         data.columns = ['index', 'value']
         data[['technology', 'year_vtg', 'year_act']] = data['index'].str.split('|', expand=True)
         data['node'] = 'Canada'
         data['emission'] = 'TCE'
         data['unit'] = unit
-        data['mode'] = 'M1'
+        data['mode'] = 'default'
         data = data[['node', 'technology', 'year_vtg', 'year_act', 'mode', 'emission', 'value', 'unit']]
         
         if self.provincial:
@@ -245,6 +264,7 @@ class CODERS_pull:
                     i+=1
                 else:
                     result = pd.concat([result, prov_data])
+            result = result[~(result.node == 'Canada')]
 
         result.to_csv(f'{self.root}\\data\\CODERS_data\\electr_gen_emission_factor.csv', index=False)
 
@@ -254,7 +274,6 @@ class CODERS_pull:
         Calculates the generation capacity active at each year passed to the function,
         saves results in an excel file
         """
-        # TODO: FIX THIS, ITS NEW CAPACITY NOT EXISTING
         generators = self.generators.copy()
         generators['region-technology'] = generators['operating_region'] + '-' + generators['MESSAGE_tech']
         i = 0
@@ -263,9 +282,10 @@ class CODERS_pull:
             generators_year = generators_year[generators_year.start_year >= year]
             gen_prov_tech = pd.DataFrame(generators_year.groupby(['region-technology']).sum().unit_effective_capacity)
             # Calculate national capacity
-            for tech in generators['MESSAGE_tech']:
-                name = f'Canada-{tech}'
-                gen_prov_tech.loc[name] = generators.groupby(['MESSAGE_tech']).sum().unit_effective_capacity.loc[tech]
+            if not self.provincial:
+                for tech in generators['MESSAGE_tech']:
+                    name = f'Canada-{tech}'
+                    gen_prov_tech.loc[name] = generators.groupby(['MESSAGE_tech']).sum().unit_effective_capacity.loc[tech]
             gen_prov_tech = gen_prov_tech.reset_index()
             gen_prov_tech[['region', 'technology']] = gen_prov_tech['region-technology'].str.split('-',expand=True)
 
@@ -308,7 +328,7 @@ class CODERS_pull:
             gen_prov_tech = gen_prov_tech.set_index(gen_prov_tech['region'], drop=True)
             gen_prov_tech['year_act'] = year
             gen_prov_tech['unit'] = 'MWa'
-            gen_prov_tech['mode'] = 'M1'
+            gen_prov_tech['mode'] = 'default'
             gen_prov_tech['time'] = 'year'
             gen_prov_tech['value'] = gen_prov_tech['unit_average_annual_energy']
             gen_prov_tech = gen_prov_tech[['technology', 'year_act', 'mode', 'time', 'value', 'unit']]
@@ -343,9 +363,9 @@ class CODERS_pull:
         demand = pd.DataFrame.from_dict(demand_dict, orient='index',columns=['value']).reset_index()
         demand[['node', 'year']] = demand['index'].str.split('-',expand=True)
         demand['commodity'] = 'electr'
-        demand['level'] = 'final'
+        demand['level'] = 'useful'
         demand['time'] = 'year'
-        demand['unit'] = 'MW/y'
+        demand['unit'] = 'MWa'
         demand = demand.set_index(demand.node)
         demand = demand[['commodity', 'level', 'year', 'time', 'value', 'unit']]
         demand.to_csv(f'{self.root}\\data\\CODERS_data\\electr_demand.csv', index=True)
@@ -406,7 +426,9 @@ class CODERS_pull:
         temp = lines_input.copy()
         temp['value'] = temp['avg_capacity']
         temp['unit'] = 'MW'
-        temp = temp.query('year_vtg == @self.base_year & year_act == @self.base_year')
+        temp = temp[temp.year_act == str(self.base_year)]
+        temp = temp[temp.year_vtg == str(self.base_year)]
+        temp = temp[temp['mode'] == 'a->b']
         temp = temp[['node_loc', 'technology', 'year_vtg', 'value', 'unit']]
         temp.to_csv(f'{self.root}\\data\\CODERS_data\\electr_trans_historical_new_capacity.csv', index=False)
     
@@ -415,25 +437,10 @@ class CODERS_pull:
         line_data = pd.DataFrame.from_dict(requests.get(f'{self.url}/interty_capacity?key={self.key}').json())
         line_data = line_data.loc[~(line_data.country_from == line_data.country_to)]
         
-    
-    def save_sets(self):
-        """
-        Saves the sets of technologies, nodes to csv files
-        IS THIS NECCESSARY OR DOES MESSAGE DO THIS AUTOMATICALLY
-        """
-        return
 
 
 if __name__ == '__main__':
     pull = CODERS_pull("vBiOGBwJ3hwNLpqh", ref_year=1960, base_year=2020, end_year=2060, time_step=5, provincial=True)
-    pull.electr_gen_inv_costs(method='coders')
-    pull.electr_gen_fix_var_cost(om_type='variable')
-    pull.electr_gen_fix_var_cost(om_type='fixed')
-    pull.electr_gen_create_generic_sheet(value='technical_lifetime')
-    pull.electr_gen_create_generic_sheet(value='construction_time')
-    pull.electr_gen_emission_factor()
-    pull.electr_gen_historical_new_capacity([2000, 2020])
-    pull.electr_gen_historical_activity_raw([2000, 2020])
-    pull.electricity_demand()
-    pull.interprovincial_lines()
+    pull.run_all_electr_gen()
+    #pull.interprovincial_lines()
     #pull.international_lines()
