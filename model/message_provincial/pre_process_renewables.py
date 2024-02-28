@@ -24,15 +24,15 @@ def pre_process_renewables(root, years):
     grid_cell_data['solar_capacity_factor'] = solar_cf_raw.values
 
     ons_cf = [0] + list(ons_grades.capacity_factor.values)
-    print(f'Onshore wind grades: {ons_cf}')
+    #print(f'Onshore wind grades: {ons_cf}')
     grid_cell_data['ons_wind_grade'] = pd.cut(grid_cell_data.wind_capacity_factor, ons_cf, labels=list(ons_grades.index.values),include_lowest=True)
 
     ofs_cf = [0] + list(ofs_grades.capacity_factor.values)
-    print(f'Offshore wind grades: {ofs_cf}')
+    #print(f'Offshore wind grades: {ofs_cf}')
     grid_cell_data['ofs_wind_grade'] = pd.cut(grid_cell_data.wind_capacity_factor, ofs_cf, labels=list(ofs_grades.index.values),include_lowest=True)
 
     solar_cf = [0] + list(solar_grades.capacity_factor.values)
-    print(f'Solar grades: {solar_cf}')
+    #print(f'Solar grades: {solar_cf}')
     grid_cell_data['solar_grade'] = pd.cut(grid_cell_data.solar_capacity_factor, solar_cf, labels=list(solar_grades.index.values),include_lowest=True)
 
     area_grade_ons = {}
@@ -44,13 +44,13 @@ def pre_process_renewables(root, years):
 
     for prov in grid_cell_data.pr.unique():
         prov_data = grid_cell_data[grid_cell_data.pr == prov].copy()
-        area_grade_ons[prov] = prov_data.groupby('ons_wind_grade').sum()['surface_area_ons']
+        area_grade_ons[prov] = prov_data.groupby('ons_wind_grade', observed=False)['surface_area_ons'].sum()
         area_grade_ons['Canada'] += area_grade_ons[prov]
 
-        area_grade_ofs[prov] = prov_data.groupby('ofs_wind_grade').sum()['surface_area_ofs']
+        area_grade_ofs[prov] = prov_data.groupby('ofs_wind_grade', observed=False)['surface_area_ofs'].sum()
         area_grade_ofs['Canada'] += area_grade_ofs[prov]
 
-        area_grade_solar[prov] = prov_data.groupby('solar_grade').sum()['surface_area_ons']
+        area_grade_solar[prov] = prov_data.groupby('solar_grade', observed=False)['surface_area_ons'].sum()
         area_grade_solar['Canada'] += area_grade_solar[prov]
     
     data_ons = pd.DataFrame.from_dict(area_grade_ons)
@@ -89,7 +89,8 @@ def pre_process_renewables(root, years):
     data[['node', 'year', 'commodity']] = data['index'].str.split('_', n=2, expand=True)
     data[['commodity', 'grade']] = data['commodity'].str.rsplit('_',n=1,expand=True)
     data['level'] = 'renewable'
-    data['unit'] = 'GWa'
+    data['unit'] = 'MWa'
+    data['value'] = data['value'] * 1000
     data = data[['node', 'commodity', 'grade', 'level', 'year', 'value', 'unit']]
     data.to_csv(f'{root}\\data\\CODERS_data\\renewable_potential.csv',index=False)
 
