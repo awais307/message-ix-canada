@@ -344,3 +344,169 @@ Final Energy|lightoil:
   - Final Energy|lightoil|loil_t_d|M1
 Final Energy|methanol:
   - Final Energy|methanol|meth_t_d|M1
+
+## Capacity Additions 
+
+Capacity Addition|LNG Export:
+  - Capacity Addition|LNG_exp
+Capacity Addition|adipic_thermal
+Capacity Addition|ammonia_secloop
+Capacity Addition|Biomass ppl:
+  - Capacity Addition|bio_hpl
+  - Capacity Addition|bio_istig
+  - Capacity Addition|bio_ppl
+  - Capacity Addition|bio_ppl_co2scr
+Capacity Addition|Biomass ppl:
+  - Capacity Addition|wind_cv1
+  - Capacity Addition|wind_cv2
+  - Capacity Addition|wind_cv3
+  - Capacity Addition|wind_cv4
+  - Capacity Addition|wind_ppf
+  - Capacity Addition|wind_ppl
+Capacity Addition|Biomass ppl:
+  - Capacity Addition|solar_cv1
+  - Capacity Addition|solar_cv2
+  - Capacity Addition|solar_cv3
+  - Capacity Addition|solar_cv4
+  - Capacity Addition|solar_i
+  - Capacity Addition|solar_pv_ppl
+  - Capacity Addition|solar_th_ppl
+
+Capacity Addition|biomass_i
+Capacity Addition|c_ppl_co2scr
+Capacity Addition|cement_co2scr
+Capacity Addition|coal_adv
+
+Capacity Addition|coal_adv_ccs
+
+Capacity Addition|coal_exp
+Capacity Addition|coal_extr
+Capacity Addition|coal_extr_ch4
+Capacity Addition|coal_gas
+Capacity Addition|coal_hpl
+Capacity Addition|coal_i
+Capacity Addition|coal_ppl
+
+Capacity Addition|coal_ppl_u
+Capacity Addition|csp_sm1_ppl
+Capacity Addition|csp_sm3_ppl
+Capacity Addition|elec_i
+Capacity Addition|elec_t_d
+Capacity Addition|eth_bio
+Capacity Addition|eth_bio_ccs
+Capacity Addition|eth_exp
+Capacity Addition|eth_i
+t
+Capacity Addition|foil_exp
+Capacity Addition|foil_hpl
+
+Capacity Addition|foil_i
+Capacity Addition|foil_ppl
+
+Capacity Addition|g_ppl_co2scr
+Capacity Addition|gas_bio
+Capacity Addition|gas_cc
+
+Capacity Addition|gas_cc_ccs
+
+Capacity Addition|gas_ct
+Capacity Addition|gas_exp
+Capacity Addition|gas_extr_1
+Capacity Addition|gas_extr_2
+Capacity Addition|gas_extr_3
+Capacity Addition|gas_extr_4
+Capacity Addition|gas_extr_5
+Capacity Addition|gas_extr_6
+Capacity Addition|gas_hpl
+
+Capacity Addition|gas_i
+Capacity Addition|gas_ppl
+
+Capacity Addition|gas_t_d
+Capacity Addition|gas_t_d_ch4
+Capacity Addition|geo_hpl
+
+Capacity Addition|geo_ppl
+
+Capacity Addition|h2_bio
+Capacity Addition|h2_bio_ccs
+Capacity Addition|h2_coal
+Capacity Addition|h2_coal_ccs
+Capacity Addition|h2_elec
+Capacity Addition|h2_fc_I
+Capacity Addition|h2_fc_RC
+Capacity Addition|h2_fc_trp
+Capacity Addition|h2_i
+Capacity Addition|h2_liq
+Capacity Addition|h2_smr
+Capacity Addition|h2_smr_ccs
+Capacity Addition|h2_t_d
+Capacity Addition|heat_i
+Capacity Addition|heat_t_d
+Capacity Addition|hp_el_i
+Capacity Addition|hp_gas_i
+Capacity Addition|hydro_hc
+Capacity Addition|hydro_lc
+Capacity Addition|igcc
+
+Capacity Addition|igcc_ccs
+
+Capacity Addition|lh2_t_d
+Capacity Addition|lignite_extr
+Capacity Addition|liq_bio
+Capacity Addition|liq_bio_ccs
+Capacity Addition|loil_cc
+Capacity Addition|loil_cc__air
+Capacity Addition|loil_cc__cl_fresh
+Capacity Addition|loil_cc__ot_fresh
+Capacity Addition|loil_cc__ot_saline
+Capacity Addition|loil_exp
+Capacity Addition|loil_i
+Capacity Addition|loil_ppl
+Capacity Addition|loil_ppl__air
+Capacity Addition|loil_ppl__cl_fresh
+Capacity Addition|loil_ppl__ot_fresh
+Capacity Addition|loil_ppl__ot_saline
+Capacity Addition|meth_coal
+Capacity Addition|meth_coal_ccs
+Capacity Addition|meth_exp
+Capacity Addition|meth_i
+Capacity Addition|meth_ng
+Capacity Addition|meth_ng_ccs
+Capacity Addition|mvac_co2
+Capacity Addition|nitric_catalytic1
+Capacity Addition|nitric_catalytic2
+Capacity Addition|nitric_catalytic3
+Capacity Addition|nitric_catalytic4
+Capacity Addition|nitric_catalytic5
+Capacity Addition|nitric_catalytic6
+Capacity Addition|nitric_catalytic7
+Capacity Addition|nuc_hc
+
+Capacity Addition|nuc_lc
+
+Capacity Addition|oil_exp
+Capacity Addition|oil_extr_1
+Capacity Addition|oil_extr_1_ch4
+Capacity Addition|oil_extr_2
+Capacity Addition|oil_extr_2_ch4
+Capacity Addition|oil_extr_3
+Capacity Addition|oil_extr_3_ch4
+Capacity Addition|oil_extr_4
+Capacity Addition|oil_extr_4_ch4
+Capacity Addition|oil_extr_5
+Capacity Addition|oil_extr_6
+Capacity Addition|oil_extr_7
+Capacity Addition|po_turbine
+Capacity Addition|recycling_gas1
+Capacity Addition|ref_hil
+Capacity Addition|ref_lol
+Capacity Addition|refrigerant_recovery
+Capacity Addition|repl_hc
+Capacity Addition|replacement_so2
+
+
+Capacity Addition|stor_ppl
+Capacity Addition|syn_liq
+Capacity Addition|syn_liq_ccs
+Capacity Addition|vertical_stud
