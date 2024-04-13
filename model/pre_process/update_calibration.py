@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from utilities.message_utils import (
+from pre_process.utilities.message_utils import (
     add_vintage,
     calibrate_hist_act_to_others,
     calibrate_hist_act_to_commodity_lvl,
