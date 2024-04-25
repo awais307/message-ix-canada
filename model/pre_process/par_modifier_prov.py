@@ -137,4 +137,165 @@ msg.commit('Remove unused elements')
 
 
 
+### adjust imports, exports based on extraction 
+
+
+
+data = df
+
+# Function to adjust the export values as per the given conditions
+def adjust_export_values(df, tech_extr_mpen, tech_exp):
+    for location in df['node_loc'].unique():
+        # Extract rows for the current location and year 2015
+        loc_data = df[(df['node_loc'] == location) & (df['year_act'] == 2015)]
+        # Check if both required technologies exist in the location data
+        if tech_extr_mpen in loc_data['technology'].values and tech_exp in loc_data['technology'].values:
+            extr_mpen_val = loc_data.loc[loc_data['technology'] == tech_extr_mpen, 'value'].values[0]
+            exp_val = loc_data.loc[loc_data['technology'] == tech_exp, 'value'].values[0]
+            # Adjust export value if it's greater than extraction minus penalties value
+            if exp_val > extr_mpen_val:
+                df.loc[(df['node_loc'] == location) & (df['technology'] == tech_exp) & (df['year_act'] == 2015), 'value'] = 0.7 * extr_mpen_val
+    return df
+
+# Adjust the values for oil, gas, and coal
+data = adjust_export_values(data, 'oil_extr_mpen', 'oil_exp')
+data = adjust_export_values(data, 'gas_extr_mpen', 'gas_exp')
+data = adjust_export_values(data, 'coal_extr_mpen', 'coal_exp')
+
+# Function to add the '_imp' technologies based on the provided list for each 'node_loc'
+def add_imp_technologies(df, tech_prefix, tech_list):
+    df_tech = df[(df['year_act'] == 2015) & (df['technology'].isin(tech_list))]
+    df_imp = df_tech.groupby('node_loc').agg({'value': 'sum'}).reset_index()
+    df_imp['technology'] = tech_prefix + '_imp'
+    df_imp['year_act'] = 2015
+    df_imp['mode'] = 'M1'  # Assuming mode is 'M1' as per the structure of the existing data
+    df_imp['time'] = 'year'  # Assuming time is 'year' as per the structure of the existing data
+    df_imp['unit'] = 'GWa/a'  # Assuming unit is 'GWa/a' as per the structure of the existing data
+    df_imp = df_imp[['node_loc', 'technology', 'year_act', 'mode', 'time', 'value', 'unit']]
+    return pd.concat([df, df_imp], ignore_index=True)
+
+# Lists of technologies for each category to sum their values
+foil_techs = ['foil_fs', 'foil_i', 'foil_ppl', 'foil_rc', 'foil_t_d', 'foil_trp']
+loil_techs = ['loil_fs', 'loil_i', 'loil_ppl', 'loil_rc', 'loil_t_d', 'loil_trp']
+gas_techs = ['gas_cc', 'gas_ct', 'gas_fs', 'gas_i', 'gas_ppl', 'gas_rc', 'gas_t_d', 'gas_trp']
+
+# Add the '_imp' technologies to the main dataframe
+data = add_imp_technologies(data, 'foil', foil_techs)
+data = add_imp_technologies(data, 'loil', loil_techs)
+data = add_imp_technologies(data, 'gas', gas_techs)
+
+
+## Updated 
+import pandas as pd
+
+data = df
+
+# Function to adjust the export values as per the given conditions for years 2015 and 2020
+def adjust_export_values(df, tech_extr_mpen, tech_exp, years):
+    print(f"Adjusting export values for technologies {tech_extr_mpen} and {tech_exp} for years {years}")
+    for location in df['node_loc'].unique():
+        for year in years:
+            # Extract rows for the current location and specified year
+            loc_data = df[(df['node_loc'] == location) & (df['year_act'] == year)]
+            # Check if the extraction technology with penalties exists
+            if tech_extr_mpen in loc_data['technology'].values:
+                if tech_exp in loc_data['technology'].values:
+                    extr_mpen_val = loc_data.loc[loc_data['technology'] == tech_extr_mpen, 'value'].values[0]
+                    exp_val = loc_data.loc[loc_data['technology'] == tech_exp, 'value'].values[0]
+                    print(f"Location: {location}, Year: {year}, Extr. Value: {extr_mpen_val}, Exp. Value: {exp_val}")
+                    # Adjust export value if it's greater than extraction minus penalties value
+                    if exp_val > extr_mpen_val:
+                        df.loc[(df['node_loc'] == location) & (df['technology'] == tech_exp) & (df['year_act'] == year), 'value'] = 0.7 * extr_mpen_val
+            else:
+                # If the extraction technology with penalties doesn't exist, set export technology value to zero
+                if tech_exp in loc_data['technology'].values:
+                    print(f"Setting export values to zero in {location} for year {year} as no extraction penalties technology found")
+                    df.loc[(df['node_loc'] == location) & (df['technology'] == tech_exp) & (df['year_act'] == year), 'value'] = 0
+    
+    return df
+
+# Adjust the values for oil, gas, and coal for both 2015 and 2020
+years_to_adjust = [2015, 2020]
+data = adjust_export_values(data, 'oil_extr_mpen', 'oil_exp', years_to_adjust)
+data = adjust_export_values(data, 'gas_extr_mpen', 'gas_exp', years_to_adjust)
+data = adjust_export_values(data, 'coal_extr_mpen', 'coal_exp', years_to_adjust)
+
+# Function to add the '_imp' technologies based on the provided list for each 'node_loc'
+def add_imp_technologies(df, tech_prefix, tech_list, years):
+    df_tech = df[(df['year_act'].isin(years)) & (df['technology'].isin(tech_list))]
+    df_imp = df_tech.groupby(['node_loc', 'year_act']).agg({'value': 'sum'}).reset_index()
+    df_imp['technology'] = tech_prefix + '_imp'
+    df_imp['mode'] = 'M1'
+    df_imp['time'] = 'year'
+    df_imp['unit'] = 'GWa/a'
+    df_imp = df_imp[['node_loc', 'technology', 'year_act', 'mode', 'time', 'value', 'unit']]
+    return pd.concat([df, df_imp], ignore_index=True)
+
+# Add the '_imp' technologies to the main dataframe for both 2015 and 2020
+data = add_imp_technologies(data, 'foil', foil_techs, years_to_adjust)
+data = add_imp_technologies(data, 'loil', loil_techs, years_to_adjust)
+data = add_imp_technologies(data, 'gas', gas_techs, years_to_adjust)
+
+# List of technologies for each category to sum their values
+foil_techs = ['foil_fs', 'foil_i', 'foil_ppl', 'foil_rc', 'foil_t_d', 'foil_trp']
+loil_techs = ['loil_fs', 'loil_i', 'loil_ppl', 'loil_rc', 'loil_t_d', 'loil_trp']
+gas_techs = ['gas_cc', 'gas_ct', 'gas_fs', 'gas_i', 'gas_ppl', 'gas_rc', 'gas_t_d', 'gas_trp']
+
+
+import pandas as pd
+
+data = df
+
+# Function to add the oil_imp technology with the calculated value per each region
+def add_oil_imp(df, foil_techs, loil_techs, years):
+    for year in years:
+        # Assuming that oil_imp is the sum of foil_techs and loil_techs for the same location and year
+        tech_imp_list = foil_techs + loil_techs
+        oil_imp_data = df[(df['year_act'] == year) & (df['technology'].isin(tech_imp_list))].copy()
+        oil_imp_sum = oil_imp_data.groupby(['node_loc']).agg({'value': 'sum'}).reset_index()
+        oil_imp_sum['technology'] = 'oil_imp'
+        oil_imp_sum['year_act'] = year
+        oil_imp_sum['mode'] = 'M1'  # Replace with actual mode if available
+        oil_imp_sum['time'] = 'year'  # Replace with actual time if available
+        oil_imp_sum['unit'] = 'GWa/a'  # Replace with actual unit if available
+        
+        # Ensure oil_imp is greater than the sum of foil and loil technologies
+        oil_imp_sum['value'] *= (1 / (1 - 0.65))
+        
+        # Add oil_imp to the main dataframe
+        df = pd.concat([df, oil_imp_sum], ignore_index=True)
+    return df
+
+# Function to adjust the import values as per the given conditions for specified years
+def adjust_import_values(df, foil_techs, loil_techs, oil_imp_share, years):
+    for year in years:
+        for location in df['node_loc'].unique():
+            # Calculate total import value for foil and loil technologies
+            total_techs_value = df[(df['node_loc'] == location) & (df['year_act'] == year) & (df['technology'].isin(foil_techs + loil_techs))]['value'].sum()
+
+            # Calculate the new oil_imp value ensuring it is greater than the sum of foil and loil technologies
+            new_oil_imp_value = total_techs_value / (1 - oil_imp_share)
+            df.loc[(df['node_loc'] == location) & (df['technology'] == 'oil_imp') & (df['year_act'] == year), 'value'] = new_oil_imp_value
+
+            # Calculate and set the foil_imp and loil_imp values
+            foil_loil_imp_each_share = (new_oil_imp_value * oil_imp_share) / 2  # Splitting the oil_imp share equally
+            for tech_imp in ['foil_imp', 'loil_imp']:
+                df.loc[(df['node_loc'] == location) & (df['technology'] == tech_imp) & (df['year_act'] == year), 'value'] = foil_loil_imp_each_share
+
+    return df
+
+# Lists of technologies for each category
+foil_techs = ['foil_fs', 'foil_i', 'foil_ppl', 'foil_rc', 'foil_t_d', 'foil_trp']
+loil_techs = ['loil_fs', 'loil_i', 'loil_ppl', 'loil_rc', 'loil_t_d', 'loil_trp']
+
+# Add the oil_imp technology to the dataframe for both 2015 and 2020
+years_to_adjust = [2015, 2020]
+data = add_oil_imp(data, foil_techs, loil_techs, years_to_adjust)
+
+# Share of oil_imp in total imports
+oil_imp_share = 0.65
+
+# Adjust the values for oil imports for both 2015 and 2020
+data = adjust_import_values(data, foil_techs, loil_techs, oil_imp_share, years_to_adjust)
+
 
