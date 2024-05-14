@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 
 # Conversion factor from Petajoules to Gigawatt-years
@@ -16,7 +17,7 @@ TECHNOLOGIES = {
     "gas_rc": ("Residential and Commercial", "Natural_Gas"),
     "gas_trp": ("Transportation", "Natural_Gas")
 }
-SECTORS = ["Industrial", "Residential and Commercial","Transportation"]
+SECTORS = ["Industrial", "Residential and Commercial", "Transportation"]
 PROVINCES = ["Alberta", "British Columbia", "Manitoba", "Ontario", "New Brunswick",
              "Newfoundland and Labrador", "Nova Scotia", "Prince Edward Island", "Quebec", "Saskatchewan", "Yukon"]
 
@@ -24,23 +25,23 @@ YEARS = [2015, 2020]
 
 results = []
 
+base_dir = os.path.join("..", "..", "data", "End_Uses")
+
 for province in PROVINCES:
     print(province)
     data = {}
 
-    # Load all sectors into a dictionary for each province
     for sector in SECTORS:
-        data[sector] = pd.read_excel(f"../End_Uses/end_use_demand_{province.replace(' ', '')}.xlsx", sheet_name=sector)
+        file_path = os.path.join(base_dir, f"end_use_demand_{province.replace(' ', '')}.xlsx")
+        data[sector] = pd.read_excel(file_path, sheet_name=sector)
 
-    # Extract and process data for each technology and year
     for technology, (sector, rows) in TECHNOLOGIES.items():
-        if isinstance(rows, tuple):  # Handle cases with multiple rows
+        if isinstance(rows, tuple):
             rows = list(rows)
         elif isinstance(rows, str):
-            rows = [rows]  # Make single row a list for uniform processing
+            rows = [rows]
 
         for year in YEARS:
-            # We use 'isin' function to filter the DataFrame for the rows we need
             total_value_pj = sum(data[sector][data[sector]['_'].isin(rows)][str(year)])
             total_value_gwa = total_value_pj * PJ_TO_GWA
             results.append({
@@ -51,6 +52,9 @@ for province in PROVINCES:
                 "unit": "GWa"
             })
 
-# Convert results to DataFrame and save as CSV
 df = pd.DataFrame(results)
-df.to_csv("energy_usage_by_technology.csv", index=False)
+
+output_file_path = os.path.join(base_dir, "energy_usage_by_technology.csv")
+df.to_csv(output_file_path, index=False)
+
+print(f"Data processing complete and saved to {output_file_path}.")

@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 
 # These ratios were calculated by hand from the following document in the SESIT sharepoint:
@@ -23,8 +24,14 @@ YEARS = [2015, 2020]
 PROVINCES = ["Alberta", "BritishColumbia", "Manitoba", "Ontario", "NewBrunswick",
              "NewfoundlandandLabrador", "NovaScotia", "PrinceEdwardIsland", "Quebec", "Saskatchewan", "Yukon"]
 
-data = pd.read_excel("BC_historical_calibration.xlsx", "historical activity")
+# Define the paths, ensure that BC_historical_calibration.xlsx
+# has been added from the MESSAGE folder in the SESIT Sharepoint
+input_file_path = os.path.join("..", "..", "data", "BC_historical_calibration.xlsx")
+output_file_path = os.path.join("..", "..", "data", "updated_data_with_extractions.xlsx")
+
+data = pd.read_excel(input_file_path, "historical activity")
 print(data['node_loc'].unique())
+
 new_rows = []
 
 for province in PROVINCES:
@@ -36,7 +43,7 @@ for province in PROVINCES:
         oil_data = data[(data['node_loc'] == province) & (data['year_act'] == year) & (data['technology'] == 'oil_extr_mpen')]
         gas_data = data[(data['node_loc'] == province) & (data['year_act'] == year) & (data['technology'] == 'gas_extr_mpen')]
 
-        for i in range(1, 8):  # There are 7 types each for crude and gas
+        for i in range(1, 8):
             if not oil_data.empty:
                 oil_row = {
                     'node_loc': province,
@@ -64,6 +71,6 @@ if new_rows:
     new_rows_df = pd.DataFrame(new_rows)
     data = pd.concat([data, new_rows_df], ignore_index=True)
 
-data.to_excel("updated_data_with_extractions.xlsx", index=False)
+data.to_excel(output_file_path, index=False)
 
-print("Data processing complete and saved to updated_data_with_extractions.xlsx.")
+print(f"Data processing complete and saved to {output_file_path}.")
