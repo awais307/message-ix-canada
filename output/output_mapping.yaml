@@ -15,6 +15,13 @@ Primary Energy|Biomass:
   - Primary Energy|biomass|liq_bio_ccs|M1
   - Primary Energy|biomass|liq_bio|M1
   - Primary Energy|biomass|land_use_biomass|M1
+<<<<<<< Updated upstream
+=======
+Primary Energy|Biomass|Electricity:
+  - Primary Energy|biomass|bio_ppl|M1
+  - Primary Energy|biomass|bio_istig|M1
+  - Primary Energy|biomass|bio_istig_ccs|M1
+>>>>>>> Stashed changes
 Primary Energy|LNG:
   - Primary Energy|LNG|LNG_bal|M1
 Primary Energy|Coal:
@@ -271,6 +278,7 @@ Secondary Energy|District Heat:
 - Secondary Energy|d_heat|gas_hpl|M1
 - Secondary Energy|d_heat|geo_hpl|M1
 - Secondary Energy|d_heat|po_turbine|M1
+<<<<<<< Updated upstream
 Secondary Energy|Electricity:
 - Secondary Energy|electr|bio_istig_ccs|M1
 - Secondary Energy|electr|bio_istig|M1
@@ -281,6 +289,22 @@ Secondary Energy|Electricity:
 - Secondary Energy|electr|csp_sm1_ppl|M1
 - Secondary Energy|electr|csp_sm3_ppl|M1
 - Secondary Energy|electr|elec_imp|M1
+=======
+Secondary Energy|Electricity|Biomass:
+- Secondary Energy|electr|bio_istig_ccs|M1
+- Secondary Energy|electr|bio_istig|M1
+- Secondary Energy|electr|bio_ppl|M1
+Secondary Energy|Electricity|Coal:
+- Secondary Energy|electr|coal_adv_ccs|M1
+- Secondary Energy|electr|coal_adv|M1
+- Secondary Energy|electr|coal_ppl|M1
+Secondary Energy|Electricity|Import:
+- Secondary Energy|electr|elec_imp|M1
+Secondary Energy|Electricity|Solar:
+- Secondary Energy|electr|csp_sm1_ppl|M1
+- Secondary Energy|electr|csp_sm3_ppl|M1
+
+>>>>>>> Stashed changes
 - Secondary Energy|electr|eth_bio_ccs|M1
 - Secondary Energy|electr|eth_bio|M1
 - Secondary Energy|electr|foil_ppl|M1
@@ -356,14 +380,26 @@ Capacity Addition|Biomass ppl:
   - Capacity Addition|bio_istig
   - Capacity Addition|bio_ppl
   - Capacity Addition|bio_ppl_co2scr
+<<<<<<< Updated upstream
 Capacity Addition|Biomass ppl:
+=======
+Capacity Addition|Wind:
+>>>>>>> Stashed changes
   - Capacity Addition|wind_cv1
   - Capacity Addition|wind_cv2
   - Capacity Addition|wind_cv3
   - Capacity Addition|wind_cv4
   - Capacity Addition|wind_ppf
   - Capacity Addition|wind_ppl
+<<<<<<< Updated upstream
 Capacity Addition|Biomass ppl:
+=======
+
+Capacity Addition|Wind powerplant:
+  - Capacity Addition|wind_ppf
+  - Capacity Addition|wind_ppl
+Capacity Addition|Solar:
+>>>>>>> Stashed changes
   - Capacity Addition|solar_cv1
   - Capacity Addition|solar_cv2
   - Capacity Addition|solar_cv3
@@ -372,6 +408,13 @@ Capacity Addition|Biomass ppl:
   - Capacity Addition|solar_pv_ppl
   - Capacity Addition|solar_th_ppl
 
+<<<<<<< Updated upstream
+=======
+Capacity Addition|Solar powerplant:
+  - Capacity Addition|solar_pv_ppl
+  - Capacity Addition|solar_th_ppl
+
+>>>>>>> Stashed changes
 Capacity Addition|biomass_i
 Capacity Addition|c_ppl_co2scr
 Capacity Addition|cement_co2scr
