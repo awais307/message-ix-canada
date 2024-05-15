@@ -1,0 +1,2090 @@
+Capacity Addition|LNG_exp:
+  color: '#deded9'
+  group: Capacity Addition|LNG
+  group_color: '#8d4642'
+  name: Capacity Addition|LNG_exp
+Capacity Addition|adipic_thermal:
+  color: '#5c5da9'
+  group: Capacity Addition|LNG
+  group_color: '#8d4642'
+  name: Capacity Addition|adipic_thermal
+Capacity Addition|ammonia_secloop:
+  color: '#d24425'
+  group: Capacity Addition|LNG
+  group_color: '#8d4642'
+  name: Capacity Addition|ammonia_secloop
+Capacity Addition|bio_hpl:
+  color: '#af2dcc'
+  group: Capacity Addition|Biomass ppl
+  group_color: '#830a6a'
+  name: Capacity Addition|bio_hpl
+Capacity Addition|bio_istig:
+  color: '#4cab8a'
+  group: Capacity Addition|Biomass ppl
+  group_color: '#830a6a'
+  name: Capacity Addition|bio_istig
+Capacity Addition|bio_ppl:
+  color: '#c58471'
+  group: Capacity Addition|Biomass ppl
+  group_color: '#830a6a'
+  name: Capacity Addition|bio_ppl
+Capacity Addition|bio_ppl_co2scr:
+  color: '#462fa5'
+  group: Capacity Addition|Biomass ppl
+  group_color: '#830a6a'
+  name: Capacity Addition|bio_ppl_co2scr
+Capacity Addition|biomass_i:
+  color: '#9147cc'
+  group: Capacity Addition|Biomass ppl
+  group_color: '#830a6a'
+  name: Capacity Addition|biomass_i
+Capacity Addition|c_ppl_co2scr:
+  color: '#78d11b'
+  group: Capacity Addition|Coal
+  group_color: '#e55fd4'
+  name: Capacity Addition|c_ppl_co2scr
+Capacity Addition|cement_co2scr:
+  color: '#9026d6'
+  group: Capacity Addition|Coal
+  group_color: '#e55fd4'
+  name: Capacity Addition|cement_co2scr
+Capacity Addition|coal_adv:
+  color: '#f0ed4e'
+  group: Capacity Addition|Coal
+  group_color: '#e55fd4'
+  name: Capacity Addition|coal_adv
+Capacity Addition|coal_adv_ccs:
+  color: '#3f5a89'
+  group: Capacity Addition|Coal
+  group_color: '#e55fd4'
+  name: Capacity Addition|coal_adv_ccs
+Capacity Addition|coal_exp:
+  color: '#987b62'
+  group: Capacity Addition|Coal
+  group_color: '#e55fd4'
+  name: Capacity Addition|coal_exp
+Capacity Addition|coal_extr:
+  color: '#0bd159'
+  group: Capacity Addition|Coal
+  group_color: '#e55fd4'
+  name: Capacity Addition|coal_extr
+Capacity Addition|coal_extr_ch4:
+  color: '#fb2f7d'
+  group: Capacity Addition|Coal
+  group_color: '#e55fd4'
+  name: Capacity Addition|coal_extr_ch4
+Capacity Addition|coal_gas:
+  color: '#29777b'
+  group: Capacity Addition|Coal
+  group_color: '#e55fd4'
+  name: Capacity Addition|coal_gas
+Capacity Addition|coal_hpl:
+  color: '#f15c00'
+  group: Capacity Addition|Coal
+  group_color: '#e55fd4'
+  name: Capacity Addition|coal_hpl
+Capacity Addition|coal_i:
+  color: '#7a7bbe'
+  group: Capacity Addition|Coal
+  group_color: '#e55fd4'
+  name: Capacity Addition|coal_i
+Capacity Addition|coal_ppl:
+  color: '#5a0eae'
+  group: Capacity Addition|Coal
+  group_color: '#e55fd4'
+  name: Capacity Addition|coal_ppl
+Capacity Addition|coal_ppl_u:
+  color: '#d8cef5'
+  group: Capacity Addition|Coal
+  group_color: '#e55fd4'
+  name: Capacity Addition|coal_ppl_u
+Capacity Addition|csp_sm1_ppl:
+  color: '#5b8eb5'
+  group: Capacity Addition|Solar
+  group_color: '#588a91'
+  name: Capacity Addition|csp_sm1_ppl
+Capacity Addition|csp_sm3_ppl:
+  color: '#7d2981'
+  group: Capacity Addition|Solar
+  group_color: '#588a91'
+  name: Capacity Addition|csp_sm3_ppl
+Capacity Addition|elec_i:
+  color: '#fdbe9e'
+  group: Capacity Addition|Electricity
+  group_color: '#5b4f9b'
+  name: Capacity Addition|elec_i
+Capacity Addition|elec_t_d:
+  color: '#7fb40c'
+  group: Capacity Addition|Electricity
+  group_color: '#5b4f9b'
+  name: Capacity Addition|elec_t_d
+Capacity Addition|eth_bio:
+  color: '#ea185e'
+  group: Capacity Addition|Biomass ppl
+  group_color: '#830a6a'
+  name: Capacity Addition|eth_bio
+Capacity Addition|eth_bio_ccs:
+  color: '#cad023'
+  group: Capacity Addition|Biomass ppl
+  group_color: '#830a6a'
+  name: Capacity Addition|eth_bio_ccs
+Capacity Addition|eth_exp:
+  color: '#1fe053'
+  group: Capacity Addition|Biomass ppl
+  group_color: '#830a6a'
+  name: Capacity Addition|eth_exp
+Capacity Addition|eth_i:
+  color: '#9600be'
+  group: Capacity Addition|Biomass ppl
+  group_color: '#830a6a'
+  name: Capacity Addition|eth_i
+Capacity Addition|foil_exp:
+  color: '#301fb0'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|foil_exp
+Capacity Addition|foil_hpl:
+  color: '#f9d2e1'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|foil_hpl
+Capacity Addition|foil_i:
+  color: '#672835'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|foil_i
+Capacity Addition|foil_ppl:
+  color: '#3b1fa8'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|foil_ppl
+Capacity Addition|g_ppl_co2scr:
+  color: '#ab4f4b'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|g_ppl_co2scr
+Capacity Addition|gas_bio:
+  color: '#45e6db'
+  group: Capacity Addition|Biomass ppl
+  group_color: '#830a6a'
+  name: Capacity Addition|gas_bio
+Capacity Addition|gas_cc:
+  color: '#1cf28c'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|gas_cc
+Capacity Addition|gas_cc_ccs:
+  color: '#e9a77b'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|gas_cc_ccs
+Capacity Addition|gas_ct:
+  color: '#320ad2'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|gas_ct
+Capacity Addition|gas_exp:
+  color: '#6db2a5'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|gas_exp
+Capacity Addition|gas_extr_1:
+  color: '#1a6f98'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|gas_extr_1
+Capacity Addition|gas_extr_2:
+  color: '#80508a'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|gas_extr_2
+Capacity Addition|gas_extr_3:
+  color: '#2114fd'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|gas_extr_3
+Capacity Addition|gas_extr_4:
+  color: '#e6161a'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|gas_extr_4
+Capacity Addition|gas_extr_5:
+  color: '#2af805'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|gas_extr_5
+Capacity Addition|gas_extr_6:
+  color: '#9f5219'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|gas_extr_6
+Capacity Addition|gas_hpl:
+  color: '#ddaa1d'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|gas_hpl
+Capacity Addition|gas_i:
+  color: '#645e40'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|gas_i
+Capacity Addition|gas_ppl:
+  color: '#15d5a0'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|gas_ppl
+Capacity Addition|gas_t_d:
+  color: '#4cd8cd'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|gas_t_d
+Capacity Addition|gas_t_d_ch4:
+  color: '#d091cb'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|gas_t_d_ch4
+Capacity Addition|geo_hpl:
+  color: '#c1eb34'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|geo_hpl
+Capacity Addition|geo_ppl:
+  color: '#dfda4f'
+  group: Capacity Addition|Thermal
+  group_color: '#3285ef'
+  name: Capacity Addition|geo_ppl
+Capacity Addition|h2_bio:
+  color: '#d74896'
+  group: Capacity Addition|Hydrogen
+  group_color: '#4d073f'
+  name: Capacity Addition|h2_bio
+Capacity Addition|h2_bio_ccs:
+  color: '#612225'
+  group: Capacity Addition|Hydrogen
+  group_color: '#4d073f'
+  name: Capacity Addition|h2_bio_ccs
+Capacity Addition|h2_coal:
+  color: '#abe6dd'
+  group: Capacity Addition|Hydrogen
+  group_color: '#4d073f'
+  name: Capacity Addition|h2_coal
+Capacity Addition|h2_coal_ccs:
+  color: '#6e6e79'
+  group: Capacity Addition|Hydrogen
+  group_color: '#4d073f'
+  name: Capacity Addition|h2_coal_ccs
+Capacity Addition|h2_elec:
+  color: '#993e48'
+  group: Capacity Addition|Hydrogen
+  group_color: '#4d073f'
+  name: Capacity Addition|h2_elec
+Capacity Addition|h2_fc_I:
+  color: '#2dbf80'
+  group: Capacity Addition|Hydrogen
+  group_color: '#4d073f'
+  name: Capacity Addition|h2_fc_I
+Capacity Addition|h2_fc_RC:
+  color: '#fcdf2b'
+  group: Capacity Addition|Hydrogen
+  group_color: '#4d073f'
+  name: Capacity Addition|h2_fc_RC
+Capacity Addition|h2_fc_trp:
+  color: '#0bd957'
+  group: Capacity Addition|Hydrogen
+  group_color: '#4d073f'
+  name: Capacity Addition|h2_fc_trp
+Capacity Addition|h2_i:
+  color: '#ba5498'
+  group: Capacity Addition|Hydrogen
+  group_color: '#4d073f'
+  name: Capacity Addition|h2_i
+Capacity Addition|h2_liq:
+  color: '#db3878'
+  group: Capacity Addition|Hydrogen
+  group_color: '#4d073f'
+  name: Capacity Addition|h2_liq
+Capacity Addition|h2_smr:
+  color: '#6e3273'
+  group: Capacity Addition|Hydrogen
+  group_color: '#4d073f'
+  name: Capacity Addition|h2_smr
+Capacity Addition|h2_smr_ccs:
+  color: '#6bb693'
+  group: Capacity Addition|Hydrogen
+  group_color: '#4d073f'
+  name: Capacity Addition|h2_smr_ccs
+Capacity Addition|h2_t_d:
+  color: '#24d166'
+  group: Capacity Addition|Hydrogen
+  group_color: '#4d073f'
+  name: Capacity Addition|h2_t_d
+Capacity Addition|heat_i:
+  color: '#3de0fd'
+  group: Capacity Addition|Hydrogen
+  group_color: '#4d073f'
+  name: Capacity Addition|heat_i
+Capacity Addition|heat_t_d:
+  color: '#e75fd9'
+  group: Capacity Addition|Thermal
+  group_color: '#3285ef'
+  name: Capacity Addition|heat_t_d
+Capacity Addition|hp_el_i:
+  color: '#423b6b'
+  group: Capacity Addition|Thermal
+  group_color: '#3285ef'
+  name: Capacity Addition|hp_el_i
+Capacity Addition|hp_gas_i:
+  color: '#f0d337'
+  group: Capacity Addition|Thermal
+  group_color: '#3285ef'
+  name: Capacity Addition|hp_gas_i
+Capacity Addition|hydro_hc:
+  color: '#ea7f5e'
+  group: Capacity Addition|Hydro
+  group_color: '#033bdd'
+  name: Capacity Addition|hydro_hc
+Capacity Addition|hydro_lc:
+  color: '#821ed5'
+  group: Capacity Addition|Hydro
+  group_color: '#033bdd'
+  name: Capacity Addition|hydro_lc
+Capacity Addition|igcc:
+  color: '#1e7b56'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|igcc
+Capacity Addition|igcc_ccs:
+  color: '#f7ae27'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|igcc_ccs
+Capacity Addition|lh2_t_d:
+  color: '#c843eb'
+  group: Capacity Addition|Hydrogen
+  group_color: '#4d073f'
+  name: Capacity Addition|lh2_t_d
+Capacity Addition|lignite_extr:
+  color: '#971c1f'
+  group: Capacity Addition|Coal
+  group_color: '#e55fd4'
+  name: Capacity Addition|lignite_extr
+Capacity Addition|liq_bio:
+  color: '#cbf05c'
+  group: Capacity Addition|Biomass ppl
+  group_color: '#830a6a'
+  name: Capacity Addition|liq_bio
+Capacity Addition|liq_bio_ccs:
+  color: '#0bbcaf'
+  group: Capacity Addition|Biomass ppl
+  group_color: '#830a6a'
+  name: Capacity Addition|liq_bio_ccs
+Capacity Addition|loil_cc:
+  color: '#79736e'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|loil_cc
+Capacity Addition|loil_cc__air:
+  color: '#e2056d'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|loil_cc__air
+Capacity Addition|loil_cc__cl_fresh:
+  color: '#a00388'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|loil_cc__cl_fresh
+Capacity Addition|loil_cc__ot_fresh:
+  color: '#20e31a'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|loil_cc__ot_fresh
+Capacity Addition|loil_cc__ot_saline:
+  color: '#6317ec'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|loil_cc__ot_saline
+Capacity Addition|loil_exp:
+  color: '#300ee7'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|loil_exp
+Capacity Addition|loil_i:
+  color: '#0eb4ce'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|loil_i
+Capacity Addition|loil_ppl:
+  color: '#2207ec'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|loil_ppl
+Capacity Addition|loil_ppl__air:
+  color: '#ee54ac'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|loil_ppl__air
+Capacity Addition|loil_ppl__cl_fresh:
+  color: '#fdcb1f'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|loil_ppl__cl_fresh
+Capacity Addition|loil_ppl__ot_fresh:
+  color: '#b964f8'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|loil_ppl__ot_fresh
+Capacity Addition|loil_ppl__ot_saline:
+  color: '#f106b0'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|loil_ppl__ot_saline
+Capacity Addition|meth_coal:
+  color: '#37dab0'
+  group: Capacity Addition|Coal
+  group_color: '#e55fd4'
+  name: Capacity Addition|meth_coal
+Capacity Addition|meth_coal_ccs:
+  color: '#792dac'
+  group: Capacity Addition|Coal
+  group_color: '#e55fd4'
+  name: Capacity Addition|meth_coal_ccs
+Capacity Addition|meth_exp:
+  color: '#30ecf8'
+  group: Capacity Addition|Biomass ppl
+  group_color: '#830a6a'
+  name: Capacity Addition|meth_exp
+Capacity Addition|meth_i:
+  color: '#3b86b8'
+  group: Capacity Addition|Biomass ppl
+  group_color: '#830a6a'
+  name: Capacity Addition|meth_i
+Capacity Addition|meth_ng:
+  color: '#463a98'
+  group: Capacity Addition|Biomass ppl
+  group_color: '#830a6a'
+  name: Capacity Addition|meth_ng
+Capacity Addition|meth_ng_ccs:
+  color: '#80c856'
+  group: Capacity Addition|Biomass ppl
+  group_color: '#830a6a'
+  name: Capacity Addition|meth_ng_ccs
+Capacity Addition|mvac_co2:
+  color: '#fb2879'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|mvac_co2
+Capacity Addition|nitric_catalytic1:
+  color: '#fb9fc3'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|nitric_catalytic1
+Capacity Addition|nitric_catalytic2:
+  color: '#3623e4'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|nitric_catalytic2
+Capacity Addition|nitric_catalytic3:
+  color: '#438bd0'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|nitric_catalytic3
+Capacity Addition|nitric_catalytic4:
+  color: '#2a6579'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|nitric_catalytic4
+Capacity Addition|nitric_catalytic5:
+  color: '#7a81e6'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|nitric_catalytic5
+Capacity Addition|nitric_catalytic6:
+  color: '#d3c11a'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|nitric_catalytic6
+Capacity Addition|nitric_catalytic7:
+  color: '#5d99ee'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|nitric_catalytic7
+Capacity Addition|nuc_hc:
+  color: '#786fe6'
+  group: Capacity Addition|Thermal
+  group_color: '#3285ef'
+  name: Capacity Addition|nuc_hc
+Capacity Addition|nuc_lc:
+  color: '#f7b31c'
+  group: Capacity Addition|Thermal
+  group_color: '#3285ef'
+  name: Capacity Addition|nuc_lc
+Capacity Addition|oil_exp:
+  color: '#c69b56'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|oil_exp
+Capacity Addition|oil_extr_1:
+  color: '#fa794d'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|oil_extr_1
+Capacity Addition|oil_extr_1_ch4:
+  color: '#95f7d8'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|oil_extr_1_ch4
+Capacity Addition|oil_extr_2:
+  color: '#b5b2da'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|oil_extr_2
+Capacity Addition|oil_extr_2_ch4:
+  color: '#19f563'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|oil_extr_2_ch4
+Capacity Addition|oil_extr_3:
+  color: '#e48577'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|oil_extr_3
+Capacity Addition|oil_extr_3_ch4:
+  color: '#d3beec'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|oil_extr_3_ch4
+Capacity Addition|oil_extr_4:
+  color: '#b40893'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|oil_extr_4
+Capacity Addition|oil_extr_4_ch4:
+  color: '#0d13d3'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|oil_extr_4_ch4
+Capacity Addition|oil_extr_5:
+  color: '#4de98b'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|oil_extr_5
+Capacity Addition|oil_extr_6:
+  color: '#b9cf4d'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|oil_extr_6
+Capacity Addition|oil_extr_7:
+  color: '#ffc852'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|oil_extr_7
+Capacity Addition|po_turbine:
+  color: '#d0d71f'
+  group: Capacity Addition|Electricity
+  group_color: '#5b4f9b'
+  name: Capacity Addition|po_turbine
+Capacity Addition|recycling_gas1:
+  color: '#6058b1'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|recycling_gas1
+Capacity Addition|ref_hil:
+  color: '#40fa85'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|ref_hil
+Capacity Addition|ref_lol:
+  color: '#3de1de'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|ref_lol
+Capacity Addition|refrigerant_recovery:
+  color: '#bb5dd8'
+  group: Capacity Addition|Thermal
+  group_color: '#3285ef'
+  name: Capacity Addition|refrigerant_recovery
+Capacity Addition|repl_hc:
+  color: '#0a055c'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|repl_hc
+Capacity Addition|replacement_so2:
+  color: '#17f11e'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|replacement_so2
+Capacity Addition|solar_cv1:
+  color: '#11d89b'
+  group: Capacity Addition|Solar
+  group_color: '#588a91'
+  name: Capacity Addition|solar_cv1
+Capacity Addition|solar_cv2:
+  color: '#7d2b43'
+  group: Capacity Addition|Solar
+  group_color: '#588a91'
+  name: Capacity Addition|solar_cv2
+Capacity Addition|solar_cv3:
+  color: '#0d8492'
+  group: Capacity Addition|Solar
+  group_color: '#588a91'
+  name: Capacity Addition|solar_cv3
+Capacity Addition|solar_cv4:
+  color: '#8ec036'
+  group: Capacity Addition|Solar
+  group_color: '#588a91'
+  name: Capacity Addition|solar_cv4
+Capacity Addition|solar_i:
+  color: '#1d28ae'
+  group: Capacity Addition|Solar
+  group_color: '#588a91'
+  name: Capacity Addition|solar_i
+Capacity Addition|solar_pv_ppl:
+  color: '#3df340'
+  group: Capacity Addition|Solar
+  group_color: '#588a91'
+  name: Capacity Addition|solar_pv_ppl
+Capacity Addition|solar_th_ppl:
+  color: '#e5cbfc'
+  group: Capacity Addition|Solar
+  group_color: '#588a91'
+  name: Capacity Addition|solar_th_ppl
+Capacity Addition|stor_ppl:
+  color: '#7eb42f'
+  group: Capacity Addition|Electricity
+  group_color: '#5b4f9b'
+  name: Capacity Addition|stor_ppl
+Capacity Addition|syn_liq:
+  color: '#ba86ea'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|syn_liq
+Capacity Addition|syn_liq_ccs:
+  color: '#4df651'
+  group: Capacity Addition|Oil
+  group_color: '#693983'
+  name: Capacity Addition|syn_liq_ccs
+Capacity Addition|vertical_stud:
+  color: '#931a69'
+  group: Capacity Addition|Gas
+  group_color: '#3de7c4'
+  name: Capacity Addition|vertical_stud
+Capacity Addition|wind_cv1:
+  color: '#63a4bc'
+  group: Capacity Addition|Wind
+  group_color: '#ab0d5f'
+  name: Capacity Addition|wind_cv1
+Capacity Addition|wind_cv2:
+  color: '#e3a070'
+  group: Capacity Addition|Wind
+  group_color: '#ab0d5f'
+  name: Capacity Addition|wind_cv2
+Capacity Addition|wind_cv3:
+  color: '#652fd1'
+  group: Capacity Addition|Wind
+  group_color: '#ab0d5f'
+  name: Capacity Addition|wind_cv3
+Capacity Addition|wind_cv4:
+  color: '#d1008e'
+  group: Capacity Addition|Wind
+  group_color: '#ab0d5f'
+  name: Capacity Addition|wind_cv4
+Capacity Addition|wind_ppf:
+  color: '#b4b447'
+  group: Capacity Addition|Wind
+  group_color: '#ab0d5f'
+  name: Capacity Addition|wind_ppf
+Capacity Addition|wind_ppl:
+  color: '#880d54'
+  group: Capacity Addition|Wind
+  group_color: '#ab0d5f'
+  name: Capacity Addition|wind_ppl
+Emissions|CO2|LNG_exp|M1:
+  color: '#57bdf9'
+  group: Emissions|CO2|Gas trade
+  group_color: '#d7f80f'
+  name: Emissions|CO2|LNG_exp|M1
+Emissions|CO2|LNG_imp|M1:
+  color: '#5391a9'
+  group: Emissions|CO2|Gas trade
+  group_color: '#d7f80f'
+  name: Emissions|CO2|LNG_imp|M1
+Emissions|CO2|cement_CO2|M1:
+  color: '#16fd03'
+  group: Emissions|CO2|Cement
+  group_color: '#0ce1ab'
+  name: Emissions|CO2|cement_CO2|M1
+Emissions|CO2|coal_extr_ch4|M1:
+  color: '#0bbdc2'
+  group: Emissions|CO2|Coal
+  group_color: '#9fc15d'
+  name: Emissions|CO2|coal_extr_ch4|M1
+Emissions|CO2|coal_extr|M1:
+  color: '#b2f004'
+  group: Emissions|CO2|Coal
+  group_color: '#9fc15d'
+  name: Emissions|CO2|coal_extr|M1
+Emissions|CO2|coal_imp|M1:
+  color: '#ca657a'
+  group: Emissions|CO2|Coal
+  group_color: '#9fc15d'
+  name: Emissions|CO2|coal_imp|M1
+Emissions|CO2|foil_imp|M1:
+  color: '#d43be2'
+  group: Emissions|CO2|Oil trade
+  group_color: '#d3a577'
+  name: Emissions|CO2|foil_imp|M1
+Emissions|CO2|gas_extr_1|M1:
+  color: '#54dd3e'
+  group: Emissions|CO2|Gas
+  group_color: '#4bab7e'
+  name: Emissions|CO2|gas_extr_1|M1
+Emissions|CO2|gas_extr_2|M1:
+  color: '#538ba0'
+  group: Emissions|CO2|Gas
+  group_color: '#4bab7e'
+  name: Emissions|CO2|gas_extr_2|M1
+Emissions|CO2|gas_extr_3|M1:
+  color: '#25596d'
+  group: Emissions|CO2|Gas
+  group_color: '#4bab7e'
+  name: Emissions|CO2|gas_extr_3|M1
+Emissions|CO2|gas_extr_4|M1:
+  color: '#b02569'
+  group: Emissions|CO2|Gas
+  group_color: '#4bab7e'
+  name: Emissions|CO2|gas_extr_4|M1
+Emissions|CO2|gas_extr_5|M1:
+  color: '#56d50f'
+  group: Emissions|CO2|Gas
+  group_color: '#4bab7e'
+  name: Emissions|CO2|gas_extr_5|M1
+Emissions|CO2|gas_extr_6|M1:
+  color: '#450b1b'
+  group: Emissions|CO2|Gas
+  group_color: '#4bab7e'
+  name: Emissions|CO2|gas_extr_6|M1
+Emissions|CO2|gas_imp|M1:
+  color: '#e8c22f'
+  group: Emissions|CO2|Gas trade
+  group_color: '#d7f80f'
+  name: Emissions|CO2|gas_imp|M1
+Emissions|CO2|lignite_extr|M1:
+  color: '#1a5e13'
+  group: Emissions|CO2|Lignite
+  group_color: '#42900d'
+  name: Emissions|CO2|lignite_extr|M1
+Emissions|CO2|loil_exp|M1:
+  color: '#facfb3'
+  group: Emissions|CO2|Oil trade
+  group_color: '#d3a577'
+  name: Emissions|CO2|loil_exp|M1
+Emissions|CO2|loil_imp|M1:
+  color: '#8fa4e8'
+  group: Emissions|CO2|Oil trade
+  group_color: '#d3a577'
+  name: Emissions|CO2|loil_imp|M1
+Emissions|CO2|meth_coal_ccs|M1:
+  color: '#dccab9'
+  group: Emissions|CO2|Meth_ccs
+  group_color: '#d08b62'
+  name: Emissions|CO2|meth_coal_ccs|M1
+Emissions|CO2|oil_extr_1_ch4|M1:
+  color: '#16f6a9'
+  group: Emissions|CO2|Oil
+  group_color: '#143e5c'
+  name: Emissions|CO2|oil_extr_1_ch4|M1
+Emissions|CO2|oil_extr_1|M1:
+  color: '#2a2fc7'
+  group: Emissions|CO2|Oil
+  group_color: '#143e5c'
+  name: Emissions|CO2|oil_extr_1|M1
+Emissions|CO2|oil_extr_2_ch4|M1:
+  color: '#db5341'
+  group: Emissions|CO2|Oil
+  group_color: '#143e5c'
+  name: Emissions|CO2|oil_extr_2_ch4|M1
+Emissions|CO2|oil_extr_2|M1:
+  color: '#97b257'
+  group: Emissions|CO2|Oil
+  group_color: '#143e5c'
+  name: Emissions|CO2|oil_extr_2|M1
+Emissions|CO2|oil_extr_3_ch4|M1:
+  color: '#18f03d'
+  group: Emissions|CO2|Oil
+  group_color: '#143e5c'
+  name: Emissions|CO2|oil_extr_3_ch4|M1
+Emissions|CO2|oil_extr_3|M1:
+  color: '#d60208'
+  group: Emissions|CO2|Oil
+  group_color: '#143e5c'
+  name: Emissions|CO2|oil_extr_3|M1
+Emissions|CO2|oil_extr_4_ch4|M1:
+  color: '#b3c5e9'
+  group: Emissions|CO2|Oil
+  group_color: '#143e5c'
+  name: Emissions|CO2|oil_extr_4_ch4|M1
+Emissions|CO2|oil_extr_4|M1:
+  color: '#fba986'
+  group: Emissions|CO2|Oil
+  group_color: '#143e5c'
+  name: Emissions|CO2|oil_extr_4|M1
+Emissions|CO2|oil_extr_5|M1:
+  color: '#172da9'
+  group: Emissions|CO2|Oil
+  group_color: '#143e5c'
+  name: Emissions|CO2|oil_extr_5|M1
+Emissions|CO2|oil_extr_6|M1:
+  color: '#e6800d'
+  group: Emissions|CO2|Oil
+  group_color: '#143e5c'
+  name: Emissions|CO2|oil_extr_6|M1
+Emissions|CO2|oil_extr_7|M1:
+  color: '#913c5d'
+  group: Emissions|CO2|Oil
+  group_color: '#143e5c'
+  name: Emissions|CO2|oil_extr_7|M1
+Emissions|CO2|oil_imp|M1:
+  color: '#59933a'
+  group: Emissions|CO2|Oil trade
+  group_color: '#d3a577'
+  name: Emissions|CO2|oil_imp|M1
+Final Energy|biomass|biomass_t_d|M1:
+  color: '#9795eb'
+  group: Final Energy|biomass
+  group_color: '#1f5d4f'
+  name: Final Energy|biomass|biomass_t_d|M1
+Final Energy|coal|coal_t_d|M1:
+  color: '#5e32d3'
+  group: Final Energy|coal
+  group_color: '#fc8728'
+  name: Final Energy|coal|coal_t_d|M1
+Final Energy|d_heat|heat_t_d|M1:
+  color: '#db1644'
+  group: Final Energy|d_heat
+  group_color: '#1f4466'
+  name: Final Energy|d_heat|heat_t_d|M1
+Final Energy|electr|elec_t_d|M1:
+  color: '#816b4d'
+  group: Final Energy|electr
+  group_color: '#58d379'
+  name: Final Energy|electr|elec_t_d|M1
+Final Energy|electr|h2_fc_trp|M1:
+  color: '#b93ba3'
+  group: Final Energy|hydrogen
+  group_color: '#a75aee'
+  name: Final Energy|electr|h2_fc_trp|M1
+Final Energy|ethanol|eth_t_d|M1:
+  color: '#5d562f'
+  group: Final Energy|ethanol
+  group_color: '#8c3bd5'
+  name: Final Energy|ethanol|eth_t_d|M1
+Final Energy|fueloil|foil_t_d|M1:
+  color: '#999fdf'
+  group: Final Energy|fueloil
+  group_color: '#cd71f2'
+  name: Final Energy|fueloil|foil_t_d|M1
+Final Energy|gas|gas_t_d_ch4|M1:
+  color: '#d0d93c'
+  group: Final Energy|gas
+  group_color: '#eac86a'
+  name: Final Energy|gas|gas_t_d_ch4|M1
+Final Energy|gas|gas_t_d|M1:
+  color: '#4f5ab6'
+  group: Final Energy|gas
+  group_color: '#eac86a'
+  name: Final Energy|gas|gas_t_d|M1
+Final Energy|gas|landfill_digester1|M1:
+  color: '#6f93d1'
+  group: Final Energy|gas
+  group_color: '#eac86a'
+  name: Final Energy|gas|landfill_digester1|M1
+Final Energy|gas|landfill_direct1|M1:
+  color: '#2067bb'
+  group: Final Energy|gas
+  group_color: '#eac86a'
+  name: Final Energy|gas|landfill_direct1|M1
+Final Energy|gas|landfill_heatprdn|M1:
+  color: '#7804c7'
+  group: Final Energy|gas
+  group_color: '#eac86a'
+  name: Final Energy|gas|landfill_heatprdn|M1
+Final Energy|hydrogen|h2_t_d|M1:
+  color: '#7f71e4'
+  group: Final Energy|hydrogen
+  group_color: '#a75aee'
+  name: Final Energy|hydrogen|h2_t_d|M1
+Final Energy|lh2|lh2_t_d|M1:
+  color: '#82390d'
+  group: Final Energy|lh2
+  group_color: '#5a3470'
+  name: Final Energy|lh2|lh2_t_d|M1
+Final Energy|lightoil|loil_t_d|M1:
+  color: '#9f25e1'
+  group: Final Energy|lightoil
+  group_color: '#388f78'
+  name: Final Energy|lightoil|loil_t_d|M1
+Final Energy|methanol|meth_t_d|M1:
+  color: '#a8a811'
+  group: Final Energy|methanol
+  group_color: '#03cdac'
+  name: Final Energy|methanol|meth_t_d|M1
+Primary Energy|LNG|LNG_bal|M1:
+  color: '#8f3e22'
+  group: Primary Energy|LNG
+  group_color: '#6320f9'
+  name: Primary Energy|LNG|LNG_bal|M1
+Primary Energy|biomass|bio_istig_ccs|M1:
+  color: '#0f8866'
+  group: Primary Energy|Biomass
+  group_color: '#28ef38'
+  name: Primary Energy|biomass|bio_istig_ccs|M1
+Primary Energy|biomass|bio_istig|M1:
+  color: '#6e8183'
+  group: Primary Energy|Biomass
+  group_color: '#28ef38'
+  name: Primary Energy|biomass|bio_istig|M1
+Primary Energy|biomass|bio_ppl|M1:
+  color: '#c3df4a'
+  group: Primary Energy|Biomass
+  group_color: '#28ef38'
+  name: Primary Energy|biomass|bio_ppl|M1
+Primary Energy|biomass|biomass_nc|M1:
+  color: '#53642c'
+  group: Primary Energy|Biomass
+  group_color: '#28ef38'
+  name: Primary Energy|biomass|biomass_nc|M1
+Primary Energy|biomass|biomass_t_d|M1:
+  color: '#c4a4df'
+  group: Primary Energy|Biomass
+  group_color: '#28ef38'
+  name: Primary Energy|biomass|biomass_t_d|M1
+Primary Energy|biomass|eth_bio_ccs|M1:
+  color: '#44f959'
+  group: Primary Energy|Biomass
+  group_color: '#28ef38'
+  name: Primary Energy|biomass|eth_bio_ccs|M1
+Primary Energy|biomass|eth_bio|M1:
+  color: '#6d6b88'
+  group: Primary Energy|Biomass
+  group_color: '#28ef38'
+  name: Primary Energy|biomass|eth_bio|M1
+Primary Energy|biomass|gas_bio|M1:
+  color: '#f65770'
+  group: Primary Energy|Biomass
+  group_color: '#28ef38'
+  name: Primary Energy|biomass|gas_bio|M1
+Primary Energy|biomass|h2_bio_ccs|M1:
+  color: '#c4a4c5'
+  group: Primary Energy|Biomass
+  group_color: '#28ef38'
+  name: Primary Energy|biomass|h2_bio_ccs|M1
+Primary Energy|biomass|h2_bio|M1:
+  color: '#c07359'
+  group: Primary Energy|Biomass
+  group_color: '#28ef38'
+  name: Primary Energy|biomass|h2_bio|M1
+Primary Energy|biomass|land_use_biomass|M1:
+  color: '#db6c97'
+  group: Primary Energy|Biomass
+  group_color: '#28ef38'
+  name: Primary Energy|biomass|land_use_biomass|M1
+Primary Energy|biomass|liq_bio_ccs|M1:
+  color: '#751ed6'
+  group: Primary Energy|Biomass
+  group_color: '#28ef38'
+  name: Primary Energy|biomass|liq_bio_ccs|M1
+Primary Energy|biomass|liq_bio|M1:
+  color: '#20a57c'
+  group: Primary Energy|Biomass
+  group_color: '#28ef38'
+  name: Primary Energy|biomass|liq_bio|M1
+Primary Energy|coal|coal_bal|M1:
+  color: '#1ddc58'
+  group: Primary Energy|Coal Production
+  group_color: '#c1f451'
+  name: Primary Energy|coal|coal_bal|M1
+Primary Energy|coal|coal_exp|M1:
+  color: '#0e2c19'
+  group: Primary Energy|Coal Export
+  group_color: '#618ec9'
+  name: Primary Energy|coal|coal_exp|M1
+Primary Energy|coal|coal_extr_ch4|M1:
+  color: '#0f2371'
+  group: Primary Energy|Coal Production
+  group_color: '#c1f451'
+  name: Primary Energy|coal|coal_extr_ch4|M1
+Primary Energy|coal|coal_extr|M1:
+  color: '#d82f6a'
+  group: Primary Energy|Coal Production
+  group_color: '#c1f451'
+  name: Primary Energy|coal|coal_extr|M1
+Primary Energy|coal|lignite_extr|M1:
+  color: '#d3a84b'
+  group: Primary Energy|Coal Production
+  group_color: '#c1f451'
+  name: Primary Energy|coal|lignite_extr|M1
+Primary Energy|crudeoil|oil_exp|M1:
+  color: '#f555a2'
+  group: Primary Energy|Oil Export
+  group_color: '#378f2d'
+  name: Primary Energy|crudeoil|oil_exp|M1
+Primary Energy|crudeoil|oil_extr_1|M1:
+  color: '#f0f5f3'
+  group: Primary Energy|Oil Production
+  group_color: '#32b460'
+  name: Primary Energy|crudeoil|oil_extr_1|M1
+Primary Energy|crudeoil|oil_extr_2|M1:
+  color: '#083b86'
+  group: Primary Energy|Oil Production
+  group_color: '#32b460'
+  name: Primary Energy|crudeoil|oil_extr_2|M1
+Primary Energy|crudeoil|oil_extr_3|M1:
+  color: '#97f61a'
+  group: Primary Energy|Oil Production
+  group_color: '#32b460'
+  name: Primary Energy|crudeoil|oil_extr_3|M1
+Primary Energy|crudeoil|oil_extr_4|M1:
+  color: '#485e18'
+  group: Primary Energy|Oil Production
+  group_color: '#32b460'
+  name: Primary Energy|crudeoil|oil_extr_4|M1
+Primary Energy|crudeoil|oil_extr_5|M1:
+  color: '#7d9742'
+  group: Primary Energy|Oil Production
+  group_color: '#32b460'
+  name: Primary Energy|crudeoil|oil_extr_5|M1
+Primary Energy|crudeoil|oil_extr_6|M1:
+  color: '#597a8e'
+  group: Primary Energy|Oil Production
+  group_color: '#32b460'
+  name: Primary Energy|crudeoil|oil_extr_6|M1
+Primary Energy|crudeoil|oil_extr_7|M1:
+  color: '#128b44'
+  group: Primary Energy|Oil Production
+  group_color: '#32b460'
+  name: Primary Energy|crudeoil|oil_extr_7|M1
+Primary Energy|ethanol|eth_bal|M1:
+  color: '#878b74'
+  group: Primary Energy|Ethanol
+  group_color: '#29f079'
+  name: Primary Energy|ethanol|eth_bal|M1
+Primary Energy|ethanol|eth_exp|M1:
+  color: '#d4d8eb'
+  group: Primary Energy|Ethanol
+  group_color: '#29f079'
+  name: Primary Energy|ethanol|eth_exp|M1
+Primary Energy|gas|gas_export|M1:
+  color: '#421090'
+  group: Primary Energy|Gas Export
+  group_color: '#d71203'
+  name: Primary Energy|gas|gas_export|M1
+Primary Energy|gas|gas_extr_1|M1:
+  color: '#ada31d'
+  group: Primary Energy|Gas Production
+  group_color: '#cbeab7'
+  name: Primary Energy|gas|gas_extr_1|M1
+Primary Energy|gas|gas_extr_2|M1:
+  color: '#e563bd'
+  group: Primary Energy|Gas Production
+  group_color: '#cbeab7'
+  name: Primary Energy|gas|gas_extr_2|M1
+Primary Energy|gas|gas_extr_3|M1:
+  color: '#eef677'
+  group: Primary Energy|Gas Production
+  group_color: '#cbeab7'
+  name: Primary Energy|gas|gas_extr_3|M1
+Primary Energy|gas|gas_extr_4|M1:
+  color: '#b58b16'
+  group: Primary Energy|Gas Production
+  group_color: '#cbeab7'
+  name: Primary Energy|gas|gas_extr_4|M1
+Primary Energy|gas|gas_extr_5|M1:
+  color: '#02a30c'
+  group: Primary Energy|Gas Production
+  group_color: '#cbeab7'
+  name: Primary Energy|gas|gas_extr_5|M1
+Primary Energy|gas|gas_extr_6|M1:
+  color: '#386141'
+  group: Primary Energy|Gas Production
+  group_color: '#cbeab7'
+  name: Primary Energy|gas|gas_extr_6|M1
+Primary Energy|lh2|lh2_bal|M1:
+  color: '#2fdbab'
+  group: Primary Energy|Liquid Hydrogen
+  group_color: '#cdd2f1'
+  name: Primary Energy|lh2|lh2_bal|M1
+Primary Energy|lh2|lh2_exp|M1:
+  color: '#c21bac'
+  group: Primary Energy|Liquid Hydrogen
+  group_color: '#cdd2f1'
+  name: Primary Energy|lh2|lh2_exp|M1
+Primary Energy|methanol|meth_bal|M1:
+  color: '#3ae950'
+  group: Primary Energy|Methanol
+  group_color: '#cdf27b'
+  name: Primary Energy|methanol|meth_bal|M1
+Primary Energy|methanol|meth_exp|M1:
+  color: '#d9c907'
+  group: Primary Energy|Methanol
+  group_color: '#cdf27b'
+  name: Primary Energy|methanol|meth_exp|M1
+Primary Energy|renewable|biomass|bio_extr_a|M1:
+  color: '#10f721'
+  group: Primary Energy|renewable|biomass
+  group_color: '#a4b354'
+  name: Primary Energy|renewable|biomass|bio_extr_a|M1
+Primary Energy|renewable|biomass|bio_extr_b|M1:
+  color: '#11eb51'
+  group: Primary Energy|renewable|biomass
+  group_color: '#a4b354'
+  name: Primary Energy|renewable|biomass|bio_extr_b|M1
+Primary Energy|renewable|biomass|bio_extr_c|M1:
+  color: '#5c5743'
+  group: Primary Energy|renewable|biomass
+  group_color: '#a4b354'
+  name: Primary Energy|renewable|biomass|bio_extr_c|M1
+Primary Energy|renewable|biomass|bio_extr_d|M1:
+  color: '#943361'
+  group: Primary Energy|renewable|biomass
+  group_color: '#a4b354'
+  name: Primary Energy|renewable|biomass|bio_extr_d|M1
+Primary Energy|renewable|biomass|bio_extr_e|M1:
+  color: '#5be276'
+  group: Primary Energy|renewable|biomass
+  group_color: '#a4b354'
+  name: Primary Energy|renewable|biomass|bio_extr_e|M1
+Primary Energy|renewable|biomass|bio_extr_f|M1:
+  color: '#7ec518'
+  group: Primary Energy|renewable|biomass
+  group_color: '#a4b354'
+  name: Primary Energy|renewable|biomass|bio_extr_f|M1
+Primary Energy|renewable|biomass|bio_extr_g|M1:
+  color: '#00c854'
+  group: Primary Energy|renewable|biomass
+  group_color: '#a4b354'
+  name: Primary Energy|renewable|biomass|bio_extr_g|M1
+Primary Energy|renewable|hydro|hydro_hc|M1:
+  color: '#ba8d1b'
+  group: Primary Energy|renewable|hydro
+  group_color: '#94cd09'
+  name: Primary Energy|renewable|hydro|hydro_hc|M1
+Primary Energy|renewable|hydro|hydro_lc|M1:
+  color: '#7d683a'
+  group: Primary Energy|renewable|hydro
+  group_color: '#94cd09'
+  name: Primary Energy|renewable|hydro|hydro_lc|M1
+Primary Energy|renewable|solar_pv|solar_pv_ppl|M1:
+  color: '#7d4f9f'
+  group: Primary Energy|renewable|solar
+  group_color: '#66f1aa'
+  name: Primary Energy|renewable|solar_pv|solar_pv_ppl|M1
+Primary Energy|renewable|solar_th|solar_th_ppl|M1:
+  color: '#460801'
+  group: Primary Energy|renewable|solar
+  group_color: '#66f1aa'
+  name: Primary Energy|renewable|solar_th|solar_th_ppl|M1
+Primary Energy|renewable|wind|wind_ppf|M1:
+  color: '#8b10bf'
+  group: Primary Energy|renewable|wind
+  group_color: '#158f95'
+  name: Primary Energy|renewable|wind|wind_ppf|M1
+Primary Energy|renewable|wind|wind_ppl|M1:
+  color: '#2f50e7'
+  group: Primary Energy|renewable|wind
+  group_color: '#158f95'
+  name: Primary Energy|renewable|wind|wind_ppl|M1
+Secondary Energy|LNG|LNG_bal|M1:
+  color: '#fc4f39'
+  group: Secondary Energy|LNG
+  group_color: '#198406'
+  name: Secondary Energy|LNG|LNG_bal|M1
+Secondary Energy|LNG|LNG_imp|M1:
+  color: '#1d10c1'
+  group: Secondary Energy|LNG
+  group_color: '#198406'
+  name: Secondary Energy|LNG|LNG_imp|M1
+Secondary Energy|coal|coal_bal|M1:
+  color: '#41314a'
+  group: Secondary Energy|Coal
+  group_color: '#63e3d3'
+  name: Secondary Energy|coal|coal_bal|M1
+Secondary Energy|coal|coal_imp|M1:
+  color: '#8dcef6'
+  group: Secondary Energy|Coal
+  group_color: '#63e3d3'
+  name: Secondary Energy|coal|coal_imp|M1
+Secondary Energy|crudeoil|oil_bal|M1:
+  color: '#6d80a9'
+  group: Secondary Energy|Oil
+  group_color: '#a28149'
+  name: Secondary Energy|crudeoil|oil_bal|M1
+Secondary Energy|crudeoil|oil_imp|M1:
+  color: '#cbb106'
+  group: Secondary Energy|Oil
+  group_color: '#a28149'
+  name: Secondary Energy|crudeoil|oil_imp|M1
+Secondary Energy|d_heat|bio_hpl|M1:
+  color: '#72b44e'
+  group: Secondary Energy|District Heat
+  group_color: '#99bb50'
+  name: Secondary Energy|d_heat|bio_hpl|M1
+Secondary Energy|d_heat|coal_hpl|M1:
+  color: '#151050'
+  group: Secondary Energy|District Heat
+  group_color: '#99bb50'
+  name: Secondary Energy|d_heat|coal_hpl|M1
+Secondary Energy|d_heat|foil_hpl|M1:
+  color: '#ed27d8'
+  group: Secondary Energy|District Heat
+  group_color: '#99bb50'
+  name: Secondary Energy|d_heat|foil_hpl|M1
+Secondary Energy|d_heat|gas_hpl|M1:
+  color: '#af54f5'
+  group: Secondary Energy|District Heat
+  group_color: '#99bb50'
+  name: Secondary Energy|d_heat|gas_hpl|M1
+Secondary Energy|d_heat|geo_hpl|M1:
+  color: '#462e50'
+  group: Secondary Energy|District Heat
+  group_color: '#99bb50'
+  name: Secondary Energy|d_heat|geo_hpl|M1
+Secondary Energy|d_heat|po_turbine|M1:
+  color: '#f15ede'
+  group: Secondary Energy|District Heat
+  group_color: '#99bb50'
+  name: Secondary Energy|d_heat|po_turbine|M1
+Secondary Energy|electr|bio_istig_ccs|M1:
+  color: '#9e8be2'
+  group: Secondary Energy|Electricity|Biomass
+  group_color: '#08dbc8'
+  name: Secondary Energy|electr|bio_istig_ccs|M1
+Secondary Energy|electr|bio_istig|M1:
+  color: '#d8aac9'
+  group: Secondary Energy|Electricity|Biomass
+  group_color: '#08dbc8'
+  name: Secondary Energy|electr|bio_istig|M1
+Secondary Energy|electr|bio_ppl|M1:
+  color: '#a5948f'
+  group: Secondary Energy|Electricity|Biomass
+  group_color: '#08dbc8'
+  name: Secondary Energy|electr|bio_ppl|M1
+Secondary Energy|electr|coal_adv_ccs|M1:
+  color: '#79dd6e'
+  group: Secondary Energy|Electricity|Coal
+  group_color: '#ad7728'
+  name: Secondary Energy|electr|coal_adv_ccs|M1
+Secondary Energy|electr|coal_adv|M1:
+  color: '#c80538'
+  group: Secondary Energy|Electricity|Coal
+  group_color: '#ad7728'
+  name: Secondary Energy|electr|coal_adv|M1
+Secondary Energy|electr|coal_ppl|M1:
+  color: '#3de30b'
+  group: Secondary Energy|Electricity|Coal
+  group_color: '#ad7728'
+  name: Secondary Energy|electr|coal_ppl|M1
+Secondary Energy|electr|csp_sm1_ppl|M1:
+  color: '#d37b3c'
+  group: Secondary Energy|Electricity|Solar
+  group_color: '#c92115'
+  name: Secondary Energy|electr|csp_sm1_ppl|M1
+Secondary Energy|electr|csp_sm3_ppl|M1:
+  color: '#945d13'
+  group: Secondary Energy|Electricity|Solar
+  group_color: '#c92115'
+  name: Secondary Energy|electr|csp_sm3_ppl|M1
+Secondary Energy|electr|elec_imp|M1:
+  color: '#a5d24f'
+  group: Secondary Energy|Electricity|Import
+  group_color: '#08e27d'
+  name: Secondary Energy|electr|elec_imp|M1
+Secondary Energy|electr|eth_bio_ccs|M1:
+  color: '#fa3aab'
+  group: Secondary Energy|Electricity|Ethanol
+  group_color: '#5b0e66'
+  name: Secondary Energy|electr|eth_bio_ccs|M1
+Secondary Energy|electr|eth_bio|M1:
+  color: '#3e37eb'
+  group: Secondary Energy|Electricity|Ethanol
+  group_color: '#5b0e66'
+  name: Secondary Energy|electr|eth_bio|M1
+Secondary Energy|electr|foil_ppl|M1:
+  color: '#437a87'
+  group: Secondary Energy|Electricity|Oil
+  group_color: '#76800b'
+  name: Secondary Energy|electr|foil_ppl|M1
+Secondary Energy|electr|gas_cc_ccs|M1:
+  color: '#60afbf'
+  group: Secondary Energy|Electricity|Gas
+  group_color: '#1bf3cb'
+  name: Secondary Energy|electr|gas_cc_ccs|M1
+Secondary Energy|electr|gas_cc|M1:
+  color: '#de26dc'
+  group: Secondary Energy|Electricity|Gas
+  group_color: '#1bf3cb'
+  name: Secondary Energy|electr|gas_cc|M1
+Secondary Energy|electr|gas_ct|M1:
+  color: '#e69ebc'
+  group: Secondary Energy|Electricity|Gas
+  group_color: '#1bf3cb'
+  name: Secondary Energy|electr|gas_ct|M1
+Secondary Energy|electr|gas_ppl|M1:
+  color: '#a834ae'
+  group: Secondary Energy|Electricity|Gas
+  group_color: '#1bf3cb'
+  name: Secondary Energy|electr|gas_ppl|M1
+Secondary Energy|electr|geo_ppl|M1:
+  color: '#32a671'
+  group: Secondary Energy|Electricity|Gas
+  group_color: '#1bf3cb'
+  name: Secondary Energy|electr|geo_ppl|M1
+Secondary Energy|electr|h2_bio_ccs|M1:
+  color: '#f6655d'
+  group: Secondary Energy|Electricity|Hydrogen
+  group_color: '#2d9e2e'
+  name: Secondary Energy|electr|h2_bio_ccs|M1
+Secondary Energy|electr|h2_bio|M1:
+  color: '#58a7dd'
+  group: Secondary Energy|Electricity|Hydrogen
+  group_color: '#2d9e2e'
+  name: Secondary Energy|electr|h2_bio|M1
+Secondary Energy|electr|h2_coal_ccs|M1:
+  color: '#38946b'
+  group: Secondary Energy|Electricity|Hydrogen
+  group_color: '#2d9e2e'
+  name: Secondary Energy|electr|h2_coal_ccs|M1
+Secondary Energy|electr|h2_coal|M1:
+  color: '#d71fdc'
+  group: Secondary Energy|Electricity|Hydrogen
+  group_color: '#2d9e2e'
+  name: Secondary Energy|electr|h2_coal|M1
+Secondary Energy|electr|h2_smr_ccs|M1:
+  color: '#4c5a07'
+  group: Secondary Energy|Electricity|Hydrogen
+  group_color: '#2d9e2e'
+  name: Secondary Energy|electr|h2_smr_ccs|M1
+Secondary Energy|electr|h2_smr|M1:
+  color: '#ccd751'
+  group: Secondary Energy|Electricity|Hydrogen
+  group_color: '#2d9e2e'
+  name: Secondary Energy|electr|h2_smr|M1
+Secondary Energy|electr|hydro_hc|M1:
+  color: '#b99c78'
+  group: Secondary Energy|Electricity|Hydro
+  group_color: '#66efad'
+  name: Secondary Energy|electr|hydro_hc|M1
+Secondary Energy|electr|hydro_lc|M1:
+  color: '#39a45a'
+  group: Secondary Energy|Electricity|Hydro
+  group_color: '#66efad'
+  name: Secondary Energy|electr|hydro_lc|M1
+Secondary Energy|electr|igcc_ccs|M1:
+  color: '#da9123'
+  group: Secondary Energy|Electricity|Biomass
+  group_color: '#08dbc8'
+  name: Secondary Energy|electr|igcc_ccs|M1
+Secondary Energy|electr|igcc|M1:
+  color: '#ade9c5'
+  group: Secondary Energy|Electricity|Biomass
+  group_color: '#08dbc8'
+  name: Secondary Energy|electr|igcc|M1
+Secondary Energy|electr|loil_cc|M1:
+  color: '#c24c5b'
+  group: Secondary Energy|Electricity|Oil
+  group_color: '#76800b'
+  name: Secondary Energy|electr|loil_cc|M1
+Secondary Energy|electr|loil_ppl|M1:
+  color: '#a52bf0'
+  group: Secondary Energy|Electricity|Oil
+  group_color: '#76800b'
+  name: Secondary Energy|electr|loil_ppl|M1
+Secondary Energy|electr|meth_coal_ccs|M1:
+  color: '#ca639a'
+  group: Secondary Energy|Electricity|Coal
+  group_color: '#ad7728'
+  name: Secondary Energy|electr|meth_coal_ccs|M1
+Secondary Energy|electr|meth_coal|M1:
+  color: '#32c226'
+  group: Secondary Energy|Electricity|Coal
+  group_color: '#ad7728'
+  name: Secondary Energy|electr|meth_coal|M1
+Secondary Energy|electr|meth_ng_ccs|M1:
+  color: '#4a8311'
+  group: Secondary Energy|Electricity|Coal
+  group_color: '#ad7728'
+  name: Secondary Energy|electr|meth_ng_ccs|M1
+Secondary Energy|electr|meth_ng|M1:
+  color: '#0d0ce4'
+  group: Secondary Energy|Electricity|Coal
+  group_color: '#ad7728'
+  name: Secondary Energy|electr|meth_ng|M1
+Secondary Energy|electr|nuc_hc|M1:
+  color: '#5040b4'
+  group: Secondary Energy|Electricity|Nuclear
+  group_color: '#5b4e95'
+  name: Secondary Energy|electr|nuc_hc|M1
+Secondary Energy|electr|nuc_lc|M1:
+  color: '#bfcdb9'
+  group: Secondary Energy|Electricity|Nuclear
+  group_color: '#5b4e95'
+  name: Secondary Energy|electr|nuc_lc|M1
+Secondary Energy|electr|solar_pv_ppl|M1:
+  color: '#2580b5'
+  group: Secondary Energy|Electricity|Solar
+  group_color: '#c92115'
+  name: Secondary Energy|electr|solar_pv_ppl|M1
+Secondary Energy|electr|solar_th_ppl|M1:
+  color: '#4d7a53'
+  group: Secondary Energy|Electricity|Solar
+  group_color: '#c92115'
+  name: Secondary Energy|electr|solar_th_ppl|M1
+Secondary Energy|electr|syn_liq_ccs|M1:
+  color: '#0163a8'
+  group: Secondary Energy|Electricity|Coal
+  group_color: '#ad7728'
+  name: Secondary Energy|electr|syn_liq_ccs|M1
+Secondary Energy|electr|syn_liq|M1:
+  color: '#dd36dc'
+  group: Secondary Energy|Electricity|Coal
+  group_color: '#ad7728'
+  name: Secondary Energy|electr|syn_liq|M1
+Secondary Energy|electr|wind_ppf|M1:
+  color: '#9b2c10'
+  group: Secondary Energy|Electricity|Wind
+  group_color: '#2dd55a'
+  name: Secondary Energy|electr|wind_ppf|M1
+Secondary Energy|electr|wind_ppl|M1:
+  color: '#8bcd52'
+  group: Secondary Energy|Electricity|Wind
+  group_color: '#2dd55a'
+  name: Secondary Energy|electr|wind_ppl|M1
+Total Costs|coal_adv:
+  color: '#844cbc'
+  group: Total Costs|Coal
+  group_color: '#462526'
+  name: Total Costs|coal_adv
+Total Costs|coal_adv_ccs:
+  color: '#2191a0'
+  group: Total Costs|Coal
+  group_color: '#462526'
+  name: Total Costs|coal_adv_ccs
+Total Costs|coal_bal:
+  color: '#82e8e9'
+  group: Total Costs|Coal
+  group_color: '#462526'
+  name: Total Costs|coal_bal
+Total Costs|coal_exp:
+  color: '#4ca782'
+  group: Total Costs|Coal
+  group_color: '#462526'
+  name: Total Costs|coal_exp
+Total Costs|coal_extr:
+  color: '#1ecd9b'
+  group: Total Costs|Coal
+  group_color: '#462526'
+  name: Total Costs|coal_extr
+Total Costs|coal_extr_ch4:
+  color: '#249f07'
+  group: Total Costs|Coal
+  group_color: '#462526'
+  name: Total Costs|coal_extr_ch4
+Total Costs|coal_gas:
+  color: '#745482'
+  group: Total Costs|Coal
+  group_color: '#462526'
+  name: Total Costs|coal_gas
+Total Costs|coal_hpl:
+  color: '#814a88'
+  group: Total Costs|Coal
+  group_color: '#462526'
+  name: Total Costs|coal_hpl
+Total Costs|coal_i:
+  color: '#d6fb3b'
+  group: Total Costs|Coal
+  group_color: '#462526'
+  name: Total Costs|coal_i
+Total Costs|coal_imp:
+  color: '#3b8aae'
+  group: Total Costs|Coal
+  group_color: '#462526'
+  name: Total Costs|coal_imp
+Total Costs|coal_ppl:
+  color: '#de89bb'
+  group: Total Costs|Coal
+  group_color: '#462526'
+  name: Total Costs|coal_ppl
+Total Costs|coal_ppl_u:
+  color: '#7e9d7c'
+  group: Total Costs|Coal
+  group_color: '#462526'
+  name: Total Costs|coal_ppl_u
+Total Costs|coal_rc:
+  color: '#541f73'
+  group: Total Costs|Coal
+  group_color: '#462526'
+  name: Total Costs|coal_rc
+Total Costs|coal_t_d:
+  color: '#fa3d55'
+  group: Total Costs|Coal
+  group_color: '#462526'
+  name: Total Costs|coal_t_d
+Total Costs|elec_exp:
+  color: '#91d3ea'
+  group: Total Costs|Electricity
+  group_color: '#d7924a'
+  name: Total Costs|elec_exp
+Total Costs|elec_i:
+  color: '#7f6cf5'
+  group: Total Costs|Electricity
+  group_color: '#d7924a'
+  name: Total Costs|elec_i
+Total Costs|elec_imp:
+  color: '#0c44b5'
+  group: Total Costs|Electricity
+  group_color: '#d7924a'
+  name: Total Costs|elec_imp
+Total Costs|elec_t_d:
+  color: '#b3a69d'
+  group: Total Costs|Electricity
+  group_color: '#d7924a'
+  name: Total Costs|elec_t_d
+Total Costs|elec_trp:
+  color: '#41a043'
+  group: Total Costs|Electricity
+  group_color: '#d7924a'
+  name: Total Costs|elec_trp
+Total Costs|foil_i:
+  color: '#658a6d'
+  group: Total Costs|oil
+  group_color: '#98c5aa'
+  name: Total Costs|foil_i
+Total Costs|foil_imp:
+  color: '#3dd2d1'
+  group: Total Costs|oil
+  group_color: '#98c5aa'
+  name: Total Costs|foil_imp
+Total Costs|foil_ppl:
+  color: '#5e0505'
+  group: Total Costs|oil
+  group_color: '#98c5aa'
+  name: Total Costs|foil_ppl
+Total Costs|gas_bal:
+  color: '#eb57fa'
+  group: Total Costs|Gas
+  group_color: '#9a19e2'
+  name: Total Costs|gas_bal
+Total Costs|gas_bio:
+  color: '#04d380'
+  group: Total Costs|Gas
+  group_color: '#9a19e2'
+  name: Total Costs|gas_bio
+Total Costs|gas_cc:
+  color: '#d5d0f9'
+  group: Total Costs|Gas
+  group_color: '#9a19e2'
+  name: Total Costs|gas_cc
+Total Costs|gas_cc_ccs:
+  color: '#61a0f5'
+  group: Total Costs|Gas
+  group_color: '#9a19e2'
+  name: Total Costs|gas_cc_ccs
+Total Costs|gas_ct:
+  color: '#afdcd5'
+  group: Total Costs|Gas
+  group_color: '#9a19e2'
+  name: Total Costs|gas_ct
+Total Costs|gas_extr_1:
+  color: '#29714c'
+  group: Total Costs|Gas
+  group_color: '#9a19e2'
+  name: Total Costs|gas_extr_1
+Total Costs|gas_extr_2:
+  color: '#3eca6f'
+  group: Total Costs|Gas
+  group_color: '#9a19e2'
+  name: Total Costs|gas_extr_2
+Total Costs|gas_extr_3:
+  color: '#636d7c'
+  group: Total Costs|Gas
+  group_color: '#9a19e2'
+  name: Total Costs|gas_extr_3
+Total Costs|gas_extr_4:
+  color: '#4fbc04'
+  group: Total Costs|Gas
+  group_color: '#9a19e2'
+  name: Total Costs|gas_extr_4
+Total Costs|gas_extr_5:
+  color: '#611dba'
+  group: Total Costs|Gas
+  group_color: '#9a19e2'
+  name: Total Costs|gas_extr_5
+Total Costs|gas_extr_6:
+  color: '#b1c8b7'
+  group: Total Costs|Gas
+  group_color: '#9a19e2'
+  name: Total Costs|gas_extr_6
+Total Costs|gas_extr_mpen:
+  color: '#402304'
+  group: Total Costs|Gas
+  group_color: '#9a19e2'
+  name: Total Costs|gas_extr_mpen
+Total Costs|gas_fs:
+  color: '#624be7'
+  group: Total Costs|Gas
+  group_color: '#9a19e2'
+  name: Total Costs|gas_fs
+Total Costs|gas_hpl:
+  color: '#aa0380'
+  group: Total Costs|Gas
+  group_color: '#9a19e2'
+  name: Total Costs|gas_hpl
+Total Costs|gas_i:
+  color: '#cd0a96'
+  group: Total Costs|Gas
+  group_color: '#9a19e2'
+  name: Total Costs|gas_i
+Total Costs|gas_imp:
+  color: '#ccf324'
+  group: Total Costs|Gas
+  group_color: '#9a19e2'
+  name: Total Costs|gas_imp
+Total Costs|gas_ppl:
+  color: '#479b87'
+  group: Total Costs|Gas
+  group_color: '#9a19e2'
+  name: Total Costs|gas_ppl
+Total Costs|gas_rc:
+  color: '#c2db6c'
+  group: Total Costs|Gas
+  group_color: '#9a19e2'
+  name: Total Costs|gas_rc
+Total Costs|gas_t_d:
+  color: '#ac188b'
+  group: Total Costs|Gas
+  group_color: '#9a19e2'
+  name: Total Costs|gas_t_d
+Total Costs|gas_t_d_ch4:
+  color: '#91b8b5'
+  group: Total Costs|Gas
+  group_color: '#9a19e2'
+  name: Total Costs|gas_t_d_ch4
+Total Costs|gas_trp:
+  color: '#0af5c4'
+  group: Total Costs|Gas
+  group_color: '#9a19e2'
+  name: Total Costs|gas_trp
+Total Costs|geo_hpl:
+  color: '#700892'
+  group: Total Costs|Geothermal
+  group_color: '#f980c2'
+  name: Total Costs|geo_hpl
+Total Costs|geo_ppl:
+  color: '#81c1ad'
+  group: Total Costs|Geothermal
+  group_color: '#f980c2'
+  name: Total Costs|geo_ppl
+Total Costs|hydro_hc:
+  color: '#ea5f7b'
+  group: Total Costs|Hydro
+  group_color: '#7d71ec'
+  name: Total Costs|hydro_hc
+Total Costs|hydro_lc:
+  color: '#facd0a'
+  group: Total Costs|Hydro
+  group_color: '#7d71ec'
+  name: Total Costs|hydro_lc
+Total Costs|igcc:
+  color: '#fd08b6'
+  group: Total Costs|Gas
+  group_color: '#9a19e2'
+  name: Total Costs|igcc
+Total Costs|lignite_extr:
+  color: '#95b867'
+  group: Total Costs|Coal
+  group_color: '#462526'
+  name: Total Costs|lignite_extr
+Total Costs|liq_bio:
+  color: '#781e70'
+  group: Total Costs|biomass
+  group_color: '#f3cd59'
+  name: Total Costs|liq_bio
+Total Costs|loil_cc:
+  color: '#025d40'
+  group: Total Costs|oil
+  group_color: '#98c5aa'
+  name: Total Costs|loil_cc
+Total Costs|loil_ppl:
+  color: '#b7d042'
+  group: Total Costs|oil
+  group_color: '#98c5aa'
+  name: Total Costs|loil_ppl
+Total Costs|meth_coal:
+  color: '#dd0bc7'
+  group: Total Costs|Coal
+  group_color: '#462526'
+  name: Total Costs|meth_coal
+Total Costs|nuc_lc:
+  color: '#8ebbf6'
+  group: Total Costs|Nuclear
+  group_color: '#19e939'
+  name: Total Costs|nuc_lc
+Total Costs|oil_extr_1:
+  color: '#8fd9aa'
+  group: Total Costs|oil
+  group_color: '#98c5aa'
+  name: Total Costs|oil_extr_1
+Total Costs|oil_extr_1_ch4:
+  color: '#6d2a9c'
+  group: Total Costs|oil
+  group_color: '#98c5aa'
+  name: Total Costs|oil_extr_1_ch4
+Total Costs|oil_extr_2:
+  color: '#734a1a'
+  group: Total Costs|oil
+  group_color: '#98c5aa'
+  name: Total Costs|oil_extr_2
+Total Costs|oil_extr_2_ch4:
+  color: '#16380e'
+  group: Total Costs|oil
+  group_color: '#98c5aa'
+  name: Total Costs|oil_extr_2_ch4
+Total Costs|oil_extr_3:
+  color: '#2a4466'
+  group: Total Costs|oil
+  group_color: '#98c5aa'
+  name: Total Costs|oil_extr_3
+Total Costs|oil_extr_3_ch4:
+  color: '#f1a1f5'
+  group: Total Costs|oil
+  group_color: '#98c5aa'
+  name: Total Costs|oil_extr_3_ch4
+Total Costs|oil_extr_4:
+  color: '#3aae52'
+  group: Total Costs|oil
+  group_color: '#98c5aa'
+  name: Total Costs|oil_extr_4
+Total Costs|oil_extr_5:
+  color: '#b6f1eb'
+  group: Total Costs|oil
+  group_color: '#98c5aa'
+  name: Total Costs|oil_extr_5
+Total Costs|oil_extr_6:
+  color: '#9806e5'
+  group: Total Costs|oil
+  group_color: '#98c5aa'
+  name: Total Costs|oil_extr_6
+Total Costs|oil_extr_7:
+  color: '#6784a2'
+  group: Total Costs|oil
+  group_color: '#98c5aa'
+  name: Total Costs|oil_extr_7
+Total Costs|solar_i:
+  color: '#dbebe1'
+  group: Total Costs|Solar
+  group_color: '#40b95a'
+  name: Total Costs|solar_i
+Total Costs|solar_pv_ppl:
+  color: '#246f1d'
+  group: Total Costs|Solar
+  group_color: '#40b95a'
+  name: Total Costs|solar_pv_ppl
+Total Costs|solar_rc:
+  color: '#f72931'
+  group: Total Costs|Solar
+  group_color: '#40b95a'
+  name: Total Costs|solar_rc
+Total Costs|solar_th_ppl:
+  color: '#5f796b'
+  group: Total Costs|Solar
+  group_color: '#40b95a'
+  name: Total Costs|solar_th_ppl
+Total Costs|syn_liq:
+  color: '#bdc33a'
+  group: Total Costs|Coal
+  group_color: '#462526'
+  name: Total Costs|syn_liq
+Total Costs|wind_curtailment1:
+  color: '#3f36ad'
+  group: Total Costs|Wind
+  group_color: '#3171e4'
+  name: Total Costs|wind_curtailment1
+Total Costs|wind_curtailment2:
+  color: '#32576c'
+  group: Total Costs|Wind
+  group_color: '#3171e4'
+  name: Total Costs|wind_curtailment2
+Total Costs|wind_curtailment3:
+  color: '#282666'
+  group: Total Costs|Wind
+  group_color: '#3171e4'
+  name: Total Costs|wind_curtailment3
+Total Costs|wind_ppf:
+  color: '#6a5754'
+  group: Total Costs|Wind
+  group_color: '#3171e4'
+  name: Total Costs|wind_ppf
+Total Costs|wind_ppl:
+  color: '#b742ed'
+  group: Total Costs|Wind
+  group_color: '#3171e4'
+  name: Total Costs|wind_ppl
+Useful Energy|i_feed|ethanol_fs|M1:
+  color: '#4f948b'
+  group: Useful Energy|Industrial feedstock
+  group_color: '#b48a8d'
+  name: Useful Energy|i_feed|ethanol_fs|M1
+Useful Energy|i_feed|gas_fs|M1:
+  color: '#ec071f'
+  group: Useful Energy|Industrial feedstock
+  group_color: '#b48a8d'
+  name: Useful Energy|i_feed|gas_fs|M1
+Useful Energy|i_feed|loil_fs|M1:
+  color: '#b5b2c7'
+  group: Useful Energy|Industrial feedstock
+  group_color: '#b48a8d'
+  name: Useful Energy|i_feed|loil_fs|M1
+Useful Energy|i_feed|methanol_fs|M1:
+  color: '#100a3d'
+  group: Useful Energy|Industrial feedstock
+  group_color: '#b48a8d'
+  name: Useful Energy|i_feed|methanol_fs|M1
+Useful Energy|i_spec|h2_fc_I|M1:
+  color: '#8ea63c'
+  group: Useful Energy|Industrial specific
+  group_color: '#5b3aca'
+  name: Useful Energy|i_spec|h2_fc_I|M1
+Useful Energy|i_spec|sp_coal_I|M1:
+  color: '#59f035'
+  group: Useful Energy|Industrial specific
+  group_color: '#5b3aca'
+  name: Useful Energy|i_spec|sp_coal_I|M1
+Useful Energy|i_spec|sp_el_I|M1:
+  color: '#1b50d2'
+  group: Useful Energy|Industrial specific
+  group_color: '#5b3aca'
+  name: Useful Energy|i_spec|sp_el_I|M1
+Useful Energy|i_spec|sp_eth_I|M1:
+  color: '#d1927e'
+  group: Useful Energy|Industrial specific
+  group_color: '#5b3aca'
+  name: Useful Energy|i_spec|sp_eth_I|M1
+Useful Energy|i_spec|sp_liq_I|M1:
+  color: '#4b0acc'
+  group: Useful Energy|Industrial specific
+  group_color: '#5b3aca'
+  name: Useful Energy|i_spec|sp_liq_I|M1
+Useful Energy|i_spec|sp_meth_I|M1:
+  color: '#a2b58f'
+  group: Useful Energy|Industrial specific
+  group_color: '#5b3aca'
+  name: Useful Energy|i_spec|sp_meth_I|M1
+Useful Energy|i_therm|biomass_i|M1:
+  color: '#16ead5'
+  group: Useful Energy|Industrial thermal
+  group_color: '#29ae3d'
+  name: Useful Energy|i_therm|biomass_i|M1
+Useful Energy|i_therm|coal_i|M1:
+  color: '#02a25e'
+  group: Useful Energy|Industrial thermal
+  group_color: '#29ae3d'
+  name: Useful Energy|i_therm|coal_i|M1
+Useful Energy|i_therm|elec_i|M1:
+  color: '#f9be2d'
+  group: Useful Energy|Industrial thermal
+  group_color: '#29ae3d'
+  name: Useful Energy|i_therm|elec_i|M1
+Useful Energy|i_therm|eth_i|M1:
+  color: '#514953'
+  group: Useful Energy|Industrial thermal
+  group_color: '#29ae3d'
+  name: Useful Energy|i_therm|eth_i|M1
+Useful Energy|i_therm|foil_i|M1:
+  color: '#dc3c3b'
+  group: Useful Energy|Industrial thermal
+  group_color: '#29ae3d'
+  name: Useful Energy|i_therm|foil_i|M1
+Useful Energy|i_therm|gas_i|M1:
+  color: '#30cdc6'
+  group: Useful Energy|Industrial thermal
+  group_color: '#29ae3d'
+  name: Useful Energy|i_therm|gas_i|M1
+Useful Energy|i_therm|h2_fc_I|M1:
+  color: '#7d7855'
+  group: Useful Energy|Industrial thermal
+  group_color: '#29ae3d'
+  name: Useful Energy|i_therm|h2_fc_I|M1
+Useful Energy|i_therm|h2_i|M1:
+  color: '#e1f41e'
+  group: Useful Energy|Industrial thermal
+  group_color: '#29ae3d'
+  name: Useful Energy|i_therm|h2_i|M1
+Useful Energy|i_therm|heat_i|M1:
+  color: '#db115c'
+  group: Useful Energy|Industrial thermal
+  group_color: '#29ae3d'
+  name: Useful Energy|i_therm|heat_i|M1
+Useful Energy|i_therm|hp_el_i|M1:
+  color: '#8533e6'
+  group: Useful Energy|Industrial thermal
+  group_color: '#29ae3d'
+  name: Useful Energy|i_therm|hp_el_i|M1
+Useful Energy|i_therm|hp_gas_i|M1:
+  color: '#a53106'
+  group: Useful Energy|Industrial thermal
+  group_color: '#29ae3d'
+  name: Useful Energy|i_therm|hp_gas_i|M1
+Useful Energy|i_therm|loil_i|M1:
+  color: '#210c82'
+  group: Useful Energy|Industrial thermal
+  group_color: '#29ae3d'
+  name: Useful Energy|i_therm|loil_i|M1
+Useful Energy|i_therm|meth_i|M1:
+  color: '#1074d0'
+  group: Useful Energy|Industrial thermal
+  group_color: '#29ae3d'
+  name: Useful Energy|i_therm|meth_i|M1
+Useful Energy|i_therm|solar_i|M1:
+  color: '#53df0c'
+  group: Useful Energy|Industrial thermal
+  group_color: '#29ae3d'
+  name: Useful Energy|i_therm|solar_i|M1
+Useful Energy|non-comm|biomass_nc|M1:
+  color: '#4b9c19'
+  group: Useful Energy|non-Commercial biomass
+  group_color: '#150e85'
+  name: Useful Energy|non-comm|biomass_nc|M1
+Useful Energy|rc_spec|h2_fc_RC|M1:
+  color: '#3c57c5'
+  group: Useful Energy|residential/commercial specific
+  group_color: '#b39a3e'
+  name: Useful Energy|rc_spec|h2_fc_RC|M1
+Useful Energy|rc_spec|sp_el_RC|M1:
+  color: '#63c84e'
+  group: Useful Energy|residential/commercial specific
+  group_color: '#b39a3e'
+  name: Useful Energy|rc_spec|sp_el_RC|M1
+Useful Energy|rc_therm|biomass_rc|M1:
+  color: '#1fe9a7'
+  group: Useful Energy|residential/commercial thermal
+  group_color: '#4329b4'
+  name: Useful Energy|rc_therm|biomass_rc|M1
+Useful Energy|rc_therm|coal_rc|M1:
+  color: '#e2e8e7'
+  group: Useful Energy|residential/commercial thermal
+  group_color: '#4329b4'
+  name: Useful Energy|rc_therm|coal_rc|M1
+Useful Energy|rc_therm|eth_rc|M1:
+  color: '#2db968'
+  group: Useful Energy|residential/commercial thermal
+  group_color: '#4329b4'
+  name: Useful Energy|rc_therm|eth_rc|M1
+Useful Energy|rc_therm|foil_rc|M1:
+  color: '#26b408'
+  group: Useful Energy|residential/commercial thermal
+  group_color: '#4329b4'
+  name: Useful Energy|rc_therm|foil_rc|M1
+Useful Energy|rc_therm|gas_rc|M1:
+  color: '#f6a218'
+  group: Useful Energy|residential/commercial thermal
+  group_color: '#4329b4'
+  name: Useful Energy|rc_therm|gas_rc|M1
+Useful Energy|rc_therm|h2_fc_RC|M1:
+  color: '#861df8'
+  group: Useful Energy|residential/commercial thermal
+  group_color: '#4329b4'
+  name: Useful Energy|rc_therm|h2_fc_RC|M1
+Useful Energy|rc_therm|h2_rc|M1:
+  color: '#b1bcd3'
+  group: Useful Energy|residential/commercial thermal
+  group_color: '#4329b4'
+  name: Useful Energy|rc_therm|h2_rc|M1
+Useful Energy|rc_therm|heat_rc|M1:
+  color: '#2b9259'
+  group: Useful Energy|residential/commercial thermal
+  group_color: '#4329b4'
+  name: Useful Energy|rc_therm|heat_rc|M1
+Useful Energy|rc_therm|hp_el_rc|M1:
+  color: '#1d9762'
+  group: Useful Energy|residential/commercial thermal
+  group_color: '#4329b4'
+  name: Useful Energy|rc_therm|hp_el_rc|M1
+Useful Energy|rc_therm|hp_gas_rc|M1:
+  color: '#26893c'
+  group: Useful Energy|residential/commercial thermal
+  group_color: '#4329b4'
+  name: Useful Energy|rc_therm|hp_gas_rc|M1
+Useful Energy|rc_therm|loil_rc|M1:
+  color: '#083b2f'
+  group: Useful Energy|residential/commercial thermal
+  group_color: '#4329b4'
+  name: Useful Energy|rc_therm|loil_rc|M1
+Useful Energy|rc_therm|meth_rc|M1:
+  color: '#3b45f5'
+  group: Useful Energy|residential/commercial thermal
+  group_color: '#4329b4'
+  name: Useful Energy|rc_therm|meth_rc|M1
+Useful Energy|rc_therm|solar_rc|M1:
+  color: '#f6e405'
+  group: Useful Energy|residential/commercial thermal
+  group_color: '#4329b4'
+  name: Useful Energy|rc_therm|solar_rc|M1
+Useful Energy|transport|coal_trp|M1:
+  color: '#bf4fea'
+  group: Useful Energy|Transport
+  group_color: '#bc6562'
+  name: Useful Energy|transport|coal_trp|M1
+Useful Energy|transport|elec_trp|M1:
+  color: '#8c18ac'
+  group: Useful Energy|Transport
+  group_color: '#bc6562'
+  name: Useful Energy|transport|elec_trp|M1
+Useful Energy|transport|eth_fc_trp|M1:
+  color: '#7e4513'
+  group: Useful Energy|Transport
+  group_color: '#bc6562'
+  name: Useful Energy|transport|eth_fc_trp|M1
+Useful Energy|transport|eth_ic_trp|M1:
+  color: '#7d456c'
+  group: Useful Energy|Transport
+  group_color: '#bc6562'
+  name: Useful Energy|transport|eth_ic_trp|M1
+Useful Energy|transport|foil_trp|M1:
+  color: '#3bf791'
+  group: Useful Energy|Transport
+  group_color: '#bc6562'
+  name: Useful Energy|transport|foil_trp|M1
+Useful Energy|transport|gas_trp|M1:
+  color: '#ef7767'
+  group: Useful Energy|Transport
+  group_color: '#bc6562'
+  name: Useful Energy|transport|gas_trp|M1
+Useful Energy|transport|h2_fc_trp|M1:
+  color: '#01e804'
+  group: Useful Energy|Transport
+  group_color: '#bc6562'
+  name: Useful Energy|transport|h2_fc_trp|M1
+Useful Energy|transport|loil_trp|M1:
+  color: '#b2af6c'
+  group: Useful Energy|Transport
+  group_color: '#bc6562'
+  name: Useful Energy|transport|loil_trp|M1
+Useful Energy|transport|meth_fc_trp|M1:
+  color: '#6d0db0'
+  group: Useful Energy|Transport
+  group_color: '#bc6562'
+  name: Useful Energy|transport|meth_fc_trp|M1
+Useful Energy|transport|meth_ic_trp|M1:
+  color: '#10e206'
+  group: Useful Energy|Transport
+  group_color: '#bc6562'
+  name: Useful Energy|transport|meth_ic_trp|M1
+bio_hpl:
+  color: '#80bc44'
+  group: Total Costs|biomass
+  group_color: '#f3cd59'
+  name: bio_hpl
+bio_ppl:
+  color: '#0ec52a'
+  group: Total Costs|biomass
+  group_color: '#f3cd59'
+  name: bio_ppl
