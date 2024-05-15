@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-
+import os
 
 
 def demand_supply_balance(production, demand):
@@ -11,6 +11,18 @@ def demand_supply_balance(production, demand):
 def downscale(parameter, scaler):
     return parameter * scaler
 
+# Function by Stack Overflow user Parvathirajan Natarajan
+# Source: https://stackoverflow.com/a/62619543
+def write_excel(filename,sheetname,dataframe):
+    with pd.ExcelWriter(filename, engine='openpyxl', mode='a') as writer: 
+        workBook = writer.book
+        try:
+            workBook.remove(workBook[sheetname])
+        except:
+            print("Worksheet does not exist")
+        finally:
+            dataframe.to_excel(writer, sheet_name=sheetname,index=False)
+            writer.save()
 
 def input_deducer(input_file):
 
@@ -24,5 +36,11 @@ def input_deducer(input_file):
             calculation = demand_supply_balance(production, demand)
             imports = calculation[0]
             exports = calculation[1]
-            df.apply()
+            df[df["Export"]] = exports
+            df[df["Import"]] = imports
+            write_excel(filename=input_file, sheetname=i, dataframe=df)
 
+# Test script
+if __name__ == 'main':
+    test_sheet = "../Input_2021.xlsx"
+    input_deducer(test_sheet)
