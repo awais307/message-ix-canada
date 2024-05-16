@@ -1,0 +1,579 @@
+province,technology,value,unit,year
+Alberta,coal_extr_mpen,7.924277650684931,GWa,2020
+Alberta,oil_extr_mpen,35.144759756025,GWa,2020
+Alberta,gas_extr_mpen,1578.5431356150375,GWa,2020
+BritishColumbia,coal_extr_mpen,23.39548639726027,GWa,2020
+BritishColumbia,oil_extr_mpen,8.266173114997498,GWa,2020
+BritishColumbia,gas_extr_mpen,919.2941229141836,GWa,2020
+Saskatchewan,coal_extr_mpen,6.41489143150685,GWa,2020
+Saskatchewan,oil_extr_mpen,11.296568033355001,GWa,2020
+Saskatchewan,gas_extr_mpen,45.32003825327656,GWa,2020
+Manitoba,coal_extr_mpen,0.0,GWa,2020
+Manitoba,oil_extr_mpen,983.6654091330412,GWa,2020
+Manitoba,gas_extr_mpen,0.17332131016199998,GWa,2020
+Ontario,coal_extr_mpen,0.0,GWa,2020
+Ontario,oil_extr_mpen,0.0369849566625,GWa,2020
+Ontario,gas_extr_mpen,0.9316161347156031,GWa,2020
+NewBrunswick,coal_extr_mpen,0.0,GWa,2020
+NewBrunswick,oil_extr_mpen,0.00178240755,GWa,2020
+NewBrunswick,gas_extr_mpen,5.2334851624414385e-05,GWa,2020
+NewfoundlandLabrador,coal_extr_mpen,0.0,GWa,2020
+NewfoundlandLabrador,oil_extr_mpen,6.5966903425500005,GWa,2020
+NewfoundlandLabrador,gas_extr_mpen,0.0,GWa,2020
+PrinceEdwardIsland,coal_extr_mpen,0.0,GWa,2020
+PrinceEdwardIsland,oil_extr_mpen,0.0,GWa,2020
+PrinceEdwardIsland,gas_extr_mpen,0.0,GWa,2020
+NovaScotia,coal_extr_mpen,0.0,GWa,2020
+NovaScotia,oil_extr_mpen,0.0,GWa,2020
+NovaScotia,gas_extr_mpen,0.0,GWa,2020
+Quebec,coal_extr_mpen,0.0,GWa,2020
+Quebec,oil_extr_mpen,0.0,GWa,2020
+Quebec,gas_extr_mpen,0.0,GWa,2020
+Yukon,coal_extr_mpen,0.0,GWa,2020
+Yukon,oil_extr_mpen,0.0,GWa,2020
+Yukon,gas_extr_mpen,0.0,GWa,2020
+NorthwestTerritories,coal_extr_mpen,0.0,GWa,2020
+NorthwestTerritories,oil_extr_mpen,0.3925752628875,GWa,2020
+NorthwestTerritories,gas_extr_mpen,0.8691443235267315,GWa,2020
+Nunavut,coal_extr_mpen,0.0,GWa,2020
+Nunavut,oil_extr_mpen,0.0,GWa,2020
+Nunavut,gas_extr_mpen,0.0,GWa,2020
+Alberta,coal_extr_mpen,7.131849885616438,GWa,2015
+Alberta,oil_extr_mpen,31.630283780422502,GWa,2015
+Alberta,gas_extr_mpen,1420.6888220535338,GWa,2015
+BritishColumbia,coal_extr_mpen,21.055937757534245,GWa,2015
+BritishColumbia,oil_extr_mpen,7.439555803497749,GWa,2015
+BritishColumbia,gas_extr_mpen,827.3647106227653,GWa,2015
+Saskatchewan,coal_extr_mpen,5.773402288356165,GWa,2015
+Saskatchewan,oil_extr_mpen,10.166911230019501,GWa,2015
+Saskatchewan,gas_extr_mpen,40.7880344279489,GWa,2015
+Manitoba,coal_extr_mpen,0.0,GWa,2015
+Manitoba,oil_extr_mpen,885.2988682197371,GWa,2015
+Manitoba,gas_extr_mpen,0.1559891791458,GWa,2015
+Ontario,coal_extr_mpen,0.0,GWa,2015
+Ontario,oil_extr_mpen,0.03328646099625,GWa,2015
+Ontario,gas_extr_mpen,0.8384545212440428,GWa,2015
+NewBrunswick,coal_extr_mpen,0.0,GWa,2015
+NewBrunswick,oil_extr_mpen,0.001604166795,GWa,2015
+NewBrunswick,gas_extr_mpen,4.7101366461972945e-05,GWa,2015
+NewfoundlandLabrador,coal_extr_mpen,0.0,GWa,2015
+NewfoundlandLabrador,oil_extr_mpen,5.937021308295001,GWa,2015
+NewfoundlandLabrador,gas_extr_mpen,0.0,GWa,2015
+PrinceEdwardIsland,coal_extr_mpen,0.0,GWa,2015
+PrinceEdwardIsland,oil_extr_mpen,0.0,GWa,2015
+PrinceEdwardIsland,gas_extr_mpen,0.0,GWa,2015
+NovaScotia,coal_extr_mpen,0.0,GWa,2015
+NovaScotia,oil_extr_mpen,0.0,GWa,2015
+NovaScotia,gas_extr_mpen,0.0,GWa,2015
+Quebec,coal_extr_mpen,0.0,GWa,2015
+Quebec,oil_extr_mpen,0.0,GWa,2015
+Quebec,gas_extr_mpen,0.0,GWa,2015
+Yukon,coal_extr_mpen,0.0,GWa,2015
+Yukon,oil_extr_mpen,0.0,GWa,2015
+Yukon,gas_extr_mpen,0.0,GWa,2015
+NorthwestTerritories,coal_extr_mpen,0.0,GWa,2015
+NorthwestTerritories,oil_extr_mpen,0.35331773659875,GWa,2015
+NorthwestTerritories,gas_extr_mpen,0.7822298911740584,GWa,2015
+Nunavut,coal_extr_mpen,0.0,GWa,2015
+Nunavut,oil_extr_mpen,0.0,GWa,2015
+Nunavut,gas_extr_mpen,0.0,GWa,2015
+Alberta,oil_extr_1,0.11642712081026269,GWa,2015
+Alberta,gas_extr_1,232.11687064088377,GWa,2015
+Alberta,oil_extr_2,0.76885831035916,GWa,2015
+Alberta,gas_extr_2,138.09969358123678,GWa,2015
+Alberta,oil_extr_3,0.2321478424928572,GWa,2015
+Alberta,gas_extr_3,35.4622995628554,GWa,2015
+Alberta,oil_extr_4,1.533051818096667,GWa,2015
+Alberta,gas_extr_4,168.78851421921283,GWa,2015
+Alberta,oil_extr_5,17.331410078758637,GWa,2015
+Alberta,gas_extr_5,1.4888634165574168,GWa,2015
+Alberta,oil_extr_6,4.659355443961968,GWa,2015
+Alberta,gas_extr_6,337.89303225311505,GWa,2015
+Alberta,oil_extr_7,6.989033165942953,GWa,2015
+Alberta,gas_extr_7,506.8395483796726,GWa,2015
+Alberta,oil_extr_1,0.12936346756695855,GWa,2020
+Alberta,gas_extr_1,257.9076340454264,GWa,2020
+Alberta,oil_extr_2,0.8542870115101777,GWa,2020
+Alberta,gas_extr_2,153.44410397915195,GWa,2020
+Alberta,oil_extr_3,0.25794204721428576,GWa,2020
+Alberta,gas_extr_3,39.40255506983933,GWa,2020
+Alberta,oil_extr_4,1.7033909089962966,GWa,2020
+Alberta,gas_extr_4,187.54279357690314,GWa,2020
+Alberta,oil_extr_5,19.25712230973182,GWa,2020
+Alberta,gas_extr_5,1.6542926850637962,GWa,2020
+Alberta,oil_extr_6,5.177061604402187,GWa,2020
+Alberta,gas_extr_6,375.43670250346116,GWa,2020
+Alberta,oil_extr_7,7.7655924066032815,GWa,2020
+Alberta,gas_extr_7,563.1550537551917,GWa,2020
+BritishColumbia,oil_extr_1,0.027384074968199775,GWa,2015
+BritishColumbia,gas_extr_1,135.17760154603377,GWa,2015
+BritishColumbia,oil_extr_2,0.1808382227806733,GWa,2015
+BritishColumbia,gas_extr_2,80.42493982023254,GWa,2015
+BritishColumbia,oil_extr_3,0.05460200233664004,GWa,2015
+BritishColumbia,gas_extr_3,20.65213350058588,GWa,2015
+BritishColumbia,oil_extr_4,0.36057926731100254,GWa,2015
+BritishColumbia,gas_extr_4,98.29714857724369,GWa,2015
+BritishColumbia,oil_extr_5,4.076409599398981,GWa,2015
+BritishColumbia,gas_extr_5,0.86706746099142,GWa,2015
+BritishColumbia,oil_extr_6,1.0958970546809008,GWa,2015
+BritishColumbia,gas_extr_6,196.77832788707119,GWa,2015
+BritishColumbia,oil_extr_7,1.6438455820213513,GWa,2015
+BritishColumbia,gas_extr_7,295.1674918306068,GWa,2015
+BritishColumbia,oil_extr_1,0.030426749964666416,GWa,2020
+BritishColumbia,gas_extr_1,150.19733505114863,GWa,2020
+BritishColumbia,oil_extr_2,0.20093135864519254,GWa,2020
+BritishColumbia,gas_extr_2,89.36104424470282,GWa,2020
+BritishColumbia,oil_extr_3,0.06066889148515559,GWa,2020
+BritishColumbia,gas_extr_3,22.946815000650975,GWa,2020
+BritishColumbia,oil_extr_4,0.4006436303455584,GWa,2020
+BritishColumbia,gas_extr_4,109.21905397471521,GWa,2020
+BritishColumbia,oil_extr_5,4.529343999332201,GWa,2020
+BritishColumbia,gas_extr_5,0.9634082899904666,GWa,2020
+BritishColumbia,oil_extr_6,1.2176633940898898,GWa,2020
+BritishColumbia,gas_extr_6,218.6425865411902,GWa,2020
+BritishColumbia,oil_extr_7,1.8264950911348348,GWa,2020
+BritishColumbia,gas_extr_7,327.9638798117853,GWa,2020
+Manitoba,oil_extr_1,3.258674471558325,GWa,2015
+Manitoba,gas_extr_1,0.025486031532807357,GWa,2015
+Manitoba,oil_extr_2,21.519547428265646,GWa,2015
+Manitoba,gas_extr_2,0.015163107858401864,GWa,2015
+Manitoba,oil_extr_3,6.497577563492698,GWa,2015
+Manitoba,gas_extr_3,0.0038936992489575816,GWa,2015
+Manitoba,oil_extr_4,42.908531864745115,GWa,2015
+Manitoba,gas_extr_4,0.018532687365159038,GWa,2015
+Manitoba,oil_extr_5,485.08820957445784,GWa,2015
+Manitoba,gas_extr_5,0.0001634746318854695,GWa,2015
+Manitoba,oil_extr_6,130.410530926887,GWa,2015
+Manitoba,gas_extr_6,0.03710007140343547,GWa,2015
+Manitoba,oil_extr_7,195.61579639033053,GWa,2015
+Manitoba,gas_extr_7,0.05565010710515321,GWa,2015
+Manitoba,oil_extr_1,3.6207494128425832,GWa,2020
+Manitoba,gas_extr_1,0.028317812814230393,GWa,2020
+Manitoba,oil_extr_2,23.910608253628496,GWa,2020
+Manitoba,gas_extr_2,0.016847897620446514,GWa,2020
+Manitoba,oil_extr_3,7.219530626102998,GWa,2020
+Manitoba,gas_extr_3,0.0043263324988417565,GWa,2020
+Manitoba,oil_extr_4,47.67614651638346,GWa,2020
+Manitoba,gas_extr_4,0.020591874850176706,GWa,2020
+Manitoba,oil_extr_5,538.9868995271753,GWa,2020
+Manitoba,gas_extr_5,0.00018163847987274386,GWa,2020
+Manitoba,oil_extr_6,144.90058991876333,GWa,2020
+Manitoba,gas_extr_6,0.041222301559372745,GWa,2020
+Manitoba,oil_extr_7,217.35088487814502,GWa,2020
+Manitoba,gas_extr_7,0.06183345233905912,GWa,2020
+Ontario,oil_extr_1,0.00012252330211957174,GWa,2015
+Ontario,gas_extr_1,0.13698949173440747,GWa,2015
+Ontario,oil_extr_2,0.0008091161096459503,GWa,2015
+Ontario,gas_extr_2,0.08150293763713566,GWa,2015
+Ontario,oil_extr_3,0.0002443032177057142,GWa,2015
+Ontario,gas_extr_3,0.02092895005621882,GWa,2015
+Ontario,oil_extr_4,0.0016133231653106348,GWa,2015
+Ontario,gas_extr_4,0.09961470146333752,GWa,2015
+Ontario,oil_extr_5,0.01823889123478827,GWa,2015
+Ontario,gas_extr_5,0.0008786894383549808,GWa,2015
+Ontario,oil_extr_6,0.004903321586671946,GWa,2015
+Ontario,gas_extr_6,0.19941590036583537,GWa,2015
+Ontario,oil_extr_7,0.00735498238000792,GWa,2015
+Ontario,gas_extr_7,0.29912385054875307,GWa,2015
+Ontario,oil_extr_1,0.0001361370023550797,GWa,2020
+Ontario,gas_extr_1,0.15221054637156384,GWa,2020
+Ontario,oil_extr_2,0.0008990178996066113,GWa,2020
+Ontario,gas_extr_2,0.0905588195968174,GWa,2020
+Ontario,oil_extr_3,0.00027144801967301575,GWa,2020
+Ontario,gas_extr_3,0.023254388951354243,GWa,2020
+Ontario,oil_extr_4,0.001792581294789594,GWa,2020
+Ontario,gas_extr_4,0.11068300162593057,GWa,2020
+Ontario,oil_extr_5,0.020265434705320298,GWa,2020
+Ontario,gas_extr_5,0.0009763215981722007,GWa,2020
+Ontario,oil_extr_6,0.005448135096302161,GWa,2020
+Ontario,gas_extr_6,0.22157322262870593,GWa,2020
+Ontario,oil_extr_7,0.008172202644453242,GWa,2020
+Ontario,gas_extr_7,0.33235983394305896,GWa,2020
+NewBrunswick,oil_extr_1,5.904737451545626e-06,GWa,2015
+NewBrunswick,gas_extr_1,7.695578100107457e-06,GWa,2015
+NewBrunswick,oil_extr_2,3.899354745281688e-05,GWa,2015
+NewBrunswick,gas_extr_2,4.578542587710245e-06,GWa,2015
+NewBrunswick,oil_extr_3,1.1773649046058515e-05,GWa,2015
+NewBrunswick,gas_extr_3,1.1757133169246367e-06,GWa,2015
+NewBrunswick,oil_extr_4,7.775051399087396e-05,GWa,2015
+NewBrunswick,gas_extr_4,5.595996490856814e-06,GWa,2015
+NewBrunswick,oil_extr_5,0.0008789827101102779,GWa,2015
+NewBrunswick,gas_extr_5,4.936161973438364e-08,GWa,2015
+NewBrunswick,oil_extr_6,0.00023630465477937087,GWa,2015
+NewBrunswick,gas_extr_6,1.1202469738655763e-05,GWa,2015
+NewBrunswick,oil_extr_7,0.0003544569821690563,GWa,2015
+NewBrunswick,gas_extr_7,1.6803704607983645e-05,GWa,2015
+NewBrunswick,oil_extr_1,6.56081939060625e-06,GWa,2020
+NewBrunswick,gas_extr_1,8.550642333452732e-06,GWa,2020
+NewBrunswick,oil_extr_2,4.33261638364632e-05,GWa,2020
+NewBrunswick,gas_extr_2,5.0872695419002714e-06,GWa,2020
+NewBrunswick,oil_extr_3,1.3081832273398349e-05,GWa,2020
+NewBrunswick,gas_extr_3,1.3063481299162632e-06,GWa,2020
+NewBrunswick,oil_extr_4,8.638945998985995e-05,GWa,2020
+NewBrunswick,gas_extr_4,6.217773878729793e-06,GWa,2020
+NewBrunswick,oil_extr_5,0.0009766474556780866,GWa,2020
+NewBrunswick,gas_extr_5,5.484624414931516e-08,GWa,2020
+NewBrunswick,oil_extr_6,0.0002625607275326343,GWa,2020
+NewBrunswick,gas_extr_6,1.2447188598506403e-05,GWa,2020
+NewBrunswick,oil_extr_7,0.00039384109129895144,GWa,2020
+NewBrunswick,gas_extr_7,1.8670782897759607e-05,GWa,2020
+NovaScotia,oil_extr_1,0.0,GWa,2015
+NovaScotia,gas_extr_1,0.0,GWa,2015
+NovaScotia,oil_extr_2,0.0,GWa,2015
+NovaScotia,gas_extr_2,0.0,GWa,2015
+NovaScotia,oil_extr_3,0.0,GWa,2015
+NovaScotia,gas_extr_3,0.0,GWa,2015
+NovaScotia,oil_extr_4,0.0,GWa,2015
+NovaScotia,gas_extr_4,0.0,GWa,2015
+NovaScotia,oil_extr_5,0.0,GWa,2015
+NovaScotia,gas_extr_5,0.0,GWa,2015
+NovaScotia,oil_extr_6,0.0,GWa,2015
+NovaScotia,gas_extr_6,0.0,GWa,2015
+NovaScotia,oil_extr_7,0.0,GWa,2015
+NovaScotia,gas_extr_7,0.0,GWa,2015
+NovaScotia,oil_extr_1,0.0,GWa,2020
+NovaScotia,gas_extr_1,0.0,GWa,2020
+NovaScotia,oil_extr_2,0.0,GWa,2020
+NovaScotia,gas_extr_2,0.0,GWa,2020
+NovaScotia,oil_extr_3,0.0,GWa,2020
+NovaScotia,gas_extr_3,0.0,GWa,2020
+NovaScotia,oil_extr_4,0.0,GWa,2020
+NovaScotia,gas_extr_4,0.0,GWa,2020
+NovaScotia,oil_extr_5,0.0,GWa,2020
+NovaScotia,gas_extr_5,0.0,GWa,2020
+NovaScotia,oil_extr_6,0.0,GWa,2020
+NovaScotia,gas_extr_6,0.0,GWa,2020
+NovaScotia,oil_extr_7,0.0,GWa,2020
+NovaScotia,gas_extr_7,0.0,GWa,2020
+PrinceEdwardIsland,oil_extr_1,0.0,GWa,2015
+PrinceEdwardIsland,gas_extr_1,0.0,GWa,2015
+PrinceEdwardIsland,oil_extr_2,0.0,GWa,2015
+PrinceEdwardIsland,gas_extr_2,0.0,GWa,2015
+PrinceEdwardIsland,oil_extr_3,0.0,GWa,2015
+PrinceEdwardIsland,gas_extr_3,0.0,GWa,2015
+PrinceEdwardIsland,oil_extr_4,0.0,GWa,2015
+PrinceEdwardIsland,gas_extr_4,0.0,GWa,2015
+PrinceEdwardIsland,oil_extr_5,0.0,GWa,2015
+PrinceEdwardIsland,gas_extr_5,0.0,GWa,2015
+PrinceEdwardIsland,oil_extr_6,0.0,GWa,2015
+PrinceEdwardIsland,gas_extr_6,0.0,GWa,2015
+PrinceEdwardIsland,oil_extr_7,0.0,GWa,2015
+PrinceEdwardIsland,gas_extr_7,0.0,GWa,2015
+PrinceEdwardIsland,oil_extr_1,0.0,GWa,2020
+PrinceEdwardIsland,gas_extr_1,0.0,GWa,2020
+PrinceEdwardIsland,oil_extr_2,0.0,GWa,2020
+PrinceEdwardIsland,gas_extr_2,0.0,GWa,2020
+PrinceEdwardIsland,oil_extr_3,0.0,GWa,2020
+PrinceEdwardIsland,gas_extr_3,0.0,GWa,2020
+PrinceEdwardIsland,oil_extr_4,0.0,GWa,2020
+PrinceEdwardIsland,gas_extr_4,0.0,GWa,2020
+PrinceEdwardIsland,oil_extr_5,0.0,GWa,2020
+PrinceEdwardIsland,gas_extr_5,0.0,GWa,2020
+PrinceEdwardIsland,oil_extr_6,0.0,GWa,2020
+PrinceEdwardIsland,gas_extr_6,0.0,GWa,2020
+PrinceEdwardIsland,oil_extr_7,0.0,GWa,2020
+PrinceEdwardIsland,gas_extr_7,0.0,GWa,2020
+Quebec,oil_extr_1,0.0,GWa,2015
+Quebec,gas_extr_1,0.0,GWa,2015
+Quebec,oil_extr_2,0.0,GWa,2015
+Quebec,gas_extr_2,0.0,GWa,2015
+Quebec,oil_extr_3,0.0,GWa,2015
+Quebec,gas_extr_3,0.0,GWa,2015
+Quebec,oil_extr_4,0.0,GWa,2015
+Quebec,gas_extr_4,0.0,GWa,2015
+Quebec,oil_extr_5,0.0,GWa,2015
+Quebec,gas_extr_5,0.0,GWa,2015
+Quebec,oil_extr_6,0.0,GWa,2015
+Quebec,gas_extr_6,0.0,GWa,2015
+Quebec,oil_extr_7,0.0,GWa,2015
+Quebec,gas_extr_7,0.0,GWa,2015
+Quebec,oil_extr_1,0.0,GWa,2020
+Quebec,gas_extr_1,0.0,GWa,2020
+Quebec,oil_extr_2,0.0,GWa,2020
+Quebec,gas_extr_2,0.0,GWa,2020
+Quebec,oil_extr_3,0.0,GWa,2020
+Quebec,gas_extr_3,0.0,GWa,2020
+Quebec,oil_extr_4,0.0,GWa,2020
+Quebec,gas_extr_4,0.0,GWa,2020
+Quebec,oil_extr_5,0.0,GWa,2020
+Quebec,gas_extr_5,0.0,GWa,2020
+Quebec,oil_extr_6,0.0,GWa,2020
+Quebec,gas_extr_6,0.0,GWa,2020
+Quebec,oil_extr_7,0.0,GWa,2020
+Quebec,gas_extr_7,0.0,GWa,2020
+Saskatchewan,oil_extr_1,0.037423129373798034,GWa,2015
+Saskatchewan,gas_extr_1,6.664084888992936,GWa,2015
+Saskatchewan,oil_extr_2,0.24713386209714075,GWa,2015
+Saskatchewan,gas_extr_2,3.964847874384434,GWa,2015
+Saskatchewan,oil_extr_3,0.07461920111909603,GWa,2015
+Saskatchewan,gas_extr_3,1.018124076863807,GWa,2015
+Saskatchewan,oil_extr_4,0.49276831829298945,GWa,2015
+Saskatchewan,gas_extr_4,4.845925175271193,GWa,2015
+Saskatchewan,oil_extr_5,5.5708291770327785,GWa,2015
+Saskatchewan,gas_extr_5,0.042745329836042886,GWa,2015
+Saskatchewan,oil_extr_6,1.4976550168414793,GWa,2015
+Saskatchewan,gas_extr_6,9.700922833040195,GWa,2015
+Saskatchewan,oil_extr_7,2.2464825252622194,GWa,2015
+Saskatchewan,gas_extr_7,14.551384249560293,GWa,2015
+Saskatchewan,oil_extr_1,0.04158125485977559,GWa,2020
+Saskatchewan,gas_extr_1,7.404538765547707,GWa,2020
+Saskatchewan,oil_extr_2,0.27459318010793415,GWa,2020
+Saskatchewan,gas_extr_2,4.405386527093816,GWa,2020
+Saskatchewan,oil_extr_3,0.08291022346566226,GWa,2020
+Saskatchewan,gas_extr_3,1.1312489742931189,GWa,2020
+Saskatchewan,oil_extr_4,0.5475203536588772,GWa,2020
+Saskatchewan,gas_extr_4,5.384361305856881,GWa,2020
+Saskatchewan,oil_extr_5,6.189810196703087,GWa,2020
+Saskatchewan,gas_extr_5,0.04749481092893654,GWa,2020
+Saskatchewan,oil_extr_6,1.664061129823866,GWa,2020
+Saskatchewan,gas_extr_6,10.778803147822439,GWa,2020
+Saskatchewan,oil_extr_7,2.496091694735799,GWa,2020
+Saskatchewan,gas_extr_7,16.16820472173366,GWa,2020
+Yukon,oil_extr_1,0.0,GWa,2015
+Yukon,gas_extr_1,0.0,GWa,2015
+Yukon,oil_extr_2,0.0,GWa,2015
+Yukon,gas_extr_2,0.0,GWa,2015
+Yukon,oil_extr_3,0.0,GWa,2015
+Yukon,gas_extr_3,0.0,GWa,2015
+Yukon,oil_extr_4,0.0,GWa,2015
+Yukon,gas_extr_4,0.0,GWa,2015
+Yukon,oil_extr_5,0.0,GWa,2015
+Yukon,gas_extr_5,0.0,GWa,2015
+Yukon,oil_extr_6,0.0,GWa,2015
+Yukon,gas_extr_6,0.0,GWa,2015
+Yukon,oil_extr_7,0.0,GWa,2015
+Yukon,gas_extr_7,0.0,GWa,2015
+Yukon,oil_extr_1,0.0,GWa,2020
+Yukon,gas_extr_1,0.0,GWa,2020
+Yukon,oil_extr_2,0.0,GWa,2020
+Yukon,gas_extr_2,0.0,GWa,2020
+Yukon,oil_extr_3,0.0,GWa,2020
+Yukon,gas_extr_3,0.0,GWa,2020
+Yukon,oil_extr_4,0.0,GWa,2020
+Yukon,gas_extr_4,0.0,GWa,2020
+Yukon,oil_extr_5,0.0,GWa,2020
+Yukon,gas_extr_5,0.0,GWa,2020
+Yukon,oil_extr_6,0.0,GWa,2020
+Yukon,gas_extr_6,0.0,GWa,2020
+Yukon,oil_extr_7,0.0,GWa,2020
+Yukon,gas_extr_7,0.0,GWa,2020
+Alberta,coal_fs,0.1328641347031963,GWa,2015
+Alberta,coal_fs,0.1354009200913242,GWa,2020
+Alberta,foil_fs,9.711765760273972,GWa,2015
+Alberta,foil_fs,11.36923791324201,GWa,2020
+Alberta,foil_trp,0.0,GWa,2015
+Alberta,foil_trp,0.0,GWa,2020
+Alberta,loil_fs,11.20751784474886,GWa,2015
+Alberta,loil_fs,13.123425009132422,GWa,2020
+Alberta,loil_i,4.840820716894977,GWa,2015
+Alberta,loil_i,5.346909401826484,GWa,2020
+Alberta,loil_rc,4.206307271689498,GWa,2015
+Alberta,loil_rc,4.319511319634703,GWa,2020
+Alberta,loil_trp,12.641752883561644,GWa,2015
+Alberta,loil_trp,13.784574700913245,GWa,2020
+Alberta,gas_fs,0.0,GWa,2015
+Alberta,gas_fs,0.0,GWa,2020
+Alberta,gas_rc,0.0,GWa,2015
+Alberta,gas_rc,0.0,GWa,2020
+Alberta,gas_trp,0.0,GWa,2015
+Alberta,gas_trp,0.0,GWa,2020
+British Columbia,coal_fs,0.1877221187214612,GWa,2015
+British Columbia,coal_fs,0.20674800913242,GWa,2020
+British Columbia,foil_fs,0.2505075570776256,GWa,2015
+British Columbia,foil_fs,0.3082194246575342,GWa,2020
+British Columbia,foil_trp,0.6500512557077626,GWa,2015
+British Columbia,foil_trp,0.6189756347031964,GWa,2020
+British Columbia,loil_fs,0.4103250365296804,GWa,2015
+British Columbia,loil_fs,0.3656141940639269,GWa,2020
+British Columbia,loil_i,1.9029061392694064,GWa,2015
+British Columbia,loil_i,2.108068657534247,GWa,2020
+British Columbia,loil_rc,0.2587521095890411,GWa,2015
+British Columbia,loil_rc,0.259703404109589,GWa,2020
+British Columbia,loil_trp,10.123359189497718,GWa,2015
+British Columbia,loil_trp,10.029498130136986,GWa,2020
+British Columbia,gas_fs,0.0,GWa,2015
+British Columbia,gas_fs,0.0,GWa,2020
+British Columbia,gas_rc,0.0,GWa,2015
+British Columbia,gas_rc,0.0,GWa,2020
+British Columbia,gas_trp,0.0,GWa,2015
+British Columbia,gas_trp,0.0,GWa,2020
+Manitoba,coal_fs,0.0142694178082191,GWa,2015
+Manitoba,coal_fs,0.0142694178082191,GWa,2020
+Manitoba,foil_fs,0.0091958470319634,GWa,2015
+Manitoba,foil_fs,0.0110984360730593,GWa,2020
+Manitoba,foil_trp,0.0,GWa,2015
+Manitoba,foil_trp,0.0,GWa,2020
+Manitoba,loil_fs,0.0916413721461187,GWa,2015
+Manitoba,loil_fs,0.0929097648401826,GWa,2020
+Manitoba,loil_i,1.0207390205479452,GWa,2015
+Manitoba,loil_i,1.1675554748858448,GWa,2020
+Manitoba,loil_rc,0.1144724406392694,GWa,2015
+Manitoba,loil_rc,0.1122527534246575,GWa,2020
+Manitoba,loil_trp,2.9556720753424663,GWa,2015
+Manitoba,loil_trp,2.973746671232877,GWa,2020
+Manitoba,gas_fs,0.0,GWa,2015
+Manitoba,gas_fs,0.0,GWa,2020
+Manitoba,gas_rc,0.0,GWa,2015
+Manitoba,gas_rc,0.0,GWa,2020
+Manitoba,gas_trp,0.0,GWa,2015
+Manitoba,gas_trp,0.0,GWa,2020
+Ontario,coal_fs,3.3117733242009133,GWa,2015
+Ontario,coal_fs,3.272136052511416,GWa,2020
+Ontario,foil_fs,3.247402394977169,GWa,2015
+Ontario,foil_fs,3.4056343835616443,GWa,2020
+Ontario,foil_trp,0.537481404109589,GWa,2015
+Ontario,foil_trp,0.5993155479452055,GWa,2020
+Ontario,loil_fs,6.952060356164385,GWa,2015
+Ontario,loil_fs,7.563742732876713,GWa,2020
+Ontario,loil_i,5.457259566210046,GWa,2015
+Ontario,loil_i,5.836826079908676,GWa,2020
+Ontario,loil_rc,2.298327561643836,GWa,2015
+Ontario,loil_rc,2.161024052511416,GWa,2020
+Ontario,loil_trp,26.69015326484018,GWa,2015
+Ontario,loil_trp,26.493869495433792,GWa,2020
+Ontario,gas_fs,0.0,GWa,2015
+Ontario,gas_fs,0.0,GWa,2020
+Ontario,gas_rc,0.0,GWa,2015
+Ontario,gas_rc,0.0,GWa,2020
+Ontario,gas_trp,0.0,GWa,2015
+Ontario,gas_trp,0.0,GWa,2020
+New Brunswick,coal_fs,0.0409056643835616,GWa,2015
+New Brunswick,coal_fs,0.0371004863013698,GWa,2020
+New Brunswick,foil_fs,1.0686208447488583,GWa,2015
+New Brunswick,foil_fs,1.145992799086758,GWa,2020
+New Brunswick,foil_trp,0.0012683926940639,GWa,2015
+New Brunswick,foil_trp,0.0006341963470319,GWa,2020
+New Brunswick,loil_fs,0.1239853858447488,GWa,2015
+New Brunswick,loil_fs,0.1233511894977169,GWa,2020
+New Brunswick,loil_i,1.2985170205479453,GWa,2015
+New Brunswick,loil_i,1.422502406392694,GWa,2020
+New Brunswick,loil_rc,0.3015603630136986,GWa,2015
+New Brunswick,loil_rc,0.2841199634703197,GWa,2020
+New Brunswick,loil_trp,1.636860771689498,GWa,2015
+New Brunswick,loil_trp,1.649544698630137,GWa,2020
+New Brunswick,gas_fs,0.0,GWa,2015
+New Brunswick,gas_fs,0.0,GWa,2020
+New Brunswick,gas_rc,0.0,GWa,2015
+New Brunswick,gas_rc,0.0,GWa,2020
+New Brunswick,gas_trp,0.0,GWa,2015
+New Brunswick,gas_trp,0.0,GWa,2020
+Newfoundland and Labrador,coal_fs,0.0840310159817351,GWa,2015
+Newfoundland and Labrador,coal_fs,0.0722983835616438,GWa,2020
+Newfoundland and Labrador,foil_fs,0.2387749246575342,GWa,2015
+Newfoundland and Labrador,foil_fs,0.17281850456621,GWa,2020
+Newfoundland and Labrador,foil_trp,0.0136352214611872,GWa,2015
+Newfoundland and Labrador,foil_trp,0.0123668287671232,GWa,2020
+Newfoundland and Labrador,loil_fs,0.0475647260273972,GWa,2015
+Newfoundland and Labrador,loil_fs,0.0472476278538812,GWa,2020
+Newfoundland and Labrador,loil_i,0.6215124200913242,GWa,2015
+Newfoundland and Labrador,loil_i,0.7045921415525114,GWa,2020
+Newfoundland and Labrador,loil_rc,0.2343355502283105,GWa,2015
+Newfoundland and Labrador,loil_rc,0.2146754634703196,GWa,2020
+Newfoundland and Labrador,loil_trp,1.484653648401827,GWa,2015
+Newfoundland and Labrador,loil_trp,1.5623427009132422,GWa,2020
+Newfoundland and Labrador,gas_fs,0.0,GWa,2015
+Newfoundland and Labrador,gas_fs,0.0,GWa,2020
+Newfoundland and Labrador,gas_rc,0.0,GWa,2015
+Newfoundland and Labrador,gas_rc,0.0,GWa,2020
+Newfoundland and Labrador,gas_trp,0.0,GWa,2015
+Newfoundland and Labrador,gas_trp,0.0,GWa,2020
+Nova Scotia,coal_fs,0.0228310684931506,GWa,2015
+Nova Scotia,coal_fs,0.0307585228310502,GWa,2020
+Nova Scotia,foil_fs,0.0,GWa,2015
+Nova Scotia,foil_fs,0.0,GWa,2020
+Nova Scotia,foil_trp,0.0501015114155251,GWa,2015
+Nova Scotia,foil_trp,0.0323440136986301,GWa,2020
+Nova Scotia,loil_fs,0.1265221712328767,GWa,2015
+Nova Scotia,loil_fs,0.1411086872146119,GWa,2020
+Nova Scotia,loil_i,0.3916162442922374,GWa,2015
+Nova Scotia,loil_i,0.4226918652968037,GWa,2020
+Nova Scotia,loil_rc,0.8704344863013699,GWa,2015
+Nova Scotia,loil_rc,0.869166093607306,GWa,2020
+Nova Scotia,loil_trp,1.894344488584475,GWa,2015
+Nova Scotia,loil_trp,1.9590325159817352,GWa,2020
+Nova Scotia,gas_fs,0.0,GWa,2015
+Nova Scotia,gas_fs,0.0,GWa,2020
+Nova Scotia,gas_rc,0.0,GWa,2015
+Nova Scotia,gas_rc,0.0,GWa,2020
+Nova Scotia,gas_trp,0.0,GWa,2015
+Nova Scotia,gas_trp,0.0,GWa,2020
+Prince Edward Island,coal_fs,0.0,GWa,2015
+Prince Edward Island,coal_fs,0.0,GWa,2020
+Prince Edward Island,foil_fs,0.0,GWa,2015
+Prince Edward Island,foil_fs,0.0,GWa,2020
+Prince Edward Island,foil_trp,0.0,GWa,2015
+Prince Edward Island,foil_trp,0.0,GWa,2020
+Prince Edward Island,loil_fs,0.0009512945205479,GWa,2015
+Prince Edward Island,loil_fs,0.0009512945205479,GWa,2020
+Prince Edward Island,loil_i,0.0497844132420091,GWa,2015
+Prince Edward Island,loil_i,0.0488331187214611,GWa,2020
+Prince Edward Island,loil_rc,0.1614029703196347,GWa,2015
+Prince Edward Island,loil_rc,0.1667936392694064,GWa,2020
+Prince Edward Island,loil_trp,0.3199520570776256,GWa,2015
+Prince Edward Island,loil_trp,0.2917303196347032,GWa,2020
+Prince Edward Island,gas_fs,0.0,GWa,2015
+Prince Edward Island,gas_fs,0.0,GWa,2020
+Prince Edward Island,gas_rc,0.0,GWa,2015
+Prince Edward Island,gas_rc,0.0,GWa,2020
+Prince Edward Island,gas_trp,0.0,GWa,2015
+Prince Edward Island,gas_trp,0.0,GWa,2020
+Quebec,coal_fs,0.9338541210045662,GWa,2015
+Quebec,coal_fs,0.9183163105022832,GWa,2020
+Quebec,foil_fs,0.9614416621004568,GWa,2015
+Quebec,foil_fs,0.9478064406392694,GWa,2020
+Quebec,foil_trp,0.5821922465753425,GWa,2015
+Quebec,foil_trp,0.4426690502283105,GWa,2020
+Quebec,loil_fs,1.6974265228310503,GWa,2015
+Quebec,loil_fs,1.7265995547945208,GWa,2020
+Quebec,loil_i,3.2619889109589044,GWa,2015
+Quebec,loil_i,3.4294167465753427,GWa,2020
+Quebec,loil_rc,1.4485044566210048,GWa,2015
+Quebec,loil_rc,1.3698641095890414,GWa,2020
+Quebec,loil_trp,15.558104785388128,GWa,2015
+Quebec,loil_trp,15.497856132420091,GWa,2020
+Quebec,gas_fs,0.0,GWa,2015
+Quebec,gas_fs,0.0,GWa,2020
+Quebec,gas_rc,0.0,GWa,2015
+Quebec,gas_rc,0.0,GWa,2020
+Quebec,gas_trp,0.0,GWa,2015
+Quebec,gas_trp,0.0,GWa,2020
+Saskatchewan,coal_fs,0.0523211986301369,GWa,2015
+Saskatchewan,coal_fs,0.0551750821917808,GWa,2020
+Saskatchewan,foil_fs,0.4372783812785388,GWa,2015
+Saskatchewan,foil_fs,0.4198379817351598,GWa,2020
+Saskatchewan,foil_trp,0.0,GWa,2015
+Saskatchewan,foil_trp,0.0,GWa,2020
+Saskatchewan,loil_fs,0.2644598767123288,GWa,2015
+Saskatchewan,loil_fs,0.2143583652968036,GWa,2020
+Saskatchewan,loil_i,2.1835380228310504,GWa,2015
+Saskatchewan,loil_i,2.490489054794521,GWa,2020
+Saskatchewan,loil_rc,0.1490361415525114,GWa,2015
+Saskatchewan,loil_rc,0.1458651598173516,GWa,2020
+Saskatchewan,loil_trp,4.274166280821918,GWa,2015
+Saskatchewan,loil_trp,4.518331874429224,GWa,2020
+Saskatchewan,gas_fs,0.0,GWa,2015
+Saskatchewan,gas_fs,0.0,GWa,2020
+Saskatchewan,gas_rc,0.0,GWa,2015
+Saskatchewan,gas_rc,0.0,GWa,2020
+Saskatchewan,gas_trp,0.0,GWa,2015
+Saskatchewan,gas_trp,0.0,GWa,2020
+Yukon,coal_fs,0.0,GWa,2015
+Yukon,coal_fs,0.0,GWa,2020
+Yukon,foil_fs,0.0,GWa,2015
+Yukon,foil_fs,0.0,GWa,2020
+Yukon,foil_trp,0.0,GWa,2015
+Yukon,foil_trp,0.0,GWa,2020
+Yukon,loil_fs,0.0025367853881278,GWa,2015
+Yukon,loil_fs,0.0095129452054794,GWa,2020
+Yukon,loil_i,0.0183916940639269,GWa,2015
+Yukon,loil_i,0.0799087397260274,GWa,2020
+Yukon,loil_rc,0.0367833881278538,GWa,2015
+Yukon,loil_rc,0.0364662899543379,GWa,2020
+Yukon,loil_trp,0.0466134315068493,GWa,2015
+Yukon,loil_trp,0.0738838744292237,GWa,2020
+Yukon,gas_fs,0.0,GWa,2015
+Yukon,gas_fs,0.0,GWa,2020
+Yukon,gas_rc,0.0,GWa,2015
+Yukon,gas_rc,0.0,GWa,2020
+Yukon,gas_trp,0.0,GWa,2015
+Yukon,gas_trp,0.0,GWa,2020

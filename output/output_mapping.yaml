@@ -5,38 +5,34 @@ Primary Energy|Biomass:
   - Primary Energy|biomass|bio_istig_ccs|M1
   - Primary Energy|biomass|bio_istig|M1
   - Primary Energy|biomass|bio_ppl|M1
-  - Primary Energy|biomass|biomass_nc|M1
-  - Primary Energy|biomass|biomass_t_d|M1
+  # - Primary Energy|biomass|biomass_nc|M1
+  # - Primary Energy|biomass|biomass_t_d|M1
   - Primary Energy|biomass|eth_bio_ccs|M1
   - Primary Energy|biomass|eth_bio|M1
   - Primary Energy|biomass|gas_bio|M1
-  - Primary Energy|biomass|h2_bio_ccs|M1
-  - Primary Energy|biomass|h2_bio|M1
   - Primary Energy|biomass|liq_bio_ccs|M1
   - Primary Energy|biomass|liq_bio|M1
-  - Primary Energy|biomass|land_use_biomass|M1
-  - Primary Energy|biomass|bio_ppl|M1
-  - Primary Energy|biomass|bio_istig|M1
-  - Primary Energy|biomass|bio_istig_ccs|M1
+Primary Energy|Hydrogen Production:
+  - Primary Energy|biomass|h2_bio_ccs|M1
+  - Primary Energy|biomass|h2_bio|M1
 Primary Energy|LNG:
   - Primary Energy|LNG|LNG_bal|M1
-Primary Energy|Coal Production:
-  - Primary Energy|coal|coal_bal|M1
+Primary Energy|Coal|Production:
   - Primary Energy|coal|coal_extr_ch4|M1
   - Primary Energy|coal|coal_extr|M1
   - Primary Energy|coal|lignite_extr|M1
-Primary Energy|Coal Export:
+Primary Energy|Coal|Export:
   - Primary Energy|coal|coal_exp|M1
-Primary Energy|Gas Production:
+Primary Energy|Gas|Production:
   - Primary Energy|gas|gas_extr_1|M1
   - Primary Energy|gas|gas_extr_2|M1
   - Primary Energy|gas|gas_extr_3|M1
   - Primary Energy|gas|gas_extr_4|M1
   - Primary Energy|gas|gas_extr_5|M1
   - Primary Energy|gas|gas_extr_6|M1
-Primary Energy|Gas Export:
+Primary Energy|Gas|Export:
   - Primary Energy|gas|gas_export|M1
-Primary Energy|Oil Production:
+Primary Energy|Oil|Production:
   - Primary Energy|crudeoil|oil_extr_1|M1
   - Primary Energy|crudeoil|oil_extr_2|M1
   - Primary Energy|crudeoil|oil_extr_3|M1
@@ -44,8 +40,10 @@ Primary Energy|Oil Production:
   - Primary Energy|crudeoil|oil_extr_5|M1
   - Primary Energy|crudeoil|oil_extr_6|M1
   - Primary Energy|crudeoil|oil_extr_7|M1
-Primary Energy|Oil Export:
+Primary Energy|Oil|Export:
   - Primary Energy|crudeoil|oil_exp|M1
+  - Secondary Energy|fueloil|foil_exp|M1
+  - Secondary Energy|lightoil|loil_exp|M1
 Primary Energy|renewable|hydro:
   - Primary Energy|renewable|hydro|hydro_hc|M1
   - Primary Energy|renewable|hydro|hydro_lc|M1
@@ -131,6 +129,153 @@ Useful Energy|Transport:
   - Useful Energy|transport|meth_fc_trp|M1
   - Useful Energy|transport|meth_ic_trp|M1
 
+Emissions|CO2_industry:
+ - Emissions|CO2_industry|coal_i|M1
+ - Emissions|CO2_industry|eth_i|M1
+ - Emissions|CO2_industry|foil_i|M1
+ - Emissions|CO2_industry|gas_i|M1
+ - Emissions|CO2_industry|loil_i|M1
+ - Emissions|CO2_industry|meth_i|M1
+ - Emissions|CO2_industry|sp_eth_I|M1
+ - Emissions|CO2_industry|sp_liq_I|M1
+ - Emissions|CO2_industry|sp_meth_I|M1
+Emissions|CO2_res_com:
+ - Emissions|CO2_res_com|coal_rc|M1
+ - Emissions|CO2_res_com|eth_rc|M1
+ - Emissions|CO2_res_com|foil_rc|M1
+ - Emissions|CO2_res_com|gas_rc|M1
+ - Emissions|CO2_res_com|hp_gas_i|M1
+ - Emissions|CO2_res_com|hp_gas_rc|M1
+ - Emissions|CO2_res_com|loil_rc|M1
+ - Emissions|CO2_res_com|meth_rc|M1
+ - Emissions|CO2_res_com|solar_rc|M1
+
+
+Emissions|CO2_transformation:
+ - Emissions|CO2_transformation|bio_istig_ccs|M1
+ - Emissions|CO2_transformation|bio_istig|M1
+ - Emissions|CO2_transformation|bio_ppl_co2scr|M1
+ - Emissions|CO2_transformation|c_ppl_co2scr|M1
+ - Emissions|CO2_transformation|cement_CO2|M1
+ - Emissions|CO2_transformation|cement_co2scr|M1
+ - Emissions|CO2_transformation|coal_adv_ccs|M1
+ - Emissions|CO2_transformation|coal_adv|M1
+ - Emissions|CO2_transformation|coal_gas|M1
+ - Emissions|CO2_transformation|coal_hpl|M1
+ - Emissions|CO2_transformation|coal_ppl_u|M1
+ - Emissions|CO2_transformation|coal_ppl|M1
+ - Emissions|CO2_transformation|coal_t_d|M1
+ - Emissions|CO2_transformation|eth_bio_ccs|M1
+ - Emissions|CO2_transformation|eth_bio|M1
+ - Emissions|CO2_transformation|eth_t_d|M1
+ - Emissions|CO2_transformation|flaring_CO2|M1
+ - Emissions|CO2_transformation|foil_hpl|M1
+ - Emissions|CO2_transformation|foil_ppl|M1
+ - Emissions|CO2_transformation|foil_t_d|M1
+ - Emissions|CO2_transformation|g_ppl_co2scr|M1
+ - Emissions|CO2_transformation|gas_cc_ccs|M1
+ - Emissions|CO2_transformation|gas_cc|M1
+ - Emissions|CO2_transformation|gas_ct|M1
+ - Emissions|CO2_transformation|gas_extr_1|M1
+ - Emissions|CO2_transformation|gas_extr_2|M1
+ - Emissions|CO2_transformation|gas_extr_3|M1
+ - Emissions|CO2_transformation|gas_extr_4|M1
+ - Emissions|CO2_transformation|gas_extr_5|M1
+ - Emissions|CO2_transformation|gas_extr_6|M1
+ - Emissions|CO2_transformation|gas_hpl|M1
+ - Emissions|CO2_transformation|gas_ppl|M1
+ - Emissions|CO2_transformation|gas_t_d_ch4|M1
+ - Emissions|CO2_transformation|gas_t_d|M1
+ - Emissions|CO2_transformation|h2_bio_ccs|M1
+ - Emissions|CO2_transformation|h2_bio|M1
+ - Emissions|CO2_transformation|h2_coal_ccs|M1
+ - Emissions|CO2_transformation|h2_coal|M1
+ - Emissions|CO2_transformation|h2_mix|M1
+ - Emissions|CO2_transformation|h2_smr_ccs|M1
+ - Emissions|CO2_transformation|h2_smr|M1
+ - Emissions|CO2_transformation|igcc_ccs|M1
+ - Emissions|CO2_transformation|igcc|M1
+ - Emissions|CO2_transformation|landfill_flaring|M1
+ - Emissions|CO2_transformation|liq_bio_ccs|M1
+ - Emissions|CO2_transformation|liq_bio|M1
+ - Emissions|CO2_transformation|loil_cc|M1
+ - Emissions|CO2_transformation|loil_ppl|M1
+ - Emissions|CO2_transformation|loil_t_d|M1
+ - Emissions|CO2_transformation|meth_coal_ccs|M1
+ - Emissions|CO2_transformation|meth_coal|M1
+ - Emissions|CO2_transformation|meth_ng_ccs|M1
+ - Emissions|CO2_transformation|meth_ng|M1
+ - Emissions|CO2_transformation|meth_t_d|M1
+ - Emissions|CO2_transformation|oil_extr_1_ch4|M1
+ - Emissions|CO2_transformation|oil_extr_1|M1
+ - Emissions|CO2_transformation|oil_extr_2_ch4|M1
+ - Emissions|CO2_transformation|oil_extr_2|M1
+ - Emissions|CO2_transformation|oil_extr_3_ch4|M1
+ - Emissions|CO2_transformation|oil_extr_3|M1
+ - Emissions|CO2_transformation|oil_extr_4_ch4|M1
+ - Emissions|CO2_transformation|oil_extr_4|M1
+ - Emissions|CO2_transformation|oil_extr_5|M1
+ - Emissions|CO2_transformation|oil_extr_6|M1
+ - Emissions|CO2_transformation|oil_extr_7|M1
+ - Emissions|CO2_transformation|ref_hil|M1
+ - Emissions|CO2_transformation|ref_lol|M1
+ - Emissions|CO2_transformation|syn_liq_ccs|M1
+ - Emissions|CO2_transformation|syn_liq|M1
+Emissions|Co2_transport:
+ - Emissions|CO2_transport|coal_trp|M1
+ - Emissions|CO2_transport|foil_trp|M1
+ - Emissions|CO2_transport|gas_trp|M1
+ - Emissions|CO2_transport|loil_trp|M1
+ - Emissions|CO2_transport|meth_fc_trp|M1
+ - Emissions|CO2_transport|meth_ic_trp|M1
+#TODO Ridley to verify that all of the technologies are being included in sub cateogries 
+
+Emissions|CO2:
+  -  Emissions|CO2|LNG_exp|M1
+  -  Emissions|CO2|LNG_imp|M1
+  -  Emissions|CO2|bio_istig_ccs|M1
+  -  Emissions|CO2|bio_istig|M1
+  -  Emissions|CO2|bio_ppl_co2scr|M1
+  -  Emissions|CO2|c_ppl_co2scr|M1
+ 
+  -  Emissions|CO2|cement_co2scr|M1
+  -  Emissions|CO2|coal_adv_ccs|M1
+  -  Emissions|CO2|coal_adv|M1
+  -  Emissions|CO2|coal_exp|M1
+  
+  -  Emissions|CO2|eth_bio_ccs|M1
+  -  Emissions|CO2|eth_bio|M1
+  -  Emissions|CO2|flaring_CO2|M1
+  -  Emissions|CO2|foil_exp|M1
+ 
+  -  Emissions|CO2|g_ppl_co2scr|M1
+  -  Emissions|CO2|gas_cc_ccs|M1
+  -  Emissions|CO2|gas_cc|M1
+
+  -  Emissions|CO2|gas_imp|M1
+  -  Emissions|CO2|h2_bio_ccs|M1
+  -  Emissions|CO2|h2_bio|M1
+  -  Emissions|CO2|h2_coal_ccs|M1
+  -  Emissions|CO2|h2_coal|M1
+  -  Emissions|CO2|h2_smr_ccs|M1
+  -  Emissions|CO2|h2_smr|M1
+  -  Emissions|CO2|igcc_ccs|M1
+  -  Emissions|CO2|igcc|M1
+  -  Emissions|CO2|lignite_extr|M1
+  -  Emissions|CO2|liq_bio_ccs|M1
+  -  Emissions|CO2|liq_bio|M1
+  -  Emissions|CO2|loil_exp|M1
+  -  Emissions|CO2|loil_imp|M1
+  -  Emissions|CO2|meth_coal_ccs|M1
+  -  Emissions|CO2|meth_coal|M1
+  -  Emissions|CO2|meth_exp|M1
+  -  Emissions|CO2|meth_imp|M1
+  -  Emissions|CO2|meth_ng_ccs|M1
+  -  Emissions|CO2|meth_ng|M1
+
+  -  Emissions|CO2|syn_liq_ccs|M1
+  -  Emissions|CO2|syn_liq|M1
+
 Emissions|CO2|Cement:
   - Emissions|CO2|cement_CO2|M1
 Emissions|CO2|Coal:
@@ -173,6 +318,22 @@ Emissions|CO2|Gas trade:
   - Emissions|CO2|LNG_exp|M1
   - Emissions|CO2|LNG_imp|M1
   - Emissions|CO2|gas_imp|M1
+  - Emissions|CO2|gas_exp|M1
+
+
+Emissions|TCE:
+- Emissions|TCE_CO2|CO2_TCE|M1
+- Emissions|TCE_non-CO2|CF4_TCE|M1
+- Emissions|TCE_non-CO2|CH4_TCE|M1
+- Emissions|TCE_non-CO2|CH4n_TCE|M1
+- Emissions|TCE_non-CO2|CH4o_TCE|M1
+- Emissions|TCE_non-CO2|HFC_TCE|M1
+- Emissions|TCE_non-CO2|HFCo_TCE|M1
+- Emissions|TCE_non-CO2|N2O_TCE|M1
+- Emissions|TCE_non-CO2|N2On_TCE|M1
+- Emissions|TCE_non-CO2|N2Oo_TCE|M1
+- Emissions|TCE_non-CO2|SF6_TCE|M1
+
 
 Total Costs|Coal:
   - Total Costs|coal_adv
