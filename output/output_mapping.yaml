@@ -88,7 +88,6 @@ Useful Energy|residential/commercial thermal:
   - Useful Energy|rc_therm|meth_rc|M1
   - Useful Energy|rc_therm|solar_rc|M1
 Useful Energy|residential/commercial specific:
-  - Useful Energy|rc_spec|h2_fc_RC|M1
   - Useful Energy|rc_spec|sp_el_RC|M1
 Useful Energy|Industrial thermal:
   - Useful Energy|i_therm|biomass_i|M1
@@ -106,7 +105,6 @@ Useful Energy|Industrial thermal:
   - Useful Energy|i_therm|meth_i|M1
   - Useful Energy|i_therm|solar_i|M1
 Useful Energy|Industrial specific:
-  - Useful Energy|i_spec|h2_fc_I|M1
   - Useful Energy|i_spec|sp_coal_I|M1
   - Useful Energy|i_spec|sp_el_I|M1
   - Useful Energy|i_spec|sp_eth_I|M1
@@ -228,7 +226,7 @@ Emissions|Co2_transport:
  - Emissions|CO2_transport|loil_trp|M1
  - Emissions|CO2_transport|meth_fc_trp|M1
  - Emissions|CO2_transport|meth_ic_trp|M1
-#TODO Ridley to verify that all of the technologies are being included in sub cateogries 
+#TODO Ridley to verify that all of the technologies are being included in sub cateogries
 
 Emissions|CO2:
   -  Emissions|CO2|LNG_exp|M1
@@ -237,17 +235,17 @@ Emissions|CO2:
   -  Emissions|CO2|bio_istig|M1
   -  Emissions|CO2|bio_ppl_co2scr|M1
   -  Emissions|CO2|c_ppl_co2scr|M1
- 
+
   -  Emissions|CO2|cement_co2scr|M1
   -  Emissions|CO2|coal_adv_ccs|M1
   -  Emissions|CO2|coal_adv|M1
   -  Emissions|CO2|coal_exp|M1
-  
+
   -  Emissions|CO2|eth_bio_ccs|M1
   -  Emissions|CO2|eth_bio|M1
   -  Emissions|CO2|flaring_CO2|M1
   -  Emissions|CO2|foil_exp|M1
- 
+
   -  Emissions|CO2|g_ppl_co2scr|M1
   -  Emissions|CO2|gas_cc_ccs|M1
   -  Emissions|CO2|gas_cc|M1
@@ -333,6 +331,7 @@ Emissions|TCE:
 - Emissions|TCE_non-CO2|N2On_TCE|M1
 - Emissions|TCE_non-CO2|N2Oo_TCE|M1
 - Emissions|TCE_non-CO2|SF6_TCE|M1
+
 
 
 Total Costs|Coal:
@@ -551,8 +550,6 @@ Capacity Addition|Wind:
   - Capacity Addition|wind_cv4
   - Capacity Addition|wind_ppf
   - Capacity Addition|wind_ppl
-  - Capacity Addition|wind_ppf
-  - Capacity Addition|wind_ppl
 
 Capacity Addition|Solar:
   - Capacity Addition|solar_cv1
@@ -560,8 +557,6 @@ Capacity Addition|Solar:
   - Capacity Addition|solar_cv3
   - Capacity Addition|solar_cv4
   - Capacity Addition|solar_i
-  - Capacity Addition|solar_pv_ppl
-  - Capacity Addition|solar_th_ppl
   - Capacity Addition|solar_pv_ppl
   - Capacity Addition|solar_th_ppl
   - Capacity Addition|csp_sm1_ppl
@@ -688,4 +683,168 @@ Capacity Addition|Hydrogen:
 Capacity Addition|Hydro:
   - Capacity Addition|hydro_hc
   - Capacity Addition|hydro_lc
+
+Capacity|LNG:
+  - Capacity|LNG_exp
+  - Capacity|adipic_thermal
+  - Capacity|ammonia_secloop
+
+Capacity|Biomass ppl:
+  - Capacity|bio_hpl
+  - Capacity|bio_istig
+  - Capacity|bio_ppl
+  - Capacity|bio_ppl_co2scr
+  - Capacity|biomass_i
+  - Capacity|eth_bio
+  - Capacity|eth_bio_ccs
+  - Capacity|eth_i
+  - Capacity|eth_exp
+  - Capacity|gas_bio
+  - Capacity|liq_bio
+  - Capacity|liq_bio_ccs
+  - Capacity|meth_i
+  - Capacity|meth_ng
+  - Capacity|meth_ng_ccs
+  - Capacity|meth_exp
+
+Capacity|Wind:
+  - Capacity|wind_cv1
+  - Capacity|wind_cv2
+  - Capacity|wind_cv3
+  - Capacity|wind_cv4
+  - Capacity|wind_ppf
+  - Capacity|wind_ppl
+
+Capacity|Solar:
+  - Capacity|solar_cv1
+  - Capacity|solar_cv2
+  - Capacity|solar_cv3
+  - Capacity|solar_cv4
+  - Capacity|solar_i
+  - Capacity|solar_pv_ppl
+  - Capacity|solar_th_ppl
+  - Capacity|csp_sm1_ppl
+  - Capacity|csp_sm3_ppl
+
+Capacity|Coal:
+  - Capacity|c_ppl_co2scr
+  - Capacity|cement_co2scr
+  - Capacity|coal_adv
+  - Capacity|coal_exp
+  - Capacity|coal_extr
+  - Capacity|coal_extr_ch4
+  - Capacity|coal_gas
+  - Capacity|coal_hpl
+  - Capacity|coal_i
+  - Capacity|coal_ppl
+  - Capacity|coal_adv_ccs
+  - Capacity|coal_ppl_u
+  - Capacity|lignite_extr
+  - Capacity|meth_coal
+  - Capacity|meth_coal_ccs
+
+Capacity|Electricity:
+  - Capacity|elec_i
+  - Capacity|elec_t_d
+  - Capacity|po_turbine
+  - Capacity|stor_ppl
+
+
+Capacity|Oil:
+  - Capacity|foil_exp
+  - Capacity|foil_hpl
+  - Capacity|foil_i
+  - Capacity|foil_ppl
+  - Capacity|loil_cc
+  - Capacity|loil_cc__air
+  - Capacity|loil_cc__cl_fresh
+  - Capacity|loil_cc__ot_fresh
+  - Capacity|loil_cc__ot_saline
+  - Capacity|loil_exp
+  - Capacity|loil_i
+  - Capacity|loil_ppl
+  - Capacity|loil_ppl__air
+  - Capacity|loil_ppl__cl_fresh
+  - Capacity|loil_ppl__ot_fresh
+  - Capacity|loil_ppl__ot_saline
+  - Capacity|oil_exp
+  - Capacity|oil_extr_1
+  - Capacity|oil_extr_1_ch4
+  - Capacity|oil_extr_2
+  - Capacity|oil_extr_2_ch4
+  - Capacity|oil_extr_3
+  - Capacity|oil_extr_3_ch4
+  - Capacity|oil_extr_4
+  - Capacity|oil_extr_4_ch4
+  - Capacity|oil_extr_5
+  - Capacity|oil_extr_6
+  - Capacity|oil_extr_7
+  - Capacity|ref_hil
+  - Capacity|ref_lol
+  - Capacity|syn_liq
+  - Capacity|syn_liq_ccs
+
+
+Capacity|Gas:
+  - Capacity|g_ppl_co2scr
+  - Capacity|gas_cc
+  - Capacity|gas_cc_ccs
+  - Capacity|gas_ct
+  - Capacity|gas_exp
+  - Capacity|gas_extr_1
+  - Capacity|gas_extr_2
+  - Capacity|gas_extr_3
+  - Capacity|gas_extr_4
+  - Capacity|gas_extr_5
+  - Capacity|gas_extr_6
+  - Capacity|gas_hpl
+  - Capacity|gas_i
+  - Capacity|gas_ppl
+  - Capacity|gas_t_d
+  - Capacity|gas_t_d_ch4
+  - Capacity|geo_hpl
+  - Capacity|igcc
+  - Capacity|igcc_ccs
+  - Capacity|mvac_co2
+  - Capacity|nitric_catalytic1
+  - Capacity|nitric_catalytic2
+  - Capacity|nitric_catalytic3
+  - Capacity|nitric_catalytic4
+  - Capacity|nitric_catalytic5
+  - Capacity|nitric_catalytic6
+  - Capacity|nitric_catalytic7
+  - Capacity|recycling_gas1
+  - Capacity|repl_hc
+  - Capacity|replacement_so2
+  - Capacity|vertical_stud
+
+Capacity|Thermal:
+  - Capacity|geo_ppl
+  - Capacity|heat_t_d
+  - Capacity|hp_el_i
+  - Capacity|hp_gas_i
+  - Capacity|nuc_hc
+  - Capacity|nuc_lc
+  - Capacity|refrigerant_recovery
+
+Capacity|Hydrogen:
+  - Capacity|h2_bio
+  - Capacity|h2_bio_ccs
+  - Capacity|h2_coal
+  - Capacity|h2_coal_ccs
+  - Capacity|h2_elec
+  - Capacity|h2_fc_I
+  - Capacity|h2_fc_RC
+  - Capacity|h2_fc_trp
+  - Capacity|h2_i
+  - Capacity|h2_liq
+  - Capacity|h2_smr
+  - Capacity|h2_smr_ccs
+  - Capacity|h2_t_d
+  - Capacity|heat_i
+  - Capacity|lh2_t_d
+
+Capacity|Hydro:
+  - Capacity|hydro_hc
+  - Capacity|hydro_lc
   
