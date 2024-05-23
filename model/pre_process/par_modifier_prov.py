@@ -299,3 +299,31 @@ oil_imp_share = 0.65
 data = adjust_import_values(data, foil_techs, loil_techs, oil_imp_share, years_to_adjust)
 
 
+#### read in population data and resample it to 5 year
+#TODO: Convert this into function and separate script
+# Step 2: Rename 'Unnamed: 0' to 'Year' and convert 'Year' to datetime
+data.rename(columns={'Unnamed: 0': 'Year'}, inplace=True)
+data['Year'] = pd.to_datetime(data['Year'], format='%Y')
+
+# Step 3: Pivot the dataframe to long format
+pivoted_data = data.melt(id_vars=['Year'], var_name='Province', value_name='Population')
+
+# Step 4: Set 'Year' as index and sort the index
+pivoted_data.set_index('Year', inplace=True)
+pivoted_data.sort_index(inplace=True)
+
+# Step 5: Forward fill and backward fill to handle missing values
+pivoted_data['Population'] = pivoted_data['Population'].ffill().bfill()
+
+# Step 6: Resample and interpolate
+resampled_data = pivoted_data.groupby('Province').resample('5A').mean().interpolate(method='linear')
+
+# Step 7: Reset the index to have 'Year' as a column again
+resampled_data = resampled_data.reset_index()
+
+# Change the datetime format to the required format (e.g., 2020, 2025, etc.)
+
+# Update the year values to the required format
+resampled_data['Year'] = resampled_data['Year'].dt.year - 1
+
+resampled_data.to_csv(DATA / 'pop_gdp_process/pop_messageca_prov.csv', index=False)
