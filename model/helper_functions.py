@@ -96,9 +96,11 @@ IMP_EXP_DF = pd.read_excel(test_sheet2, sheet_name="Imports and Exports", header
 
 DEMANDS_DF.to_excel("Historical_Activity_Excel.xlsx", sheet_name="historical_activity")
 
-add_new_imp_exp(activity=DEMANDS_DF,imp_exp=IMP_EXP_DF)
+#add_new_imp_exp(activity=DEMANDS_DF,imp_exp=IMP_EXP_DF)
+
+new_activity = pd.read_excel("data/Adjusted_Historical_Activity_Excel.xlsx", sheet_name="historical_activity")
 
 for t_extr, t_exp in zip(technologies_extr, technologies_exp):
-    DEMANDS_DF = adjust_export_values(DEMANDS_DF, t_extr,t_exp)
+    new_activity = adjust_export_values(new_activity, t_extr, t_exp)
 
 DEMANDS_DF.to_csv("data/adjusted_historical_activity.csv", index=False)
