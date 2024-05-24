@@ -70,14 +70,13 @@ def compare_validate(production_file, imp_exp_file, demand_file):
 
 def add_new_imp_exp(activity, imp_exp):
     target_year = 2020
-    mask = (activity['year_act'] >= target_year) & (activity["technology"].str.contains('_exp'))
-    merged_df = pd.merge(activity, imp_exp[["node_loc", "technology", "value"]], on=["node_loc", "technology"], how="inner")
-    merged_df["node_tech"] = merged_df["technology"] + merged_df["node_loc"]
-    activity["node_tech"] = activity["technology"] + activity["node_loc"]
-    merged_df.set_index("node_tech")
-    activity.set_index("node_tech")
-    activity.update(merged_df[["node_tech", "value_y"]])
-    activity.loc[mask, "value"] = merged_df.loc[:,"value_y"].values
+    mask = imp_exp[(imp_exp['year_vtg'] >= target_year) & (imp_exp["technology"].str.contains('_exp'))]
+    merged_df = pd.merge(activity, mask, left_on=["node_loc", "technology", "year_act"], right_on=["node_loc", "technology", "year_vtg"],
+        how="left", suffixes=('', '_imp_exp'))
+    merged_df["value"] = np.where(merged_df["value_imp_exp"].notnull(), merged_df["value_imp_exp"], merged_df["value"])
+    #activity.update(merged_df)
+    #activity.loc[mask, "value"] = merged_df.loc[:,"value_y"].values
+    activity = merged_df.drop(columns=["value_imp_exp"])
     print(activity.loc[(activity["node_loc"] == "Alberta") & (activity["technology"] == "oil_exp")])
 
 
@@ -94,6 +93,8 @@ test_sheet3 = "data/historical_activity.csv"
 
 DEMANDS_DF = pd.read_csv(test_sheet3, sep=',', header=0)
 IMP_EXP_DF = pd.read_excel(test_sheet2, sheet_name="Imports and Exports", header=0)
+
+DEMANDS_DF.to_excel("Historical_Activity_Excel.xlsx", sheet_name="historical_activity")
 
 add_new_imp_exp(activity=DEMANDS_DF,imp_exp=IMP_EXP_DF)
 
