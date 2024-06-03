@@ -91,6 +91,7 @@ def h2_processing(input_file_path: str):
     for sheet in xl.sheet_names:
         df = xl.parse(sheet)
         h2_df = df[df["Type"] == "Hydrogen"]
+        total_use_df = df[df["Type"] == "Total End-Use"]
         node = sheet.split(' ')[0]
         share = sheet.split(' ')[1]
         if share == "Industrial": 
@@ -100,7 +101,7 @@ def h2_processing(input_file_path: str):
 
         for year in years:
             if str(year) in h2_df.columns:
-                value = h2_df.loc[:, f"{year}"].values[0]
+                value = float(h2_df.loc[:, f"{year}"].values[0] / total_use_df.loc[:,f"{year}"].values[0])
                 final_table = final_table._append({"share" : share,
                     "node" : node, "year_act" : year, "value" : value}, ignore_index = True)
     
