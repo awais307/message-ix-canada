@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 import os
+import xlrd as xl
+import csv
 
 
 technologies_extr = ['gas_extr_mpen', 'oil_extr_mpen', 'coal_extr_mpen']
@@ -81,9 +83,43 @@ def add_new_imp_exp(activity, imp_exp):
 
 
 
+def h2_processing(input_file_path: str):
+    xl = pd.ExcelFile(input_file_path)
+    years = list(range(2020, 2051, 5))
+    final_table = pd.DataFrame(columns=["share", "node", "year_act", "value"])
     
+    for sheet in xl.sheet_names:
+        df = xl.parse(sheet)
+        h2_df = df[df["Type"] == "Hydrogen"]
+        total_use_df = df[df["Type"] == "Total End-Use"]
+        node = sheet.split(' ')[0]
+        share = sheet.split(' ')[1]
+        if share == "Industrial": 
+            share = "share_h2_i"
+        elif share == "Transport": 
+            share = "share_h2_trp"
+
+        for year in years:
+            if str(year) in h2_df.columns:
+                value = float(h2_df.loc[:, f"{year}"].values[0] / total_use_df.loc[:,f"{year}"].values[0])
+                final_table = final_table._append({"share" : share,
+                    "node" : node, "year_act" : year, "value" : value}, ignore_index = True)
+    
+    rc_values = final_table[final_table["share"].isin(["Residential", "Commercial"])].groupby(["node", "year_act"])["value"].sum().reset_index()
+    rc_values["share"] = "share_h2_rc"
+
+    final_table = final_table._append(rc_values, ignore_index = True)
+
+    final_table = final_table[~final_table["share"].isin(["Residential", "Commercial"])]
+    
+    final_table.to_excel('data\\final_hydrogen_shares.xlsx', index=False)
 
 # Test script
+
+h2_processing("data\\Hydrogen Files For Data Processing.xlsx")
+print("File Created!")
+
+'''
 #if __name__ == 'main':
 
 test_sheet1 = "data/Production_Data.xlsx"
@@ -104,3 +140,4 @@ for t_extr, t_exp in zip(technologies_extr, technologies_exp):
     new_activity = adjust_export_values(new_activity, t_extr, t_exp)
 
 DEMANDS_DF.to_csv("data/adjusted_historical_activity.csv", index=False)
+'''
