@@ -1,0 +1,192 @@
+def shares_h2_rc(msgSDG, path, nodeName, suffix):
+
+    msgSDG.check_out()   
+    # add type_tec
+    type_tec = 'h2_residential_commercial'
+    msgSDG.add_set('type_tec', 'h2_residential_commercial')
+    
+    # defining share
+    shares = 'share_h2_rc'
+    msgSDG.add_set('shares', 'share_h2_rc')
+    
+    # including technologies for which shares need to be defined
+    tec = ('h2_rc','h2_fc_RC')
+   
+    # defining technologing in cateogry of technologies 
+    msgSDG.add_set('cat_tec',pd.DataFrame({'type_tec':'h2_residential_commercial','technology':tec}))
+
+      # Define commodities and levels
+    commodities = ['rc_spec', 'rc_therm']
+    levels = ['useful']
+
+        # mapping share from total 
+    dic = {
+            'shares': [shares],
+            'node_share': [nodeName],
+            'node': [nodeName],
+            'type_tec': [type_tec],
+            'mode': [str('M1')],
+            'commodity': commodities,
+            'level': levels
+    }
+    df = expand_grid(dic)
+    msgSDG.add_set('map_shares_commodity_share', df)
+
+    type_tec = 'residential_enduse'
+    msgSDG.add_set('type_tec', 'residential_enduse')
+    
+    # including technologies for which shares need to be defined
+    tec = ('h2_fc_RC','sp_el_RC','solar_rc','biomass_rc','coal_rc','elec_rc','eth_rc','foil_rc','h2_rc','heat_rc','hp_el_rc','hp_gas_rc','loil_rc','loil_rc','meth_rc','RCtherm_1','RCtherm_2','RCtherm_3','RCtherm_4','RCtherm_5')
+           
+    # defining technologing in cateogry of technologies 
+    msgSDG.add_set('cat_tec',pd.DataFrame({'type_tec':'residential_enduse','technology':tec}))
+
+    
+    # mapping total share from which share is intended 
+    dic = {
+            'shares': [shares],
+            'node_share': [nodeName],
+            'node': [nodeName],
+            'type_tec':[type_tec],
+            'mode': [str('M1')],
+            'commodity': commodities,
+            'level': levels
+            }
+    df = expand_grid(dic)
+    msgSDG.add_set('map_shares_commodity_total', df)
+
+    msgSDG.commit('h2_rc share mapping')
+
+def shares_h2_i(msgSDG, path, nodeName, suffix):
+
+    msgSDG.check_out()   
+    # add type_tec for renewable
+    type_tec = 'h2_industrial'
+    msgSDG.add_set('type_tec', 'h2_industrial')
+    
+    # defining share for renewable
+    shares = 'share_h2_i'
+    msgSDG.add_set('shares', 'share_h2_i')
+    
+    # including technologies for which shares need to be defined
+    tec = ('h2_i','h2_fc_I')
+   
+    # defining technologing in cateogry of technologies 
+    msgSDG.add_set('cat_tec',pd.DataFrame({'type_tec':'h2_industrial','technology':tec}))
+
+      # Define commodities and levels
+    commodities = ['i_spec', 'i_therm']
+    levels = ['useful']
+
+        # mapping share from total 
+    dic = {
+            'shares': [shares],
+            'node_share': [nodeName],
+            'node': [nodeName],
+            'type_tec': [type_tec],
+            'mode': [str('M1')],
+            'commodity': commodities,
+            'level': levels
+    }
+    df = expand_grid(dic)
+    msgSDG.add_set('map_shares_commodity_share', df)
+
+    type_tec = 'industrial_enduse'
+    msgSDG.add_set('type_tec', 'industrial_enduse')
+    
+    # including technologies for which shares need to be defined
+    tec = ('h2_fc_I','sp_el_I','sp_eth_I','sp_liq_I', 'sp_meth_I', 'Ispec_1','Ispec_2','Ispec_3','Ispec_4','Ispec_5', 'coal_i','elec_i','eth_i', 'foil_i','gas_i','h2_i','heat_i','hp_el_i','hp_gas_i','loil_i','meth_i','solar_i','Itherm_1','Itherm_2','Itherm_3','Itherm_4','Itherm_5','biomass_i')
+   
+    # defining technologing in cateogry of technologies 
+    msgSDG.add_set('cat_tec',pd.DataFrame({'type_tec':'industrial_enduse','technology':tec}))
+
+    
+    # mapping total share from which share is intended 
+    dic = {
+            'shares': [shares],
+            'node_share': [nodeName],
+            'node': [nodeName],
+            'type_tec':[type_tec],
+            'mode': [str('M1')],
+            'commodity': commodities,
+            'level': levels
+            }
+    df = expand_grid(dic)
+    msgSDG.add_set('map_shares_commodity_total', df)
+
+    msdSDG.commit('h2_industrial share mapping')
+
+def shares_h2_trp(msgSDG, path, nodeName, suffix):
+
+    msgSDG.check_out()   
+    # add type_tec
+    type_tec = 'h2_transport'
+    msgSDG.add_set('type_tec', 'h2_transport')
+    
+    # defining share
+    shares = 'share_h2_trp'
+    msgSDG.add_set('shares', 'share_h2_trp')
+    
+    # including technologies for which shares need to be defined
+    tec = ('h2_fc_trp')
+   
+    # defining technologing in cateogry of technologies 
+    msgSDG.add_set('cat_tec',pd.DataFrame({'type_tec':'h2_transport','technology':tec}))
+
+      # Define commodities and levels
+    commodities = ['transport']
+    levels = ['useful']
+
+        # mapping share from total 
+    dic = {
+            'shares': [shares],
+            'node_share': [nodeName],
+            'node': [nodeName],
+            'type_tec': [type_tec],
+            'mode': [str('M1')],
+            'commodity': commodities,
+            'level': levels
+    }
+    df = expand_grid(dic)
+    msgSDG.add_set('map_shares_commodity_share', df)
+
+    
+    # mapping total share from which share is intended 
+    dic = {
+            'shares': [shares],
+            'node_share': [nodeName],
+            'node': [nodeName],
+            'type_tec':[str('transport')],
+            'mode': [str('M1')],
+            'commodity': commodities,
+            'level': levels
+            }
+    df = expand_grid(dic)
+    msgSDG.add_set('map_shares_commodity_total', df)
+
+    msgSDG.commit('transport share mapping')
+
+msg.check_out()  
+
+msg.idx_names("share_commodity_lo")
+
+#DATA = r'C:\Users\brend\Documents\Hydrogen Shares.xlsx'  #put data to Hydrogen Shares excel file
+df = pd.read_excel(DATA, sheet_name='share_commodity_lo', header=0)
+
+msg.add_par("share_commodity_lo", df)
+
+msg.commit('h2 shares')
+
+share_commodity_lo_df = msg.par('share_commodity_lo')
+
+    # Check if the DataFrame is empty
+if share_commodity_lo_df.empty:
+        print("The 'share_commodity_lo' parameter is empty.")
+else:
+        print("The 'share_commodity_lo' parameter contains data:")
+        print(share_commodity_lo_df)
+
+        # Optionally, print the first few rows for a quick check
+        print(share_commodity_lo_df.head())
+
+share_commodity_lo_df.to_excel('share_commodity_lo.xlsx', index=False)
