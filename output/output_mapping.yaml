@@ -127,7 +127,7 @@ Useful Energy|Transport:
   - Useful Energy|transport|meth_fc_trp|M1
   - Useful Energy|transport|meth_ic_trp|M1
 
-Emissions|CO2_industry:
+Emissions|CO2|Energy|Demand|Inudustry:
  - Emissions|CO2_industry|coal_i|M1
  - Emissions|CO2_industry|eth_i|M1
  - Emissions|CO2_industry|foil_i|M1
@@ -137,7 +137,7 @@ Emissions|CO2_industry:
  - Emissions|CO2_industry|sp_eth_I|M1
  - Emissions|CO2_industry|sp_liq_I|M1
  - Emissions|CO2_industry|sp_meth_I|M1
-Emissions|CO2_res_com:
+Emissions|CO2|Energy|Demand|Residential & Commercial:
  - Emissions|CO2_res_com|coal_rc|M1
  - Emissions|CO2_res_com|eth_rc|M1
  - Emissions|CO2_res_com|foil_rc|M1
@@ -235,21 +235,17 @@ Emissions|CO2:
   -  Emissions|CO2|bio_istig|M1
   -  Emissions|CO2|bio_ppl_co2scr|M1
   -  Emissions|CO2|c_ppl_co2scr|M1
-
   -  Emissions|CO2|cement_co2scr|M1
   -  Emissions|CO2|coal_adv_ccs|M1
   -  Emissions|CO2|coal_adv|M1
   -  Emissions|CO2|coal_exp|M1
-
   -  Emissions|CO2|eth_bio_ccs|M1
   -  Emissions|CO2|eth_bio|M1
   -  Emissions|CO2|flaring_CO2|M1
   -  Emissions|CO2|foil_exp|M1
-
   -  Emissions|CO2|g_ppl_co2scr|M1
   -  Emissions|CO2|gas_cc_ccs|M1
   -  Emissions|CO2|gas_cc|M1
-
   -  Emissions|CO2|gas_imp|M1
   -  Emissions|CO2|h2_bio_ccs|M1
   -  Emissions|CO2|h2_bio|M1
@@ -270,10 +266,8 @@ Emissions|CO2:
   -  Emissions|CO2|meth_imp|M1
   -  Emissions|CO2|meth_ng_ccs|M1
   -  Emissions|CO2|meth_ng|M1
-
   -  Emissions|CO2|syn_liq_ccs|M1
   -  Emissions|CO2|syn_liq|M1
-
 Emissions|CO2|Cement:
   - Emissions|CO2|cement_CO2|M1
 Emissions|CO2|Coal:
