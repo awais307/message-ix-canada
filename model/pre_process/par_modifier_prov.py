@@ -327,3 +327,46 @@ resampled_data = resampled_data.reset_index()
 resampled_data['Year'] = resampled_data['Year'].dt.year - 1
 
 resampled_data.to_csv(DATA / 'pop_gdp_process/pop_messageca_prov.csv', index=False)
+
+
+# Using pandas.concat instead of append to add new rows
+def ensure_tech_existence(df, year_source, year_target):
+    # Get unique combinations of node_loc and technology for the source year
+    tech_combinations = df[df['year_act'] == year_source][['node_loc', 'technology']].drop_duplicates()
+    new_rows = []
+    
+    for index, row in tech_combinations.iterrows():
+        location = row['node_loc']
+        technology = row['technology']
+        
+        # Check if this combination exists in the target year
+        if not ((df['node_loc'] == location) & (df['technology'] == technology) & (df['year_act'] == year_target)).any():
+            # Get the value from the source year
+            value_2015 = df.loc[(df['node_loc'] == location) & (df['technology'] == technology) & (df['year_act'] == year_source), 'value'].values[0]
+            # Add a new row with 1.1 times the value from 2015
+            new_row = {
+                'node_loc': location,
+                'technology': technology,
+                'year_act': year_target,
+                'mode': 'M1',  # Assuming mode, time, and unit are the same
+                'time': 'year',
+                'value': 1.1 * value_2015,
+                'unit': df.loc[(df['node_loc'] == location) & (df['technology'] == technology) & (df['year_act'] == year_source), 'unit'].values[0]
+            }
+            new_rows.append(new_row)
+    
+    new_df = pd.concat([df, pd.DataFrame(new_rows)], ignore_index=True)
+    
+    return new_df
+
+# Ensure all technologies in 2015 exist in 2020
+data = ensure_tech_existence(data, 2015, 2020)
+
+# Adjust the values for gas, oil, and coal for both 2015 and 2020
+years_to_adjust = [2015, 2020]
+data = adjust_values(data, 'gas_extr_mpen', 'gas_exp', 'gas_imp', gas_techs, years_to_adjust)
+data = adjust_values(data, 'oil_extr_mpen', 'oil_exp', 'oil_imp', loil_techs, years_to_adjust)
+data = adjust_values(data, 'coal_extr_mpen', 'coal_exp', 'coal_imp', coal_techs, years_to_adjust)
+
+# Display the first few rows of the updated dataframe to verify the changes
+data.head()
