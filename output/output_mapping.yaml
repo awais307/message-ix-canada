@@ -5,16 +5,19 @@ Primary Energy|Biomass:
   - Primary Energy|biomass|bio_istig_ccs|M1
   - Primary Energy|biomass|bio_istig|M1
   - Primary Energy|biomass|bio_ppl|M1
-  # - Primary Energy|biomass|biomass_nc|M1
-  # - Primary Energy|biomass|biomass_t_d|M1
   - Primary Energy|biomass|eth_bio_ccs|M1
   - Primary Energy|biomass|eth_bio|M1
   - Primary Energy|biomass|gas_bio|M1
   - Primary Energy|biomass|liq_bio_ccs|M1
   - Primary Energy|biomass|liq_bio|M1
+
+  
 Primary Energy|Hydrogen Production:
   - Primary Energy|biomass|h2_bio_ccs|M1
   - Primary Energy|biomass|h2_bio|M1
+h2_bio, h2_bio_ccs, h2_coal, h2_coal_ccs, h2_elec, h2_smr, h2_smr_ccs
+
+
 Primary Energy|LNG:
   - Primary Energy|LNG|LNG_bal|M1
 Primary Energy|Coal|Production:
@@ -127,7 +130,7 @@ Useful Energy|Transport:
   - Useful Energy|transport|meth_fc_trp|M1
   - Useful Energy|transport|meth_ic_trp|M1
 
-Emissions|CO2|Energy|Demand|Inudustry:
+Emissions|CO2_industry:
  - Emissions|CO2_industry|coal_i|M1
  - Emissions|CO2_industry|eth_i|M1
  - Emissions|CO2_industry|foil_i|M1
@@ -137,7 +140,7 @@ Emissions|CO2|Energy|Demand|Inudustry:
  - Emissions|CO2_industry|sp_eth_I|M1
  - Emissions|CO2_industry|sp_liq_I|M1
  - Emissions|CO2_industry|sp_meth_I|M1
-Emissions|CO2|Energy|Demand|Residential & Commercial:
+Emissions|CO2_res_com:
  - Emissions|CO2_res_com|coal_rc|M1
  - Emissions|CO2_res_com|eth_rc|M1
  - Emissions|CO2_res_com|foil_rc|M1
@@ -235,17 +238,21 @@ Emissions|CO2:
   -  Emissions|CO2|bio_istig|M1
   -  Emissions|CO2|bio_ppl_co2scr|M1
   -  Emissions|CO2|c_ppl_co2scr|M1
+
   -  Emissions|CO2|cement_co2scr|M1
   -  Emissions|CO2|coal_adv_ccs|M1
   -  Emissions|CO2|coal_adv|M1
   -  Emissions|CO2|coal_exp|M1
+
   -  Emissions|CO2|eth_bio_ccs|M1
   -  Emissions|CO2|eth_bio|M1
   -  Emissions|CO2|flaring_CO2|M1
   -  Emissions|CO2|foil_exp|M1
+
   -  Emissions|CO2|g_ppl_co2scr|M1
   -  Emissions|CO2|gas_cc_ccs|M1
   -  Emissions|CO2|gas_cc|M1
+
   -  Emissions|CO2|gas_imp|M1
   -  Emissions|CO2|h2_bio_ccs|M1
   -  Emissions|CO2|h2_bio|M1
@@ -266,8 +273,10 @@ Emissions|CO2:
   -  Emissions|CO2|meth_imp|M1
   -  Emissions|CO2|meth_ng_ccs|M1
   -  Emissions|CO2|meth_ng|M1
+
   -  Emissions|CO2|syn_liq_ccs|M1
   -  Emissions|CO2|syn_liq|M1
+
 Emissions|CO2|Cement:
   - Emissions|CO2|cement_CO2|M1
 Emissions|CO2|Coal:
@@ -435,18 +444,29 @@ Secondary Energy|Electricity|Biomass:
 - Secondary Energy|electr|bio_istig_ccs|M1
 - Secondary Energy|electr|bio_istig|M1
 - Secondary Energy|electr|bio_ppl|M1
-- Secondary Energy|electr|igcc_ccs|M1
-- Secondary Energy|electr|igcc|M1
+Secondary Energy|Electricity|Biomass w/ CCS:
+- Secondary Energy|electr|bio_istig_ccs|M1
+Secondary Energy|Electricity|Biomass w/o CCS:
+- Secondary Energy|electr|bio_istig_ccs|M1
+- Secondary Energy|electr|bio_istig|M1
+- Secondary Energy|electr|bio_ppl|M1
+
 Secondary Energy|Electricity|Coal:
 - Secondary Energy|electr|coal_adv_ccs|M1
 - Secondary Energy|electr|coal_adv|M1
 - Secondary Energy|electr|coal_ppl|M1
-- Secondary Energy|electr|meth_coal_ccs|M1
-- Secondary Energy|electr|meth_coal|M1
-- Secondary Energy|electr|meth_ng_ccs|M1
-- Secondary Energy|electr|meth_ng|M1
-- Secondary Energy|electr|syn_liq_ccs|M1
-- Secondary Energy|electr|syn_liq|M1
+- Secondary Energy|electr|coal_ppl_u|M1
+- Secondary Energy|electr|igcc|M1
+- Secondary Energy|electr|igcc_ccs|M1
+Secondary Energy|Electricity|Coal w/CCS:
+- Secondary Energy|electr|coal_adv_ccs|M1
+- Secondary Energy|electr|igcc_ccs|M1
+Secondary Energy|Electricity|Coal w/o CCS:
+- Secondary Energy|electr|coal_adv_ccs|M1
+- Secondary Energy|electr|coal_adv|M1
+- Secondary Energy|electr|coal_ppl|M1
+- Secondary Energy|electr|coal_ppl_u|M1
+- Secondary Energy|electr|igcc|M1
 Secondary Energy|Electricity|Import:
 - Secondary Energy|electr|elec_imp|M1
 Secondary Energy|Electricity|Solar:
@@ -466,6 +486,15 @@ Secondary Energy|Electricity|Gas:
 - Secondary Energy|electr|gas_cc|M1
 - Secondary Energy|electr|gas_ct|M1
 - Secondary Energy|electr|gas_ppl|M1
+- Secondary Energy|electr|gas_htfc|M1
+Secondary Energy|Electricity|Gas w/ CCS:
+- Secondary Energy|electr|gas_cc_ccs|M1
+Secondary Energy|Electricity|Gas w/o CCS:
+- Secondary Energy|electr|gas_cc|M1
+- Secondary Energy|electr|gas_ct|M1
+- Secondary Energy|electr|gas_ppl|M1
+- Secondary Energy|electr|gas_htfc|M1
+Secondary Energy|Electricity|Geothermal: 
 - Secondary Energy|electr|geo_ppl|M1
 Secondary Energy|Electricity|Hydrogen:
 - Secondary Energy|electr|h2_bio_ccs|M1
