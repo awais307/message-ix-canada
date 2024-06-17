@@ -6,21 +6,22 @@ from itertools import product
 from scipy.optimize import linprog
 
 def downscale_demands( target, initial, income_i, income_f, gdp_f, names ):
+    """
+    Aim is to minimize the maximum difference between the percent change 
+    in per capits GDP and energy intensity (per unit GDP).
     
-    # Aim is to minimize the maximum difference between the percent change 
-    # in per capits GDP and energy intensity (per unit GDP).
-    #
-    # This is the LP problem:
-    #
-    # Min:  alpha
-    # s.t.  alpha >= | phi_c - delta_c | forall c
-    #       sum_c(beta_c*delta_c) = target - sum_c(beta_c)
-    #       alpha >= 0
+    This is the LP problem:
     
-    # # don't allow 0 intensities in future time steps
-    # ei = initial / income_i
-    # ei[np.where(ei==0)] =  min(ei[ei.nonzero()])
-    # initial = ei * income_i
+    Min:  alpha
+    s.t.  alpha >= | phi_c - delta_c | forall c
+          sum_c(beta_c*delta_c) = target - sum_c(beta_c)
+          alpha >= 0
+    
+    # don't allow 0 intensities in future time steps
+    ei = initial / income_i
+    ei[np.where(ei==0)] =  min(ei[ei.nonzero()])
+    initial = ei * income_i
+    """
     
     # the above simplifying parameters defined as:
     beta = income_f * initial / income_i
