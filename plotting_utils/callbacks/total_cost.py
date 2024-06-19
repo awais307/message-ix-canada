@@ -4,7 +4,7 @@ from dash import Output, Input, State, ALL, dcc
 from plotting_utils.visualization_scripts.total_cost import render_plot
 
 
-def link(app):
+def link(app, df):
     @app.callback(
         Output({
             'type': 'figure',
@@ -144,7 +144,7 @@ def link(app):
                         (id['id']['type'] == 'messageix-total_cost-download-button')):
                     idx = i
                     break
-            _data[idx] = dcc.send_data_frame(data_handler.processed_data['MESSAGEix-Canada']['Total Cost'].to_csv, "total_cost.csv")
+            _data[idx] = dcc.send_data_frame(df.to_csv, "total_cost.csv")
             return _canvas, _r_style, _y_style, _data, _s_style, _m_style, _pattern_style, _text_style
 
         idx = 0
@@ -165,7 +165,7 @@ def link(app):
             _text_style[idx] = {'display': 'block'}
 
             if _aggregates[idx] is not None:
-                _canvas[idx] = render_plot('By Year', data_handler.processed_data['MESSAGEix-Canada']['Total Cost'],
+                _canvas[idx] = render_plot('By Year', df,
                                            _aggregates[idx],
                                            _scenarios[idx],
                                            _regions[idx],
@@ -179,7 +179,7 @@ def link(app):
             _pattern_style[idx] = {'display': 'none'}
             _text_style[idx] = {'display': 'none'} 
             if _aggregates[idx] is not None:
-                _canvas[idx] = render_plot('Trend Over Years', data_handler.processed_data['MESSAGEix-Canada']['Total Cost'],
+                _canvas[idx] = render_plot('Trend Over Years', df,
                                            _aggregates[idx],
                                            _scenarios[idx],
                                            _regions[idx],
@@ -192,7 +192,7 @@ def link(app):
             _pattern_style[idx] = {'display': 'none'}
             _text_style[idx] = {'display': 'none'} 
             if _aggregates[idx] is not None:
-                _canvas[idx] = render_plot('Pie Chart', data_handler.processed_data['MESSAGEix-Canada']['Total Cost'],
+                _canvas[idx] = render_plot('Pie Chart', df,
                                            _aggregates[idx],
                                            _scenarios[idx],
                                            _regions[idx],
@@ -206,7 +206,7 @@ def link(app):
             _pattern_style[idx] = {'display': 'block'}
             _text_style[idx] = {'display': 'block'}
             if _aggregates[idx] is not None:
-                _canvas[idx] = render_plot('By Region', data_handler.processed_data['MESSAGEix-Canada']['Total Cost'],
+                _canvas[idx] = render_plot('By Region', df,
                                            _aggregates[idx],
                                            _scenarios[idx],
                                            _regions[idx],

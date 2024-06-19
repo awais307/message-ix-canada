@@ -5,7 +5,16 @@ from plotting_utils.visualization_scripts.utils import bar_over_years, bar_over_
 
 
 def render_plot(type, df, aggregate, scenarios, region, year, scenario, pattern_active=True, text_active=False):
-    return bar_over_years.plot(df, scenarios, region, aggregate, 'Capacity Additions', 'Region', 'Capacity Additions', 'Capacity Additions', 'kt', pattern_active=pattern_active, text_active=text_active)
+    if type == 'By Year':
+        return bar_over_years.plot(df, scenarios, region, aggregate, 'Final Energy', 'Region', 'Final Energy', 'Final Energy', 'EJ', pattern_active=pattern_active, text_active=text_active)
+    elif type == 'By Region':
+        return bar_over_regions.plot(df, scenarios, aggregate, year,'Final Energy', 'Region', 'Final Energy', 'Final Energy', 'EJ', pattern_active=pattern_active, text_active=text_active)
+    elif type == 'Trend Over Years':
+        return trend_over_years.plot(df, scenario, region, aggregate, 'Final Energy', 'Year', 'Final Energy', 'Final Energy', 'EJ')
+    elif type == 'Pie Chart':
+        return pie_chart.plot(df, scenario, region, aggregate, 'Final Energy', 'Final Energy', 'EJ', 'Year')
+
+    return None
 
 def plot(df, window_id):
     '''

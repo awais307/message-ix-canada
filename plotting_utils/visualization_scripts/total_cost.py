@@ -5,7 +5,19 @@ from plotting_utils.visualization_scripts.utils import bar_over_years, bar_over_
 
 
 def render_plot(type, df, aggregate, scenarios, region, year, scenario, pattern_active=True, text_active=False):
-    return bar_over_years.plot(df, scenarios, region, aggregate, 'Total Cost', 'Region', 'Total Cost', 'Total Cost', 'USD', pattern_active=pattern_active, text_active=text_active)
+    if type == 'By Year':
+        return bar_over_years.plot(df, scenarios, region, aggregate, 'Total Cost', 'Region', 'Total Cost', 'Total Cost', 'USD', pattern_active=pattern_active, text_active=text_active)
+    elif type == 'By Region':
+        return bar_over_regions.plot(df, scenarios, aggregate, year,  'Total Cost', 'Region', 'Total Cost', 'Total Cost', 'USD', pattern_active=pattern_active, text_active=text_active)
+    elif type == 'Trend Over Years':
+        return trend_over_years.plot(df, scenario, region, aggregate, 'Total Cost', 'Year', 'Total Cost', 'Total Cost', 'USD')
+    elif type == 'Pie Chart':
+        return pie_chart.plot(df, scenario, region, aggregate, 'Total Cost', 'Total Cost', 'USD', 'Year')
+
+    return None
+
+
+
 def plot(df, window_id):
     '''
 
@@ -20,7 +32,7 @@ def plot(df, window_id):
     by_year_widgets = dmc.Select(
         label='Region',
         data=[{'label': region, 'value': region} for region in regions],
-        value= 'CAN' if 'CAN' in regions else regions[0],
+        value='CAN' if 'CAN' in regions else regions[0],
         id={
             'type': 'messageix-total_cost-region-select',
             'index': window_id
@@ -103,13 +115,13 @@ def plot(df, window_id):
         dmc.Button('Download Data', id={'type': 'messageix-total_cost-download-button', 'index': window_id},
                    variant='light',
                    # center the button
-                     style={'display': 'flex', 'justify-content': 'center', 'margin-top': '4px'}),
+                   style={'display': 'flex', 'justify-content': 'center', 'margin-top': '4px'}),
         dcc.Download(id={'type': 'messageix-total_cost-download', 'index': window_id}),
     ])
 
     plot_layout = dcc.Graph(
         figure=render_plot('By Year', df, True, [scenarios[0]], 'CAN' if 'CAN' in regions else regions[0],
-                           years[0],scenarios[0]),
+                           years[0], scenarios[0]),
         id={
             'type': 'figure',
             'index': window_id,

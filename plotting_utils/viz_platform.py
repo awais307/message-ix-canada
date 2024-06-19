@@ -41,17 +41,18 @@ from plotting_utils.visualization_scripts import (
 
 
 # link all callbacks
-def link(app):
-    emissions_callbacks.link(app)
-    capital_cost_callbacks.link(app)
-    total_cost_callbacks.link(app)
-    capacity_additions_callbacks.link(app)
-    capacity_callbacks.link(app)
-    primary_energy_callbacks.link(app)
-    secondary_energy_callbacks.link(app)
-    final_energy_callbacks.link(app)
-    useful_energy_callbacks.link(app)
-    overview_callbacks.link(app)
+def link(app, dfs):
+    emissions_callbacks.link(app, dfs['emissions'])
+    capital_cost_callbacks.link(app, dfs['capital_cost'])
+    total_cost_callbacks.link(app, dfs['total_cost'])
+    capacity_additions_callbacks.link(app, dfs['capacity_additions'])
+    capacity_callbacks.link(app, dfs['capacity'])
+    primary_energy_callbacks.link(app, dfs['primary_energy'])
+    secondary_energy_callbacks.link(app, dfs['secondary_energy'])
+    final_energy_callbacks.link(app, dfs['final_energy'])
+    useful_energy_callbacks.link(app, dfs['useful_energy'])
+    overview_callbacks.link(app, dfs['overview'])
+
 
 
 # function to check which processing function to use
@@ -110,25 +111,25 @@ def get_views(dfs):
     plots = {}
     for viz, df in dfs.items():
         if viz == 'emissions':
-            plots['emissions'] = emissions_viz.plot(df, 0)[-1]
+            plots['emissions'] = emissions_viz.plot(df, 0)
         if viz == 'capital_cost':
-            plots['capital_cost'] = capital_cost_viz.plot(df, 0)[-1]
+            plots['capital_cost'] = capital_cost_viz.plot(df, 0)
         if viz == 'total_cost':
-            plots['total_cost'] = total_cost_viz.plot(df, 0)[-1]
+            plots['total_cost'] = total_cost_viz.plot(df, 0)
         if viz == 'capacity_additions':
-            plots['capacity_additions'] = capacity_additions_viz.plot(df, 0)[-1]
+            plots['capacity_additions'] = capacity_additions_viz.plot(df, 0)
         if viz == 'capacity':
-            plots['capacity'] = capacity_viz.plot(df, 0)[-1]
+            plots['capacity'] = capacity_viz.plot(df, 0)
         if viz == 'primary_energy':
-            plots['primary_energy'] = primary_energy_viz.plot(df, 0)[-1]
+            plots['primary_energy'] = primary_energy_viz.plot(df, 0)
         if viz == 'secondary_energy':
-            plots['secondary_energy'] = secondary_energy_viz.plot(df, 0)[-1]
+            plots['secondary_energy'] = secondary_energy_viz.plot(df, 0)
         if viz == 'final_energy':
-            plots['final_energy'] = final_energy_viz.plot(df, 0)[-1]
+            plots['final_energy'] = final_energy_viz.plot(df, 0)
         if viz == 'useful_energy':
-            plots['useful_energy'] = useful_energy_viz.plot(df, 0)[-1]
+            plots['useful_energy'] = useful_energy_viz.plot(df, 0)
         if viz == 'overview':
-            plots['overview'] = overview_viz.plot(df, 0)[-1]
+            plots['overview'] = overview_viz.plot(df, 0)
     return plots
 
 import dash
@@ -151,6 +152,7 @@ df.model = 'MESSAGEix-Canada'
 
 checked = check(df)
 dfs = process(df, checked)
+link(app, dfs)
 views = get_views(dfs)
 
 # add tabs to the app where the plots will be displayed
@@ -158,65 +160,115 @@ app.layout = html.Div([
     dcc.Tabs([
         dcc.Tab(label='Emissions', children=[
             html.Div([
-                views['emissions']
-            ])
+                *views['emissions']
+            ],
+            style={
+                # have views side by side
+                'display': 'flex',
+                'flex-direction': 'row',
+            })
         ]),
         dcc.Tab(label='Capital Cost', children=[
             html.Div([
-                views['capital_cost']
-            ])
+                *views['capital_cost']
+            ],
+            style={
+                # have views side by side
+                'display': 'flex',
+                'flex-direction': 'row',
+            })
         ]),
         dcc.Tab(label='Total Cost', children=[
             html.Div([
-                views['total_cost']
-            ])
+                *views['total_cost']
+            ],
+            style={
+                # have views side by side
+                'display': 'flex',
+                'flex-direction': 'row',
+            })
         ]),
         dcc.Tab(label='Capacity Additions', children=[
             html.Div([
-                views['capacity_additions']
-            ])
+                *views['capacity_additions']
+            ],
+            style={
+                # have views side by side
+                'display': 'flex',
+                'flex-direction': 'row',
+            })
         ]),
         dcc.Tab(label='Capacity', children=[
             html.Div([
-                views['capacity']
-            ])
+                *views['capacity']
+            ],
+            style={
+                # have views side by side
+                'display': 'flex',
+                'flex-direction': 'row',
+            })
         ]),
         dcc.Tab(label='Primary Energy', children=[
             html.Div([
-                views['primary_energy']
-            ])
+                *views['primary_energy']
+            ],
+            style={
+                # have views side by side
+                'display': 'flex',
+                'flex-direction': 'row',
+            })
         ]),
         dcc.Tab(label='Secondary Energy', children=[
             html.Div([
-                views['secondary_energy']
-            ])
+                *views['secondary_energy']
+            ],
+            style={
+                # have views side by side
+                'display': 'flex',
+                'flex-direction': 'row',
+            })
         ]),
         dcc.Tab(label='Final Energy', children=[
             html.Div([
-                views['final_energy']
-            ])
+                *views['final_energy']
+            ],
+            style={
+                # have views side by side
+                'display': 'flex',
+                'flex-direction': 'row',
+            })
         ]),
         dcc.Tab(label='Useful Energy', children=[
             html.Div([
-                views['useful_energy']
-            ])
+                *views['useful_energy']
+            ],
+            style={
+                # have views side by side
+                'display': 'flex',
+                'flex-direction': 'row',
+            })
         ]),
         dcc.Tab(label='Overview', children=[
             html.Div([
-                views['overview']
-            ])
+                *views['overview']
+            ],
+            style={
+                # have views side by side
+                'display': 'flex',
+                'flex-direction': 'row',
+            })
         ]),
     ])
 ])
 
-# save all views to a file
+# save all views to a png
 for viz, view in views.items():
     print(viz, 'to html')
-    view.figure.write_html(f'{viz}.html')
+    view[-1].figure.write_html(f'{viz}.html')
 
 # start app
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=False)
 
 
 

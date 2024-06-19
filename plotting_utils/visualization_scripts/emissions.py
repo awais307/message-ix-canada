@@ -6,7 +6,19 @@ from plotting_utils.visualization_scripts.utils import bar_over_years, bar_over_
 
 
 def render_plot(type, df, aggregate, variable, scenarios, region, year, scenario, pattern_active=True, text_active=False):
-    return bar_over_years.plot(df, scenarios, region, aggregate, 'Emissions', 'Region', 'Emissions', 'Emissions', 'kt', pattern_active=pattern_active, text_active=text_active)
+    df['type'] = df['variable'].apply(lambda x: x.split('|')[1])
+    df = df[df['type'].str.startswith(variable)]
+    if type == 'By Year':
+        return bar_over_years.plot(df, scenarios, region, aggregate, 'Emissions', 'Region', 'Emissions', 'Emissions', 'kt', pattern_active=pattern_active, text_active=text_active)
+    elif type == 'By Region':
+        return bar_over_regions.plot(df, scenarios, aggregate, year, 'Emissions', 'Region', 'Emissions', 'Emissions', 'kt', pattern_active=pattern_active, text_active=text_active)
+    elif type == 'Trend Over Years':
+        return trend_over_years.plot(df, scenario, region, aggregate, 'Emissions', 'Year', 'Emissions', 'Emissions', 'kt')
+    elif type == 'Pie Chart':
+        return pie_chart.plot(df, scenario, region, aggregate, 'Emissions', 'Emissions', 'kt', 'Year')
+
+    return None
+
 
 def plot(df, window_id):
     '''

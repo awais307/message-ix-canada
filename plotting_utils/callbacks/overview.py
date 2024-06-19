@@ -4,7 +4,7 @@ from dash import Output, Input, State, ALL, dcc
 from plotting_utils.visualization_scripts.overview import render_plot
 
 
-def link(app):
+def link(app, df):
     @app.callback(
         Output({
             'type': 'figure',
@@ -41,7 +41,6 @@ def link(app):
     )
     def update_overview(_p_type, _download, _canvas, _data):
         print('updating overview plot')
-        from main import data_handler
         ctx = dash.callback_context
         trigger_id = eval(ctx.triggered[0]['prop_id'].split('.')[0])
 
@@ -52,7 +51,7 @@ def link(app):
                         (id['id']['type'] == 'messageix-overview-download-button')):
                     idx = i
                     break
-            _data[idx] = dcc.send_data_frame(data_handler.processed_data['MESSAGEix-Canada']['Overview'].to_csv,
+            _data[idx] = dcc.send_data_frame(df.to_csv,
                                              "overview.csv")
             return _canvas, _data,
 
@@ -65,6 +64,6 @@ def link(app):
 
         print('idx:', idx, 'plot type:', _p_type[idx])
 
-        _canvas[idx] = render_plot(_p_type[idx], data_handler.processed_data['MESSAGEix-Canada']['Overview'])
+        _canvas[idx] = render_plot(_p_type[idx], df)
 
         return _canvas, [dash.no_update for _ in _data]
