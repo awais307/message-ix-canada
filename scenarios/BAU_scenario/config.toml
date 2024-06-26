@@ -1,0 +1,16 @@
+[general]
+model_name = "CanadaEnergyModel"
+scenario_name = "BaselineScenario"
+ix_platform = "local"
+version = "1"
+annotation = "Initial setup for Canadian energy model."
+
+[pre_process]
+process_historical_data = false
+
+[data]
+provincial_input_file = "scenarios/common/Provincial_Input_Baseline.xlsx"
+scenario_folder = "scenarios/BAU_scenario"
+
+
+
