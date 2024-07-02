@@ -40,8 +40,6 @@ def process_population_data(path):
     resampled_data['Province'] = resampled_data['Province'].str.replace(' ', '')
     return resampled_data
 
-
-
 def process_gdp_data(dpath):
     """
     Process GDP data for the model.
