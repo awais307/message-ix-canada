@@ -12,5 +12,10 @@ process_historical_data = false
 provincial_input_file = "scenarios/common/Provincial_Input_Baseline.xlsx"
 scenario_folder = "scenarios/BAU_scenario"
 
+[post_process]
+generate_reporter_output = true
+
+
+
 
 
