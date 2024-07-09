@@ -42,6 +42,9 @@ if process_historical:
     update_historical_activity(msg, scenario_folder)
 
 msg.solve()
+test_historical_activity = True
+if test_historical_activity:
+    print(msg.par('historical_activity'))
 
 if use_reporter:
     generate_report(msg)

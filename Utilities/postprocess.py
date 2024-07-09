@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from message_ix import Reporter
 import pyam
+from pathlib import Path
 
 def generate_report(msg, output_path='MESSAGE_CANADA_provincial_baseline_v1.csv', min_year=2015, max_year=2060, from_excel=False, unit_correct=True):
     """
@@ -64,5 +65,6 @@ def generate_report(msg, output_path='MESSAGE_CANADA_provincial_baseline_v1.csv'
     pyam_df.rename({'region': {'World': 'Canada'}}, inplace=True)
 
     pyam_df.to_csv(output_path)
+
     print(f'Report saved to {output_path}')
 
