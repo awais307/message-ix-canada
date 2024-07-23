@@ -21,6 +21,7 @@ def adjust_demands(scenario, population_data, gdp_data, hist_act_df, ssp_df, dem
     df_region = df_demand.groupby(['year', 'commodity', 'level', 'time', 'unit']).sum().reset_index()
     df_region['node'] = 'Canada'
     cmdtys = df_region['commodity'].unique().tolist()
+    hist_act_df = scenario.poar('historical_activity')
 
     dmds_dict = {}
 

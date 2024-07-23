@@ -14,7 +14,7 @@ Assign users and groups as approvers for specific file changes. Learn more.
 coal_phaseout.py
 2.04 KiB
 ## This script implements coal phaseout by 2030 in MESSAGE Canada
-def coal_phase_out(scenario):
+def coal_phase_out(scenario,province):
     """
     This function performs a coal phase out operation on a MESSAGEix scenario.
     It identifies all technologies related to coal, filters out certain technologies based on specific conditions,
