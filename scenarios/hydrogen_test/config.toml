@@ -1,0 +1,22 @@
+[general]
+model_name = "MESSAGEix_CA"
+scenario_name = "hydrogen_share"
+ix_platform = "local"
+version = "new"
+annotation = "Initial setup for Canadian energy model."
+
+[pre_process]
+process_historical_data = true
+add_hydrogen_share = True
+
+[data]
+provincial_input_file = "scenarios/common/Provincial_Input_Baseline_TEST.xlsx"
+scenario_folder = "scenarios/test_scenario"
+
+[post_process]
+generate_reporter_output = true
+
+
+
+
+

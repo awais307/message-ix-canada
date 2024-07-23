@@ -2,18 +2,21 @@
 model_name = "CanadaEnergyModel"
 scenario_name = "BaselineScenario"
 ix_platform = "local"
-version = "1"
+version = "new"
 annotation = "Initial setup for Canadian energy model."
 
 [pre_process]
 process_historical_data = false
 
 [data]
+#TODO Add a read_excel boolean to allow also reading directly from the local database
 provincial_input_file = "scenarios/common/Provincial_Input_Baseline.xlsx"
 scenario_folder = "scenarios/BAU_scenario"
 
 [post_process]
 generate_reporter_output = true
+
+
 
 
 

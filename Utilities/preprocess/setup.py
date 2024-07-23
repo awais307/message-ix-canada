@@ -6,7 +6,7 @@ from ixmp import Scenario
 from pathlib import Path
 
 from Utilities.preprocess.process_historical_activity import update_historical_activity
-from Utilities.postprocess.reporter import generate_report
+
 
 def setup_scenario(scenario_name: str):
     config_path = Path(f"scenarios/{scenario_name}/config.toml")
@@ -34,7 +34,10 @@ def setup_scenario(scenario_name: str):
         scenario_folder = config['data']['scenario_folder']
         update_historical_activity(msg, scenario_folder)
 
-    msg.solve()
+    caseName = msg.model + '__' + msg.scenario + '__v' + str(msg.version)
+    
+    # msg.solve()
+
     return mp, msg
 
 
