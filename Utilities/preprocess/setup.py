@@ -21,6 +21,7 @@ def setup_scenario(scenario_name: str):
     version = config['general']['version']
     annotation = config['general']['annotation']
     process_historical = config['pre_process']['process_historical_data']
+    add_hydrogen_shares = config['pre_process']['add_hydrogen_shares']
     use_reporter = config['post_process']['generate_reporter_output']
     ssp = 'SSP2'  
 
@@ -33,6 +34,9 @@ def setup_scenario(scenario_name: str):
     if process_historical:
         scenario_folder = config['data']['scenario_folder']
         update_historical_activity(msg, scenario_folder)
+    
+    if add_hydrogen_shares:
+        add_hydrogen_shares(msg, scenario_folder)
 
     caseName = msg.model + '__' + msg.scenario + '__v' + str(msg.version)
     
