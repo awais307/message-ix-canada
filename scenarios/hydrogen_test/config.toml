@@ -9,16 +9,17 @@ annotation = "Initial setup for Canadian energy model."
 process_historical_data = true
 add_hydrogen_share = True
 add_technology = True
-- ATR_CCS
-    - input_value = 
-    - ouput_value = 
-    - inv_cost_2020 =  
-    - var_cost_2020 = 
-    - fix_cost_2020 = 
-    - technical_lifetime = 
-    - construction_time = 
-    - capacity_factor = 
-    - emission_factor = 
+
+[pre_process.ATR_CCS]
+input_value = ""
+output_value = ""
+inv_cost_2020 = 0.0
+var_cost_2020 = 0.0
+fix_cost_2020 = 0.0
+technical_lifetime = 0
+construction_time = 0
+capacity_factor = 0.0
+emission_factor = 0.0
 
 
 [data]

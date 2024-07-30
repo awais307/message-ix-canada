@@ -9,9 +9,17 @@ MESSAGEix can be installed by following the instructions [here](https://docs.mes
 The following is meant to get a future co-op student up to speed on the provincial MESSAGEix model, and lists all necessary skills to ensure a smooth transition. The section title have links to relevant documentation when applicable.
 
 
+
 ### Pre-Requisites
 
-To add data to the MESSAGEix model,the data should be in the `model-readable`  format. All raw data is found in `data/provincial_sources`, which is formatted by running `model/functions/format.py`. This function returns dataframes which can be added to the model as parameters.
+
+To add data to the MESSAGEix model,the data should be in the `model-readable`  format. The formatted data required to solve a baseline scenario is located under 'scenarios/common/'. If new data is being used for a specific scenario, create and name a scenario folder within 'scenarios', and ensure the file is named appropriately according to the inputs of MESSAGEix Canada. Place the new data and a configuration file within the scenario and fill in config.toml according to the specifications of the scenario.
+
+### Running the Model
+
+To run the model for the baseline scenario, navigate to the parent directory of your repository. Then run the main model runner using the following command: python MESSAGE-CANADA.py baseline. If you have already created and configured a custom scenario, you can instead use: python MESSAGE-CANADA.py <scenario_name> where <scenario_name> would be replaced by the name of the folder you created within the 'scenarios' folder.
+
+### Interacting with the Model After Solving
 
 ### [MESSAGEix](https://docs.messageix.org/en/stable/index.html)
 

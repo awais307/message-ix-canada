@@ -7,8 +7,8 @@ from pathlib import Path
 import sys
 sys.path.append(str(Path(__file__).resolve().parent))
 
-from Utilities.preprocess import update_historical_activity
-from Utilities.postprocess import generate_report
+from utilities.preprocess import update_historical_activity
+from utilities.postprocess import generate_report
 
 if len(sys.argv) != 2:
     print("Usage: python Message-CANADA.py <scenario_folder>")

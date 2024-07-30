@@ -5,10 +5,27 @@ import pandas as pd
 from ixmp import Scenario
 from pathlib import Path
 
-from Utilities.preprocess.process_historical_activity import update_historical_activity
+from utilities.preprocess.process_historical_activity import update_historical_activity
 
 
 def setup_scenario(scenario_name: str):
+    """
+    Set up and initialize a MESSAGEix scenario based on the provided configuration.
+
+    This function reads a configuration file for a given scenario, initializes a
+    MESSAGEix scenario object, and performs pre-processing steps as defined in the
+    configuration. The function returns the platform and scenario objects for further use.
+
+    Args:
+        scenario_name (str): The name of the scenario to set up.
+
+    Returns:
+        tuple: A tuple containing the ixmp.Platform object and the message_ix.Scenario object.
+
+    Raises:
+        FileNotFoundError: If the configuration file for the scenario does not exist.
+    """
+    
     config_path = Path(f"scenarios/{scenario_name}/config.toml")
     if not config_path.exists():
         raise FileNotFoundError(f"Config file does not exist at {config_path}")
