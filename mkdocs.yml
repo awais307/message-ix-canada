@@ -6,8 +6,9 @@ theme:
 nav:
   - Home: index.md
   - API Documentation:
-      - Functions: functions.md
-      - Classes: classes.md
+      - Preprocess Functions: utilities.md
+      - Policiy Functions: policies.md
+
 
 plugins:
   - search
