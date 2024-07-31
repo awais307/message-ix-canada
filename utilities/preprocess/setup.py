@@ -6,6 +6,7 @@ from ixmp import Scenario
 from pathlib import Path
 
 from utilities.preprocess.process_historical_activity import update_historical_activity
+from policies.hydrogen_shares import add_hydrogen_shares
 
 
 def setup_scenario(scenario_name: str):

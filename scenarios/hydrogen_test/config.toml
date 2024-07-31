@@ -7,8 +7,8 @@ annotation = "Initial setup for Canadian energy model."
 
 [pre_process]
 process_historical_data = true
-add_hydrogen_share = True
-add_technology = True
+add_hydrogen_shares = false
+add_technology = true
 
 [pre_process.ATR_CCS]
 input_value = ""
