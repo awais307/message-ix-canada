@@ -7,6 +7,7 @@ annotation = "Initial setup for Canadian energy model."
 
 [pre_process]
 process_historical_data = false
+add_hydrogen_shares = false
 
 [data]
 #TODO Add a read_excel boolean to allow also reading directly from the local database
