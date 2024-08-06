@@ -2,11 +2,11 @@ import toml
 import message_ix
 import ixmp
 import pandas as pd
-from ixmp import Scenario
 from pathlib import Path
 
 from utilities.preprocess.process_historical_activity import update_historical_activity
 from utilities.preprocess.add_hydrogen_shares import add_hydrogen_shares
+from utilities.postprocess.reporter import generate_report
 
 
 def setup_scenario(scenario_name: str):
@@ -41,13 +41,16 @@ def setup_scenario(scenario_name: str):
     process_historical = config['pre_process']['process_historical_data']
     add_hydrogen_shares_f = config['pre_process']['add_hydrogen_shares']
     use_reporter = config['post_process']['generate_reporter_output']
-    ssp = 'SSP2'  
-
+    solve = config['model']['solve']
+    #TODO add option for SSP
+    # ssp = 'SSP2' 
+    
     mp = ixmp.Platform(name=platform_name)
-    msg = message_ix.Scenario(mp, modelName, scenarioName, version='new', annotation=annotation)
+    scenario = message_ix.Scenario(mp, modelName, scenarioName, version= version, annotation=annotation)
+    caseName = scenario.model + '__' + scenario.scenario + '__v' + str(scenario.version)
 
     excel_path = Path(config['data']['provincial_input_file'])
-    msg.read_excel(excel_path, add_units=True, commit_steps=False, init_items=True)
+    scenario.read_excel(excel_path, add_units=True, commit_steps=False, init_items=True)
 
     if process_historical:
         scenario_folder = config['data']['scenario_folder']
@@ -57,10 +60,17 @@ def setup_scenario(scenario_name: str):
         scenario_folder = config['data']['scenario_folder']
         add_hydrogen_shares(msg, scenario_folder)
 
-    caseName = msg.model + '__' + msg.scenario + '__v' + str(msg.version)
     
+
+    if use_reporter:
+        generate_report(scenario, output_path=f'{caseName}.csv', min_year=2020, max_year=2060, from_excel=False, unit_correct=True)
+    
+    if solve:
+        scenario.solve(solve_options={'barcrossalg': '2','lpmethod':'1'}, case=caseName)
+
+
     # msg.solve()
 
-    return mp, msg
+    return mp, scenario
 
 

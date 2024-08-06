@@ -12,8 +12,11 @@ process_historical_data = true
 provincial_input_file = "scenarios/common/Provincial_Input_Baseline_TEST.xlsx"
 scenario_folder = "scenarios/test_scenario"
 
+[mode]
+solve = true
+
 [post_process]
-generate_reporter_output = true
+generate_report = true
 
 
 
