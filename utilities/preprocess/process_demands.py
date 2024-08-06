@@ -8,8 +8,8 @@ from itertools import product
 from scipy.optimize import linprog
 import warnings
 warnings.filterwarnings('ignore')
-
-from process_gdp_population import process_gdp_population_data
+script_dir = Path(__file__).parent
+from utilities.preprocess.process_gdp_population import process_gdp_population_data
 
 def adjust_demands(scenario, population_data, gdp_data, hist_act_df, demand_yrs):
     """
@@ -26,6 +26,8 @@ def adjust_demands(scenario, population_data, gdp_data, hist_act_df, demand_yrs)
     Returns:
         pd.DataFrame: DataFrame containing updated demand data.
     """
+    gdp_data= script_dir / '../../data/gdp/gdp_messageca_prov.csv'
+    population_data= script_dir / '../../data/population/pop_messageca_prov.csv'
     ssp_df = process_gdp_population_data(gdp_data,population_data)
     demand = scenario.par('demand')
     df_ca = demand.groupby(['year', 'commodity', 'level', 'time', 'unit']).sum().reset_index()

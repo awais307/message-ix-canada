@@ -6,7 +6,7 @@ from ixmp import Scenario
 from pathlib import Path
 
 from utilities.preprocess.process_historical_activity import update_historical_activity
-from policies.hydrogen_shares import add_hydrogen_shares
+from utilities.preprocess.add_hydrogen_shares import add_hydrogen_shares
 
 
 def setup_scenario(scenario_name: str):
@@ -39,7 +39,7 @@ def setup_scenario(scenario_name: str):
     version = config['general']['version']
     annotation = config['general']['annotation']
     process_historical = config['pre_process']['process_historical_data']
-    add_hydrogen_shares = config['pre_process']['add_hydrogen_shares']
+    add_hydrogen_shares_f = config['pre_process']['add_hydrogen_shares']
     use_reporter = config['post_process']['generate_reporter_output']
     ssp = 'SSP2'  
 
@@ -53,7 +53,8 @@ def setup_scenario(scenario_name: str):
         scenario_folder = config['data']['scenario_folder']
         update_historical_activity(msg, scenario_folder)
     
-    if add_hydrogen_shares:
+    if add_hydrogen_shares_f:
+        scenario_folder = config['data']['scenario_folder']
         add_hydrogen_shares(msg, scenario_folder)
 
     caseName = msg.model + '__' + msg.scenario + '__v' + str(msg.version)
