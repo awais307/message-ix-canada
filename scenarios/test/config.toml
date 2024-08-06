@@ -13,10 +13,12 @@ provincial_input_file = "scenarios/common/Provincial_Input_Baseline_TEST.xlsx"
 scenario_folder = "scenarios/test_scenario"
 
 [mode]
-solve = true
+solve = false
 
 [post_process]
 generate_report = true
+to_excel = false
+
 
 
 

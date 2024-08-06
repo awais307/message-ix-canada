@@ -42,6 +42,7 @@ def setup_scenario(scenario_name: str):
     add_hydrogen_shares_f = config['pre_process']['add_hydrogen_shares']
     use_reporter = config['post_process']['generate_reporter_output']
     solve = config['model']['solve']
+    to_excel = config['post_process']['export_to_xlsx']
     #TODO add option for SSP
     # ssp = 'SSP2' 
     
@@ -54,20 +55,21 @@ def setup_scenario(scenario_name: str):
 
     if process_historical:
         scenario_folder = config['data']['scenario_folder']
-        update_historical_activity(msg, scenario_folder)
+        update_historical_activity(scenario, scenario_folder)
     
     if add_hydrogen_shares_f:
         scenario_folder = config['data']['scenario_folder']
-        add_hydrogen_shares(msg, scenario_folder)
+        add_hydrogen_shares(scenario, scenario_folder)
 
     
-
-    if use_reporter:
-        generate_report(scenario, output_path=f'{caseName}.csv', min_year=2020, max_year=2060, from_excel=False, unit_correct=True)
     
     if solve:
         scenario.solve(solve_options={'barcrossalg': '2','lpmethod':'1'}, case=caseName)
+        if use_reporter:
+            generate_report(scenario, output_path=f'{caseName}.csv', min_year=2020, max_year=2060, from_excel=False, unit_correct=True)
 
+    if to_excel:
+        scenario.to_excel(f'{caseName}.xlsx')
 
     # msg.solve()
 
