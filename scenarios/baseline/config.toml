@@ -1,12 +1,14 @@
 [general]
-model_name = "CanadaEnergyModel"
-scenario_name = "BaselineScenario"
+model_name = "MESSAGEix-CA"
+scenario_name = "baseline"
 ix_platform = "local"
 version = "new"
 annotation = "Initial setup for Canadian energy model."
 
 [pre_process]
 process_historical_data = false
+add_hydrogen_shares = false
+add_technology = true
 
 [data]
 #TODO Add a read_excel boolean to allow also reading directly from the local database
@@ -15,8 +17,6 @@ scenario_folder = "scenarios/BAU_scenario"
 
 [post_process]
 generate_reporter_output = true
-
-
 
 
 
