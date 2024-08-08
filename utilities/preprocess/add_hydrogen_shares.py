@@ -27,23 +27,23 @@ def add_hydrogen_shares(scenario, path):
     # Loop through each sheet
     for sheet_name in data.sheet_names:
         # Perform operations on the DataFrame
-        df = pd.read_excel(path /'hydrogen_shares_V2.xlsx', sheet_name=sheet_name)
+        df = pd.read_excel(path /'hydrogen_shares.xlsx', sheet_name=sheet_name)
         print(f"Sheet name: {sheet_name}")
-        if sheet_name in msg.set_list():
+        if sheet_name in scenario.set_list():
             if sheet_name == 'cat_tec':
                 continue
             print('sets',sheet_name)
             if sheet_name in (['type_tec','shares']):
-                msg.add_set(sheet_name, df[sheet_name])
+                scenario.add_set(sheet_name, df[sheet_name])
             else:
-                msg.add_set(sheet_name, df)
+                scenario.add_set(sheet_name, df)
 
-        elif sheet_name in msg.par_list():
-            msg.add_par(sheet_name, df)
+        elif sheet_name in scenario.par_list():
+            scenario.add_par(sheet_name, df)
             print('par',sheet_name)
 
-    msg.commit('Updated historical activity based on new data')
+    scenario.commit('Updated historical activity based on new data')
 
-    print(msg.par("share_commodity_lo")['shares'].unique())
+    print(scenario.par("share_commodity_lo")['shares'].unique())
 
     #print(scenario.par("share_commodity_lo")['shares'].unique())

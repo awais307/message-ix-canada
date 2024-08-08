@@ -13,13 +13,15 @@ add_hydrogen_shares = false
 
 [data]
 #TODO Add a read_excel boolean to allow also reading directly from the local database
-provincial_input_file = "scenarios/common/Provincial_Input_Baseline.xlsx"
+provincial_input_file = "scenarios/common/Provincial_baseline_h2_v1.xlsx"
 scenario_folder = "scenarios/BAU_scenario"
 
 [post_process]
 generate_reporter_output = true
+export_to_xlsx = false
 
-
+[mode]
+solve = false
 
 
 
