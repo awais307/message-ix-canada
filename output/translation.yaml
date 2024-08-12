@@ -1,0 +1,28 @@
+ORIGINAL
+
+
+Primary Energy|Biomass:
+  - Primary Energy|biomass|bio_istig_ccs|M1
+  - Primary Energy|biomass|bio_istig|M1
+  - Primary Energy|biomass|bio_ppl|M1
+  - Primary Energy|biomass|biomass_nc|M1
+  - Primary Energy|biomass|biomass_t_d|M1
+  - Primary Energy|biomass|eth_bio_ccs|M1
+  - Primary Energy|biomass|eth_bio|M1
+  - Primary Energy|biomass|gas_bio|M1
+  - Primary Energy|biomass|h2_bio_ccs|M1
+  - Primary Energy|biomass|h2_bio|M1
+  - Primary Energy|biomass|liq_bio_ccs|M1
+  - Primary Energy|biomass|liq_bio|M1
+  - Primary Energy|biomass|land_use_biomass|M1
+
+
+----------------------------------------------
+
+TRANSLATION
+
+Primary Energy|biomass|bio_istig_ccs|M1:
+  color: '#000000'
+  group: Primary Energy|Biomass
+  group_color: '#a6cee3'
+  name: Primary Energy|biomass|bio_istig_ccs|M1

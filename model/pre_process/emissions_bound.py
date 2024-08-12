@@ -18,14 +18,26 @@ def bound_emissions(msgSDG, nodeName):
     
     year_df = [2025, 2030, 2035, 2040 ,2045 ,2050 ,2055 ,2060 ,2070]
  
-    
+    nodeName = 'your_node_name_here'  # Replace with the actual node name
+
     dic = {
         'node': [nodeName],
-        'type_emission':[str('TCE')],
-        'type_tec':[str('all')],
-        'type_year': [2025, 2030, 2035, 2040 ,2045 ,2050 ,2055 ,2060 ,2070],
-        'value': [100, 90, 72.79 , 50, 45, 40,35, 30, 30],
-        'unit':[str('MtCO2')]}
+        'type_emission': [str('TCE')],
+        'type_tec': [str('all')],
+        'type_year': [2025, 2030, 2035, 2040, 2045, 2050, 2055, 2060],
+        'value': [
+            66000000000,
+            63000000000,
+            60000000000,
+            58000000000,
+            57000000000,
+            57000000000,
+            57000000000,
+            57000000000
+        ],
+        'unit': [str('MtCO2')]
+    }
+
   
     df = expand_grid(dic)
     df = df.iloc[0:9]

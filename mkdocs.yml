@@ -1,0 +1,19 @@
+site_name: My Docs
+
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - API Documentation:
+      - Preprocess Functions: utilities.md
+      - Policiy Functions: policies.md
+
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
