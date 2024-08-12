@@ -30,8 +30,8 @@ def add_hydrogen_shares(scenario, path):
         df = pd.read_excel(path /'hydrogen_shares.xlsx', sheet_name=sheet_name)
         print(f"Sheet name: {sheet_name}")
         if sheet_name in scenario.set_list():
-            if sheet_name == 'cat_tec':
-                continue
+            #if sheet_name == 'cat_tec':
+                #continue
             print('sets',sheet_name)
             if sheet_name in (['type_tec','shares']):
                 scenario.add_set(sheet_name, df[sheet_name])
@@ -43,7 +43,6 @@ def add_hydrogen_shares(scenario, path):
             print('par',sheet_name)
 
     print(scenario.par("share_commodity_lo")['shares'].unique())
-
 
     df = scenario.par('relation_activity')
     scenario.remove_par('relation_activity', df)
