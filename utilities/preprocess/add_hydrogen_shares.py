@@ -42,8 +42,14 @@ def add_hydrogen_shares(scenario, path):
             scenario.add_par(sheet_name, df)
             print('par',sheet_name)
 
-    scenario.commit('Updated historical activity based on new data')
-
     print(scenario.par("share_commodity_lo")['shares'].unique())
 
-    #print(scenario.par("share_commodity_lo")['shares'].unique())
+
+    df = scenario.par('relation_activity')
+    scenario.remove_par('relation_activity', df)
+    relation_h2 = ['UE_industry_sp_fc', 'UE_res_comm_sp_fc', 'UE_industry_th_hydrogen','UE_res_comm_th_hydrogen']
+    df_relation = df[~df['relation'].isin(relation_h2)]
+    scenario.add_par('relation_activity',df_relation )
+
+
+    scenario.commit('Updated shares based on new data')
