@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
 from pathlib import Path
-script_dir = Path(__file__).parent
-def process_gdp_population_data(path_to_pop,path_to_gdp):
+
+def process_gdp_population_data(path_to_gdp,path_to_pop):
     """
     Process GDP and population data for the model.
     
@@ -13,8 +13,9 @@ def process_gdp_population_data(path_to_pop,path_to_gdp):
     Returns:
         pd.DataFrame: DataFrame containing processed GDP, population, and GDP per capita data for each province.
     """
-    path_to_gdp = script_dir / '../../data/gdp/gdp_messageca_prov.csv'
-    path_to_pop = script_dir / '../../data/population/pop_messageca_prov.csv'
+    path_to_gdp = Path(path_to_gdp).resolve()
+    path_to_pop = Path(path_to_pop).resolve()
+    
     ssp_gdp_df = pd.read_csv(path_to_gdp)
     ssp_pop_df = pd.read_csv(path_to_pop)
     ssp_pop_df['Population'] = ssp_pop_df['Population'] * 1000

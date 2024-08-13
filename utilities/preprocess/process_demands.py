@@ -11,7 +11,7 @@ warnings.filterwarnings('ignore')
 script_dir = Path(__file__).parent
 from utilities.preprocess.process_gdp_population import process_gdp_population_data
 
-def adjust_demands(scenario, population_data, gdp_data, hist_act_df, demand_yrs):
+def adjust_demands(scenario):
     """
     Adjust demands in the scenario based on population and GDP data.
     
@@ -26,8 +26,12 @@ def adjust_demands(scenario, population_data, gdp_data, hist_act_df, demand_yrs)
     Returns:
         pd.DataFrame: DataFrame containing updated demand data.
     """
-    gdp_data= script_dir / '../../data/gdp/gdp_messageca_prov.csv'
-    population_data= script_dir / '../../data/population/pop_messageca_prov.csv'
+    script_dir = Path(__file__).resolve().parent
+    data_dir = script_dir / '../../data'
+    # File names of GDP and population data. If these will be changed often, consider adding parameter for the name of the population and GDP data file.
+    gdp_data = data_dir / 'gdp/gdp_messageca_prov.csv'
+    population_data = data_dir / 'population/pop_messageca_prov.csv'
+    
     ssp_df = process_gdp_population_data(gdp_data,population_data)
     demand = scenario.par('demand')
     df_ca = demand.groupby(['year', 'commodity', 'level', 'time', 'unit']).sum().reset_index()
@@ -197,4 +201,5 @@ def adjust_demands(scenario, population_data, gdp_data, hist_act_df, demand_yrs)
     df = scenario.par('demand')
     scenario.remove_par('demand',df)
     scenario.add_par('demand', dmds)
+    
     scenario.commit('Updated demands')

@@ -48,6 +48,7 @@ def setup_scenario(scenario_name: str):
     
     mp = ixmp.Platform(name=platform_name)
     scenario = message_ix.Scenario(mp, modelName, scenarioName, version= version, annotation=annotation)
+    
     caseName = scenario.model + '__' + scenario.scenario + '__v' + str(scenario.version)
 
     excel_path = Path(config['data']['provincial_input_file'])
