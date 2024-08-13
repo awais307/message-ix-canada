@@ -9,18 +9,18 @@ annotation = "Initial setup for Canadian energy model."
 process_historical_data = false
 add_hydrogen_shares = false
 add_technology = true
-add_hydrogen_shares = false
+
 
 [data]
 #TODO Add a read_excel boolean to allow also reading directly from the local database
-provincial_input_file = "scenarios/common/Provincial_baseline_h2_v1.xlsx"
-scenario_folder = "scenarios/BAU_scenario"
+provincial_input_file = "scenarios/common/Provincial_Input_Baseline.xlsx"
+scenario_folder = "scenarios/baseline"
 
 [post_process]
 generate_reporter_output = true
 export_to_xlsx = false
 
-[mode]
+[model]
 solve = false
 
 
