@@ -1,4 +1,4 @@
-name: message_env
+name: message-ix-canada
 channels:
   - conda-forge
   - defaults
