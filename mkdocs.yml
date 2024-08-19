@@ -5,10 +5,18 @@ theme:
 
 nav:
   - Home: index.md
-  - API Documentation:
-      - Preprocess Functions: utilities.md
-      - Policiy Functions: policies.md
-
+  - Introduction to MESSAGEix-Canada: introduction.md  # Provide the file path
+  - Installation Instructions: installation.md        # Provide the file path
+  - Running the Model: running_model.md               # Provide the file path
+  - Core Model:
+      - Data: data.md                                 # Provide the file path
+      - model: model.md                               # Provide the file path
+      - Model Run: model_run.md                       # Provide the file path
+      - notebooks: notebooks.md                       # Provide the file path
+      - scenarios: scenarios.md                       # Provide the file path
+      - utilities: utilities.md                       # Already provided
+      - policies: policies.md                         # Already provided
+      - output: output.md                             # Provide the file path
 
 plugins:
   - search

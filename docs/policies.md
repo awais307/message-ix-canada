@@ -1,26 +1,26 @@
 # Policy Functions
 
 
-::: policies.bound_emissions
+::: model.policies.bound_emissions
 
-::: policies.carbon_price
+::: model.policies.carbon_price
 
-::: policies.CER
+::: model.policies.CER
 
-::: policies.coal_phaseout
+::: model.policies.coal_phaseout
 
-::: policies.federal_carbon_tax
+::: model.policies.federal_carbon_tax
 
-::: policies.hydrogen_shares
+::: model.policies.hydrogen_shares
 
-::: policies.investment_tax_credit
+::: model.policies.investment_tax_credit
 
-::: policies.obps
+::: model.policies.obps
 
-::: policies.provincial_carbon_tax
+::: model.policies.provincial_carbon_tax
 
-::: policies.provincial_policies
+::: model.policies.provincial_policies
 
-::: policies.renewable_shares
+::: model.policies.renewable_shares
 
-::: policies.technology_cost
+::: model.policies.technology_cost

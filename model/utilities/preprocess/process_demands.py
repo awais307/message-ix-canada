@@ -9,7 +9,7 @@ from scipy.optimize import linprog
 import warnings
 warnings.filterwarnings('ignore')
 script_dir = Path(__file__).parent
-from utilities.preprocess.process_gdp_population import process_gdp_population_data
+from model.utilities.preprocess.process_gdp_population import process_gdp_population_data
 
 def adjust_demands(scenario):
     """
@@ -27,7 +27,7 @@ def adjust_demands(scenario):
         pd.DataFrame: DataFrame containing updated demand data.
     """
     script_dir = Path(__file__).resolve().parent
-    data_dir = script_dir / '../../data'
+    data_dir = script_dir / '../../../data'
     # File names of GDP and population data. If these will be changed often, consider adding parameter for the name of the population and GDP data file.
     gdp_data = data_dir / 'gdp/gdp_messageca_prov.csv'
     population_data = data_dir / 'population/pop_messageca_prov.csv'

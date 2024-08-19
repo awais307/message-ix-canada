@@ -4,9 +4,9 @@ import ixmp
 import pandas as pd
 from pathlib import Path
 
-from utilities.preprocess.process_historical_activity import update_historical_activity
-from utilities.preprocess.add_hydrogen_shares import add_hydrogen_shares
-from utilities.postprocess.reporter import generate_report
+from model.utilities.preprocess.process_historical_activity import update_historical_activity
+from model.utilities.preprocess.add_hydrogen_shares import add_hydrogen_shares
+from model.utilities.postprocess.reporter import generate_report
 
 
 def setup_scenario(scenario_name: str):
@@ -27,7 +27,7 @@ def setup_scenario(scenario_name: str):
         FileNotFoundError: If the configuration file for the scenario does not exist.
     """
     
-    config_path = Path(f"scenarios/{scenario_name}/config.toml")
+    config_path = Path(f"../scenarios/{scenario_name}/config.toml")
     if not config_path.exists():
         raise FileNotFoundError(f"Config file does not exist at {config_path}")
     
@@ -50,12 +50,13 @@ def setup_scenario(scenario_name: str):
     scenario = message_ix.Scenario(mp, modelName, scenarioName, version= version, annotation=annotation)
     
     caseName = scenario.model + '__' + scenario.scenario + '__v' + str(scenario.version)
-
-    excel_path = Path(config['data']['provincial_input_file'])
+    
+    script_dir = Path(__file__).resolve().parent
+    excel_path = script_dir / config['data']['provincial_input_file']
     scenario.read_excel(excel_path, add_units=True, commit_steps=False, init_items=True)
 
     if process_historical:
-        scenario_folder = config['data']['scenario_folder']
+        scenario_folder = script_dir / config['data']['scenario_folder']
         update_historical_activity(scenario, scenario_folder)
     
     if add_hydrogen_shares_f:

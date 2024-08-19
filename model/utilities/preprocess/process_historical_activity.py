@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from pathlib import Path
-from utilities.preprocess.process_demands import adjust_demands
+from model.utilities.preprocess.process_demands import adjust_demands
 
 def update_historical_activity(scenario, path):
     """
