@@ -5,7 +5,7 @@ import pandas as pd
 from pathlib import Path
 
 from model.utilities.preprocess.process_historical_activity import update_historical_activity
-from model.utilities.preprocess.add_hydrogen_shares import add_hydrogen_shares
+from model.policies.add_hydrogen_shares import add_hydrogen_shares
 from model.utilities.postprocess.reporter import generate_report
 
 
@@ -61,7 +61,8 @@ def setup_scenario(scenario_name: str):
     
     if add_hydrogen_shares_f:
         scenario_folder = config['data']['scenario_folder']
-        add_hydrogen_shares(scenario, scenario_folder)
+        path_to_hydrogen_data = script_dir / scenario_folder
+        add_hydrogen_shares(scenario, path_to_hydrogen_data)
 
     
     
