@@ -64,8 +64,11 @@ def setup_scenario(scenario_name: str):
         path_to_hydrogen_data = script_dir / scenario_folder
         add_hydrogen_shares(scenario, path_to_hydrogen_data)
 
-    
-    
+    if add_obps:
+        scenario_folder = config['data']['scenario_folder']
+        path_to_obps_data = script_dir / scenario_folder
+        add_obps(scenario, path_to_obps_data)
+
     if solve:
         scenario.solve(solve_options={'barcrossalg': '2','lpmethod':'1'}, case=caseName)
         if use_reporter:

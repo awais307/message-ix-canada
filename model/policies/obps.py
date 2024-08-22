@@ -2,12 +2,12 @@ import pandas as pd
 from pathlib import Path
 import ixmp
 
-def apply_obps_policy(scenario, data_file_path: str):
+def apply_obps_baseline(scenario, data_file_path: str):
     """
-    Apply the Output-Based Pricing System (OBPS) policy to the given MESSAGEix scenario.
+    Apply the Output-Based Pricing System (OBPS) policy for the Baseline Canada Scenario
+    to the given MESSAGEix scenario.
 
-    This function modifies the scenario's fixed costs based on emissions intensity and carbon pricing,
-    applying the Baseline Canada Scenario and the Net Zero Scenario.
+    This function modifies the scenario's fixed costs based on emissions intensity and carbon pricing.
 
     Args:
         scenario (ixmp.Scenario): The MESSAGEix scenario to apply the OBPS policy to.
@@ -102,25 +102,70 @@ def apply_obps_policy(scenario, data_file_path: str):
     merged_data['value'] = merged_data['value'] + merged_data['carbon cost_Baseline Canada scenario'].fillna(0)
     merged_data.drop(columns=['carbon cost_Baseline Canada scenario'], inplace=True)
     
-    # The updated fix_cost data would typically be re-integrated into the scenario here
-    # However, without implementation specifics for the MESSAGEix scenario, we assume it's done externally
+    # Reintegrate the updated fix_cost data into the scenario
+    for index, row in merged_data.iterrows():
+        scenario.add_par('fix_cost', {
+            'node_loc': 'Alberta',
+            'technology': row['technology'],
+            'year_vtg': row['year_act'],
+            'year_act': row['year_act'],
+            'mode': 'standard',
+            'unit': 'USD/kWyr',
+            'value': row['value']
+        })
+
+
+def apply_obps_netzero(scenario, data_file_path: str):
+    """
+    Apply the Output-Based Pricing System (OBPS) policy for the Net Zero Scenario
+    to the given MESSAGEix scenario.
+
+    This function modifies the scenario's fixed costs based on emissions intensity and carbon pricing.
+
+    Args:
+        scenario (ixmp.Scenario): The MESSAGEix scenario to apply the OBPS policy to.
+        data_file_path (str): Path to the Excel file containing necessary data.
+    """
     
-    # For Net Zero Scenario (similar process)
+    # Read the required data
+    data_relation = pd.read_excel(data_file_path, sheet_name='relation_activity')
+    
+    # Define conditions for filtering the data
+    conditions_2 = (
+        data_relation['technology'].isin([
+            'oil_extr_1', 'oil_extr_2', 'oil_extr_3', 'oil_extr_4', 'oil_extr_5', 'oil_extr_6',
+            'cement_CO2', 'coal_extr', 'gas_extr_1', 'gas_extr_2', 'gas_extr_3', 'gas_extr_4', 
+            'gas_extr_5', 'gas_extr_6'
+        ]) &
+        (data_relation['relation'] == 'CO2_Emission') &
+        (data_relation['node_rel'] == 'Alberta')
+    )
+
+    # Filter the data based on the conditions
+    result = data_relation[conditions_2][['technology', 'value', 'node_rel', 'year_act']]
+    
+    # Initialize columns for calculations
     result['Emission Intensity Reduction_Net Zero Scenario'] = 0.0
+    
+    # Calculate Emission Intensity Reduction_Net Zero Scenario
     for index, row in result.iterrows():
         if 2055 > row['year_act'] > 2020:
             result.loc[index, 'Emission Intensity Reduction_Net Zero Scenario'] = (row['year_act'] - 2022) * 0.02
     
+    # Calculate Emission intensity standard_Net zero
     result['Emission intensity standard_Net zero'] = 0.0
     for index, row in result.iterrows():
         if 2055 > row['year_act'] > 2020:
             result.loc[index, 'Emission intensity standard_Net zero'] = row['value'] * (1 - row['Emission Intensity Reduction_Net Zero Scenario'])
     
+    # Calculate Payable emission intensity_Net zero
     result['Payable emission intensity_Net zero'] = 0.0
     for index, row in result.iterrows():
         if 2055 > row['year_act'] > 2020:
             result.loc[index, 'Payable emission intensity_Net zero'] = row['value'] - row['Emission intensity standard_Net zero']
     
+    # Calculate carbon cost_Net zero scenario
+    rate = 0.73
     result['carbon cost_Net zero scenario'] = 0.0
     for index, row in result.iterrows():
         if row['year_act'] == 2025:
@@ -140,6 +185,7 @@ def apply_obps_policy(scenario, data_file_path: str):
                 result.at[index, 'carbon cost_Net zero scenario'] = value_to_assign[0]
 
     # Merge with fix_cost data for Net Zero Scenario
+    data_fixcost = pd.read_excel(data_file_path, sheet_name='fix_cost')
     NetZero_merged_data = pd.merge(
         data_fixcost, 
         result[['technology', 'year_act', 'carbon cost_Net zero scenario']],
@@ -150,10 +196,14 @@ def apply_obps_policy(scenario, data_file_path: str):
     NetZero_merged_data['value'] = NetZero_merged_data['value'] + NetZero_merged_data['carbon cost_Net zero scenario'].fillna(0)
     NetZero_merged_data.drop(columns=['carbon cost_Net zero scenario'], inplace=True)
     
-    # The updated fix_cost data for Net Zero Scenario would typically be re-integrated into the scenario here
-    # Again, we assume this integration is done externally
-    
-    # Save the updated datasets if required, or further modify the scenario
-
-# Example usage:
-# apply_obps_policy(scenario, 'data_CA_provincial_reference_v1.xlsx')
+    # Reintegrate the updated fix_cost data into the scenario
+    for index, row in NetZero_merged_data.iterrows():
+        scenario.add_par('fix_cost', {
+            'node_loc': 'Alberta',
+            'technology': row['technology'],
+            'year_vtg': row['year_act'],
+            'year_act': row['year_act'],
+            'mode': 'standard',
+            'unit': 'USD/kWyr',
+            'value': row['value']
+        })

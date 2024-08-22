@@ -9,6 +9,8 @@ annotation = "Initial setup for Canadian energy model."
 process_historical_data = false
 add_hydrogen_shares = true
 add_technology = true
+apply_obps_netzero = false
+apply_obps_baseline = true
 
 
 [data]
@@ -16,12 +18,13 @@ add_technology = true
 provincial_input_file = "scenarios/common/MESSAGEix-CA__baseline.xlsx"
 scenario_folder = "scenarios/baseline"
 
+[model]
+solve = true
+
 [post_process]
 generate_reporter_output = true
 export_to_xlsx = true
 
-[model]
-solve = true
 
 
 
