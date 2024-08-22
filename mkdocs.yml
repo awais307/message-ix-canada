@@ -7,7 +7,6 @@ nav:
   - Home: index.md
   - Introduction to MESSAGEix-Canada: introduction.md  # Provide the file path
   - Installation Instructions: installation.md        # Provide the file path
-  - Running the Model: running_model.md               # Provide the file path
   - Core Model:
       - Data: data.md                                 # Provide the file path
       - model: model.md                               # Provide the file path
