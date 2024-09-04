@@ -1,6 +1,6 @@
 [general]
 model_name = "MESSAGEix-CA"
-scenario_name = "baseline"
+scenario_name = "netzero"
 ix_platform = "local"
 version = "new"
 annotation = "Initial setup for Canadian energy model."
@@ -8,18 +8,18 @@ annotation = "Initial setup for Canadian energy model."
 [pre_process]
 process_historical_data = false
 add_hydrogen_shares = true
-add_technology = true
+add_technology = false
 apply_obps_netzero = false
-apply_obps_baseline = true
+apply_obps_baseline = false
 
 
 [data]
 #TODO Add a read_excel boolean to allow also reading directly from the local database
 provincial_input_file = "scenarios/common/MESSAGEix-CA__baseline.xlsx"
-scenario_folder = "scenarios/baseline"
+scenario_folder = "scenarios/netzero"
 
 [model]
-solve = true
+solve = false
 
 [post_process]
 generate_reporter_output = true

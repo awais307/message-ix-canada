@@ -6,6 +6,7 @@ from pathlib import Path
 
 from model.utilities.preprocess.process_historical_activity import update_historical_activity
 from model.policies.add_hydrogen_shares import add_hydrogen_shares
+from model.policies.obps import apply_obps_baseline, apply_obps_netzero
 from model.utilities.postprocess.reporter import generate_report
 
 
@@ -28,6 +29,7 @@ def setup_scenario(scenario_name: str):
     """
     
     config_path = Path(f"../scenarios/{scenario_name}/config.toml")
+    
     if not config_path.exists():
         raise FileNotFoundError(f"Config file does not exist at {config_path}")
     
@@ -40,9 +42,12 @@ def setup_scenario(scenario_name: str):
     annotation = config['general']['annotation']
     process_historical = config['pre_process']['process_historical_data']
     add_hydrogen_shares_f = config['pre_process']['add_hydrogen_shares']
+    add_obps_baseline = config['pre_process']['apply_obps_baseline']
+    add_obps_netzero = config['pre_process']['apply_obps_netzero']
     use_reporter = config['post_process']['generate_reporter_output']
     solve = config['model']['solve']
     to_excel = config['post_process']['export_to_xlsx']
+    
     #TODO add option for SSP
     # ssp = 'SSP2' 
     
@@ -52,22 +57,25 @@ def setup_scenario(scenario_name: str):
     caseName = scenario.model + '__' + scenario.scenario + '__v' + str(scenario.version)
     
     script_dir = Path(__file__).resolve().parent
+    scenario_folder = script_dir / config['data']['scenario_folder']
     excel_path = script_dir / config['data']['provincial_input_file']
     scenario.read_excel(excel_path, add_units=True, commit_steps=False, init_items=True)
 
     if process_historical:
-        scenario_folder = script_dir / config['data']['scenario_folder']
+        
         update_historical_activity(scenario, scenario_folder)
     
     if add_hydrogen_shares_f:
-        scenario_folder = config['data']['scenario_folder']
         path_to_hydrogen_data = script_dir / scenario_folder
         add_hydrogen_shares(scenario, path_to_hydrogen_data)
 
-    if add_obps:
-        scenario_folder = config['data']['scenario_folder']
+    if add_obps_baseline:
         path_to_obps_data = script_dir / scenario_folder
-        add_obps(scenario, path_to_obps_data)
+        apply_obps_netzero(scenario, path_to_obps_data)
+
+    if add_obps_netzero:
+        path_to_obps_data = script_dir / scenario_folder
+        apply_obps_baseline(scenario, path_to_obps_data)
 
     if solve:
         scenario.solve(solve_options={'barcrossalg': '2','lpmethod':'1'}, case=caseName)
@@ -79,7 +87,7 @@ def setup_scenario(scenario_name: str):
 
     # msg.solve()
 
-    return mp, scenario
+    return mp, scenario, scenario_folder
 
 
 
