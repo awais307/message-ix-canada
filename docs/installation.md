@@ -36,6 +36,6 @@ conda activate message-ix-canada
 
 To verify that the installation was successful, you can try importing MESSAGEix-Canada in Python:
 
-```python
-import message_ix
+```
+message-ix show-versions
 ```
