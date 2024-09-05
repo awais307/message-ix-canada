@@ -32,18 +32,10 @@ Activate the newly created environment:
 conda activate message-ix-canada
 ```
 
-## Step 4: Install the MESSAGEix-Canada Package
-
-With the environment activated, you can now install the MESSAGEix-Canada package using the setup.py script provided in the repository. This will ensure all necessary Python packages are installed:
-```bash
-python setup.py install
-```
-
-## Step 5: Verify the Installation
+## Step 4: Verify the Installation
 
 To verify that the installation was successful, you can try importing MESSAGEix-Canada in Python:
 
-```python
-import message_ix
-import MESSAGE_CANADA
+```
+message-ix show-versions
 ```

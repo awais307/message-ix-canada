@@ -1,5 +1,9 @@
 import pandas as pd
 import numpy as np
+import logging
+from typing import (Tuple, Optional)
+
+#log = logging.getLogger(__name__) 
 
 def map_yv_ya_lt(
     periods: Tuple[int, ...], lt: int, ya: Optional[int] = None
@@ -14,7 +18,7 @@ def map_yv_ya_lt(
     """
     if not ya:
         ya = periods[0]
-        log.info(f"First active year set as {ya!r}")
+        print(f"First active year set as {ya!r}")
     if not lt:
         raise ValueError("Add a fixed lifetime parameter 'lt'")
     # The following lines are the same as
