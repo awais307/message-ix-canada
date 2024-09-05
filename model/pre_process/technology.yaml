@@ -1,0 +1,25 @@
+TECH1.ccs:
+  name: ATR.ccs
+  description: ATR.ccs
+  type: technology
+  input_value: None
+  output_value: None
+  provinces : [Saskatchewan]
+  inv_cost_2020: 0
+  fix_cost_2020: 0
+  var_cost_2020: 0
+  tec_lifetime: 10
+  exo_lr: 0.2
+
+TECH2.ccs:
+  name: ATR.ccs
+  description: ATR.ccs
+  type: technology
+  input_value: None
+  output_value: None
+  provinces : [Alberta]
+  inv_cost_2020: 0
+  fix_cost_2020: 0
+  var_cost_2020: 0
+  tec_lifetime: 10
+  exo_lr: 0.1
