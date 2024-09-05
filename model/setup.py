@@ -78,7 +78,11 @@ def setup_scenario(scenario_name: str):
         apply_obps_baseline(scenario, path_to_obps_data)
 
     if solve:
-        scenario.solve(solve_options={'barcrossalg': '2','lpmethod':'1'}, case=caseName)
+        try:
+            scenario.solve(solve_options={'barcrossalg': '2','lpmethod':'1'}, case=caseName)
+        except Exception:
+            print(f"Scenario {caseName} did not solve\n")
+
         if use_reporter:
             generate_report(scenario, output_path=f'{caseName}.csv', min_year=2020, max_year=2060, from_excel=False, unit_correct=True)
 
