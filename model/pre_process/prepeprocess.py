@@ -56,8 +56,9 @@ class pre_process_message:
 		'''
 		# Read file from path and convert to dictionary
 		with open(techs_file) as data:
-			technology = yaml.load(data)
-			# Add technology to MESSAGE
+			technologies = yaml.load(data)
+	
+		return technologies
 			
 
 	
