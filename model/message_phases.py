@@ -1,31 +1,51 @@
+#### MESSAGE_IX CANADA ####
+
+#--- Script to contain classes for pre and postprocessing the model ---#
+
+#####################################################
 import pandas as pd
 import numpy as np
 import os
 import sys
 import toml
 import yaml
+import pyam
 import message_ix
+import ixmp
 import logging
 import warnings
-from typing import (Tuple, Optional)
+
+from typing import (Tuple, Optional, Union)
 from pathlib import Path
 from itertools import product
 from scipy.optimize import linprog
 
+from message_ix_models.util import (
+    broadcast,
+    make_matched_dfs,
+    package_data_path,
+    same_node,
+    same_time,
+)
+from model.policies.obps import apply_obps_baseline, apply_obps_netzero
 
+#####################################################
 
-class pre_process_message:
+warnings.filterwarnings('ignore') # Ignore warnings to keep the output clean
+
+class message_set_up:
 
 	def __init__(self, scenario: str):
 		self.scenario = scenario
-		self.sample_config = toml.load(os.path.join(os.getcwd(), "model/scenarios/common", "sample_config.toml"))
+		self.sample_config = toml.load(os.path.join(os.getcwd(), "model/scenarios/baseline", "config.toml"))
 		self.scenario_path = os.path.join('model/scenarios', scenario)
-
+		self.config_path = os.path.join(self.scenario_path, 'config.toml')
+		self.config_file = toml.load(os.path.join(os.getcwd(), self.config_path))
 	# Input processing functions
 
-	def config_validation(self):
+	def config_validation(self, validated=False):
 		'''
-		Function to verify the COPPER config file
+		Function to verify the MESSAGE config file
 
 		Input: path to config.toml file
 		Output: Error, or success messages
@@ -33,13 +53,15 @@ class pre_process_message:
 		Logic: only checking for missing fields, since additional settings won't hinder
 		model execution, only missing settings will cause the model to fail
 		'''
-		file_path=os.path.join(self.scenario_path, 'config.toml')
+		if validated is True:
+			return
+
 		try:
-			with open(file_path, 'r') as config_file:
+			with open(self.config_path, 'r') as config_file:
 				check_config = toml.load(config_file)
 				print("Config file read successfully!")
 		except FileNotFoundError:
-			print(f"TOML config file not found in path {file_path}")
+			print(f"TOML config file not found in path {self.config_path}")
 			sys.exit()
 		sample_file = self.sample_config
 		# Format verification
@@ -47,12 +69,15 @@ class pre_process_message:
 			for field, sub_field in fields.items():
 				# First check that all fields and sections are present in the config file
 				if section not in check_config:
-					raise Exception(f"Missing section '{section}' in config file '{file_path}'")
+					raise Exception(f"Missing section '{section}' in config file '{self.config_path}'")
 				elif field not in check_config[section]:
 					raise Exception(f"Missing field '{field}' in section '{section}'")
-		print(f"{'#' * 100}\nConfig file '{file_path}' passed format verification!\n{'#' * 100}")
+		
+		print(f"{'#' * 100}\nConfig file '{self.config_path}' passed format verification!\n{'#' * 100}")
+		validated = True
+		return validated
 
-	def add_technology(self, techs_file: str):
+	def add_technology(self, techs_file: str, ):
 		'''
 		Function to add new technologies to the model
 
@@ -61,11 +86,108 @@ class pre_process_message:
 
 		Logic: Creates the corresponding technology inside MESSAGE
 		'''
+		tech_config = self.config_file["pre_process"]["add_technology"]
+		if tech_config["nodes"] is "all":
+			provinces = self.scenario.set("node").to_list()[2:]
+		else:
+			provinces = tech_config["nodes"]
+			
+		years = self.scenario.set("year").to_list()[14:]
+		first_year = self.scenario.firstmodelyear
+
+
 		# Read file from path and convert to dictionary
 		with open(techs_file) as data:
 			technologies = yaml.load(data)
+			for tech_data in technologies.values():
+				if tech_data["name"] in tech_config["techs"]:
+					self.scenario.add_set('technology',tech_data["name"])
+					self.scenario.add_par("input", tech_data.items())
+					
+					# Creating DFs
 
-		return technologies
+					#input dataframe
+					input_df = message_ix.make_df("input", 
+							node_loc=provinces, 
+							technology=tech_data["name"], 
+							mode=tech_data["mode"],
+							commodity=tech_data["mode"],
+							level=tech_data["level"],
+							time=tech_data["year"],
+							time_origin=tech_data["year"],
+							value=tech_data['inp_val'],
+							unit=tech_data["unit"]
+						).pipe(broadcast,self.map_yv_ya_lt(
+												years, tech_data['technical_lifetime'], first_year
+											),
+							time="year",
+						).pipe(same_node).pipe(same_time)
+					self.scenario.add_par('input', input_df)
+					
+					# output dataframe
+					df = message_ix.make_df("output", 
+							node_loc=provinces, 
+							technology=tech_data["name"], 
+							mode=tech_data["mode"],
+							commodity=tech_data["mode"],
+							level=tech_data["level"],
+							time=tech_data["year"],
+							time_origin=tech_data["year"],
+							value=tech_data['out_val'],
+							unit=tech_data["unit"]
+						).pipe(broadcast,self.map_yv_ya_lt(
+												years, tech_data['technical_lifetime'], first_year
+											),
+							time="year",
+						).pipe(same_node).pipe(same_time)
+					self.scenario.add_par('output', df)
+					
+					# investment cost
+					df = message_ix.make_df("inv_cost", 
+							node_loc=provinces, 
+							technology=tech_data["name"], 
+							level=tech_data["level"],
+							value=tech_data['out_val'],
+							unit=tech_data["unit"]
+						)
+					self.scenario.add_par('inv_cost', df)
+					
+					# variable cost
+					df = message_ix.make_df("var_cost", 
+							node_loc=provinces, 
+							technology=tech_data["name"],
+							mode=tech_data["mode"], 
+							value=tech_data['out_val'],
+							time=tech_data["time"],
+							unit=tech_data["unit"]
+						).pipe(broadcast,self.map_yv_ya_lt(
+												years, tech_data['technical_lifetime'], first_year
+											),
+						)
+					self.scenario.add_par('var_cost', df)
+					
+					# fixed cost
+					df = message_ix.make_df("fix_cost", 
+							node_loc=provinces, 
+							technology=tech_data["name"],
+							value=tech_data['out_val'],
+							time=tech_data["time"],
+							unit=tech_data["unit"]
+						).pipe(broadcast,self.map_yv_ya_lt(
+												years, tech_data['technical_lifetime'], first_year
+											),
+						)
+					self.scenario.add_par('fix_cost', df)
+					
+					# construction time
+					df = make_matched_dfs(input_df,
+						capacity_factor = tech_data['capacity_factor'],
+						tecnical_lifetime = tech_data['tecnical_lifetime'],
+						construction_time = tech_data['construction_time'],
+						)
+					self.scenario.add_par('capacity_factor', df['capacity_factor'])
+					self.scenario.add_par('tecnical_lifetime', df['tecnical_lifetime'])
+					self.scenario.add_par('construction_time', df['construction_time'])
 
 	def map_yv_ya_lt(self,
 	periods: Tuple[int, ...], lt: int, ya: Optional[int] = None
@@ -98,7 +220,7 @@ class pre_process_message:
 		# Select values using the ya and lt parameters
 		return df[(ya <= df.year_act) & (df.year_act - df.year_vtg <= lt)]
 
-	def add_hydrogen_shares(self, scenario, path):
+	def add_hydrogen_shares(self, path: Union[str, Path]):
 		"""
 		Add hydrogen shares to a MESSAGEix scenario.
 
@@ -107,19 +229,23 @@ class pre_process_message:
 		should be added within this function.
 
 		Args:
-			scenario (MESSAGEix.Scenario): The MESSAGEix scenario to which the hydrogen shares will be added.
 			path (str or Path): Path to the Excel file containing hydrogen share data.
 
 		Returns:
 			None
+		
+		Logic: adds hydrogen shares to the MESSAGEix scenario
 		"""
 
 		# Checkout the scenario for editing
-		scenario.check_out()
+		self.scenario.check_out()
 
 		# Resolve the path to the hydrogen shares Excel file
 		path = Path(path)
-		data = pd.ExcelFile(path / 'hydrogen_shares.xlsx')
+		if not path.endswith(".xlsx"):
+			raise Exception("File provided for hydrogen shares is not in Excel format.")
+		else:
+			data = pd.ExcelFile(path / 'hydrogen_shares.xlsx')
 
 		# Loop through each sheet in the Excel file
 		for sheet_name in data.sheet_names:
@@ -128,7 +254,7 @@ class pre_process_message:
 			print(f"Sheet name: {sheet_name}")
 
 			# Check if the sheet name corresponds to a set in the scenario
-			if sheet_name in scenario.set_list():
+			if sheet_name in self.scenario.set_list():
 				# Skip 'cat_tec' as it should not be modified
 				if sheet_name == 'cat_tec':
 					continue
@@ -136,25 +262,25 @@ class pre_process_message:
 
 				# Add data to the set; handle 'type_tec' and 'shares' specifically
 				if sheet_name in ['type_tec', 'shares']:
-					scenario.add_set(sheet_name, df[sheet_name])
+					self.scenario.add_set(sheet_name, df[sheet_name])
 				else:
-					scenario.add_set(sheet_name, df)
+					self.scenario.add_set(sheet_name, df)
 
 			# Check if the sheet name corresponds to a parameter in the scenario
-			elif sheet_name in scenario.par_list():
-				scenario.add_par(sheet_name, df)
+			elif sheet_name in self.scenario.par_list():
+				self.scenario.add_par(sheet_name, df)
 				print('par', sheet_name)
 
 		# Commit the changes to the scenario with a descriptive message
-		scenario.commit('Updated scenario to include hydrogen shares')
+		self.scenario.commit('Updated scenario to include hydrogen shares')
 
 		# Print the unique values of the 'shares' column in the 'share_commodity_lo' parameter
-		print(scenario.par("share_commodity_lo")['shares'].unique())
+		print(self.scenario.par("share_commodity_lo")['shares'].unique())
 
 		# Optional: Uncomment the line below to print the unique 'shares' values again
 		# print(scenario.par("share_commodity_lo")['shares'].unique())
 
-	def process_gdp_population_data(self, path_to_gdp, path_to_pop):
+	def process_gdp_population_data(self, path_to_gdp: Union[str, Path], path_to_pop: Union[str, Path]):
 		"""
 		Process GDP and population data for the model.
 
@@ -227,12 +353,12 @@ class pre_process_message:
 		ssp_df = pd.concat(ssp_df)
 		return ssp_df  # Return the processed DataFrame
 
-	def adjust_demands(self, scenario):
+	def adjust_demands(self):
 		"""
 		Adjust demands in the scenario based on population and GDP data.
 
 		Args:
-			scenario (ixmp.Scenario): The MESSAGEix scenario to update.
+			None
 
 		Returns:
 			pd.DataFrame: DataFrame containing updated demand data.
@@ -250,7 +376,7 @@ class pre_process_message:
 		ssp_df = self.process_gdp_population_data(gdp_data, population_data)
 
 		# Retrieve demand data from the scenario
-		demand = scenario.par('demand')
+		demand = self.scenario.par('demand')
 
 		# Group demand data by specific columns and aggregate it at the 'Canada' level
 		df_ca = demand.groupby(['year', 'commodity', 'level', 'time', 'unit']).sum().reset_index()
@@ -264,7 +390,7 @@ class pre_process_message:
 		pc = pc[['year', 'commodity', 'pct_change']]  # Keep only relevant columns
 
 		# Retrieve historical activity data from the scenario
-		hist_act_df = scenario.par('historical_activity')
+		hist_act_df = self.scenario.par('historical_activity')
 
 		# Initialize dictionary and lists for storing demands and relevant years
 		dmds_dict = {}
@@ -412,24 +538,23 @@ class pre_process_message:
 		dmds.drop(columns=['ei', 'gdp', 'gdpc'], inplace=True)
 
 		# Update the scenario with the new demand data
-		scenario.check_out()
-		df = scenario.par('demand')
-		scenario.remove_par('demand', df)
-		scenario.add_par('demand', dmds)
+		self.scenario.check_out()
+		df = self.scenario.par('demand')
+		self.scenario.remove_par('demand', df)
+		self.scenario.add_par('demand', dmds)
 
 		# Commit the changes to the scenario
-		scenario.commit('Updated demands')
+		self.scenario.commit('Updated demands')
 
-	def add_population_gdp_to_scenario(self, scenario, population_data, gdp_data):
+	def add_population_gdp_to_scenario(self, population_data: pd.DataFrame, gdp_data: pd.DataFrame):
 		"""
 		Add processed population and GDP data to the scenario.
 
 		Args:
-			scenario (ixmp.Scenario): The MESSAGEix scenario to update.
 			population_data (pd.DataFrame): DataFrame containing processed population data.
 			gdp_data (pd.DataFrame): DataFrame containing processed GDP data.
 
-		Updates:
+		Logic:
 			Adds the processed population and GDP data to the scenario's 'bound_activity_lo' parameter.
 		"""
 		# Rename columns in the population DataFrame to match the expected format in the scenario
@@ -450,7 +575,7 @@ class pre_process_message:
 		concatenated_df_socio = pd.concat([population_data, gdp_data])
 
 		# Retrieve the current 'bound_activity_lo' parameter from the scenario
-		df = scenario.par('bound_activity_lo')
+		df = self.scenario.par('bound_activity_lo')
 
 		# Filter out any existing 'Population' and 'GDP' technologies to avoid duplication
 		df_filtered = df[~df['technology'].isin(['Population', 'GDP'])]
@@ -459,23 +584,22 @@ class pre_process_message:
 		df_bound_new = pd.concat([df_filtered, concatenated_df_socio])
 
 		# Update the scenario with the new bounds
-		scenario.check_out()
-		scenario.add_par('bound_activity_lo', df_bound_new)
-		scenario.commit('Added population and GDP bounds')  # Commit the changes with a descriptive message
+		self.scenario.check_out()
+		self.scenario.add_par('bound_activity_lo', df_bound_new)
+		self.scenario.commit('Added population and GDP bounds')  # Commit the changes with a descriptive message
 
-	def update_historical_activity(self, scenario, path):
+	def update_historical_activity(self, path: Union[str, Path]):
 		"""
 		Update the historical activity parameter in the scenario with data from a specified path.
 
 		Args:
-			scenario (ixmp.Scenario): The MESSAGEix scenario to update.
 			path (str or Path): Path to the historical activity data.
 		"""
 		# Checkout scenario for editing
-		scenario.check_out()
+		self.scenario.check_out()
 
 		# Retrieve the current historical activity data from the scenario
-		ha = scenario.par('historical_activity')
+		ha = self.scenario.par('historical_activity')
 
 		# Read new historical activity data from the specified path
 		ha_new = pd.read_csv(Path(f"{path}/historical_activity.csv"))
@@ -484,18 +608,18 @@ class pre_process_message:
 		ha_new = self.balance_import_export(ha_new)
 
 		# Remove the previous historical activity data from the scenario
-		scenario.remove_par('historical_activity', ha)
+		self.scenario.remove_par('historical_activity', ha)
 
 		# Add the new, balanced historical activity data to the scenario
-		scenario.add_par('historical_activity', ha_new)
+		self.scenario.add_par('historical_activity', ha_new)
 
 		# Commit the changes to the scenario with a descriptive message
-		scenario.commit('Updated historical activity based on new data')
+		self.scenario.commit('Updated historical activity based on new data')
 
 		# Adjust demands in the scenario based on the updated historical activity
-		self.adjust_demands(scenario)
+		self.adjust_demands(self.scenario)
 
-	def balance_import_export(self, historical_activity):
+	def balance_import_export(self, historical_activity: pd.DataFrame):
 		"""
 		Balance energy production, import, and export for each province and year.
 
@@ -515,7 +639,7 @@ class pre_process_message:
 		gas_techs = ['gas_cc', 'gas_ct', 'gas_fs', 'gas_i', 'gas_ppl', 'gas_rc', 'gas_t_d', 'gas_trp']
 		coal_techs = ['coal_fs', 'coal_i', 'coal_ppl', 'coal_rc', 'coal_t_d', 'coal_trp']
 		
-		def sum_demand(self, df, techs):
+		def sum_demand(df: pd.DataFrame, techs: list):
 			"""
 			Sum the demand for a given set of technologies within the DataFrame.
 	
@@ -527,6 +651,45 @@ class pre_process_message:
 				pd.Series: Series with the summed demand for each province and year.
 			"""
 			return df[df['technology'].isin(techs)].groupby(['year_act', 'node_loc'])['value'].sum()
+
+		def balance_energy(row: pd.Series, prod_col: str, imp_col: str, 
+					exp_col: str, demand_col: str):
+				"""
+				Balance the energy production, import, and export for a specific energy type.
+	
+				Args:
+					row (pd.Series): Row of data containing production, import, export, and demand values.
+					prod_col (str): Column name for production data.
+					imp_col (str): Column name for import data.
+					exp_col (str): Column name for export data.
+					demand_col (str): Column name for demand data.
+	
+				Returns:
+					pd.Series: Updated row with balanced production, import, and export values.
+				"""
+				production = row[prod_col]
+				imports = row[imp_col]
+				exports = row[exp_col]
+				demand = row[demand_col]
+	
+				# Calculate the net balance of energy
+				net_balance = production + imports - exports
+	
+				# Adjust imports or exports to meet the demand
+				if net_balance < demand:
+					imports += demand - net_balance
+				elif net_balance > demand:
+					exports += net_balance - demand
+	
+				# Ensure imports are not negative
+				if imports < 0:
+					exports += abs(imports)
+					imports = 0
+	
+				# Update the row with the balanced values
+				row[imp_col] = imports
+				row[exp_col] = exports
+				return row
 
 		# Get the unique years in the historical activity data
 		years = historical_activity['year_act'].unique()
@@ -568,44 +731,6 @@ class pre_process_message:
 	
 			# Merge the production/import/export data with the demand data
 			merged_df = production_import_export_data.merge(demand_data, on='node_loc', how='left').fillna(0)
-	
-			def balance_energy(self, row, prod_col, imp_col, exp_col, demand_col):
-				"""
-				Balance the energy production, import, and export for a specific energy type.
-	
-				Args:
-					row (pd.Series): Row of data containing production, import, export, and demand values.
-					prod_col (str): Column name for production data.
-					imp_col (str): Column name for import data.
-					exp_col (str): Column name for export data.
-					demand_col (str): Column name for demand data.
-	
-				Returns:
-					pd.Series: Updated row with balanced production, import, and export values.
-				"""
-				production = row[prod_col]
-				imports = row[imp_col]
-				exports = row[exp_col]
-				demand = row[demand_col]
-	
-				# Calculate the net balance of energy
-				net_balance = production + imports - exports
-	
-				# Adjust imports or exports to meet the demand
-				if net_balance < demand:
-					imports += demand - net_balance
-				elif net_balance > demand:
-					exports += net_balance - demand
-	
-				# Ensure imports are not negative
-				if imports < 0:
-					exports += abs(imports)
-					imports = 0
-	
-				# Update the row with the balanced values
-				row[imp_col] = imports
-				row[exp_col] = exports
-				return row
 	
 			# Create a copy of the merged data to apply balancing
 			balanced_df = merged_df.copy()
@@ -655,5 +780,156 @@ class pre_process_message:
 	
 		# Return the updated historical_activity DataFrame
 		return historical_activity
+
+	def generate_report(self, output_path='MESSAGE_CANADA_provincial_baseline_v1.csv', 
+			min_year=2015, max_year=2060, 
+			from_excel=False, unit_correct=True):
+		"""
+		Generate a report from the MESSAGEix scenario and save it to a CSV file.
 	
+		Args:
+			output_path (str): The path where the output CSV file will be saved.
+			min_year (int): The minimum year for the report.
+			max_year (int): The maximum year for the report.
+			from_excel (bool): Whether to read the report from an Excel file.
+			unit_correct (bool): Whether to correct units in the report.
+		"""
+		rep = message_ix.Reporter.from_scenario(self.scenario, units={"apply": {"var_cost": "", "inv_cost": "", "fix_cost": ""}})
+		report = rep.get('message::default')
+	
+		if from_excel:
+			report_df = pd.read_csv('MESSAGE_NO_example_default_report.csv')
+		else:
+			report_df = report.timeseries()
+			report_df.reset_index(inplace=True)
+			report_df.columns = report_df.columns.astype(str)
+			report_df.columns = report_df.columns.str.title()
+	
+		years = self.scenario.set('year').tolist()
+		years = [str(x) for x in years if x >= min_year and x <= max_year]
+	
+		report_df.fillna(0, inplace=True)
+
+		report_df.columns = report_df.columns.astype(str)
+		report_df = report_df.drop(report_df.columns.to_series()['2020': str(min_year)], axis=1)
+
+		in_flows = report_df[report_df['Variable'].str.startswith("in|")]
+		out_flows = report_df[report_df['Variable'].str.startswith("out|")]
+		all_flows = pd.concat([out_flows, in_flows])
+	
+		report_df['Model'] = 'MESSAGEix-Canada'
+		report_df['Scenario'] = 'Reference'
+		report_df["Variable"] = report_df["Variable"].str.replace('emis', 'Emissions', regex=False)
+		report_df["Variable"] = report_df["Variable"].str.replace('in|final|', 'Final Energy|', regex=False)
+		report_df["Variable"] = report_df["Variable"].str.replace('out|final|', 'Final Energy|', regex=False)
+		report_df["Variable"] = report_df["Variable"].str.replace('in|primary|', 'Primary Energy|', regex=False)
+		report_df["Variable"] = report_df["Variable"].str.replace('out|primary|', 'Primary Energy|', regex=False)
+		report_df["Variable"] = report_df["Variable"].str.replace('in|secondary|', 'Secondary Energy|', regex=False)
+		report_df["Variable"] = report_df["Variable"].str.replace('out|secondary|', 'Secondary Energy|', regex=False)
+		report_df["Variable"] = report_df["Variable"].str.replace('in|renewable|', 'Primary Energy|renewable|', regex=False)
+		report_df["Variable"] = report_df["Variable"].str.replace('out|renewable|', 'Primary Energy|renewable|', regex=False)
+		report_df["Variable"] = report_df["Variable"].str.replace('total om cost|', 'Total Costs|', regex=False)
+		report_df["Variable"] = report_df["Variable"].str.replace('out|useful|', 'Useful Energy|', regex=False)
+		report_df["Variable"] = report_df["Variable"].str.replace('in|useful|', 'Useful Energy|', regex=False)
+		report_df["Variable"] = report_df["Variable"].str.replace('CAP_NEW|new capacity|', 'Capacity Addition|', regex=False)
+		report_df["Variable"] = report_df["Variable"].str.replace('CAP|capacity|', 'Capacity|', regex=False)
+		report_df["Variable"] = report_df["Variable"].str.replace('inv cost|', 'Capital Cost|', regex=False)
+		report_df['Region'] = report_df['Region'].apply(lambda x: x.split('|')[0])
+
+		pyam_df = pyam.IamDataFrame(report_df)
+
+		variable = pyam_df.variable
+		pyam_df.aggregate_region(variable, append=True)
+		pyam_df.rename({'region': {'World': 'Canada'}}, inplace=True)
+
+		pyam_df.to_csv(output_path)
+
+		print(f'Report saved to {output_path}')
+
+	def setup_scenario(self) -> tuple:
+		"""
+		Set up and initialize a MESSAGEix scenario based on the provided configuration.
+
+		This function reads a configuration file for a given scenario, initializes a
+		MESSAGEix scenario object, and performs pre-processing steps as defined in the
+		configuration. The function returns the platform and scenario objects for further use.
+
+		Args:
+			None
+
+		Returns:
+			tuple: A tuple containing the ixmp.Platform object and the message_ix.Scenario object.
+
+		Raises:
+			FileNotFoundError: If the configuration file for the scenario does not exist.
+		"""
+
+		'''
+		config_path = os.path.join(self.scenario_path, "config.toml")# Path(f"../scenarios/{scenario_name}/config.toml")
+
+		if not config_path.exists():
+			raise FileNotFoundError(f"Config file does not exist at {config_path}")
+		'''
+
+		# Config verification:
+		#self.config_validation()
 		
+		# Scenario set-up
+		config = toml.load(self.config_path)
+
+		modelName = config['general']['model_name']
+		scenarioName = config['general']['scenario_name']
+		platform_name = config['general']['ix_platform']
+		version = config['general']['version']
+		annotation = config['general']['annotation']
+		process_historical = config['pre_process']['process_historical_data']
+		add_hydrogen_shares_f = config['pre_process']['add_hydrogen_shares']
+		add_obps_baseline = config['pre_process']['apply_obps_baseline']
+		add_obps_netzero = config['pre_process']['apply_obps_netzero']
+		use_reporter = config['post_process']['generate_reporter_output']
+		solve = config['model']['solve']
+		to_excel = config['post_process']['export_to_xlsx']
+
+		#TODO add option for SSP
+		# ssp = 'SSP2' 
+
+		mp = ixmp.Platform(name=platform_name)
+		scenario = message_ix.Scenario(mp, modelName, scenarioName, version= version, annotation=annotation)
+
+		caseName = scenario.model + '__' + scenario.scenario + '__v' + str(scenario.version)
+
+		script_dir = Path(__file__).resolve().parent
+		scenario_folder = script_dir / config['data']['scenario_folder']
+		excel_path = script_dir / config['data']['provincial_input_file']
+		scenario.read_excel(excel_path, add_units=True, commit_steps=False, init_items=True)
+
+		if process_historical:
+			self.update_historical_activity(scenario, scenario_folder)
+
+		if add_hydrogen_shares_f:
+			path_to_hydrogen_data = script_dir / scenario_folder
+			self.add_hydrogen_shares(scenario, path_to_hydrogen_data)
+
+		if add_obps_baseline:
+			path_to_obps_data = script_dir / scenario_folder
+			apply_obps_netzero(scenario, path_to_obps_data)
+
+		if add_obps_netzero:
+			path_to_obps_data = script_dir / scenario_folder
+			apply_obps_baseline(scenario, path_to_obps_data)
+
+		if solve:
+			try:
+				scenario.solve(solve_options={'barcrossalg': '2','lpmethod':'1'}, case=caseName)
+			except Exception:
+				print(f"Scenario {caseName} did not solve\n")
+
+			if use_reporter:
+				self.generate_report(scenario, output_path=f'{caseName}.csv', min_year=2020, max_year=2060, from_excel=False, unit_correct=True)
+
+		if to_excel:
+			scenario.to_excel(f'{caseName}.xlsx')
+
+		# msg.solve()
+
+		return mp, scenario, scenario_folder
