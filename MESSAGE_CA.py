@@ -58,7 +58,7 @@ try:
     msg_scenario.remove_solution()
 except ValueError as e:
     print(e)
-msg_scenario.check_out()
+#msg_scenario.check_out()
 
 #config_path = Path(f"scenarios/{scenario_folder}/config.toml")
 

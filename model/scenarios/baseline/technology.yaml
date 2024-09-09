@@ -1,25 +1,28 @@
-A_dummy:
-  - name: ATR.ccs
-  - description: ATR.ccs
-  - type: technology
-  - input_value: None
-  - output_value: None
-  - provinces : [Saskatchewan]
-  - inv_cost_2020: 0
-  - fix_cost_2020: 0
-  - var_cost_2020: 0
-  - tec_lifetime: 10
-  - exo_lr: 0.2
+ATRccs:
+  name: ATRccs
+  node_loc: Saskatchewan
+  node_origin: Alberta
+  technology: power plant
+  mode: M1
+  level: primary
+  commodity: gas
+  time: year
+  year_vtg: 2020
+  year_act: 2021
+  time_origin: year
+  inp_val: 0
+  out_val: 1
+  unit: "-"
+  description: natural gas type technology
+  type: technology
+  provinces:
+    - Alberta
+    - Saskatchewan
+  inv_cost_2020: 0
+  fix_cost_2020: 0
+  var_cost_2020: 0
+  tec_lifetime: 10
+  exo_lr: 0.2
 
-B_dummy:
-  - name: ATR.ccs
-  - description: ATR.ccs
-  - type: technology
-  - input_value: None
-  - output_value: None
-  - provinces : [Alberta]
-  - inv_cost_2020: 0
-  - fix_cost_2020: 0
-  - var_cost_2020: 0
-  - tec_lifetime: 10
-  - exo_lr: 0.1
+
+

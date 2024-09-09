@@ -122,6 +122,8 @@ class MESSAGE_CA:
 
 		Logic: Creates the corresponding technology inside MESSAGE
 		'''
+		self.scenario.check_out()
+		
 		tech_config = self.config_file["pre_process"]["add_technology"]
 		if tech_config["nodes"] == "all":
 			provinces = self.scenario.set("node").to_list()[2:]
@@ -134,11 +136,11 @@ class MESSAGE_CA:
 
 		# Read file from path and convert to dictionary
 		with open(techs_file) as data:
-			technologies = yaml.load(data)
+			technologies = yaml.safe_load(data)
 			for tech_data in technologies.values():
 				if tech_data["name"] in tech_config["techs"]:
 					self.scenario.add_set('technology',tech_data["name"])
-					self.scenario.add_par("input", tech_data.items())
+					self.scenario.add_par("input", tech_data)
 					
 					# Creating DFs
 
@@ -147,10 +149,10 @@ class MESSAGE_CA:
 							node_loc=provinces, 
 							technology=tech_data["name"], 
 							mode=tech_data["mode"],
-							commodity=tech_data["mode"],
+							commodity=tech_data["commodity"],
 							level=tech_data["level"],
-							time=tech_data["year"],
-							time_origin=tech_data["year"],
+							time=tech_data["time"],
+							time_origin=tech_data["time"],
 							value=tech_data['inp_val'],
 							unit=tech_data["unit"]
 						).pipe(broadcast,self.map_yv_ya_lt(
@@ -167,8 +169,8 @@ class MESSAGE_CA:
 							mode=tech_data["mode"],
 							commodity=tech_data["mode"],
 							level=tech_data["level"],
-							time=tech_data["year"],
-							time_origin=tech_data["year"],
+							time=tech_data["time"],
+							time_origin=tech_data["time"],
 							value=tech_data['out_val'],
 							unit=tech_data["unit"]
 						).pipe(broadcast,self.map_yv_ya_lt(
@@ -183,7 +185,7 @@ class MESSAGE_CA:
 							node_loc=provinces, 
 							technology=tech_data["name"], 
 							level=tech_data["level"],
-							value=tech_data['out_val'],
+							value=tech_data['inv_cost_2020'],
 							unit=tech_data["unit"]
 						)
 					self.scenario.add_par('inv_cost', df)
@@ -193,7 +195,7 @@ class MESSAGE_CA:
 							node_loc=provinces, 
 							technology=tech_data["name"],
 							mode=tech_data["mode"], 
-							value=tech_data['out_val'],
+							value=tech_data['var_cost_2020'],
 							time=tech_data["time"],
 							unit=tech_data["unit"]
 						).pipe(broadcast,self.map_yv_ya_lt(
@@ -206,7 +208,7 @@ class MESSAGE_CA:
 					df = message_ix.make_df("fix_cost", 
 							node_loc=provinces, 
 							technology=tech_data["name"],
-							value=tech_data['out_val'],
+							value=tech_data['fix_cost_2020'],
 							time=tech_data["time"],
 							unit=tech_data["unit"]
 						).pipe(broadcast,self.map_yv_ya_lt(
@@ -224,6 +226,8 @@ class MESSAGE_CA:
 					self.scenario.add_par('capacity_factor', df['capacity_factor'])
 					self.scenario.add_par('tecnical_lifetime', df['tecnical_lifetime'])
 					self.scenario.add_par('construction_time', df['construction_time'])
+			
+			self.scenario.commit("Technologies added successfully")
 
 	def add_hydrogen_shares(self, path: Union[str, Path]):
 		"""
@@ -926,7 +930,7 @@ class MESSAGE_CA:
 			path_to_obps_data = script_dir / scenario_folder
 			apply_obps_baseline(scenario=scenario_folder, data_file_path=path_to_obps_data)
 		
-		#self.add_technology(techs_file=f"{scenario_folder}/technology.yaml")
+		self.add_technology(techs_file=f"{scenario_folder}/technology.yaml")
 
 		end = time.time()
 		print(f'\n==================================================\n\
