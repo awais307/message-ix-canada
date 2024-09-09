@@ -10,7 +10,7 @@ process_historical_data = false
 add_hydrogen_shares = false
 [pre_process.add_technology]
     techs = ["ATR.ccs"] 
-    nodes: ["all"]
+    nodes = ["all"]
 
 [pre_process.ATR_CCS]
 input_value = ""
@@ -28,7 +28,7 @@ emission_factor = 0.0
 solve = false
 
 [data]
-provincial_input_file = "scenarios/common/Provincial_baseline_h2_v1.xlsx"
+provincial_input_file = "scenarios/baseline/Provincial_baseline_h2_v1.xlsx"
 scenario_folder = "scenarios/hydrogen_test"
 
 [post_process]

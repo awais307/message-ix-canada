@@ -13,12 +13,14 @@ import pyam
 import message_ix
 import ixmp
 import logging
+import time
 import warnings
 
 from typing import (Tuple, Optional, Union)
 from pathlib import Path
 from itertools import product
 from scipy.optimize import linprog
+from datetime import datetime, timedelta
 
 from message_ix_models.util import (
     broadcast,
@@ -33,15 +35,16 @@ from model.policies.obps import apply_obps_baseline, apply_obps_netzero
 
 warnings.filterwarnings('ignore') # Ignore warnings to keep the output clean
 
-class message_set_up:
+class MESSAGE_CA:
 
-	def __init__(self, scenario: str):
-		self.scenario = scenario
+	def __init__(self, scenario_name: str):
+		self.scenario = scenario_name
 		self.sample_config = toml.load(os.path.join(os.getcwd(), "model/scenarios/baseline", "config.toml"))
-		self.scenario_path = os.path.join('model/scenarios', scenario)
+		self.scenario_path = os.path.join('model/scenarios', scenario_name)
 		self.config_path = os.path.join(self.scenario_path, 'config.toml')
 		self.config_file = toml.load(os.path.join(os.getcwd(), self.config_path))
-	# Input processing functions
+	
+	## Input processing functions ##
 
 	def config_validation(self, validated=False):
 		'''
@@ -76,6 +79,39 @@ class message_set_up:
 		print(f"{'#' * 100}\nConfig file '{self.config_path}' passed format verification!\n{'#' * 100}")
 		validated = True
 		return validated
+	
+	def map_yv_ya_lt(self,
+		periods: Tuple[int, ...], lt: int, ya: Optional[int] = None
+		) -> pd.DataFrame:
+			"""All meaningful combinations of (vintage year, active year) given periods.
+			Parameters
+			----------
+			labels : pandas.DataFrame
+				Each column (dimension) corresponds to one in df. Each row represents one
+				matched set of labels for those dimensions.
+			lt : int, lifetime
+			"""
+			if not ya:
+				ya = periods[0]
+				print(f"First active year set as {ya!r}")
+			if not lt:
+				raise ValueError("Add a fixed lifetime parameter 'lt'")
+			# The following lines are the same as
+			# message_ix.tests.test_feature_vintage_and_active_years._generate_yv_ya
+			# - Create a mesh grid using numpy built-ins
+			# - Take the upper-triangular portion (setting the rest to 0)
+			# - Reshape
+			data = np.triu(np.meshgrid(periods, periods, indexing="ij")).reshape((2, -1))
+			# Filter only non-zero pairs
+			df = pd.DataFrame(
+				filter(sum, zip(data[0, :], data[1, :])),
+				columns=["year_vtg", "year_act"],
+				dtype=np.int64,
+			)
+			# Select values using the ya and lt parameters
+			return df[(ya <= df.year_act) & (df.year_act - df.year_vtg <= lt)]
+	
+	## Scenario creation functions ##
 
 	def add_technology(self, techs_file: str, ):
 		'''
@@ -87,7 +123,7 @@ class message_set_up:
 		Logic: Creates the corresponding technology inside MESSAGE
 		'''
 		tech_config = self.config_file["pre_process"]["add_technology"]
-		if tech_config["nodes"] is "all":
+		if tech_config["nodes"] == "all":
 			provinces = self.scenario.set("node").to_list()[2:]
 		else:
 			provinces = tech_config["nodes"]
@@ -189,37 +225,6 @@ class message_set_up:
 					self.scenario.add_par('tecnical_lifetime', df['tecnical_lifetime'])
 					self.scenario.add_par('construction_time', df['construction_time'])
 
-	def map_yv_ya_lt(self,
-	periods: Tuple[int, ...], lt: int, ya: Optional[int] = None
-	) -> pd.DataFrame:
-		"""All meaningful combinations of (vintage year, active year) given periods.
-		Parameters
-		----------
-		labels : pandas.DataFrame
-			Each column (dimension) corresponds to one in df. Each row represents one
-			matched set of labels for those dimensions.
-		lt : int, lifetime
-		"""
-		if not ya:
-			ya = periods[0]
-			print(f"First active year set as {ya!r}")
-		if not lt:
-			raise ValueError("Add a fixed lifetime parameter 'lt'")
-		# The following lines are the same as
-		# message_ix.tests.test_feature_vintage_and_active_years._generate_yv_ya
-		# - Create a mesh grid using numpy built-ins
-		# - Take the upper-triangular portion (setting the rest to 0)
-		# - Reshape
-		data = np.triu(np.meshgrid(periods, periods, indexing="ij")).reshape((2, -1))
-		# Filter only non-zero pairs
-		df = pd.DataFrame(
-			filter(sum, zip(data[0, :], data[1, :])),
-			columns=["year_vtg", "year_act"],
-			dtype=np.int64,
-		)
-		# Select values using the ya and lt parameters
-		return df[(ya <= df.year_act) & (df.year_act - df.year_vtg <= lt)]
-
 	def add_hydrogen_shares(self, path: Union[str, Path]):
 		"""
 		Add hydrogen shares to a MESSAGEix scenario.
@@ -242,10 +247,10 @@ class message_set_up:
 
 		# Resolve the path to the hydrogen shares Excel file
 		path = Path(path)
-		if not path.endswith(".xlsx"):
-			raise Exception("File provided for hydrogen shares is not in Excel format.")
-		else:
-			data = pd.ExcelFile(path / 'hydrogen_shares.xlsx')
+		#if not path.endswith(".xlsx"):
+		#	raise Exception("File provided for hydrogen shares is not in Excel format.")
+		#else:
+		data = pd.ExcelFile(path / 'hydrogen_shares.xlsx')
 
 		# Loop through each sheet in the Excel file
 		for sheet_name in data.sheet_names:
@@ -366,7 +371,7 @@ class message_set_up:
 
 		# Define directories for data storage
 		script_dir = Path(__file__).resolve().parent
-		data_dir = script_dir / '../../../data'
+		data_dir = script_dir /'../data'
 
 		# File paths for GDP and population data
 		gdp_data = data_dir / 'gdp/gdp_messageca_prov.csv'
@@ -617,7 +622,7 @@ class message_set_up:
 		self.scenario.commit('Updated historical activity based on new data')
 
 		# Adjust demands in the scenario based on the updated historical activity
-		self.adjust_demands(self.scenario)
+		self.adjust_demands()
 
 	def balance_import_export(self, historical_activity: pd.DataFrame):
 		"""
@@ -846,9 +851,10 @@ class message_set_up:
 
 		print(f'Report saved to {output_path}')
 
+	# Full scenario set-up 
 	def setup_scenario(self) -> tuple:
 		"""
-		Set up and initialize a MESSAGEix scenario based on the provided configuration.
+		Set up, initialize, and solve a MESSAGEix scenario based on the provided configuration.
 
 		This function reads a configuration file for a given scenario, initializes a
 		MESSAGEix scenario object, and performs pre-processing steps as defined in the
@@ -872,9 +878,10 @@ class message_set_up:
 		'''
 
 		# Config verification:
-		#self.config_validation()
+		self.config_validation()
 		
 		# Scenario set-up
+		start = time.time()
 		config = toml.load(self.config_path)
 
 		modelName = config['general']['model_name']
@@ -894,42 +901,56 @@ class message_set_up:
 		# ssp = 'SSP2' 
 
 		mp = ixmp.Platform(name=platform_name)
-		scenario = message_ix.Scenario(mp, modelName, scenarioName, version= version, annotation=annotation)
+		self.scenario = message_ix.Scenario(mp, modelName, scenarioName, version= version, annotation=annotation)
 
-		caseName = scenario.model + '__' + scenario.scenario + '__v' + str(scenario.version)
+		caseName = self.scenario.model + '__' + self.scenario.scenario + '__v' + str(self.scenario.version)
 
 		script_dir = Path(__file__).resolve().parent
 		scenario_folder = script_dir / config['data']['scenario_folder']
 		excel_path = script_dir / config['data']['provincial_input_file']
-		scenario.read_excel(excel_path, add_units=True, commit_steps=False, init_items=True)
+		# Update message scenario
+		self.scenario.read_excel(excel_path, add_units=True, commit_steps=False, init_items=True)
 
 		if process_historical:
-			self.update_historical_activity(scenario, scenario_folder)
+			self.update_historical_activity(path=scenario_folder)
 
 		if add_hydrogen_shares_f:
 			path_to_hydrogen_data = script_dir / scenario_folder
-			self.add_hydrogen_shares(scenario, path_to_hydrogen_data)
+			self.add_hydrogen_shares(path=path_to_hydrogen_data)
 
 		if add_obps_baseline:
 			path_to_obps_data = script_dir / scenario_folder
-			apply_obps_netzero(scenario, path_to_obps_data)
+			apply_obps_netzero(scenario=scenario_folder, data_file_path=path_to_obps_data)
 
 		if add_obps_netzero:
 			path_to_obps_data = script_dir / scenario_folder
-			apply_obps_baseline(scenario, path_to_obps_data)
+			apply_obps_baseline(scenario=scenario_folder, data_file_path=path_to_obps_data)
+		
+		#self.add_technology(techs_file=f"{scenario_folder}/technology.yaml")
+
+		end = time.time()
+		print(f'\n==================================================\n\
+		Creating model time: {round((end - start) / 60)} Min and {round((end - start) % 60)} Sec \
+		\n==================================================')
 
 		if solve:
+			start = time.time()
 			try:
-				scenario.solve(solve_options={'barcrossalg': '2','lpmethod':'1'}, case=caseName)
+				self.scenario.solve(solve_options={'barcrossalg': '2','lpmethod':'1'}, case=caseName)
+				end = time.time()
+				print(f'\n==================================================\n\
+				Solving process time: {round((end - start) / 60)} Min and {round((end - start) % 60)} Sec\
+				\n==================================================')
+
 			except Exception:
 				print(f"Scenario {caseName} did not solve\n")
 
 			if use_reporter:
-				self.generate_report(scenario, output_path=f'{caseName}.csv', min_year=2020, max_year=2060, from_excel=False, unit_correct=True)
+				self.generate_report(self.scenario, output_path=f'{caseName}.csv', min_year=2020, max_year=2060, from_excel=False, unit_correct=True)
 
 		if to_excel:
-			scenario.to_excel(f'{caseName}.xlsx')
+			self.scenario.to_excel(f'{caseName}.xlsx')
 
 		# msg.solve()
 
-		return mp, scenario, scenario_folder
+		return mp, self.scenario, scenario_folder
