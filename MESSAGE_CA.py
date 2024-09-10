@@ -22,11 +22,7 @@ should be housed in dedicated scripts, which are subsequentially imported here.
 
 #####################################################
 
-import toml
-import message_ix
-import ixmp
-import pandas as pd
-from ixmp import Scenario
+import os
 from pathlib import Path
 from setuptools import setup, find_packages
 import sys

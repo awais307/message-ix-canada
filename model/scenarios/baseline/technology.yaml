@@ -1,11 +1,13 @@
 ATRccs:
   name: ATRccs
-  node_loc: Saskatchewan
-  node_origin: Alberta
+  #node_loc: Saskatchewan
+  #node_origin: Alberta
+  node_select: all
   technology: power plant
   mode: M1
   level: primary
-  commodity: gas
+  commodity: 
+    - gas
   time: year
   year_vtg: 2020
   year_act: 2021
@@ -15,7 +17,7 @@ ATRccs:
   unit: "-"
   description: natural gas type technology
   type: technology
-  provinces:
+  provinces: # Only specify if "all" not defined in config.toml
     - Alberta
     - Saskatchewan
   inv_cost_2020: 0

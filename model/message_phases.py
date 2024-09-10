@@ -125,11 +125,12 @@ class MESSAGE_CA:
 		self.scenario.check_out()
 		
 		tech_config = self.config_file["pre_process"]["add_technology"]
+		'''
 		if tech_config["nodes"] == "all":
 			provinces = self.scenario.set("node").to_list()[2:]
 		else:
 			provinces = tech_config["nodes"]
-			
+		'''
 		years = self.scenario.set("year").to_list()[14:]
 		first_year = self.scenario.firstmodelyear
 
@@ -140,7 +141,11 @@ class MESSAGE_CA:
 			for tech_data in technologies.values():
 				if tech_data["name"] in tech_config["techs"]:
 					self.scenario.add_set('technology',tech_data["name"])
-					self.scenario.add_par("input", tech_data)
+
+					if tech_data["node_select"] == "all":
+						provinces = self.scenario.set("node").to_list()[2:]
+					else:
+						provinces = tech_data["provinces"]
 					
 					# Creating DFs
 

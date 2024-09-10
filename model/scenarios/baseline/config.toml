@@ -12,7 +12,7 @@
     apply_obps_baseline = false
     [pre_process.add_technology]
         techs = ["ATRccs"] 
-        nodes = ["all"]
+        #nodes = ["all"]
 
 
 [data]
