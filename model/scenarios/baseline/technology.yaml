@@ -2,7 +2,7 @@ ATRccs:
   name: ATRccs
   #node_loc: Saskatchewan
   #node_origin: Alberta
-  node_select: all
+  
   technology: power plant
   mode: M1
   level: primary
@@ -17,9 +17,10 @@ ATRccs:
   unit: "-"
   description: natural gas type technology
   type: technology
-  provinces: # Only specify if "all" not defined in config.toml
+  # Specify "all" for all provinces in Canada to be selected
+  node_select: all
+  provinces: 
     - Alberta
-    - Saskatchewan
   inv_cost_2020: 0
   fix_cost_2020: 0
   var_cost_2020: 0

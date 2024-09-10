@@ -161,7 +161,7 @@ class MESSAGE_CA:
 							value=tech_data['inp_val'],
 							unit=tech_data["unit"]
 						).pipe(broadcast,self.map_yv_ya_lt(
-												years, tech_data['technical_lifetime'], first_year
+												years, tech_data['tec_lifetime'], first_year
 											),
 							time="year",
 						).pipe(same_node).pipe(same_time)
@@ -179,7 +179,7 @@ class MESSAGE_CA:
 							value=tech_data['out_val'],
 							unit=tech_data["unit"]
 						).pipe(broadcast,self.map_yv_ya_lt(
-												years, tech_data['technical_lifetime'], first_year
+												years, tech_data['tec_lifetime'], first_year
 											),
 							time="year",
 						).pipe(same_node).pipe(same_time)
@@ -204,7 +204,7 @@ class MESSAGE_CA:
 							time=tech_data["time"],
 							unit=tech_data["unit"]
 						).pipe(broadcast,self.map_yv_ya_lt(
-												years, tech_data['technical_lifetime'], first_year
+												years, tech_data['tec_lifetime'], first_year
 											),
 						)
 					self.scenario.add_par('var_cost', df)
@@ -217,7 +217,7 @@ class MESSAGE_CA:
 							time=tech_data["time"],
 							unit=tech_data["unit"]
 						).pipe(broadcast,self.map_yv_ya_lt(
-												years, tech_data['technical_lifetime'], first_year
+												years, tech_data['tec_lifetime'], first_year
 											),
 						)
 					self.scenario.add_par('fix_cost', df)
@@ -875,8 +875,6 @@ class MESSAGE_CA:
 		Returns:
 			tuple: A tuple containing the ixmp.Platform object and the message_ix.Scenario object.
 
-		Raises:
-			FileNotFoundError: If the configuration file for the scenario does not exist.
 		"""
 
 		'''
@@ -935,8 +933,8 @@ class MESSAGE_CA:
 			path_to_obps_data = script_dir / scenario_folder
 			apply_obps_baseline(scenario=scenario_folder, data_file_path=path_to_obps_data)
 		
-		# Commenting ou as this functionality isn't yet done - CCF
-		#self.add_technology(techs_file=f"{scenario_folder}/technology.yaml")
+		
+		self.add_technology(techs_file=f"{scenario_folder}/technology.yaml")
 
 		end = time.time()
 		print(f'\n==================================================\n\
