@@ -935,7 +935,8 @@ class MESSAGE_CA:
 			path_to_obps_data = script_dir / scenario_folder
 			apply_obps_baseline(scenario=scenario_folder, data_file_path=path_to_obps_data)
 		
-		self.add_technology(techs_file=f"{scenario_folder}/technology.yaml")
+		# Commenting ou as this functionality isn't yet done - CCF
+		#self.add_technology(techs_file=f"{scenario_folder}/technology.yaml")
 
 		end = time.time()
 		print(f'\n==================================================\n\
@@ -960,6 +961,5 @@ class MESSAGE_CA:
 		if to_excel:
 			self.scenario.to_excel(f'{caseName}.xlsx')
 
-		# msg.solve()
 
 		return mp, self.scenario, scenario_folder
