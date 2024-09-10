@@ -42,7 +42,7 @@ class MESSAGE_CA:
 		self.sample_config = toml.load(os.path.join(os.getcwd(), "model/scenarios/baseline", "config.toml"))
 		self.scenario_path = os.path.join('model/scenarios', scenario_name)
 		self.config_path = os.path.join(self.scenario_path, 'config.toml')
-		self.config_file = toml.load(os.path.join(os.getcwd(), self.config_path))
+		self.config_file = toml.load(self.config_path)
 	
 	## Input processing functions ##
 
