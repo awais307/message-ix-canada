@@ -42,7 +42,7 @@ class MESSAGE_CA:
 		self.sample_config = toml.load(os.path.join(os.getcwd(), "model/scenarios/baseline", "config.toml"))
 		self.scenario_path = os.path.join('model/scenarios', scenario_name)
 		self.config_path = os.path.join(self.scenario_path, 'config.toml')
-		self.config_file = toml.load(os.path.join(os.getcwd(), self.config_path))
+		self.config_file = toml.load(self.config_path)
 	
 	## Input processing functions ##
 
@@ -875,8 +875,6 @@ class MESSAGE_CA:
 		Returns:
 			tuple: A tuple containing the ixmp.Platform object and the message_ix.Scenario object.
 
-		Raises:
-			FileNotFoundError: If the configuration file for the scenario does not exist.
 		"""
 
 		'''
@@ -935,6 +933,7 @@ class MESSAGE_CA:
 			path_to_obps_data = script_dir / scenario_folder
 			apply_obps_baseline(scenario=scenario_folder, data_file_path=path_to_obps_data)
 		
+		
 		self.add_technology(techs_file=f"{scenario_folder}/technology.yaml")
 
 		end = time.time()
@@ -960,6 +959,5 @@ class MESSAGE_CA:
 		if to_excel:
 			self.scenario.to_excel(f'{caseName}.xlsx')
 
-		# msg.solve()
 
 		return mp, self.scenario, scenario_folder

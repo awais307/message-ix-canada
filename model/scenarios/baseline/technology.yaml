@@ -17,7 +17,9 @@ ATRccs:
   unit: "-"
   description: natural gas type technology
   type: technology
-  provinces: # Only specify if "all" not defined in config.toml
+  # Specify "all" for all provinces in Canada to be selected
+  node_select: all
+  provinces: 
     - Alberta
     #- Saskatchewan
   inv_cost_2020: 0
