@@ -161,7 +161,7 @@ class MESSAGE_CA:
 							value=tech_data['inp_val'],
 							unit=tech_data["unit"]
 						).pipe(broadcast,self.map_yv_ya_lt(
-												years, tech_data['technical_lifetime'], first_year
+												years, tech_data['tec_lifetime'], first_year
 											),
 							time="year",
 						).pipe(same_node).pipe(same_time)
@@ -179,7 +179,7 @@ class MESSAGE_CA:
 							value=tech_data['out_val'],
 							unit=tech_data["unit"]
 						).pipe(broadcast,self.map_yv_ya_lt(
-												years, tech_data['technical_lifetime'], first_year
+												years, tech_data['tec_lifetime'], first_year
 											),
 							time="year",
 						).pipe(same_node).pipe(same_time)
@@ -204,7 +204,7 @@ class MESSAGE_CA:
 							time=tech_data["time"],
 							unit=tech_data["unit"]
 						).pipe(broadcast,self.map_yv_ya_lt(
-												years, tech_data['technical_lifetime'], first_year
+												years, tech_data['tec_lifetime'], first_year
 											),
 						)
 					self.scenario.add_par('var_cost', df)
@@ -217,7 +217,7 @@ class MESSAGE_CA:
 							time=tech_data["time"],
 							unit=tech_data["unit"]
 						).pipe(broadcast,self.map_yv_ya_lt(
-												years, tech_data['technical_lifetime'], first_year
+												years, tech_data['tec_lifetime'], first_year
 											),
 						)
 					self.scenario.add_par('fix_cost', df)
