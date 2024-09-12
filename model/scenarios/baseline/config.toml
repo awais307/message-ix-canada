@@ -11,7 +11,7 @@
     apply_obps_netzero = false
     apply_obps_baseline = false
     [pre_process.add_technology]
-        techs = ["ATRccs"] 
+        techs = ["h2_atr_ccs"] 
         #nodes = ["all"]
 
 

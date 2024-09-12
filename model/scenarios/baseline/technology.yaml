@@ -1,31 +1,29 @@
 ATRccs:
-  name: ATRccs
-  #node_loc: Saskatchewan
-  #node_origin: Alberta
-  node_select: custom
-  technology: power plant
+  technology: h2_atr_ccs
   mode: M1
-  level: primary
+  # Commodity structure = input or output: (commodity, value, level)
   commodity: 
-    - gas
-  time:
-  year_vtg: 2020
-  year_act: 2021
-  time_origin: year
-  inp_val: 0
-  out_val: 1
-  unit: "-"
+    - input: 
+      - com_name: [gas, electr]
+      - com_value: [1.2, 0.05]
+      - com_level: [primary, primary]
+    - output: 
+      - com_name: h2
+      - com_value: 1
+      - com_level: secondary 
+  time: year
+  tec_lifetime: 10
+  unit: '-'
   description: natural gas type technology
-  type: technology
-  # Specify "all" for all provinces in Canada to be selected
-  node_select: all
+  # Specify "all" for all provinces in Canada to be selected, or "custom" for a sub-set of provinces
+  node_select: all 
   provinces: 
     - Alberta
-    #- Saskatchewan
+    - Saskatchewan
   inv_cost_2020: 0
   fix_cost_2020: 0
   var_cost_2020: 0
-  tec_lifetime: 10
+  emission: CO2
   exo_lr: 0.2
 
 

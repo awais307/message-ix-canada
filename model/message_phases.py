@@ -139,26 +139,29 @@ class MESSAGE_CA:
 		with open(techs_file) as data:
 			technologies = yaml.safe_load(data)
 			for tech_data in technologies.values():
-				if tech_data["name"] in tech_config["techs"]:
-					self.scenario.add_set('technology',tech_data["name"])
+				if tech_data["technology"] in tech_config["techs"]:
+					self.scenario.add_set('technology',tech_data["technology"])
 
 					if tech_data["node_select"] == "all":
 						provinces = self.scenario.set("node").to_list()[2:]
-					else:
+					elif tech_data["node_select"] == "custom":
 						provinces = tech_data["provinces"]
+					else:
+						raise Exception(f"Option {tech_data["node_select"]} not recognized." + 
+						"Options for node_selct in technology.yaml is either 'all' or 'custom'")
 					
 					# Creating DFs
 
 					#input dataframe
 					input_df = message_ix.make_df("input", 
 							node_loc=provinces, 
-							technology=tech_data["name"], 
+							technology=tech_data["technology"], 
 							mode=tech_data["mode"],
-							commodity=tech_data["commodity"],
-							level=tech_data["level"],
+							commodity=tech_data["commodity"]["input"]["com_name"],
+							level=tech_data["commodity"]["input"]["com_level"],
 							time=tech_data["time"],
 							time_origin=tech_data["time"],
-							value=tech_data['inp_val'],
+							value=tech_data["commodity"]["input"]["com_value"],
 							unit=tech_data["unit"]
 						).pipe(broadcast,self.map_yv_ya_lt(
 												years, tech_data['tec_lifetime'], first_year
