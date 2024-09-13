@@ -29,7 +29,7 @@ conda env create -f environment.yml
 
 Activate the newly created environment:
 ```bash
-conda activate message-ix-canada
+conda activate messageix-canada
 ```
 
 ## Step 4: Verify the Installation
