@@ -157,12 +157,12 @@ class MESSAGE_CA:
 							node_loc=provinces, 
 							technology=tech_data["technology"], 
 							mode=tech_data["mode"],
-							commodity=tech_data["commodity"]["input"]["com_name"],
-							level=tech_data["commodity"]["input"]["com_level"],
+							commodity=tech_data["commodity"][0]["input"][0]["com_name"],
+							level=tech_data["commodity"][0]["input"][2]["com_level"],
 							time=tech_data["time"],
 							time_origin=tech_data["time"],
-							value=tech_data["commodity"]["input"]["com_value"],
-							unit=tech_data["unit"]
+							value=tech_data["commodity"][0]["input"][1]["com_value"],
+							unit=tech_data["unit"][0]["cost"]
 						).pipe(broadcast,self.map_yv_ya_lt(
 												years, tech_data['tec_lifetime'], first_year
 											),
@@ -964,3 +964,24 @@ class MESSAGE_CA:
 
 
 		return mp, self.scenario, scenario_folder
+
+	def test_plots(self, sample_output="output/MsgOutput_MESSAGEix-CA__netzero__v6.gdx"):
+		
+
+		config = toml.load(self.config_path)
+		modelName = config['general']['model_name']
+		scenarioName = config['general']['scenario_name']
+		platform_name = config['general']['ix_platform']
+		version = config['general']['version']
+		annotation = config['general']['annotation']
+		process_historical = config['pre_process']['process_historical_data']
+		add_hydrogen_shares_f = config['pre_process']['add_hydrogen_shares']
+		add_obps_baseline = config['pre_process']['apply_obps_baseline']
+		add_obps_netzero = config['pre_process']['apply_obps_netzero']
+		use_reporter = config['post_process']['generate_reporter_output']
+		solve = config['model']['solve']
+		to_excel = config['post_process']['export_to_xlsx']
+		
+		mp = ixmp.Platform(name=platform_name)
+		self.scenario = message_ix.Scenario(mp, modelName, scenarioName, version= version, annotation=annotation)
+		self.scenario.read_file(path="output/MsgOutput_MESSAGEix-CA__netzero__v6.gdx")

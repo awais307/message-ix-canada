@@ -1,30 +1,37 @@
 ATRccs:
   technology: h2_atr_ccs
+  description: natural gas type technology
   mode: M1
   # Commodity structure = input or output: (commodity, value, level)
   commodity: 
     - input: 
-      - com_name: [gas, electr]
-      - com_value: [1.2, 0.05]
-      - com_level: [primary, primary]
+      - com_name: 
+        - gas 
+        #- electr
+      - com_value: 
+        - 1.2 
+        #- 0.05
+      - com_level: 
+        - primary
+        #- primary
     - output: 
       - com_name: h2
       - com_value: 1
       - com_level: secondary 
   time: year
   tec_lifetime: 10
-  unit: '-'
-  description: natural gas type technology
+  unit: 
+    - cost: '-'
+    - energy: '-'
   # Specify "all" for all provinces in Canada to be selected, or "custom" for a sub-set of provinces
-  node_select: all 
+  node_select: custom
   provinces: 
     - Alberta
-    - Saskatchewan
+    #- Saskatchewan
   inv_cost_2020: 0
   fix_cost_2020: 0
   var_cost_2020: 0
   emission: CO2
-  exo_lr: 0.2
 
 
 

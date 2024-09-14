@@ -6,7 +6,7 @@
     annotation = "Initial setup for Canadian energy model."
 
 [pre_process]
-    process_historical_data = true
+    process_historical_data = false
     add_hydrogen_shares = false
     apply_obps_netzero = false
     apply_obps_baseline = false
