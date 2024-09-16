@@ -138,9 +138,9 @@ class MESSAGE_CA:
 		# Read file from path and convert to dictionary
 		with open(techs_file) as data:
 			technologies = yaml.safe_load(data)
-			for tech_data in technologies.values():
-				if tech_data["technology"] in tech_config["techs"]:
-					self.scenario.add_set('technology',tech_data["technology"])
+			for tech,tech_data in technologies.items():
+				if tech in tech_config["techs"]:
+					self.scenario.add_set('technology',tech)
 
 					if tech_data["node_select"] == "all":
 						provinces = self.scenario.set("node").to_list()[2:]
@@ -155,85 +155,91 @@ class MESSAGE_CA:
 					#input dataframe
 					input_df = message_ix.make_df("input", 
 							node_loc=provinces, 
-							technology=tech_data["technology"], 
+							technology=tech, 
 							mode=tech_data["mode"],
 							commodity=tech_data["commodity"][0]["input"][0]["com_name"],
 							level=tech_data["commodity"][0]["input"][2]["com_level"],
 							time=tech_data["time"],
 							time_origin=tech_data["time"],
 							value=tech_data["commodity"][0]["input"][1]["com_value"],
-							unit=tech_data["unit"][0]["cost"]
+							unit=tech_data["unit"][1]["energy"]
 						).pipe(broadcast,self.map_yv_ya_lt(
 												years, tech_data['tec_lifetime'], first_year
 											),
-							time="year",
+							#time=tech_data["time"],
 						).pipe(same_node).pipe(same_time)
 					self.scenario.add_par('input', input_df)
 					
 					# output dataframe
-					df = message_ix.make_df("output", 
+					output_df = message_ix.make_df("output", 
 							node_loc=provinces, 
-							technology=tech_data["name"], 
+							technology=tech, 
 							mode=tech_data["mode"],
-							commodity=tech_data["mode"],
-							level=tech_data["level"],
+							commodity=tech_data["commodity"][1]["output"][0]["com_name"],
+							level=tech_data["commodity"][1]["output"][2]["com_level"],
 							time=tech_data["time"],
 							time_origin=tech_data["time"],
-							value=tech_data['out_val'],
-							unit=tech_data["unit"]
+							value=tech_data["commodity"][1]["output"][1]["com_value"],
+							unit=tech_data["unit"][1]["energy"]
 						).pipe(broadcast,self.map_yv_ya_lt(
 												years, tech_data['tec_lifetime'], first_year
-											),
-							time="year",
+											),#time=tech_data["time"],
 						).pipe(same_node).pipe(same_time)
-					self.scenario.add_par('output', df)
-					
-					# investment cost
-					df = message_ix.make_df("inv_cost", 
-							node_loc=provinces, 
-							technology=tech_data["name"], 
-							level=tech_data["level"],
-							value=tech_data['inv_cost_2020'],
-							unit=tech_data["unit"]
-						)
-					self.scenario.add_par('inv_cost', df)
+					self.scenario.add_par('output', output_df)
 					
 					# variable cost
-					df = message_ix.make_df("var_cost", 
+					var_cost_df = message_ix.make_df("var_cost", 
 							node_loc=provinces, 
-							technology=tech_data["name"],
+							technology=tech,
 							mode=tech_data["mode"], 
-							value=tech_data['var_cost_2020'],
+							value=tech_data['var_cost_2020'][1]["cost_value"],
 							time=tech_data["time"],
-							unit=tech_data["unit"]
+							unit=tech_data["unit"][0]["cost"]
 						).pipe(broadcast,self.map_yv_ya_lt(
 												years, tech_data['tec_lifetime'], first_year
 											),
 						)
-					self.scenario.add_par('var_cost', df)
+					self.scenario.add_par('var_cost', var_cost_df)
 					
 					# fixed cost
-					df = message_ix.make_df("fix_cost", 
+					fix_cost_df = message_ix.make_df("fix_cost", 
 							node_loc=provinces, 
-							technology=tech_data["name"],
-							value=tech_data['fix_cost_2020'],
+							technology=tech,
+							value=tech_data['fix_cost_2020'][1]["cost_value"],
 							time=tech_data["time"],
-							unit=tech_data["unit"]
+							unit=tech_data["unit"][0]["cost"]
 						).pipe(broadcast,self.map_yv_ya_lt(
 												years, tech_data['tec_lifetime'], first_year
 											),
 						)
-					self.scenario.add_par('fix_cost', df)
+					self.scenario.add_par('fix_cost', fix_cost_df)
 					
+					'''
+					# investment cost
+					inv_cost_df = message_ix.make_df("inv_cost", 
+							node_loc=provinces, 
+							technology=tech,
+							year_act=2020,
+							year_vtg=2060,
+							level=tech_data["inv_cost_2020"][0]["cost_level"],
+							value=tech_data['inv_cost_2020'][1]["cost_value"],
+                            time=tech_data["time"],
+							unit=tech_data["unit"][0]["cost"]
+						).pipe(broadcast,self.map_yv_ya_lt(
+												years, tech_data['tec_lifetime'], first_year
+											),
+						)
+					self.scenario.add_par('inv_cost', inv_cost_df)
+					'''
 					# construction time
-					df = make_matched_dfs(input_df,
-						capacity_factor = tech_data['capacity_factor'],
-						tecnical_lifetime = tech_data['tecnical_lifetime'],
+					tec_construction_df = make_matched_dfs(input_df,
+						capacity_factor = tech_data["commodity"][1]["output"][1]["com_value"] / tech_data["commodity"][0]["input"][1]["com_value"],
+						technical_lifetime = tech_data['tec_lifetime'],
 						construction_time = tech_data['construction_time'],
 						)
-					self.scenario.add_par('capacity_factor', df['capacity_factor'])
-					self.scenario.add_par('tecnical_lifetime', df['tecnical_lifetime'])
-					self.scenario.add_par('construction_time', df['construction_time'])
+					self.scenario.add_par('capacity_factor', tec_construction_df['capacity_factor'])
+					self.scenario.add_par('technical_lifetime', tec_construction_df['technical_lifetime'])
+					self.scenario.add_par('construction_time', tec_construction_df['construction_time'])
 			
 			self.scenario.commit("Technologies added successfully")
 
@@ -941,7 +947,7 @@ class MESSAGE_CA:
 
 		end = time.time()
 		print(f'\n==================================================\n\
-		Creating model time: {round((end - start) / 60)} Min and {round((end - start) % 60)} Sec \
+		Model creation time: {round((end - start) / 60)} Min and {round((end - start) % 60)} Sec \
 		\n==================================================')
 
 		if solve:
