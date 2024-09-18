@@ -7,13 +7,13 @@ h2_atr_ccs:
     - input: 
       - com_name: 
         - gas 
-        #- electr
+        - electr
       - com_value: 
         - 1.2 
-        #- 0.05
+        - 0.05
       - com_level: 
         - primary
-        #- primary
+        - primary
     - output: 
       - com_name: 
         - hydrogen
@@ -31,7 +31,7 @@ h2_atr_ccs:
     - energy: '-'
   # Geographical specs: nodes selection, provinces
   # Specify "all" below for all provinces in Canada to be selected, or "custom" for a sub-set of provinces
-  node_select: custom
+  node_select: all
   provinces: 
     - Alberta
     #- Saskatchewan
