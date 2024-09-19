@@ -27,7 +27,9 @@ Coal ppl Example just for fuel related emission factors.
 
 Relation - CO2_cc value is 2.11979 
 Input value or efficiency of coal power plant = 1/2.63158 = 0.379
-Emission factor of coal ppl = 2.11979 * 0.379 = 0.8044 tC/kWyr
+Emission factor of coal ppl = 2.11979 * 0.379 = 0.8044 tC/kWyr  
 
+When you have an emission factor value form a Canadian source (x);
+You will use that value and divide by the efficiency (y): x/y = relation activity value (z)
 
 we need to convert the bounds to tonne of carbon - 
