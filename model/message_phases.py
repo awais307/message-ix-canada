@@ -21,6 +21,7 @@ import itertools
 from typing import (Tuple, Optional, Union)
 from pathlib import Path
 from scipy.optimize import linprog
+from matplotlib.backends.backend_pdf import PdfPages
 
 from message_ix_models.util import (
 	broadcast,
@@ -895,7 +896,7 @@ class MESSAGE_CA:
 		
 		# Scenario set-up
 		start = time.time()
-		config = toml.load(self.config_path)
+		config = self.config_file
 
 		modelName = config['general']['model_name']
 		scenarioName = config['general']['scenario_name']
@@ -969,7 +970,7 @@ class MESSAGE_CA:
 		return mp, self.scenario, scenario_folder
 
 # Plotter class
-class Plotter_MSG():
+class Plotter_MSG:
 	
 	def __init__(self,scenario):
 		self.scenario = scenario # MESSAGE scenario object
@@ -1055,7 +1056,7 @@ class Plotter_MSG():
 			inputs = inputs.pivot(index="year_act", columns="technology")
 			inputs = inputs[inputs.columns[(inputs != 0).any()]]
 			inputs.columns = inputs.columns.droplevel(0)
-			act = self.scenario.var("ACT").loc[msg.var("ACT").year_act.isin(plotyrs)]
+			act = self.scenario.var("ACT").loc[self.scenario.var("ACT").year_act.isin(plotyrs)]
 			activity = act.loc[act.technology.isin(tec)][["technology", "year_act", "lvl"]]
 
 			activity = activity.groupby(["technology", "year_act"], as_index=False).sum()
@@ -1270,12 +1271,11 @@ class Plotter_MSG():
 
 		return df_sec.fillna(0)
 
-
 	# Aggregating results for industry and energy sectors
 	def plotdf_ind(self, tec, com, direction, plotyrs, yr):
 		df_plot_ind = pd.DataFrame(index=plotyrs)
 
-		inputs = msg.par(direction)
+		inputs = self.scenario.par(direction)
 		inputs = inputs.loc[inputs.year_act.isin(plotyrs)]
 		inputs = inputs.loc[(inputs.technology.isin(tec)) & (inputs.commodity.isin(com))][
 			["technology", "year_act", "value"]
@@ -1284,7 +1284,7 @@ class Plotter_MSG():
 		inputs = inputs.pivot(index="year_act", columns="technology")
 		inputs = inputs[inputs.columns[(inputs != 0).any()]]
 		inputs.columns = inputs.columns.droplevel(0)
-		act = msg.var("ACT").loc[msg.var("ACT").year_act.isin(plotyrs)]
+		act = self.scenario.var("ACT").loc[self.scenario.var("ACT").year_act.isin(plotyrs)]
 		activity = act.loc[act.technology.isin(tec)][["technology", "year_act", "lvl"]]
 
 		activity = activity.groupby(["technology", "year_act"], as_index=False).sum()
@@ -1293,7 +1293,7 @@ class Plotter_MSG():
 		activity.columns = activity.columns.droplevel(0)
 
 		# Attaching history
-		act_hist = attach_history(msg, tec, plotyrs)
+		act_hist = self.attach_history(tec, plotyrs)
 		activity = activity.add(act_hist, fill_value=0)
 
 		df_plot = inputs * activity
@@ -1327,10 +1327,9 @@ class Plotter_MSG():
 
 		return df_plot_ind
 
-
 	# A function for adding history
-	def add_history(msg, tecs, nodeloc, df2, groupby):
-		df1_hist = msg.par(
+	def add_history(self, tecs, nodeloc, df2, groupby):
+		df1_hist = self.scenario.par(
 			"historical_activity", {"technology": tecs, "node_loc": nodeloc}
 		).rename({"value": "lvl"}, axis=1)
 		df2_hist = (
@@ -1341,32 +1340,30 @@ class Plotter_MSG():
 			.mean(numeric_only=True)
 			.drop(["year_vtg"], axis=1)
 		)
-		df_hist = multiply_df(df1_hist, "lvl", df2_hist, "value")
-		df_hist = group(df_hist, ["year_act", groupby], "product", 0.0, None)
+		df_hist = self.multiply_df(df1_hist, "lvl", df2_hist, "value")
+		df_hist = self.group(df_hist, ["year_act", groupby], "product", 0.0, None)
 		return df_hist
 
-
 	# A function for making model output in a compact way
-	def model_output(msg, tecs, nodeloc, parname, coms=None):
-		df1 = msg.var("ACT", {"technology": tecs, "node_loc": nodeloc})
-		df2 = msg.par(parname, {"technology": tecs, "node_loc": nodeloc})
+	def model_output(self, tecs, nodeloc, parname, coms=None):
+		df1 = self.scenario.var("ACT", {"technology": tecs, "node_loc": nodeloc})
+		df2 = self.scenario.par(parname, {"technology": tecs, "node_loc": nodeloc})
 		if coms:
 			if isinstance(coms, str):
 				coms = [coms]
 			df2 = df2.loc[df2["commodity"].isin(coms)]
-		df = multiply_df(df1, "lvl", df2, "value")
+		df = self.multiply_df(df1, "lvl", df2, "value")
 		return df, df2
 
-
 	# A function for reordering the columns of a dataframe and leaving the rest
-	def com_order(df, order):
+	def com_order(self, df, order):
 		order = [x for x in order if x in df.columns]
 		new_order = order + [x for x in set(df.columns) if x not in order]
 		df = df.reindex(new_order, axis=1)
 		return df
 
 	# 2) The main plotting function
-	def plotter(case, msg, nodeloc, path, yr_min, yr_max, plots="all", not_plots=[]):
+	def plotter(self, case, nodeloc, path, yr_min, yr_max, plots="all", not_plots=[]):
 
 		# 1) Initialization and importing required data
 		cwd = os.getcwd()
@@ -1406,8 +1403,8 @@ class Plotter_MSG():
 		}
 
 		# Order of commodities in the results
-		crudes = [x for x in set(msg.set("commodity")) if "crude_" in x]
-		gases = [x for x in set(msg.set("commodity")) if "gas_" in x]
+		crudes = [x for x in set(self.scenario.set("commodity")) if "crude_" in x]
+		gases = [x for x in set(self.scenario.set("commodity")) if "gas_" in x]
 		order = (
 			["coal", "caol_rc", "coal_i", "crudeoil"]
 			+ crudes
@@ -1443,7 +1440,7 @@ class Plotter_MSG():
 		writer_xls = pd.ExcelWriter(path + "\\" + case + ".xlsx", engine="xlsxwriter")
 
 		# Checking if the scenario has a solution
-		if not msg.has_solution():
+		if not self.scenario.has_solution():
 			raise ("Submitted scenario has no solution to plot!")
 
 		# Unit conversion
@@ -1456,24 +1453,24 @@ class Plotter_MSG():
 		unit_cap = 1000  # Conversion from GW to MW
 		unitname_cap = "(MW)"
 
-		if not msg.set("cat_year", {"type_year": "lastmodelyear"}).empty:
-			last_yr = msg.set("cat_year", {"type_year": "lastmodelyear"})["year"].item()
+		if not self.scenario.set("cat_year", {"type_year": "lastmodelyear"}).empty:
+			last_yr = self.scenario.set("cat_year", {"type_year": "lastmodelyear"})["year"].item()
 		else:
-			last_yr = max(msg.set("year"))
+			last_yr = max(self.scenario.set("year"))
 
-		plotyrs = [int(i) for i in list(msg.set("year")) if int(i) < int(last_yr)]
-		yr = msg.set("cat_year", {"type_year": "firstmodelyear"}).year.item()
+		plotyrs = [int(i) for i in list(self.scenario.set("year")) if int(i) < int(last_yr)]
+		yr = self.scenario.set("cat_year", {"type_year": "firstmodelyear"}).year.item()
 
 		# 2) Reading and sorting solution data
 		# A dictionary for saving all the results for plotting
 		alldf = {}
 
 		# 2.1) Power plant activity and capacity
-		cap = msg.var("CAP", {"year_vtg": plotyrs})
-		cap_new = msg.var("CAP_NEW", {"year_vtg": plotyrs})
-		cap_hist = msg.par("historical_new_capacity", {"year_vtg": plotyrs})
+		cap = self.scenario.var("CAP", {"year_vtg": plotyrs})
+		cap_new = self.scenario.var("CAP_NEW", {"year_vtg": plotyrs})
+		cap_hist = self.scenario.par("historical_new_capacity", {"year_vtg": plotyrs})
 
-		tec = msg.par("output", {"commodity": "electr", "level": "secondary"})["technology"]
+		tec = self.scenario.par("output", {"commodity": "electr", "level": "secondary"})["technology"]
 
 		tec = tec.tolist() + ["stor_ppl"]
 		# Power plant capacity
@@ -1502,11 +1499,11 @@ class Plotter_MSG():
 		cap_new_tot = cap_new_tot[cap_new_tot.columns[(cap_new_tot > 0.001).any()]]
 
 		# Power plant activity
-		elec = plotdf(msg, tec, ["electr"], "output", plotyrs, yr)
+		elec = self.plotdf(tec, ["electr"], "output", plotyrs, yr)
 
 		# Treatment of storage losses
 		if "stor_ppl" in elec.columns:
-			d_stor = msg.par("input", {"technology": "stor_ppl"})
+			d_stor = self.scenario.par("input", {"technology": "stor_ppl"})
 			d_stor = d_stor.loc[d_stor["year_act"].isin(plotyrs)][
 				["technology", "year_act", "value"]
 			]
@@ -1514,9 +1511,9 @@ class Plotter_MSG():
 			elec["stor_ppl"] *= -d_stor["value"]
 			elec.rename(renaming, axis=1, inplace=True)
 
-		elec = mappings(plotyrs, elec, groupby="technology")
-		ppl_cap = mappings(plotyrs, ppl_cap, groupby="technology")
-		cap_new_tot = mappings(plotyrs, cap_new_tot, groupby="technology")
+		elec = self.mappings(plotyrs, elec, groupby="technology")
+		ppl_cap = self.mappings(plotyrs, ppl_cap, groupby="technology")
+		cap_new_tot = self.mappings(plotyrs, cap_new_tot, groupby="technology")
 
 		alldf["Electricity generation " + unitname_el] = elec * unit_el
 		alldf["Power plant capacity " + unitname_cap] = ppl_cap * unit_cap
@@ -1524,14 +1521,14 @@ class Plotter_MSG():
 
 		# 2.2) Electricity usage
 		tecs = list(
-			set(msg.par("input", {"commodity": "electr", "level": "final"}).technology)
+			set(self.scenario.par("input", {"commodity": "electr", "level": "final"}).technology)
 		)
 		tecs = tecs + ["stor_ppl"]
-		df, df2 = model_output(msg, tecs, nodeloc, "input", "electr")
-		df = group(df, ["year_act", "technology"], "product", 0.0, yr)
+		df, df2 = self.model_output(tecs, nodeloc, "input", "electr")
+		df = self.group(df, ["year_act", "technology"], "product", 0.0, yr)
 
 		# adding historical data
-		df_hist = add_history(msg, tecs, nodeloc, df2, "technology")
+		df_hist = self.add_history(tecs, nodeloc, df2, "technology")
 		df = (
 			(df_hist + df)
 			.fillna(0)
@@ -1544,241 +1541,241 @@ class Plotter_MSG():
 
 		# 2.3) Natural Gas supply (incl. import) and usage
 		gas_tecs = ["gas_t_d", "gas_t_d_ch4", "gas_bal"]
-		tecs = list(set(msg.par("output", {"commodity": "gas"}).technology) - set(gas_tecs))
-		df, df2 = model_output(msg, tecs, nodeloc, "output", "gas")
-		df = group(df, ["year_act", "technology"], "product", 0.0, yr)
+		tecs = list(set(self.scenario.par("output", {"commodity": "gas"}).technology) - set(gas_tecs))
+		df, df2 = self.model_output(tecs, nodeloc, "output", "gas")
+		df = self.group(df, ["year_act", "technology"], "product", 0.0, yr)
 		# adding historical data
-		df_hist = add_history(msg, tecs, nodeloc, df2, "technology")
+		df_hist = self.add_history(tecs, nodeloc, df2, "technology")
 		df = (df_hist + df).fillna(0)
-		alldf["Gas supply " + unitname] = mappings(plotyrs, df) * unitc
+		alldf["Gas supply " + unitname] = self.mappings(plotyrs, df) * unitc
 
 		# Natural gas usage
 		gas_tecs = ["gas_t_d", "gas_t_d_ch4", "gas_bal"]
-		tecs = list(set(msg.par("input", {"commodity": "gas"}).technology) - set(gas_tecs))
-		df, df2 = model_output(msg, tecs, nodeloc, "input", "gas")
-		df = group(df, ["year_act", "technology"], "product", 0.0, yr)
+		tecs = list(set(self.scenario.par("input", {"commodity": "gas"}).technology) - set(gas_tecs))
+		df, df2 = self.model_output(tecs, nodeloc, "input", "gas")
+		df = self.group(df, ["year_act", "technology"], "product", 0.0, yr)
 		# adding historical data
-		df_hist = add_history(msg, tecs, nodeloc, df2, "technology")
+		df_hist = self.add_history(tecs, nodeloc, df2, "technology")
 		df = (df_hist + df).fillna(0)
-		alldf["Gas utilization " + unitname] = mappings(plotyrs, df) * unitc
+		alldf["Gas utilization " + unitname] = self.mappings(plotyrs, df) * unitc
 
 		# 2.4) Coal supply and utilization
 		coal_tecs = ["coal_t_d", "coal_bal", "coal_exp"]
 		tecs = list(
-			set(msg.par("output", {"commodity": "coal"}).technology) - set(coal_tecs)
+			set(self.scenario.par("output", {"commodity": "coal"}).technology) - set(coal_tecs)
 		)
-		df, df2 = model_output(msg, tecs, nodeloc, "output", "coal")
-		df = group(df, ["year_act", "technology"], "product", 0.0, yr)
+		df, df2 = self.model_output(tecs, nodeloc, "output", "coal")
+		df = self.group(df, ["year_act", "technology"], "product", 0.0, yr)
 		# adding historical data
-		df_hist = add_history(msg, tecs, nodeloc, df2, "technology")
+		df_hist = self.add_history(tecs, nodeloc, df2, "technology")
 		df = (df + df_hist).fillna(0)
-		alldf["Coal supply " + unitname] = mappings(plotyrs, df) * unitc
+		alldf["Coal supply " + unitname] = self.mappings(plotyrs, df) * unitc
 
 		# Coal utilization
 		coal_tecs = ["coal_t_d", "coal_bal", "coal_extr", "coal_extr_ch4"]
 		tecs = list(
-			set(msg.par("input", {"commodity": "coal"}).technology) - set(coal_tecs)
+			set(self.scenario.par("input", {"commodity": "coal"}).technology) - set(coal_tecs)
 		)
-		df, df2 = model_output(msg, tecs, nodeloc, "input", "coal")
-		df = group(df, ["year_act", "technology"], "product", 0.0, yr)
+		df, df2 = self.model_output(tecs, nodeloc, "input", "coal")
+		df = self.group(df, ["year_act", "technology"], "product", 0.0, yr)
 		# adding historical data
-		df_hist = add_history(msg, tecs, nodeloc, df2, "technology")
+		df_hist = self.add_history(tecs, nodeloc, df2, "technology")
 		df = (df + df_hist).fillna(0)
-		alldf["Coal utilization " + unitname] = mappings(plotyrs, df) * unitc
+		alldf["Coal utilization " + unitname] = self.mappings(plotyrs, df) * unitc
 
 		# 2.5) Oil derivatives supply and use
 		tecs = list(
 			set(
-				msg.par(
+				self.scenario.par(
 					"output", {"commodity": ["fueloil", "lightoil"], "level": ["secondary"]}
 				).technology
 			)
 		)
 
-		df, df2 = model_output(msg, tecs, nodeloc, "output", ["fueloil", "lightoil"])
-		df = group(df, ["year_act", "technology"], "product", 0.0, yr)
+		df, df2 = self.model_output(tecs, nodeloc, "output", ["fueloil", "lightoil"])
+		df = self.group(df, ["year_act", "technology"], "product", 0.0, yr)
 		# adding historical data
-		df_hist = add_history(msg, tecs, nodeloc, df2, "technology")
+		df_hist = self.add_history(tecs, nodeloc, df2, "technology")
 		df = (df + df_hist).fillna(0)
-		alldf["Oil derivative supply " + unitname] = mappings(plotyrs, df) * unitc
+		alldf["Oil derivative supply " + unitname] = self.mappings(plotyrs, df) * unitc
 
 		# Oil derivatives utilisation
 		tecs = list(
-			set(msg.par("input", {"commodity": ["fueloil", "lightoil"]}).technology)
+			set(self.scenario.par("input", {"commodity": ["fueloil", "lightoil"]}).technology)
 			- set(["loil_t_d", "foil_t_d"])
 		)
-		df, df2 = model_output(msg, tecs, nodeloc, "input", ["fueloil", "lightoil"])
-		df = group(df, ["year_act", "technology"], "product", 0.0, yr)
+		df, df2 = self.model_output(tecs, nodeloc, "input", ["fueloil", "lightoil"])
+		df = self.group(df, ["year_act", "technology"], "product", 0.0, yr)
 		# adding historical data
-		df_hist = add_history(msg, tecs, nodeloc, df2, "technology")
+		df_hist = self.add_history(tecs, nodeloc, df2, "technology")
 		df = (df + df_hist).fillna(0)
-		alldf["Oil derivative use " + unitname] = mappings(plotyrs, df) * unitc
+		alldf["Oil derivative use " + unitname] = self.mappings(plotyrs, df) * unitc
 
 		# 2.6) Oil supply
 		tecs = list(
-			set(msg.par("output", {"commodity": ["crudeoil"]}).technology)
+			set(self.scenario.par("output", {"commodity": ["crudeoil"]}).technology)
 			- set(["oil_bal", "oil_exp"])
 		)
-		df, df2 = model_output(msg, tecs, nodeloc, "output", "crudeoil")
-		df = group(df, ["year_act", "technology"], "product", 0.0, yr)
+		df, df2 = self.model_output(tecs, nodeloc, "output", "crudeoil")
+		df = self.group(df, ["year_act", "technology"], "product", 0.0, yr)
 		# adding historical data
-		df_hist = add_history(msg, tecs, nodeloc, df2, "technology")
+		df_hist = self.add_history(tecs, nodeloc, df2, "technology")
 		df = (df + df_hist).fillna(0)
-		alldf["Oil supply " + unitname] = mappings(plotyrs, df) * unitc
+		alldf["Oil supply " + unitname] = self.mappings(plotyrs, df) * unitc
 
 		# 2.7) Biomass provision
 		tecs = list(
 			set(
-				msg.par(
+				self.scenario.par(
 					"output", {"commodity": ["biomass"], "level": ["primary"]}
 				).technology
 			)
 		)
-		df, df2 = model_output(msg, tecs, nodeloc, "output")
-		df = group(df, ["year_act", "technology"], "product", 0.0, yr)
+		df, df2 = self.model_output(tecs, nodeloc, "output")
+		df = self.group(df, ["year_act", "technology"], "product", 0.0, yr)
 		# adding historical data
-		df_hist = add_history(msg, tecs, nodeloc, df2, "technology")
+		df_hist = self.add_history(tecs, nodeloc, df2, "technology")
 		df = (df + df_hist).fillna(0)
-		alldf["Biomass supply " + unitname] = mappings(plotyrs, df) * unitc
+		alldf["Biomass supply " + unitname] = self.mappings(plotyrs, df) * unitc
 
 		# Biomass utilisation
 		tecs = list(
 			set(
-				msg.par(
+				self.scenario.par(
 					"input", {"commodity": ["biomass"], "level": ["primary", "final"]}
 				).technology
 			)
 			- set(["biomass_t_d"])
 		)
-		df, df2 = model_output(msg, tecs, nodeloc, "input", "biomass")
-		df = group(df, ["year_act", "technology"], "product", 0.0, yr)
+		df, df2 = self.model_output(tecs, nodeloc, "input", "biomass")
+		df = self.group(df, ["year_act", "technology"], "product", 0.0, yr)
 		# adding historical data
-		df_hist = add_history(msg, tecs, nodeloc, df2, "technology")
+		df_hist = self.add_history(tecs, nodeloc, df2, "technology")
 		df = (df + df_hist).fillna(0)
-		alldf["Biomass utilization " + unitname] = mappings(plotyrs, df) * unitc
+		alldf["Biomass utilization " + unitname] = self.mappings(plotyrs, df) * unitc
 
 		# 3) Sector related results
 		# 3.1) Transport
-		tecs = list(set(msg.par("output", {"commodity": ["transport"]}).technology))
-		df, df2 = model_output(msg, tecs, nodeloc, "input")
-		df = group(df, ["year_act", "commodity"], "product", 0.0, yr)
+		tecs = list(set(self.scenario.par("output", {"commodity": ["transport"]}).technology))
+		df, df2 = self.model_output(tecs, nodeloc, "input")
+		df = self.group(df, ["year_act", "commodity"], "product", 0.0, yr)
 		# adding historical data
-		df_hist = add_history(msg, tecs, nodeloc, df2, "commodity")
-		df = com_order((df_hist + df).fillna(0), order)
+		df_hist = self.add_history(tecs, nodeloc, df2, "commodity")
+		df = self.com_order((df_hist + df).fillna(0), order)
 		alldf["Energy use: Transport " + unitname] = df * unitc
 
 		# 3.2) Industry
-		tecs = list(set(msg.par("output", {"commodity": ["i_spec", "i_therm"]}).technology))
-		df, df2 = model_output(msg, tecs, nodeloc, "input")
-		df = group(df, ["year_act", "commodity"], "product", 0.0, yr)
+		tecs = list(set(self.scenario.par("output", {"commodity": ["i_spec", "i_therm"]}).technology))
+		df, df2 = self.model_output(tecs, nodeloc, "input")
+		df = self.group(df, ["year_act", "commodity"], "product", 0.0, yr)
 		# adding historical data
-		df_hist = add_history(msg, tecs, nodeloc, df2, "commodity")
-		df = com_order((df_hist + df).fillna(0), order)
+		df_hist = self.add_history(tecs, nodeloc, df2, "commodity")
+		df = self.com_order((df_hist + df).fillna(0), order)
 		alldf["Energy use: Industry " + unitname] = df * unitc
 
 		# 3.3) Non-energy (feedstock) use in Industry
-		tecs = list(set(msg.par("output", {"commodity": ["i_feed"]}).technology))
-		df, df2 = model_output(msg, tecs, nodeloc, "input")
-		df = group(df, ["year_act", "commodity"], "product", 0.0, yr)
+		tecs = list(set(self.scenario.par("output", {"commodity": ["i_feed"]}).technology))
+		df, df2 = self.model_output(tecs, nodeloc, "input")
+		df = self.group(df, ["year_act", "commodity"], "product", 0.0, yr)
 
 		# adding historical data
-		df_hist = add_history(msg, tecs, nodeloc, df2, "commodity")
-		df = com_order((df_hist + df).fillna(0), order)
+		df_hist = self.add_history(tecs, nodeloc, df2, "commodity")
+		df = self.com_order((df_hist + df).fillna(0), order)
 		alldf["Non-energy use: Feedstock " + unitname] = df * unitc
 
 		# 3.4) Residencial and commercial
 		tecs = list(
 			set(
-				msg.par(
+				self.scenario.par(
 					"output", {"commodity": ["rc_spec", "rc_therm", "non-comm"]}
 				).technology
 			)
 		)
-		df, df2 = model_output(msg, tecs, nodeloc, "input")
-		df = group(df, ["year_act", "technology"], "product", 0.0, yr)
+		df, df2 = self.model_output(tecs, nodeloc, "input")
+		df = self.group(df, ["year_act", "technology"], "product", 0.0, yr)
 
 		# adding historical data
-		df_hist = add_history(msg, tecs, nodeloc, df2, "technology")
-		df = com_order((df_hist + df).fillna(0), order)
+		df_hist = self.add_history(tecs, nodeloc, df2, "technology")
+		df = self.com_order((df_hist + df).fillna(0), order)
 		alldf["Energy use: Buildings " + unitname] = df * unitc
 
 		# 4) Energy balances
 		# 4.1) Primary energy : production + imports - exports
-		tecs = list(set(msg.par("output", {"level": ["primary"]}).technology))
-		df, df2 = model_output(msg, tecs, nodeloc, "output")
-		df = group(df, ["year_act", "commodity"], "product", 0.0, yr)
+		tecs = list(set(self.scenario.par("output", {"level": ["primary"]}).technology))
+		df, df2 = self.model_output(tecs, nodeloc, "output")
+		df = self.group(df, ["year_act", "commodity"], "product", 0.0, yr)
 		# adding historical data
-		df_hist = add_history(msg, tecs, nodeloc, df2, "commodity")
-		df = com_order((df_hist + df).fillna(0), order)
+		df_hist = self.add_history(tecs, nodeloc, df2, "commodity")
+		df = self.com_order((df_hist + df).fillna(0), order)
 
 		# Renewables
-		tecs = list(set(msg.par("input", {"level": ["renewable"]}).technology))
-		df_re, df2 = model_output(msg, tecs, nodeloc, "input")
-		df_re = group(df_re, ["year_act", "commodity"], "product", 0.0, yr)
+		tecs = list(set(self.scenario.par("input", {"level": ["renewable"]}).technology))
+		df_re, df2 = self.model_output(tecs, nodeloc, "input")
+		df_re = self.group(df_re, ["year_act", "commodity"], "product", 0.0, yr)
 		# adding historical data
-		df_hist = add_history(msg, tecs, nodeloc, df2, "commodity")
-		df = df.add(com_order((df_hist + df_re).fillna(0), order), fill_value=0)
+		df_hist = self.add_history(tecs, nodeloc, df2, "commodity")
+		df = df.add(self.com_order((df_hist + df_re).fillna(0), order), fill_value=0)
 
 		# Import technologies
-		tecs_imp = [x for x in set(msg.set("technology")) if x.endswith("_imp")]
-		df_imp, df2_imp = model_output(msg, tecs_imp, nodeloc, "output")
-		df_imp = group(df_imp, ["year_act", "commodity"], "product", 0.0, yr)
+		tecs_imp = [x for x in set(self.scenario.set("technology")) if x.endswith("_imp")]
+		df_imp, df2_imp = self.model_output(tecs_imp, nodeloc, "output")
+		df_imp = self.group(df_imp, ["year_act", "commodity"], "product", 0.0, yr)
 		# adding historical data
-		df_hist = add_history(msg, tecs_imp, nodeloc, df2_imp, "commodity")
-		df_imp = com_order((df_hist + df_imp).fillna(0), order)
+		df_hist = self.add_history(tecs_imp, nodeloc, df2_imp, "commodity")
+		df_imp = self.com_order((df_hist + df_imp).fillna(0), order)
 		if not df_imp.empty:
 			df = df.add(df_imp, fill_value=0)
 
 		# Export technologies
-		tecs_exp = [x for x in list(msg.set("technology")) if "_exp" in x]
-		df_exp, df2_exp = model_output(msg, tecs_exp, nodeloc, "output")
-		df_exp = group(df_exp, ["year_act", "commodity"], "product", 0.0, yr)
+		tecs_exp = [x for x in list(self.scenario.set("technology")) if "_exp" in x]
+		df_exp, df2_exp = self.model_output(tecs_exp, nodeloc, "output")
+		df_exp = self.group(df_exp, ["year_act", "commodity"], "product", 0.0, yr)
 		# adding historical data
-		df_hist = add_history(msg, tecs_exp, nodeloc, df2_exp, "commodity")
-		df_exp = com_order((df_hist + df_exp).fillna(0), order)
+		df_hist = self.add_history(tecs_exp, nodeloc, df2_exp, "commodity")
+		df_exp = self.com_order((df_hist + df_exp).fillna(0), order)
 		if not df_exp.empty:
 			df = df.add(-df_exp, fill_value=0)
 
 		# Production + import - exports
-		alldf["Primary energy supply " + unitname] = com_order(df, order) * unitc
+		alldf["Primary energy supply " + unitname] = self.com_order(df, order) * unitc
 
 		# 4.2) Useful consumption
-		tecs = list(set(msg.par("output", {"level": ["useful"]}).technology))
-		df, df2 = model_output(msg, tecs, nodeloc, "output")
-		df = group(df, ["year_act", "commodity"], "product", 0.0, yr)
+		tecs = list(set(self.scenario.par("output", {"level": ["useful"]}).technology))
+		df, df2 = self.model_output(tecs, nodeloc, "output")
+		df = self.group(df, ["year_act", "commodity"], "product", 0.0, yr)
 		alldf["Useful energy " + unitname] = df * unitc
 
 		# 4.3) Final energy consumption
 		# Final energy consumption by source
-		tecs = list(set(msg.par("output", {"level": ["final"]}).technology))
-		df, df2 = model_output(msg, tecs, nodeloc, "output")
-		df = group(df, ["year_act", "commodity"], "product", 0.0, yr)
+		tecs = list(set(self.scenario.par("output", {"level": ["final"]}).technology))
+		df, df2 = self.model_output(tecs, nodeloc, "output")
+		df = self.group(df, ["year_act", "commodity"], "product", 0.0, yr)
 		# adding historical data
-		df_hist = add_history(msg, tecs, nodeloc, df2, "commodity")
-		df = com_order((df_hist + df).fillna(0), order)
+		df_hist = self.add_history(tecs, nodeloc, df2, "commodity")
+		df = self.com_order((df_hist + df).fillna(0), order)
 		alldf["Final energy consumption " + unitname] = df * unitc
 
 		# 5) Energy trade
 		# 5.1) Exports
-		df, df2 = model_output(msg, tecs_exp, nodeloc, "output")
-		df = group(df, ["year_act", "commodity"], "product", 0.0, yr)
+		df, df2 = self.model_output(tecs_exp, nodeloc, "output")
+		df = self.group(df, ["year_act", "commodity"], "product", 0.0, yr)
 		# adding historical data
-		df_hist = add_history(msg, tecs_exp, nodeloc, df2, "commodity")
-		df = com_order((df_hist + df).fillna(0), order)
+		df_hist = self.add_history(tecs_exp, nodeloc, df2, "commodity")
+		df = self.com_order((df_hist + df).fillna(0), order)
 		alldf["Energy exports " + unitname] = df * unitc
 
 		# 5.2) Imports
-		df, df2 = model_output(msg, tecs_imp, nodeloc, "output")
-		df = group(df, ["year_act", "commodity"], "product", 0.0, yr)
+		df, df2 = self.model_output(tecs_imp, nodeloc, "output")
+		df = self.group(df, ["year_act", "commodity"], "product", 0.0, yr)
 		# adding historical data
-		df_hist = add_history(msg, tecs_imp, nodeloc, df2, "commodity")
-		df = com_order((df_hist + df).fillna(0), order)
+		df_hist = self.add_history(tecs_imp, nodeloc, df2, "commodity")
+		df = self.com_order((df_hist + df).fillna(0), order)
 		alldf["Energy imports " + unitname] = df * unitc
 
 		# 6) Emissions
 		ems = ["TCE"]
-		df1 = msg.var("EMISS", {"emission": ems, "node": nodeloc})
-		alldf["Total GHG emissions (MtCeq)"] = group(
+		df1 = self.scenario.var("EMISS", {"emission": ems, "node": nodeloc})
+		alldf["Total GHG emissions (MtCeq)"] = self.group(
 			df1, ["year", "emission"], "lvl", 0.0, yr
 		)
 
@@ -1978,3 +1975,4 @@ class Plotter_MSG():
 		writer_xls.close()
 		os.chdir(cwd)
 		return alldf
+
