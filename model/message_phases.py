@@ -1005,7 +1005,7 @@ class Plotter_MSG:
 		parname = "historical_activity"
 		act_hist = self.scenario.par(parname, {"technology": tec, "year_act": plotyrs})
 		act_hist = act_hist[["technology", "year_act", "value"]]
-		act_hist = act_hist.pivot(index="year_act", columns="technology").fillna(0)
+		act_hist = pd.pivot_table(act_hist,index="year_act", columns="technology").fillna(0)
 		act_hist = act_hist[act_hist.columns[(act_hist > 0).any()]]
 		act_hist.columns = act_hist.columns.droplevel(0)
 		return act_hist
@@ -1485,14 +1485,14 @@ class Plotter_MSG:
 		ppl_cap_new = cap_new.loc[(cap_new.technology.isin(tec)) & (cap_new.lvl > 0)][
 			["technology", "year_vtg", "lvl"]
 		]
-		ppl_cap_new = ppl_cap_new.pivot(index="year_vtg", columns="technology")
+		ppl_cap_new = pd.pivot_table(ppl_cap_new,index="year_vtg", columns="technology").fillna(0)
 		ppl_cap_new.columns = ppl_cap_new.columns.droplevel(0)
 
 		# Power plant historical capacity
 		ppl_cap_hist = cap_hist.loc[(cap_hist.technology.isin(tec)) & (cap_hist.value > 0)][
 			["technology", "year_vtg", "value"]
 		]
-		ppl_cap_hist = ppl_cap_hist.pivot(index="year_vtg", columns="technology")
+		ppl_cap_hist = pd.pivot_table(ppl_cap_hist,index="year_vtg", columns="technology").fillna(0)
 		ppl_cap_hist.columns = ppl_cap_hist.columns.droplevel(0)
 
 		cap_new_tot = (ppl_cap_new.add(ppl_cap_hist, fill_value=0)).fillna(0)
@@ -1807,19 +1807,25 @@ class Plotter_MSG:
 			"fuel oil": "firebrick",
 			"fueloil": "firebrick",
 			"gas": "aqua",
+			"gas_weu": "olive",
 			"gases": "aqua",
 			"gasification": "aqua",
 			"geothermal": "tan",
 			"heat": "red",
 			"heat pump (gas)": "darkturquoise",
+			"heat pump (el)" : "turquoise",
 			"heavy fuel oil": "firebrick",
 			"hydro": "royalblue",
 			"hydrogen": "sienna",
+			"i_feed": "green",
+			"i_spec": "salmon",
+			"i_therm": "red",
 			"imports": "lightcoral",
 			"industry": "darkred",
 			"light oil": "salmon",
 			"lightoil": "salmon",
 			"liquids": "royalblue",
+			"LNG": "yellow",
 			"methanol": "darkgreen",
 			"natural gas (CC)": "aqua",
 			"natural gas (ST + CT)": "darkturquoise",
@@ -1830,6 +1836,8 @@ class Plotter_MSG:
 			"others": "lightgrey",
 			"production": "darkblue",
 			"production (unconv.)": "skyblue",
+			"rc_spec": "darkblue",
+			"rc_therm": "firebrick",
 			"refinery": "gray",
 			"solar": "gold",
 			"solar CSP": "coral",
@@ -1936,6 +1944,7 @@ class Plotter_MSG:
 				# indices = np.linspace(0, cmap.N, len(dfs.columns))
 				# my_colors = [cmap(int(i)) for i in indices]
 				my_colors = [color_map.get(x) for x in df.columns]
+				my_colors = ["peru" if i == None else i for i in my_colors]
 				df.index.name = None
 				df.plot(
 					ax=ax,
