@@ -217,14 +217,15 @@ class MESSAGE_CA:
 					
 					# investment cost
 					inv_cost_df = message_ix.make_df("inv_cost", 
-							node_loc=provinces, 
+							#node_loc=provinces, 
 							technology=tech,
 							year_vtg=years,
 							level=tech_data["inv_cost_2020"][0]["cost_level"],
 							value=tech_data['inv_cost_2020'][1]["cost_value"],
 							time=tech_data["time"],
 							unit=tech_data["unit"][0]["cost"]
-						)
+						).pipe(broadcast, node_loc=provinces)
+					
 					self.scenario.add_par('inv_cost', inv_cost_df)
 					
 					# construction time
@@ -910,6 +911,7 @@ class MESSAGE_CA:
 		use_reporter = config['post_process']['generate_reporter_output']
 		solve = config['model']['solve']
 		to_excel = config['post_process']['export_to_xlsx']
+		add_techs = config["pre_process"]["add_technology"]["add_techs"]
 
 		#TODO add option for SSP
 		# ssp = 'SSP2' 
@@ -940,8 +942,8 @@ class MESSAGE_CA:
 			path_to_obps_data = script_dir / scenario_folder
 			apply_obps_baseline(scenario=scenario_folder, data_file_path=path_to_obps_data)
 		
-		
-		#self.add_technology(techs_file=f"{scenario_folder}/technology.yaml")
+		if add_techs:
+			self.add_technology(techs_file=f"{scenario_folder}/technology.yaml")
 
 		end = time.time()
 		print(f'\n==================================================\n\
@@ -974,8 +976,202 @@ class Plotter_MSG:
 	
 	def __init__(self,scenario):
 		self.scenario = scenario # MESSAGE scenario object
+		self.color_map = {
+		"CH4-AFOLU": "darkgreen",
+		"CH4-Other": "lime",
+		"CO2-AFOLU": "dimgrey",
+		"CO2-Other": "lightgrey",
+		"F-Gases": "black",
+		"N2O-AFOLU": "maroon",
+		"N2O-Other": "red",
+		"Other": "orange",
+		"TCE": "black",
+		"biomass": "green",
+		"biomass (modern)": "lightgreen",
+		"biomass (solids)": "lightgreen",
+		"biomass (traditional)": "green",
+		"buildings": "green",
+		"coal": "black",
+		"coal (solids)": "black",
+		"crudeoil": "red",
+		"district heat": "red",
+		"electr": "purple",
+		"electricity": "purple",
+		"electricity generation": "purple",
+		"ethanol": "lightgreen",
+		"exports": "blueviolet",
+		"fuel oil": "firebrick",
+		"fueloil": "firebrick",
+		"gas": "aqua",
+		"gas_weu": "olive",
+		"gases": "aqua",
+		"gasification": "aqua",
+		"geothermal": "tan",
+		"heat": "red",
+		"heat pump (gas)": "darkturquoise",
+		"heat pump (el)" : "turquoise",
+		"heavy fuel oil": "firebrick",
+		"hydro": "royalblue",
+		"hydrogen": "sienna",
+		"i_feed": "green",
+		"i_spec": "salmon",
+		"i_therm": "red",
+		"imports": "lightcoral",
+		"industry": "darkred",
+		"light oil": "salmon",
+		"lightoil": "salmon",
+		"liquids": "royalblue",
+		"LNG": "yellow",
+		"methanol": "darkgreen",
+		"natural gas (CC)": "aqua",
+		"natural gas (ST + CT)": "darkturquoise",
+		"non-commercial": "darkgreen",
+		"non-energy (feedstock)": "darkblue",
+		"nuclear": "yellow",
+		"oil": "red",
+		"others": "lightgrey",
+		"production": "darkblue",
+		"production (unconv.)": "skyblue",
+		"rc_spec": "darkblue",
+		"rc_therm": "firebrick",
+		"refinery": "gray",
+		"solar": "gold",
+		"solar CSP": "coral",
+		"solar PV": "gold",
+		"transport": "grey",
+		"wind": "skyblue",
+		"wind offshore": "dodgerblue",
+		"wind onshore": "skyblue",
+		}
 
-	# 1) Modules and functions for creating the plotting dataframes
+		# Minimum value as % of max value to show in the graph
+		self.min_val = 0.02
+		self.min_abs = 2  # min abs value to show in the plots
+		self.renaming = {
+			"biomass_nc": "biomass (traditional)",
+			"biomass_rc": "biomass (modern)",
+			"coal_rc": "coal",
+			"crudeoil": "oil",
+			"d_heat": "district heat",
+			"elec_rc": "electric heating",
+			"elec_trp": "electric transport",
+			"electr": "electricity",
+			"electr_eur_afr": "electricity",
+			"foil_rc": "heavy fuel oil",
+			"fueloil": "heavy fuel oil",
+			"gas_rc": "gas",
+			"heat_rc": "district heat",
+			"hp_el_rc": "heat pump (el)",
+			"hp_gas_rc": "heat pump (gas)",
+			"lh2": "hydrogen",
+			"lightoil": "light oil",
+			"loil_rc": "light oil",
+			"solar_pv": "solar",
+			"solar_csp": "solar",
+			"solar_rc": "solar",
+			"solar_th": "solar",
+			"sp_el_I": "electricity",
+			"sp_el_RC": "electricity",
+			"stor_ppl": "storage_loss",
+			"wind_onshore": "wind",
+			"wind_offshore": "wind",
+		}
+		
+		# Order of commodities in the results
+		self.crudes = [x for x in set(self.scenario.set("commodity")) if "crude_" in x]
+		self.gases = [x for x in set(self.scenario.set("commodity")) if "gas_" in x]
+		self.order = (
+			["coal", "caol_rc", "coal_i", "crudeoil"]
+			+ self.crudes
+			+ ["fueloil", "foil_rc", "foil_i", "lightoil", "loil_rc", "loil_i"]
+			+ self.gases
+			+ [
+				"biomass",
+				"biomass_nc",
+				"biomass_rc",
+				"d_heat",
+				"elec_rc",
+				"electr",
+				"ethanol",
+				"gas",
+				"gas_rc",
+				"hp_el_rc",
+				"hp_gas_rc",
+				"hydro",
+				"hydrogen",
+				"methanol",
+				"nuclear",
+				"others",
+				"solar_csp",
+				"solar_pv",
+				"solar_rc",
+				"sp_el_I",
+				"sp_el_RC",
+				"wind_offshore",
+				"wind_onshore",
+			]
+		)
+
+		# Unit conversion
+		self.unitc = 8.76 * 3.6  # Conversion from GWa to PJ
+		self.unitname = "(PJ)"
+
+		self.unit_el = 8760 / 1000  # Conversion from GWa to TWh
+		self.unitname_el = "(TWh)"
+
+		self.unit_cap = 1000  # Conversion from GW to MW
+		self.unitname_cap = "(MW)"
+		
+		# Graphing parameters
+		self.kind = "bar"
+		self.dict_plot = {
+				"Oil supply " + self.unitname: self.kind,
+				"Oil derivative supply " + self.unitname: self.kind,
+				"Oil derivative use " + self.unitname: self.kind,
+				"Gas supply " + self.unitname: self.kind,
+				"Gas utilization " + self.unitname: self.kind,
+				"Coal supply " + self.unitname: self.kind,
+				"Coal utilization " + self.unitname: self.kind,
+				"Biomass supply " + self.unitname: self.kind,
+				"Biomass utilization " + self.unitname: self.kind,
+				"Electricity generation " + self.unitname_el: self.kind,
+				"Power plant capacity " + self.unitname_cap: self.kind,
+				"Power plant new capacity " + self.unitname_cap: self.kind,
+				"Electricity use " + self.unitname_el: self.kind,
+				"Primary energy supply " + self.unitname: self.kind,
+				"Final energy consumption " + self.unitname: self.kind,
+				"Energy use: Transport " + self.unitname: self.kind,
+				"Energy use: Industry " + self.unitname: self.kind,
+				"Energy use: Buildings " + self.unitname: self.kind,
+				"Non-energy use: Feedstock " + self.unitname: self.kind,
+				'Useful energy ' + self.unitname: self.kind,
+				"Energy exports " + self.unitname: self.kind,
+				"Energy imports " + self.unitname: self.kind,
+				"Total GHG emissions (MtCeq)": self.kind,
+			}
+		
+		self.abbrev_prov = {
+			"Alberta": "AB", 
+			"British Columbia": "BC", 
+			"Saskatchewan": "SK", 
+			"Manitoba": "MB",
+			"Ontario": "ON", 
+			"Quebec": "QC", 
+			"New Brunswick": "NB", 
+			"Newfoundland and Labrador": "NL", 
+			"Prince Edward Island": "PE", 
+			"Nova Scotia": "NS", 
+			"Yukon": "YT", 
+			"Northwest Territories": "NT", 
+			"Nunavut": "NU"}
+
+		self.fntsz = 5 # Font size
+		self.fntcol = "dimgray" # Font color
+		self.lw = 0.1 # Line width
+		self.ticksz = -1 # Tick size
+		self.tickwdt = 0.2 # Tick width
+
+	# Modules and functions for creating the plotting dataframes
 	def group(self, df, groupby, result, limit, lyr) -> pd.DataFrame:
 		"""The function groups dataframe df over an index and column."""
 		df = df.groupby(groupby, as_index=False).sum()
@@ -1362,96 +1558,16 @@ class Plotter_MSG:
 		df = df.reindex(new_order, axis=1)
 		return df
 
-	# 2) The main plotting function
-	def plotter(self, case, nodeloc, path, yr_min, yr_max, plots="all", not_plots=[]):
+	# The main plotting function
+	def plotter(self, case, nodeloc, path, yr_min, yr_max, plots="all", not_plots=[]) -> pd.DataFrame:
 
 		# 1) Initialization and importing required data
 		cwd = os.getcwd()
 		os.chdir(path)
 
-		# Minimum value as % of max value to show in the graph
-		min_val = 0.02
-		min_abs = 2  # min abs value to show in the plots
-		renaming = {
-			"biomass_nc": "biomass (traditional)",
-			"biomass_rc": "biomass (modern)",
-			"coal_rc": "coal",
-			"crudeoil": "oil",
-			"d_heat": "district heat",
-			"elec_rc": "electric heating",
-			"elec_trp": "electric transport",
-			"electr": "electricity",
-			"electr_eur_afr": "electricity",
-			"foil_rc": "heavy fuel oil",
-			"fueloil": "heavy fuel oil",
-			"gas_rc": "gas",
-			"heat_rc": "district heat",
-			"hp_el_rc": "heat pump (el)",
-			"hp_gas_rc": "heat pump (gas)",
-			"lh2": "hydrogen",
-			"lightoil": "light oil",
-			"loil_rc": "light oil",
-			"solar_pv": "solar",
-			"solar_csp": "solar",
-			"solar_rc": "solar",
-			"solar_th": "solar",
-			"sp_el_I": "electricity",
-			"sp_el_RC": "electricity",
-			"stor_ppl": "storage_loss",
-			"wind_onshore": "wind",
-			"wind_offshore": "wind",
-		}
-
-		# Order of commodities in the results
-		crudes = [x for x in set(self.scenario.set("commodity")) if "crude_" in x]
-		gases = [x for x in set(self.scenario.set("commodity")) if "gas_" in x]
-		order = (
-			["coal", "caol_rc", "coal_i", "crudeoil"]
-			+ crudes
-			+ ["fueloil", "foil_rc", "foil_i", "lightoil", "loil_rc", "loil_i"]
-			+ gases
-			+ [
-				"biomass",
-				"biomass_nc",
-				"biomass_rc",
-				"d_heat",
-				"elec_rc",
-				"electr",
-				"ethanol",
-				"gas",
-				"gas_rc",
-				"hp_el_rc",
-				"hp_gas_rc",
-				"hydro",
-				"hydrogen",
-				"methanol",
-				"nuclear",
-				"others",
-				"solar_csp",
-				"solar_pv",
-				"solar_rc",
-				"sp_el_I",
-				"sp_el_RC",
-				"wind_offshore",
-				"wind_onshore",
-			]
-		)
-		# Prepration for Excel writings
-		writer_xls = pd.ExcelWriter(path + "\\" + case + ".xlsx", engine="xlsxwriter")
-
 		# Checking if the scenario has a solution
 		if not self.scenario.has_solution():
 			raise ("Submitted scenario has no solution to plot!")
-
-		# Unit conversion
-		unitc = 8.76 * 3.6  # Conversion from GWa to PJ
-		unitname = "(PJ)"
-
-		unit_el = 8760 / 1000  # Conversion from GWa to TWh
-		unitname_el = "(TWh)"
-
-		unit_cap = 1000  # Conversion from GW to MW
-		unitname_cap = "(MW)"
 
 		if not self.scenario.set("cat_year", {"type_year": "lastmodelyear"}).empty:
 			last_yr = self.scenario.set("cat_year", {"type_year": "lastmodelyear"})["year"].item()
@@ -1509,36 +1625,25 @@ class Plotter_MSG:
 			]
 			d_stor = d_stor.groupby(["year_act"]).mean()
 			elec["stor_ppl"] *= -d_stor["value"]
-			elec.rename(renaming, axis=1, inplace=True)
+			elec.rename(self.renaming, axis=1, inplace=True)
 
 		elec = self.mappings(plotyrs, elec, groupby="technology")
 		ppl_cap = self.mappings(plotyrs, ppl_cap, groupby="technology")
 		cap_new_tot = self.mappings(plotyrs, cap_new_tot, groupby="technology")
 
-		alldf["Electricity generation " + unitname_el] = elec * unit_el
-		alldf["Power plant capacity " + unitname_cap] = ppl_cap * unit_cap
-		alldf["Power plant new capacity " + unitname_cap] = cap_new_tot * unit_cap
+		alldf["Electricity generation " + self.unitname_el] = elec * self.unit_el
+		alldf["Power plant capacity " + self.unitname_cap] = ppl_cap * self.unit_cap
+		alldf["Power plant new capacity " + self.unitname_cap] = cap_new_tot * self.unit_cap
 
 		# 2.2) Electricity usage
 		tecs = list(
 			set(self.scenario.par("input", {"commodity": "electr", "level": "final"}).technology)
 		)
 		tecs = tecs + ["stor_ppl"]
-		abbrev_prov = {"Alberta": "AB", 
-			"British Columbia": "BC", 
-			"Saskatchewan": "SK", 
-			"Manitoba": "MB",
-			"Ontario": "ON", 
-			"Quebec": "QC", 
-			"New Brunswick": "NB", 
-			"Newfoundland and Labrador": "NL", 
-			"Prince Edward Island": "PE", 
-			"Nova Scotia": "NS", 
-			"Yukon": "YT", 
-			"Northwest Territories": "NT", 
-			"Nunavut": "NU"}
 
 		for current_node in nodeloc:
+			# Prepration for Excel writings
+			writer_xls = pd.ExcelWriter(path + "\\" + case + f"_{current_node}" + ".xlsx", engine="xlsxwriter")
 			df, df2 = self.model_output(tecs, current_node, "input", "electr")
 			df = self.group(df, ["year_act", "technology"], "product", 0.0, yr)
 
@@ -1552,7 +1657,7 @@ class Plotter_MSG:
 					axis=1,
 				)
 			)
-			alldf["Electricity use " + unitname_el] = df * unit_el
+			alldf["Electricity use " + self.unitname_el] = df * self.unit_el
 
 				# 2.3) Natural Gas supply (incl. import) and usage
 			gas_tecs = ["gas_t_d", "gas_t_d_ch4", "gas_bal"]
@@ -1562,7 +1667,7 @@ class Plotter_MSG:
 			# adding historical data
 			df_hist = self.add_history(tecs, current_node, df2, "technology")
 			df = (df_hist + df).fillna(0)
-			alldf["Gas supply " + unitname] = self.mappings(plotyrs, df) * unitc
+			alldf["Gas supply " + self.unitname] = self.mappings(plotyrs, df) * self.unitc
 
 				# Natural gas usage
 			gas_tecs = ["gas_t_d", "gas_t_d_ch4", "gas_bal"]
@@ -1572,7 +1677,7 @@ class Plotter_MSG:
 			# adding historical data
 			df_hist = self.add_history(tecs, current_node, df2, "technology")
 			df = (df_hist + df).fillna(0)
-			alldf["Gas utilization " + unitname] = self.mappings(plotyrs, df) * unitc
+			alldf["Gas utilization " + self.unitname] = self.mappings(plotyrs, df) * self.unitc
 
 				# 2.4) Coal supply and utilization
 			coal_tecs = ["coal_t_d", "coal_bal", "coal_exp"]
@@ -1584,7 +1689,7 @@ class Plotter_MSG:
 			# adding historical data
 			df_hist = self.add_history(tecs, current_node, df2, "technology")
 			df = (df + df_hist).fillna(0)
-			alldf["Coal supply " + unitname] = self.mappings(plotyrs, df) * unitc
+			alldf["Coal supply " + self.unitname] = self.mappings(plotyrs, df) * self.unitc
 
 				# Coal utilization
 			coal_tecs = ["coal_t_d", "coal_bal", "coal_extr", "coal_extr_ch4"]
@@ -1596,7 +1701,7 @@ class Plotter_MSG:
 			# adding historical data
 			df_hist = self.add_history(tecs, current_node, df2, "technology")
 			df = (df + df_hist).fillna(0)
-			alldf["Coal utilization " + unitname] = self.mappings(plotyrs, df) * unitc
+			alldf["Coal utilization " + self.unitname] = self.mappings(plotyrs, df) * self.unitc
 
 				# 2.5) Oil derivatives supply and use
 			tecs = list(
@@ -1612,7 +1717,7 @@ class Plotter_MSG:
 			# adding historical data
 			df_hist = self.add_history(tecs, current_node, df2, "technology")
 			df = (df + df_hist).fillna(0)
-			alldf["Oil derivative supply " + unitname] = self.mappings(plotyrs, df) * unitc
+			alldf["Oil derivative supply " + self.unitname] = self.mappings(plotyrs, df) * self.unitc
 
 				# Oil derivatives utilisation
 			tecs = list(
@@ -1624,7 +1729,7 @@ class Plotter_MSG:
 			# adding historical data
 			df_hist = self.add_history(tecs, current_node, df2, "technology")
 			df = (df + df_hist).fillna(0)
-			alldf["Oil derivative use " + unitname] = self.mappings(plotyrs, df) * unitc
+			alldf["Oil derivative use " + self.unitname] = self.mappings(plotyrs, df) * self.unitc
 
 				# 2.6) Oil supply
 			tecs = list(
@@ -1636,7 +1741,7 @@ class Plotter_MSG:
 			# adding historical data
 			df_hist = self.add_history(tecs, current_node, df2, "technology")
 			df = (df + df_hist).fillna(0)
-			alldf["Oil supply " + unitname] = self.mappings(plotyrs, df) * unitc
+			alldf["Oil supply " + self.unitname] = self.mappings(plotyrs, df) * self.unitc
 
 				# 2.7) Biomass provision
 			tecs = list(
@@ -1651,7 +1756,7 @@ class Plotter_MSG:
 			# adding historical data
 			df_hist = self.add_history(tecs, current_node, df2, "technology")
 			df = (df + df_hist).fillna(0)
-			alldf["Biomass supply " + unitname] = self.mappings(plotyrs, df) * unitc
+			alldf["Biomass supply " + self.unitname] = self.mappings(plotyrs, df) * self.unitc
 
 				# Biomass utilisation
 			tecs = list(
@@ -1667,7 +1772,7 @@ class Plotter_MSG:
 			# adding historical data
 			df_hist = self.add_history(tecs, current_node, df2, "technology")
 			df = (df + df_hist).fillna(0)
-			alldf["Biomass utilization " + unitname] = self.mappings(plotyrs, df) * unitc
+			alldf["Biomass utilization " + self.unitname] = self.mappings(plotyrs, df) * self.unitc
 
 				# 3) Sector related results
 			# 3.1) Transport
@@ -1676,8 +1781,8 @@ class Plotter_MSG:
 			df = self.group(df, ["year_act", "commodity"], "product", 0.0, yr)
 			# adding historical data
 			df_hist = self.add_history(tecs, current_node, df2, "commodity")
-			df = self.com_order((df_hist + df).fillna(0), order)
-			alldf["Energy use: Transport " + unitname] = df * unitc
+			df = self.com_order((df_hist + df).fillna(0), self.order)
+			alldf["Energy use: Transport " + self.unitname] = df * self.unitc
 
 				# 3.2) Industry
 			tecs = list(set(self.scenario.par("output", {"commodity": ["i_spec", "i_therm"]}).technology))
@@ -1685,8 +1790,8 @@ class Plotter_MSG:
 			df = self.group(df, ["year_act", "commodity"], "product", 0.0, yr)
 			# adding historical data
 			df_hist = self.add_history(tecs, current_node, df2, "commodity")
-			df = self.com_order((df_hist + df).fillna(0), order)
-			alldf["Energy use: Industry " + unitname] = df * unitc
+			df = self.com_order((df_hist + df).fillna(0), self.order)
+			alldf["Energy use: Industry " + self.unitname] = df * self.unitc
 
 				# 3.3) Non-energy (feedstock) use in Industry
 			tecs = list(set(self.scenario.par("output", {"commodity": ["i_feed"]}).technology))
@@ -1695,8 +1800,8 @@ class Plotter_MSG:
 
 				# adding historical data
 			df_hist = self.add_history(tecs, current_node, df2, "commodity")
-			df = self.com_order((df_hist + df).fillna(0), order)
-			alldf["Non-energy use: Feedstock " + unitname] = df * unitc
+			df = self.com_order((df_hist + df).fillna(0), self.order)
+			alldf["Non-energy use: Feedstock " + self.unitname] = df * self.unitc
 
 				# 3.4) Residencial and commercial
 			tecs = list(
@@ -1711,8 +1816,8 @@ class Plotter_MSG:
 
 				# adding historical data
 			df_hist = self.add_history(tecs, current_node, df2, "technology")
-			df = self.com_order((df_hist + df).fillna(0), order)
-			alldf["Energy use: Buildings " + unitname] = df * unitc
+			df = self.com_order((df_hist + df).fillna(0), self.order)
+			alldf["Energy use: Buildings " + self.unitname] = df * self.unitc
 
 				# 4) Energy balances
 			# 4.1) Primary energy : production + imports - exports
@@ -1721,7 +1826,7 @@ class Plotter_MSG:
 			df = self.group(df, ["year_act", "commodity"], "product", 0.0, yr)
 			# adding historical data
 			df_hist = self.add_history(tecs, current_node, df2, "commodity")
-			df = self.com_order((df_hist + df).fillna(0), order)
+			df = self.com_order((df_hist + df).fillna(0), self.order)
 
 				# Renewables
 			tecs = list(set(self.scenario.par("input", {"level": ["renewable"]}).technology))
@@ -1729,7 +1834,7 @@ class Plotter_MSG:
 			df_re = self.group(df_re, ["year_act", "commodity"], "product", 0.0, yr)
 			# adding historical data
 			df_hist = self.add_history(tecs, current_node, df2, "commodity")
-			df = df.add(self.com_order((df_hist + df_re).fillna(0), order), fill_value=0)
+			df = df.add(self.com_order((df_hist + df_re).fillna(0), self.order), fill_value=0)
 
 				# Import technologies
 			tecs_imp = [x for x in set(self.scenario.set("technology")) if x.endswith("_imp")]
@@ -1737,7 +1842,7 @@ class Plotter_MSG:
 			df_imp = self.group(df_imp, ["year_act", "commodity"], "product", 0.0, yr)
 			# adding historical data
 			df_hist = self.add_history(tecs_imp, current_node, df2_imp, "commodity")
-			df_imp = self.com_order((df_hist + df_imp).fillna(0), order)
+			df_imp = self.com_order((df_hist + df_imp).fillna(0), self.order)
 			if not df_imp.empty:
 				df = df.add(df_imp, fill_value=0)
 
@@ -1747,18 +1852,18 @@ class Plotter_MSG:
 			df_exp = self.group(df_exp, ["year_act", "commodity"], "product", 0.0, yr)
 			# adding historical data
 			df_hist = self.add_history(tecs_exp, current_node, df2_exp, "commodity")
-			df_exp = self.com_order((df_hist + df_exp).fillna(0), order)
+			df_exp = self.com_order((df_hist + df_exp).fillna(0), self.order)
 			if not df_exp.empty:
 				df = df.add(-df_exp, fill_value=0)
 
 				# Production + import - exports
-			alldf["Primary energy supply " + unitname] = self.com_order(df, order) * unitc
+			alldf["Primary energy supply " + self.unitname] = self.com_order(df, self.order) * self.unitc
 
 				# 4.2) Useful consumption
 			tecs = list(set(self.scenario.par("output", {"level": ["useful"]}).technology))
 			df, df2 = self.model_output(tecs, current_node, "output")
 			df = self.group(df, ["year_act", "commodity"], "product", 0.0, yr)
-			alldf["Useful energy " + unitname] = df * unitc
+			alldf["Useful energy " + self.unitname] = df * self.unitc
 
 				# 4.3) Final energy consumption
 			# Final energy consumption by source
@@ -1767,25 +1872,25 @@ class Plotter_MSG:
 			df = self.group(df, ["year_act", "commodity"], "product", 0.0, yr)
 			# adding historical data
 			df_hist = self.add_history(tecs, current_node, df2, "commodity")
-			df = self.com_order((df_hist + df).fillna(0), order)
-			alldf["Final energy consumption " + unitname] = df * unitc
+			df = self.com_order((df_hist + df).fillna(0), self.order)
+			alldf["Final energy consumption " + self.unitname] = df * self.unitc
 
-				# 5) Energy trade
+			# 5) Energy trade
 			# 5.1) Exports
 			df, df2 = self.model_output(tecs_exp, current_node, "output")
 			df = self.group(df, ["year_act", "commodity"], "product", 0.0, yr)
 			# adding historical data
 			df_hist = self.add_history(tecs_exp, current_node, df2, "commodity")
-			df = self.com_order((df_hist + df).fillna(0), order)
-			alldf["Energy exports " + unitname] = df * unitc
+			df = self.com_order((df_hist + df).fillna(0), self.order)
+			alldf["Energy exports " + self.unitname] = df * self.unitc
 
 				# 5.2) Imports
 			df, df2 = self.model_output(tecs_imp, current_node, "output")
 			df = self.group(df, ["year_act", "commodity"], "product", 0.0, yr)
 			# adding historical data
 			df_hist = self.add_history(tecs_imp, current_node, df2, "commodity")
-			df = self.com_order((df_hist + df).fillna(0), order)
-			alldf["Energy imports " + unitname] = df * unitc
+			df = self.com_order((df_hist + df).fillna(0), self.order)
+			alldf["Energy imports " + self.unitname] = df * self.unitc
 
 				# 6) Emissions
 			ems = ["TCE"]
@@ -1794,113 +1899,15 @@ class Plotter_MSG:
 				df1, ["year", "emission"], "lvl", 0.0, yr
 			)
 
-				# 7) Plotting
-			color_map = {
-				"CH4-AFOLU": "darkgreen",
-				"CH4-Other": "lime",
-				"CO2-AFOLU": "dimgrey",
-				"CO2-Other": "lightgrey",
-				"F-Gases": "black",
-				"N2O-AFOLU": "maroon",
-				"N2O-Other": "red",
-				"Other": "orange",
-				"TCE": "black",
-				"biomass": "green",
-				"biomass (modern)": "lightgreen",
-				"biomass (solids)": "lightgreen",
-				"biomass (traditional)": "green",
-				"buildings": "green",
-				"coal": "black",
-				"coal (solids)": "black",
-				"crudeoil": "red",
-				"district heat": "red",
-				"electr": "purple",
-				"electricity": "purple",
-				"electricity generation": "purple",
-				"ethanol": "lightgreen",
-				"exports": "blueviolet",
-				"fuel oil": "firebrick",
-				"fueloil": "firebrick",
-				"gas": "aqua",
-				"gas_weu": "olive",
-				"gases": "aqua",
-				"gasification": "aqua",
-				"geothermal": "tan",
-				"heat": "red",
-				"heat pump (gas)": "darkturquoise",
-				"heat pump (el)" : "turquoise",
-				"heavy fuel oil": "firebrick",
-				"hydro": "royalblue",
-				"hydrogen": "sienna",
-				"i_feed": "green",
-				"i_spec": "salmon",
-				"i_therm": "red",
-				"imports": "lightcoral",
-				"industry": "darkred",
-				"light oil": "salmon",
-				"lightoil": "salmon",
-				"liquids": "royalblue",
-				"LNG": "yellow",
-				"methanol": "darkgreen",
-				"natural gas (CC)": "aqua",
-				"natural gas (ST + CT)": "darkturquoise",
-				"non-commercial": "darkgreen",
-				"non-energy (feedstock)": "darkblue",
-				"nuclear": "yellow",
-				"oil": "red",
-				"others": "lightgrey",
-				"production": "darkblue",
-				"production (unconv.)": "skyblue",
-				"rc_spec": "darkblue",
-				"rc_therm": "firebrick",
-				"refinery": "gray",
-				"solar": "gold",
-				"solar CSP": "coral",
-				"solar PV": "gold",
-				"transport": "grey",
-				"wind": "skyblue",
-				"wind offshore": "dodgerblue",
-				"wind onshore": "skyblue",
-			}
-
-			kind = "bar"
-			dict_plot = {
-				"Oil supply " + unitname: kind,
-				"Oil derivative supply " + unitname: kind,
-				"Oil derivative use " + unitname: kind,
-				"Gas supply " + unitname: kind,
-				"Gas utilization " + unitname: kind,
-				"Coal supply " + unitname: kind,
-				"Coal utilization " + unitname: kind,
-				"Biomass supply " + unitname: kind,
-				"Biomass utilization " + unitname: kind,
-				"Electricity generation " + unitname_el: kind,
-				"Power plant capacity " + unitname_cap: kind,
-				"Power plant new capacity " + unitname_cap: kind,
-				"Electricity use " + unitname_el: kind,
-				"Primary energy supply " + unitname: kind,
-				"Final energy consumption " + unitname: kind,
-				"Energy use: Transport " + unitname: kind,
-				"Energy use: Industry " + unitname: kind,
-				"Energy use: Buildings " + unitname: kind,
-				"Non-energy use: Feedstock " + unitname: kind,
-				'Useful energy ' + unitname: kind,
-				"Energy exports " + unitname: kind,
-				"Energy imports " + unitname: kind,
-				"Total GHG emissions (MtCeq)": kind,
-			}
+			# 7) Plotting
+			
 			plt.style.use("ggplot")
-			fntsz = 5
-			fntcol = "dimgray"
-			lw = 0.1
-			ticksz = -1
-			tickwdt = 0.2
 
-				# Setting tick width
-			plt.rcParams["xtick.major.size"] = ticksz
-			plt.rcParams["xtick.major.width"] = tickwdt
-			plt.rcParams["ytick.major.size"] = ticksz
-			plt.rcParams["ytick.major.width"] = tickwdt
+			# Setting tick width
+			plt.rcParams["xtick.major.size"] = self.ticksz
+			plt.rcParams["xtick.major.width"] = self.tickwdt
+			plt.rcParams["ytick.major.size"] = self.ticksz
+			plt.rcParams["ytick.major.width"] = self.tickwdt
 			plt.rcParams["axes.linewidth"] = 0.1
 
 				# Creating a pdf file for receiving the results
@@ -1913,7 +1920,7 @@ class Plotter_MSG:
 			with PdfPages(
 				path
 				+ "\\{}-msgResults.pdf".format(
-					case + "_" + time.strftime("%m.%d_%H.%M", time.localtime())
+					case + f"_{current_node}_" + time.strftime("%m.%d_%H.%M", time.localtime())
 				)
 			) as pdf:
 				j = 0
@@ -1924,7 +1931,7 @@ class Plotter_MSG:
 					if df.empty:
 						continue
 					# Renaming
-					df.rename(renaming, axis=1, inplace=True)
+					df.rename(self.renaming, axis=1, inplace=True)
 
 						# Adding up columns with the same name
 					df = df.groupby(level=0, axis=1).sum()
@@ -1933,22 +1940,22 @@ class Plotter_MSG:
 					sh_name = subplt.replace("[", "(").replace("]", ")").replace("/", "")
 					if len(sh_name.split(": ")) > 1:
 						sh_name = sh_name.split(": ")[1]
-					df.to_excel(writer_xls, sheet_name=f"{sh_name}-{abbrev_prov[current_node]}")
+					df.to_excel(writer_xls, sheet_name=sh_name)
 
 						# Plotting
 					fig = plt.figure(j)
 					ax = fig.add_subplot(111)
 					box = ax.get_position()
 
-					if subplt in ["Power plant new capacity " + unitname_cap]:
+					if subplt in ["Power plant new capacity " + self.unitname_cap]:
 						ax.set_position([box.x0, box.y0, box.width * 0.8, box.height * 0.6])
 					else:
 						df = df.loc[(df.index >= yr_min) & (df.index <= yr_max)]
 						ax.set_position([box.x0, box.y0, box.width * 0.6, box.height * 0.6])
 
 						# Removing those values lower than min data for plots
-					df = df.loc[:, (df > max(df.max()) * min_val).any()]
-					df = df.loc[:, (df > min_abs).any()]
+					df = df.loc[:, (df > max(df.max()) * self.min_val).any()]
+					df = df.loc[:, (df > self.min_abs).any()]
 
 					if df.empty:
 						print(
@@ -1958,10 +1965,10 @@ class Plotter_MSG:
 						continue
 					# indices = np.linspace(0, cmap.N, len(dfs.columns))
 					# my_colors = [cmap(int(i)) for i in indices]
-					my_colors = [color_map.get(x) for x in df.columns]
+					my_colors = [self.color_map.get(x) for x in df.columns]
 					my_colors = ["peru" if i == None else i for i in my_colors]
 					df.index.name = None
-					plt_title = f"{subplt} in {current_node}"
+					plt_title = f"{subplt} in {self.abbrev_prov[current_node]}"
 					df.plot(
 						ax=ax,
 						kind=kind,
@@ -1969,15 +1976,15 @@ class Plotter_MSG:
 						color=my_colors,
 						grid=None,
 						title=plt_title,
-						linewidth=lw,
+						linewidth=self.lw,
 						width=0.75,
 					)
 
 						# plt.ylabel(subplt, size=fntsz, color=fntcol)
-					plt.title(plt_title, size=fntsz * 2, color=fntcol)
+					plt.title(plt_title, size=self.fntsz * 2, color=self.fntcol)
 					handles, labels = ax.get_legend_handles_labels()
 
-					plt.tick_params(axis="both", which="major", labelsize=fntsz)
+					plt.tick_params(axis="both", which="major", labelsize=self.fntsz)
 					plt.grid(
 						visible=True, which="both", linewidth=0.1, color="silver", linestyle="-"
 					)
@@ -1989,7 +1996,7 @@ class Plotter_MSG:
 						labels[::-1],
 						loc="center left",
 						bbox_to_anchor=(1, 0.5),
-						fontsize=fntsz * 1,
+						fontsize=self.fntsz * 1,
 					)
 
 					alldf[subplt] = df

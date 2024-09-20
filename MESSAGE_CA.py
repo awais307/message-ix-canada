@@ -53,7 +53,7 @@ platform, msg_scenario, msg_folder = msg1.setup_scenario()
 
 msg_plt = Plotter_MSG(msg_scenario)
 nodes = msg_scenario.set('node')[2:]
-msg_plt.plotter(case="test",nodeloc="Alberta",path="./",yr_min=2020, yr_max=2060)
+plots_df = msg_plt.plotter(case="test",nodeloc="Alberta",path="./",yr_min=2020, yr_max=2060)
 
 
 # Remove the model solution (if any) and check out the scenario
