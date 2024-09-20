@@ -165,7 +165,6 @@ class MESSAGE_CA:
 							#time=tech_data["time"],
 							node_loc=provinces,
 						).pipe(same_node).pipe(same_time)
-					input_df.to_csv("Check_input.csv")
 					self.scenario.add_par('input', input_df)
 					
 					# output dataframe
