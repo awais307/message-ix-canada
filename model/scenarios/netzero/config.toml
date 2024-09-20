@@ -11,8 +11,8 @@ add_hydrogen_shares = true
 apply_obps_netzero = false
 apply_obps_baseline = false
 [pre_process.add_technology]
+    add_techs = true
     techs = ["ATR.ccs"] 
-    nodes = ["all"]
 
 
 [data]

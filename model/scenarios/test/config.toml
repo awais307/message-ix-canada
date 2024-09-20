@@ -11,8 +11,8 @@ annotation = "Initial setup for Canadian energy model."
     apply_obps_netzero = false
     apply_obps_baseline = false
     [pre_process.add_technology]
+        add_techs = true
         techs = ["ATR.ccs"] 
-        nodes = ["all"]
 
 
 [data]
