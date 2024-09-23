@@ -143,7 +143,7 @@ class MESSAGE_CA:
 					elif tech_data["node_select"] == "custom":
 						provinces = tech_data["provinces"]
 					else:
-						raise Exception(f"Option {tech_data["node_select"]} not recognized." + 
+						raise Exception(f"Option {tech_data['node_select']} not recognized." + 
 						"Options for node_selct in technology.yaml is either 'all' or 'custom'")
 					
 					# Creating DFs
@@ -1912,10 +1912,10 @@ class Plotter_MSG:
 				# Creating a pdf file for receiving the results
 			# Selecting the plots to be plotted
 			if plots != "all":
-				keys = [x for x in dict_plot.keys() if any([y in x for y in plots])]
-				dict_plot = {x: dict_plot[x] for x in keys}
-			keys = [x for x in dict_plot.keys() if not any([y in x for y in not_plots])]
-			dict_plot = {x: dict_plot[x] for x in keys}
+				keys = [x for x in self.dict_plot.keys() if any([y in x for y in plots])]
+				self.dict_plot = {x: self.dict_plot[x] for x in keys}
+			keys = [x for x in self.dict_plot.keys() if not any([y in x for y in not_plots])]
+			self.dict_plot = {x: self.dict_plot[x] for x in keys}
 			with PdfPages(
 				path
 				+ "\\{}-msgResults.pdf".format(
@@ -1923,7 +1923,7 @@ class Plotter_MSG:
 				)
 			) as pdf:
 				j = 0
-				for subplt, item in dict_plot.items():
+				for subplt, item in self.dict_plot.items():
 					df = alldf[subplt].copy()
 					kind = item
 					j = j + 1
