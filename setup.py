@@ -12,16 +12,17 @@ setup(
         'numpy',
         'pycountry',
         'ixmp',
-        'message-ix',
-        'pyam',
+        'message_ix >= 3.4.0',
+        'pyam-iamc >= 0.6',
         'scipy',
         'toml',
         'ipykernel',
         'pytest',
+        'click'
     ],
     entry_points={
         'console_scripts': [
-            'message-canada=MESSAGE_CA:messagerun',
+            'message-canada=MESSAGE_CA:messagerun',  
         ],
     },
     extras_require={

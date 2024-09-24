@@ -36,7 +36,7 @@ from model.policies.obps import apply_obps_baseline, apply_obps_netzero
 warnings.filterwarnings("ignore")  # Ignore warnings to keep the output clean
 
 
-class MESSAGE_CA:
+class model:
 
     def __init__(self, scenario_name: str):
         self.scenario = scenario_name
@@ -1097,7 +1097,7 @@ class MESSAGE_CA:
 
         print(f"Report saved to {output_path}")
 
-    def clone_scenario(self, scenario_name) -> tuple:
+    def clone_scenario(self, scenario_name, keep_solution = False) -> tuple:
         """
         Clone an existing scenario
 
@@ -1113,14 +1113,13 @@ class MESSAGE_CA:
         self.scenario = message_ix.Scenario(
             mp, modelName, scenarioName, version=version, annotation=annotation
         )
+        scenario1 = self.scenario.clone(
+					model,
+					scenario_name,
+					keep_solution=keep_solution,
+				)
 
-        caseName = (
-            self.scenario.model
-            + "__"
-            + self.scenario.scenario
-            + "__v"
-            + str(self.scenario.version)
-        )
+        return scenario1
 
     # Full scenario set-up
     def setup_scenario(self) -> tuple:

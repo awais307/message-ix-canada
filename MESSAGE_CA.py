@@ -1,9 +1,9 @@
 import os
 from pathlib import Path
 import click
-from model.message_phases import MESSAGE_CA, Plotter_MSG
+from model.message_phases import model, Plotter_MSG
 
-# Define the main command using Click
+# Options for the CLI
 @click.command()
 @click.option('--scenario', default='baseline', help='Build the scenario folder name.')
 @click.option('--solve', default=False, is_flag=True, help='Solve the model or not.')
@@ -20,7 +20,7 @@ def messagerun(scenario, solve, debug, report, plot):
     print(f"Solve: {solve}, Debug: {debug}, Report: {report}")
 
     # Create model instance
-    msg1 = MESSAGE_CA(scenario_name=scenario)
+    msg1 = model(scenario_name=scenario)
 
     # Set up model with the selected scenario
     platform, msg_scenario, msg_folder = msg1.setup_scenario()
@@ -28,8 +28,9 @@ def messagerun(scenario, solve, debug, report, plot):
     # Plotter
     msg_plt = Plotter_MSG(msg_scenario)
     nodes = msg_scenario.set("node")[2:]
+    #TODO Do we need plots_df here ?
     plots_df = msg_plt.plotter(
-        case="test", nodeloc="Alberta", path="./", yr_min=2020, yr_max=2060
+        case="test", nodeloc= nodes, path="./", yr_min=2020, yr_max=2060
     )
 
     # Remove the model solution (if any) and check out the scenario
@@ -43,6 +44,8 @@ def messagerun(scenario, solve, debug, report, plot):
     if solve:
         print("Solving the model...")
         #TODO Add solve method here
+        #TODO this would need a bit of adjustment on how we take solve.
+        # In future, one could use the messagerun function and cal it manually in notebook if required.
 
     # Debug mode logic
     if debug:
