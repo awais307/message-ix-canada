@@ -1151,17 +1151,17 @@ class Plotter_MSG:
 		
 		self.abbrev_prov = {
 			"Alberta": "AB", 
-			"British Columbia": "BC", 
+			"BritishColumbia": "BC", 
 			"Saskatchewan": "SK", 
 			"Manitoba": "MB",
 			"Ontario": "ON", 
 			"Quebec": "QC", 
-			"New Brunswick": "NB", 
-			"Newfoundland and Labrador": "NL", 
-			"Prince Edward Island": "PE", 
-			"Nova Scotia": "NS", 
+			"NewBrunswick": "NB", 
+			"NewfoundlandandLabrador": "NL", 
+			"PrinceEdwardIsland": "PE", 
+			"NovaScotia": "NS", 
 			"Yukon": "YT", 
-			"Northwest Territories": "NT", 
+			"NorthwestTerritories": "NT", 
 			"Nunavut": "NU"}
 
 		self.fntsz = 5 # Font size
