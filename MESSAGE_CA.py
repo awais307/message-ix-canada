@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 import click
-from model.message_phases import model, Plotter_MSG
+from model.message_phases import model_MSG, Plotter_MSG
 
 # Options for the CLI
 @click.command()
@@ -20,7 +20,7 @@ def messagerun(scenario, solve, debug, report, plot):
     print(f"Solve: {solve}, Debug: {debug}, Report: {report}")
 
     # Create model instance
-    msg1 = model(scenario_name=scenario)
+    msg1 = model_MSG(scenario_name=scenario)
 
     # Set up model with the selected scenario
     platform, msg_scenario, msg_folder = msg1.setup_scenario()
@@ -29,7 +29,7 @@ def messagerun(scenario, solve, debug, report, plot):
     msg_plt = Plotter_MSG(msg_scenario)
     nodes = msg_scenario.set("node")[2:]
     #TODO Do we need plots_df here ?
-    plots_df = msg_plt.plotter(
+    msg_plt.plotter(
         case="test", nodeloc= nodes, path="./", yr_min=2020, yr_max=2060
     )
 

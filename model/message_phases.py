@@ -24,7 +24,6 @@ from matplotlib.backends.backend_pdf import PdfPages
 from message_ix_models.util import (
     broadcast,
     make_matched_dfs,
-    package_data_path,
     same_node,
     same_time,
 )
@@ -36,9 +35,55 @@ from model.policies.obps import apply_obps_baseline, apply_obps_netzero
 warnings.filterwarnings("ignore")  # Ignore warnings to keep the output clean
 
 
-class model:
+class model_MSG:
+    """
+    model_MSG class provides methods to process and validate configuration files,
+    map vintage and active years, add technologies, adjust demands, and handle
+    GDP and population data for a MESSAGEix scenario.
+
+    Methods
+    -------
+    __init__(self, scenario_name: str)
+            Initializes the model_MSG class with the given scenario name and loads
+            configuration files.
+
+    config_validation(self, validated=False)
+            Validates the MESSAGE config file by checking for missing fields.
+
+    map_yv_ya_lt(self, periods: Tuple[int, ...], lt: int, ya: Optional[int] = None) -> pd.DataFrame
+            Generates all meaningful combinations of (vintage year, active year) given periods.
+
+    add_technology(self, techs_file: str)
+            Adds new technologies to the model based on the provided technology YAML file.
+
+    add_hydrogen_shares(self, path: Union[str, Path])
+            Adds hydrogen shares to a MESSAGEix scenario using data from an Excel file.
+
+    process_gdp_population_data(self, path_to_gdp: Union[str, Path], path_to_pop: Union[str, Path]) -> pd.DataFrame
+            Processes GDP and population data for the model and returns a DataFrame with
+            processed data.
+
+    adjust_demands(self)
+            Adjusts demands in the scenario based on population and GDP data.
+
+    add_population_gdp_to_scenario(self, population_data: pd.DataFrame, gdp_data: pd.DataFrame)
+            Adds processed population and GDP data to the scenario.
+    """
 
     def __init__(self, scenario_name: str):
+        """
+        Initialize the scenario with the given name.
+
+        Args:
+                scenario_name (str): The name of the scenario to initialize.
+
+        Attributes:
+                scenario (str): The name of the scenario.
+                sample_config (dict): The configuration loaded from the baseline config.toml file.
+                scenario_path (str): The path to the scenario directory.
+                config_path (str): The path to the scenario's config.toml file.
+                config_file (dict): The configuration loaded from the scenario's config.toml file.
+        """
         self.scenario = scenario_name
         self.sample_config = toml.load(
             os.path.join(os.getcwd(), "model/scenarios/baseline", "config.toml")
@@ -46,8 +91,7 @@ class model:
         self.scenario_path = os.path.join("model/scenarios", scenario_name)
         self.config_path = os.path.join(self.scenario_path, "config.toml")
         self.config_file = toml.load(self.config_path)
-
-    ## Input processing functions ##
+        ## Input processing functions ##
 
     def config_validation(self, validated=False):
         """
@@ -94,8 +138,8 @@ class model:
         Parameters
         ----------
         labels : pandas.DataFrame
-                Each column (dimension) corresponds to one in df. Each row represents one
-                matched set of labels for those dimensions.
+                        Each column (dimension) corresponds to one in df. Each row represents one
+                        matched set of labels for those dimensions.
         lt : int, lifetime
         """
         if not ya:
@@ -291,10 +335,10 @@ class model:
         should be added within this function.
 
         Args:
-                path (str or Path): Path to the Excel file containing hydrogen share data.
+                        path (str or Path): Path to the Excel file containing hydrogen share data.
 
         Returns:
-                None
+                        None
 
         Logic: adds hydrogen shares to the MESSAGEix scenario
         """
@@ -349,11 +393,11 @@ class model:
         Process GDP and population data for the model.
 
         Args:
-                path_to_pop (str or Path): Path to the CSV file containing raw population data.
-                path_to_gdp (str or Path): Path to the CSV file containing raw GDP data.
+                        path_to_pop (str or Path): Path to the CSV file containing raw population data.
+                        path_to_gdp (str or Path): Path to the CSV file containing raw GDP data.
 
         Returns:
-                pd.DataFrame: DataFrame containing processed GDP, population, and GDP per capita data for each province.
+                        pd.DataFrame: DataFrame containing processed GDP, population, and GDP per capita data for each province.
         """
         # Resolve the full paths to the GDP and population data files
         path_to_gdp = Path(path_to_gdp).resolve()
@@ -437,10 +481,10 @@ class model:
         Adjust demands in the scenario based on population and GDP data.
 
         Args:
-                None
+                        None
 
         Returns:
-                pd.DataFrame: DataFrame containing updated demand data.
+                        pd.DataFrame: DataFrame containing updated demand data.
         """
 
         # Define directories for data storage
@@ -662,11 +706,11 @@ class model:
         Add processed population and GDP data to the scenario.
 
         Args:
-                population_data (pd.DataFrame): DataFrame containing processed population data.
-                gdp_data (pd.DataFrame): DataFrame containing processed GDP data.
+                        population_data (pd.DataFrame): DataFrame containing processed population data.
+                        gdp_data (pd.DataFrame): DataFrame containing processed GDP data.
 
         Logic:
-                Adds the processed population and GDP data to the scenario's 'bound_activity_lo' parameter.
+                        Adds the processed population and GDP data to the scenario's 'bound_activity_lo' parameter.
         """
         # Rename columns in the population DataFrame to match the expected format in the scenario
         population_data.rename(
@@ -712,7 +756,7 @@ class model:
         Update the historical activity parameter in the scenario with data from a specified path.
 
         Args:
-                path (str or Path): Path to the historical activity data.
+                        path (str or Path): Path to the historical activity data.
         """
         # Checkout scenario for editing
         self.scenario.check_out()
@@ -743,10 +787,10 @@ class model:
         Balance energy production, import, and export for each province and year.
 
         Args:
-                historical_activity (pd.DataFrame): DataFrame containing historical activity data for each province and year.
+                        historical_activity (pd.DataFrame): DataFrame containing historical activity data for each province and year.
 
         Returns:
-                pd.DataFrame: DataFrame with balanced import and export values.
+                        pd.DataFrame: DataFrame with balanced import and export values.
         """
         # Define the provinces involved in the analysis
         PROVINCES = [
@@ -804,11 +848,11 @@ class model:
             Sum the demand for a given set of technologies within the DataFrame.
 
             Args:
-                    df (pd.DataFrame): DataFrame containing historical activity data.
-                    techs (list): List of technology names to sum demand for.
+                            df (pd.DataFrame): DataFrame containing historical activity data.
+                            techs (list): List of technology names to sum demand for.
 
             Returns:
-                    pd.Series: Series with the summed demand for each province and year.
+                            pd.Series: Series with the summed demand for each province and year.
             """
             return (
                 df[df["technology"].isin(techs)]
@@ -823,14 +867,14 @@ class model:
             Balance the energy production, import, and export for a specific energy type.
 
             Args:
-                    row (pd.Series): Row of data containing production, import, export, and demand values.
-                    prod_col (str): Column name for production data.
-                    imp_col (str): Column name for import data.
-                    exp_col (str): Column name for export data.
-                    demand_col (str): Column name for demand data.
+                            row (pd.Series): Row of data containing production, import, export, and demand values.
+                            prod_col (str): Column name for production data.
+                            imp_col (str): Column name for import data.
+                            exp_col (str): Column name for export data.
+                            demand_col (str): Column name for demand data.
 
             Returns:
-                    pd.Series: Updated row with balanced production, import, and export values.
+                            pd.Series: Updated row with balanced production, import, and export values.
             """
             production = row[prod_col]
             imports = row[imp_col]
@@ -1004,11 +1048,11 @@ class model:
         Generate a report from the MESSAGEix scenario and save it to a CSV file.
 
         Args:
-                output_path (str): The path where the output CSV file will be saved.
-                min_year (int): The minimum year for the report.
-                max_year (int): The maximum year for the report.
-                from_excel (bool): Whether to read the report from an Excel file.
-                unit_correct (bool): Whether to correct units in the report.
+                        output_path (str): The path where the output CSV file will be saved.
+                        min_year (int): The minimum year for the report.
+                        max_year (int): The maximum year for the report.
+                        from_excel (bool): Whether to read the report from an Excel file.
+                        unit_correct (bool): Whether to correct units in the report.
         """
         rep = message_ix.Reporter.from_scenario(
             self.scenario,
@@ -1097,7 +1141,7 @@ class model:
 
         print(f"Report saved to {output_path}")
 
-    def clone_scenario(self, scenario_name, keep_solution = False) -> tuple:
+    def clone_scenario(self, scenario_name, keep_solution=False) -> tuple:
         """
         Clone an existing scenario
 
@@ -1114,10 +1158,10 @@ class model:
             mp, modelName, scenarioName, version=version, annotation=annotation
         )
         scenario1 = self.scenario.clone(
-					model,
-					scenario_name,
-					keep_solution=keep_solution,
-				)
+            model,
+            scenario_name,
+            keep_solution=keep_solution,
+        )
 
         return scenario1
 
@@ -1131,10 +1175,10 @@ class model:
         configuration. The function returns the platform and scenario objects for further use.
 
         Args:
-                None
+                        None
 
         Returns:
-                tuple: A tuple containing the ixmp.Platform object and the message_ix.Scenario object.
+                        tuple: A tuple containing the ixmp.Platform object and the message_ix.Scenario object.
 
         """
 

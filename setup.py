@@ -18,11 +18,12 @@ setup(
         'toml',
         'ipykernel',
         'pytest',
-        'click'
+        'click',
+        'message-ix-models',
     ],
     entry_points={
         'console_scripts': [
-            'message-canada=MESSAGE_CA:messagerun',  
+            'message-canada=MESSAGE_CA:messagerun()',  
         ],
     },
     extras_require={
