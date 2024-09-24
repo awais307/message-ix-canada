@@ -21,7 +21,7 @@
     scenario_folder = "scenarios/baseline"
 
 [model]
-    solve = true
+    solve = false
 
 [post_process]
     generate_reporter_output = false
