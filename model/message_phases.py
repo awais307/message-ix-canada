@@ -15,19 +15,23 @@ import ixmp
 import matplotlib.pyplot as plt
 import message_ix
 import numpy as np
-#####################################################
+
 import pandas as pd
 import pyam
 import toml
 import yaml
 from matplotlib.backends.backend_pdf import PdfPages
-from message_ix_models.util import (broadcast, make_matched_dfs,
-                                    package_data_path, same_node, same_time)
+from message_ix_models.util import (
+    broadcast,
+    make_matched_dfs,
+    package_data_path,
+    same_node,
+    same_time,
+)
 from scipy.optimize import linprog
 
 from model.policies.obps import apply_obps_baseline, apply_obps_netzero
 
-#####################################################
 
 warnings.filterwarnings("ignore")  # Ignore warnings to keep the output clean
 
