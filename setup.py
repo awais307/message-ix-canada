@@ -1,15 +1,30 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='MESSAGEix-Canada',
-    version='1.0',
+    name='MESSAGEix-canada',
+    version='0.1.0',
+    description='An Open Source Integrated Assessment Model for Canada',
+    author='Your Name',
+    author_email='your.email@example.com',
     packages=find_packages(),
-    include_package_data=True,
     install_requires=[
-        'click',  # Add other dependencies as needed
+        'pandas',
+        'numpy',
+        'pycountry',
+        'ixmp',
+        'message-ix',
+        'pyam',
+        'scipy',
+        'toml',
+        'ipykernel',
+        'pytest',
     ],
-    entry_points='''
-        [console_scripts]
-        message-canada=model_script:messagerun
-    ''',
+    entry_points={
+        'console_scripts': [
+            'message-canada=MESSAGE_CA:messagerun',
+        ],
+    },
+    extras_require={
+        'pip': ['geotext', 'message-ix-models'],
+    },
 )
