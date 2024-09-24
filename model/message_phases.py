@@ -1158,7 +1158,7 @@ class model_MSG:
             mp, modelName, scenarioName, version=version, annotation=annotation
         )
         scenario1 = self.scenario.clone(
-            model,
+            modelName,
             scenario_name,
             keep_solution=keep_solution,
         )
