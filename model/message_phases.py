@@ -1248,7 +1248,7 @@ class model_MSG:
 		Model creation time: {round((end - start) / 60)} Min and {round((end - start) % 60)} Sec \
 		\n=================================================="
 		)
-
+		#TODO Change the Solve to function to be able to load it from anywhere
 		if self.solve:
 			start = time.time()
 			try:
@@ -2009,7 +2009,7 @@ class Plotter_MSG:
 		for current_node in nodeloc:
 			# Prepration for Excel writings
 			writer_xls = pd.ExcelWriter(
-				path + "\\" + case + f"_{current_node}" + ".xlsx", engine="xlsxwriter"
+				path / f"{case}_{current_node}.xlsx", engine="xlsxwriter"
 			)
 			df, df2 = self.model_output(tecs, current_node, "input", "electr")
 			df = self.group(df, ["year_act", "technology"], "product", 0.0, yr)
@@ -2355,13 +2355,14 @@ class Plotter_MSG:
 			]
 			self.dict_plot = {x: self.dict_plot[x] for x in keys}
 			with PdfPages(
-				path
-				+ "\\{}-msgResults.pdf".format(
-					case
-					+ f"_{current_node}_"
-					+ time.strftime("%m.%d_%H.%M", time.localtime())
-				)
-			) as pdf:
+					str(path)
+					+ "\\\\{}-msgResults.pdf".format(
+						case
+						+ f"_{current_node}_"
+						+ time.strftime("%m.%d_%H.%M", time.localtime())
+					)
+				) as pdf:
+
 				j = 0
 				for subplt, item in self.dict_plot.items():
 					df = alldf[subplt].copy()
