@@ -128,8 +128,11 @@ class plotter_MSG:
 		# Order of commodities in the results
 		self.crudes = [x for x in set(self.scenario.set("commodity")) if "crude_" in x]
 		self.gases = [x for x in set(self.scenario.set("commodity")) if "gas_" in x]
+		self.gas_tecs = ["gas_t_d", "gas_t_d_ch4", "gas_bal"]
+		self.coal_tecs = {"supply" : ["coal_t_d", "coal_bal", "coal_exp"], 
+                		"utilization": ["coal_t_d", "coal_bal", "coal_extr", "coal_extr_ch4"]}
 		self.order = (
-			["coal", "caol_rc", "coal_i", "crudeoil"]
+			["coal", "coal_rc", "coal_i", "crudeoil"]
 			+ self.crudes
 			+ ["fueloil", "foil_rc", "foil_i", "lightoil", "loil_rc", "loil_i"]
 			+ self.gases
@@ -221,7 +224,7 @@ class plotter_MSG:
 		self.tickwdt = 0.2  # Tick width
 
 	# Modules and functions for creating the plotting dataframes
-	def group(self, df, groupby, result, limit, lyr) -> pd.DataFrame:
+	def group(self, df, groupby, result) -> pd.DataFrame:
 		"""The function groups dataframe df over an index and column."""
 		df = df.groupby(groupby, as_index=False).sum()
 		df = pd.pivot_table(
@@ -553,7 +556,7 @@ class plotter_MSG:
 	# Aggregating results for industry and energy sectors
 	def plotdf_ind(self, tec, com, direction, plotyrs, yr):
 		df_plot_ind = pd.DataFrame(index=plotyrs)
-
+		plot_year = int(yr)
 		inputs = self.scenario.par(direction)
 		inputs = inputs.loc[inputs.year_act.isin(plotyrs)]
 		inputs = inputs.loc[
@@ -599,10 +602,10 @@ class plotter_MSG:
 			df_plot_ind = df_plot_ind.join(df_plot["{}".format(source)])
 
 		others = df_plot_ind.loc[
-			:, (df_plot_ind.ix[yr] <= df_plot_ind.ix[yr].sum() * 0.01)
+			:, (df_plot_ind.loc[plot_year] <= df_plot_ind.loc[plot_year].sum() * 0.01)
 		].sum(axis=1)
 		df_plot_ind = df_plot_ind.loc[
-			:, (df_plot_ind.ix[yr] > df_plot_ind.ix[yr].sum() * 0.01)
+			:, (df_plot_ind.loc[plot_year] > df_plot_ind.loc[plot_year].sum() * 0.01)
 		]
 		df_plot_ind["others"] = others
 
@@ -769,10 +772,10 @@ class plotter_MSG:
 			alldf["Electricity use " + self.unitname_el] = df * self.unit_el
 
 			# 2.3) Natural Gas supply (incl. import) and usage
-			gas_tecs = ["gas_t_d", "gas_t_d_ch4", "gas_bal"]
+			
 			tecs = list(
 				set(self.scenario.par("output", {"commodity": "gas"}).technology)
-				- set(gas_tecs)
+				- set(self.gas_tecs)
 			)
 			df, df2 = self.model_output(tecs, current_node, "output", "gas")
 			df = self.group(df, ["year_act", "technology"], "product", 0.0, yr)
@@ -784,10 +787,9 @@ class plotter_MSG:
 			)
 
 			# Natural gas usage
-			gas_tecs = ["gas_t_d", "gas_t_d_ch4", "gas_bal"]
 			tecs = list(
 				set(self.scenario.par("input", {"commodity": "gas"}).technology)
-				- set(gas_tecs)
+				- set(self.gas_tecs)
 			)
 			df, df2 = self.model_output(tecs, current_node, "input", "gas")
 			df = self.group(df, ["year_act", "technology"], "product", 0.0, yr)
@@ -799,10 +801,9 @@ class plotter_MSG:
 			)
 
 			# 2.4) Coal supply and utilization
-			coal_tecs = ["coal_t_d", "coal_bal", "coal_exp"]
 			tecs = list(
 				set(self.scenario.par("output", {"commodity": "coal"}).technology)
-				- set(coal_tecs)
+				- set(self.coal_tecs["supply"])
 			)
 			df, df2 = self.model_output(tecs, current_node, "output", "coal")
 			df = self.group(df, ["year_act", "technology"], "product", 0.0, yr)
@@ -814,10 +815,9 @@ class plotter_MSG:
 			)
 
 			# Coal utilization
-			coal_tecs = ["coal_t_d", "coal_bal", "coal_extr", "coal_extr_ch4"]
 			tecs = list(
 				set(self.scenario.par("input", {"commodity": "coal"}).technology)
-				- set(coal_tecs)
+				- set(self.coal_tecs["utilization"])
 			)
 			df, df2 = self.model_output(tecs, current_node, "input", "coal")
 			df = self.group(df, ["year_act", "technology"], "product", 0.0, yr)

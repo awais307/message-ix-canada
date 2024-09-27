@@ -1,6 +1,5 @@
 .vscode
 .DS_Store
-model/pre_process/__pycache__/__init__.cpython-38.pyc
 *.pyc
 .vscode
 ed_ma
@@ -9,5 +8,6 @@ ssh_ma.pub
 /MESSAGE_CANADA.egg-info
 *.txt
 /MESSAGEix_Canada.egg-info
-MESSAGEix_canada.egg-info/PKG-INFO
-/model/scenarios/*.xlsx
+
+# Ignore the Plant UML diagrams from the 'out' folder
+/out
