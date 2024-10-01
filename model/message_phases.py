@@ -2457,3 +2457,79 @@ class Plotter_MSG:
 			writer_xls.close()
 		os.chdir(cwd)
 		return alldf
+	
+	
+
+	def basic_report_to_pyam(self, path, output_file):
+		"""
+		Function to process all .xlsx files in a directory, extract region and scenario data,
+		process the data for each sheet, and save the final dataframe as a CSV.
+
+		Args:
+			directory_path (str): Path to the directory containing .xlsx files.
+			output_file (str): Path to save the resulting CSV file.
+
+		Returns:
+			final_df (pd.DataFrame): The concatenated dataframe from all processed .xlsx files.
+		"""
+		
+		# Automatically list all .xlsx files in the directory
+		file_paths = path
+		dfs = []
+
+		# Process each file
+		for file_path in file_paths:
+		# Extract region and scenario from the file name
+			file_name = os.path.basename(file_path)
+			
+			# Split file name using '__' to handle sections like baseline, version, and region
+			parts = file_name.split('__')
+			
+			# Extract scenario, including the version, but without '__' (e.g., 'baseline v4')
+			scenario = f"{parts[1]} {parts[2].split('_')[0]}"  # Extract 'baseline' and 'v4', separated by a space
+			
+			# Extract region from the part after 'v4_'
+			region = parts[2].split('_')[1].split('.')[0]  # Extract region (e.g., 'PrinceEdwardIsland')
+				
+			# Open the Excel file and get sheet names
+			xls = pd.ExcelFile(file_path)
+			sheet_names = xls.sheet_names
+
+			for sheet in sheet_names:
+				df = pd.read_excel(file_path, sheet_name=sheet)
+
+				# Process variable and unit from the sheet name
+				variable, unit = sheet.split(' (')
+				variable = variable.strip()  # Strip spaces from variable
+				unit = unit.strip().rstrip(')')  # Strip spaces from unit and remove closing parenthesis
+
+				# Rename the first column to 'time'
+				df.rename(columns={df.columns[0]: 'time'}, inplace=True)
+
+				# Melt the dataframe to have 'time' as id_vars, variable names in 'variable', and values in 'value'
+				df = pd.melt(df, id_vars=['time'], var_name='variable', value_name='value')
+
+				# Add the unit and processed variable names
+				df['unit'] = unit
+				df['variable'] = variable + '|' + df['variable']
+
+				# Add region and scenario columns
+				df['region'] = region
+				df['scenario'] = scenario
+				df['model'] = 'MESSAGEix-Canada'
+
+				# Append the dataframe to the list
+				dfs.append(df)
+
+		# Concatenate all dataframes into a single dataframe
+		final_df = pd.concat(dfs, ignore_index=True)
+
+		# Filter the dataframe to only include data from 2020 onwards
+		final_df = final_df[final_df['time'] >= 2020]
+
+		# Save the final dataframe to a CSV file
+		final_df.to_csv(output_file, index=False)
+
+		return final_df
+
+
