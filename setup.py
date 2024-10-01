@@ -23,7 +23,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'message-canada=MESSAGE_CA:messagerun',  # Ensure 'MESSAGE_CA' is correct
+            'message-canada=MESSAGE_CA:messagerun',  
         ],
     },
     extras_require={

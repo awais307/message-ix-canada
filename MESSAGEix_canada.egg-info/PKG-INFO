@@ -2,20 +2,13 @@ Metadata-Version: 2.1
 Name: MESSAGEix-canada
 Version: 0.1.0
 Summary: An Open Source Integrated Assessment Model for Canada
+Home-page: UNKNOWN
 Author: Your Name
 Author-email: your.email@example.com
-License-File: LICENSE
-Requires-Dist: pandas
-Requires-Dist: numpy
-Requires-Dist: pycountry
-Requires-Dist: ixmp
-Requires-Dist: message_ix>=3.4.0
-Requires-Dist: pyam-iamc>=0.6
-Requires-Dist: scipy
-Requires-Dist: toml
-Requires-Dist: ipykernel
-Requires-Dist: pytest
-Requires-Dist: click
+License: UNKNOWN
+Platform: UNKNOWN
 Provides-Extra: pip
-Requires-Dist: geotext; extra == "pip"
-Requires-Dist: message-ix-models; extra == "pip"
+License-File: LICENSE
+
+UNKNOWN
+
