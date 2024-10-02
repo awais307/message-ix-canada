@@ -1313,7 +1313,6 @@ class Plotter_MSG:
 			"fuel oil": "firebrick",
 			"fueloil": "firebrick",
 			"gas": "aqua",
-			"gas_weu": "olive",
 			"gases": "aqua",
 			"gasification": "aqua",
 			"geothermal": "tan",
@@ -2529,7 +2528,3 @@ class Plotter_MSG:
 
 		# Save the final dataframe to a CSV file
 		final_df.to_csv(output_file, index=False)
-
-		return final_df
-
-
