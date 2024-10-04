@@ -1,30 +1,46 @@
-ATRccs:
-  name: ATRccs
-  #node_loc: Saskatchewan
-  #node_origin: Alberta
-  node_select: all
-  technology: power plant
-  mode: M1
-  level: primary
-  commodity: 
-    - gas
-  time: year
-  year_vtg: 2020
-  year_act: 2021
-  time_origin: year
-  inp_val: 0
-  out_val: 1
-  unit: "-"
+h2_atr_ccs:
+  # Technology specs: mode, commodities, description
   description: natural gas type technology
-  type: technology
-  provinces: # Only specify if "all" not defined in config.toml
-    - Alberta
-    - Saskatchewan
-  inv_cost_2020: 0
-  fix_cost_2020: 0
-  var_cost_2020: 0
+  mode: M1
+  commodity:
+  # Commodities: inputs and outputs 
+    - input: 
+      - com_name: 
+        - electr
+      - com_value: 
+        - 0.05
+      - com_level: 
+        - primary
+    - output: 
+      - com_name: 
+        - hydrogen
+      - com_value: 
+        - 1
+      - com_level: 
+        - secondary 
+  # Time specifications: lifetime, construction time
+  time: year
   tec_lifetime: 10
-  exo_lr: 0.2
-
-
-
+  construction_time: 5 # Random number of years for now -- CCF
+  # Units for cost and energy
+  unit: 
+    - cost: '-'
+    - energy: '-'
+  # Geographical specs: nodes selection, provinces
+  # Specify "all" below for all provinces in Canada to be selected, or "custom" for a sub-set of provinces
+  node_select: all
+  provinces: 
+    - Alberta
+    #- Saskatchewan
+  # Cost specifications: investment, fiixed, and variable
+  inv_cost_2020: 
+    - cost_level: primary
+    - cost_value: 0
+  fix_cost_2020: 
+    - cost_level: primary
+    - cost_value: 0
+  var_cost_2020:
+    - cost_level: primary
+    - cost_value: 0
+  # Emissions specifications
+  emission: CO2

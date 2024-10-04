@@ -6,13 +6,13 @@
     annotation = "Initial setup for Canadian energy model."
 
 [pre_process]
-    process_historical_data = true
+    process_historical_data = false
     add_hydrogen_shares = false
     apply_obps_netzero = false
     apply_obps_baseline = false
     [pre_process.add_technology]
-        techs = ["ATRccs"] 
-        #nodes = ["all"]
+        add_techs = true
+        techs = ["h2_atr_ccs"] 
 
 
 [data]
@@ -21,7 +21,7 @@
     scenario_folder = "scenarios/baseline"
 
 [model]
-    solve = true
+    solve = false
 
 [post_process]
     generate_reporter_output = false
