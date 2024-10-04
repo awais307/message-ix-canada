@@ -9,10 +9,10 @@ import message_ix
 import numpy as np
 import pandas as pd
 
-from typing import Optional, Tuple, Union
+from typing import Optional, Tuple
 
 
-def config_validation(config_path: str, validated=False):
+def config_validation(config_path: str):
 		"""
 		Function to verify the MESSAGE config file
 
@@ -22,8 +22,7 @@ def config_validation(config_path: str, validated=False):
 		Logic: only checking for missing fields, since additional settings won't hinder
 		model execution, only missing settings will cause the model to fail
 		"""
-		if validated is True:
-			return
+		validated = False
 
 		try:
 			with open(config_path, "r") as config_file:
