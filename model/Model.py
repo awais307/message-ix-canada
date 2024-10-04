@@ -25,7 +25,8 @@ from message_ix_models.util import (
 from scipy.optimize import linprog
 from model.policies.obps import apply_obps_baseline, apply_obps_netzero
 from pathlib import Path
-from typing import Optional, Tuple, Union
+from typing import Union
+from model.utils import (map_yv_ya_lt, config_validation)
 
 warnings.filterwarnings("ignore")  # Ignore warnings to keep the output clean
 
@@ -100,77 +101,6 @@ class model_MSG:
 		self.to_excel = self.config["post_process"]["export_to_xlsx"]
 		self.add_techs = self.config["pre_process"]["add_technology"]["add_techs"]
 		self.mp = ixmp.Platform(name=self.platform_name)
-	## Input processing functions ##
-		
-
-	def config_validation(self, validated=False):
-		"""
-		Function to verify the MESSAGE config file
-
-		Input: path to config.toml file
-		Output: Error, or success messages
-
-		Logic: only checking for missing fields, since additional settings won't hinder
-		model execution, only missing settings will cause the model to fail
-		"""
-		if validated is True:
-			return
-
-		try:
-			with open(self.config_path, "r") as config_file:
-				check_config = toml.load(config_file)
-				print("Config file read successfully!")
-		except FileNotFoundError:
-			print(f"TOML config file not found in path {self.config_path}")
-			sys.exit()
-		sample_file = self.sample_config
-		# Format verification
-		for section, fields in sample_file.items():
-			for field, sub_field in fields.items():
-				# First check that all fields and sections are present in the config file
-				if section not in check_config:
-					raise Exception(
-						f"Missing section '{section}' in config file '{self.config_path}'"
-					)
-				elif field not in check_config[section]:
-					raise Exception(f"Missing field '{field}' in section '{section}'")
-
-		print(
-			f"{'#' * 100}\nConfig file '{self.config_path}' passed format verification!\n{'#' * 100}"
-		)
-		validated = True
-		return validated
-
-	def map_yv_ya_lt(
-		self, periods: Tuple[int, ...], lt: int, ya: Optional[int] = None
-	) -> pd.DataFrame:
-		"""All meaningful combinations of (vintage year, active year) given periods.
-		Parameters
-		----------
-		labels : pandas.DataFrame
-						Each column (dimension) corresponds to one in df. Each row represents one
-						matched set of labels for those dimensions.
-		lt : int, lifetime
-		"""
-		if not ya:
-			ya = periods[0]
-			print(f"First active year set as {ya!r}")
-		if not lt:
-			raise ValueError("Add a fixed lifetime parameter 'lt'")
-		# The following lines are the same as
-		# message_ix.tests.test_feature_vintage_and_active_years._generate_yv_ya
-		# - Create a mesh grid using numpy built-ins
-		# - Take the upper-triangular portion (setting the rest to 0)
-		# - Reshape
-		data = np.triu(np.meshgrid(periods, periods, indexing="ij")).reshape((2, -1))
-		# Filter only non-zero pairs
-		df = pd.DataFrame(
-			filter(sum, zip(data[0, :], data[1, :])),
-			columns=["year_vtg", "year_act"],
-			dtype=np.int64,
-		)
-		# Select values using the ya and lt parameters
-		return df[(ya <= df.year_act) & (df.year_act - df.year_vtg <= lt)]
 
 	## Scenario creation functions ##
 
@@ -228,7 +158,7 @@ class model_MSG:
 						)
 						.pipe(
 							broadcast,
-							self.map_yv_ya_lt(
+							map_yv_ya_lt(
 								years, tech_data["tec_lifetime"], first_year
 							),
 							# time=tech_data["time"],
@@ -257,7 +187,7 @@ class model_MSG:
 						)
 						.pipe(
 							broadcast,
-							self.map_yv_ya_lt(
+							map_yv_ya_lt(
 								years, tech_data["tec_lifetime"], first_year
 							),
 							# time=tech_data["time"],
@@ -279,7 +209,7 @@ class model_MSG:
 						unit=tech_data["unit"][0]["cost"],
 					).pipe(
 						broadcast,
-						self.map_yv_ya_lt(years, tech_data["tec_lifetime"], first_year),
+						map_yv_ya_lt(years, tech_data["tec_lifetime"], first_year),
 					)
 					self.scenario.add_par("var_cost", var_cost_df)
 
@@ -293,7 +223,7 @@ class model_MSG:
 						unit=tech_data["unit"][0]["cost"],
 					).pipe(
 						broadcast,
-						self.map_yv_ya_lt(years, tech_data["tec_lifetime"], first_year),
+						map_yv_ya_lt(years, tech_data["tec_lifetime"], first_year),
 					)
 					self.scenario.add_par("fix_cost", fix_cost_df)
 
@@ -1151,22 +1081,6 @@ class model_MSG:
 
 		print(f"Report saved to {output_path}")
 
-	def clone_scenario(self, scenario_name, keep_solution=False) -> tuple:
-		"""
-		Clone an existing scenario
-
-		"""
-
-		self.scenario = message_ix.Scenario(
-			self.mp, self.modelName, self.scenarioName, version=self.version, annotation=self.annotation
-		)
-		scenario1 = self.scenario.clone(
-			self.modelName,
-			scenario_name,
-			keep_solution=keep_solution,
-		)
-
-		return scenario1
 
 	# Full scenario set-up
 	def setup_scenario(self) -> tuple:
@@ -1186,7 +1100,7 @@ class model_MSG:
 		"""
 
 		# Config verification:
-		self.config_validation()
+		config_validation(self.config_path)
 
 		# Scenario set-up
 		start = time.time()

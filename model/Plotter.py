@@ -224,7 +224,7 @@ class plotter_MSG:
 		self.tickwdt = 0.2  # Tick width
 
 	# Modules and functions for creating the plotting dataframes
-	def group(self, df, groupby, result) -> pd.DataFrame:
+	def group(self, df, groupby, result, limit, lyr) -> pd.DataFrame:
 		"""The function groups dataframe df over an index and column."""
 		df = df.groupby(groupby, as_index=False).sum()
 		df = pd.pivot_table(
@@ -648,7 +648,7 @@ class plotter_MSG:
 
 	# The main plotting function
 	def plotter(
-		self, case, nodeloc, path, yr_min, yr_max, plots="all", not_plots=[]
+		self, case, nodeloc:list, path, yr_min, yr_max, plots="all", not_plots=[]
 	) -> pd.DataFrame:
 
 		# 1) Initialization and importing required data
