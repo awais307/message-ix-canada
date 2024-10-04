@@ -1,6 +1,5 @@
 # Policy Functions
 
-
 ::: model.policies.bound_emissions
 
 ::: model.policies.carbon_price

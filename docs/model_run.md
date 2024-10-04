@@ -1,6 +1,6 @@
 # Model Run
 
-The `model_run.md` section guides users on how to execute the MESSAGEix-Canada model. 
+The `model_run.md` section guides users on how to execute the MESSAGEix-Canada model.
 
 The model can be run in two primary ways:
 

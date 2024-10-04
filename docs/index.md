@@ -1,7 +1,6 @@
-# MESSAGEix-Canada - An Open source Integrated Assesment Model 
+# MESSAGEix-Canada - An Open source Integrated Assesment Model
 
 MESSAGEix-Canada is an open-source model designed to help understand and analyze energy and environmental pathways for Canadian provinces and territories. This model supports the exploration of different scenarios to achieve sustainable development and climate targets across Canada.
-
 
 ## Commands
 
