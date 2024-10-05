@@ -1170,8 +1170,8 @@ class model_MSG:
 				\n=================================================="
 				)
 
-			except Exception:
-				print(f"Scenario {caseName} did not solve\n")
+			except Exception as solve_error:
+				print(f"Scenario {caseName} did not solve because of the following exception:\n{solve_error}\n")
 
 			if self.use_reporter:
 				self.generate_report(
