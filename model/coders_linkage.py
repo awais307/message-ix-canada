@@ -9,7 +9,7 @@ class CODERS_pull:
     in the MESSAGE model. Requries an API key to be passed
     """
     def __init__(self, key_file):
-        self.url = 'http://206.12.95.102/'
+        self.url = 'http://206.12.97.113/'#'http://206.12.95.102/'
         self.root = os.path.dirname(os.path.dirname(os.getcwd()))
         with open(key_file, 'r') as key:
             self.key = key.readline().strip()
@@ -23,7 +23,7 @@ class CODERS_pull:
         query = f'{self.url}/generation_generic?key={self.key}'
         gen_generic = pd.DataFrame.from_dict(requests.get(query).json())
         gen_generic = gen_generic.set_index(gen_generic['gen_type'], drop=True)
-        tech_names = pd.read_csv('data\\CODERS-MESSAGE_technologies.csv', index_col=1)
+        tech_names = pd.read_csv('data/CODERS-MESSAGE_technologies.csv', index_col=1)
         gen_generic = gen_generic.join(tech_names)
         gen_generic['year'] = 2020
         return gen_generic
@@ -55,15 +55,23 @@ class CODERS_pull:
         closure_year = {}
         updated_gen_type = {}
         for unit, data in generators.iterrows():
-            # Fixing coders bugs
+            '''
+            # Fixing coders bugs from old API address
             if data.gen_type == 'wind_onshore':
                 gentype = 'wind_ons'
             elif data.gen_type == 'solar_pv':
                 gentype = 'solar_PV'
             elif data.gen_type == 'gas_CT':
                 gentype = 'NG_SC'
+            '''
+            # Fixing coders bugs from new API address
+            if data.gen_type == "wind_ons":
+                gentype = "wind_onshore"
+            elif data.gen_type == "Biomass":
+                gentype = "biomass"
             else:
                 gentype = data.gen_type
+            
             if math.isnan(data.closure_year):
                 closure_year[unit] = data.start_year + gen_generic.at[gentype, 'service_life']
             else:
@@ -85,7 +93,7 @@ class CODERS_pull:
             generators_year = generators[generators.start_year <= year].copy()
             generators_year = generators_year[generators_year.updated_closure_year > year]
             national_capacity[year] = generators_year.groupby(['MESSAGE_tech']).sum().unit_installed_capacity
-        pd.DataFrame.from_dict(national_capacity).to_csv(f'{self.root}\\data\\CODERS_data\\generation_capacity_national.csv')
+        pd.DataFrame.from_dict(national_capacity).to_csv(f'data/CODERS_data/generation_capacity_national.csv')
 
 
     def generation_capacity_provincial(self, generators, startyear=2000, endyear=2050):
@@ -102,8 +110,12 @@ class CODERS_pull:
                 generators_year = generators_prov[generators_prov.start_year <= year]
                 generators_year = generators_year[generators_year.updated_closure_year > year]
                 name = f'{prov}_{year}'
-                provincial_capacity[name] = generators_year.groupby(['MESSAGE_tech']).sum().unit_installed_capacity
-        pd.DataFrame.from_dict(provincial_capacity).to_csv(f'{self.root}\\data\\CODERS_data\\generation_capacity_provincial.csv')
+                generators_year.unit_installed_capacity = generators_year.unit_installed_capacity.astype(float) # converting column to float type
+                provincial_capacity[name] = generators_year.groupby(['MESSAGE_tech']).sum().unit_installed_capacity.astype(float)
+        provincial_capacity = pd.DataFrame.from_dict(provincial_capacity)
+        provincial_capacity.fillna(0, inplace=True)
+        provincial_capacity.to_csv(f'data/CODERS_data/generation_capacity_provincial.csv', sep=",")
+        return pd.DataFrame.from_dict(provincial_capacity), provincial_capacity # return for debugging purposes
 
 
     def MESSAGE_historical_capacity_raw(self, generators, years=[2015,2020]):
@@ -135,7 +147,7 @@ class CODERS_pull:
             else:
                 result = pd.concat([result, gen_prov_tech])
 
-        pd.DataFrame.from_dict(result).to_excel(f'{self.root}\\data\\CODERS_data\\historical_capacity_raw_CODERS.xlsx')
+        pd.DataFrame.from_dict(result).to_excel(f'data/CODERS_data/historical_capacity_raw_CODERS.xlsx')
         
 
 
