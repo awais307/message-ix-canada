@@ -324,12 +324,13 @@ class model_MSG:
 					):
 						tec_construction_df = make_matched_dfs(
 							input_df,
-							capacity_factor=i / j,
+							capacity_factor=tech_data["capacity_factor"],
 							technical_lifetime=tech_data["tec_lifetime"],
 							construction_time=tech_data["construction_time"],
 						)
 						self.scenario.add_par(
-							"capacity_factor", tec_construction_df["capacity_factor"]
+							"capacity_factor", 
+							tec_construction_df["capacity_factor"]
 						)
 						self.scenario.add_par(
 							"technical_lifetime",

@@ -1,6 +1,6 @@
 [general]
     model_name = "MESSAGEix-CA"
-    scenario_name = "baseline"
+    scenario_name = "baseline + atr + gas_h2 + stor + liq + LR"
     ix_platform = "local"
     version = "new"
     annotation = "Initial setup for Canadian energy model."
@@ -12,7 +12,7 @@
     apply_obps_baseline = false
     [pre_process.add_technology]
         add_techs = true
-        techs = ["h2_atr_ccs"] 
+        techs = ["h2_atr_ccs", "h2_atr", "gas_h2", "h2_stor_geo", "liq_h2"] 
 
 
 [data]
@@ -26,7 +26,5 @@
 [post_process]
     generate_reporter_output = false
     export_to_xlsx = false
-
-
 
 
