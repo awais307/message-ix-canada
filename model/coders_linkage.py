@@ -148,6 +148,26 @@ class CODERS_pull:
                 result = pd.concat([result, gen_prov_tech])
 
         pd.DataFrame.from_dict(result).to_excel(f'data/CODERS_data/historical_capacity_raw_CODERS.xlsx')
+    
+    def historical_activity(self, generators, startyear=2000, endyear=2050):
+        
+        provinces = generators.province.unique()
+        generators["activity"] = generators.unit_installed_capacity.astype(float) / generators.capacity_factor.astype(float)
+        # Calculating historical activity for each province
+        provincial_activity = {}
+        for prov in provinces:
+            generators_prov = generators[generators['province'] == prov].copy()
+            for year in range(startyear, endyear+1):
+                generators_year = generators_prov[generators_prov.start_year <= year]
+                generators_year = generators_year[generators_year.updated_closure_year > year]
+                name = f'{prov}_{year}'
+                provincial_activity[name] = generators_prov.groupby(['MESSAGE_tech']).sum().activity
+                 
+        provincial_activity = pd.DataFrame.from_dict(provincial_activity)
+        provincial_activity.fillna(0, inplace=True)
+        provincial_activity.to_csv(f'data/CODERS_data/historical_activity_provincial.csv', sep=",")
+        return provincial_activity
+        
         
 
 
