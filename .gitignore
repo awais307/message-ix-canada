@@ -10,3 +10,4 @@ ssh_ma.pub
 *.txt
 /MESSAGEix_Canada.egg-info
 MESSAGEix_canada.egg-info/PKG-INFO
+/model/scenarios/*.xlsx

@@ -1054,7 +1054,7 @@ class model_MSG:
 
 	def generate_report(
 		self,
-		output_path="MESSAGE_CANADA_provincial_baseline_v1.csv",
+		output_path=self.msg_folder,
 		min_year=2015,
 		max_year=2060,
 		from_excel=False,
