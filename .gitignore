@@ -1,14 +1,17 @@
+# Ignored folders
 .vscode
 .DS_Store
 *.pyc
 .vscode
+/MESSAGEix_canada.egg-info/
+# Ignore the Plant UML diagrams from the 'out' folder
+/out 
+
+#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/
+
+# Ignored files
 ed_ma
 ssh_ma
 ssh_ma.pub
-/MESSAGE_CANADA.egg-info
 *.txt
-/MESSAGEix_Canada.egg-info
-MESSAGEix_canada.egg-info/PKG-INFO
-
-# Ignore the Plant UML diagrams from the 'out' folder
-/out
+*PKG-INFO

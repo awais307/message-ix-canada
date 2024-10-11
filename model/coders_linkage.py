@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import requests
 import os
 import math
@@ -149,7 +150,7 @@ class CODERS_pull:
 
         pd.DataFrame.from_dict(result).to_excel(f'data/CODERS_data/historical_capacity_raw_CODERS.xlsx')
     
-    def historical_activity(self, generators, startyear=2000, endyear=2050):
+    def historical_activity(self, generators, startyear=2000, endyear=2050, filename="historical_activity_provincial"):
         
         provinces = generators.province.unique()
         generators["activity"] = generators.unit_installed_capacity.astype(float) / generators.capacity_factor.astype(float)
@@ -161,21 +162,34 @@ class CODERS_pull:
                 generators_year = generators_prov[generators_prov.start_year <= year]
                 generators_year = generators_year[generators_year.updated_closure_year > year]
                 name = f'{prov}_{year}'
-                provincial_activity[name] = generators_prov.groupby(['MESSAGE_tech']).sum().activity
-                 
+                provincial_activity[name] = generators_prov.groupby(['MESSAGE_tech']).sum().activity 
+        
         provincial_activity = pd.DataFrame.from_dict(provincial_activity)
         provincial_activity.fillna(0, inplace=True)
-        provincial_activity.to_csv(f'data/CODERS_data/historical_activity_provincial.csv', sep=",")
+        provincial_activity = provincial_activity / 8760 # Conversion from MWh/year to MWh/h
+        provincial_activity.round(4).to_csv(f'data/CODERS_data/{filename}.csv', sep=",")
+        
         return provincial_activity
+    
+    def get_capacity_factors(self, generators, startyear=2000, endyear=2050, filename="capacity_factors_provincial"):
+        
+        provinces = generators.province.unique()
+        tech_capacity_factors = {}
+        
+        for prov in provinces:
+            generators_prov = generators[generators['province'] == prov].copy()
+            for year in range(startyear, endyear+1):
+                avg_cap_factors = []
+                generators_year = generators_prov[generators_prov.start_year <= year]
+                generators_year = generators_year[generators_year.updated_closure_year > year]
+                name = f'{prov}_{year}'
+                tech_capacity_factors[name] = generators_prov.groupby(['MESSAGE_tech']).capacity_factor.unique()
+        
+        prov_capacity_factors = pd.DataFrame.from_dict(tech_capacity_factors)
+        prov_capacity_factors = prov_capacity_factors.applymap(lambda x: sum([float(i) 
+            for i in x])/len(x) if isinstance(x, np.ndarray) else x)
+        prov_capacity_factors.fillna(0, inplace=True)
+        prov_capacity_factors.round(4).to_csv(f'data/CODERS_data/{filename}.csv', sep=",")
+        return prov_capacity_factors
         
         
-
-
-if __name__ == '__main__':
-    pull = CODERS_pull("")
-    generation_generic = pull.create_generation_generic()
-    pull.generator_costs(generation_generic)
-    generators = pull.calculate_closure_years(generation_generic)
-    #pull.generation_capacity_national(generators, 2020, 2050)
-    #pull.generation_capacity_provincial(generators, 2020, 2050)
-    pull.MESSAGE_historical_capacity_raw(generators, [2015, 2020])
