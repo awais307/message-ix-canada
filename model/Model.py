@@ -978,7 +978,7 @@ class model_MSG:
 
 	def generate_report(
 		self,
-		output_path="MESSAGE_CANADA_provincial_baseline_v1.csv",
+		output_path="output/MESSAGE_test_report.csv",
 		min_year=2015,
 		max_year=2060,
 		from_excel=False,
@@ -1070,6 +1070,10 @@ class model_MSG:
 			"inv cost|", "Capital Cost|", regex=False
 		)
 		report_df["Region"] = report_df["Region"].apply(lambda x: x.split("|")[0])
+
+		report_df.rename(columns={'Model': 'model', 'Scenario': 'scenario', 'Variable': 'variable'}, inplace=True)
+
+		report_df = report_df.drop_duplicates(subset=["model", "scenario", "Region", "variable"], keep='first')
 
 		pyam_df = pyam.IamDataFrame(report_df)
 
