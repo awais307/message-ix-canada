@@ -1,6 +1,6 @@
 [general]
     model_name = "MESSAGEix-CA"
-    scenario_name = "baseline_updated_emissions"
+    scenario_name = "baseline"
     ix_platform = "local"
     version = "new"
     annotation = "Initial setup for Canadian energy model."
@@ -21,7 +21,7 @@
     scenario_folder = "scenarios/baseline"
 
 [model]
-    solve = true
+    solve = false
 
 [post_process]
     generate_reporter_output = false

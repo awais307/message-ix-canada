@@ -41,12 +41,13 @@ h2_atr_ccs:
     - cost_value: 1054
   fix_cost_2020: 
     - cost_level: primary
-    - cost_value: 28.87
+    - cost_value: 31.62
   var_cost_2020:
     - cost_level: primary
     - cost_value: 0
   # Emissions specifications
-  emission: 
+  emission_factor: 0.1629
+  emission_type: CO2_cc
   capacity_factor: 0.9
 
 h2_atr:
@@ -97,7 +98,8 @@ h2_atr:
     - cost_level: primary
     - cost_value: 0
   # Emissions specifications
-  emission: 
+  emission_factor: 2.205
+  emission_type: CO2_cc
   capacity_factor: 0.9
 
 gas_h2:
@@ -148,7 +150,8 @@ gas_h2:
     - cost_level: primary
     - cost_value: 0
   # Emissions specifications
-  emission: 
+  emission_factor: 0
+  emission_type: CO2_cc
   capacity_factor: 0.96
 
 h2_stor_geo:
@@ -199,7 +202,8 @@ h2_stor_geo:
     - cost_level: primary
     - cost_value: 0
   # Emissions specifications
-  emission: 
+  emission_factor: 0
+  emission_type: CO2_cc
   capacity_factor: 0.8
 
 liq_h2:
@@ -253,7 +257,8 @@ liq_h2:
     - cost_level: primary
     - cost_value: 0
   # Emissions specifications
-  emission: 
+  emission_factor: 0
+  emission_type: CO2_cc
   capacity_factor: 0.95
 
 meth_h2:
@@ -307,5 +312,6 @@ meth_h2:
     - cost_level: primary
     - cost_value: 0
   # Emissions specifications
-  emission: 
+  emission_factor: 0
+  emission_type: 'CO2_cc'
   capacity_factor: 0.91

@@ -227,7 +227,8 @@ class model_MSG:
 					)
 					self.scenario.add_par("fix_cost", fix_cost_df)
 
-					# investment cost
+
+						# emission factor
 					inv_cost_df = message_ix.make_df(
 						"inv_cost",
 						# node_loc=provinces,
@@ -240,6 +241,21 @@ class model_MSG:
 					).pipe(broadcast, node_loc=provinces)
 
 					self.scenario.add_par("inv_cost", inv_cost_df)
+
+					# emission factor
+					emission_factor_df = message_ix.make_df(
+						"emission_factor",
+						node_loc=provinces,
+						technology=tech,
+						mode=tech_data["mode"],
+						value=tech_data["emission_factor"],
+						emission=tech_data["emission_type"],
+						unit="-",
+					).pipe(
+						broadcast,
+						map_yv_ya_lt(years, tech_data["tec_lifetime"], first_year),
+					)
+					self.scenario.add_par("emission_factor", emission_factor_df)
 
 					# construction time
 					for i, j in zip(
