@@ -130,7 +130,7 @@ class plotter_MSG:
 		self.gases = [x for x in set(self.scenario.set("commodity")) if "gas_" in x]
 		self.gas_tecs = ["gas_t_d", "gas_t_d_ch4", "gas_bal"]
 		self.coal_tecs = {"supply" : ["coal_t_d", "coal_bal", "coal_exp"], 
-                		"utilization": ["coal_t_d", "coal_bal", "coal_extr", "coal_extr_ch4"]}
+						"utilization": ["coal_t_d", "coal_bal", "coal_extr", "coal_extr_ch4"]}
 		self.order = (
 			["coal", "coal_rc", "coal_i", "crudeoil"]
 			+ self.crudes
@@ -650,6 +650,26 @@ class plotter_MSG:
 	def plotter(
 		self, case, nodeloc:list, path, yr_min, yr_max, plots="all", not_plots=[]
 	) -> pd.DataFrame:
+	 
+		def make_tec_list(self, out_in:str, commodity, level:str, add_storage=False):
+			''''
+			Creates a list of the technoplogies to be used in plotting
+   			'''
+			gas_set = set(self.gas_tecs)
+			coal_set = set(self.coal_tecs["supply"])
+			tecs_set = set(self.scenario.par(out_in, {"commodity": commodity,
+				"level": level}).technology)
+			if commodity == "gas":
+				tecs_set -= gas_set
+			elif commodity == "coal":
+				tecs_set -= coal_set
+   			
+			tecs_list = list(tecs_set)
+			
+			if add_storage:
+				return  tecs_list + ["stor_ppl"]
+			else:
+				return tecs_list 
 
 		# 1) Initialization and importing required data
 		cwd = os.getcwd()
@@ -738,6 +758,7 @@ class plotter_MSG:
 		)
 
 		# 2.2) Electricity usage
+		'''
 		tecs = list(
 			set(
 				self.scenario.par(
@@ -746,6 +767,8 @@ class plotter_MSG:
 			)
 		)
 		tecs = tecs + ["stor_ppl"]
+		'''
+		tecs = make_tec_list("input", "electr", "final", True)
 
 		for current_node in nodeloc:
 			# Prepration for Excel writings
@@ -772,11 +795,13 @@ class plotter_MSG:
 			alldf["Electricity use " + self.unitname_el] = df * self.unit_el
 
 			# 2.3) Natural Gas supply (incl. import) and usage
-			
+			'''
 			tecs = list(
 				set(self.scenario.par("output", {"commodity": "gas"}).technology)
 				- set(self.gas_tecs)
 			)
+			'''
+			tecs = make_tec_list("output", "gas")
 			df, df2 = self.model_output(tecs, current_node, "output", "gas")
 			df = self.group(df, ["year_act", "technology"], "product", 0.0, yr)
 			# adding historical data
@@ -787,10 +812,13 @@ class plotter_MSG:
 			)
 
 			# Natural gas usage
+			'''
 			tecs = list(
 				set(self.scenario.par("input", {"commodity": "gas"}).technology)
 				- set(self.gas_tecs)
 			)
+   			'''
+			tecs = make_tec_list("output", "gas")
 			df, df2 = self.model_output(tecs, current_node, "input", "gas")
 			df = self.group(df, ["year_act", "technology"], "product", 0.0, yr)
 			# adding historical data
@@ -801,10 +829,12 @@ class plotter_MSG:
 			)
 
 			# 2.4) Coal supply and utilization
-			tecs = list(
+			'''
+   			tecs = list(
 				set(self.scenario.par("output", {"commodity": "coal"}).technology)
 				- set(self.coal_tecs["supply"])
-			)
+			)'''
+			tecs = make_tec_list("output", "coal")
 			df, df2 = self.model_output(tecs, current_node, "output", "coal")
 			df = self.group(df, ["year_act", "technology"], "product", 0.0, yr)
 			# adding historical data
@@ -829,6 +859,7 @@ class plotter_MSG:
 			)
 
 			# 2.5) Oil derivatives supply and use
+			'''
 			tecs = list(
 				set(
 					self.scenario.par(
@@ -837,6 +868,8 @@ class plotter_MSG:
 					).technology
 				)
 			)
+   			'''
+			tecs = make_tec_list("output", ["fueloil", "lightoil"], "secondary")
 
 			df, df2 = self.model_output(
 				tecs, current_node, "output", ["fueloil", "lightoil"]
@@ -850,6 +883,7 @@ class plotter_MSG:
 			)
 
 			# Oil derivatives utilisation
+			'''
 			tecs = list(
 				set(
 					self.scenario.par(
@@ -858,6 +892,8 @@ class plotter_MSG:
 				)
 				- set(["loil_t_d", "foil_t_d"])
 			)
+   			'''     		
+			tecs = make_tec_list("input",["fueloil", "lightoil"])
 			df, df2 = self.model_output(
 				tecs, current_node, "input", ["fueloil", "lightoil"]
 			)
