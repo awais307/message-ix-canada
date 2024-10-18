@@ -31,7 +31,7 @@ def messagerun(scenario, solve, debug, report, plot):
     nodes = msg_scenario.set("node")[2:]
     #TODO Do we need plots_df here ?
     msg_plt.plotter(
-        case="test", nodeloc= nodes, path="./", yr_min=2020, yr_max=2060
+        case="test", nodeloc= nodes, path="./output/", yr_min=2020, yr_max=2060
     )
 
     # Remove the model solution (if any) and check out the scenario
