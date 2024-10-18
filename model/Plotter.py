@@ -13,6 +13,7 @@ import plotly.express as px
 import numpy as np
 import pandas as pd
 
+
 from matplotlib.backends.backend_pdf import PdfPages
 
 warnings.filterwarnings("ignore")  # Ignore warnings to keep the output clean
@@ -763,9 +764,8 @@ class plotter_MSG:
 
 		for current_node in nodeloc:
 			# Prepration for Excel writings
-			writer_xls = pd.ExcelWriter(
-				path + "\\" + case + f"_{current_node}" + ".xlsx", engine="xlsxwriter"
-			)
+			writer_xls = pd.ExcelWriter(path / f"{case}_{current_node}.xlsx", engine="xlsxwriter")
+
 			df, df2 = self.model_output(tecs, current_node, "input", "electr")
 			df = self.group(df, ["year_act", "technology"], "product", 0.0, yr)
 
@@ -1053,14 +1053,11 @@ class plotter_MSG:
 				x for x in self.dict_plot.keys() if not any([y in x for y in not_plots])
 			]
 			self.dict_plot = {x: self.dict_plot[x] for x in keys}
-			with PdfPages(
-				path
-				+ "\\{}-msgResults.pdf".format(
-					case
-					+ f"_{current_node}_"
-					+ time.strftime("%m.%d_%H.%M", time.localtime())
-				)
-			) as pdf:
+			# Construct the full path using pathlib and the PDF filename format
+			pdf_file_path = path / "{}-msgResults.pdf".format(
+				case + f"_{current_node}_" + time.strftime("%m.%d_%H.%M", time.localtime())
+			)
+			with PdfPages(pdf_file_path)as pdf:
 				j = 0
 				for subplt, item in self.dict_plot.items():
 					df = alldf[subplt].copy()
