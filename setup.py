@@ -8,8 +8,10 @@ setup(
     author_email='your.email@example.com',
     packages=find_packages(include=['MESSAGE_CA', 'MESSAGE_CA.*']),  # Adjust if needed
     install_requires=[
+        'setuptools >= 64', # Address deprecation warning from pip
         'pandas',
         'numpy',
+        'plotly',
         'pycountry',
         'ixmp',
         'message_ix >= 3.4.0',
@@ -20,6 +22,7 @@ setup(
         'pytest',
         'click',
         'message-ix-models',
+        'message-ix-models[report]',
     ],
     entry_points={
         'console_scripts': [
