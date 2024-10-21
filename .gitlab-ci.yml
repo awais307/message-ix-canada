@@ -1,0 +1,17 @@
+image: registry.gitlab.com/sesit/message-ix
+
+stages:
+  - test
+
+before_script:
+  - pip install -e .
+
+kubernetes:
+  stage: test
+
+  tags:
+    - kubernetes
+
+  script:
+    - echo 'Running now '
+    - python3 MESSAGE_CA.py
