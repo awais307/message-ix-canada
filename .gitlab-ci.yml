@@ -11,6 +11,8 @@ before_script:
   - apt-get install default-jdk -y
   - pip install -e . --break-system-packages
   - pip install message-ix-models[report] --break-system-packages
+  - ls
+  - tree
 
 kubernetes:
   stage: test
