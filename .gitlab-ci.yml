@@ -20,5 +20,4 @@ kubernetes:
 
   script:
     - echo 'Running now '
-    - sed -i 's/option LP = CPLEX ;/option LP = CBC ;/' /usr/local/lib/python3.11/dist-packages/message_ix/model/MESSAGE/auxiliary_settings.gms
     - python3 MESSAGE_CA.py
