@@ -3,8 +3,12 @@ image: registry.gitlab.com/sesit/message-ix
 stages:
   - test
 
+services:
+  - openjdk:11-jre-slim-buster
+
 before_script:
-  - apt install -y --no-install-recommends pipx
+  - apt-get update
+  - apt-get install default-jdk -y
   - pip install -e . --break-system-packages
   - pip install message-ix-models[report] --break-system-packages
 
