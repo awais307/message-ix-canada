@@ -20,5 +20,5 @@ kubernetes:
 
   script:
     - echo 'Running now '
-    - LP = CBC
+    - cd /usr/local/lib/python3.*/site-packages/message_ix/model/MESSAGE
     - python3 MESSAGE_CA.py
