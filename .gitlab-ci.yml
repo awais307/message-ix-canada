@@ -20,5 +20,5 @@ kubernetes:
 
   script:
     - echo 'Running now '
-    - find / -name "auxiliary_settings.gms"
+    - gams trnsport lp=cbc
     - python3 MESSAGE_CA.py
