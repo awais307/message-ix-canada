@@ -20,5 +20,5 @@ kubernetes:
 
   script:
     - echo 'Running now '
-    - cd /usr/local/lib/python3.*/site-packages/message_ix/model/MESSAGE
+    - find / -name "auxiliary_settings.gms"
     - python3 MESSAGE_CA.py
