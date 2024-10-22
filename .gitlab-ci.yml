@@ -20,5 +20,6 @@ kubernetes:
 
   script:
     - echo 'Running now '
-    - gams trnsport lp=cbc
+    - cat /usr/local/lib/python3.11/dist-packages/message_ix/model/MESSAGE/auxiliary_settings.gms
+    - gams option lp=cbc
     - python3 MESSAGE_CA.py
