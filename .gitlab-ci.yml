@@ -4,7 +4,8 @@ stages:
   - test
 
 before_script:
-  - pip install -e .
+  - apt install -y --no-install-recommends pipx
+  - pipx install -e .
 
 kubernetes:
   stage: test
