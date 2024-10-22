@@ -5,7 +5,8 @@ stages:
 
 before_script:
   - apt install -y --no-install-recommends pipx
-  - pipx install -e .
+  - pip install -e . --break-system-packages
+  - pip install message-ix-models[report] --break-system-packages
 
 kubernetes:
   stage: test
