@@ -25,7 +25,9 @@
 
 [post_process]
     generate_reporter_output = false
-    export_to_xlsx = false
+    export_to_xlsx = false # export reports to Excel
+    generate_pdfs = false # generate results as PDFs
+    export_to_csv = false # export reports to CSV
 
 
 
