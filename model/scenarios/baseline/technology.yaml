@@ -204,7 +204,7 @@ h2_stor_geo:
   # Emissions specifications
   emission_factor: 0
   emission_type: CO2_cc
-  capacity_factor: 0.8
+  capacity_factor: 0.8 #fix this to TC/kWyr
 
 liq_h2:
   # Technology specs: mode, commodities, description
