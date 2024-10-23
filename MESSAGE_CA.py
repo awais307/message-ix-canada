@@ -3,6 +3,7 @@ from pathlib import Path
 import click
 from model.Model import model_MSG
 from model.Plotter import plotter_MSG
+from model.utils import report_to_pyam
 
 # Options for the CLI
 @click.command()
@@ -27,12 +28,13 @@ def messagerun(scenario, solve, debug, report, plot):
     platform, msg_scenario, msg_folder = msg1.setup_scenario()
 
     # Plotter
-    msg_plt = plotter_MSG(msg_scenario)
-    nodes = msg_scenario.set("node")[2:]
-    #TODO Do we need plots_df here ?
-    msg_plt.plotter(
-        case="test", nodeloc= nodes, path="./", yr_min=2020, yr_max=2060
-    )
+    if plot:
+        msg_plt = plotter_MSG(msg_scenario)
+        nodes = msg_scenario.set("node")[2:]
+        #TODO Do we need plots_df here ?
+        msg_plt.plotter(
+            case="test", nodeloc= nodes, path="./", yr_min=2020, yr_max=2060
+        )
 
     # Remove the model solution (if any) and check out the scenario
     try:
@@ -57,6 +59,7 @@ def messagerun(scenario, solve, debug, report, plot):
     if report:
         print("Generating report...")
         #TODO Add report generation logic here
+        report_summary = report_to_pyam(msg_scenario,"results", "output")
 
 
 if __name__ == "__main__":
