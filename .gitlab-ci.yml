@@ -10,7 +10,6 @@ before_script:
   - apt-get update
   - apt-get install default-jdk -y
   - pip install -e . --break-system-packages
-  - pip install message-ix-models[report] --break-system-packages
   - sed -i 's/option LP = CPLEX ;/option LP = CBC ;/' /usr/local/lib/python3.11/dist-packages/message_ix/model/MESSAGE/auxiliary_settings.gms
 
 kubernetes:
@@ -20,5 +19,5 @@ kubernetes:
     - kubernetes
 
   script:
-    - echo 'Running now '
-    - python3 MESSAGE_CA.py
+    - echo 'Running pipeline now'
+    - python3 MESSAGE_CA.py --solve

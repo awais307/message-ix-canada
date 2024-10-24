@@ -8,10 +8,10 @@ from model.utils import report_to_pyam
 # Options for the CLI
 @click.command()
 @click.option('--scenario', default='baseline', help='Build the scenario folder name.')
-@click.option('--solve', default=False, is_flag=True, help='Solve the model or not.')
-@click.option('--debug', default=False, is_flag=True, help='Enable debug mode or not.')
-@click.option('--report', default=False, is_flag=True, help='Generate report or not.')
-@click.option('--plot', default=False, is_flag=True, help='Generate plots')
+@click.option('--solve/--no-solve', default=False, is_flag=True, help='Solve the model or not.')
+@click.option('--debug/--no-debug', default=False, is_flag=True, help='Enable debug mode or not.')
+@click.option('--report/--no-report', default=False, is_flag=True, help='Generate report or not.')
+@click.option('--plot/--no-plot', default=False, is_flag=True, help='Generate plots')
 
 def messagerun(scenario, solve, debug, report, plot):
     """
@@ -19,7 +19,7 @@ def messagerun(scenario, solve, debug, report, plot):
     """
     # Print the chosen options
     print(f"Running scenario: {scenario}")
-    print(f"Solve: {solve}, Debug: {debug}, Report: {report}")
+    print(f"Solve: {solve}, Debug: {debug}, Report: {report}, Plotting: {plot}")
 
     # Create model instance
     msg1 = model_MSG(scenario_name=scenario)
