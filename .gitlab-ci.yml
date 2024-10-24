@@ -16,8 +16,7 @@ kubernetes:
   stage: test
 
   tags:
-    - kubernetes
-    - office_black
+    - message
 
   script:
     - echo 'Running pipeline now'
