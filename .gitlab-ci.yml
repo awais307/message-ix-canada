@@ -17,6 +17,7 @@ kubernetes:
 
   tags:
     - kubernetes
+    - office_black
 
   script:
     - echo 'Running pipeline now'
