@@ -17,7 +17,7 @@ job:
   stage: test
 
   tags:
-    - kubernetes
+    - message
 
   script:
     - echo 'Running pipeline now'
