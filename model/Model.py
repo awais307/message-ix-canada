@@ -1010,7 +1010,7 @@ class model_MSG:
 
 		years = self.scenario.set("year").tolist()
 		years = [str(x) for x in years if x >= min_year and x <= max_year]
-
+		report_df.to_csv('test.csv')
 		report_df.fillna(0, inplace=True)
 
 		report_df.columns = report_df.columns.astype(str)
