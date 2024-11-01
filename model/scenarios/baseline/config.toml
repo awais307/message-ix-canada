@@ -8,12 +8,13 @@
 [pre_process]
     process_historical_data = false
     add_hydrogen_shares = false
-    apply_obps_netzero = false
-    apply_obps_baseline = false
     [pre_process.add_technology]
         add_techs = true
         techs = ["h2_atr_ccs"] 
 
+[policies]
+    apply_obps_netzero = false
+    apply_obps_baseline = false
 
 [data]
     #TODO Add a read_excel boolean to allow also reading directly from the local database

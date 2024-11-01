@@ -23,7 +23,7 @@ from message_ix_models.util import (
 	same_time,
 )
 from scipy.optimize import linprog
-from model.policies.obps import apply_obps_baseline, apply_obps_netzero
+from Policies import policies_MSG
 from pathlib import Path
 from typing import Union
 from model.utils import (map_yv_ya_lt, config_validation)
@@ -1139,17 +1139,22 @@ class model_MSG:
 			path_to_hydrogen_data = script_dir / scenario_folder
 			self.add_hydrogen_shares(path=path_to_hydrogen_data)
 
-		if self.add_obps_baseline:
-			path_to_obps_data = script_dir / scenario_folder
-			apply_obps_netzero(
-				scenario=scenario_folder, data_file_path=path_to_obps_data
-			)
+		# Set-up policies
+		policies = policies_MSG(self.scenario, self.config["policies"])
 
-		if self.add_obps_netzero:
-			path_to_obps_data = script_dir / scenario_folder
-			apply_obps_baseline(
-				scenario=scenario_folder, data_file_path=path_to_obps_data
-			)
+		for p,v in policies.policies.items():
+			if v == True:
+				if p == "apply_obps_netzero":
+					path_to_obps_data = script_dir / scenario_folder
+					policies.apply_obps_netzero(
+					scenario=scenario_folder, data_file_path=path_to_obps_data
+					)
+				elif p == "apply_obps_baseline":
+					path_to_obps_data = script_dir / scenario_folder
+					policies.apply_obps_baseline(
+					scenario=scenario_folder, data_file_path=path_to_obps_data
+					)
+
 
 		if self.add_techs:
 			self.add_technology(techs_file=f"{scenario_folder}/technology.yaml")
