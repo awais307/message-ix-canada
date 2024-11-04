@@ -3,6 +3,7 @@ from pathlib import Path
 import click
 from model.Model import model_MSG
 from model.Plotter import plotter_MSG
+from model.Policies import policies_MSG
 from model.utils import report_to_pyam
 
 # Options for the CLI
@@ -26,7 +27,14 @@ def messagerun(scenario, solve, debug, report, plot):
 
     # Set up model with the selected scenario
     platform, msg_scenario, msg_folder = msg1.setup_scenario()
-
+    
+    # Add policies to the scenario
+    policies = policies_MSG(scenario, [msg1.mp, 
+                            msg1.modelName,
+                            msg1.scenarioName,
+                            msg1.version, msg1.annotation])
+    msg_scenario = policies.generate_policies()
+    
     # Plotter
     if plot:
         msg_plt = plotter_MSG(msg_scenario)

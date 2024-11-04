@@ -13,7 +13,7 @@
         techs = ["h2_atr_ccs"] 
 
 [policies]
-    apply_obps_netzero = false
+    apply_obps_netzero = true
     apply_obps_baseline = false
 
 [data]

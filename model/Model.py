@@ -23,7 +23,6 @@ from message_ix_models.util import (
 	same_time,
 )
 from scipy.optimize import linprog
-from Policies import policies_MSG
 from pathlib import Path
 from typing import Union
 from model.utils import (map_yv_ya_lt, config_validation)
@@ -94,8 +93,8 @@ class model_MSG:
 		self.annotation = self.config["general"]["annotation"]
 		self.process_historical = self.config["pre_process"]["process_historical_data"]
 		self.add_hydrogen_shares_f = self.config["pre_process"]["add_hydrogen_shares"]
-		self.add_obps_baseline = self.config["pre_process"]["apply_obps_baseline"]
-		self.add_obps_netzero = self.config["pre_process"]["apply_obps_netzero"]
+		self.add_obps_baseline = self.config["policies"]["apply_obps_baseline"]
+		self.add_obps_netzero = self.config["policies"]["apply_obps_netzero"]
 		self.use_reporter = self.config["post_process"]["generate_reporter_output"]
 		self.solve = self.config["model"]["solve"]
 		self.to_excel = self.config["post_process"]["export_to_xlsx"]
@@ -1140,22 +1139,16 @@ class model_MSG:
 			self.add_hydrogen_shares(path=path_to_hydrogen_data)
 
 		# Set-up policies
-		policies = policies_MSG(self.scenario, self.config["policies"])
+		#policies = policies_MSG(self.scenario)
+	
+		#if self.apply_obps_netzero:
+		#	path_to_obps_data = script_dir / scenario_folder
+		#	policies.apply_obps_netzero(data_file_path=path_to_obps_data)
+		#elif self.apply_obps_baseline:
+		#	path_to_obps_data = script_dir / scenario_folder
+		#	policies.apply_obps_baseline(data_file_path=path_to_obps_data)
 
-		for p,v in policies.policies.items():
-			if v == True:
-				if p == "apply_obps_netzero":
-					path_to_obps_data = script_dir / scenario_folder
-					policies.apply_obps_netzero(
-					scenario=scenario_folder, data_file_path=path_to_obps_data
-					)
-				elif p == "apply_obps_baseline":
-					path_to_obps_data = script_dir / scenario_folder
-					policies.apply_obps_baseline(
-					scenario=scenario_folder, data_file_path=path_to_obps_data
-					)
-
-
+		# Technologies
 		if self.add_techs:
 			self.add_technology(techs_file=f"{scenario_folder}/technology.yaml")
 
