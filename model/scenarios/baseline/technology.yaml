@@ -201,7 +201,7 @@ h2_stor_geo:
     - cost_value: 12.68
   var_cost_2020:
     - cost_level: primary
-    - cost_value: 0
+    - cost_value: 30 # example value for now
   # Emissions specifications
   emission_factor: 0
   emission_type: CO2_cc
@@ -316,3 +316,4 @@ meth_h2:
   emission_factor: 0.00003459
   emission_type: 'CO2_cc'
   capacity_factor: 0.91
+  investment_lr: 0.7
