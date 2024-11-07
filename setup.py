@@ -1,4 +1,6 @@
 from setuptools import setup, find_packages
+from setuptools import setup
+#from Cython.Build import cythonize
 
 setup(
     name='messageix_canada',  # Consider changing the name to avoid hyphens
@@ -29,4 +31,5 @@ setup(
     extras_require={
         'extras': ['geotext', 'message-ix-models'],  # Optional dependencies
     },
+    #ext_modules = cythonize("MESSAGE_CA.py"),
 )

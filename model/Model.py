@@ -1033,7 +1033,6 @@ class model_MSG:
 		report_df = report_df.drop(
 			report_df.columns.to_series()["2020" : str(min_year)], axis=1
 		)
-
 		in_flows = report_df[report_df["Variable"].str.startswith("in|")]
 		out_flows = report_df[report_df["Variable"].str.startswith("out|")]
 		all_flows = pd.concat([out_flows, in_flows])

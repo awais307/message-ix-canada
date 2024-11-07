@@ -1,5 +1,5 @@
 Metadata-Version: 2.1
-Name: MESSAGEix-canada
+Name: messageix_canada
 Version: 0.1.0
 Summary: An Open Source Integrated Assessment Model for Canada
 Author: Your Name
@@ -17,6 +17,6 @@ Requires-Dist: ipykernel
 Requires-Dist: pytest
 Requires-Dist: click
 Requires-Dist: message-ix-models
-Provides-Extra: pip
-Requires-Dist: geotext; extra == "pip"
-Requires-Dist: message-ix-models; extra == "pip"
+Provides-Extra: extras
+Requires-Dist: geotext; extra == "extras"
+Requires-Dist: message-ix-models; extra == "extras"

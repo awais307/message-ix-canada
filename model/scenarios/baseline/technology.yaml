@@ -46,7 +46,8 @@ h2_atr_ccs:
     - cost_level: primary
     - cost_value: 0
   # Emissions specifications
-  emission_factor: 0.1629
+  #TC = TCO2 * 0.2727
+  emission_factor: 0.0444
   emission_type: CO2_cc
   capacity_factor: 0.9
 
@@ -98,7 +99,7 @@ h2_atr:
     - cost_level: primary
     - cost_value: 0
   # Emissions specifications
-  emission_factor: 2.205
+  emission_factor: 0.6013
   emission_type: CO2_cc
   capacity_factor: 0.9
 
@@ -312,6 +313,6 @@ meth_h2:
     - cost_level: primary
     - cost_value: 0
   # Emissions specifications
-  emission_factor: 0
+  emission_factor: 0.00003459
   emission_type: 'CO2_cc'
   capacity_factor: 0.91
