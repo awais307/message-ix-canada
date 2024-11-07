@@ -237,7 +237,7 @@ class model_MSG:
 						time=tech_data["time"],
 						unit=tech_data["unit"][0]["cost"],
 					).pipe(broadcast, map_learning_rate(tech_data["investment_lr"], tech_data["inv_cost_2020"][1]["cost_value"], years))
-
+					inv_cost_df["year_vtg"] = inv_cost_df["year_vtg"].astype(int)
 					self.scenario.add_par("inv_cost", inv_cost_df)
 
 					# construction time
