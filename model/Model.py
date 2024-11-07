@@ -25,7 +25,7 @@ from message_ix_models.util import (
 from scipy.optimize import linprog
 from pathlib import Path
 from typing import Union
-from model.utils import (map_yv_ya_lt, config_validation)
+from model.utils import (map_yv_ya_lt, config_validation, map_learning_rate)
 
 warnings.filterwarnings("ignore")  # Ignore warnings to keep the output clean
 
@@ -229,14 +229,14 @@ class model_MSG:
 					# investment cost
 					inv_cost_df = message_ix.make_df(
 						"inv_cost",
-						# node_loc=provinces,
+						node_loc=provinces,
 						technology=tech,
-						year_vtg=years,
+						#year_vtg=years,
 						level=tech_data["inv_cost_2020"][0]["cost_level"],
-						value=tech_data["inv_cost_2020"][1]["cost_value"],
+						#value=tech_data["inv_cost_2020"][1]["cost_value"],
 						time=tech_data["time"],
 						unit=tech_data["unit"][0]["cost"],
-					).pipe(broadcast, node_loc=provinces)
+					).pipe(broadcast, map_learning_rate(tech_data["investment_lr"], tech_data["inv_cost_2020"][1]["cost_value"], years))
 
 					self.scenario.add_par("inv_cost", inv_cost_df)
 

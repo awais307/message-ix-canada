@@ -35,7 +35,7 @@ h2_atr_ccs:
   # Cost specifications: investment, fiixed, and variable
   inv_cost_2020: 
     - cost_level: primary
-    - cost_value: 0
+    - cost_value: 30 # example value for now
   fix_cost_2020: 
     - cost_level: primary
     - cost_value: 0
@@ -44,3 +44,4 @@ h2_atr_ccs:
     - cost_value: 0
   # Emissions specifications
   emission: CO2
+  investment_lr: 0.7

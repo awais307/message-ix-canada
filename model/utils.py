@@ -108,6 +108,18 @@ def map_yv_ya_lt(
 		# Select values using the ya and lt parameters
 		return df[(ya <= df.year_act) & (df.year_act - df.year_vtg <= lt)]
 
+def map_learning_rate(l_rate: float, initial_cost: float, years: list) -> pd.DataFrame:
+
+	values = np.zeros(len(years))
+	values[0] = initial_cost
+
+	for i in range(1, len(years)):
+		values[i] = values[i-1] * l_rate
+
+	df = pd.DataFrame({"year_vtg": years, "value": values}, dtype=np.float64)
+
+	return df
+
 # Reporter method
 def report_to_pyam(scenario, directory_path, output_path):
 	"""
