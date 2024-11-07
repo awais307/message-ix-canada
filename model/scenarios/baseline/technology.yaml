@@ -50,6 +50,7 @@ h2_atr_ccs:
   emission_factor: 0.0444
   emission_type: CO2_cc
   capacity_factor: 0.9
+  investment_lr: 0.7
 
 h2_atr:
   # Technology specs: mode, commodities, description
@@ -102,6 +103,7 @@ h2_atr:
   emission_factor: 0.6013
   emission_type: CO2_cc
   capacity_factor: 0.9
+  investment_lr: 0.7
 
 gas_h2:
   # Technology specs: mode, commodities, description
@@ -154,6 +156,7 @@ gas_h2:
   emission_factor: 0
   emission_type: CO2_cc
   capacity_factor: 0.96
+  investment_lr: 0.7
 
 h2_stor_geo:
   # Technology specs: mode, commodities, description
@@ -206,6 +209,7 @@ h2_stor_geo:
   emission_factor: 0
   emission_type: CO2_cc
   capacity_factor: 0.8 #fix this to TC/kWyr
+  investment_lr: 0.7
 
 liq_h2:
   # Technology specs: mode, commodities, description
@@ -261,6 +265,7 @@ liq_h2:
   emission_factor: 0
   emission_type: CO2_cc
   capacity_factor: 0.95
+  investment_lr: 0.7
 
 meth_h2:
   # Technology specs: mode, commodities, description
