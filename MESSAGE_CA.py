@@ -35,14 +35,6 @@ def messagerun(scenario, solve, debug, report, plot):
                             msg1.version, msg1.annotation])
     msg_scenario = policies.generate_policies()
     
-    # Plotter
-    if plot:
-        msg_plt = plotter_MSG(msg_scenario)
-        nodes = msg_scenario.set("node")[2:]
-        #TODO Do we need plots_df here ?
-        msg_plt.plotter(
-            case="test", nodeloc= nodes, path="./", yr_min=2020, yr_max=2060
-        )
 
     # Remove the model solution (if any) and check out the scenario
     try:
@@ -57,13 +49,22 @@ def messagerun(scenario, solve, debug, report, plot):
         #TODO Add solve method here
         #TODO this would need a bit of adjustment on how we take solve.
         # In future, one could use the messagerun function and cal it manually in notebook if required.
+    
+    # Plotter
+    if plot:
+        msg_plt = plotter_MSG(msg_scenario)
+        nodes = msg_scenario.set("node")[2:]
+        #TODO Do we need plots_df here ?
+        msg_plt.plotter(
+            case="test", nodeloc= nodes, path="./", yr_min=2020, yr_max=2060
+        )
 
     # Debug mode logic
     if debug:
         print("Debug mode enabled")
         #TODO Add debug specific logs here
 
-    # Report generation logic
+    # Report generation logic - report to PYAM, not the MESSAGE Reporter
     if report:
         print("Generating report...")
         #TODO Add report generation logic here

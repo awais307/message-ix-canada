@@ -25,6 +25,7 @@ from message_ix_models.util import (
 from scipy.optimize import linprog
 from pathlib import Path
 from typing import Union
+from legacy_reporting import legacy_reporter
 from model.utils import (map_yv_ya_lt, config_validation, map_learning_rate)
 
 warnings.filterwarnings("ignore")  # Ignore warnings to keep the output clean
@@ -1162,6 +1163,7 @@ class model_MSG:
 		if self.solve:
 			start = time.time()
 			try:
+				print("Solving the model...\n")
 				self.scenario.solve(
 					solve_options={"barcrossalg": "2", "lpmethod": "1"}, case=caseName
 				)
@@ -1176,14 +1178,16 @@ class model_MSG:
 				print(f"Scenario {caseName} did not solve because of the following exception:\n{solve_error}\n")
 
 			if self.use_reporter:
+				'''
 				self.generate_report(
-					self.scenario,
 					output_path=f"{caseName}.csv",
 					min_year=2020,
 					max_year=2060,
 					from_excel=False,
 					unit_correct=True,
 				)
+				'''
+				legacy_reporter.run_old_reporting(sc=self.scenario)
 
 		if self.to_excel:
 			self.scenario.to_excel(f"{caseName}.xlsx")
