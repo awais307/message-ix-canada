@@ -120,7 +120,7 @@ class model_MSG:
 
 		tech_config = self.config["pre_process"]["add_technology"]
 
-		years = self.scenario.set("year").to_list()[14:]
+		years = self.scenario.set("year").astype(int).to_list()[14:]
 		first_year = self.scenario.firstmodelyear
 
 		# Read file from path and convert to dictionary
@@ -239,6 +239,8 @@ class model_MSG:
 						time=tech_data["time"],
 						unit=tech_data["unit"][0]["cost"],
 					).pipe(broadcast, map_learning_rate(tech_data["investment_lr"], tech_data["inv_cost_2020"][1]["cost_value"], years))
+					
+					inv_cost_df['year_vtg'] = inv_cost_df['year_vtg'].astype(int)
 
 					self.scenario.add_par("inv_cost", inv_cost_df)
 
@@ -264,7 +266,7 @@ class model_MSG:
 					):
 						tec_construction_df = make_matched_dfs(
 							input_df,
-							capacity_factor=i / j,
+							capacity_factor=tech_data["capacity_factor"],
 							technical_lifetime=tech_data["tec_lifetime"],
 							construction_time=tech_data["construction_time"],
 						)
