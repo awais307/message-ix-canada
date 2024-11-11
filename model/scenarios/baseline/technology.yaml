@@ -209,7 +209,7 @@ h2_stor_geo:
   emission_factor: 0
   emission_type: CO2_cc
   capacity_factor: 0.8 #fix this to TC/kWyr
-  investment_lr: 0.7
+  investment_lr: 0.8
 
 liq_h2:
   # Technology specs: mode, commodities, description
@@ -265,7 +265,7 @@ liq_h2:
   emission_factor: 0
   emission_type: CO2_cc
   capacity_factor: 0.95
-  investment_lr: 0.9169
+  investment_lr: 0.95
 
 meth_h2:
   # Technology specs: mode, commodities, description
@@ -321,4 +321,54 @@ meth_h2:
   emission_factor: 0.00003459
   emission_type: 'CO2_cc'
   capacity_factor: 0.91
-  investment_lr: 0.9169
+  investment_lr: 0.931
+
+h2_gas_fc_trp:
+  # Technology specs: mode, commodities, description
+  description: transport with gaseous h2 commodity
+  mode: M1
+  commodity:
+  # Commodities: inputs and outputs 
+    - input: 
+      - com_name: 
+        - hydrogen
+      - com_value: 
+        - 0.5556
+      - com_level: 
+        - secondary
+    - output: 
+      - com_name: 
+        - transport
+      - com_value: 
+        - 1
+      - com_level: 
+        - useful
+  # Time specifications: lifetime, construction time
+  time: year
+  tec_lifetime: 25
+  construction_time: 0
+  # Units for cost and energy
+  unit: 
+    - cost: 'USD/kWa'
+    - energy: '-'
+  # Geographical specs: nodes selection, provinces
+  # Specify "all" below for all provinces in Canada to be selected, or "custom" for a sub-set of provinces
+  node_select: all
+  provinces: 
+    - Alberta
+    #- Saskatchewan
+  # Cost specifications: investment, fiixed, and variable
+  inv_cost_2020: 
+    - cost_level: primary
+    - cost_value: 2083.5
+  fix_cost_2020: 
+    - cost_level: primary
+    - cost_value: 0
+  var_cost_2020:
+    - cost_level: primary
+    - cost_value: 0
+  # Emissions specifications
+  emission_factor: 0
+  emission_type: 'CO2_cc'
+  capacity_factor: 0.91
+  investment_lr: 0.91625
