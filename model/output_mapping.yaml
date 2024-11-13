@@ -1,43 +1,58 @@
 ## Mapping of MESSAGE outputs for aggregation of technologies 
 
-Resource|Coal:
-  - Resource|coal|coal_extr_ch4|M1
-  - Resource|coal|coal_extr|M1
-  - Resource|lignite|lignite_extr|M1
+Resource|Extraction|Coal:
+  - in|resource|coal|coal_extr_ch4|M1
+  - in|resource|coal|coal_extr|M1
 
-Resource|Gas:
-  - Resource|gas|gas_extr_1|M1
-  - Resource|gas|gas_extr_2|M1
-  - Resource|gas|gas_extr_3|M1
-  - Resource|gas|gas_extr_4|M1
-  - Resource|gas|gas_extr_5|M1
-  - Resource|gas|gas_extr_6|M1
-  
-Resource|Oil:
-  - Resource|crude 1 resource|oil_extr_1|M1
-  - Resource|crude 1 resource|oil_extr_1_ch4|M1
-  - Resource|crude 2 resource|oil_extr_2_ch4|M1
-  - Resource|crude 2 resource|oil_extr_2|M1
-  - Resource|crude 3 resource|oil_extr_3_ch4|M1
-  - Resource|crude 3 resource|oil_extr_3|M1
-  - Resource|crude 4 resource|oil_extr_4_ch4|M1
-  - Resource|crude 4 resource|oil_extr_4|M1
-  - Resource|crude 5 resource|oil_extr_5|M1
-  - Resource|crude 6 resource|oil_extr_6|M1
-  - Resource|crude 7 resource|oil_extr_7|M1
+Resource|Extraction|Lignite:
+  - in|resource|lignite|lignite_extr|M1
 
-Primary Energy|Biomass:
+Resource|Extraction|Gas|Unconventional:
+  - in|resource|gas_1|gas_extr_1|M1
+  - in|resource|gas_2|gas_extr_2|M1
+  - in|resource|gas_3|gas_extr_3|M1
+  - in|resource|gas_4|gas_extr_4|M1
+
+Resource|Extraction|Gas|Conventional:
+  - in|resource|gas_5|gas_extr_5|M1
+  - in|resource|gas_6|gas_extr_6|M1
+  - in|resource|gas_6|gas_extr_7|M1
+
+Resource|Extraction|Oil|Conventional:
+  - in|resource|crude_1|oil_extr_1_ch4|M1
+  - in|resource|crude_1|oil_extr_1|M1
+  - in|resource|crude_2|oil_extr_2_ch4|M1
+  - in|resource|crude_2|oil_extr_2|M1
+  - in|resource|crude_3|oil_extr_3_ch4|M1
+  - in|resource|crude_3|oil_extr_3|M1
+
+
+Resource|Extraction|Oil|Unconventional:
+  - in|resource|crude_4|oil_extr_4_ch4|M1
+  - in|resource|crude_4|oil_extr_4|M1
+  - in|resource|crude_5|oil_extr_5|M1
+  - in|resource|crude_6|oil_extr_6|M1
+  - in|resource|crude_7|oil_extr_7|M1
+
+
+Primary Energy|Biomass|Electricity|w/ CCS:
   - Primary Energy|biomass|bio_istig_ccs|M1
+  - Primary Energy|biomass|liq_bio_ccs|M1
+  - Primary Energy|biomass|h2_bio_ccs|M1
+
+Primary Energy|Biomass|Hydrogen:
+  - Primary Energy|biomass|h2_bio|M1
+
+Primary Energy|Biomass|Electricity|w/o CCS:
   - Primary Energy|biomass|bio_istig|M1
   - Primary Energy|biomass|bio_ppl|M1
   - Primary Energy|biomass|gas_bio|M1
-  - Primary Energy|biomass|liq_bio_ccs|M1
   - Primary Energy|biomass|liq_bio|M1
   - Primary Energy|biomass|land_use_biomass|M1
   - Primary Energy|biomass|biomass_t_d|M1
   - Primary Energy|biomass|bio_hpl|M1
-  - Primary Energy|biomass|h2_bio_ccs|M1
-  - Primary Energy|biomass|h2_bio|M1
+ 
+
 
 Primary Energy|Renewable|Biomass:
   - Primary Energy|renewable|biomass|bio_extr_a|M1
