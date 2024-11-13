@@ -28,7 +28,7 @@ pages:
   image: python:3.8-buster
   timeout: 10m
   script:
-    - pip install mkdocs mkdocs-material mkdocstrings
+    - pip install mkdocs mkdocs-material mkdocstrings[handlers]
     - mkdocs build -d public
   artifacts:
     paths:
