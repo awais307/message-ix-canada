@@ -120,17 +120,15 @@ def map_learning_rate(l_rate: float, initial_cost: float, years: list) -> pd.Dat
 
 	return df
 
-	def expand_grid(self, dictionary):
-		"""
-		Create a DataFrame from all combinations of dictionary values.
-
-		Args:
-			dictionary (dict): A dictionary where each key is a column name and the value is a list of column values.
-
-		Returns:
-			pd.DataFrame: A DataFrame containing all combinations of the provided values.
-		"""
-		return pd.DataFrame([row for row in product(*dictionary.values())], columns=dictionary.keys())
+def expand_grid(self, dictionary):
+	"""
+	Create a DataFrame from all combinations of dictionary values.
+	Args:
+		dictionary (dict): A dictionary where each key is a column name and the value is a list of column values.
+	Returns:
+		pd.DataFrame: A DataFrame containing all combinations of the provided values.
+	"""
+	return pd.DataFrame([row for row in product(*dictionary.values())], columns=dictionary.keys())
 
 # Reporter method
 def report_to_pyam(scenario, directory_path, output_path):
