@@ -27,6 +27,7 @@ from pathlib import Path
 from typing import Union
 from legacy_reporting import legacy_reporter
 from model.utils import (map_yv_ya_lt, config_validation, map_learning_rate)
+from policies import *
 
 warnings.filterwarnings("ignore")  # Ignore warnings to keep the output clean
 
@@ -1085,7 +1086,19 @@ class model_MSG:
 
 		print(f"Report saved to {output_path}")
 
-
+	def change_technology_cost(self):
+	"""
+	Change the cost of technologies in a MESSAGEix scenario     
+	This function modifies the provided MESSAGEix scenario to change the costs of specified technologies. 
+	The specific implementation details, such as the technologies affected, the new cost values, 
+	and the time periods for the cost changes, should be added within this function     
+	Args:
+		scenario (MESSAGEix.Scenario): The MESSAGEix scenario for which the technology costs will be changed        
+	Returns:
+		None
+	"""
+	pass 
+	
 	# Full scenario set-up
 	def setup_scenario(self) -> tuple:
 		"""
@@ -1140,14 +1153,13 @@ class model_MSG:
 			self.add_hydrogen_shares(path=path_to_hydrogen_data)
 
 		# Set-up policies
-		#policies = policies_MSG(self.scenario)
-	
-		#if self.apply_obps_netzero:
-		#	path_to_obps_data = script_dir / scenario_folder
-		#	policies.apply_obps_netzero(data_file_path=path_to_obps_data)
-		#elif self.apply_obps_baseline:
-		#	path_to_obps_data = script_dir / scenario_folder
-		#	policies.apply_obps_baseline(data_file_path=path_to_obps_data)
+		
+		if self.apply_obps_netzero:
+			path_to_obps_data = script_dir / scenario_folder
+			OBPS.apply_obps_netzero(scenario=self.scenario, data_file_path=path_to_obps_data)
+		elif self.apply_obps_baseline:
+			path_to_obps_data = script_dir / scenario_folder
+			OBPS.apply_obps_baseline(scenario=self.scenario, data_file_path=path_to_obps_data)
 
 		# Technologies
 		if self.add_techs:
