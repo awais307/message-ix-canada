@@ -20,7 +20,7 @@ def expand_grid(dictionary):
     """
     return pd.DataFrame([row for row in product(*dictionary.values())], columns=dictionary.keys())
 
-def bound_emissions(msgSDG, nodeName):
+def bound_emissions(self, nodeName):
     """
     Bound emissions in an extreme climate mitigation scenario.
 
@@ -31,27 +31,73 @@ def bound_emissions(msgSDG, nodeName):
         nodeName (str): The name of the node to bound emissions for.
 
     """
-    msgSDG.check_out()
+    self.scenario.check_out()
 
-    # Define the years for bounding emissions
-    year_df = [2025, 2030, 2035, 2040, 2045, 2050, 2055, 2060, 2070]
+    emissions_df = pd.read_csv('emissions_baseline.csv')
+    
 
-    # Define the dictionary for emissions bounding
-    dic = {
-        'node': [nodeName],
-        'type_emission': ['TCE'],
-        'type_tec': ['all'],
-        'type_year': year_df,
-        'value': [100, 90, 72.79, 50, 45, 40, 35, 30, 30],
-        'unit': ['MtCO2']
+    # Define the exact emissions trajectory for Canada (in MtCO2eq)
+    canada_trajectory = {
+        2020: 659e6,   # 659 MtCO2eq
+        2025: 549e6,   # 549 MtCO2eq
+        2030: 439e6,   # 439 MtCO2eq
+        2035: 329e6,   # 329 MtCO2eq
+        2040: 220e6,   # 220 MtCO2eq
+        2045: 110e6,   # 110 MtCO2eq
+        2050: 50e6,    # 50,000 MtCO2eq (likely meant to be 50 MtCO2eq)
+        2055: 40e6,    # 40,000 MtCO2eq (likely meant to be 40 MtCO2eq)
+        2060: 30e6     # 30,000 MtCO2eq (likely meant to be 30 MtCO2eq)
     }
 
-    # Create the DataFrame using expand_grid
-    df = expand_grid(dic)
-    df = df.iloc[0:9]  # Select the first 9 rows
-    df['type_year'] = year_df
+    # Extract the unique provinces (nodes) excluding Canada
+    provinces = emissions_df['node'].unique()
+    provinces = provinces[provinces != 'Canada']
 
-    # Add the parameter to the scenario and commit the changes
-    msgSDG.add_par('bound_emission', df)
-    msgSDG.commit('emissions bounded')
+    # Initialize a list to store the emission trajectories for each province
+    emission_trajectories_list = []
+
+    # Iterate over each province and apply the reduction schedule
+    for province in provinces:
+        # Extract the emission data for the province
+        province_data = emissions_df[(emissions_df['node'] == province)]
+        
+        # Create a dictionary to store the year and emission values
+        province_emissions = {'province': [], 'year': [], 'emission': []}
+        
+        # Get the 2020 base year emission for the province
+        base_year_emission = province_data[province_data['year'] == 2020]['lvl'].values[0]
+        
+        # Get the total emissions for Canada in 2020
+        canada_2020_emission = canada_trajectory[2020]
+        
+        # Calculate the proportion of this province's emissions relative to Canada's total in 2020
+        province_proportion = base_year_emission / canada_2020_emission
+        
+        # Iterate over the Canada trajectory and calculate the emissions for this province
+        for year, canada_target in canada_trajectory.items():
+            adjusted_emission = province_proportion * canada_target
+            
+            # Store the emission value in the dictionary
+            province_emissions['province'].append(province)
+            province_emissions['year'].append(year)
+            province_emissions['emission'].append(adjusted_emission)
+        
+        # Convert the dictionary to a DataFrame and append to the list
+        province_emissions_df = pd.DataFrame(province_emissions)
+        emission_trajectories_list.append(province_emissions_df)
+
+    # Concatenate all the DataFrames into a single DataFrame
+    emission_trajectories_df = pd.concat(emission_trajectories_list).reset_index(drop=True)
+
+    df_bound = emission_trajectories_df.copy()
+    df_bound.rename(columns={'province':'node','year':'type_year','emission':'value'}, inplace=True)
+    df_bound['type_emission'] = 'TCE'
+    df_bound['type_tec'] = 'all'
+    df_bound['unit'] = '-'
+
+    self.scenario.add_par('bound_emission', df_bound)
+
+
+    self.scenario.add_par('bound_emission', df)
+    self.scenario.commit('emissions bounded')
 
