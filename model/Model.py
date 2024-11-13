@@ -265,7 +265,7 @@ class model_MSG:
 						)
 
 			self.scenario.commit("Technologies added successfully")
-
+	#TODO move this to policy folder
 	def add_hydrogen_shares(self, path: Union[str, Path]):
 		"""
 		Add hydrogen shares to a MESSAGEix scenario.
@@ -325,7 +325,7 @@ class model_MSG:
 
 		# Optional: Uncomment the line below to print the unique 'shares' values again
 		# print(scenario.par("share_commodity_lo")['shares'].unique())
-
+	#TODO Move this to utility 
 	def process_gdp_population_data(
 		self, path_to_gdp: Union[str, Path], path_to_pop: Union[str, Path]
 	):
@@ -690,7 +690,7 @@ class model_MSG:
 		self.scenario.commit(
 			"Added population and GDP bounds"
 		)  # Commit the changes with a descriptive message
-
+	#TODO move to utils
 	def update_historical_activity(self, path: Union[str, Path]):
 		"""
 		Update the historical activity parameter in the scenario with data from a specified path.
@@ -1076,11 +1076,12 @@ class model_MSG:
 		report_df = report_df.drop_duplicates(subset=["model", "scenario", "Region", "variable"], keep='first')
 
 		pyam_df = pyam.IamDataFrame(report_df)
-
+		pyam_df.filter(variable = ['*extract*','*ot_saline*','*ot_fresh*','*cl_fresh*',
+							 '*ot_air*','*fresh_wastewater*','*NAM*','*region*'],keep= False,inplace = True)
+		
 		variable = pyam_df.variable
 		pyam_df.aggregate_region(variable, append=True)
 		pyam_df.rename({"region": {"World": "Canada"}}, inplace=True)
-
 		pyam_df.to_csv(output_path)
 
 		print(f"Report saved to {output_path}")
