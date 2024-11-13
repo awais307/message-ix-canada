@@ -121,7 +121,7 @@ gas_h2:
     - output: 
       - com_name: 
         - d_heat
-        - electr
+        - gas
       - com_value: 
         - 0.2
         - 1
@@ -285,13 +285,13 @@ meth_h2:
         - secondary
     - output: 
       - com_name: 
-        - lightoil
+        - methanol
         - d_heat
       - com_value: 
         - 1
         - 0.05
       - com_level: 
-        - secondary 
+        - primary 
         - secondary
   # Time specifications: lifetime, construction time
   time: year
@@ -363,7 +363,7 @@ h2_gas_fc_trp:
     - cost_value: 2083.5
   fix_cost_2020: 
     - cost_level: primary
-    - cost_value: 0
+    - cost_value: 105
   var_cost_2020:
     - cost_level: primary
     - cost_value: 0
