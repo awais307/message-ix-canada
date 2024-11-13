@@ -13,6 +13,7 @@ import plotly.express as px
 import numpy as np
 import pandas as pd
 
+
 from matplotlib.backends.backend_pdf import PdfPages
 
 warnings.filterwarnings("ignore")  # Ignore warnings to keep the output clean
@@ -653,7 +654,7 @@ class plotter_MSG:
 			''''
 			Creates a list of the technologies to be used in plotting
    			'''
-      
+	  
 			if level is None:
 				tecs_set = set(scenario.par(out_in, {"commodity": commodity}).technology)
 			elif commodity is None:
@@ -763,7 +764,7 @@ class plotter_MSG:
 
 		for current_node in nodeloc:
 			# Prepration for Excel writings
-			writer_xls = pd.ExcelWriter(path / f"{case}_{current_node}.xlsx", engine="xlsxwriter")
+			writer_xls = pd.ExcelWriter(f"{path}/{case}_{current_node}.xlsx", engine="xlsxwriter")
 
 			df, df2 = self.model_output(tecs, current_node, "input", "electr")
 			df = self.group(df, ["year_act", "technology"], "product", 0.0, yr)
@@ -1053,7 +1054,7 @@ class plotter_MSG:
 			]
 			self.dict_plot = {x: self.dict_plot[x] for x in keys}
 			# Construct the full path using pathlib and the PDF filename format
-			pdf_file_path = path / "{}-msgResults.pdf".format(
+			pdf_file_path = path+"/{}-msgResults.pdf".format(
 				case + f"_{current_node}_" + time.strftime("%m.%d_%H.%M", time.localtime())
 			)
 			with PdfPages(pdf_file_path)as pdf:

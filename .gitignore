@@ -14,17 +14,4 @@ ed_ma
 ssh_ma
 ssh_ma.pub
 *.txt
-<<<<<<< HEAD
-<<<<<<< HEAD
-/MESSAGEix_Canada.egg-info
-
-# Ignore the Plant UML diagrams from the 'out' folder
-/out
-=======
 *PKG-INFO
->>>>>>> 75b5a38 (Including Capacity Values for Provinces)
-=======
-/MESSAGEix_Canada.egg-info
-MESSAGEix_canada.egg-info/PKG-INFO
-/model/scenarios/*.xlsx
->>>>>>> e797592 (Rerbase from Dev Branch)
