@@ -1,6 +1,6 @@
 site_name: MESSAGEix Canada
-site_url: sesit.gitlab.io/message-ix/
-site_dir: public
+# site_url: sesit.gitlab.io/message-ix/
+# site_dir: public
 
 
 theme:

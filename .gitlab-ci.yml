@@ -21,12 +21,19 @@ job:
     - message
 
   script:
-    - mkdocs build --strict --verbose
     - echo 'Running pipeline now'
     - python3 MESSAGE_CA.py --solve
-    - mkdocs build --strict --verbose
-    - echo 'Running pipeline now'
-    - mkdocs build --strict --verbose --site-dir test
+
+pages:
+  # rules:
+  #   - if: $CI_COMMIT_BRANCH == "main"
+  timeout: 10m
+  image: python
+  script:
+    - pip install mkdocs
+    - mkdocs build -d public
   artifacts:
     paths:
-      - test
+      - public
+
+
