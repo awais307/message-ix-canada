@@ -25,9 +25,10 @@ job:
 pages:
   # rules:
   #   - if: $CI_COMMIT_BRANCH == "main"
-  image: squidfunk/mkdocs-material
+  image: python:3.8-buster
   timeout: 10m
   script:
+    - pip install mkdocs mkdocs-material mkdocstrings
     - mkdocs build -d public
   artifacts:
     paths:
