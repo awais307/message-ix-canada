@@ -20,7 +20,7 @@ def expand_grid(dictionary):
     """
     return pd.DataFrame([row for row in product(*dictionary.values())], columns=dictionary.keys())
 
-def bound_emissions(self, nodeName):
+def bound_emissions(self,path, nodeName):
     """
     Bound emissions in an extreme climate mitigation scenario.
 
@@ -33,7 +33,7 @@ def bound_emissions(self, nodeName):
     """
     self.scenario.check_out()
 
-    emissions_df = pd.read_csv('emissions_baseline.csv')
+    emissions_df = pd.read_csv(path/'emissions_baseline.csv')
     
 
     # Define the exact emissions trajectory for Canada (in MtCO2eq)
