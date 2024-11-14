@@ -24,6 +24,7 @@ setup(
         'message-ix-models',
         'message-ix-models[report]',
     ],
+    dependency_links=["git+https://github.com/criscfer/message-ix-models.git"], 
     entry_points={
         'console_scripts': [
             'message-canada=MESSAGE_CA:messagerun',  

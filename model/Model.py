@@ -25,9 +25,10 @@ from message_ix_models.util import (
 from scipy.optimize import linprog
 from pathlib import Path
 from typing import Union
-from legacy_reporting import legacy_reporter
+#from canada_models.message_ix_models.report.legacy.iamc_report_hackathon import report
+from message_ix_models.report.legacy.iamc_report_hackathon import report
 from model.utils import (map_yv_ya_lt, config_validation, map_learning_rate)
-from policies import *
+from model.policies import OBPS
 
 warnings.filterwarnings("ignore")  # Ignore warnings to keep the output clean
 
@@ -1087,17 +1088,17 @@ class model_MSG:
 		print(f"Report saved to {output_path}")
 
 	def change_technology_cost(self):
-	"""
-	Change the cost of technologies in a MESSAGEix scenario     
-	This function modifies the provided MESSAGEix scenario to change the costs of specified technologies. 
-	The specific implementation details, such as the technologies affected, the new cost values, 
-	and the time periods for the cost changes, should be added within this function     
-	Args:
-		scenario (MESSAGEix.Scenario): The MESSAGEix scenario for which the technology costs will be changed        
-	Returns:
-		None
-	"""
-	pass 
+		"""
+		Change the cost of technologies in a MESSAGEix scenario     
+		This function modifies the provided MESSAGEix scenario to change the costs of specified technologies. 
+		The specific implementation details, such as the technologies affected, the new cost values, 
+		and the time periods for the cost changes, should be added within this function     
+		Args:
+			scenario (MESSAGEix.Scenario): The MESSAGEix scenario for which the technology costs will be changed        
+		Returns:
+			None
+		"""
+		pass 
 	
 	# Full scenario set-up
 	def setup_scenario(self) -> tuple:
@@ -1154,10 +1155,10 @@ class model_MSG:
 
 		# Set-up policies
 		
-		if self.apply_obps_netzero:
+		if self.add_obps_netzero:
 			path_to_obps_data = script_dir / scenario_folder
 			OBPS.apply_obps_netzero(scenario=self.scenario, data_file_path=path_to_obps_data)
-		elif self.apply_obps_baseline:
+		elif self.add_obps_baseline:
 			path_to_obps_data = script_dir / scenario_folder
 			OBPS.apply_obps_baseline(scenario=self.scenario, data_file_path=path_to_obps_data)
 
@@ -1190,6 +1191,7 @@ class model_MSG:
 				print(f"Scenario {caseName} did not solve because of the following exception:\n{solve_error}\n")
 
 			if self.use_reporter:
+				print("\nGenerating report...\n")
 				'''
 				self.generate_report(
 					output_path=f"{caseName}.csv",
@@ -1199,7 +1201,7 @@ class model_MSG:
 					unit_correct=True,
 				)
 				'''
-				legacy_reporter.run_old_reporting(sc=self.scenario)
+				report(mp=self.mp, scen=self.scenario)
 
 		if self.to_excel:
 			self.scenario.to_excel(f"{caseName}.xlsx")
