@@ -12,7 +12,6 @@ before_script:
   - pip install -e . --break-system-packages
   - sed -i 's/option LP = CPLEX ;/option LP = CBC ;/' /usr/local/lib/python3.11/dist-packages/message_ix/model/MESSAGE/auxiliary_settings.gms
 
-
 job:
   stage: test
 
@@ -22,3 +21,19 @@ job:
   script:
     - echo 'Running pipeline now'
     - python3 MESSAGE_CA.py --solve
+
+pages:
+  # TODO once the changes are merged to the main branch we can uncomment this rule and only updates to main will change the website documentation
+  # rules:
+  #   - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  image: python:3.8-buster
+  timeout: 10m
+  script:
+    - pip install mkdocs mkdocs-material mkdocstrings[python]
+    - mkdocs build -d public
+  artifacts:
+    paths:
+      - public
+
+
+
