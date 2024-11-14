@@ -27,6 +27,7 @@ pages:
   # rules:
   #   - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
   image: python:3.8-buster
+  before_script: []
   timeout: 10m
   script:
     - pip install mkdocs mkdocs-material mkdocstrings[python]
