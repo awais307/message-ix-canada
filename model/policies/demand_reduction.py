@@ -32,6 +32,8 @@ def demand_reduction(scenario):
     # Define the reduction factors for the key years
     reduction_factors = {
         2020: 1.0,    # No reduction in 2020
+        2030: 0.94,   # 6% reduction by 2030
+        2040: 0.87,    # 13% reduction by 2040
         2050: 0.78,   # 18% reduction by 2050
         2060: 0.8    # 20% reduction by 2060
     }
