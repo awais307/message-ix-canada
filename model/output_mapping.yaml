@@ -1,0 +1,1224 @@
+## Mapping of MESSAGE outputs for aggregation of technologies 
+
+Resource|Extraction|Coal:
+  - in|resource|coal|coal_extr_ch4|M1
+  - in|resource|coal|coal_extr|M1
+
+Resource|Extraction|Lignite:
+  - in|resource|lignite|lignite_extr|M1
+
+Resource|Extraction|Gas|Unconventional:
+  - in|resource|gas_1|gas_extr_1|M1
+  - in|resource|gas_2|gas_extr_2|M1
+  - in|resource|gas_3|gas_extr_3|M1
+  - in|resource|gas_4|gas_extr_4|M1
+
+Resource|Extraction|Gas|Conventional:
+  - in|resource|gas_5|gas_extr_5|M1
+  - in|resource|gas_6|gas_extr_6|M1
+  - in|resource|gas_6|gas_extr_7|M1
+
+Resource|Extraction|Oil|Conventional:
+  - in|resource|crude_1|oil_extr_1_ch4|M1
+  - in|resource|crude_1|oil_extr_1|M1
+  - in|resource|crude_2|oil_extr_2_ch4|M1
+  - in|resource|crude_2|oil_extr_2|M1
+  - in|resource|crude_3|oil_extr_3_ch4|M1
+  - in|resource|crude_3|oil_extr_3|M1
+
+
+Resource|Extraction|Oil|Unconventional:
+  - in|resource|crude_4|oil_extr_4_ch4|M1
+  - in|resource|crude_4|oil_extr_4|M1
+  - in|resource|crude_5|oil_extr_5|M1
+  - in|resource|crude_6|oil_extr_6|M1
+  - in|resource|crude_7|oil_extr_7|M1
+
+
+Primary Energy|Biomass|Electricity|w/ CCS:
+  - Primary Energy|biomass|bio_istig_ccs|M1
+  - Primary Energy|biomass|liq_bio_ccs|M1
+  - Primary Energy|biomass|h2_bio_ccs|M1
+
+Primary Energy|Biomass|Hydrogen:
+  - Primary Energy|biomass|h2_bio|M1
+
+Primary Energy|Biomass|Electricity|w/o CCS:
+  - Primary Energy|biomass|bio_istig|M1
+  - Primary Energy|biomass|bio_ppl|M1
+  - Primary Energy|biomass|gas_bio|M1
+  - Primary Energy|biomass|liq_bio|M1
+  - Primary Energy|biomass|land_use_biomass|M1
+  - Primary Energy|biomass|biomass_t_d|M1
+  - Primary Energy|biomass|bio_hpl|M1
+ 
+
+
+Primary Energy|Renewable|Biomass:
+  - Primary Energy|renewable|biomass|bio_extr_a|M1
+  - Primary Energy|renewable|biomass|bio_extr_b|M1
+  - Primary Energy|renewable|biomass|bio_extr_c|M1
+  - Primary Energy|renewable|biomass|bio_extr_d|M1
+  - Primary Energy|renewable|biomass|bio_extr_e|M1
+  - Primary Energy|renewable|biomass|bio_extr_f|M1
+  - Primary Energy|renewable|biomass|bio_extr_g|M1
+  - Primary Energy|renewable|biomass|land_use_biomass|M1
+
+Primary Energy|Ethanol:
+  - Primary Energy|biomass|eth_bio_ccs|M1
+  - Primary Energy|biomass|eth_bio|M1
+  - Primary Energy|ethanol|eth_bio_ccs|M1
+  - Primary Energy|ethanol|eth_bio|M1 
+  - Primary Energy|ethanol|liq_bio_ccs|M1
+  - Primary Energy|ethanol|liq_bio|M1
+  
+Primary Energy|Hydrogen:
+  - Primary Energy|hydrogen|liq_h2|M1
+
+Primary Energy|Liquid Hydrogen:
+  - Primary Energy|liquid hydrogen|liq_h2|M1
+
+Primary Energy|Liquid Hydrogen|export:
+  #- Secondary Energy|lh2|lh2_bal|M1
+  - Primary Energy|lh2|lh2_exp|M1
+
+Primary Energy|Coal:
+  - Primary Energy|coal|coal_extr_ch4|M1
+  - Primary Energy|coal|coal_extr|M1
+  - Primary Energy|coal|lignite_extr|M1
+
+Primary Energy|Coal|Export:
+  - Primary Energy|coal|coal_exp|M1
+
+#Primary Energy|LNG:
+  #- Primary Energy|LNG|LNG_bal|M1
+Primary Energy|LNG|Export:
+  - Primary Energy|LNG|LNG_exp|M1
+Primary Energy|LNG|Production:
+  - Primary Energy|LNG|LNG_prod|M1
+
+Primary Energy|Gas:
+  - Primary Energy|gas|gas_extr_1|M1
+  - Primary Energy|gas|gas_extr_2|M1
+  - Primary Energy|gas|gas_extr_3|M1
+  - Primary Energy|gas|gas_extr_4|M1
+  - Primary Energy|gas|gas_extr_5|M1
+  - Primary Energy|gas|gas_extr_6|M1
+  - Primary Energy|gas|oil_extr_1_ch4|M1
+  - Primary Energy|gas|oil_extr_2_ch4|M1
+  - Primary Energy|gas|oil_extr_3_ch4|M1
+  - Primary Energy|gas|oil_extr_4_ch4|M1
+  - Primary Energy|gas|coal_extr_ch4|M1
+  - Primary Energy|gas|LNG_prod|M1
+  
+Primary Energy|Gas|Export:
+  - Primary Energy|gas|gas_exp|M1
+  
+Primary Energy|Oil|Production:
+  - Primary Energy|crudeoil|oil_extr_1_ch4|M1
+  - Primary Energy|crudeoil|oil_extr_1|M1
+  - Primary Energy|crudeoil|oil_extr_2_ch4|M1
+  - Primary Energy|crudeoil|oil_extr_2|M1
+  - Primary Energy|crudeoil|oil_extr_3_ch4|M1
+  - Primary Energy|crudeoil|oil_extr_3|M1
+  - Primary Energy|crudeoil|oil_extr_4_ch4|M1
+  - Primary Energy|crudeoil|oil_extr_4|M1
+  - Primary Energy|crudeoil|oil_extr_5|M1
+  - Primary Energy|crudeoil|oil_extr_6|M1
+  - Primary Energy|crudeoil|oil_extr_7|M1
+
+Primary Energy|Oil|Export:
+  - Primary Energy|crudeoil|oil_exp|M1
+
+Primary Energy|renewable|hydro:
+  - Primary Energy|renewable|hydro|hydro_hc|M1
+  - Primary Energy|renewable|hydro|hydro_lc|M1
+
+Primary Energy|renewable|solar:
+  - Primary Energy|renewable|solar_pv|solar_pv_ppl|M1
+  - Primary Energy|renewable|solar_th|solar_th_ppl|M1
+  - Primary Energy|renewable|solar_th|solar_rc|M1
+
+Primary Energy|renewable|wind:
+  - Primary Energy|renewable|wind|wind_ppf|M1
+  - Primary Energy|renewable|wind|wind_ppl|M1
+  - Primary Energy|renewable|wind_onshore|wind_ppl|M1 #not sure why this is different ut was in IDEA results
+
+Primary Energy|Methanol:
+  - Primary Energy|methanol|meth_coal_ccs|M1
+  - Primary Energy|methanol|meth_coal|M1
+  - Primary Energy|methanol|meth_ng_ccs|M1
+  - Primary Energy|methanol|meth_ng|M1
+  - Primary Energy|methanol|meth_h2|M1
+
+Primary Energy|Methanol|Export:
+  #- Primary Energy|methanol|meth_bal|M1
+  - Primary Energy|methanol|meth_exp|M1
+
+Primary Energy|Ethanol|Export:
+  #- Primary Energy|ethanol|eth_bal|M1
+  - Primary Energy|ethanol|eth_exp|M1
+
+Primary Energy|dumagr:
+  - Primary Energy|dumagr|HFCo_TCE|M1
+  - Primary Energy|dumagr|N2Oo_TCE|M1
+  - Primary Energy|dumagr|lfil_con|M1
+  - Primary Energy|dumagr|nica_con|M1
+
+
+Useful Energy|non-Commercial biomass:
+  - Useful Energy|non-comm|biomass_nc|M1
+
+Useful Energy|residential/commercial thermal:
+  - Useful Energy|rc_therm|biomass_rc|M1
+  - Useful Energy|rc_therm|coal_rc|M1
+  - Useful Energy|rc_therm|eth_rc|M1
+  - Useful Energy|rc_therm|foil_rc|M1
+  - Useful Energy|rc_therm|gas_rc|M1
+  - Useful Energy|rc_therm|h2_fc_RC|M1
+  - Useful Energy|rc_therm|h2_rc|M1
+  - Useful Energy|rc_therm|heat_rc|M1
+  - Useful Energy|rc_therm|hp_el_rc|M1
+  - Useful Energy|rc_therm|hp_gas_rc|M1
+  - Useful Energy|rc_therm|loil_rc|M1
+  - Useful Energy|rc_therm|meth_rc|M1
+  - Useful Energy|rc_therm|solar_rc|M1
+  - Useful Energy|rc_therm|RCtherm_1|M1
+  - Useful Energy|rc_therm|RCtherm_2|M1
+  - Useful Energy|rc_therm|RCtherm_3|M1
+  - Useful Energy|rc_therm|RCtherm_4|M1
+  - Useful Energy|rc_therm|RCtherm_5|M1
+
+Useful Energy|residential/commercial specific:
+  - Useful Energy|rc_spec|sp_el_RC|M1
+  - Useful Energy|rc_spec|h2_fc_RC|M1
+
+Useful Energy|Industrial thermal:
+  - Useful Energy|i_therm|biomass_i|M1
+  - Useful Energy|i_therm|coal_i|M1
+  - Useful Energy|i_therm|elec_i|M1
+  - Useful Energy|i_therm|eth_i|M1
+  - Useful Energy|i_therm|foil_i|M1
+  - Useful Energy|i_therm|gas_i|M1
+  - Useful Energy|i_therm|h2_fc_I|M1
+  - Useful Energy|i_therm|h2_i|M1
+  - Useful Energy|i_therm|heat_i|M1
+  - Useful Energy|i_therm|hp_el_i|M1
+  - Useful Energy|i_therm|hp_gas_i|M1
+  - Useful Energy|i_therm|loil_i|M1
+  - Useful Energy|i_therm|meth_i|M1
+  - Useful Energy|i_therm|solar_i|M1
+  - Useful Energy|i_therm|Itherm_1|M1
+
+Useful Energy|Industrial specific:
+  - Useful Energy|i_spec|sp_coal_I|M1
+  - Useful Energy|i_spec|sp_el_I|M1
+  - Useful Energy|i_spec|sp_eth_I|M1
+  - Useful Energy|i_spec|sp_liq_I|M1
+  - Useful Energy|i_spec|sp_meth_I|M1
+  - Useful Energy|i_spec|h2_fc_I|M1
+
+Useful Energy|Industrial feedstock:
+  - Useful Energy|i_feed|ethanol_fs|M1
+  - Useful Energy|i_feed|gas_fs|M1
+  - Useful Energy|i_feed|loil_fs|M1
+  - Useful Energy|i_feed|methanol_fs|M1
+  - Useful Energy|i_feed|foil_fs|M1
+  - Useful Energy|i_feed|coal_fs|M1
+  - Useful Energy|i_feed|Feeds_2|M1
+  - Useful Energy|i_feed|Feeds_5|M1
+
+Useful Energy|Transport:
+  - Useful Energy|transport|coal_trp|M1
+  - Useful Energy|transport|elec_trp|M1
+  - Useful Energy|transport|eth_fc_trp|M1
+  - Useful Energy|transport|eth_ic_trp|M1
+  - Useful Energy|transport|foil_trp|M1
+  - Useful Energy|transport|gas_trp|M1
+  - Useful Energy|transport|h2_fc_trp|M1
+  - Useful Energy|transport|loil_trp|M1
+  - Useful Energy|transport|meth_fc_trp|M1
+  - Useful Energy|transport|meth_ic_trp|M1
+  - Useful Energy|transport|Trans_1|M1
+  - Useful Energy|transport|Trans_2|M1
+  - Useful Energy|transport|Trans_3|M1
+
+Emissions|CO2_industry:
+ - Emissions|CO2_industry|coal_i|M1
+ - Emissions|CO2_industry|eth_i|M1
+ - Emissions|CO2_industry|foil_i|M1
+ - Emissions|CO2_industry|gas_i|M1
+ - Emissions|CO2_industry|loil_i|M1
+ - Emissions|CO2_industry|meth_i|M1
+ - Emissions|CO2_industry|sp_eth_I|M1
+ - Emissions|CO2_industry|sp_liq_I|M1
+ - Emissions|CO2_industry|sp_meth_I|M1
+
+Emissions|CO2_res_com:
+ - Emissions|CO2_res_com|coal_rc|M1
+ - Emissions|CO2_res_com|eth_rc|M1
+ - Emissions|CO2_res_com|foil_rc|M1
+ - Emissions|CO2_res_com|gas_rc|M1
+ - Emissions|CO2_res_com|hp_gas_i|M1
+ - Emissions|CO2_res_com|hp_gas_rc|M1
+ - Emissions|CO2_res_com|loil_rc|M1
+ - Emissions|CO2_res_com|meth_rc|M1
+ - Emissions|CO2_res_com|solar_rc|M1
+
+Emissions|CO2_transformation:
+ - Emissions|CO2_transformation|bio_istig_ccs|M1
+ - Emissions|CO2_transformation|bio_istig|M1
+ - Emissions|CO2_transformation|bio_ppl_co2scr|M1
+ - Emissions|CO2_transformation|c_ppl_co2scr|M1
+ - Emissions|CO2_transformation|cement_CO2|M1
+ - Emissions|CO2_transformation|cement_co2scr|M1
+ - Emissions|CO2_transformation|coal_adv_ccs|M1
+ - Emissions|CO2_transformation|coal_adv|M1
+ - Emissions|CO2_transformation|coal_gas|M1
+ - Emissions|CO2_transformation|coal_hpl|M1
+ - Emissions|CO2_transformation|coal_ppl_u|M1
+ - Emissions|CO2_transformation|coal_ppl|M1
+ - Emissions|CO2_transformation|coal_t_d|M1
+ - Emissions|CO2_transformation|eth_bio_ccs|M1
+ - Emissions|CO2_transformation|eth_bio|M1
+ - Emissions|CO2_transformation|eth_t_d|M1
+ - Emissions|CO2_transformation|flaring_CO2|M1
+ - Emissions|CO2_transformation|foil_hpl|M1
+ - Emissions|CO2_transformation|foil_ppl|M1
+ - Emissions|CO2_transformation|foil_t_d|M1
+ - Emissions|CO2_transformation|g_ppl_co2scr|M1
+ - Emissions|CO2_transformation|gas_cc_ccs|M1
+ - Emissions|CO2_transformation|gas_cc|M1
+ - Emissions|CO2_transformation|gas_ct|M1
+ - Emissions|CO2_transformation|gas_extr_1|M1
+ - Emissions|CO2_transformation|gas_extr_2|M1
+ - Emissions|CO2_transformation|gas_extr_3|M1
+ - Emissions|CO2_transformation|gas_extr_4|M1
+ - Emissions|CO2_transformation|gas_extr_5|M1
+ - Emissions|CO2_transformation|gas_extr_6|M1
+ - Emissions|CO2_transformation|gas_hpl|M1
+ - Emissions|CO2_transformation|gas_ppl|M1
+ - Emissions|CO2_transformation|gas_t_d_ch4|M1
+ - Emissions|CO2_transformation|gas_t_d|M1
+ - Emissions|CO2_transformation|h2_bio_ccs|M1
+ - Emissions|CO2_transformation|h2_bio|M1
+ - Emissions|CO2_transformation|h2_coal_ccs|M1
+ - Emissions|CO2_transformation|h2_coal|M1
+ - Emissions|CO2_transformation|h2_mix|M1
+ - Emissions|CO2_transformation|h2_smr_ccs|M1
+ - Emissions|CO2_transformation|h2_smr|M1
+ - Emissions|CO2_transformation|igcc_ccs|M1
+ - Emissions|CO2_transformation|igcc|M1
+ - Emissions|CO2_transformation|landfill_flaring|M1
+ - Emissions|CO2_transformation|liq_bio_ccs|M1
+ - Emissions|CO2_transformation|liq_bio|M1
+ - Emissions|CO2_transformation|loil_cc|M1
+ - Emissions|CO2_transformation|loil_ppl|M1
+ - Emissions|CO2_transformation|loil_t_d|M1
+ - Emissions|CO2_transformation|meth_coal_ccs|M1
+ - Emissions|CO2_transformation|meth_coal|M1
+ - Emissions|CO2_transformation|meth_ng_ccs|M1
+ - Emissions|CO2_transformation|meth_ng|M1
+ - Emissions|CO2_transformation|meth_t_d|M1
+ - Emissions|CO2_transformation|oil_extr_1_ch4|M1
+ - Emissions|CO2_transformation|oil_extr_1|M1
+ - Emissions|CO2_transformation|oil_extr_2_ch4|M1
+ - Emissions|CO2_transformation|oil_extr_2|M1
+ - Emissions|CO2_transformation|oil_extr_3_ch4|M1
+ - Emissions|CO2_transformation|oil_extr_3|M1
+ - Emissions|CO2_transformation|oil_extr_4_ch4|M1
+ - Emissions|CO2_transformation|oil_extr_4|M1
+ - Emissions|CO2_transformation|oil_extr_5|M1
+ - Emissions|CO2_transformation|oil_extr_6|M1
+ - Emissions|CO2_transformation|oil_extr_7|M1
+ - Emissions|CO2_transformation|ref_hil|M1
+ - Emissions|CO2_transformation|ref_lol|M1
+ - Emissions|CO2_transformation|syn_liq_ccs|M1
+ - Emissions|CO2_transformation|syn_liq|M1
+
+Emissions|Co2_transport:
+ - Emissions|CO2_transport|coal_trp|M1
+ - Emissions|CO2_transport|foil_trp|M1
+ - Emissions|CO2_transport|gas_trp|M1
+ - Emissions|CO2_transport|loil_trp|M1
+ - Emissions|CO2_transport|meth_fc_trp|M1
+ - Emissions|CO2_transport|meth_ic_trp|M1
+#TODO Ridley to verify that all of the technologies are being included in sub cateogries
+
+Emissions|CO2:
+  -  Emissions|CO2|LNG_exp|M1
+  -  Emissions|CO2|LNG_imp|M1
+  -  Emissions|CO2|bio_istig_ccs|M1
+  -  Emissions|CO2|bio_istig|M1
+  -  Emissions|CO2|bio_ppl_co2scr|M1
+  -  Emissions|CO2|c_ppl_co2scr|M1
+
+  -  Emissions|CO2|cement_co2scr|M1
+  -  Emissions|CO2|coal_adv_ccs|M1
+  -  Emissions|CO2|coal_adv|M1
+  -  Emissions|CO2|coal_exp|M1
+
+  -  Emissions|CO2|eth_bio_ccs|M1
+  -  Emissions|CO2|eth_bio|M1
+  -  Emissions|CO2|flaring_CO2|M1
+  -  Emissions|CO2|foil_exp|M1
+
+  -  Emissions|CO2|g_ppl_co2scr|M1
+  -  Emissions|CO2|gas_cc_ccs|M1
+  -  Emissions|CO2|gas_cc|M1
+
+  -  Emissions|CO2|gas_imp|M1
+  -  Emissions|CO2|h2_bio_ccs|M1
+  -  Emissions|CO2|h2_bio|M1
+  -  Emissions|CO2|h2_coal_ccs|M1
+  -  Emissions|CO2|h2_coal|M1
+  -  Emissions|CO2|h2_smr_ccs|M1
+  -  Emissions|CO2|h2_smr|M1
+  -  Emissions|CO2|igcc_ccs|M1
+  -  Emissions|CO2|igcc|M1
+  -  Emissions|CO2|lignite_extr|M1
+  -  Emissions|CO2|liq_bio_ccs|M1
+  -  Emissions|CO2|liq_bio|M1
+  -  Emissions|CO2|loil_exp|M1
+  -  Emissions|CO2|loil_imp|M1
+  -  Emissions|CO2|meth_coal_ccs|M1
+  -  Emissions|CO2|meth_coal|M1
+  -  Emissions|CO2|meth_exp|M1
+  -  Emissions|CO2|meth_imp|M1
+  -  Emissions|CO2|meth_ng_ccs|M1
+  -  Emissions|CO2|meth_ng|M1
+
+  -  Emissions|CO2|syn_liq_ccs|M1
+  -  Emissions|CO2|syn_liq|M1
+
+Emissions|CO2|Cement:
+  - Emissions|CO2|cement_CO2|M1
+Emissions|CO2|Coal:
+  - Emissions|CO2|coal_extr_ch4|M1
+  - Emissions|CO2|coal_extr|M1
+  - Emissions|CO2|coal_imp|M1
+Emissions|CO2|Fuel oil:
+  - Emissions|CO2|foil_imp|M1
+Emissions|CO2|Gas:
+  - Emissions|CO2|gas_extr_1|M1
+  - Emissions|CO2|gas_extr_2|M1
+  - Emissions|CO2|gas_extr_3|M1
+  - Emissions|CO2|gas_extr_4|M1
+  - Emissions|CO2|gas_extr_5|M1
+  - Emissions|CO2|gas_extr_6|M1
+Emissions|CO2|Lignite:
+  - Emissions|CO2|lignite_extr|M1
+Emissions|CO2|Light Oil:
+  - Emissions|CO2|loil_imp|M1
+Emissions|CO2|Meth_ccs:
+  - Emissions|CO2|meth_coal_ccs|M1
+Emissions|CO2|Oil:
+  - Emissions|CO2|oil_extr_1_ch4|M1
+  - Emissions|CO2|oil_extr_1|M1
+  - Emissions|CO2|oil_extr_2_ch4|M1
+  - Emissions|CO2|oil_extr_2|M1
+  - Emissions|CO2|oil_extr_3_ch4|M1
+  - Emissions|CO2|oil_extr_3|M1
+  - Emissions|CO2|oil_extr_4_ch4|M1
+  - Emissions|CO2|oil_extr_4|M1
+  - Emissions|CO2|oil_extr_5|M1
+  - Emissions|CO2|oil_extr_6|M1
+  - Emissions|CO2|oil_extr_7|M1
+Emissions|CO2|Oil trade:
+  - Emissions|CO2|foil_imp|M1
+  - Emissions|CO2|loil_exp|M1
+  - Emissions|CO2|loil_imp|M1
+  - Emissions|CO2|oil_imp|M1
+Emissions|CO2|Gas trade:
+  - Emissions|CO2|LNG_exp|M1
+  - Emissions|CO2|LNG_imp|M1
+  - Emissions|CO2|gas_imp|M1
+  - Emissions|CO2|gas_exp|M1
+
+Emissions|TCE:
+- Emissions|TCE_CO2|CO2_TCE|M1
+- Emissions|TCE_non-CO2|CF4_TCE|M1
+- Emissions|TCE_non-CO2|CH4_TCE|M1
+- Emissions|TCE_non-CO2|CH4n_TCE|M1
+- Emissions|TCE_non-CO2|CH4o_TCE|M1
+- Emissions|TCE_non-CO2|HFC_TCE|M1
+- Emissions|TCE_non-CO2|HFCo_TCE|M1
+- Emissions|TCE_non-CO2|N2O_TCE|M1
+- Emissions|TCE_non-CO2|N2On_TCE|M1
+- Emissions|TCE_non-CO2|N2Oo_TCE|M1
+- Emissions|TCE_non-CO2|SF6_TCE|M1
+
+Total Costs|Coal:
+  - Total Costs|coal_adv
+  - Total Costs|coal_adv_ccs
+  - Total Costs|coal_bal
+  - Total Costs|coal_exp
+  - Total Costs|coal_extr
+  - Total Costs|coal_extr_ch4
+  - Total Costs|coal_gas
+  - Total Costs|coal_hpl
+  - Total Costs|coal_i
+  - Total Costs|coal_imp
+  - Total Costs|coal_ppl
+  - Total Costs|coal_ppl_u
+  - Total Costs|coal_rc
+  - Total Costs|coal_t_d
+  - Total Costs|syn_liq
+  - Total Costs|meth_coal
+  - Total Costs|lignite_extr
+
+Total Costs|Biomass:
+  - Total Costs|bio_hpl
+  - Total Costs|bio_ppl
+  - Total Costs|liq_bio
+  - Total Costs|biomass_i
+  - Total Costs|biomass_t_d
+
+Total Costs|Electricity:
+  - Total Costs|elec_exp
+  - Total Costs|elec_i
+  - Total Costs|elec_imp
+  - Total Costs|elec_t_d
+  - Total Costs|elec_trp
+
+Total Costs|Oil:
+  - Total Costs|foil_i
+  - Total Costs|foil_imp
+  - Total Costs|foil_ppl
+  - Total Costs|oil_extr_1
+  - Total Costs|oil_extr_1_ch4
+  - Total Costs|oil_extr_2
+  - Total Costs|oil_extr_3
+  - Total Costs|oil_extr_4
+  - Total Costs|oil_extr_5
+  - Total Costs|oil_extr_6
+  - Total Costs|oil_extr_7
+  - Total Costs|oil_extr_2_ch4
+  - Total Costs|oil_extr_3_ch4
+  - Total Costs|loil_cc
+  - Total Costs|loil_ppl
+  - Total Costs|loil_i
+  - Total Costs|oil_extr_4_ch4
+
+Total Costs|Gas:
+  - Total Costs|gas_bal
+  - Total Costs|gas_bio
+  - Total Costs|gas_cc
+  - Total Costs|gas_cc_ccs
+  - Total Costs|gas_ct
+  - Total Costs|gas_extr_1
+  - Total Costs|gas_extr_2
+  - Total Costs|gas_extr_3
+  - Total Costs|gas_extr_4
+  - Total Costs|gas_extr_5
+  - Total Costs|gas_extr_6
+  - Total Costs|gas_extr_mpen
+  - Total Costs|gas_fs
+  - Total Costs|gas_hpl
+  - Total Costs|gas_i
+  - Total Costs|gas_imp
+  - Total Costs|gas_ppl
+  - Total Costs|gas_rc
+  - Total Costs|gas_t_d
+  - Total Costs|gas_t_d_ch4
+  - Total Costs|gas_trp
+  - Total Costs|igcc
+  - Total Costs|gas_exp
+  - Total Costs|gas_h2
+
+Total Costs|Geothermal:
+  - Total Costs|geo_hpl
+  - Total Costs|geo_ppl
+
+Total Costs|Solar:
+  - Total Costs|solar_i
+  - Total Costs|solar_pv_ppl
+  - Total Costs|solar_rc
+  - Total Costs|solar_th_ppl
+
+Total Costs|Wind:
+  - Total Costs|wind_curtailment1
+  - Total Costs|wind_curtailment2
+  - Total Costs|wind_curtailment3
+  - Total Costs|wind_ppf
+  - Total Costs|wind_ppl
+
+Total Costs|Hydro:
+  - Total Costs|hydro_hc
+  - Total Costs|hydro_lc
+
+Total Costs|Nuclear:
+  - Total Costs|nuc_lc
+
+Total Costs|Ethanol:
+  - Total Costs|eth_bio
+  - Total Costs|eth_i
+
+Total Costs|Hydrogen:
+  - Total Costs|h2_elec
+  - Total Costs|h2_smr
+  - Total Costs|h2_smr_ccs
+  - Total Costs|h2_atr
+  - Total Costs|h2_atr_ccs
+  - Total Costs|h2_bio
+  - Total Costs|h2_bio_ccs
+  - Total Costs|h2_i
+  - Total Costs|h2_rc
+  - Total Costs|h2_fc_I
+  - Total Costs|h2_fc_RC
+  - Total Costs|h2_t_d
+  - Total Costs|liq_h2 #Is this right? Its hydrogen to lightoil
+
+Total Costs|Methanol:
+  - Total Costs|meth_coal_ccs
+  - Total Costs|meth_i
+  - Total Costs|meth_ng
+  - Total Costs|meth_ng_ccs
+  - Total Costs|meth_h2
+
+
+Secondary Energy|Hydrogen: #will this double count??
+  - Secondary Energy|hydrogen|h2_bio_ccs|M1
+  - Secondary Energy|hydrogen|h2_bio|M1
+  - Secondary Energy|hydrogen|h2_coal|M1
+  - Secondary Energy|hydrogen|h2_coal_ccs|M1
+  - Secondary Energy|hydrogen|h2_elec|M1
+  - Secondary Energy|hydrogen|h2_smr|M1
+  - Secondary Energy|hydrogen|h2_smr_ccs|M1
+  - Secondary Energy|hydrogen|h2_atr_ccs|M1
+  - Secondary Energy|hydrogen|h2_atr|M1
+  - Secondary Energy|hydrogen|lh2_regas|M1
+  - Secondary Energy|hydrogen|h2_t_d|M1
+  - Secondary Energy|hydrogen|liq_h2|M1
+  - Secondary Energy|hydrogen|meth_h2|M1
+
+Secondary Energy|Liquid Hydrogen|Import:
+  - Secondary Energy|lh2|lh2_imp|M1
+
+Secondary Energy|Liquid Hydrogen:
+  - Secondary Energy|lh2|lh2_regas|M1
+  - Secondary Energy|lh2|lh2_t_d|M1
+
+Secondary Energy|Gas:
+  - Secondary Energy|gas|h2_smr|M1
+  - Secondary Energy|gas|h2_smr_ccs|M1
+  - Secondary Energy|gas|h2_atr_ccs|M1
+  - Secondary Energy|gas|h2_atr|M1
+  - Secondary Energy|gas|LNG_regas|M1
+  - Secondary Energy|gas|gas_cc|M1
+  - Secondary Energy|gas|gas_ct|M1
+  - Secondary Energy|gas|gas_hpl|M1
+  - Secondary Energy|gas|gas_ppl|M1
+  - Secondary Energy|gas|gas_t_d_ch4|M1
+  - Secondary Energy|gas|gas_t_d|M1
+  - Secondary Energy|gas|meth_ng|M1
+  - Secondary Energy|gas|meth_ng_ccs|M1
+
+Secondary Energy|Gas|Import:
+  - Secondary Energy|gas|gas_imp|M1
+
+Secondary Energy|LNG|Import:
+  #- Secondary Energy|LNG|LNG_bal|M1
+  - Secondary Energy|LNG|LNG_imp|M1
+Secondary Energy|LNG:
+  - Secondary Energy|LNG|LNG_regas|M1
+
+Secondary Energy|Coal|Import:
+  #- Secondary Energy|coal|coal_bal|M1
+  - Secondary Energy|coal|coal_imp|M1
+
+Secondary Energy|Coal:
+  - Secondary Energy|coal|coal_adv|M1
+  - Secondary Energy|coal|coal_ppl|M1
+  - Secondary Energy|coal|coal_t_d|M1
+  - Secondary Energy|coal|meth_coal_ccs|M1
+  - Secondary Energy|coal|meth_coal|M1
+  - Secondary Energy|coal|h2_coal|M1
+  - Secondary Energy|coal|h2_coal_ccs|M1
+
+Secondary Energy|Oil|Import:
+  #- Secondary Energy|crudeoil|oil_bal|M1
+  - Secondary Energy|crudeoil|oil_imp|M1
+
+Secondary Energy|Oil:
+  - Secondary Energy|crudeoil|ref_hil|M1
+  - Secondary Energy|crudeoil|ref_lol|M1
+
+Secondary Energy|Fueloil:
+  - Secondry Energy|fueloil|foil_imp|M1
+  - Secondry Energy|fueloil|foil_t_d|M1
+  - Secondry Energy|fueloil|ref_hil|M1
+  - Secondry Energy|fueloil|ref_lol|M1
+
+Secondary Energy|lightoil:
+  - Secondary Energy|lightoil|liq_h2|M1
+  - Secondary Energy|lightoil|loil_ppl|M1
+  - Secondary Energy|lightoil|loil_t_d|M1
+  - Secondary Energy|lightoil|ref_hil|M1
+  - Secondary Energy|lightoil|ref_lol|M1
+
+Secondary Energy|Methanol:
+  - Secondary Energy|methanol|meth_t_d|M1
+
+Secondary Energy|lightoil|Import:
+  - Secondary Energy|lightoil|loil_imp|M1
+
+Secondary Energy|fueloil|Export:
+  - Secondary Energy|fueloil|foil_exp|M1
+
+Secondary energy|lightoil|Export:
+  - Secondary Energy|lightoil|loil_exp|M1
+
+Secondary Energy|District Heat:
+  - Secondary Energy|d_heat|bio_hpl|M1
+  - Secondary Energy|d_heat|coal_hpl|M1
+  - Secondary Energy|d_heat|foil_hpl|M1
+  - Secondary Energy|d_heat|gas_hpl|M1
+  - Secondary Energy|d_heat|geo_hpl|M1
+  - Secondary Energy|d_heat|po_turbine|M1
+  - Secondary Energy|d_heat|gas_h2|M1
+  - Secondary Energy|d_heat|liq_h2|M1
+  - Secondary Energy|d_heat|heat_t_d|M1
+  - Secondary Energy|d_heat|meth_h2|M1
+
+Secondary Energy|Electricity|Biomass:
+  - Secondary Energy|electr|bio_istig_ccs|M1
+  - Secondary Energy|electr|bio_istig|M1
+  - Secondary Energy|electr|bio_ppl|M1
+  - Secondary Energy|electr|liq_bio|M1
+
+#Secondary Energy|Electricity|Biomass w/ CCS:
+#- Secondary Energy|electr|bio_istig_ccs|M1
+
+#Secondary Energy|Electricity|Biomass w/o CCS:
+#- Secondary Energy|electr|bio_istig_ccs|M1
+#- Secondary Energy|electr|bio_istig|M1
+#- Secondary Energy|electr|bio_ppl|M1
+
+Secondary Energy|Electricity|Coal:
+  - Secondary Energy|electr|coal_adv_ccs|M1
+  - Secondary Energy|electr|coal_adv|M1
+  - Secondary Energy|electr|coal_ppl|M1
+  - Secondary Energy|electr|coal_ppl_u|M1
+  - Secondary Energy|electr|igcc|M1
+  - Secondary Energy|electr|igcc_ccs|M1
+
+Secondary Energy|Electricity|Methanol:
+  - Secondary Energy|electr|meth_h2|M1
+  - Secondary Energy|electr|meth_ng_ccs|M1
+#Secondary Energy|Electricity|Coal w/CCS:
+#- Secondary Energy|electr|coal_adv_ccs|M1
+#- Secondary Energy|electr|igcc_ccs|M1
+
+#Secondary Energy|Electricity|Coal w/o CCS:
+#- Secondary Energy|electr|coal_adv_ccs|M1
+#- Secondary Energy|electr|coal_adv|M1
+#- Secondary Energy|electr|coal_ppl|M1
+#- Secondary Energy|electr|coal_ppl_u|M1
+#- Secondary Energy|electr|igcc|M1
+
+Secondary Energy|Electricity|Import:
+  - Secondary Energy|electr|elec_imp|M1
+
+Secondary Energy|Electricity|Export:
+  - Secondary Energy|electr|elec_exp|M1
+
+Secondary Energy|Electricity|Solar:
+  - Secondary Energy|electr|csp_sm1_ppl|M1
+  - Secondary Energy|electr|csp_sm3_ppl|M1
+  - Secondary Energy|electr|solar_pv_ppl|M1
+  - Secondary Energy|electr|solar_th_ppl|M1
+
+Secondary Energy|Electricity|Ethanol:
+  - Secondary Energy|electr|eth_bio_ccs|M1
+  - Secondary Energy|electr|eth_bio|M1
+  - Secondary Energy|electr|eth_t_d|M1
+
+Secondary Energy|Electricity|Oil:
+  - Secondary Energy|electr|foil_ppl|M1
+  - Secondary Energy|electr|loil_cc|M1
+  - Secondary Energy|electr|loil_ppl|M1
+
+Secondary Energy|Electricity|Gas:
+  - Secondary Energy|electr|gas_cc_ccs|M1
+  - Secondary Energy|electr|gas_cc|M1
+  - Secondary Energy|electr|gas_ct|M1
+  - Secondary Energy|electr|gas_ppl|M1
+  - Secondary Energy|electr|gas_htfc|M1
+
+#Secondary Energy|Electricity|Gas w/ CCS:
+#- Secondary Energy|electr|gas_cc_ccs|M1
+#Secondary Energy|Electricity|Gas w/o CCS:
+#- Secondary Energy|electr|gas_cc|M1
+#- Secondary Energy|electr|gas_ct|M1
+#- Secondary Energy|electr|gas_ppl|M1
+#- Secondary Energy|electr|gas_htfc|M1
+
+Secondary Energy|Electricity|Geothermal: 
+  - Secondary Energy|electr|geo_ppl|M1
+
+Secondary Energy|Electricity|Hydrogen:
+  - Secondary Energy|electr|h2_bio_ccs|M1
+  - Secondary Energy|electr|h2_bio|M1
+  - Secondary Energy|electr|h2_coal_ccs|M1
+  - Secondary Energy|electr|h2_coal|M1
+  - Secondary Energy|electr|h2_smr_ccs|M1
+  - Secondary Energy|electr|h2_smr|M1
+  - Secondary Energy|electr|h2_atr|M1
+  - Secondary Energy|electr|h2_atr_ccs|M1
+  - Secondary Energy|electr|h2_elec|M1
+  - Secondary Energy|electr|liq_h2|M1
+
+Secondary Energy|Electricity|Hydro:
+  - Secondary Energy|electr|hydro_hc|M1
+  - Secondary Energy|electr|hydro_lc|M1
+
+Secondary Energy|Electricity|Nuclear:
+  - Secondary Energy|electr|nuc_hc|M1
+  - Secondary Energy|electr|nuc_lc|M1
+
+Secondary Energy|Electricity|Wind:
+  - Secondary Energy|electr|wind_ppf|M1
+  - Secondary Energy|electr|wind_ppl|M1
+
+Secondary Energy|Exports:
+  - Secondary Energy|exports|cement_CO2|M1
+  - Secondary Energy|exports|co2_tr_dis|M1
+  - Secondary Energy|exports|co2_tr_dis|M1
+  - Secondary Energy|exports|coal_extr_mpen|M1
+  - Secondary Energy|exports|gas_extr_mpen|M1
+  - Secondary Energy|exports|oil_extr_mpen|M1
+
+Final Energy|Biomass:
+  - Final Energy|biomass|biomass_t_d|M1
+  - Final Energy|biomass|biomass_i|M1
+  - Final Energy|biomass|biomass_rc|M1
+
+Final Energy|Coal:
+  - Final Energy|coal|coal_t_d|M1
+  - Final Energy|coal|coal_fs|M1
+  - Final Energy|coal|coal_i|M1
+  - Final Energy|coal|coal_rc|M1
+  - Final Energy|coal|coal_t_d|M1
+  - Final Energy|coal|coal_trp|M1
+Final Energy|District Heat:
+  - Final Energy|d_heat|heat_t_d|M1
+  - Final Energy|d_heat|heat_i|M1
+  - Final Energy|d_heat|heat_rc|M1
+  - Final Energy|d_heat|heat_t_d|M1
+Final Energy|Electricity:
+  - Final Energy|electr|elec_t_d|M1
+  - Final Energy|electr|elec_i|M1
+  - Final Energy|electr|elec_rc|M1
+  - Final Energy|electr|elec_t_d|M1
+  - Final Energy|electr|elec_trp|M1
+  - Final Energy|electr|h2_fc_trp|M1
+  - Final Energy|electr|hp_el_i|M1
+  - Final Energy|electr|hp_el_rc|M1
+  - Final Energy|electr|hp_gas_i|M1
+  - Final Energy|electr|hp_gas_rc|M1
+  - Final Energy|electr|sp_el_I|M1
+  - Final Energy|electr|sp_el_RC|M1
+
+Final Energy|ethanol:
+  - Final Energy|ethanol|eth_t_d|M1
+  - Final Energy|ethanol|eth_fc_trp|M1
+  - Final Energy|ethanol|eth_ic_trp|M1
+  - Final Energy|ethanol|eth_i|M1
+  - Final Energy|ethanol|eth_rc|M1
+  - Final Energy|ethanol|ethanol_fs|M1
+  - Final Energy|ethanol|sp_eth_I|M1
+
+Final Energy|Fuel Oil:
+  - Final Energy|fueloil|foil_t_d|M1
+  - Final Energy|fueloil|foil_fs|M1
+  - Final Energy|fueloil|foil_i|M1
+  - Final Energy|fueloil|foil_rc|M1
+  - Final Energy|fueloil|foil_trp|M1
+
+Final Energy|gas:
+  - Final Energy|gas|gas_fs|M1
+  - Final Energy|gas|gas_i|M1
+  - Final Energy|gas|gas_rc|M1
+  - Final Energy|gas|gas_t_d_ch4|M1
+  - Final Energy|gas|gas_t_d|M1
+  - Final Energy|gas|gas_trp|M1
+  - Final Energy|gas|hp_gas_i|M1
+  - Final Energy|gas|hp_gas_rc|M1
+  - Final Energy|gas|landfill_digester1|M1
+  - Final Energy|gas|landfill_direct1|M1
+  - Final Energy|gas|landfill_heatprdn|M1
+Final Energy|hydrogen:
+  - Final Energy|hydrogen|h2_fc_I|M1
+  - Final Energy|hydrogen|h2_fc_RC|M1
+  - Final Energy|hydrogen|h2_fc_trp|M1
+  - Final Energy|hydrogen|h2_i|M1
+  - Final Energy|hydrogen|h2_rc|M1
+  - Final Energy|hydrogen|h2_t_d|M1
+  - Final Energy|lh2|h2_fc_trp|M1
+  - Final Energy|lh2|lh2_t_d|M1
+  - Final Energy|lh2|lh2_t_d|M1
+Final Energy|lightoil:
+  - Final Energy|lightoil|loil_fs|M1
+  - Final Energy|lightoil|loil_i|M1
+  - Final Energy|lightoil|loil_rc|M1
+  - Final Energy|lightoil|loil_t_d|M1
+  - Final Energy|lightoil|loil_trp|M1
+  - Final Energy|lightoil|sp_liq_I|M1
+Final Energy|methanol:
+  - Final Energy|methanol|meth_fc_trp|M1
+  - Final Energy|methanol|meth_ic_trp|M1
+  - Final Energy|methanol|meth_i|M1
+  - Final Energy|methanol|meth_rc|M1
+  - Final Energy|methanol|meth_t_d|M1
+  - Final Energy|methanol|methanol_fs|M1
+  - Final Energy|methanol|sp_meth_I|M1
+
+## Capacity Additions 
+
+Capacity Addition|LNG:
+  - Capacity Addition|LNG_exp
+  - Capacity Addition|adipic_thermal
+  - Capacity Addition|ammonia_secloop
+
+Capacity Addition|Biomass ppl:
+  - Capacity Addition|bio_hpl
+  - Capacity Addition|bio_istig
+  - Capacity Addition|bio_ppl
+  - Capacity Addition|bio_ppl_co2scr
+  - Capacity Addition|biomass_i
+  - Capacity Addition|eth_bio
+  - Capacity Addition|eth_bio_ccs
+  - Capacity Addition|eth_i
+  - Capacity Addition|eth_exp
+  - Capacity Addition|gas_bio
+  - Capacity Addition|liq_bio
+  - Capacity Addition|liq_bio_ccs
+
+Capacity Addition|Methanol:
+  - Capacity Addition|meth_i
+  - Capacity Addition|meth_ng
+  - Capacity Addition|meth_ng_ccs
+  - Capacity Addition|meth_exp
+  - Capacity Addition|meth_h2
+
+Capacity Addition|Wind:
+  - Capacity Addition|wind_cv1
+  - Capacity Addition|wind_cv2
+  - Capacity Addition|wind_cv3
+  - Capacity Addition|wind_cv4
+  - Capacity Addition|wind_ppf
+  - Capacity Addition|wind_ppl
+
+Capacity Addition|Solar:
+  - Capacity Addition|solar_cv1
+  - Capacity Addition|solar_cv2
+  - Capacity Addition|solar_cv3
+  - Capacity Addition|solar_cv4
+  - Capacity Addition|solar_i
+  - Capacity Addition|solar_pv_ppl
+  - Capacity Addition|solar_th_ppl
+  - Capacity Addition|csp_sm1_ppl
+  - Capacity Addition|csp_sm3_ppl
+
+Capacity Addition|Coal:
+  - Capacity Addition|c_ppl_co2scr
+  - Capacity Addition|cement_co2scr
+  - Capacity Addition|coal_adv
+  - Capacity Addition|coal_exp
+  - Capacity Addition|coal_extr
+  - Capacity Addition|coal_extr_ch4
+  - Capacity Addition|coal_gas
+  - Capacity Addition|coal_hpl
+  - Capacity Addition|coal_i
+  - Capacity Addition|coal_ppl
+  - Capacity Addition|coal_adv_ccs
+  - Capacity Addition|coal_ppl_u
+  - Capacity Addition|lignite_extr
+  - Capacity Addition|meth_coal
+  - Capacity Addition|meth_coal_ccs
+
+Capacity Addition|Electricity:
+  - Capacity Addition|elec_i
+  - Capacity Addition|elec_t_d
+  - Capacity Addition|po_turbine
+  - Capacity Addition|stor_ppl
+
+
+Capacity Addition|Oil:
+  - Capacity Addition|foil_exp
+  - Capacity Addition|foil_hpl
+  - Capacity Addition|foil_i
+  - Capacity Addition|foil_ppl
+  - Capacity Addition|loil_cc
+  - Capacity Addition|loil_cc__air
+  - Capacity Addition|loil_cc__cl_fresh
+  - Capacity Addition|loil_cc__ot_fresh
+  - Capacity Addition|loil_cc__ot_saline
+  - Capacity Addition|loil_exp
+  - Capacity Addition|loil_i
+  - Capacity Addition|loil_ppl
+  - Capacity Addition|loil_ppl__air
+  - Capacity Addition|loil_ppl__cl_fresh
+  - Capacity Addition|loil_ppl__ot_fresh
+  - Capacity Addition|loil_ppl__ot_saline
+  - Capacity Addition|oil_exp
+  - Capacity Addition|oil_extr_1
+  - Capacity Addition|oil_extr_1_ch4
+  - Capacity Addition|oil_extr_2
+  - Capacity Addition|oil_extr_2_ch4
+  - Capacity Addition|oil_extr_3
+  - Capacity Addition|oil_extr_3_ch4
+  - Capacity Addition|oil_extr_4
+  - Capacity Addition|oil_extr_4_ch4
+  - Capacity Addition|oil_extr_5
+  - Capacity Addition|oil_extr_6
+  - Capacity Addition|oil_extr_7
+  - Capacity Addition|ref_hil
+  - Capacity Addition|ref_lol
+  - Capacity Addition|syn_liq
+  - Capacity Addition|syn_liq_ccs
+
+  
+Capacity Addition|Oil|Hydrogen:
+  - Capacity Addition|liq_h2
+
+Capacity Addition|Gas:
+  - Capacity Addition|g_ppl_co2scr
+  - Capacity Addition|gas_cc
+  - Capacity Addition|gas_cc_ccs
+  - Capacity Addition|gas_ct
+  - Capacity Addition|gas_exp
+  - Capacity Addition|gas_extr_1
+  - Capacity Addition|gas_extr_2
+  - Capacity Addition|gas_extr_3
+  - Capacity Addition|gas_extr_4
+  - Capacity Addition|gas_extr_5
+  - Capacity Addition|gas_extr_6
+  - Capacity Addition|gas_hpl
+  - Capacity Addition|gas_i
+  - Capacity Addition|gas_ppl
+  - Capacity Addition|gas_t_d
+  - Capacity Addition|gas_t_d_ch4
+  - Capacity Addition|geo_hpl
+  - Capacity Addition|igcc
+  - Capacity Addition|igcc_ccs
+  - Capacity Addition|mvac_co2
+  - Capacity Addition|nitric_catalytic1
+  - Capacity Addition|nitric_catalytic2
+  - Capacity Addition|nitric_catalytic3
+  - Capacity Addition|nitric_catalytic4
+  - Capacity Addition|nitric_catalytic5
+  - Capacity Addition|nitric_catalytic6
+  - Capacity Addition|nitric_catalytic7
+  - Capacity Addition|recycling_gas1
+  - Capacity Addition|repl_hc
+  - Capacity Addition|replacement_so2
+  - Capacity Addition|vertical_stud
+  - Capacity Addition|gas_h2
+
+Capacity Addition|Thermal:
+  - Capacity Addition|geo_ppl
+  - Capacity Addition|heat_t_d
+  - Capacity Addition|hp_el_i
+  - Capacity Addition|hp_gas_i
+  - Capacity Addition|nuc_hc
+  - Capacity Addition|nuc_lc
+  - Capacity Addition|refrigerant_recovery
+
+Capacity Addition|Hydrogen:
+  - Capacity Addition|h2_bio
+  - Capacity Addition|h2_bio_ccs
+  - Capacity Addition|h2_coal
+  - Capacity Addition|h2_coal_ccs
+  - Capacity Addition|h2_elec
+  - Capacity Addition|h2_fc_I
+  - Capacity Addition|h2_fc_RC
+  - Capacity Addition|h2_fc_trp
+  - Capacity Addition|h2_i
+  - Capacity Addition|h2_liq
+  - Capacity Addition|h2_smr
+  - Capacity Addition|h2_smr_ccs
+  - Capacity Addition|h2_t_d
+  - Capacity Addition|heat_i
+  - Capacity Addition|lh2_t_d
+  - Capacity Addition|h2_atr
+  - Capacity Addition|h2_atr_ccs
+  - Capacity Addition|h2_gas_fc_trp
+
+Capacity Addition|Hydro:
+  - Capacity Addition|hydro_hc
+  - Capacity Addition|hydro_lc
+
+Capacity|LNG:
+  - Capacity|LNG_exp
+  - Capacity|adipic_thermal
+  - Capacity|ammonia_secloop
+
+Capacity|Biomass ppl:
+  - Capacity|bio_hpl
+  - Capacity|bio_istig
+  - Capacity|bio_ppl
+  - Capacity|bio_ppl_co2scr
+  - Capacity|biomass_i
+  - Capacity|eth_bio
+  - Capacity|eth_bio_ccs
+  - Capacity|eth_i
+  - Capacity|eth_exp
+  - Capacity|gas_bio
+  - Capacity|liq_bio
+  - Capacity|liq_bio_ccs
+
+Capacity|Methanol:
+  - Capacity|meth_i
+  - Capacity|meth_ng
+  - Capacity|meth_ng_ccs
+  - Capacity|meth_exp
+  - Capacity|meth_h2
+
+Capacity|Wind:
+  - Capacity|wind_cv1
+  - Capacity|wind_cv2
+  - Capacity|wind_cv3
+  - Capacity|wind_cv4
+  - Capacity|wind_ppf
+  - Capacity|wind_ppl
+
+Capacity|Solar:
+  - Capacity|solar_cv1
+  - Capacity|solar_cv2
+  - Capacity|solar_cv3
+  - Capacity|solar_cv4
+  - Capacity|solar_i
+  - Capacity|solar_pv_ppl
+  - Capacity|solar_th_ppl
+  - Capacity|csp_sm1_ppl
+  - Capacity|csp_sm3_ppl
+
+Capacity|Coal:
+  - Capacity|c_ppl_co2scr
+  - Capacity|cement_co2scr
+  - Capacity|coal_adv
+  - Capacity|coal_exp
+  - Capacity|coal_extr
+  - Capacity|coal_extr_ch4
+  - Capacity|coal_gas
+  - Capacity|coal_hpl
+  - Capacity|coal_i
+  - Capacity|coal_ppl
+  - Capacity|coal_adv_ccs
+  - Capacity|coal_ppl_u
+  - Capacity|lignite_extr
+  - Capacity|meth_coal
+  - Capacity|meth_coal_ccs
+
+Capacity|Electricity:
+  - Capacity|elec_i
+  - Capacity|elec_t_d
+  - Capacity|po_turbine
+  - Capacity|stor_ppl
+
+
+Capacity|Oil:
+  - Capacity|foil_exp
+  - Capacity|foil_hpl
+  - Capacity|foil_i
+  - Capacity|foil_ppl
+  - Capacity|loil_cc
+  - Capacity|loil_cc__air
+  - Capacity|loil_cc__cl_fresh
+  - Capacity|loil_cc__ot_fresh
+  - Capacity|loil_cc__ot_saline
+  - Capacity|loil_exp
+  - Capacity|loil_i
+  - Capacity|loil_ppl
+  - Capacity|loil_ppl__air
+  - Capacity|loil_ppl__cl_fresh
+  - Capacity|loil_ppl__ot_fresh
+  - Capacity|loil_ppl__ot_saline
+  - Capacity|oil_exp
+  - Capacity|oil_extr_1
+  - Capacity|oil_extr_1_ch4
+  - Capacity|oil_extr_2
+  - Capacity|oil_extr_2_ch4
+  - Capacity|oil_extr_3
+  - Capacity|oil_extr_3_ch4
+  - Capacity|oil_extr_4
+  - Capacity|oil_extr_4_ch4
+  - Capacity|oil_extr_5
+  - Capacity|oil_extr_6
+  - Capacity|oil_extr_7
+  - Capacity|ref_hil
+  - Capacity|ref_lol
+  - Capacity|syn_liq
+  - Capacity|syn_liq_ccs
+
+
+Capacity|Gas:
+  - Capacity|g_ppl_co2scr
+  - Capacity|gas_cc
+  - Capacity|gas_cc_ccs
+  - Capacity|gas_ct
+  - Capacity|gas_exp
+  - Capacity|gas_extr_1
+  - Capacity|gas_extr_2
+  - Capacity|gas_extr_3
+  - Capacity|gas_extr_4
+  - Capacity|gas_extr_5
+  - Capacity|gas_extr_6
+  - Capacity|gas_hpl
+  - Capacity|gas_i
+  - Capacity|gas_ppl
+  - Capacity|gas_t_d
+  - Capacity|gas_t_d_ch4
+  - Capacity|geo_hpl
+  - Capacity|igcc
+  - Capacity|igcc_ccs
+  - Capacity|mvac_co2
+  - Capacity|nitric_catalytic1
+  - Capacity|nitric_catalytic2
+  - Capacity|nitric_catalytic3
+  - Capacity|nitric_catalytic4
+  - Capacity|nitric_catalytic5
+  - Capacity|nitric_catalytic6
+  - Capacity|nitric_catalytic7
+  - Capacity|recycling_gas1
+  - Capacity|repl_hc
+  - Capacity|replacement_so2
+  - Capacity|vertical_stud
+  - Capacity|gas_h2
+
+Capacity|Thermal:
+  - Capacity|geo_ppl
+  - Capacity|heat_t_d
+  - Capacity|hp_el_i
+  - Capacity|hp_gas_i
+  - Capacity|nuc_hc
+  - Capacity|nuc_lc
+  - Capacity|refrigerant_recovery
+
+Capacity|Hydrogen:
+  - Capacity|h2_bio
+  - Capacity|h2_bio_ccs
+  - Capacity|h2_coal
+  - Capacity|h2_coal_ccs
+  - Capacity|h2_elec
+  - Capacity|h2_fc_I
+  - Capacity|h2_fc_RC
+  - Capacity|h2_fc_trp
+  - Capacity|h2_i
+  - Capacity|h2_liq
+  - Capacity|h2_smr
+  - Capacity|h2_smr_ccs
+  - Capacity|h2_t_d
+  - Capacity|heat_i
+  - Capacity|lh2_t_d
+  - Capacity|liq_h2
+  - Capacity|h2_atr
+  - Capacity|h2_atr_ccs
+  - Capacity|h2_gas_fc_trp
+
+Capacity|Hydro:
+  - Capacity|hydro_hc
+  - Capacity|hydro_lc
+  
