@@ -3,30 +3,32 @@
     scenario_name = "netzero"
     ix_platform = "local"
     version = "new"
-    annotation = "Prepare Net Zero configuration"
+    annotation = "Initial setup for Canadian energy model."
 
 [pre_process]
     process_historical_data = false
-    add_hydrogen_shares = true
-    apply_obps_netzero = false
-    apply_obps_baseline = false
+    add_hydrogen_shares = false
     [pre_process.add_technology]
-        add_techs = false
+        add_techs = true
         techs = ["h2_atr_ccs"] 
 
+[policies]
+    apply_obps_netzero = false
+    apply_obps_baseline = false
 
 [data]
     #TODO Add a read_excel boolean to allow also reading directly from the local database
-    provincial_input_file = "scenarios/baseline/MESSAGEix-CA__baseline__v0.xlsx"
+    provincial_input_file = "scenarios/netzero/model_default_netzero.xlsx"
     scenario_folder = "scenarios/netzero"
 
 [model]
     solve = true
 
 [post_process]
-    generate_reporter_output = false
-    export_to_xlsx = false
-
+    generate_reporter_output = true
+    export_to_xlsx = false # export reports to Excel
+    generate_pdfs = false # generate results as PDFs
+    export_to_csv = false # export reports to CSV
 
 
 

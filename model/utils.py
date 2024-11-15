@@ -108,7 +108,7 @@ def map_yv_ya_lt(
 		# Select values using the ya and lt parameters
 		return df[(ya <= df.year_act) & (df.year_act - df.year_vtg <= lt)]
 
-def map_learning_rate(l_rate: float, initial_cost: float, years: list) -> pd.DataFrame:
+def map_learning_rate(l_rate: float, initial_cost: float, cost_type, years = []) -> pd.DataFrame:
 
 	values = np.zeros(len(years))
 	values[0] = initial_cost
@@ -116,8 +116,11 @@ def map_learning_rate(l_rate: float, initial_cost: float, years: list) -> pd.Dat
 	for i in range(1, len(years)):
 		values[i] = values[i-1] * l_rate
 
-	df = pd.DataFrame({"year_vtg": years, "value": values}, dtype=np.float64)
-
+	if cost_type is "investment":
+		df = pd.DataFrame({"year_vtg": years "value": values}, dtype=np.float64)
+	elif cost_type is "fixed":
+		df = pd.DataFrame({"value": values}, dtype=np.float64)
+     
 	return df
 
 def expand_grid(self, dictionary):

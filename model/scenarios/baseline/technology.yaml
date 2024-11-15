@@ -38,10 +38,11 @@ h2_atr_ccs:
     - cost_value: 30 # example value for now
   fix_cost_2020: 
     - cost_level: primary
-    - cost_value: 0
+    - cost_value: 50 # example value for now
   var_cost_2020:
     - cost_level: primary
     - cost_value: 0
   # Emissions specifications
   emission: CO2
   investment_lr: 0.7
+  fixed_cost_lr: 0.8
