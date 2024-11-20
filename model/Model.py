@@ -25,8 +25,8 @@ from message_ix_models.util import (
 from scipy.optimize import linprog
 from pathlib import Path
 from typing import Union
-from canada_models.message_ix_models.report.legacy.iamc_report_hackathon import report
-#from message_ix_models.report.legacy.iamc_report_hackathon import report
+#from canada_models.message_ix_models.report.legacy.iamc_report_hackathon import report
+from message_ix_models.report.legacy.iamc_report_hackathon import report
 from model.utils import (map_yv_ya_lt, config_validation, map_learning_rate)
 from model.policies import OBPS
 
@@ -223,13 +223,14 @@ class model_MSG:
 						#value=tech_data["fix_cost_2020"][1]["cost_value"],
 						time=tech_data["time"],
 						unit=tech_data["unit"][0]["cost"],
-					).pipe(broadcast, map_learning_rate(tech_data["fixed_cost_lr"], 
-                        tech_data["fix_cost_2020"][1]["cost_value"],cost_type="fixed", 
-                        years=map_yv_ya_lt(years, 
-                        tech_data["tec_lifetime"], 
-                        first_year)["year_act"].to_list())).pipe(broadcast,
-						map_yv_ya_lt(years, tech_data["tec_lifetime"], first_year),
-					)
+					).pipe(broadcast, map_yv_ya_lt(years, 
+                                    tech_data["tec_lifetime"], first_year),
+					).pipe((map_learning_rate, 'input_df'),
+							provinces=provinces,
+            				l_rate=tech_data["fixed_cost_lr"], 
+							initial_cost=tech_data["fix_cost_2020"][1]["cost_value"], 
+    						cost_type="fixed", years=years, tech_lifetime=tech_data["tec_lifetime"]
+        			)
 					self.scenario.add_par("fix_cost", fix_cost_df)
 
 					# investment cost
@@ -242,7 +243,7 @@ class model_MSG:
 						#value=tech_data["inv_cost_2020"][1]["cost_value"],
 						time=tech_data["time"],
 						unit=tech_data["unit"][0]["cost"],
-					).pipe(broadcast, map_learning_rate(tech_data["investment_lr"], tech_data["inv_cost_2020"][1]["cost_value"], cost_type="investment", years=years))
+					).pipe(broadcast, map_learning_rate(provinces=provinces,initial_cost=tech_data["inv_cost_2020"][1]["cost_value"], l_rate=tech_data["investment_lr"], cost_type="investment", years=years, tech_lifetime=tech_data["tec_lifetime"]))
 					inv_cost_df["year_vtg"] = inv_cost_df["year_vtg"].astype(int)
 					self.scenario.add_par("inv_cost", inv_cost_df)
 
