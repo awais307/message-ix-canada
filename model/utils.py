@@ -10,6 +10,7 @@ import numpy as np
 import pandas as pd
 
 from typing import Optional, Tuple
+from math import prod
 
 
 def config_validation(config_path: str):
@@ -156,19 +157,19 @@ def values_calculation(years, provinces, learning_rate, initial_value, tech_life
 	Args:
 		years (list of int): List of years to calculate the values for
 		provinces (list of str): List of province names to calculate the values for
-        learning_rate (float): The learning rate to use for calculating the fixed costs
-        initial_value (float): The initial value to use as a base for calculation
-        tech_lifetime (int): The lifetime of technology in years
+		learning_rate (float): The learning rate to use for calculating the fixed costs
+		initial_value (float): The initial value to use as a base for calculation
+		tech_lifetime (int): The lifetime of technology in years
 
-    Returns:
-        list: A list of calculated values, one for each province and year combination
+	Returns:
+		list: A list of calculated values, one for each province and year combination
 
-    Description:
-        This auxelary function for map_learning_rate calculates the fixed cost values for each province and year based on the given learning rate.
-        It starts by initializing a dictionary with the initial value for each province-year combination.
-        Then it iterates over each year and updates the values using the learning rate, assuming that the previous year's value is the base.
-        Finally, it calculates the fixed costs for each province-year combination within a certain technology lifetime (tech_lifetime).
-        The function returns a list of calculated values.
+	Description:
+		This auxelary function for map_learning_rate calculates the fixed cost values for each province and year based on the given learning rate.
+		It starts by initializing a dictionary with the initial value for each province-year combination.
+		Then it iterates over each year and updates the values using the learning rate, assuming that the previous year's value is the base.
+		Finally, it calculates the fixed costs for each province-year combination within a certain technology lifetime (tech_lifetime).
+		The function returns a list of calculated values.
 	"""
 
 	dictionary_vals = {f"{prov}.{year}": initial_value for year in years for prov in provinces}
@@ -198,7 +199,21 @@ def expand_grid(dictionary):
 	Returns:
 		pd.DataFrame: A DataFrame containing all combinations of the provided values.
 	"""
-	return pd.DataFrame([row for row in product(*dictionary.values())], columns=dictionary.keys())
+	return pd.DataFrame([row for row in prod(*dictionary.values())], columns=dictionary.keys())
+
+
+def unit_conversion(input_df, techs_map):
+	"""
+	Function to convert units from tonnes of CO2 emissions per a specific quantity 
+	to tonnes of CO2 emissions per GW
+	
+	"""
+	unit_map = {}
+	input_df.merge(techs_map, left_on="variables", right_on="variables", 	)
+
+	
+	
+	
 
 # Reporter method - Deprecated in favor of message_ix_models legacy (forked)
 def report_to_pyam(scenario, directory_path, output_path):
@@ -258,3 +273,10 @@ def report_to_pyam(scenario, directory_path, output_path):
 	# Save the final dataframe to a CSV file
 	final_df.to_csv(output_path, index=False)
 	return final_df
+
+
+if __name__ == "__main__":
+	
+	formatted_inputs = pd.read_excel("data/obps_inputs_clean.xlsx", sheet_name="formatted_inputs")
+	mapped_techs = pd.read_excel("data/obps_inputs_clean.xlsx", sheet_name="Mapping")
+	unit_conversion(formatted_inputs, mapped_techs)
