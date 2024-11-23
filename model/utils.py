@@ -8,9 +8,14 @@ import toml
 import message_ix
 import numpy as np
 import pandas as pd
+import yaml
 
 from typing import Optional, Tuple
 from math import prod
+
+#import message_ix_models.data.report
+#
+#from message_ix_models.data.report.legacy import default_units as def_units
 
 
 def config_validation(config_path: str):
@@ -208,12 +213,43 @@ def unit_conversion(input_df, techs_map):
 	to tonnes of CO2 emissions per GW
 	
 	"""
-	unit_map = {}
-	input_df.merge(techs_map, left_on="variables", right_on="variables", 	)
+	unit_map = {"variable": [], "region": [], "technology": [], "time": [], "value": [], "unit [tCO2/-]": [], "comments": []}
+	#merged_df = input_df.merge(techs_map, how="outer", right_on="variable", left_on="variable")
+	
+	for tmap_rows in techs_map.iterrows():
+		for inp_rows in input_df.iterrows():
+			if tmap_rows[1].loc["variable"] in inp_rows[1].loc["variable"]:
+				unit_map["variable"].append(inp_rows[1].loc["variable"])
+				unit_map["region"].append(inp_rows[1].loc["region"])
+				unit_map["technology"].append(tmap_rows[1].loc["technology"])
+				unit_map["time"].append(inp_rows[1].loc["time"])
+				unit_map["value"].append(inp_rows[1].loc["value"])
+				unit_map["unit [tCO2/-]"].append(inp_rows[1].loc["unit [tCO2/-]"])
+				unit_map["comments"].append(tmap_rows[1].loc["comments"])
+	
+	units_df = pd.DataFrame.from_dict(unit_map)
+	units_df.fillna("-")
 
+	with pd.ExcelWriter(path= "data/obps_inputs_clean.xlsx", engine="openpyxl", mode="a", if_sheet_exists="replace") as writer:
+		units_df.to_excel(writer, sheet_name="Merged_Sheet",index=0)
 	
+	units_df["unit [tCO2/-]"].replace({"megawatt hour" : "MWh", "Megawatt hours (MWh)": "MWh", "Energy (expressed in gigajoules)": "GJ", 
+							"gigawatt hours (GWh)" : "GWh", "Energy (expressed in gigawatt hours)": "GWh", 
+							"Mass (expressed in tonnes)" : "tonnes", "Mass (expressed in kg)": "kg", 
+							"gigajoules (GJ)": "GJ", "gigajoule": "GJ", "tonnes": "tonne"}, inplace=True)
 	
-	
+	with open("data/default_units.yaml", "r") as file:
+		data = yaml.safe_load(file)
+		for k,v in data['conversion_factors']['GWa'].items():
+			for row in units_df.iterrows():
+				try:
+					if k in row[1].loc["unit [tCO2/-]"]:
+						row[1].loc["value"] *= v
+					else:
+						continue
+				except TypeError:
+					row[1].loc["value"] *= v
+		print("End!")
 
 # Reporter method - Deprecated in favor of message_ix_models legacy (forked)
 def report_to_pyam(scenario, directory_path, output_path):
