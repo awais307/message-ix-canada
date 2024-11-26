@@ -1182,7 +1182,7 @@ class model_MSG:
 			try:
 				print("Solving the model...\n")
 				self.scenario.solve(
-					solve_options={"barcrossalg": "2", "lpmethod": "1"}, case=caseName
+					solve_options={"barcrossalg": "2", "lpmethod": "1", "threads": 20}, case=caseName
 				)
 				end = time.time()
 				print(
