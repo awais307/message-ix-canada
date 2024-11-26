@@ -213,22 +213,24 @@ class model_MSG:
 					)
 					self.scenario.add_par("var_cost", var_cost_df)
 
-					# fixed cost
+										# fixed cost
 					fix_cost_df = message_ix.make_df(
 						"fix_cost",
 						node_loc=provinces,
 						technology=tech,
-						value=tech_data["fix_cost_2020"][1]["cost_value"],
+						#value=tech_data["fix_cost_2020"][1]["cost_value"],
 						time=tech_data["time"],
 						unit=tech_data["unit"][0]["cost"],
-					).pipe(
-						broadcast,
+					).pipe(broadcast, map_learning_rate(tech_data["fixed_cost_lr"], 
+                        tech_data["fix_cost_2020"][1]["cost_value"],cost_type="fixed", 
+                        years=map_yv_ya_lt(years, 
+                        tech_data["tec_lifetime"], 
+                        first_year)["year_act"].to_list())).pipe(broadcast,
 						map_yv_ya_lt(years, tech_data["tec_lifetime"], first_year),
 					)
 					self.scenario.add_par("fix_cost", fix_cost_df)
 
-
-						# emission factor
+					# investment cost
 					inv_cost_df = message_ix.make_df(
 						"inv_cost",
 						node_loc=provinces,
@@ -238,10 +240,8 @@ class model_MSG:
 						#value=tech_data["inv_cost_2020"][1]["cost_value"],
 						time=tech_data["time"],
 						unit=tech_data["unit"][0]["cost"],
-					).pipe(broadcast, map_learning_rate(tech_data["investment_lr"], tech_data["inv_cost_2020"][1]["cost_value"], years))
-					
-					inv_cost_df['year_vtg'] = inv_cost_df['year_vtg'].astype(int)
-
+					).pipe(broadcast, map_learning_rate(tech_data["investment_lr"], tech_data["inv_cost_2020"][1]["cost_value"], cost_type="investment", years=years))
+					inv_cost_df["year_vtg"] = inv_cost_df["year_vtg"].astype(int)
 					self.scenario.add_par("inv_cost", inv_cost_df)
 
 					# emission factor

@@ -1,0 +1,479 @@
+technology,Description,Level,Input commodity/level,Output commodity/level,Tier
+adipic_thermal,Thermal destruction tech for adipic acid sector,Dummy,-,Dummy Primary,2
+ammonia_secloop,Ammonia Secondary Loop Systems,Dummy,-,Dummy Primary,2
+back_bio_ind,Backstop for diagnosing model infeasibility,Final,-,Biomass Useful,backstop
+back_fs,Backstop for diagnosing model infeasibility,Useful,-,Industry FS Useful,backstop
+back_I,Backstop for diagnosing model infeasibility,Useful,-,Industry Useful,backstop
+back_RC,Backstop for diagnosing model infeasibility,Useful,-,RC useful,backstop
+back_trp,Backstop for diagnosing model infeasibility,Useful,-,Transport Useful,backstop
+BCA_AgWasteEM,Black carbon aerosol emissions from agricultural waste,emission,-,-,2
+BCA_IndNonEnergyEM,Black carbon aerosol emissions from feedstock in industry (non-energy),emission,-,-,2
+BCA_IntShipEM,Black carbon aerosol emissions from internaitonal shipping,emission,-,-,3
+BCA_WasteBurnEM,Black carbon aerosol emissions from direct waste burning,emission,-,-,2
+bco2_tr_dis,Technology for co2 transportation and disposal from biomass technologies,Secondary,-,Exports Secondary,1
+bio_extr,Biomass production/extraction,Primary,-,Biomass Primary,1
+bio_extr_1,Biomass Extraction,Primary,-,Biomass Primary,aggregate
+bio_extr_2,Biomass Extraction,Primary,-,Biomass Primary,aggregate
+bio_extr_3,Biomass Extraction,Primary,-,Biomass Primary,aggregate
+bio_extr_4,Biomass Extraction,Primary,-,Biomass Primary,aggregate
+bio_extr_5,Biomass Extraction,Primary,-,Biomass Primary,aggregate
+bio_extr_6,Biomass Extraction,Primary,-,Biomass Primary,aggregate
+bio_extr_a,Biomass production/extraction category a,Primary,-,Biomass Primary,aggregate
+bio_extr_b,Biomass production/extraction category b,Primary,-,Biomass Primary,aggregate
+bio_extr_c,Biomass production/extraction category c,Primary,-,Biomass Primary,aggregate
+bio_extr_chp,"Supply of biomass without net C emissions;  defined here as agricultural wastes, and other crops with cycle of 1 year or less",Primary,-,Biomass Primary,3
+bio_extr_mpen,Slack primary biomass created with new implementation of non commercial biomass,Secondary,-,Exports Secondary,1
+bio_hpl,Biomass heating plant,Secondary,Biomass Primary,D_Heat Secondary,1
+bio_istig,Advanced biomass power plant- gasified biomass is burned in gas turbine plant - modes with and without net carbon release,Secondary,Biomass Primary,Electricity Secondary,1
+bio_istig_ccs,Advanced biomass power plant with carbon capture and storage- gasified biomass is burned in gas turbine plant - modes with and without net carbon release,Secondary,Biomass Primary,Electricity Secondary,1
+bio_ppl,Bio powerplant,Secondary,Biomass Primary,Electricity Secondary,1
+bio_ppl_co2scr,New coal scrubber for power plants,Secondary,-,Exports Secondary,1
+biomass_i,Biomass with C in industry,Useful,Biomass Final,Biomass Useful,1
+biomass_nc,Non-commercial biomass with C,Useful,Biomass Final,Biomass Useful,1
+biomass_rc,Biomass with C for heating in residential/commercial sector,Useful,Biomass Final,Biomass Useful,1
+biomass_t_d,Transmission/Distribution of biomass with C,Useful,Biomass Primary,Biomass Final,1
+c_ppl_co2scr,New coal scrubber for coal power plants,Secondary,-,Exports Secondary,1
+cement_CO2,Co2 emissions from cement production,Secondary,-,Exports Secondary,1
+cement_co2scr,cement CO2 scrubber (CCS),Secondary,-,Exports Secondary,1
+CF4_Semico,Perfluoromethane emissions from semiconductor industry,emission,-,-,2
+CF4_TCE,Tetrafluoromethane (CF4) Total Carbon Emissions,Primary,-,Dummy Primary,1
+cfc_co2scr,co2 scrubber for coal fuel cells (CCS),Secondary,-,Exports Secondary,3
+CH4_AgWasteEM,Methane emissions from agricultural waste,emission,-,-,2
+CH4_DomWasteWa,Methane emissions from domestic waste,emission,-,-,2
+CH4_IndNonEnergyEM,Methane emissions from feedstock in industry (non-energy),emission,-,-,2
+CH4_IndWasteWa,Methane emissions from industry,emission,-,-,2
+CH4_IntShipEM,Methane emissions from internaitonal shipping,emission,-,-,3
+CH4_LandUseChangeEM,Methane emissions from land use change,emission,-,-,2
+CH4_RemainingEM,Methane emissions from remaining sources,emission,-,-,1
+CH4_SavanBurnEM,Methane emissions from savanna burning,emission,-,-,2
+CH4_TCE,Methane total carbon equivalent emissions,Dummy,-,Dummy Primary,1
+CH4_WasteBurnEM,Methane emissions from waste burning,emission,-,-,2
+CH4g_TCE,CH4 emissions from animals directly in Total Carbon Equivalent emissions,Dummy,-,Dummy Agriculture Primary ,3
+CH4n_landfills,Methane emissions from lanfilled waste,emission,-,-,2
+CH4n_TCE,CH4 emissions from anaerobic waste decompostion in Total Carbon Equivalent emissions,Dummy,-,Dummy Primary,2
+CH4o_TCE,"Dummy technology converting CH4 emissions from indutrial and domestic wastewater, non energy biomassburning and other CH4 emissions,  to total carbon eqivalent emissions (TCE)",Dummy,-,Dummy Primary,2
+CH4s_TCE,Total carbon equivalent of methane emissions,emission,-,-,2
+CO_AgWasteEM,Carbon monoxide emissions from agricultural waste,emission,-,-,2
+CO_IndNonEnergyEM,Carbon monoxide emissions from feedstock in industry (non-energy),emission,-,-,2
+CO_IntShipEM,Carbon monoxide emissions from internaitonal shipping,emission,-,-,3
+CO_LandUseChangeEM,Carbon monoxide emissions from land use change,emission,-,-,2
+CO_SavanBurnEM,Carbon monoxide emissions from savanna burning,emission,-,-,2
+CO_WasteBurnEM,Carbon monoxide emissions from waste burning,emission,-,-,2
+CO2_TCE,CO2 total carbon equivalent emissions,Dummy,-,Dummy Primary,1
+co2_tr_dis,Technology for co2 transportation and disposal,Secondary,-,Exports Secondary,1
+CO2s_TCE,Total carbon equivalent of CO2 emissions,emission,-,-,2
+CO2t_TCE,Total carbon equivalent of CO2 emissions,emission,-,-,2
+coal_adv,Advanced coal power plant,Secondary,Coal Secondary,Electricity Secondary,1
+coal_adv_ccs,Advanced coal power plant with carbon capture and storage,Secondary,Coal Secondary,Electricity Secondary,1
+coal_bal,Link technology to stabilize coal production,Secondary,Coal Primary ,Coal Secondary,1
+coal_exp,Net exports of coal at fixed price of about US$ 42/tce,Exports,Coal Primary ,Coal Exports,1
+coal_extr,"Hard coal extraction, world average grade A",Primary,Coal Resource ,Coal Primary ,1
+coal_extr_ch4,Describes efforts in CH4-reduction from coal mining,Primary,Coal Resource ,Coal Primary ,1
+coal_extr_mpen,Coal extraction market penetration,,,,1
+coal_fs,Coal feedstock,Useful,Coal Final ,Industry FS useful,1
+coal_gas,Hard coal gasification,Secondary,Coal Secondary,Gas Secondary,1
+coal_hpl,Coal heating plant,Secondary,Coal Secondary,D_Heat Secondary,1
+coal_i,Coal in industry thermal,Useful,Coal Final ,Industry TH Useful,1
+coal_imp,Net imports of coal,Secondary,Coal Imports,Coal Secondary,1
+coal_ppl,Coal power-plant,Secondary,Coal Secondary,Electricity Secondary,1
+coal_ppl_u,Coal power plant without abatement measures,Secondary,Coal Secondary,Electricity Secondary,1
+coal_rc,Coal heating in residential/commercial sector,Useful,Coal Final ,RC useful,1
+coal_t_d,Transmission/Distribution of coal,Final,Coal Secondary,Coal Final,1
+coal_t_d-in-06%,Transmission/Distribution of coal industry like coal_t/d but imported coal  with 0.6% S content,Final,Coal Secondary,Coal Final,2
+coal_t_d-in-SO2,Transmission/Distribution of coal industry like coal_t/d but processed coal,Final,Coal Secondary,Coal Final,2
+coal_t_d-rc-06%,Transmission/Distribution of coal residential/commercial like coal_t/d but imported coal with 0.6% S content,Final,Coal Secondary,Coal Final,2
+coal_t_d-rc-SO2,Transmission/Distribution of coal like coal_t/d but processed coal,Final,Coal Secondary,Coal Final,2
+coal_trp,Coal-based transport,Useful,Coal Final ,Transport Useful,1
+csp_sm1_ppl,Concentrated solar power plant without long-term storage,,,,
+csp_sm1_res,"Concentrated solar power plant without long-term storage, best resource category",-,-,Secondary Electricity,aggregate
+csp_sm1_res1,"Concentrated solar power plant without long-term storage, resource category 1",-,-,Secondary Electricity,aggregate
+csp_sm1_res2,"Concentrated solar power plant without long-term storage, resource category 2",-,-,Secondary Electricity,aggregate
+csp_sm1_res3,"Concentrated solar power plant without long-term storage, resource category 3",-,-,Secondary Electricity,aggregate
+csp_sm1_res4,"Concentrated solar power plant without long-term storage, resource category 4",-,-,Secondary Electricity,aggregate
+csp_sm1_res5,"Concentrated solar power plant without long-term storage, resource category 5",-,-,Secondary Electricity,aggregate
+csp_sm3_ppl,Concentrated solar power plant with long-term storage,,,,1
+csp_sm3_res,"Concentrated solar power plant with long-term storage, best resource category",-,-,Secondary Electricity,aggregate
+csp_sm3_res1,"Concentrated solar power plant with long-term storage, resource category 1",-,-,Secondary Electricity,aggregate
+csp_sm3_res2,"Concentrated solar power plant with long-term storage, resource category 2",-,-,Secondary Electricity,aggregate
+csp_sm3_res3,"Concentrated solar power plant with long-term storage, resource category 3",-,-,Secondary Electricity,aggregate
+csp_sm3_res4,"Concentrated solar power plant with long-term storage, resource category 4",-,-,Secondary Electricity,aggregate
+csp_sm3_res5,"Concentrated solar power plant with long-term storage, resource category 5",-,-,Secondary Electricity,aggregate
+dac_1_exports,Direct Air Capture (configuration 1),,,,1
+dom_total,Used in balance equation for domestic energy supply and in the equation for constraining net imports,Secondary,-,Exports Secondary,2
+dummy_producer,Technology added to produce dummy energy to avoid infeasibility if needed (e.g. when CO2_TCE needs to go negative),Primary,-,Dummy Primary,dummy
+elec_exp,Net export of electricity,Exports,Electricity Secondary,Electricity Exports,1
+elec_i,Electricity in industry thermal,Useful,Electricity Final,Industry TH Useful,1
+elec_imp,Net import of electricity,Secondary,Electricity Imports,Electricity Secondary,1
+elec_rc,Electricity for heating in residential/commercial,,,,1
+elec_t_d,Grid technology cost converted to 2005$,Final,Electrcity Secondary,Electricity Final,1
+elec_trd,Electricity trade at the global level,,,,1
+elec_trp,Electricity-based transport,Useful,Electricity Final,Transport Useful,1
+enre_con,joint diffusion constraint for enteric fermentation mitigation technologies,Dummy,-,Dummy Agriculture Primary ,3
+ent_red1,Mitigation for CH4 emissions from animals directly,Dummy,-,Dummy Agriculture Primary ,3
+ent_red2,Mitigation for CH4 emissions from animals directly,Dummy,-,Dummy Agriculture Primary ,3
+ent_red3,Mitigation for CH4 emissions from animals directly,Dummy,-,Dummy Agriculture Primary ,3
+eth_bal,Link technology to stabilize ethanol production,Secondary,Ethanol Primary,Ethanol Secondary,1
+eth_bio,Ethanol synthesis via biomass gasification,Primary,Biomass Primary,Ethanol Primary,1
+eth_bio_ccs,Ethanol synthesis via biomass gasification with carbon capture and storage,Primary,Biomass Primary,Ethanol Primary,1
+eth_exp,Exports of ethanol (no accounting of CO2 transferred),Exports,Ethanol Primary,Ethanol Exports,1
+eth_fc_trp,Ethanol (without net C) fuel cell-based transport,Useful,Ethanol Final,Transport Useful,1
+eth_i,Ethanol (without C) replacement for use as liquid fuel in industry,Useful,Ethanol Final,Industry TH Useful,1
+eth_ic_trp,Ethanol (without net C) ic-engine-based transport,Useful,Ethanol Final,Transport Useful,1
+eth_imp,Imports of ethanol (no accounting of CO2 transferred),Secondary,Ethanol Exports ,Ethanol Secondary,1
+eth_rc,Ethanol (without C) replacement for use as liquid fuel in residential/commercial,Useful,Ethanol Final,Residential Commercial  TH Useful,1
+eth_t_d,Transmission/Distribution of methanol without net C (just linking technology),Final,Ethanol Secondary,Ethanol Final,1
+eth_tobunker,Ethanol to bunker loading technology,,,,2
+ethanol_fs,Ethanol as feedstock,Useful,Ethanol Final,Industry FS Useful,1
+exp_total,Used in balance equation for exported energy supply and in the equation for constraining net imports,Secondary,-,Exports Secondary,1
+Feeds_1,conservation cost curve step for feedstock demand,Useful,-,Industry FS Useful,backstop
+Feeds_2,conservation cost curve step for feedstock demand,Useful,-,Industry FS Useful,backstop
+Feeds_3,conservation cost curve step for feedstock demand,Useful,-,Industry FS Useful,backstop
+Feeds_4,conservation cost curve step for feedstock demand,Useful,-,Industry FS Useful,backstop
+Feeds_5,conservation cost curve step for feedstock demand,Useful,-,Industry FS Useful,backstop
+Feeds_con,joint diffusion constraint for feedstock conservation cost curve steps,Primary,-,Dummy Agriculture Primary,backstop
+flaring_CO2,Co2 emissions from gas flaring,Exports,-,Exports CO2,1
+foil_bunker,Fuel oil bunker,,,,2
+foil_exp,Net exports of crude oil at 95% of oil price,Exports,Fuel Oil Secondary,Fuel Oil Exports,1
+foil_fs,Fuel oil as feedstock in industry,,,,1
+foil_hpl,Fuel oil heating plant,Secondary,Fuel Oil Secondary,D_Heat Secondary,1
+foil_i,Fuel oil for thermal uses in industry,Useful,Fuel Oil Final,Industry Th Useful,1
+foil_imp,Net imports of residual oil at 95% of oil price,Secondary,Fuel Oil Imports,Fuel Oil Secondary,1
+foil_ppl,"New standard oil power plant, Rankine cycle",Secondary,Fuel Oil Secondary,Electricity Secondary,1
+foil_rc,Fuel oil heating in residential/commercial sector,Useful,Fuel Final ,RC Thermal Useful,1
+foil_t_d,Transmission/Distribution of fueloil  (just linking technology),Final,Fuel Oil Secondary,Fuel Oil Final ,1
+foil_trp,Fueloil-based transport,Useful,Fuel Oil Final ,Transport Useful,1
+forest_CO2,Co2 emissions from forests,Secondary,-,Exports Secondary,2
+g_ppl_co2scr,CO2 scrubber for natural gas power plant,Secondary,-,Exports Secondary,1
+gas_bal,Link technology to stabilize gas production,Secondary,Gas Primary,Gas Secondary,1
+gas_bio,Synthesis gas production from biomass,Secondary,Biomass Primary,Gas Secondary,1
+gas_cc,Gas combined cycle power-plant,Secondary,Gas Secondary,Electricity Secondary,1
+gas_cc_ccs,Gas combined cycle power-plant with carbon capture and storage,Secondary,Gas Secondary,Electricity Secondary,1
+gas_ct,Gas combustion-turbine power plant,Secondary,Gas Secondary,Electricity Secondary,1
+gas_exp,Net gas export,,,,1
+gas_extr_1,"Natural gas extraction, Cat I = Master et al.14.WPC ""Identified Reserves""",Primary,Grade/ Resource  ,Primary,1
+gas_extr_2,"Natural gas extraction, Cat II = Master et al.14.WPC ""Mode"" undiscovered natural gas",Primary,Grade/ Resource  ,Primary,aggregate
+gas_extr_3,"Natural gas extraction, Cat III = Masters  et al.14.WPC Difference between ""Mode and 5%""  undiscovered natural gas",Primary,Grade/ Resource  ,Primary,aggregate
+gas_extr_4,"Natural gas extraction, Cat IV = Estimated enhanced Recovery (30% of Resources I+II+III)  plus 15% of historical production",Primary,Grade/ Resource  ,Primary,aggregate
+gas_extr_5,"Natural gas extraction, Cat V = Non-conventional reserves (20% of Coal bed; 15% of fractured Shale; 15% of Tight formation)",Primary,Grade/ Resource  ,Primary,aggregate
+gas_extr_6,"Natural gas extraction, Cat VI -VII= Non-conventional resources. Rest of Coal bed (80%), fractured Shale (85%) and  Tight formation (85%)  were aggregated and then distributed to VI    (40%) nd VII (60%)",Primary,Grade/ Resource  ,Primary,aggregate
+gas_extr_mpen,Common Market penetration for all gas extraction technologies,Secondary,-,Exports Secondary,1
+gas_fs,Gas as feedstock,Useful,Gas Final ,Industry FS Useful,1
+gas_h2,Hydrogen methanation,Secondary,Hydrogen Secondary,Gas Secondary,1
+gas_hpl,Natural gas heating plant,Secondary,Gas Secondary,D_Heat Secondary,1
+gas_htfc,High temperature fuel cell powered with natural gas,Secondary,Gas Secondary,Electricity Secondary,2
+gas_i,Gas for thermal uses in industry,Useful,Gas Final ,Industry TH Useful,1
+gas_imp,Piped Gas imports,Secondary,Gas Exports,Gas Secondary,1
+gas_ppl,"Gas power plant, Rankine cycle",Secondary,Gas Secondary,Electricity Secondary,1
+gas_rc,Gas heating in residential/commercial sector,Final,Gas Secondary,Gas Final,1
+gas_t_d,Transmission/Distribution of gas,Final,Gas Secondary,Gas Final,1
+gas_t_d_ch4,Transmission/Distribution of gas with CH4 mitigation,Final,Gas Secondary,Gas Final,1
+gas_trp,gas-based transport,Useful,Gas Final ,Transport Useful,1
+GDP,Gross domestic product (market exchange rate),,,,2
+geo_hpl,Geothermal heat plant,Secondary,-,D_Heat Secondary,2
+geo_ppl,Geothermal power plant,Secondary,-,Electricity Secondary,2
+gfc_co2scr,New co2 scrubber for gas fuel cells,Secondary,-,Exports Secondary,2
+glb_coal_exp,Global net export of coal,Imports,-,Coal Imports,3
+glb_coal_imp,Global net import of coal,Exports,Electricity Exports,Total Exports,3
+glb_elec_exp,Global net export of electricity,Imports,-,Electricity Imports,3
+glb_elec_imp,Global net import of electricity,Exports,Electricity Exports,Total Exports,3
+glb_eth_imp,Global net import of ethanol,Exports,Ethanol Exports ,Total Exports,3
+glb_foil_exp,Global net export of fuel oil,Imports,-,Fuel Oil Imports,3
+glb_foil_imp,Global net import of fuel oil,Exports,Fuel Oil Exports,Total Exports,3
+glb_gas_exp,Global net export of gas,Exports,-,Gas Exports,3
+glb_lh2_imp,Global net import of liquid hydrogen,Exports,Liquid Hydrogen Exports,Total Exports,3
+glb_LNG_exp,Global net export of liquified natural gas,Imports,-,LNG Imports,3
+glb_loil_exp,Global net export of light oil,Imports,-,Loil Imports ,3
+glb_loil_imp,Global net import of light oil,Exports,Loil Exports,Total Exports,3
+glb_meth_imp,Global net import of methanol,Exports,Methanol Exports,Total Exports,3
+glb_oil_exp,Global net export of crude oil,Imports,-,Oil Imports,3
+glb_oil_imp,Global net import of crude oil,Exports,Oil Exports,Total Exports,3
+h2_bio,Hydrogen production from biomass with C (via gasification),Secondary,Biomass Primary ,Hydrogen Secondary,1
+h2_bio_ccs,Hydrogen production from biomass with C (via gasification) with carbon capture and storage,Secondary,Biomass Primary ,Hydrogen Secondary,1
+h2_co2_scrub,CO2 scrubber for h2 production from coal and gas,Exports,Electricity Secondary,Exports Secondary,1
+h2_coal,Hydrogen production via coal gasification,Secondary,Coal Secondary,Hydrogen Secondary,1
+h2_coal_ccs,Hydrogen production via coal gasification with carbon capture and storage,Secondary,Coal Secondary,Hydrogen Secondary,1
+h2_ct,Hydrogen combustion turbine,,,,1
+h2_elec,Hydrogen production via electrolysis,Secondary,Electricity Secondary,Hydrogen Secondary,1
+h2_fc_I,Hydrogen fuel cell cogeneration system for industry,Useful,Hydrogen Final ,Industry Useful,1
+h2_fc_RC,Hydrogen fuel cell cogeneration system for res/comm,Useful,Hydrogen Final ,RC Useful,1
+h2_fc_trp,Hydrogen fuel cell-based transport (plus off-hours electricity generation),Useful,Liquid Hydrogen Final ,Transport Useful,1
+h2_i,Gaseous hydrogen in industry thermal,Useful,Hydrogen Final,Industry Thermal Useful,1
+h2_liq,Hydrogen liquefaction,Primary,Hydrogen Primary ,Liquid Hydrogen Primary,1
+h2_mix,Hydrogen injection into the natural gas system,Secondary,Hydrogen Secondary,Gas Secondary,1
+h2_rc,Hydrogen (gaseous) catalytic heating in,Secondary,Hydrogen Final ,RC Thermal Useful,1
+h2_smr,Hydrogen production via steam-methane reforming of natural gas,Secondary,Gas Secondary ,Hydrogen Secondary,1
+h2_smr_ccs,Hydrogen production via steam-methane reforming of natural gas with carbon capture and storage,Secondary,Gas Secondary ,Hydrogen Secondary,1
+h2_t_d,Transmission/Distribution of gaseous hydrogen (just linking technology),Final ,Hydrogen Secondary,Hydrogen Final,1
+h2b_co2_scrub,CO2 scrubber for h2 production from biomass,Secondary,Electricity Secondary,Exports Secondary,2
+heat_i,District heating for thermal uses in industry,Useful,D_heat Final ,Industry Thermal Useful,1
+heat_rc,District heating in residential/commercial sector,Useful,D_Heat Final ,RC_Thermal Useful,1
+heat_t_d,Transmission/Distribution of district heat,Final ,D_Heat Secondary,D_Heat Final ,1
+HFC_AerosolMDI,Hydrofluorocarbon emissions from aerosols in metered dose inhalers,emission,-,-,2
+HFC_AerosolNonMDI,Hydrofluorocarbon emissions from aerosols other than metered dose inhalers,emission,-,-,2
+HFC_FireExt,Hydrofluorocarbon emissions from fire extinguishers,emission,-,-,2
+HFC_Solvents,Hydrofluorocarbon emissions from solvents,emission,-,-,2
+HFC_TCE,HFC total carbon equivalent emissions,Primary,-,Dummy Primary,2
+HFCo_TCE,"Dummy technology converting HFC equiv emissions from solvents, fire extinguishers, aerosols MDI, aerosols non-MDI to total carbon eqivalent emissions (TCE)",Primary,-,Dummy Primary,2
+hp_el_i,Eectric heat pump in industry thermal,Useful,Electricity Final ,Industry Thermal Useful,1
+hp_el_rc,Electric heat pump in residential/commercial sector,Useful,Electricity Final ,RC_Thermal Useful,1
+hp_gas_i,Natural gas heat pump in industry thermal,Useful,Gas Final ,Industry Thermal Useful,1
+hp_gas_rc,Natural gas heat pump in residential/commercial sector,Useful,Gas Final ,RC_Thermal Useful,1
+hydro_hc,High cost hydro power plant,Secondary,-,Electricity Secondary,1
+hydro_lc,Low cost hydro power plant,Secondary,-,Electricity Secondary,1
+igcc,Integrated gasification combined cycle (IGCC) power plant,Secondary,Coal Secondary,Electricity Secondary,1
+igcc_ccs,Integrated gasification combined cycle (IGCC) power plant with carbon capture and storage,Secondary,Coal Secondary,Electricity Secondary,1
+igcc_co2scr,New coal scrubber for igcc plants,Exports,-,Exports Secondary,1
+imp_total,Used in balance equation for imported energy supply ,Exports,-,Exports Secondary,1
+Ispec_1,conservation cost curve step for industry specific demand,Useful,-,Industry Useful,backstop
+Ispec_2,conservation cost curve step for industry specific demand,Useful,-,Industry Useful,backstop
+Ispec_3,conservation cost curve step for industry specific demand,Useful,-,Industry Useful,backstop
+Ispec_4,conservation cost curve step for industry specific demand,Useful,-,Industry Useful,backstop
+Ispec_5,conservation cost curve step for industry specific demand,Useful,-,Industry Useful,backstop
+Ispec_con,joint diffusion constraint for industry specific conservation cost curve steps,Primary,-,Dummy Agriculture Primary,backstop
+Itherm_1,conservation cost curve step for industry thermal demand,Useful,-,Industry Thermal Useful,backstop
+Itherm_2,conservation cost curve step for industry thermal demand,Useful,-,Industry Thermal Useful,backstop
+Itherm_3,conservation cost curve step for industry thermal demand,Useful,-,Industry Thermal Useful,backstop
+Itherm_4,conservation cost curve step for industry thermal demand,Useful,-,Industry Thermal Useful,backstop
+Itherm_5,conservation cost curve step for industry thermal demand,Useful,-,Industry Thermal Useful,backstop
+Itherm_con,joint diffusion constraint for industry thermal conservation cost curve steps,Dummy,-,Dummy Agriculture Primary,backstop
+land_use_biomass,Biomass from land use module,,,,1
+landfill_compost1,Landfill mitigation technology (composting) technology 1 for CH4 mitigation,Dummy,-,Dummy Primary,2
+landfill_compost2,Landfill mitigation technology (composting) technology 2 for CH4 mitigation,Dummy,-,Dummy Primary,2
+landfill_digester1,Landfill mitigation technology (digester) 1 for CH4 mitigation,,,,2
+landfill_direct1,Landfill mitigaiton technology (direct) 1 for CH4 mitigation,Dummy,-,Dummy Primary,2
+landfill_direct2,Landfill mitigaiton technology (direct) 1 for CH4 mitigation,Dummy,-,Dummy Primary,2
+landfill_ele,Landfill mitigaiton technology (ele) 1 for CH4 mitigation,Dummy,-,Dummy Primary,2
+landfill_flaring,Landfill mitigaiton technology (flaring) 1 for CH4 mitigation,Dummy,-,Dummy Primary,2
+landfill_heatprdn,Landfill mitigaiton technology (heat production) 1 for CH4 mitigation,Dummy,-,Dummy Primary,2
+landfill_mechbio,Landfill mitigaiton technology (mechanical) 1 for CH4 mitigation,,,,2
+landfill_oxdn,Landfill mitigaiton technology (oxidation) 1 for CH4 mitigation,Dummy,-,Dummy Primary,2
+leak_repair,"Leak-repairs, HFC-134a from refrigeration & AC(SR)",Dummy,-,Dummy Primary,3
+leak_repairsf6,Recycling gas carts for SF6 recovery during assembly of gas insulated equipment,Dummy,-,Dummy Primary,3
+lfil_con,joint diffusion constraint for lanfill mitigation technologies,Dummy,-,Dummy Agriculture Primary,2
+lh2_bal,Link technology to stabilize liquid hydrogen production,Secondary,Liquid Hydrogen Primary,Liquid Hydrogen Secondary,1
+LH2_bunker,Liquid hydrogen bunker ,,,,1
+lh2_exp,Exports of liquid hydrogen,Exports,Liquid Hydrogen Primary,Liquid Hydrogen Exports,1
+lh2_imp,Imports of liquid hydrogen,Secondary,Liquid Hydrogen Exports,Liquid Hydrogen Secondary,1
+lh2_regas,Regasification of liquid hydrogen,Secondary,Liquid Hydrogen Secondary,Hydrogen Secondary,1
+lh2_t_d,Transmission/Distribution of liquid hydrogen,Final ,Liquid Hydrogen Secondary,Liquid Hydrogen Final,1
+LH2_tobunker,Liquid hydrogen loading to bunker ,,,,1
+lignite_extr,"Lignite extraction, world average grade A",Primary,Lignite Resource ,Coal Primary ,1
+liq_bio,Second Generation Ethanol Production based on Biomass to FTL,Primary,Biomass Primary,Ethanol Primary,1
+liq_bio_ccs,Second Generation Ethanol Production with carbon capture and storage based on Biomass to FTL,Primary,Biomass Primary,Ethanol Primary,1
+liq_h2,Second Generation Ethanol Production from hydrogen,Primary,Hydrogen Secondary,Ethanol Secondary,1
+LNG_bal,Link technology to stabilize liquified natural gas production,Secondary,LNG Primary,LNG Secondary,1
+LNG_exp,LNG exports,,,,1
+LNG_imp,LNG Imports,Imports,LNG Imports ,LNG Secondary,1
+LNG_prod,LNG production,,,,1
+LNG_regas,LNG regasification (just link; losses are in trade),Secondary,LNG Secondary,Gas Secondary,1
+LNG_tobunker,LNG loading to bunker,,,,1
+loil_cc,Light oil combined cycle,Secondary,Light Oil Secondary,Electricity Secondary,1
+loil_conv,Light oil converter,,,,dummy
+loil_exp,Net exports of crude oil at 15% above oil price,Exports,Light Oil Secondary,Light Oil Exports,1
+loil_fs,Lightoil as feedstock,Useful,Light Oil Final,Industry FS Useful,1
+loil_hpl,Light oil heating plant,,,,1
+loil_i,Lightoil for thermal uses in industry,Useful,Light Oil Final ,Industry TH Useful,1
+loil_imp,Net imports of light oil at 15% above crude price,Secondary,Light Oil Imports,Light Oil Secondary,1
+loil_ppl,Existing light oil power-plant,Secondary,Light Oil Secondary,Electricity Secondary,1
+loil_rc,Lightoil heating in residential/commercial sector,Useful,Light Oil Final,RC_Thermal Useful,1
+loil_std,Standard light oil power-plant,Secondary,-,Light Oil Secondary,dummy
+loil_t_d,Transmission/Distribution of lightoil (just linking technology),Final ,Light Oil Secondary,Light Oil Final,1
+loil_tobunker,Light oil loading technology to bunker,,,,2
+loil_trp,Lightoil-based transport,Useful,Light Oil Final ,Transport Useful,1
+manu_con,joint diffusion constraint for manure management+B249 mitigation technologies,Primary,-,Dummy Agriculture Primary,3
+meth_bal,Link technology to stabilize methanol production,Primary,Methanol Primary,Methanol Secondary,1
+meth_coal,Methanol synthesis via coal gasification,Primary,Coal Secondary/ Electricity Secondary,Methanol Primary,1
+meth_coal_ccs,Methanol synthesis via coal gasification with carbon capture and storage,Primary,Coal Secondary,Methanol Primary,1
+meth_exp,Exports of methanol (no accounting of CO2 transferred),Exports,Methanol Primary,Methanol Exports,1
+meth_fc_trp,Methanol (with C) fuel cell-based transport,Useful,Methanol Final ,Transport Useful,1
+meth_h2,Methanol synthesis from hydrogen,Primary,Hydrogen Secondary,Methanol Secondary,1
+meth_i,Methanol (with C) replacement for use as liquid fuel in industry,Useful,Methanol Final ,Industry Useful,1
+meth_ic_trp,Methanol (with C) ic-engine-based transport,Useful,Methanol Final ,Transport Useful,1
+meth_imp,Imports of methanol (no accounting of CO2 transferred),Secondary,Methanol Exports,Methanol Secondary,1
+meth_ng,Methanol synthesis via natural gas,Primary,Gas Secondary,Methanol Primary,1
+meth_ng_ccs,Methanol synthesis via natural gas with carbon capture and storage,Primary,Gas Secondary,Methanol Primary,1
+meth_rc,Methanol (with C) replacement for use as liquid fuel in residential/commercial,Useful,Methanol Final ,RC_Thermal Useful,1
+meth_t_d,Transmission/Distribution of methanol with C,Final ,Methanol Secondary,Methanol Final,1
+meth_tobunker,Methanol loading technology to bunker,,,,3
+methanol_fs,Methanol as feedstock,Useful,Methanol Final ,Industry FS Useful,1
+mvac_co2,Transcritical vapor cycle CO2 systems for mobile vehicle air conditioners,Dummy,-,Dummy  Agricultute,3
+N2O_Human,Nitrous oxide from human,emission,-,-,2
+N2O_ONonAgSo,Nitrous oxide from non-agriculture soil,emission,-,-,2
+N2O_OtherAgSo,Nitrous oxide from agriculture soil,emission,-,-,2
+N2O_TCE,N2O total carbon equivalent emissions,Dummy,-,Dummy  Agricultute,1
+N2OG_TCE,N2O soil emissions total carbon equivalent emissions,Dummy,-,Dummy  Agricultute,2
+N2On_adipic,Nitrous oxide from adipic acid production,emission,-,-,2
+N2On_nitric,Nitrous oxide from nitric acid production,emission,-,-,2
+N2On_TCE,N2O adipic acid total carbon equivalent emissions,Dummy,-,Dummy  Agricultute,2
+N2Oo_TCE,"Dummy technology converting N2O emissions from Manure Management, Human Sewage, Other Agricultural sources, Other Non Ag Sources to total carbon eqivalent emissions (TCE)",Dummy,-,Dummy  Agricultute,2
+N2Os_TCE,Total carbon equivalent of nitrous oxide emissions,emission,-,-,2
+NH3_AgWasteEM,NH3 emissions from agricultural waste,emission,-,-,2
+NH3_IndNonEnergyEM,NH3 emissions from feedstock in industry (non-energy),emission,-,-,2
+NH3_LandUseChangeEM,NH3 emissions from land use change,emission,-,-,2
+NH3_ManureEM,NH3 emissions from manure,emission,-,-,2
+NH3_RiceEM,NH3 emissions from rice farming,emission,-,-,2
+NH3_SavanBurnEM,NH3 emissions from savannah burning,emission,-,-,2
+NH3_SoilEM,NH3 emissions from soil,emission,-,-,2
+nica_con,,Dummy,-,Dummy  Agricultute,dummy
+nitric_catalytic1,Mitigation technology (catalytic converter) category 1 for N2O emissions,Dummy,-,Dummy Primary,aggregate
+nitric_catalytic2,Mitigation technology (catalytic converter) category 2 for N2O emissions,Dummy,-,Dummy Primary,aggregate
+nitric_catalytic3,Mitigation technology (catalytic converter) category 3 for N2O emissions,Dummy,-,Dummy Primary,aggregate
+nitric_catalytic4,Mitigation technology (catalytic converter) category 4 for N2O emissions,Dummy,-,Dummy Primary,aggregate
+nitric_catalytic5,Mitigation technology (catalytic converter) category 5 for N2O emissions,Dummy,-,Dummy Primary,aggregate
+nitric_catalytic6,Mitigation technology (catalytic converter) category 6 for N2O emissions,Dummy,-,Dummy Primary,aggregate
+nitric_catalytic7,Mitigation technology (catalytic converter) category 7 for N2O emissions,Dummy,-,Dummy Primary,aggregate
+NOx_AgWasteEM,NOx emissions from agricultural waste,emission,-,-,2
+NOx_IndNonEnergyEM,NOx emissions from feedstock in industry (non-energy),emission,-,-,2
+NOx_IntShipEM,NOx emissions from internaitonal shipping,emission,-,-,3
+NOx_LandUseChangeEM,NOx emissions from land use change,emission,-,-,2
+NOx_SavanBurnEM,NOx emissions from savannah burning,emission,-,-,2
+NOx_SoilEM,NOx emissions from soil,emission,-,-,2
+NOx_WasteBurnEM,NOx emissions from direct waste burning,emission,-,-,2
+nuc_hc,"Nuclear power plant (~GEN III+), high cost",Secondary,U5 Stocks,Electricity Secondary,1
+nuc_lc,"Nuclear power plant (~GEN II), low cost",Secondary,U5 Stocks,Electricity Secondary,1
+nuc_smr,"Nuclear power plant (Small Modular Reactors), with possibility of cogeneration of heat and power",Secondary,,Electricity Secondary,1
+nuc_smr_th,"Nuclear thermal plant (Small Modular Reactors), with possibility of only generating high temperature heat",Secondary,,HT_heat Final,1
+OCA_AgWasteEM,Organic carbon aerosol emissions from agricultural waste,emission,-,-,2
+OCA_IndNonEnergyEM,Organic carbon aerosol emissions from feedstock in industry (non-energy),emission,-,-,2
+OCA_IntShipEM,Organic carbon aerosol emissions from internaitonal shipping,emission,-,-,3
+OCA_LandUseChangeEM,Organic carbon aerosol emissions from land use change,emission,-,-,2
+OCA_SavanBurnEM,Organic carbon aerosol emissions from savannah burning,emission,-,-,2
+OCA_WasteBurnEM,Organic carbon aerosol emissions from direct waste burning,emission,-,-,2
+oil_bal,Link technology to stabilize crude oil production,Secondary,Crude Oil Primary,Crude Oil Secondary,1
+oil_exp,Net exports of crude oil at 100% of oil price,Exports,Crude Oil Primary,Oil Exports,1
+oil_extr_1,"Crude oil extraction, Cat I = Masters 14 WPC conv. oil reserves",Primary,Crude 1 Resource Primary,Crude Oil Primary,1
+oil_extr_1_ch4,Describes efforts in CH4-reduction from oil extraction of Cat I,Primary,Crude 1 Resource Primary,Crude Oil Primary,1
+oil_extr_2,"Crude oil extraction,Cat II = Masters mode undiscovered conv. oil (incl. NGL)",Primary,Crude 2 Resource Primary,Crude Oil Primary,1
+oil_extr_2_ch4,Describes efforts in CH4-reduction from oil extraction of Cat II ,Primary,Crude 2 Resource Primary,Crude Oil Primary,aggregate
+oil_extr_3,"Crude oil extraction, Cat III = Masters 5% - Masters 50%",Primary,Crude 3 Resource Primary,Crude Oil Primary,aggregate
+oil_extr_3_ch4,Describes efforts in CH4-reduction from oil extraction of Cat III ,Primary,Crude 3 Resource Primary,Crude Oil Primary,aggregate
+oil_extr_4,"Crude oil extraction, Cat IV = Recoverable ""reserves"" non-conventional oil",Primary,Crude 4 Resource Primary,Crude Oil Primary,aggregate
+oil_extr_4_ch4,Describes efforts in CH4-reduction from oil extraction of Cat IV ,Primary,Crude  4 Resource Primary,Crude Oil Primary,aggregate
+oil_extr_5,"Crude oil extraction, Cat V = Recoverable reserves of nonconventional oil = Shale, tarsands/bitumen and heavy oils",Primary,Crude 5 Resource Primary,Crude Oil Primary,aggregate
+oil_extr_6,"Crude oil extraction, Cat VI = 20% of estimated occurences (-reserves) of shale, heavy oils, tarsands/bitumen",Primary,Crude 6 Resource Primary,Crude Oil Primary,aggregate
+oil_extr_7,"Crude oil extraction, Cat VII = 80% of estimated occurences (-reserves) of shale, heavy oils, tarsands/bitumen",,,,aggregate
+oil_extr_mpen,Common Market penetration for all oil extraction technologies,Secondary,-,Exports Secondary,1
+oil_imp,Net imports of oil,Secondary,Oil Imports,Crude Oil Secondary,1
+oil_ppl,oil fueled power plant,,,,1
+plutonium_prod,plutonium production,Stocks,PuQ Stocks,Pu Stocks,1
+PM2_AgWasteEM,Particulate matters emissions from agricultural waste,emission,-,-,2
+PM2_IndNonEnergyEM,Particulate matters emissions from feedstock in industry (non-energy),emission,-,-,2
+PM2_WasteBurnEM,Particulate matters from direct waste burning,emission,-,-,2
+po_turbine,pass out turbine,Secondary,ELectricity Secondary,D_Heat Secondary,1
+Population,Population,,,,2
+PPP,GDP corrected by purchasing power parity,,,,2
+RCspec_1,conservation cost curve step for residential/commercial specific demand,Useful,-,RC_Useful,backstop
+RCspec_2,conservation cost curve step for residential/commercial specific demand,Useful,-,RC_Useful,backstop
+RCspec_3,conservation cost curve step for residential/commercial specific demand,Useful,-,RC_Useful,backstop
+RCspec_4,conservation cost curve step for residential/commercial specific demand,Useful,-,RC_Useful,backstop
+RCspec_5,conservation cost curve step for residential/commercial specific demand,Useful,-,RC_Useful,backstop
+RCspec_con,joint diffusion constraint for residential/commercial specific conservation cost curve steps,Dummy,-,Dummy Agriculture Primary,backstop
+RCtherm_1,conservation cost curve step for residential/commercial thermal demand,Useful,-,RC_Thermal Useful,backstop
+RCtherm_2,conservation cost curve step for residential/commercial thermal demand,Useful,-,RC_Thermal Useful,backstop
+RCtherm_3,conservation cost curve step for residential/commercial thermal demand,Useful,-,RC_Thermal Useful,backstop
+RCtherm_4,conservation cost curve step for residential/commercial thermal demand,Useful,-,RC_Thermal Useful,backstop
+RCtherm_5,conservation cost curve step for residential/commercial thermal demand,Useful,-,RC_Thermal Useful,backstop
+RCtherm_con,joint diffusion constraint for residential/commercial thermal conservation cost curve steps,Dummy,-,Dummy Agriculture Primary,backstop
+recycling_gas1,Recycling gas carts for SF6 recovery during maintenance of gas insulated equipment(SR),Dummy,-,Dummy Primary,2
+ref_hil,New deeply upgraded refineries,Secondary,Crude Oil Secondary,Fuel Oil Secondary,1
+ref_lol,Existing refineries (low yield),Secondary,Crude Oil Secondary,Fuel Oil Secondary,1
+refrigerant_recovery,"Recovery of refrigerant, HFC-134a from refrigeration and AC (SR)",Primary,-,Dummy Primary,3
+repl_hc,Replacement with HC for foams,Primary,-,Dummy Primary,3
+replacement_so2,Replacing SF6 by SO2(SR),Primary,-,Dummy Primary,3
+rice_red1,Mitigation for CH4 emissions from rice,Primary,-,Dummy Agriculture Primary,3
+rice_red2,Mitigation for CH4 emissions from rice,Primary,-,Dummy Agriculture Primary,3
+rice_red3,Mitigation for CH4 emissions from rice,Primary,-,Dummy Agriculture Primary,3
+rire_con,joint diffusion constraint for rice cultivation mitigation technologies,Primary,-,Dummy  Agriculture Primary,3
+SF6_TCE,SF6 total carbon equivalent emissions,Primary,-,Dummy Primary,1
+sinks_1,potential for sinks (50. US$),Secondary,-,Exports Secondary,backstop
+sinks_2,potential for sinks (100. US$),Secondary,-,Exports Secondary,backstop
+sinks_3,potential for sinks (200. US$),Secondary,-,Exports Secondary,backstop
+sinks_4,potential for sinks (300. US$),Secondary,-,Exports Secondary,backstop
+SO2_AgWasteEM,Sulfur dioxide emissions from agricultural waste,emission,-,-,2
+SO2_IndNonEnergyEM,Sulfur dioxide emissions from feedstock in industry (non-energy),emission,-,-,2
+SO2_IntShipEM,Sulfur dioxide emissions from internaitonal shipping,emission,-,-,3
+SO2_LandUseChangeEM,Sulfur dioxide emissions from land use change,emission,-,-,2
+SO2_SavanBurnEM,Sulfur dioxide emissions from savannah burning,emission,-,-,2
+SO2_WasteBurnEM,Sulfur dioxide emissions from direct waste burning,emission,-,-,2
+soil_red1,Mitigation for N2Oemissions from soil,Primary,-,Dummy Agriculture Primary,3
+soil_red2,Mitigation for N2Oemissions from soil,Primary,-,Dummy Agriculture Primary,3
+soil_red3,Mitigation for N2Oemissions from soil,Primary,-,Dummy Agriculture Primary,3
+solar_curtailment1,solar PV curtailment steps,Dummy,ELectricity Secondary,Dummy Renewable Secondary,1
+solar_curtailment2,solar PV curtailment steps,Dummy,ELectricity Secondary,Dummy Renewable Secondary,1
+solar_curtailment3,solar PV curtailment steps,Dummy,ELectricity Secondary,Dummy Renewable Secondary,1
+solar_cv1,quadratic systems integration costs added to solar PV,Dummy,-,Dummy Renewable Secondary,1
+solar_cv2,quadratic systems integration costs added to solar PV,Dummy,-,Dummy Renewable Secondary,1
+solar_cv3,quadratic systems integration costs added to solar PV,Dummy,-,Dummy Renewable Secondary,1
+solar_cv4,quadratic systems integration costs added to solar PV,Dummy,-,Dummy Renewable Secondary,1
+solar_i,solar thermal in industry sector,Useful,-,Industry TH Useful,1
+solar_pv_I,On-site solar photovoltaic power plant (no storage) in industry,Useful,-,Industry Useful,3
+solar_pv_ppl,Solar photovoltaic power plant (no storage),Dummy,-,Dummy Renewable Secondary,1
+solar_pv_RC,On-site solar photovoltaic power plant (no storage) in residential/commercial,Useful,-,RC_Useful,3
+solar_rc,Solar thermal in residential/commercial sector,Useful,-,RC_Thermal Useful,1
+solar_res1,solar electricity potential category 1,Secondary,-,Electricity Secondary,aggregate
+solar_res2,solar electricity potential category 2,Secondary,-,Electricity Secondary,aggregate
+solar_res3,solar electricity potential category 3,Secondary,-,Electricity Secondary,aggregate
+solar_res4,solar electricity potential category 4,Secondary,-,Electricity Secondary,aggregate
+solar_res5,solar electricity potential category 5,Secondary,-,Electricity Secondary,aggregate
+solar_res6,solar electricity potential category 6,Secondary,-,Electricity Secondary,aggregate
+solar_res7,solar electricity potential category 7,Secondary,-,Electricity Secondary,aggregate
+solar_th_ppl,Solar thermal power plant with storage,Secondary,-,Electricity Secondary,3
+sp_coal_I,specific use of coal in industry,Useful,Coal Final ,Industry Useful,1
+sp_el_I,specific use of electricity in industry,Useful,Electricity Final ,Industry Useful,1
+sp_el_RC,specific use of electricity in residential/commercial,Useful,Electricity Final ,RC_Useful,1
+sp_eth_I,ethanol (without net C) replacement for specific use of light oil in industry,Useful,Ethanol Final ,Industry Useful,1
+sp_liq_I,specific use of light oil in industry,Useful,Light Oil Final ,Industry Useful,1
+sp_meth_I,methanol (with C) replacement for  specific use of light oil in industry,Useful,Methanol Final ,Industry Useful,1
+stor_ppl,generic electric storage,Secondary,ELectricity Secondary,Exports Secondary,1
+syn_liq,Coal liquefaction and lightoil synthesis,Secondary,Coal Secondary ,Light Oil Secondary,1
+syn_liq_ccs,Coal liquefaction and lightoil synthesis with carbon capture and storage,Secondary,Coal Secondary ,Light Oil Secondary,1
+Trans_1,conservation cost curve step for transport demand,Useful,-,Useful Transport,backstop
+Trans_2,conservation cost curve step for transport demand,Useful,-,Useful Transport,backstop
+Trans_3,conservation cost curve step for transport demand,Useful,-,Useful Transport,backstop
+Trans_4,conservation cost curve step for transport demand,Useful,-,Useful Transport,backstop
+Trans_5,conservation cost curve step for transport demand,Useful,-,Useful Transport,backstop
+Trans_con,joint diffusion constraint for transport conservation cost curve steps,Primary,-,Dummy Agriculture Primary,backstop
+u5_imp,Net uranium import,,,,1
+u5-reproc,Uranium reprocessing,Stocks,Stocks U5Q,Stock U5,1
+Uran_extr,"Uranium extraction, milling for FBR blanket",Stocks,Uranium Resource,Stock UQ,1
+uran2u5,"Uranium extraction, milling, fluorination and enrichment per t U5",Stocks,Uranium Resource,Stock U5,1
+useful_feedstock,useful energy for feedstocks,Dummy,-,Dummy_Useful -Primary,1
+useful_industry_sp,useful specific energy for industry,Dummy,-,Dummy_Useful -Primary,1
+useful_industry_th,useful thermal energy for industry,Dummy,-,Dummy_Useful -Primary,1
+useful_res/comm_sp,useful specific energy for residential and commercial,Dummy,-,Dummy_Useful -Primary,1
+useful_res/comm_th,useful thermal energy for residential and commercial,Dummy,-,Dummy_Useful -Primary,1
+useful_res_comm_sp,useful specific energy for residential and commercial,,,,1
+useful_res_comm_th,useful thermal energy for residential and commercial,,,,1
+useful_transport,useful energy for transport,Dummy,-,Dummy_Useful -Primary,1
+vertical_stud,Soderberg process for CF4 from aluminum (SR),Dummy,-,Dummy Primary,dummy
+VOC_AgWasteEM,Volatile organic matters emissions from agricultural waste,emission,-,-,2
+VOC_IndNonEnergyEM,Volatile organic matters emissions from feedstock in industry (non-energy),emission,-,-,2
+VOC_IntShipEM,Volatile organic matters emissions from internaitonal shipping,emission,-,-,3
+VOC_LandUseChangeEM,Volatile organic matters emissions from land use change,emission,-,-,2
+VOC_SavanBurnEM,Volatile organic matters emissions from savannah burning,emission,-,-,2
+VOC_SolventEM,Volatile organic matters emissions from solvents,emission,-,-,2
+VOC_WasteBurnEM,Volatile organic matters emissions from direct waste burning,emission,-,-,2
+WasteDriver,Driver for waste caculations,emission,-,-,2
+wind_curtailment1,wind curtailment steps,Dummy,Secondary Electricity,Dummy Renewable Secondary,1
+wind_curtailment2,wind curtailment steps,Dummy,Secondary Electricity,Dummy Renewable Secondary,1
+wind_curtailment3,wind curtailment steps,Dummy,Secondary Electricity,Dummy Renewable Secondary,1
+wind_cv1,quadratic systems integration costs added to wind,Dummy,-,Dummy Renewable Secondary,1
+wind_cv2,quadratic systems integration costs added to wind,Dummy,-,Dummy Renewable Secondary,1
+wind_cv3,quadratic systems integration costs added to wind,Dummy,-,Dummy Renewable Secondary,1
+wind_cv4,quadratic systems integration costs added to wind,Dummy,-,Dummy Renewable Secondary,1
+wind_ppf,Wind power plant offshore,,,,1
+wind_ppl,Wind power plant onshore,Dummy,-,Dummy Renewable Secondary,1
+wind_ref1,wind offshore potential category 1,Secondary,-,Secondary Electricity,aggregate
+wind_ref2,wind offshore potential category 2,Secondary,-,Secondary Electricity,aggregate
+wind_ref3,wind offshore potential category 3,Secondary,-,Secondary Electricity,aggregate
+wind_ref4,wind offshore potential category 4,Secondary,-,Secondary Electricity,aggregate
+wind_ref5,wind offshore potential category 5,Secondary,-,Secondary Electricity,aggregate
+wind_res1,wind onshore potential category 1,Secondary,-,Secondary Electricity,aggregate
+wind_res2,wind onshore potential category 2,Secondary,-,Secondary Electricity,aggregate
+wind_res3,wind onshore potential category 3,Secondary,-,Secondary Electricity,aggregate
+wind_res4,wind onshore potential category 4,Secondary,-,Secondary Electricity,aggregate
+gas_exp_afr,gas pipeline for exporting to AFR (Africa),,Secondary Natural gas,,
+gas_exp_cpa,gas pipeline for exporting to CPA (Centrally Planned Asia),,,,
+gas_exp_eeu,gas pipeline for exporting to EEU (East Europe),,,,
+gas_exp_sas,gas pipeline for exporting to SAS (South Asia),,,,
+gas_exp_weu,gas pipeline for exporting to WEU (West Europe),,,,
