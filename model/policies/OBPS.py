@@ -195,7 +195,7 @@ def apply_obps_netzero(scenario, data_file_path: str):
 		})
 
 
-def apply_obps(scenario, data_file_path = 'data/obps_inputs_clea.xlsx'):
+def apply_obps(scenario, data_file_path='data/obps_inputs_clean.xlsx'):
 	"""
 	Apply the Output-Based Pricing System (OBPS) policy for the Baseline Canada Scenario
 	to the given MESSAGEix scenario.
@@ -205,32 +205,56 @@ def apply_obps(scenario, data_file_path = 'data/obps_inputs_clea.xlsx'):
 		data_file_path (str): Path to the Excel file containing necessary data.
 	"""
 	# Read the required data
-	data_relation = pd.read_excel(data_file_path, sheet_name='Merged_Shee')
-	#TODO Apply Unit Conversion function
+	data_relation = pd.read_excel(data_file_path, sheet_name='Merged_Sheet')
 
 	# Now you have a dataframe with the correct units which is for Standard, it would be tc/KW or tonne of carbon per Kwyr. 
 
-	#TODO 
+	rel_co2cc = scenario.par('relation_activity', filters = {'relation':'CO2_CC'})
+	tecs_co2cc = rel_co2cc['technology'].unique()
+	provinces = scenario.set('node')[2:]
+	
+	#data_relation = data_relation[data_relation["region"].isin(provinces)]
+	tightening_rates = data_relation[data_relation["variable"].str.contains("Tightening")]
+	standards = data_relation[data_relation["variable"].str.contains("Standard")]
+	merged_df = standards.merge(tightening_rates, on=["technology", "region", "time"], suffixes=("_from_tr", "_from_std"))
+	
+	def multiply_values(row):
+		# NOTE: apply provinvial tightening rate when possible, otherwise apply the national tightening rate
+		if row['value_from_tr'] == 0:
+			# Find the value for 'Canada' with the same 'time' and 'technology'
+			canada_value = merged_df[(merged_df['region'] == 'Canada') &
+									 (merged_df['time'] == row['time']) &
+									 (merged_df['technology'] == row['technology'])]['value_from_tr'].values[0]
+			return row['value_from_std'] * canada_value
+		else:
+			return row['value_from_tr'] * row['value_from_std']
 
-	tightening = data_relation['variable'].str.contains('Tightening')
+	merged_df["final_value"] = merged_df.apply(multiply_values, axis=1)
+	'''
+	for std in standards.iterrows():
+		for tr in tightening_rates.iterrows():
+			if std[1].loc["technology"] in tecs_co2cc and std[1].loc["region"] != "Canada":
+				if std[1].loc["region"] == tr[1].loc["region"] and std[1].loc["technology"] == tr[1].loc["technology"] and std[1].loc["time"] == tr[1].loc["time"]:
+					obps_rate['value'] = std[1].loc["value"] * tr[1].loc["value"]
+					obps_rate['region'] = std[1].loc["region"]
+					obps_rate['variable'] = std[1].loc["variable"]
+					obps_rate['technology'] = std[1].loc["technology"]
+					obps_rate['year_vtg'] = std[1].loc["time"]
+					obps_rate['unit [tCO2/-]'] = "KWa"
 
-	if data_relation['variable'].str.contains('Standard'):
+			
+			#TODO for MA to figure what if they're in both, then which ones to apply
 
 
-	elif data_relation['variable'].str.contains('Tightening'):	
-		# Define conditions for filtering the data
-		rel_co2cc = scenarip.par('relation_activity'. filters = {'relation':'CO2_CC'})_
-		tecs_co2cc = rel_co2['technology'].unique()
-		rel_co2emi = scenarip.par('relation_activity'. filters = {'relation':'CO2_Emission'})_
-		tecs_co2emi = rel_co2emi['technology'].unique()
+			elif data_relation['variable'].str.contains('Tightening'):	
+				# Define conditions for filtering the data
 
-	    # filter data relation with tecs_co2_emi and tecs_co2cc se[arateley ]
+				rel_co2emi = scenarip.par('relation_activity'. filters = {'relation':'CO2_Emission'})_
+				tecs_co2emi = rel_co2emi['technology'].unique()
+
+				# filter data relation with tecs_co2_emi and tecs_co2cc se[arateley ]
 
 
-		#TODO for MA to figure what if theya re in both then which ones to apply 
-
-		# TODO: apply provinvial tightening rate when possible, otherwise apply the national tightening rate
-		
 
 
 
@@ -311,3 +335,4 @@ def apply_obps(scenario, data_file_path = 'data/obps_inputs_clea.xlsx'):
 			'unit': 'USD/kWyr',
 			'value': row['value']
 		})
+	'''

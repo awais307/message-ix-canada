@@ -229,9 +229,6 @@ def unit_conversion(input_df, techs_map):
 	
 	units_df = pd.DataFrame.from_dict(unit_map)
 	units_df.fillna("-")
-
-	with pd.ExcelWriter(path= "data/obps_inputs_clean.xlsx", engine="openpyxl", mode="a", if_sheet_exists="replace") as writer:
-		units_df.to_excel(writer, sheet_name="Merged_Sheet",index=0)
 	
 	units_df["unit [tCO2/-]"].replace({"megawatt hour" : "MWh", "Megawatt hours (MWh)": "MWh", "Energy (expressed in gigajoules)": "GJ", 
 							"gigawatt hours (GWh)" : "GWh", "Energy (expressed in gigawatt hours)": "GWh", 
@@ -240,16 +237,14 @@ def unit_conversion(input_df, techs_map):
 	
 	with open("data/default_units.yaml", "r") as file:
 		data = yaml.safe_load(file)
-		for k,v in data['conversion_factors']['GWa'].items():
+		for k,v in data['conversion_factors']['Kwa'].items():
 			for row in units_df.iterrows():
-				try:
-					if k in row[1].loc["unit [tCO2/-]"]:
-						row[1].loc["value"] *= v
-					else:
-						continue
-				except TypeError:
+				if k == row[1].loc["unit [tCO2/-]"]:
 					row[1].loc["value"] *= v
 		print("End!")
+	
+	with pd.ExcelWriter(path= "data/obps_inputs_clean.xlsx", engine="openpyxl", mode="a", if_sheet_exists="replace") as writer:
+		units_df.to_excel(writer, sheet_name="Merged_Sheet",index=0)
 
 # Reporter method - Deprecated in favor of message_ix_models legacy (forked)
 def report_to_pyam(scenario, directory_path, output_path):
