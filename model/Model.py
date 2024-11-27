@@ -1216,7 +1216,14 @@ class model_MSG:
 				)
 
 		if self.to_excel:
+			start = time.time()
 			self.scenario.to_excel(f"{caseName}.xlsx")
 			print(f"Exported Scenario to Excel: {caseName}.xlsx")
+			end = time.time()
+			print(
+					f"\n==================================================\n\
+				Exported results to Excel in: {round((end - start) / 60)} Min and {round((end - start) % 60)} Sec\
+				\n=================================================="
+				)
 
 		return self.mp, self.scenario, scenario_folder
