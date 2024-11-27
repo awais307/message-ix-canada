@@ -23,10 +23,12 @@ from message_ix_models.util import (
 	same_time,
 )
 from scipy.optimize import linprog
-from model.policies.obps import apply_obps_baseline, apply_obps_netzero
 from pathlib import Path
 from typing import Union
-from model.utils import (map_yv_ya_lt, config_validation)
+#from canada_models.message_ix_models.report.legacy.iamc_report_hackathon import report
+from message_ix_models.report.legacy.iamc_report_hackathon import report
+from model.utils import (map_yv_ya_lt, config_validation, map_learning_rate)
+from model.policies import OBPS
 
 warnings.filterwarnings("ignore")  # Ignore warnings to keep the output clean
 
@@ -94,8 +96,8 @@ class model_MSG:
 		self.annotation = self.config["general"]["annotation"]
 		self.process_historical = self.config["pre_process"]["process_historical_data"]
 		self.add_hydrogen_shares_f = self.config["pre_process"]["add_hydrogen_shares"]
-		self.add_obps_baseline = self.config["pre_process"]["apply_obps_baseline"]
-		self.add_obps_netzero = self.config["pre_process"]["apply_obps_netzero"]
+		self.add_obps_baseline = self.config["policies"]["apply_obps_baseline"]
+		self.add_obps_netzero = self.config["policies"]["apply_obps_netzero"]
 		self.use_reporter = self.config["post_process"]["generate_reporter_output"]
 		self.solve = self.config["model"]["solve"]
 		self.to_excel = self.config["post_process"]["export_to_xlsx"]
@@ -218,27 +220,31 @@ class model_MSG:
 						"fix_cost",
 						node_loc=provinces,
 						technology=tech,
-						value=tech_data["fix_cost_2020"][1]["cost_value"],
+						#value=tech_data["fix_cost_2020"][1]["cost_value"],
 						time=tech_data["time"],
 						unit=tech_data["unit"][0]["cost"],
-					).pipe(
-						broadcast,
-						map_yv_ya_lt(years, tech_data["tec_lifetime"], first_year),
-					)
+					).pipe(broadcast, map_yv_ya_lt(years, 
+                                    tech_data["tec_lifetime"], first_year),
+					).pipe((map_learning_rate, 'input_df'),
+							provinces=provinces,
+            				l_rate=tech_data["fixed_cost_lr"], 
+							initial_cost=tech_data["fix_cost_2020"][1]["cost_value"], 
+    						cost_type="fixed", years=years, tech_lifetime=tech_data["tec_lifetime"]
+        			)
 					self.scenario.add_par("fix_cost", fix_cost_df)
 
 					# investment cost
 					inv_cost_df = message_ix.make_df(
 						"inv_cost",
-						# node_loc=provinces,
+						node_loc=provinces,
 						technology=tech,
-						year_vtg=years,
+						#year_vtg=years,
 						level=tech_data["inv_cost_2020"][0]["cost_level"],
-						value=tech_data["inv_cost_2020"][1]["cost_value"],
+						#value=tech_data["inv_cost_2020"][1]["cost_value"],
 						time=tech_data["time"],
 						unit=tech_data["unit"][0]["cost"],
-					).pipe(broadcast, node_loc=provinces)
-
+					).pipe(broadcast, map_learning_rate(provinces=provinces,initial_cost=tech_data["inv_cost_2020"][1]["cost_value"], l_rate=tech_data["investment_lr"], cost_type="investment", years=years, tech_lifetime=tech_data["tec_lifetime"]))
+					inv_cost_df["year_vtg"] = inv_cost_df["year_vtg"].astype(int)
 					self.scenario.add_par("inv_cost", inv_cost_df)
 
 					# construction time
@@ -1085,7 +1091,19 @@ class model_MSG:
 
 		print(f"Report saved to {output_path}")
 
-
+	def change_technology_cost(self):
+		"""
+		Change the cost of technologies in a MESSAGEix scenario     
+		This function modifies the provided MESSAGEix scenario to change the costs of specified technologies. 
+		The specific implementation details, such as the technologies affected, the new cost values, 
+		and the time periods for the cost changes, should be added within this function     
+		Args:
+			scenario (MESSAGEix.Scenario): The MESSAGEix scenario for which the technology costs will be changed        
+		Returns:
+			None
+		"""
+		pass 
+	
 	# Full scenario set-up
 	def setup_scenario(self) -> tuple:
 		"""
@@ -1139,33 +1157,33 @@ class model_MSG:
 			path_to_hydrogen_data = script_dir / scenario_folder
 			self.add_hydrogen_shares(path=path_to_hydrogen_data)
 
-		if self.add_obps_baseline:
-			path_to_obps_data = script_dir / scenario_folder
-			apply_obps_netzero(
-				scenario=scenario_folder, data_file_path=path_to_obps_data
-			)
-
-		if self.add_obps_netzero:
-			path_to_obps_data = script_dir / scenario_folder
-			apply_obps_baseline(
-				scenario=scenario_folder, data_file_path=path_to_obps_data
-			)
-
+		
+		# Technologies
 		if self.add_techs:
 			self.add_technology(techs_file=f"{scenario_folder}/technology.yaml")
 
+		# Set-up policies
+		if self.add_obps_netzero:
+			path_to_obps_data = script_dir / scenario_folder
+			OBPS.apply_obps_netzero(scenario=self.scenario, data_file_path=path_to_obps_data)
+		elif self.add_obps_baseline:
+			path_to_obps_data = script_dir / scenario_folder
+			OBPS.apply_obps(scenario=self.scenario)
+
+  
 		end = time.time()
 		print(
 			f"\n==================================================\n\
 		Model creation time: {round((end - start) / 60)} Min and {round((end - start) % 60)} Sec \
 		\n=================================================="
 		)
-
+		
 		if self.solve:
 			start = time.time()
 			try:
+				print("Solving the model...\n")
 				self.scenario.solve(
-					solve_options={"barcrossalg": "2", "lpmethod": "1"}, case=caseName
+					solve_options={"barcrossalg": "2", "lpmethod": "1", "threads": 20}, case=caseName
 				)
 				end = time.time()
 				print(
@@ -1178,16 +1196,27 @@ class model_MSG:
 				print(f"Scenario {caseName} did not solve because of the following exception:\n{solve_error}\n")
 
 			if self.use_reporter:
+				print("\nGenerating report...\n")
+				start = time.time()
+				'''
 				self.generate_report(
-					self.scenario,
 					output_path=f"{caseName}.csv",
 					min_year=2020,
 					max_year=2060,
 					from_excel=False,
 					unit_correct=True,
 				)
+				'''
+				report(mp=self.mp, scen=self.scenario, out_dir="/home/jgmonroe/Documents/Energy_Models/message-ix/")
+				end = time.time()
+				print(
+					f"\n==================================================\n\
+				Reporting process time: {round((end - start) / 60)} Min and {round((end - start) % 60)} Sec\
+				\n=================================================="
+				)
 
 		if self.to_excel:
 			self.scenario.to_excel(f"{caseName}.xlsx")
+			print(f"Exported Scenario to Excel: {caseName}.xlsx")
 
 		return self.mp, self.scenario, scenario_folder

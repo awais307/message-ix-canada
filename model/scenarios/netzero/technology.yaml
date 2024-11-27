@@ -1,0 +1,47 @@
+h2_atr_ccs:
+  # Technology specs: mode, commodities, description
+  description: natural gas type technology
+  mode: M1
+  commodity:
+  # Commodities: inputs and outputs 
+    - input: 
+      - com_name: 
+        - electr
+      - com_value: 
+        - 0.05
+      - com_level: 
+        - primary
+    - output: 
+      - com_name: 
+        - hydrogen
+      - com_value: 
+        - 1
+      - com_level: 
+        - secondary 
+  # Time specifications: lifetime, construction time
+  time: year
+  tec_lifetime: 10
+  construction_time: 5 # Random number of years for now -- CCF
+  # Units for cost and energy
+  unit: 
+    - cost: '-'
+    - energy: '-'
+  # Geographical specs: nodes selection, provinces
+  # Specify "all" below for all provinces in Canada to be selected, or "custom" for a sub-set of provinces
+  node_select: all
+  provinces: 
+    - Alberta
+    #- Saskatchewan
+  # Cost specifications: investment, fiixed, and variable
+  inv_cost_2020: 
+    - cost_level: primary
+    - cost_value: 30 # example value for now
+  fix_cost_2020: 
+    - cost_level: primary
+    - cost_value: 0
+  var_cost_2020:
+    - cost_level: primary
+    - cost_value: 0
+  # Emissions specifications
+  emission: CO2
+  investment_lr: 0.7
