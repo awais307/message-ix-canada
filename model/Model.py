@@ -1197,6 +1197,7 @@ class model_MSG:
 
 			if self.use_reporter:
 				print("\nGenerating report...\n")
+				start = time.time()
 				'''
 				self.generate_report(
 					output_path=f"{caseName}.csv",
@@ -1207,8 +1208,15 @@ class model_MSG:
 				)
 				'''
 				report(mp=self.mp, scen=self.scenario, out_dir="/home/jgmonroe/Documents/Energy_Models/message-ix/")
+				end = time.time()
+				print(
+					f"\n==================================================\n\
+				Reporting process time: {round((end - start) / 60)} Min and {round((end - start) % 60)} Sec\
+				\n=================================================="
+				)
 
 		if self.to_excel:
 			self.scenario.to_excel(f"{caseName}.xlsx")
+			print(f"Exported Scenario to Excel: {caseName}.xlsx")
 
 		return self.mp, self.scenario, scenario_folder

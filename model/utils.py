@@ -235,7 +235,7 @@ def unit_conversion(input_df, techs_map):
 							"Mass (expressed in tonnes)" : "tonnes", "Mass (expressed in kg)": "kg", 
 							"gigajoules (GJ)": "GJ", "gigajoule": "GJ", "tonnes": "tonne"}, inplace=True)
 	
-	with open("data/default_units.yaml", "r") as file:
+	with open("model/data/default_units.yaml", "r") as file:
 		data = yaml.safe_load(file)
 		for k,v in data['conversion_factors']['Kwa'].items():
 			for idx, row in units_df.iterrows():
@@ -244,7 +244,7 @@ def unit_conversion(input_df, techs_map):
 					units_df.at[idx, "unit [tCO2/-]"] = "KWa"
 		print("End!")
 	
-	with pd.ExcelWriter(path= "data/obps_inputs_clean.xlsx", engine="openpyxl", mode="a", if_sheet_exists="replace") as writer:
+	with pd.ExcelWriter(path= "model/data/obps_inputs_clean.xlsx", engine="openpyxl", mode="a", if_sheet_exists="replace") as writer:
 		units_df.to_excel(writer, sheet_name="Merged_Sheet",index=0)
 
 # Reporter method - Deprecated in favor of message_ix_models legacy (forked)
@@ -309,6 +309,6 @@ def report_to_pyam(scenario, directory_path, output_path):
 
 if __name__ == "__main__":
 	
-	formatted_inputs = pd.read_excel("data/obps_inputs_clean.xlsx", sheet_name="formatted_inputs")
-	mapped_techs = pd.read_excel("data/obps_inputs_clean.xlsx", sheet_name="Mapping")
+	formatted_inputs = pd.read_excel("model/data/obps_inputs_clean.xlsx", sheet_name="formatted_inputs")
+	mapped_techs = pd.read_excel("model/data/obps_inputs_clean.xlsx", sheet_name="Mapping")
 	unit_conversion(formatted_inputs, mapped_techs)

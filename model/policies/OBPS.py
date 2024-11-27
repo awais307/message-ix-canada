@@ -195,7 +195,7 @@ def apply_obps_netzero(scenario, data_file_path: str):
 		})
 
 
-def apply_obps(scenario, data_file_path='data/obps_inputs_clean.xlsx'):
+def apply_obps(scenario, data_file_path='model/data/obps_inputs_clean.xlsx'):
 	"""
 	Apply the Output-Based Pricing System (OBPS) policy for the Baseline Canada Scenario
 	to the given MESSAGEix scenario.
@@ -290,7 +290,7 @@ def apply_obps(scenario, data_file_path='data/obps_inputs_clean.xlsx'):
 				result.at[index, 'carbon_cost'] = value_to_assign[0]
 	
 	# Merge with fix_cost data and update the scenario's fix_cost
-	data_fixcost =  pd.read_csv('data/fix_cost_no_obps.csv', header=0) #scenario.par('fix_cost')
+	data_fixcost =  pd.read_csv('model/data/fix_cost_no_obps.csv', header=0) #scenario.par('fix_cost')
 	data_fixcost = data_fixcost[data_fixcost['technology'].isin(tecs_co2cc)]
 	merged_data = pd.merge(
 		data_fixcost, 
@@ -299,11 +299,14 @@ def apply_obps(scenario, data_file_path='data/obps_inputs_clean.xlsx'):
 		how="left"
 	)
 	merged_data['adjusted_value'] = merged_data['value'] + merged_data['carbon_cost'].fillna(0)
-	merged_data.to_csv('data/obps_standard.csv')
+	merged_data.to_csv('model/data/obps_standard.csv')
 	fix_cost_df = merged_data[['technology', 'year_act', 'year_vtg', 'adjusted_value','node_loc','unit']]
 	fix_cost_df.rename(columns={'adjusted_value':'value'},inplace=True)
 	
 	scenario.check_out()
 	scenario.add_par('fix_cost', fix_cost_df)
 	scenario.commit('Add OBPS standard using provincial tighetning rates')
+	print(
+			f"{'#' * 100}\n Added OBPS policy to the model!\n{'#' * 100}"
+		)
 	
