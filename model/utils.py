@@ -139,13 +139,13 @@ def map_learning_rate(provinces, l_rate: float, initial_cost: float, cost_type: 
 	values = np.zeros(len(years))
 	values[0] = initial_cost
 
-	if cost_type is "investment":
+	if cost_type == "investment":
 		
 		for i in range(1, len(years)):
 			values[i] = values[i-1] * l_rate
 		df = pd.DataFrame({"year_vtg": years, "value": values}, dtype=np.float64)
 	
-	elif cost_type is "fixed":
+	elif cost_type == "fixed":
 		
 		input_df["value"] = values_calculation(years, provinces, l_rate, initial_cost, tech_lifetime)
 		
@@ -238,9 +238,10 @@ def unit_conversion(input_df, techs_map):
 	with open("data/default_units.yaml", "r") as file:
 		data = yaml.safe_load(file)
 		for k,v in data['conversion_factors']['Kwa'].items():
-			for row in units_df.iterrows():
-				if k == row[1].loc["unit [tCO2/-]"]:
-					row[1].loc["value"] *= v
+			for idx, row in units_df.iterrows():
+				if k == row["unit [tCO2/-]"]:
+					units_df.at[idx, "value"] *= v
+					units_df.at[idx, "unit [tCO2/-]"] = "KWa"
 		print("End!")
 	
 	with pd.ExcelWriter(path= "data/obps_inputs_clean.xlsx", engine="openpyxl", mode="a", if_sheet_exists="replace") as writer:

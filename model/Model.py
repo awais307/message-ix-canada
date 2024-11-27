@@ -1157,26 +1157,27 @@ class model_MSG:
 			path_to_hydrogen_data = script_dir / scenario_folder
 			self.add_hydrogen_shares(path=path_to_hydrogen_data)
 
-		# Set-up policies
 		
+		# Technologies
+		if self.add_techs:
+			self.add_technology(techs_file=f"{scenario_folder}/technology.yaml")
+
+		# Set-up policies
 		if self.add_obps_netzero:
 			path_to_obps_data = script_dir / scenario_folder
 			OBPS.apply_obps_netzero(scenario=self.scenario, data_file_path=path_to_obps_data)
 		elif self.add_obps_baseline:
 			path_to_obps_data = script_dir / scenario_folder
-			OBPS.apply_obps_baseline(scenario=self.scenario, data_file_path=path_to_obps_data)
+			OBPS.apply_obps(scenario=self.scenario)
 
-		# Technologies
-		if self.add_techs:
-			self.add_technology(techs_file=f"{scenario_folder}/technology.yaml")
-
+  
 		end = time.time()
 		print(
 			f"\n==================================================\n\
 		Model creation time: {round((end - start) / 60)} Min and {round((end - start) % 60)} Sec \
 		\n=================================================="
 		)
-
+		
 		if self.solve:
 			start = time.time()
 			try:

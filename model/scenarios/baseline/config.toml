@@ -14,7 +14,7 @@
 
 [policies]
     apply_obps_netzero = false
-    apply_obps_baseline = false
+    apply_obps_baseline = true
 
 [data]
     #TODO Add a read_excel boolean to allow also reading directly from the local database
@@ -26,6 +26,6 @@
 
 [post_process]
     generate_reporter_output = true
-    export_to_xlsx = false # export reports to Excel
+    export_to_xlsx = true # export reports to Excel
     generate_pdfs = false # generate results as PDFs
     export_to_csv = false # export reports to CSV
