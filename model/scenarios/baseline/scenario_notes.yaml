@@ -1,0 +1,29 @@
+
+# This file stores information related to different file names and what has been changed to track
+
+# Every time a new model file and version is placed within this folder, the description and what has been changed should be noted
+# following format. 
+
+model_calibration_v1:
+  - description: Model file prepared before TAC meeting with old emissions factors. Could be used to reference some changes in the new versions. 
+  - date: october 22, 2024
+
+model_calibration_v2:
+  - description: Model file with new emissions factors. 
+  - date: november 04, 2024
+
+model_default_v1:
+  - description: model used for preparation of TAC meeting November 2024
+  - date: november 20, 2024
+
+model_default_v2:
+  - description: model used for preparation of TAC meeting November 2024
+  - date: november 9, 2024
+
+model_default_v3:
+  - description: tNew emissions accounting with updated hydro and solar calibration 
+  - date: november 20, 2024
+
+model_default_v4:
+  - description: Old emissions accounting with updated hydro and solar calibration with new OBPS implementation
+  - date: november 27, 2024
