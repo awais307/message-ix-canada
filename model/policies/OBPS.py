@@ -290,7 +290,7 @@ def apply_obps(scenario, data_file_path='data/obps_inputs_clean.xlsx'):
 				result.at[index, 'carbon_cost'] = value_to_assign[0]
 	
 	# Merge with fix_cost data and update the scenario's fix_cost
-	data_fixcost =  pd.read_csv('data/fix_cost_no_obps.csv') #scenario.par('fix_cost')
+	data_fixcost =  pd.read_csv('data/fix_cost_no_obps.csv', header=0) #scenario.par('fix_cost')
 	data_fixcost = data_fixcost[data_fixcost['technology'].isin(tecs_co2cc)]
 	merged_data = pd.merge(
 		data_fixcost, 
