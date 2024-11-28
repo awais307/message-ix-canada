@@ -1207,7 +1207,7 @@ class model_MSG:
 					unit_correct=True,
 				)
 				'''
-				report(mp=self.mp, scen=self.scenario, out_dir="/home/jgmonroe/Documents/Energy_Models/message-ix/")
+				report(mp=self.mp, scen=self.scenario, out_dir="model/output")
 				end = time.time()
 				print(
 					f"\n==================================================\n\
