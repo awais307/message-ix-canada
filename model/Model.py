@@ -25,7 +25,6 @@ from message_ix_models.util import (
 from scipy.optimize import linprog
 from pathlib import Path
 from typing import Union
-#from canada_models.message_ix_models.report.legacy.iamc_report_hackathon import report
 from message_ix_models.report.legacy.iamc_report_hackathon import report
 from model.utils import (map_yv_ya_lt, config_validation, map_learning_rate)
 from model.policies import OBPS
@@ -1195,18 +1194,17 @@ class model_MSG:
 			except Exception as solve_error:
 				print(f"Scenario {caseName} did not solve because of the following exception:\n{solve_error}\n")
 
+			# if self.use_reporter:
+			# 	self.generate_report(
+			# 		self.scenario,
+			# 		output_path=f"{caseName}.csv",
+			# 		min_year=2020,
+			# 		max_year=2060,
+			# 		from_excel=False,
+			# 		unit_correct=True,
+			# 	)
+
 			if self.use_reporter:
-				print("\nGenerating report...\n")
-				start = time.time()
-				'''
-				self.generate_report(
-					output_path=f"{caseName}.csv",
-					min_year=2020,
-					max_year=2060,
-					from_excel=False,
-					unit_correct=True,
-				)
-				'''
 				report(mp=self.mp, scen=self.scenario, out_dir="model/output")
 				end = time.time()
 				print(
