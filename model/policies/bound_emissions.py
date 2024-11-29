@@ -38,16 +38,19 @@ def bound_emissions(self,path, nodeName):
 
     # Define the exact emissions trajectory for Canada (in MtCO2eq)
     canada_trajectory = {
-        2020: 659e6,   # 659 MtCO2eq
-        2025: 549e6,   # 549 MtCO2eq
-        2030: 439e6,   # 439 MtCO2eq
-        2035: 329e6,   # 329 MtCO2eq
-        2040: 220e6,   # 220 MtCO2eq
-        2045: 110e6,   # 110 MtCO2eq
-        2050: 50e6,    # 50,000 MtCO2eq (likely meant to be 50 MtCO2eq)
-        2055: 40e6,    # 40,000 MtCO2eq (likely meant to be 40 MtCO2eq)
-        2060: 30e6     # 30,000 MtCO2eq (likely meant to be 30 MtCO2eq)
+        2020: 1.81E+09,   # 659 MtCO2eq
+        2025: 1.50E+09,   # 549 MtCO2eq
+        2030: 1.20E+09,   # 439 MtCO2eq
+        2035: 9.01E+07,   # 329 MtCO2eq
+        2040: 6.03E+07,   # 220 MtCO2eq
+        2045: 3.01E+07,   # 110 MtCO2eq
+        2050: 55,    # 50,000 MtCO2eq (likely meant to be 50 MtCO2eq)
+        2055: 55,    # 40,000 MtCO2eq (likely meant to be 40 MtCO2eq)
+        2060: 55     # 30,000 MtCO2eq (likely meant to be 30 MtCO2eq)
     }
+    
+   
+
 
     # Extract the unique provinces (nodes) excluding Canada
     provinces = emissions_df['node'].unique()

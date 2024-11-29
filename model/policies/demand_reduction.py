@@ -24,7 +24,7 @@ def demand_reduction(scenario):
 
 
 
-    data = msg_scenario.par('demand')
+    data = scenario.par('demand')
     # Loop through each unique combination of node and commodity
     nodes = data['node'].unique()
     commodities = data['commodity'].unique()

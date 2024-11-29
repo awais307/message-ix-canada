@@ -27,6 +27,7 @@ from model.policies.obps import apply_obps_baseline, apply_obps_netzero
 from pathlib import Path
 from typing import Union
 from model.utils import (map_yv_ya_lt, config_validation)
+from message_ix_models.report.legacy.iamc_report_hackathon import report
 
 warnings.filterwarnings("ignore")  # Ignore warnings to keep the output clean
 
@@ -1177,15 +1178,29 @@ class model_MSG:
 			except Exception as solve_error:
 				print(f"Scenario {caseName} did not solve because of the following exception:\n{solve_error}\n")
 
+			# if self.use_reporter:
+			# 	self.generate_report(
+			# 		self.scenario,
+			# 		output_path=f"{caseName}.csv",
+			# 		min_year=2020,
+			# 		max_year=2060,
+			# 		from_excel=False,
+			# 		unit_correct=True,
+			# 	)
+
 			if self.use_reporter:
+				print("\nGenerating report...\n")
+				'''
 				self.generate_report(
-					self.scenario,
 					output_path=f"{caseName}.csv",
 					min_year=2020,
 					max_year=2060,
 					from_excel=False,
 					unit_correct=True,
 				)
+				'''
+				report(mp=self.mp, scen=self.scenario, out_dir="/home/jgmonroe/Documents/Energy_Models/message-ix/")
+
 
 		if self.to_excel:
 			self.scenario.to_excel(f"{caseName}.xlsx")
