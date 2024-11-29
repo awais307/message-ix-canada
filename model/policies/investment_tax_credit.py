@@ -21,4 +21,5 @@ def add_investment_tax_credit(scenario):
     Returns:
         None
     """
+    
     pass
