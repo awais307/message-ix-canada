@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='messageix_canada',  # Consider changing the name to avoid hyphens
+    name='messageix_canada',
     version='0.1.0',
     description='An Open Source Integrated Assessment Model for Canada',
     author='Your Name',
@@ -21,9 +21,10 @@ setup(
         'ipykernel',
         'pytest',
         'click',
-        'message-ix-models',
+        'message-ix-models@git+https://github.com/criscfer/message-ix-models.git@main',
         'message-ix-models[report]',
     ],
+    #dependency_links=["git+https://github.com/criscfer/message-ix-models.git@main"], 
     entry_points={
         'console_scripts': [
             'message-canada=MESSAGE_CA:messagerun',  
