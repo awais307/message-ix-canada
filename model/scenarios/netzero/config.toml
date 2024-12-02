@@ -6,18 +6,18 @@
     annotation = "Initial setup for Canadian energy model."
 
 [pre_process]
-    process_historical_data = true
+    process_historical_data = false
     add_hydrogen_shares = false
     apply_obps_netzero = false
     apply_obps_baseline = false
     [pre_process.add_technology]
-        add_techs = true
+        add_techs = false
         techs = ["h2_atr_ccs"] 
 
 
 [data]
     #TODO Add a read_excel boolean to allow also reading directly from the local database
-    provincial_input_file = "scenarios/baseline/model_default_netzero_v1.xlsx"
+    provincial_input_file = "scenarios/netzero/model_default_netzero_v2.xlsx"
     scenario_folder = "scenarios/netzero"
 
 [model]
