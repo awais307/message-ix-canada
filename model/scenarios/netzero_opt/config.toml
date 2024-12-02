@@ -17,7 +17,7 @@
 
 [data]
     #TODO Add a read_excel boolean to allow also reading directly from the local database
-    provincial_input_file = "scenarios/baseline/model_default_netzero_v1.xlsx"
+    provincial_input_file = "scenarios/netzero/model_default_netzero_v2.xlsx"
     scenario_folder = "scenarios/netzero_opt"
 
 [model]
