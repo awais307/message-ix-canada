@@ -14,15 +14,15 @@
 
 [policies]
     apply_obps_netzero = false
-    apply_obps_baseline = true
+    apply_obps_baseline = false
 
 [data]
     #TODO Add a read_excel boolean to allow also reading directly from the local database
-    provincial_input_file = "scenarios/baseline/model_default_v7.xlsx"
+    provincial_input_file = "scenarios/baseline/model_default_v10.xlsx"
     scenario_folder = "scenarios/baseline"
 
 [model]
-    solve = true
+    solve = false
 
 [post_process]
     generate_reporter_output = true
