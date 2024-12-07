@@ -97,7 +97,8 @@ class model_MSG:
 		self.add_hydrogen_shares_f = self.config["pre_process"]["add_hydrogen_shares"]
 		self.add_obps_baseline = self.config["policies"]["apply_obps_baseline"]
 		self.add_obps_netzero = self.config["policies"]["apply_obps_netzero"]
-		self.use_reporter = self.config["post_process"]["generate_reporter_output"]
+		self.new_reporter = self.config["post_process"]["generate_new_reporter_output"]
+		self.legacy_reporter = self.config["post_process"]["generate_legacy_reporter_output"]
 		self.solve = self.config["model"]["solve"]
 		self.to_excel = self.config["post_process"]["export_to_xlsx"]
 		self.add_techs = self.config["pre_process"]["add_technology"]["add_techs"]
@@ -1194,17 +1195,17 @@ class model_MSG:
 			except Exception as solve_error:
 				print(f"Scenario {caseName} did not solve because of the following exception:\n{solve_error}\n")
 
-			# if self.use_reporter:
-			# 	self.generate_report(
-			# 		self.scenario,
-			# 		output_path=f"{caseName}.csv",
-			# 		min_year=2020,
-			# 		max_year=2060,
-			# 		from_excel=False,
-			# 		unit_correct=True,
-			# 	)
+			if self.new_report:
+				self.generate_report(
+					self.scenario,
+					output_path=f"model/output/{caseName}_new_reporter.csv",
+					min_year=2020,
+					max_year=2060,
+					from_excel=False,
+					unit_correct=True,
+				)
 
-			if self.use_reporter:
+			if self.legacy_reporter:
 				report(mp=self.mp, scen=self.scenario, out_dir="model/output")
 				end = time.time()
 				print(

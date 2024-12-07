@@ -24,7 +24,8 @@
     solve = true
 
 [post_process]
-    generate_reporter_output = false
+    generate_new_reporter_output = true
+    generate_legacy_reporter_output = true
     export_to_xlsx = false # export reports to Excel
     generate_pdfs = false # generate results as PDFs
     export_to_csv = false # export reports to CSV
