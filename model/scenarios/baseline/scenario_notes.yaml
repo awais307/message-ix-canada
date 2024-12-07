@@ -41,3 +41,13 @@ model_default_v9:
     bound_activity_lo for nuc_lc
 
   - date: december 03, 2024
+
+  model_default_v10:
+  - description: 
+    Updated v10 with landuse constraints
+  - date: december 05, 2024
+
+  model_default_v11:
+  - description: 
+    Updated v10 with emission constraints
+  - date: december 06, 2024

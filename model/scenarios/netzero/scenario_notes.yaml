@@ -21,6 +21,12 @@ model_default_netzero_v4:
     - land_use_biomass upper bound added
     - eth_ic_trp historical activity deleted
     - Quebec foil_rc - 0.0379104
+    -
   - date: november 9, 2024
+
+model_default_netzero_v5:
+  - description: 
+    - based on updated v11 and adjusted demand reductio
+  - date: december 7, 2024
 
 
