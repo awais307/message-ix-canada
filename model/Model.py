@@ -102,7 +102,7 @@ class model_MSG:
 		self.solve = self.config["model"]["solve"]
 		self.to_excel = self.config["post_process"]["export_to_xlsx"]
 		self.add_techs = self.config["pre_process"]["add_technology"]["add_techs"]
-		self.mp = ixmp.Platform(name=self.platform_name)
+		self.mp = ixmp.Platform(name=self.platform_name, jvmargs=['-Xmx16G'])
 
 	## Scenario creation functions ##
 
