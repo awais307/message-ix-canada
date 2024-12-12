@@ -25,9 +25,13 @@ from message_ix_models.util import (
 from scipy.optimize import linprog
 from pathlib import Path
 from typing import Union
+<<<<<<< HEAD
 from message_ix_models.report.legacy.iamc_report_hackathon import report
 from model.utils import (map_yv_ya_lt, config_validation, map_learning_rate)
 from model.policies import OBPS
+=======
+from model.utils import (map_yv_ya_lt, config_validation, map_learning_rate)
+>>>>>>> brendan_dev
 
 warnings.filterwarnings("ignore")  # Ignore warnings to keep the output clean
 
@@ -122,7 +126,7 @@ class model_MSG:
 
 		tech_config = self.config["pre_process"]["add_technology"]
 
-		years = self.scenario.set("year").to_list()[14:]
+		years = self.scenario.set("year").astype(int).to_list()[14:]
 		first_year = self.scenario.firstmodelyear
 
 		# Read file from path and convert to dictionary
@@ -215,7 +219,7 @@ class model_MSG:
 					)
 					self.scenario.add_par("var_cost", var_cost_df)
 
-					# fixed cost
+										# fixed cost
 					fix_cost_df = message_ix.make_df(
 						"fix_cost",
 						node_loc=provinces,
@@ -247,6 +251,21 @@ class model_MSG:
 					inv_cost_df["year_vtg"] = inv_cost_df["year_vtg"].astype(int)
 					self.scenario.add_par("inv_cost", inv_cost_df)
 
+					# emission factor
+					emission_factor_df = message_ix.make_df(
+						"emission_factor",
+						node_loc=provinces,
+						technology=tech,
+						mode=tech_data["mode"],
+						value=tech_data["emission_factor"],
+						emission=tech_data["emission_type"],
+						unit="-",
+					).pipe(
+						broadcast,
+						map_yv_ya_lt(years, tech_data["tec_lifetime"], first_year),
+					)
+					self.scenario.add_par("emission_factor", emission_factor_df)
+
 					# construction time
 					for i, j in zip(
 						tech_data["commodity"][1]["output"][1]["com_value"],
@@ -254,7 +273,7 @@ class model_MSG:
 					):
 						tec_construction_df = make_matched_dfs(
 							input_df,
-							capacity_factor=i / j,
+							capacity_factor=tech_data["capacity_factor"],
 							technical_lifetime=tech_data["tec_lifetime"],
 							construction_time=tech_data["construction_time"],
 						)
@@ -984,7 +1003,11 @@ class model_MSG:
 
 	def generate_report(
 		self,
+<<<<<<< HEAD
 		output_path="output/MESSAGE_test_report.csv",
+=======
+		output_path="C:/Users/brend/Documents/Github/message-ix - CA/scenarios/baseline/MESSAGE_test.csv",
+>>>>>>> brendan_dev
 		min_year=2015,
 		max_year=2060,
 		from_excel=False,
@@ -1023,7 +1046,6 @@ class model_MSG:
 		report_df = report_df.drop(
 			report_df.columns.to_series()["2020" : str(min_year)], axis=1
 		)
-
 		in_flows = report_df[report_df["Variable"].str.startswith("in|")]
 		out_flows = report_df[report_df["Variable"].str.startswith("out|")]
 		all_flows = pd.concat([out_flows, in_flows])
