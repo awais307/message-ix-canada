@@ -25,13 +25,8 @@ from message_ix_models.util import (
 from scipy.optimize import linprog
 from pathlib import Path
 from typing import Union
-<<<<<<< HEAD
+from model.utils import (map_yv_ya_lt, config_validation, map_learning_rate)
 from message_ix_models.report.legacy.iamc_report_hackathon import report
-from model.utils import (map_yv_ya_lt, config_validation, map_learning_rate)
-from model.policies import OBPS
-=======
-from model.utils import (map_yv_ya_lt, config_validation, map_learning_rate)
->>>>>>> brendan_dev
 
 warnings.filterwarnings("ignore")  # Ignore warnings to keep the output clean
 
@@ -1003,11 +998,7 @@ class model_MSG:
 
 	def generate_report(
 		self,
-<<<<<<< HEAD
-		output_path="output/MESSAGE_test_report.csv",
-=======
-		output_path="C:/Users/brend/Documents/Github/message-ix - CA/scenarios/baseline/MESSAGE_test.csv",
->>>>>>> brendan_dev
+		output_path="scenarios/baseline/MESSAGE_test.csv",
 		min_year=2015,
 		max_year=2060,
 		from_excel=False,
@@ -1217,22 +1208,28 @@ class model_MSG:
 			except Exception as solve_error:
 				print(f"Scenario {caseName} did not solve because of the following exception:\n{solve_error}\n")
 
-			if self.new_report:
+			if self.new_reporter:
+				start = time.time()
 				self.generate_report(
-					self.scenario,
 					output_path=f"model/output/{caseName}_new_reporter.csv",
 					min_year=2020,
 					max_year=2060,
 					from_excel=False,
 					unit_correct=True,
 				)
-
-			if self.legacy_reporter:
+				end = time.time()
+				print(
+					f"\n==================================================\n\
+				Reporting with NEW reporter. Process time: {round((end - start) / 60)} Min and {round((end - start) % 60)} Sec\
+				\n=================================================="
+				)
+			elif self.legacy_reporter:
+				start = time.time()
 				report(mp=self.mp, scen=self.scenario, out_dir="model/output")
 				end = time.time()
 				print(
 					f"\n==================================================\n\
-				Reporting process time: {round((end - start) / 60)} Min and {round((end - start) % 60)} Sec\
+				Reporting with LEGACY reporter. Process time: {round((end - start) / 60)} Min and {round((end - start) % 60)} Sec\
 				\n=================================================="
 				)
 

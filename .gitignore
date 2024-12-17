@@ -4,6 +4,7 @@
 *.pyc
 .vscode
 /MESSAGEix_canada.egg-info/
+.idea
 # Ignore the Plant UML diagrams from the 'out' folder
 /out 
 

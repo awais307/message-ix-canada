@@ -18,26 +18,18 @@
 
 [data]
     #TODO Add a read_excel boolean to allow also reading directly from the local database
-    provincial_input_file = "scenarios/baseline/model_default_v10.xlsx"
+    provincial_input_file = "scenarios/baseline/MESSAGEix-CA__baseline__v1_default.xlsx"
     scenario_folder = "scenarios/baseline"
 
-    # Brendan's config
-    #provincial_input_file = "scenarios/baseline/model_default_v2_no_new_EF_no_share.xlsx"
-    #scenario_folder = "scenarios/netzero"
-
 [model]
-    solve = false
+    solve = true
 
 [post_process]
-    generate_reporter_output = true
-    generate_new_reporter_output = true
+    #generate_reporter_output = true
+    generate_new_reporter_output = false
     generate_legacy_reporter_output = true
     export_to_xlsx = true # export model file to Excel
     generate_pdfs = false # generate results as PDFs
     export_to_csv = false # export reports to CSV
-    generate_reporter_output = false
-
-    # Brendan's config
-    #export_to_xlsx = false
 
 
