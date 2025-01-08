@@ -105,187 +105,8 @@ class model_MSG:
 
 	## Scenario creation functions ##
 
-	def add_technology(
-		self,
-		techs_file: str,
-	):
-		"""
-		Function to add new technologies to the model
-
-		Input: path to technology YAML file
-		Output: None
-
-		Logic: Creates the corresponding technology inside MESSAGE
-		"""
-		self.scenario.check_out()
-
-		tech_config = self.config["pre_process"]["add_technology"]
-
-		years = self.scenario.set("year").astype(int).to_list()[14:]
-		first_year = self.scenario.firstmodelyear
-
-		# Read file from path and convert to dictionary
-		with open(techs_file) as data:
-			technologies = yaml.safe_load(data)
-			for tech, tech_data in technologies.items():
-				if tech in tech_config["techs"]:
-					self.scenario.add_set("technology", tech)
-
-					if tech_data["node_select"] == "all":
-						provinces = self.scenario.set("node").to_list()[2:]
-					elif tech_data["node_select"] == "custom":
-						provinces = tech_data["provinces"]
-					else:
-						raise Exception(
-							f"Option {tech_data['node_select']} not recognized."
-							+ "Options for node_selct in technology.yaml is either 'all' or 'custom'"
-						)
-
-					# Creating DFs
-
-					# input dataframe
-					input_df = (
-						message_ix.make_df(
-							"input",
-							# node_loc=provinces,
-							technology=tech,
-							mode=tech_data["mode"],
-							commodity=tech_data["commodity"][0]["input"][0]["com_name"],
-							level=tech_data["commodity"][0]["input"][2]["com_level"],
-							time=tech_data["time"],
-							time_origin=tech_data["time"],
-							value=tech_data["commodity"][0]["input"][1]["com_value"],
-							unit=tech_data["unit"][1]["energy"],
-						)
-						.pipe(
-							broadcast,
-							map_yv_ya_lt(
-								years, tech_data["tec_lifetime"], first_year
-							),
-							# time=tech_data["time"],
-							node_loc=provinces,
-						)
-						.pipe(same_node)
-						.pipe(same_time)
-					)
-					self.scenario.add_par("input", input_df)
-
-					# output dataframe
-					output_df = (
-						message_ix.make_df(
-							"output",
-							# node_loc=provinces,
-							technology=tech,
-							mode=tech_data["mode"],
-							commodity=tech_data["commodity"][1]["output"][0][
-								"com_name"
-							],
-							level=tech_data["commodity"][1]["output"][2]["com_level"],
-							time=tech_data["time"],
-							time_origin=tech_data["time"],
-							value=tech_data["commodity"][1]["output"][1]["com_value"],
-							unit=tech_data["unit"][1]["energy"],
-						)
-						.pipe(
-							broadcast,
-							map_yv_ya_lt(
-								years, tech_data["tec_lifetime"], first_year
-							),
-							# time=tech_data["time"],
-							node_loc=provinces,
-						)
-						.pipe(same_node)
-						.pipe(same_time)
-					)
-					self.scenario.add_par("output", output_df)
-
-					# variable cost
-					var_cost_df = message_ix.make_df(
-						"var_cost",
-						node_loc=provinces,
-						technology=tech,
-						mode=tech_data["mode"],
-						value=tech_data["var_cost_2020"][1]["cost_value"],
-						time=tech_data["time"],
-						unit=tech_data["unit"][0]["cost"],
-					).pipe(
-						broadcast,
-						map_yv_ya_lt(years, tech_data["tec_lifetime"], first_year),
-					)
-					self.scenario.add_par("var_cost", var_cost_df)
-
-										# fixed cost
-					fix_cost_df = message_ix.make_df(
-						"fix_cost",
-						node_loc=provinces,
-						technology=tech,
-						#value=tech_data["fix_cost_2020"][1]["cost_value"],
-						time=tech_data["time"],
-						unit=tech_data["unit"][0]["cost"],
-					).pipe(broadcast, map_yv_ya_lt(years, 
-                                    tech_data["tec_lifetime"], first_year),
-					).pipe((map_learning_rate, 'input_df'),
-							provinces=provinces,
-            				l_rate=tech_data["fixed_cost_lr"], 
-							initial_cost=tech_data["fix_cost_2020"][1]["cost_value"], 
-    						cost_type="fixed", years=years, tech_lifetime=tech_data["tec_lifetime"]
-        			)
-					self.scenario.add_par("fix_cost", fix_cost_df)
-
-					# investment cost
-					inv_cost_df = message_ix.make_df(
-						"inv_cost",
-						node_loc=provinces,
-						technology=tech,
-						#year_vtg=years,
-						level=tech_data["inv_cost_2020"][0]["cost_level"],
-						#value=tech_data["inv_cost_2020"][1]["cost_value"],
-						time=tech_data["time"],
-						unit=tech_data["unit"][0]["cost"],
-					).pipe(broadcast, map_learning_rate(provinces=provinces,initial_cost=tech_data["inv_cost_2020"][1]["cost_value"], l_rate=tech_data["investment_lr"], cost_type="investment", years=years, tech_lifetime=tech_data["tec_lifetime"]))
-					inv_cost_df["year_vtg"] = inv_cost_df["year_vtg"].astype(int)
-					self.scenario.add_par("inv_cost", inv_cost_df)
-
-					# emission factor
-					emission_factor_df = message_ix.make_df(
-						"emission_factor",
-						node_loc=provinces,
-						technology=tech,
-						mode=tech_data["mode"],
-						value=tech_data["emission_factor"],
-						emission=tech_data["emission_type"],
-						unit="-",
-					).pipe(
-						broadcast,
-						map_yv_ya_lt(years, tech_data["tec_lifetime"], first_year),
-					)
-					self.scenario.add_par("emission_factor", emission_factor_df)
-
-					# construction time
-					for i, j in zip(
-						tech_data["commodity"][1]["output"][1]["com_value"],
-						tech_data["commodity"][0]["input"][1]["com_value"],
-					):
-						tec_construction_df = make_matched_dfs(
-							input_df,
-							capacity_factor=tech_data["capacity_factor"],
-							technical_lifetime=tech_data["tec_lifetime"],
-							construction_time=tech_data["construction_time"],
-						)
-						self.scenario.add_par(
-							"capacity_factor", tec_construction_df["capacity_factor"]
-						)
-						self.scenario.add_par(
-							"technical_lifetime",
-							tec_construction_df["technical_lifetime"],
-						)
-						self.scenario.add_par(
-							"construction_time",
-							tec_construction_df["construction_time"],
-						)
-
-			self.scenario.commit("Technologies added successfully")
-
+	
+	#TODO move it to hydrogen_shares.py under policies/
 	def add_hydrogen_shares(self, path: Union[str, Path]):
 		"""
 		Add hydrogen shares to a MESSAGEix scenario.
@@ -346,6 +167,7 @@ class model_MSG:
 		# Optional: Uncomment the line below to print the unique 'shares' values again
 		# print(scenario.par("share_commodity_lo")['shares'].unique())
 
+	#TODO move it to pop_gdp.py under utlities/
 	def process_gdp_population_data(
 		self, path_to_gdp: Union[str, Path], path_to_pop: Union[str, Path]
 	):
@@ -435,7 +257,8 @@ class model_MSG:
 		# Concatenate the data from all provinces into a single DataFrame
 		ssp_df = pd.concat(ssp_df)
 		return ssp_df  # Return the processed DataFrame
-
+	
+	#TODO move it to demands.py under utlities/demands.py
 	def adjust_demands(self):
 		"""
 		Adjust demands in the scenario based on population and GDP data.
@@ -658,7 +481,7 @@ class model_MSG:
 
 		# Commit the changes to the scenario
 		self.scenario.commit("Updated demands")
-
+	#TODO move it to utilities/pop_gdp.py
 	def add_population_gdp_to_scenario(
 		self, population_data: pd.DataFrame, gdp_data: pd.DataFrame
 	):
@@ -710,7 +533,7 @@ class model_MSG:
 		self.scenario.commit(
 			"Added population and GDP bounds"
 		)  # Commit the changes with a descriptive message
-
+	#TODO move it to utilities/historical_activity.py
 	def update_historical_activity(self, path: Union[str, Path]):
 		"""
 		Update the historical activity parameter in the scenario with data from a specified path.
@@ -741,7 +564,8 @@ class model_MSG:
 
 		# Adjust demands in the scenario based on the updated historical activity
 		self.adjust_demands()
-
+	
+	#TODO move it to utilities/historical_activity.py
 	def balance_import_export(self, historical_activity: pd.DataFrame):
 		"""
 		Balance energy production, import, and export for each province and year.
@@ -995,7 +819,7 @@ class model_MSG:
 
 		# Return the updated historical_activity DataFrame
 		return historical_activity
-
+	#TODO move it to repport.py
 	def generate_report(
 		self,
 		output_path="scenarios/baseline/MESSAGE_test.csv",
@@ -1104,6 +928,8 @@ class model_MSG:
 
 		print(f"Report saved to {output_path}")
 
+
+	#TODO move to policies/
 	def change_technology_cost(self):
 		"""
 		Change the cost of technologies in a MESSAGEix scenario     
