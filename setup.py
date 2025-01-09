@@ -1,4 +1,6 @@
 from setuptools import setup, find_packages
+from setuptools import setup
+#from Cython.Build import cythonize
 
 setup(
     name='messageix_canada',
@@ -22,8 +24,9 @@ setup(
         'pytest',
         'click',
         'message-ix-models@git+https://github.com/criscfer/message-ix-models.git@main',
-        #'message-ix-models[report]',
+        'message-ix-models[report]',
     ],
+    #dependency_links=["git+https://github.com/criscfer/message-ix-models.git@main"], 
     entry_points={
         'console_scripts': [
             'message-canada=MESSAGE_CA:messagerun',  
@@ -32,4 +35,5 @@ setup(
     extras_require={
         'extras': ['geotext', 'message-ix-models'],  # Optional dependencies
     },
+    #ext_modules = cythonize("MESSAGE_CA.py"),
 )

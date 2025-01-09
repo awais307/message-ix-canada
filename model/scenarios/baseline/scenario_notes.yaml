@@ -27,3 +27,27 @@ model_default_v3:
 model_default_v4:
   - description: Old emissions accounting with updated hydro and solar calibration with new OBPS implementation
   - date: november 27, 2024
+
+model_default_v9:
+  - description: 
+    Updated gas_exp in growth_activity_lo, 
+    remove bound_activity_up of solar_pv_ppl, 
+    add bound_activity_lo of wind_ppl, 
+    change renewable potential for wind,
+    bound_activity_up on gas_extr, 
+    initial_activity_lo for gas_exp
+    initial_activity_lo for gas_extr
+    output for nuc_lc 
+    bound_activity_lo for nuc_lc
+
+  - date: december 03, 2024
+
+  model_default_v10:
+  - description: 
+    Updated v10 with landuse constraints
+  - date: december 05, 2024
+
+  model_default_v11:
+  - description: 
+    Updated v10 with emission constraints
+  - date: december 06, 2024

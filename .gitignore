@@ -4,6 +4,7 @@
 *.pyc
 .vscode
 /MESSAGEix_canada.egg-info/
+.idea
 # Ignore the Plant UML diagrams from the 'out' folder
 /out 
 
@@ -15,3 +16,4 @@ ssh_ma
 ssh_ma.pub
 *.txt
 *PKG-INFO
+message-ix-models/

@@ -9,23 +9,27 @@
     process_historical_data = false
     add_hydrogen_shares = false
     [pre_process.add_technology]
-        add_techs = false
-        techs = ["h2_atr_ccs"] 
+        add_techs = true
+        techs = ["h2_atr_ccs", "gas_h2", "h2_stor_geo", "liq_h2", "h2_atr", "h2_gas_fc_trp", "meth_h2"] 
 
 [policies]
     apply_obps_netzero = false
-    apply_obps_baseline = true
+    apply_obps_baseline = false
 
 [data]
     #TODO Add a read_excel boolean to allow also reading directly from the local database
-    provincial_input_file = "scenarios/baseline/model_default_v4.xlsx"
+    provincial_input_file = "scenarios/baseline/MESSAGEix-CA__baseline__v1_default.xlsx"
     scenario_folder = "scenarios/baseline"
 
 [model]
     solve = true
 
 [post_process]
-    generate_reporter_output = true
+    #generate_reporter_output = true
+    generate_new_reporter_output = false
+    generate_legacy_reporter_output = true
     export_to_xlsx = true # export model file to Excel
     generate_pdfs = false # generate results as PDFs
     export_to_csv = false # export reports to CSV
+
+
