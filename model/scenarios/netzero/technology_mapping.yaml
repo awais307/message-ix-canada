@@ -1,0 +1,2923 @@
+# This file list the technologies used in MESSAGEix alongwith input/output
+- technology: adipic_thermal
+  Description: Thermal destruction tech for adipic acid sector
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: 2
+- technology: ammonia_secloop
+  Description: Ammonia Secondary Loop Systems
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: 2
+- technology: back_bio_ind
+  Description: Backstop for diagnosing model infeasibility
+  Level: Final
+  Input commodity/level: '-'
+  Output commodity/level: Biomass Useful
+  Tier: backstop
+- technology: back_fs
+  Description: Backstop for diagnosing model infeasibility
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: Industry FS Useful
+  Tier: backstop
+- technology: back_I
+  Description: Backstop for diagnosing model infeasibility
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: Industry Useful
+  Tier: backstop
+- technology: back_RC
+  Description: Backstop for diagnosing model infeasibility
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: RC useful
+  Tier: backstop
+- technology: back_trp
+  Description: Backstop for diagnosing model infeasibility
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: Transport Useful
+  Tier: backstop
+- technology: BCA_AgWasteEM
+  Description: Black carbon aerosol emissions from agricultural waste
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: BCA_IndNonEnergyEM
+  Description: Black carbon aerosol emissions from feedstock in industry (non-energy)
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: BCA_IntShipEM
+  Description: Black carbon aerosol emissions from internaitonal shipping
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 3
+- technology: BCA_WasteBurnEM
+  Description: Black carbon aerosol emissions from direct waste burning
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: bco2_tr_dis
+  Description: Technology for co2 transportation and disposal from biomass technologies
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Exports Secondary
+  Tier: 1
+- technology: bio_extr
+  Description: Biomass production/extraction
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Biomass Primary
+  Tier: 1
+- technology: bio_extr_1
+  Description: Biomass Extraction
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Biomass Primary
+  Tier: aggregate
+- technology: bio_extr_2
+  Description: Biomass Extraction
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Biomass Primary
+  Tier: aggregate
+- technology: bio_extr_3
+  Description: Biomass Extraction
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Biomass Primary
+  Tier: aggregate
+- technology: bio_extr_4
+  Description: Biomass Extraction
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Biomass Primary
+  Tier: aggregate
+- technology: bio_extr_5
+  Description: Biomass Extraction
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Biomass Primary
+  Tier: aggregate
+- technology: bio_extr_6
+  Description: Biomass Extraction
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Biomass Primary
+  Tier: aggregate
+- technology: bio_extr_a
+  Description: Biomass production/extraction category a
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Biomass Primary
+  Tier: aggregate
+- technology: bio_extr_b
+  Description: Biomass production/extraction category b
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Biomass Primary
+  Tier: aggregate
+- technology: bio_extr_c
+  Description: Biomass production/extraction category c
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Biomass Primary
+  Tier: aggregate
+- technology: bio_extr_chp
+  Description: Supply of biomass without net C emissions;  defined here as agricultural
+    wastes, and other crops with cycle of 1 year or less
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Biomass Primary
+  Tier: 3
+- technology: bio_extr_mpen
+  Description: Slack primary biomass created with new implementation of non commercial
+    biomass
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Exports Secondary
+  Tier: 1
+- technology: bio_hpl
+  Description: Biomass heating plant
+  Level: Secondary
+  Input commodity/level: Biomass Primary
+  Output commodity/level: D_Heat Secondary
+  Tier: 1
+- technology: bio_istig
+  Description: Advanced biomass power plant- gasified biomass is burned in gas turbine
+    plant - modes with and without net carbon release
+  Level: Secondary
+  Input commodity/level: Biomass Primary
+  Output commodity/level: Electricity Secondary
+  Tier: 1
+- technology: bio_istig_ccs
+  Description: Advanced biomass power plant with carbon capture and storage- gasified
+    biomass is burned in gas turbine plant - modes with and without net carbon release
+  Level: Secondary
+  Input commodity/level: Biomass Primary
+  Output commodity/level: Electricity Secondary
+  Tier: 1
+- technology: bio_ppl
+  Description: Bio powerplant
+  Level: Secondary
+  Input commodity/level: Biomass Primary
+  Output commodity/level: Electricity Secondary
+  Tier: 1
+- technology: bio_ppl_co2scr
+  Description: New coal scrubber for power plants
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Exports Secondary
+  Tier: 1
+- technology: biomass_i
+  Description: Biomass with C in industry
+  Level: Useful
+  Input commodity/level: Biomass Final
+  Output commodity/level: Biomass Useful
+  Tier: 1
+- technology: biomass_nc
+  Description: Non-commercial biomass with C
+  Level: Useful
+  Input commodity/level: Biomass Final
+  Output commodity/level: Biomass Useful
+  Tier: 1
+- technology: biomass_rc
+  Description: Biomass with C for heating in residential/commercial sector
+  Level: Useful
+  Input commodity/level: Biomass Final
+  Output commodity/level: Biomass Useful
+  Tier: 1
+- technology: biomass_t_d
+  Description: Transmission/Distribution of biomass with C
+  Level: Useful
+  Input commodity/level: Biomass Primary
+  Output commodity/level: Biomass Final
+  Tier: 1
+- technology: c_ppl_co2scr
+  Description: New coal scrubber for coal power plants
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Exports Secondary
+  Tier: 1
+- technology: cement_CO2
+  Description: Co2 emissions from cement production
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Exports Secondary
+  Tier: 1
+- technology: cement_co2scr
+  Description: cement CO2 scrubber (CCS)
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Exports Secondary
+  Tier: 1
+- technology: CF4_Semico
+  Description: Perfluoromethane emissions from semiconductor industry
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: CF4_TCE
+  Description: Tetrafluoromethane (CF4) Total Carbon Emissions
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: 1
+- technology: cfc_co2scr
+  Description: co2 scrubber for coal fuel cells (CCS)
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Exports Secondary
+  Tier: 3
+- technology: CH4_AgWasteEM
+  Description: Methane emissions from agricultural waste
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: CH4_DomWasteWa
+  Description: Methane emissions from domestic waste
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: CH4_IndNonEnergyEM
+  Description: Methane emissions from feedstock in industry (non-energy)
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: CH4_IndWasteWa
+  Description: Methane emissions from industry
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: CH4_IntShipEM
+  Description: Methane emissions from internaitonal shipping
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 3
+- technology: CH4_LandUseChangeEM
+  Description: Methane emissions from land use change
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: CH4_RemainingEM
+  Description: Methane emissions from remaining sources
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 1
+- technology: CH4_SavanBurnEM
+  Description: Methane emissions from savanna burning
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: CH4_TCE
+  Description: Methane total carbon equivalent emissions
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: 1
+- technology: CH4_WasteBurnEM
+  Description: Methane emissions from waste burning
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: CH4g_TCE
+  Description: CH4 emissions from animals directly in Total Carbon Equivalent emissions
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: 'Dummy Agriculture Primary '
+  Tier: 3
+- technology: CH4n_landfills
+  Description: Methane emissions from lanfilled waste
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: CH4n_TCE
+  Description: CH4 emissions from anaerobic waste decompostion in Total Carbon Equivalent
+    emissions
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: 2
+- technology: CH4o_TCE
+  Description: Dummy technology converting CH4 emissions from indutrial and domestic
+    wastewater, non energy biomassburning and other CH4 emissions,  to total carbon
+    eqivalent emissions (TCE)
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: 2
+- technology: CH4s_TCE
+  Description: Total carbon equivalent of methane emissions
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: CO_AgWasteEM
+  Description: Carbon monoxide emissions from agricultural waste
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: CO_IndNonEnergyEM
+  Description: Carbon monoxide emissions from feedstock in industry (non-energy)
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: CO_IntShipEM
+  Description: Carbon monoxide emissions from internaitonal shipping
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 3
+- technology: CO_LandUseChangeEM
+  Description: Carbon monoxide emissions from land use change
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: CO_SavanBurnEM
+  Description: Carbon monoxide emissions from savanna burning
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: CO_WasteBurnEM
+  Description: Carbon monoxide emissions from waste burning
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: CO2_TCE
+  Description: CO2 total carbon equivalent emissions
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: 1
+- technology: co2_tr_dis
+  Description: Technology for co2 transportation and disposal
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Exports Secondary
+  Tier: 1
+- technology: CO2s_TCE
+  Description: Total carbon equivalent of CO2 emissions
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: CO2t_TCE
+  Description: Total carbon equivalent of CO2 emissions
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: coal_adv
+  Description: Advanced coal power plant
+  Level: Secondary
+  Input commodity/level: Coal Secondary
+  Output commodity/level: Electricity Secondary
+  Tier: 1
+- technology: coal_adv_ccs
+  Description: Advanced coal power plant with carbon capture and storage
+  Level: Secondary
+  Input commodity/level: Coal Secondary
+  Output commodity/level: Electricity Secondary
+  Tier: 1
+- technology: coal_bal
+  Description: Link technology to stabilize coal production
+  Level: Secondary
+  Input commodity/level: 'Coal Primary '
+  Output commodity/level: Coal Secondary
+  Tier: 1
+- technology: coal_exp
+  Description: Net exports of coal at fixed price of about US$ 42/tce
+  Level: Exports
+  Input commodity/level: 'Coal Primary '
+  Output commodity/level: Coal Exports
+  Tier: 1
+- technology: coal_extr
+  Description: Hard coal extraction, world average grade A
+  Level: Primary
+  Input commodity/level: 'Coal Resource '
+  Output commodity/level: 'Coal Primary '
+  Tier: 1
+- technology: coal_extr_ch4
+  Description: Describes efforts in CH4-reduction from coal mining
+  Level: Primary
+  Input commodity/level: 'Coal Resource '
+  Output commodity/level: 'Coal Primary '
+  Tier: 1
+- technology: coal_extr_mpen
+  Description: Coal extraction market penetration
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 1
+- technology: coal_fs
+  Description: Coal feedstock
+  Level: Useful
+  Input commodity/level: 'Coal Final '
+  Output commodity/level: Industry FS useful
+  Tier: 1
+- technology: coal_gas
+  Description: Hard coal gasification
+  Level: Secondary
+  Input commodity/level: Coal Secondary
+  Output commodity/level: Gas Secondary
+  Tier: 1
+- technology: coal_hpl
+  Description: Coal heating plant
+  Level: Secondary
+  Input commodity/level: Coal Secondary
+  Output commodity/level: D_Heat Secondary
+  Tier: 1
+- technology: coal_i
+  Description: Coal in industry thermal
+  Level: Useful
+  Input commodity/level: 'Coal Final '
+  Output commodity/level: Industry TH Useful
+  Tier: 1
+- technology: coal_imp
+  Description: Net imports of coal
+  Level: Secondary
+  Input commodity/level: Coal Imports
+  Output commodity/level: Coal Secondary
+  Tier: 1
+- technology: coal_ppl
+  Description: Coal power-plant
+  Level: Secondary
+  Input commodity/level: Coal Secondary
+  Output commodity/level: Electricity Secondary
+  Tier: 1
+- technology: coal_ppl_u
+  Description: Coal power plant without abatement measures
+  Level: Secondary
+  Input commodity/level: Coal Secondary
+  Output commodity/level: Electricity Secondary
+  Tier: 1
+- technology: coal_rc
+  Description: Coal heating in residential/commercial sector
+  Level: Useful
+  Input commodity/level: 'Coal Final '
+  Output commodity/level: RC useful
+  Tier: 1
+- technology: coal_t_d
+  Description: Transmission/Distribution of coal
+  Level: Final
+  Input commodity/level: Coal Secondary
+  Output commodity/level: Coal Final
+  Tier: 1
+- technology: coal_t_d-in-06%
+  Description: Transmission/Distribution of coal industry like coal_t/d but imported
+    coal  with 0.6% S content
+  Level: Final
+  Input commodity/level: Coal Secondary
+  Output commodity/level: Coal Final
+  Tier: 2
+- technology: coal_t_d-in-SO2
+  Description: Transmission/Distribution of coal industry like coal_t/d but processed
+    coal
+  Level: Final
+  Input commodity/level: Coal Secondary
+  Output commodity/level: Coal Final
+  Tier: 2
+- technology: coal_t_d-rc-06%
+  Description: Transmission/Distribution of coal residential/commercial like coal_t/d
+    but imported coal with 0.6% S content
+  Level: Final
+  Input commodity/level: Coal Secondary
+  Output commodity/level: Coal Final
+  Tier: 2
+- technology: coal_t_d-rc-SO2
+  Description: Transmission/Distribution of coal like coal_t/d but processed coal
+  Level: Final
+  Input commodity/level: Coal Secondary
+  Output commodity/level: Coal Final
+  Tier: 2
+- technology: coal_trp
+  Description: Coal-based transport
+  Level: Useful
+  Input commodity/level: 'Coal Final '
+  Output commodity/level: Transport Useful
+  Tier: 1
+- technology: csp_sm1_ppl
+  Description: Concentrated solar power plant without long-term storage
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: .nan
+- technology: csp_sm1_res
+  Description: Concentrated solar power plant without long-term storage, best resource
+    category
+  Level: '-'
+  Input commodity/level: '-'
+  Output commodity/level: Secondary Electricity
+  Tier: aggregate
+- technology: csp_sm1_res1
+  Description: Concentrated solar power plant without long-term storage, resource
+    category 1
+  Level: '-'
+  Input commodity/level: '-'
+  Output commodity/level: Secondary Electricity
+  Tier: aggregate
+- technology: csp_sm1_res2
+  Description: Concentrated solar power plant without long-term storage, resource
+    category 2
+  Level: '-'
+  Input commodity/level: '-'
+  Output commodity/level: Secondary Electricity
+  Tier: aggregate
+- technology: csp_sm1_res3
+  Description: Concentrated solar power plant without long-term storage, resource
+    category 3
+  Level: '-'
+  Input commodity/level: '-'
+  Output commodity/level: Secondary Electricity
+  Tier: aggregate
+- technology: csp_sm1_res4
+  Description: Concentrated solar power plant without long-term storage, resource
+    category 4
+  Level: '-'
+  Input commodity/level: '-'
+  Output commodity/level: Secondary Electricity
+  Tier: aggregate
+- technology: csp_sm1_res5
+  Description: Concentrated solar power plant without long-term storage, resource
+    category 5
+  Level: '-'
+  Input commodity/level: '-'
+  Output commodity/level: Secondary Electricity
+  Tier: aggregate
+- technology: csp_sm3_ppl
+  Description: Concentrated solar power plant with long-term storage
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 1
+- technology: csp_sm3_res
+  Description: Concentrated solar power plant with long-term storage, best resource
+    category
+  Level: '-'
+  Input commodity/level: '-'
+  Output commodity/level: Secondary Electricity
+  Tier: aggregate
+- technology: csp_sm3_res1
+  Description: Concentrated solar power plant with long-term storage, resource category
+    1
+  Level: '-'
+  Input commodity/level: '-'
+  Output commodity/level: Secondary Electricity
+  Tier: aggregate
+- technology: csp_sm3_res2
+  Description: Concentrated solar power plant with long-term storage, resource category
+    2
+  Level: '-'
+  Input commodity/level: '-'
+  Output commodity/level: Secondary Electricity
+  Tier: aggregate
+- technology: csp_sm3_res3
+  Description: Concentrated solar power plant with long-term storage, resource category
+    3
+  Level: '-'
+  Input commodity/level: '-'
+  Output commodity/level: Secondary Electricity
+  Tier: aggregate
+- technology: csp_sm3_res4
+  Description: Concentrated solar power plant with long-term storage, resource category
+    4
+  Level: '-'
+  Input commodity/level: '-'
+  Output commodity/level: Secondary Electricity
+  Tier: aggregate
+- technology: csp_sm3_res5
+  Description: Concentrated solar power plant with long-term storage, resource category
+    5
+  Level: '-'
+  Input commodity/level: '-'
+  Output commodity/level: Secondary Electricity
+  Tier: aggregate
+- technology: dac_1_exports
+  Description: Direct Air Capture (configuration 1)
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 1
+- technology: dom_total
+  Description: Used in balance equation for domestic energy supply and in the equation
+    for constraining net imports
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Exports Secondary
+  Tier: 2
+- technology: dummy_producer
+  Description: Technology added to produce dummy energy to avoid infeasibility if
+    needed (e.g. when CO2_TCE needs to go negative)
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: dummy
+- technology: elec_exp
+  Description: Net export of electricity
+  Level: Exports
+  Input commodity/level: Electricity Secondary
+  Output commodity/level: Electricity Exports
+  Tier: 1
+- technology: elec_i
+  Description: Electricity in industry thermal
+  Level: Useful
+  Input commodity/level: Electricity Final
+  Output commodity/level: Industry TH Useful
+  Tier: 1
+- technology: elec_imp
+  Description: Net import of electricity
+  Level: Secondary
+  Input commodity/level: Electricity Imports
+  Output commodity/level: Electricity Secondary
+  Tier: 1
+- technology: elec_rc
+  Description: Electricity for heating in residential/commercial
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 1
+- technology: elec_t_d
+  Description: Grid technology cost converted to 2005$
+  Level: Final
+  Input commodity/level: Electrcity Secondary
+  Output commodity/level: Electricity Final
+  Tier: 1
+- technology: elec_trd
+  Description: Electricity trade at the global level
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 1
+- technology: elec_trp
+  Description: Electricity-based transport
+  Level: Useful
+  Input commodity/level: Electricity Final
+  Output commodity/level: Transport Useful
+  Tier: 1
+- technology: enre_con
+  Description: joint diffusion constraint for enteric fermentation mitigation technologies
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: 'Dummy Agriculture Primary '
+  Tier: 3
+- technology: ent_red1
+  Description: Mitigation for CH4 emissions from animals directly
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: 'Dummy Agriculture Primary '
+  Tier: 3
+- technology: ent_red2
+  Description: Mitigation for CH4 emissions from animals directly
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: 'Dummy Agriculture Primary '
+  Tier: 3
+- technology: ent_red3
+  Description: Mitigation for CH4 emissions from animals directly
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: 'Dummy Agriculture Primary '
+  Tier: 3
+- technology: eth_bal
+  Description: Link technology to stabilize ethanol production
+  Level: Secondary
+  Input commodity/level: Ethanol Primary
+  Output commodity/level: Ethanol Secondary
+  Tier: 1
+- technology: eth_bio
+  Description: Ethanol synthesis via biomass gasification
+  Level: Primary
+  Input commodity/level: Biomass Primary
+  Output commodity/level: Ethanol Primary
+  Tier: 1
+- technology: eth_bio_ccs
+  Description: Ethanol synthesis via biomass gasification with carbon capture and
+    storage
+  Level: Primary
+  Input commodity/level: Biomass Primary
+  Output commodity/level: Ethanol Primary
+  Tier: 1
+- technology: eth_exp
+  Description: Exports of ethanol (no accounting of CO2 transferred)
+  Level: Exports
+  Input commodity/level: Ethanol Primary
+  Output commodity/level: Ethanol Exports
+  Tier: 1
+- technology: eth_fc_trp
+  Description: Ethanol (without net C) fuel cell-based transport
+  Level: Useful
+  Input commodity/level: Ethanol Final
+  Output commodity/level: Transport Useful
+  Tier: 1
+- technology: eth_i
+  Description: Ethanol (without C) replacement for use as liquid fuel in industry
+  Level: Useful
+  Input commodity/level: Ethanol Final
+  Output commodity/level: Industry TH Useful
+  Tier: 1
+- technology: eth_ic_trp
+  Description: Ethanol (without net C) ic-engine-based transport
+  Level: Useful
+  Input commodity/level: Ethanol Final
+  Output commodity/level: Transport Useful
+  Tier: 1
+- technology: eth_imp
+  Description: Imports of ethanol (no accounting of CO2 transferred)
+  Level: Secondary
+  Input commodity/level: 'Ethanol Exports '
+  Output commodity/level: Ethanol Secondary
+  Tier: 1
+- technology: eth_rc
+  Description: Ethanol (without C) replacement for use as liquid fuel in residential/commercial
+  Level: Useful
+  Input commodity/level: Ethanol Final
+  Output commodity/level: Residential Commercial  TH Useful
+  Tier: 1
+- technology: eth_t_d
+  Description: Transmission/Distribution of methanol without net C (just linking technology)
+  Level: Final
+  Input commodity/level: Ethanol Secondary
+  Output commodity/level: Ethanol Final
+  Tier: 1
+- technology: eth_tobunker
+  Description: Ethanol to bunker loading technology
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 2
+- technology: ethanol_fs
+  Description: Ethanol as feedstock
+  Level: Useful
+  Input commodity/level: Ethanol Final
+  Output commodity/level: Industry FS Useful
+  Tier: 1
+- technology: exp_total
+  Description: Used in balance equation for exported energy supply and in the equation
+    for constraining net imports
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Exports Secondary
+  Tier: 1
+- technology: Feeds_1
+  Description: conservation cost curve step for feedstock demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: Industry FS Useful
+  Tier: backstop
+- technology: Feeds_2
+  Description: conservation cost curve step for feedstock demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: Industry FS Useful
+  Tier: backstop
+- technology: Feeds_3
+  Description: conservation cost curve step for feedstock demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: Industry FS Useful
+  Tier: backstop
+- technology: Feeds_4
+  Description: conservation cost curve step for feedstock demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: Industry FS Useful
+  Tier: backstop
+- technology: Feeds_5
+  Description: conservation cost curve step for feedstock demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: Industry FS Useful
+  Tier: backstop
+- technology: Feeds_con
+  Description: joint diffusion constraint for feedstock conservation cost curve steps
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Agriculture Primary
+  Tier: backstop
+- technology: flaring_CO2
+  Description: Co2 emissions from gas flaring
+  Level: Exports
+  Input commodity/level: '-'
+  Output commodity/level: Exports CO2
+  Tier: 1
+- technology: foil_bunker
+  Description: Fuel oil bunker
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 2
+- technology: foil_exp
+  Description: Net exports of crude oil at 95% of oil price
+  Level: Exports
+  Input commodity/level: Fuel Oil Secondary
+  Output commodity/level: Fuel Oil Exports
+  Tier: 1
+- technology: foil_fs
+  Description: Fuel oil as feedstock in industry
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 1
+- technology: foil_hpl
+  Description: Fuel oil heating plant
+  Level: Secondary
+  Input commodity/level: Fuel Oil Secondary
+  Output commodity/level: D_Heat Secondary
+  Tier: 1
+- technology: foil_i
+  Description: Fuel oil for thermal uses in industry
+  Level: Useful
+  Input commodity/level: Fuel Oil Final
+  Output commodity/level: Industry Th Useful
+  Tier: 1
+- technology: foil_imp
+  Description: Net imports of residual oil at 95% of oil price
+  Level: Secondary
+  Input commodity/level: Fuel Oil Imports
+  Output commodity/level: Fuel Oil Secondary
+  Tier: 1
+- technology: foil_ppl
+  Description: New standard oil power plant, Rankine cycle
+  Level: Secondary
+  Input commodity/level: Fuel Oil Secondary
+  Output commodity/level: Electricity Secondary
+  Tier: 1
+- technology: foil_rc
+  Description: Fuel oil heating in residential/commercial sector
+  Level: Useful
+  Input commodity/level: 'Fuel Final '
+  Output commodity/level: RC Thermal Useful
+  Tier: 1
+- technology: foil_t_d
+  Description: Transmission/Distribution of fueloil  (just linking technology)
+  Level: Final
+  Input commodity/level: Fuel Oil Secondary
+  Output commodity/level: 'Fuel Oil Final '
+  Tier: 1
+- technology: foil_trp
+  Description: Fueloil-based transport
+  Level: Useful
+  Input commodity/level: 'Fuel Oil Final '
+  Output commodity/level: Transport Useful
+  Tier: 1
+- technology: forest_CO2
+  Description: Co2 emissions from forests
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Exports Secondary
+  Tier: 2
+- technology: g_ppl_co2scr
+  Description: CO2 scrubber for natural gas power plant
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Exports Secondary
+  Tier: 1
+- technology: gas_bal
+  Description: Link technology to stabilize gas production
+  Level: Secondary
+  Input commodity/level: Gas Primary
+  Output commodity/level: Gas Secondary
+  Tier: 1
+- technology: gas_bio
+  Description: Synthesis gas production from biomass
+  Level: Secondary
+  Input commodity/level: Biomass Primary
+  Output commodity/level: Gas Secondary
+  Tier: 1
+- technology: gas_cc
+  Description: Gas combined cycle power-plant
+  Level: Secondary
+  Input commodity/level: Gas Secondary
+  Output commodity/level: Electricity Secondary
+  Tier: 1
+- technology: gas_cc_ccs
+  Description: Gas combined cycle power-plant with carbon capture and storage
+  Level: Secondary
+  Input commodity/level: Gas Secondary
+  Output commodity/level: Electricity Secondary
+  Tier: 1
+- technology: gas_ct
+  Description: Gas combustion-turbine power plant
+  Level: Secondary
+  Input commodity/level: Gas Secondary
+  Output commodity/level: Electricity Secondary
+  Tier: 1
+- technology: gas_exp
+  Description: Net gas export
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 1
+- technology: gas_extr_1
+  Description: Natural gas extraction, Cat I = Master et al.14.WPC "Identified Reserves"
+  Level: Primary
+  Input commodity/level: 'Grade/ Resource  '
+  Output commodity/level: Primary
+  Tier: 1
+- technology: gas_extr_2
+  Description: Natural gas extraction, Cat II = Master et al.14.WPC "Mode" undiscovered
+    natural gas
+  Level: Primary
+  Input commodity/level: 'Grade/ Resource  '
+  Output commodity/level: Primary
+  Tier: aggregate
+- technology: gas_extr_3
+  Description: Natural gas extraction, Cat III = Masters  et al.14.WPC Difference
+    between "Mode and 5%"  undiscovered natural gas
+  Level: Primary
+  Input commodity/level: 'Grade/ Resource  '
+  Output commodity/level: Primary
+  Tier: aggregate
+- technology: gas_extr_4
+  Description: Natural gas extraction, Cat IV = Estimated enhanced Recovery (30% of
+    Resources I+II+III)  plus 15% of historical production
+  Level: Primary
+  Input commodity/level: 'Grade/ Resource  '
+  Output commodity/level: Primary
+  Tier: aggregate
+- technology: gas_extr_5
+  Description: Natural gas extraction, Cat V = Non-conventional reserves (20% of Coal
+    bed; 15% of fractured Shale; 15% of Tight formation)
+  Level: Primary
+  Input commodity/level: 'Grade/ Resource  '
+  Output commodity/level: Primary
+  Tier: aggregate
+- technology: gas_extr_6
+  Description: Natural gas extraction, Cat VI -VII= Non-conventional resources. Rest
+    of Coal bed (80%), fractured Shale (85%) and  Tight formation (85%)  were aggregated
+    and then distributed to VI    (40%) nd VII (60%)
+  Level: Primary
+  Input commodity/level: 'Grade/ Resource  '
+  Output commodity/level: Primary
+  Tier: aggregate
+- technology: gas_extr_mpen
+  Description: Common Market penetration for all gas extraction technologies
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Exports Secondary
+  Tier: 1
+- technology: gas_fs
+  Description: Gas as feedstock
+  Level: Useful
+  Input commodity/level: 'Gas Final '
+  Output commodity/level: Industry FS Useful
+  Tier: 1
+- technology: gas_h2
+  Description: Hydrogen methanation
+  Level: Secondary
+  Input commodity/level: Hydrogen Secondary
+  Output commodity/level: Gas Secondary
+  Tier: 1
+- technology: gas_hpl
+  Description: Natural gas heating plant
+  Level: Secondary
+  Input commodity/level: Gas Secondary
+  Output commodity/level: D_Heat Secondary
+  Tier: 1
+- technology: gas_htfc
+  Description: High temperature fuel cell powered with natural gas
+  Level: Secondary
+  Input commodity/level: Gas Secondary
+  Output commodity/level: Electricity Secondary
+  Tier: 2
+- technology: gas_i
+  Description: Gas for thermal uses in industry
+  Level: Useful
+  Input commodity/level: 'Gas Final '
+  Output commodity/level: Industry TH Useful
+  Tier: 1
+- technology: gas_imp
+  Description: Piped Gas imports
+  Level: Secondary
+  Input commodity/level: Gas Exports
+  Output commodity/level: Gas Secondary
+  Tier: 1
+- technology: gas_ppl
+  Description: Gas power plant, Rankine cycle
+  Level: Secondary
+  Input commodity/level: Gas Secondary
+  Output commodity/level: Electricity Secondary
+  Tier: 1
+- technology: gas_rc
+  Description: Gas heating in residential/commercial sector
+  Level: Final
+  Input commodity/level: Gas Secondary
+  Output commodity/level: Gas Final
+  Tier: 1
+- technology: gas_t_d
+  Description: Transmission/Distribution of gas
+  Level: Final
+  Input commodity/level: Gas Secondary
+  Output commodity/level: Gas Final
+  Tier: 1
+- technology: gas_t_d_ch4
+  Description: Transmission/Distribution of gas with CH4 mitigation
+  Level: Final
+  Input commodity/level: Gas Secondary
+  Output commodity/level: Gas Final
+  Tier: 1
+- technology: gas_trp
+  Description: gas-based transport
+  Level: Useful
+  Input commodity/level: 'Gas Final '
+  Output commodity/level: Transport Useful
+  Tier: 1
+- technology: GDP
+  Description: Gross domestic product (market exchange rate)
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 2
+- technology: geo_hpl
+  Description: Geothermal heat plant
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: D_Heat Secondary
+  Tier: 2
+- technology: geo_ppl
+  Description: Geothermal power plant
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Electricity Secondary
+  Tier: 2
+- technology: gfc_co2scr
+  Description: New co2 scrubber for gas fuel cells
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Exports Secondary
+  Tier: 2
+- technology: glb_coal_exp
+  Description: Global net export of coal
+  Level: Imports
+  Input commodity/level: '-'
+  Output commodity/level: Coal Imports
+  Tier: 3
+- technology: glb_coal_imp
+  Description: Global net import of coal
+  Level: Exports
+  Input commodity/level: Electricity Exports
+  Output commodity/level: Total Exports
+  Tier: 3
+- technology: glb_elec_exp
+  Description: Global net export of electricity
+  Level: Imports
+  Input commodity/level: '-'
+  Output commodity/level: Electricity Imports
+  Tier: 3
+- technology: glb_elec_imp
+  Description: Global net import of electricity
+  Level: Exports
+  Input commodity/level: Electricity Exports
+  Output commodity/level: Total Exports
+  Tier: 3
+- technology: glb_eth_imp
+  Description: Global net import of ethanol
+  Level: Exports
+  Input commodity/level: 'Ethanol Exports '
+  Output commodity/level: Total Exports
+  Tier: 3
+- technology: glb_foil_exp
+  Description: Global net export of fuel oil
+  Level: Imports
+  Input commodity/level: '-'
+  Output commodity/level: Fuel Oil Imports
+  Tier: 3
+- technology: glb_foil_imp
+  Description: Global net import of fuel oil
+  Level: Exports
+  Input commodity/level: Fuel Oil Exports
+  Output commodity/level: Total Exports
+  Tier: 3
+- technology: glb_gas_exp
+  Description: Global net export of gas
+  Level: Exports
+  Input commodity/level: '-'
+  Output commodity/level: Gas Exports
+  Tier: 3
+- technology: glb_lh2_imp
+  Description: Global net import of liquid hydrogen
+  Level: Exports
+  Input commodity/level: Liquid Hydrogen Exports
+  Output commodity/level: Total Exports
+  Tier: 3
+- technology: glb_LNG_exp
+  Description: Global net export of liquified natural gas
+  Level: Imports
+  Input commodity/level: '-'
+  Output commodity/level: LNG Imports
+  Tier: 3
+- technology: glb_loil_exp
+  Description: Global net export of light oil
+  Level: Imports
+  Input commodity/level: '-'
+  Output commodity/level: 'Loil Imports '
+  Tier: 3
+- technology: glb_loil_imp
+  Description: Global net import of light oil
+  Level: Exports
+  Input commodity/level: Loil Exports
+  Output commodity/level: Total Exports
+  Tier: 3
+- technology: glb_meth_imp
+  Description: Global net import of methanol
+  Level: Exports
+  Input commodity/level: Methanol Exports
+  Output commodity/level: Total Exports
+  Tier: 3
+- technology: glb_oil_exp
+  Description: Global net export of crude oil
+  Level: Imports
+  Input commodity/level: '-'
+  Output commodity/level: Oil Imports
+  Tier: 3
+- technology: glb_oil_imp
+  Description: Global net import of crude oil
+  Level: Exports
+  Input commodity/level: Oil Exports
+  Output commodity/level: Total Exports
+  Tier: 3
+- technology: h2_bio
+  Description: Hydrogen production from biomass with C (via gasification)
+  Level: Secondary
+  Input commodity/level: 'Biomass Primary '
+  Output commodity/level: Hydrogen Secondary
+  Tier: 1
+- technology: h2_bio_ccs
+  Description: Hydrogen production from biomass with C (via gasification) with carbon
+    capture and storage
+  Level: Secondary
+  Input commodity/level: 'Biomass Primary '
+  Output commodity/level: Hydrogen Secondary
+  Tier: 1
+- technology: h2_co2_scrub
+  Description: CO2 scrubber for h2 production from coal and gas
+  Level: Exports
+  Input commodity/level: Electricity Secondary
+  Output commodity/level: Exports Secondary
+  Tier: 1
+- technology: h2_coal
+  Description: Hydrogen production via coal gasification
+  Level: Secondary
+  Input commodity/level: Coal Secondary
+  Output commodity/level: Hydrogen Secondary
+  Tier: 1
+- technology: h2_coal_ccs
+  Description: Hydrogen production via coal gasification with carbon capture and storage
+  Level: Secondary
+  Input commodity/level: Coal Secondary
+  Output commodity/level: Hydrogen Secondary
+  Tier: 1
+- technology: h2_ct
+  Description: Hydrogen combustion turbine
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 1
+- technology: h2_elec
+  Description: Hydrogen production via electrolysis
+  Level: Secondary
+  Input commodity/level: Electricity Secondary
+  Output commodity/level: Hydrogen Secondary
+  Tier: 1
+- technology: h2_fc_I
+  Description: Hydrogen fuel cell cogeneration system for industry
+  Level: Useful
+  Input commodity/level: 'Hydrogen Final '
+  Output commodity/level: Industry Useful
+  Tier: 1
+- technology: h2_fc_RC
+  Description: Hydrogen fuel cell cogeneration system for res/comm
+  Level: Useful
+  Input commodity/level: 'Hydrogen Final '
+  Output commodity/level: RC Useful
+  Tier: 1
+- technology: h2_fc_trp
+  Description: Hydrogen fuel cell-based transport (plus off-hours electricity generation)
+  Level: Useful
+  Input commodity/level: 'Liquid Hydrogen Final '
+  Output commodity/level: Transport Useful
+  Tier: 1
+- technology: h2_i
+  Description: Gaseous hydrogen in industry thermal
+  Level: Useful
+  Input commodity/level: Hydrogen Final
+  Output commodity/level: Industry Thermal Useful
+  Tier: 1
+- technology: h2_liq
+  Description: Hydrogen liquefaction
+  Level: Primary
+  Input commodity/level: 'Hydrogen Primary '
+  Output commodity/level: Liquid Hydrogen Primary
+  Tier: 1
+- technology: h2_mix
+  Description: Hydrogen injection into the natural gas system
+  Level: Secondary
+  Input commodity/level: Hydrogen Secondary
+  Output commodity/level: Gas Secondary
+  Tier: 1
+- technology: h2_rc
+  Description: Hydrogen (gaseous) catalytic heating in
+  Level: Secondary
+  Input commodity/level: 'Hydrogen Final '
+  Output commodity/level: RC Thermal Useful
+  Tier: 1
+- technology: h2_smr
+  Description: Hydrogen production via steam-methane reforming of natural gas
+  Level: Secondary
+  Input commodity/level: 'Gas Secondary '
+  Output commodity/level: Hydrogen Secondary
+  Tier: 1
+- technology: h2_smr_ccs
+  Description: Hydrogen production via steam-methane reforming of natural gas with
+    carbon capture and storage
+  Level: Secondary
+  Input commodity/level: 'Gas Secondary '
+  Output commodity/level: Hydrogen Secondary
+  Tier: 1
+- technology: h2_t_d
+  Description: Transmission/Distribution of gaseous hydrogen (just linking technology)
+  Level: 'Final '
+  Input commodity/level: Hydrogen Secondary
+  Output commodity/level: Hydrogen Final
+  Tier: 1
+- technology: h2b_co2_scrub
+  Description: CO2 scrubber for h2 production from biomass
+  Level: Secondary
+  Input commodity/level: Electricity Secondary
+  Output commodity/level: Exports Secondary
+  Tier: 2
+- technology: heat_i
+  Description: District heating for thermal uses in industry
+  Level: Useful
+  Input commodity/level: 'D_heat Final '
+  Output commodity/level: Industry Thermal Useful
+  Tier: 1
+- technology: heat_rc
+  Description: District heating in residential/commercial sector
+  Level: Useful
+  Input commodity/level: 'D_Heat Final '
+  Output commodity/level: RC_Thermal Useful
+  Tier: 1
+- technology: heat_t_d
+  Description: Transmission/Distribution of district heat
+  Level: 'Final '
+  Input commodity/level: D_Heat Secondary
+  Output commodity/level: 'D_Heat Final '
+  Tier: 1
+- technology: HFC_AerosolMDI
+  Description: Hydrofluorocarbon emissions from aerosols in metered dose inhalers
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: HFC_AerosolNonMDI
+  Description: Hydrofluorocarbon emissions from aerosols other than metered dose inhalers
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: HFC_FireExt
+  Description: Hydrofluorocarbon emissions from fire extinguishers
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: HFC_Solvents
+  Description: Hydrofluorocarbon emissions from solvents
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: HFC_TCE
+  Description: HFC total carbon equivalent emissions
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: 2
+- technology: HFCo_TCE
+  Description: Dummy technology converting HFC equiv emissions from solvents, fire
+    extinguishers, aerosols MDI, aerosols non-MDI to total carbon eqivalent emissions
+    (TCE)
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: 2
+- technology: hp_el_i
+  Description: Eectric heat pump in industry thermal
+  Level: Useful
+  Input commodity/level: 'Electricity Final '
+  Output commodity/level: Industry Thermal Useful
+  Tier: 1
+- technology: hp_el_rc
+  Description: Electric heat pump in residential/commercial sector
+  Level: Useful
+  Input commodity/level: 'Electricity Final '
+  Output commodity/level: RC_Thermal Useful
+  Tier: 1
+- technology: hp_gas_i
+  Description: Natural gas heat pump in industry thermal
+  Level: Useful
+  Input commodity/level: 'Gas Final '
+  Output commodity/level: Industry Thermal Useful
+  Tier: 1
+- technology: hp_gas_rc
+  Description: Natural gas heat pump in residential/commercial sector
+  Level: Useful
+  Input commodity/level: 'Gas Final '
+  Output commodity/level: RC_Thermal Useful
+  Tier: 1
+- technology: hydro_hc
+  Description: High cost hydro power plant
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Electricity Secondary
+  Tier: 1
+- technology: hydro_lc
+  Description: Low cost hydro power plant
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Electricity Secondary
+  Tier: 1
+- technology: igcc
+  Description: Integrated gasification combined cycle (IGCC) power plant
+  Level: Secondary
+  Input commodity/level: Coal Secondary
+  Output commodity/level: Electricity Secondary
+  Tier: 1
+- technology: igcc_ccs
+  Description: Integrated gasification combined cycle (IGCC) power plant with carbon
+    capture and storage
+  Level: Secondary
+  Input commodity/level: Coal Secondary
+  Output commodity/level: Electricity Secondary
+  Tier: 1
+- technology: igcc_co2scr
+  Description: New coal scrubber for igcc plants
+  Level: Exports
+  Input commodity/level: '-'
+  Output commodity/level: Exports Secondary
+  Tier: 1
+- technology: imp_total
+  Description: 'Used in balance equation for imported energy supply '
+  Level: Exports
+  Input commodity/level: '-'
+  Output commodity/level: Exports Secondary
+  Tier: 1
+- technology: Ispec_1
+  Description: conservation cost curve step for industry specific demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: Industry Useful
+  Tier: backstop
+- technology: Ispec_2
+  Description: conservation cost curve step for industry specific demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: Industry Useful
+  Tier: backstop
+- technology: Ispec_3
+  Description: conservation cost curve step for industry specific demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: Industry Useful
+  Tier: backstop
+- technology: Ispec_4
+  Description: conservation cost curve step for industry specific demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: Industry Useful
+  Tier: backstop
+- technology: Ispec_5
+  Description: conservation cost curve step for industry specific demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: Industry Useful
+  Tier: backstop
+- technology: Ispec_con
+  Description: joint diffusion constraint for industry specific conservation cost
+    curve steps
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Agriculture Primary
+  Tier: backstop
+- technology: Itherm_1
+  Description: conservation cost curve step for industry thermal demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: Industry Thermal Useful
+  Tier: backstop
+- technology: Itherm_2
+  Description: conservation cost curve step for industry thermal demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: Industry Thermal Useful
+  Tier: backstop
+- technology: Itherm_3
+  Description: conservation cost curve step for industry thermal demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: Industry Thermal Useful
+  Tier: backstop
+- technology: Itherm_4
+  Description: conservation cost curve step for industry thermal demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: Industry Thermal Useful
+  Tier: backstop
+- technology: Itherm_5
+  Description: conservation cost curve step for industry thermal demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: Industry Thermal Useful
+  Tier: backstop
+- technology: Itherm_con
+  Description: joint diffusion constraint for industry thermal conservation cost curve
+    steps
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Agriculture Primary
+  Tier: backstop
+- technology: land_use_biomass
+  Description: Biomass from land use module
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 1
+- technology: landfill_compost1
+  Description: Landfill mitigation technology (composting) technology 1 for CH4 mitigation
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: 2
+- technology: landfill_compost2
+  Description: Landfill mitigation technology (composting) technology 2 for CH4 mitigation
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: 2
+- technology: landfill_digester1
+  Description: Landfill mitigation technology (digester) 1 for CH4 mitigation
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 2
+- technology: landfill_direct1
+  Description: Landfill mitigaiton technology (direct) 1 for CH4 mitigation
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: 2
+- technology: landfill_direct2
+  Description: Landfill mitigaiton technology (direct) 1 for CH4 mitigation
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: 2
+- technology: landfill_ele
+  Description: Landfill mitigaiton technology (ele) 1 for CH4 mitigation
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: 2
+- technology: landfill_flaring
+  Description: Landfill mitigaiton technology (flaring) 1 for CH4 mitigation
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: 2
+- technology: landfill_heatprdn
+  Description: Landfill mitigaiton technology (heat production) 1 for CH4 mitigation
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: 2
+- technology: landfill_mechbio
+  Description: Landfill mitigaiton technology (mechanical) 1 for CH4 mitigation
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 2
+- technology: landfill_oxdn
+  Description: Landfill mitigaiton technology (oxidation) 1 for CH4 mitigation
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: 2
+- technology: leak_repair
+  Description: Leak-repairs, HFC-134a from refrigeration & AC(SR)
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: 3
+- technology: leak_repairsf6
+  Description: Recycling gas carts for SF6 recovery during assembly of gas insulated
+    equipment
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: 3
+- technology: lfil_con
+  Description: joint diffusion constraint for lanfill mitigation technologies
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Agriculture Primary
+  Tier: 2
+- technology: lh2_bal
+  Description: Link technology to stabilize liquid hydrogen production
+  Level: Secondary
+  Input commodity/level: Liquid Hydrogen Primary
+  Output commodity/level: Liquid Hydrogen Secondary
+  Tier: 1
+- technology: LH2_bunker
+  Description: 'Liquid hydrogen bunker '
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 1
+- technology: lh2_exp
+  Description: Exports of liquid hydrogen
+  Level: Exports
+  Input commodity/level: Liquid Hydrogen Primary
+  Output commodity/level: Liquid Hydrogen Exports
+  Tier: 1
+- technology: lh2_imp
+  Description: Imports of liquid hydrogen
+  Level: Secondary
+  Input commodity/level: Liquid Hydrogen Exports
+  Output commodity/level: Liquid Hydrogen Secondary
+  Tier: 1
+- technology: lh2_regas
+  Description: Regasification of liquid hydrogen
+  Level: Secondary
+  Input commodity/level: Liquid Hydrogen Secondary
+  Output commodity/level: Hydrogen Secondary
+  Tier: 1
+- technology: lh2_t_d
+  Description: Transmission/Distribution of liquid hydrogen
+  Level: 'Final '
+  Input commodity/level: Liquid Hydrogen Secondary
+  Output commodity/level: Liquid Hydrogen Final
+  Tier: 1
+- technology: LH2_tobunker
+  Description: 'Liquid hydrogen loading to bunker '
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 1
+- technology: lignite_extr
+  Description: Lignite extraction, world average grade A
+  Level: Primary
+  Input commodity/level: 'Lignite Resource '
+  Output commodity/level: 'Coal Primary '
+  Tier: 1
+- technology: liq_bio
+  Description: Second Generation Ethanol Production based on Biomass to FTL
+  Level: Primary
+  Input commodity/level: Biomass Primary
+  Output commodity/level: Ethanol Primary
+  Tier: 1
+- technology: liq_bio_ccs
+  Description: Second Generation Ethanol Production with carbon capture and storage
+    based on Biomass to FTL
+  Level: Primary
+  Input commodity/level: Biomass Primary
+  Output commodity/level: Ethanol Primary
+  Tier: 1
+- technology: liq_h2
+  Description: Second Generation Ethanol Production from hydrogen
+  Level: Primary
+  Input commodity/level: Hydrogen Secondary
+  Output commodity/level: Ethanol Secondary
+  Tier: 1
+- technology: LNG_bal
+  Description: Link technology to stabilize liquified natural gas production
+  Level: Secondary
+  Input commodity/level: LNG Primary
+  Output commodity/level: LNG Secondary
+  Tier: 1
+- technology: LNG_exp
+  Description: LNG exports
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 1
+- technology: LNG_imp
+  Description: LNG Imports
+  Level: Imports
+  Input commodity/level: 'LNG Imports '
+  Output commodity/level: LNG Secondary
+  Tier: 1
+- technology: LNG_prod
+  Description: LNG production
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 1
+- technology: LNG_regas
+  Description: LNG regasification (just link; losses are in trade)
+  Level: Secondary
+  Input commodity/level: LNG Secondary
+  Output commodity/level: Gas Secondary
+  Tier: 1
+- technology: LNG_tobunker
+  Description: LNG loading to bunker
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 1
+- technology: loil_cc
+  Description: Light oil combined cycle
+  Level: Secondary
+  Input commodity/level: Light Oil Secondary
+  Output commodity/level: Electricity Secondary
+  Tier: 1
+- technology: loil_conv
+  Description: Light oil converter
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: dummy
+- technology: loil_exp
+  Description: Net exports of crude oil at 15% above oil price
+  Level: Exports
+  Input commodity/level: Light Oil Secondary
+  Output commodity/level: Light Oil Exports
+  Tier: 1
+- technology: loil_fs
+  Description: Lightoil as feedstock
+  Level: Useful
+  Input commodity/level: Light Oil Final
+  Output commodity/level: Industry FS Useful
+  Tier: 1
+- technology: loil_hpl
+  Description: Light oil heating plant
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 1
+- technology: loil_i
+  Description: Lightoil for thermal uses in industry
+  Level: Useful
+  Input commodity/level: 'Light Oil Final '
+  Output commodity/level: Industry TH Useful
+  Tier: 1
+- technology: loil_imp
+  Description: Net imports of light oil at 15% above crude price
+  Level: Secondary
+  Input commodity/level: Light Oil Imports
+  Output commodity/level: Light Oil Secondary
+  Tier: 1
+- technology: loil_ppl
+  Description: Existing light oil power-plant
+  Level: Secondary
+  Input commodity/level: Light Oil Secondary
+  Output commodity/level: Electricity Secondary
+  Tier: 1
+- technology: loil_rc
+  Description: Lightoil heating in residential/commercial sector
+  Level: Useful
+  Input commodity/level: Light Oil Final
+  Output commodity/level: RC_Thermal Useful
+  Tier: 1
+- technology: loil_std
+  Description: Standard light oil power-plant
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Light Oil Secondary
+  Tier: dummy
+- technology: loil_t_d
+  Description: Transmission/Distribution of lightoil (just linking technology)
+  Level: 'Final '
+  Input commodity/level: Light Oil Secondary
+  Output commodity/level: Light Oil Final
+  Tier: 1
+- technology: loil_tobunker
+  Description: Light oil loading technology to bunker
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 2
+- technology: loil_trp
+  Description: Lightoil-based transport
+  Level: Useful
+  Input commodity/level: 'Light Oil Final '
+  Output commodity/level: Transport Useful
+  Tier: 1
+- technology: manu_con
+  Description: joint diffusion constraint for manure management+B249 mitigation technologies
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Agriculture Primary
+  Tier: 3
+- technology: meth_bal
+  Description: Link technology to stabilize methanol production
+  Level: Primary
+  Input commodity/level: Methanol Primary
+  Output commodity/level: Methanol Secondary
+  Tier: 1
+- technology: meth_coal
+  Description: Methanol synthesis via coal gasification
+  Level: Primary
+  Input commodity/level: Coal Secondary/ Electricity Secondary
+  Output commodity/level: Methanol Primary
+  Tier: 1
+- technology: meth_coal_ccs
+  Description: Methanol synthesis via coal gasification with carbon capture and storage
+  Level: Primary
+  Input commodity/level: Coal Secondary
+  Output commodity/level: Methanol Primary
+  Tier: 1
+- technology: meth_exp
+  Description: Exports of methanol (no accounting of CO2 transferred)
+  Level: Exports
+  Input commodity/level: Methanol Primary
+  Output commodity/level: Methanol Exports
+  Tier: 1
+- technology: meth_fc_trp
+  Description: Methanol (with C) fuel cell-based transport
+  Level: Useful
+  Input commodity/level: 'Methanol Final '
+  Output commodity/level: Transport Useful
+  Tier: 1
+- technology: meth_h2
+  Description: Methanol synthesis from hydrogen
+  Level: Primary
+  Input commodity/level: Hydrogen Secondary
+  Output commodity/level: Methanol Secondary
+  Tier: 1
+- technology: meth_i
+  Description: Methanol (with C) replacement for use as liquid fuel in industry
+  Level: Useful
+  Input commodity/level: 'Methanol Final '
+  Output commodity/level: Industry Useful
+  Tier: 1
+- technology: meth_ic_trp
+  Description: Methanol (with C) ic-engine-based transport
+  Level: Useful
+  Input commodity/level: 'Methanol Final '
+  Output commodity/level: Transport Useful
+  Tier: 1
+- technology: meth_imp
+  Description: Imports of methanol (no accounting of CO2 transferred)
+  Level: Secondary
+  Input commodity/level: Methanol Exports
+  Output commodity/level: Methanol Secondary
+  Tier: 1
+- technology: meth_ng
+  Description: Methanol synthesis via natural gas
+  Level: Primary
+  Input commodity/level: Gas Secondary
+  Output commodity/level: Methanol Primary
+  Tier: 1
+- technology: meth_ng_ccs
+  Description: Methanol synthesis via natural gas with carbon capture and storage
+  Level: Primary
+  Input commodity/level: Gas Secondary
+  Output commodity/level: Methanol Primary
+  Tier: 1
+- technology: meth_rc
+  Description: Methanol (with C) replacement for use as liquid fuel in residential/commercial
+  Level: Useful
+  Input commodity/level: 'Methanol Final '
+  Output commodity/level: RC_Thermal Useful
+  Tier: 1
+- technology: meth_t_d
+  Description: Transmission/Distribution of methanol with C
+  Level: 'Final '
+  Input commodity/level: Methanol Secondary
+  Output commodity/level: Methanol Final
+  Tier: 1
+- technology: meth_tobunker
+  Description: Methanol loading technology to bunker
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 3
+- technology: methanol_fs
+  Description: Methanol as feedstock
+  Level: Useful
+  Input commodity/level: 'Methanol Final '
+  Output commodity/level: Industry FS Useful
+  Tier: 1
+- technology: mvac_co2
+  Description: Transcritical vapor cycle CO2 systems for mobile vehicle air conditioners
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy  Agricultute
+  Tier: 3
+- technology: N2O_Human
+  Description: Nitrous oxide from human
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: N2O_ONonAgSo
+  Description: Nitrous oxide from non-agriculture soil
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: N2O_OtherAgSo
+  Description: Nitrous oxide from agriculture soil
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: N2O_TCE
+  Description: N2O total carbon equivalent emissions
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy  Agricultute
+  Tier: 1
+- technology: N2OG_TCE
+  Description: N2O soil emissions total carbon equivalent emissions
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy  Agricultute
+  Tier: 2
+- technology: N2On_adipic
+  Description: Nitrous oxide from adipic acid production
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: N2On_nitric
+  Description: Nitrous oxide from nitric acid production
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: N2On_TCE
+  Description: N2O adipic acid total carbon equivalent emissions
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy  Agricultute
+  Tier: 2
+- technology: N2Oo_TCE
+  Description: Dummy technology converting N2O emissions from Manure Management, Human
+    Sewage, Other Agricultural sources, Other Non Ag Sources to total carbon eqivalent
+    emissions (TCE)
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy  Agricultute
+  Tier: 2
+- technology: N2Os_TCE
+  Description: Total carbon equivalent of nitrous oxide emissions
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: NH3_AgWasteEM
+  Description: NH3 emissions from agricultural waste
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: NH3_IndNonEnergyEM
+  Description: NH3 emissions from feedstock in industry (non-energy)
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: NH3_LandUseChangeEM
+  Description: NH3 emissions from land use change
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: NH3_ManureEM
+  Description: NH3 emissions from manure
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: NH3_RiceEM
+  Description: NH3 emissions from rice farming
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: NH3_SavanBurnEM
+  Description: NH3 emissions from savannah burning
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: NH3_SoilEM
+  Description: NH3 emissions from soil
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: nica_con
+  Description: .nan
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy  Agricultute
+  Tier: dummy
+- technology: nitric_catalytic1
+  Description: Mitigation technology (catalytic converter) category 1 for N2O emissions
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: aggregate
+- technology: nitric_catalytic2
+  Description: Mitigation technology (catalytic converter) category 2 for N2O emissions
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: aggregate
+- technology: nitric_catalytic3
+  Description: Mitigation technology (catalytic converter) category 3 for N2O emissions
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: aggregate
+- technology: nitric_catalytic4
+  Description: Mitigation technology (catalytic converter) category 4 for N2O emissions
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: aggregate
+- technology: nitric_catalytic5
+  Description: Mitigation technology (catalytic converter) category 5 for N2O emissions
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: aggregate
+- technology: nitric_catalytic6
+  Description: Mitigation technology (catalytic converter) category 6 for N2O emissions
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: aggregate
+- technology: nitric_catalytic7
+  Description: Mitigation technology (catalytic converter) category 7 for N2O emissions
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: aggregate
+- technology: NOx_AgWasteEM
+  Description: NOx emissions from agricultural waste
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: NOx_IndNonEnergyEM
+  Description: NOx emissions from feedstock in industry (non-energy)
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: NOx_IntShipEM
+  Description: NOx emissions from internaitonal shipping
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 3
+- technology: NOx_LandUseChangeEM
+  Description: NOx emissions from land use change
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: NOx_SavanBurnEM
+  Description: NOx emissions from savannah burning
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: NOx_SoilEM
+  Description: NOx emissions from soil
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: NOx_WasteBurnEM
+  Description: NOx emissions from direct waste burning
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: nuc_hc
+  Description: Nuclear power plant (~GEN III+), high cost
+  Level: Secondary
+  Input commodity/level: U5 Stocks
+  Output commodity/level: Electricity Secondary
+  Tier: 1
+- technology: nuc_lc
+  Description: Nuclear power plant (~GEN II), low cost
+  Level: Secondary
+  Input commodity/level: U5 Stocks
+  Output commodity/level: Electricity Secondary
+  Tier: 1
+- technology: nuc_smr
+  Description: Nuclear power plant (Small Modular Reactors), with possibility of cogeneration
+    of heat and power
+  Level: Secondary
+  Input commodity/level: .nan
+  Output commodity/level: Electricity Secondary
+  Tier: 1
+- technology: nuc_smr_th
+  Description: Nuclear thermal plant (Small Modular Reactors), with possibility of
+    only generating high temperature heat
+  Level: Secondary
+  Input commodity/level: .nan
+  Output commodity/level: HT_heat Final
+  Tier: 1
+- technology: OCA_AgWasteEM
+  Description: Organic carbon aerosol emissions from agricultural waste
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: OCA_IndNonEnergyEM
+  Description: Organic carbon aerosol emissions from feedstock in industry (non-energy)
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: OCA_IntShipEM
+  Description: Organic carbon aerosol emissions from internaitonal shipping
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 3
+- technology: OCA_LandUseChangeEM
+  Description: Organic carbon aerosol emissions from land use change
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: OCA_SavanBurnEM
+  Description: Organic carbon aerosol emissions from savannah burning
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: OCA_WasteBurnEM
+  Description: Organic carbon aerosol emissions from direct waste burning
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: oil_bal
+  Description: Link technology to stabilize crude oil production
+  Level: Secondary
+  Input commodity/level: Crude Oil Primary
+  Output commodity/level: Crude Oil Secondary
+  Tier: 1
+- technology: oil_exp
+  Description: Net exports of crude oil at 100% of oil price
+  Level: Exports
+  Input commodity/level: Crude Oil Primary
+  Output commodity/level: Oil Exports
+  Tier: 1
+- technology: oil_extr_1
+  Description: Crude oil extraction, Cat I = Masters 14 WPC conv. oil reserves
+  Level: Primary
+  Input commodity/level: Crude 1 Resource Primary
+  Output commodity/level: Crude Oil Primary
+  Tier: 1
+- technology: oil_extr_1_ch4
+  Description: Describes efforts in CH4-reduction from oil extraction of Cat I
+  Level: Primary
+  Input commodity/level: Crude 1 Resource Primary
+  Output commodity/level: Crude Oil Primary
+  Tier: 1
+- technology: oil_extr_2
+  Description: Crude oil extraction,Cat II = Masters mode undiscovered conv. oil (incl.
+    NGL)
+  Level: Primary
+  Input commodity/level: Crude 2 Resource Primary
+  Output commodity/level: Crude Oil Primary
+  Tier: 1
+- technology: oil_extr_2_ch4
+  Description: 'Describes efforts in CH4-reduction from oil extraction of Cat II '
+  Level: Primary
+  Input commodity/level: Crude 2 Resource Primary
+  Output commodity/level: Crude Oil Primary
+  Tier: aggregate
+- technology: oil_extr_3
+  Description: Crude oil extraction, Cat III = Masters 5% - Masters 50%
+  Level: Primary
+  Input commodity/level: Crude 3 Resource Primary
+  Output commodity/level: Crude Oil Primary
+  Tier: aggregate
+- technology: oil_extr_3_ch4
+  Description: 'Describes efforts in CH4-reduction from oil extraction of Cat III '
+  Level: Primary
+  Input commodity/level: Crude 3 Resource Primary
+  Output commodity/level: Crude Oil Primary
+  Tier: aggregate
+- technology: oil_extr_4
+  Description: Crude oil extraction, Cat IV = Recoverable "reserves" non-conventional
+    oil
+  Level: Primary
+  Input commodity/level: Crude 4 Resource Primary
+  Output commodity/level: Crude Oil Primary
+  Tier: aggregate
+- technology: oil_extr_4_ch4
+  Description: 'Describes efforts in CH4-reduction from oil extraction of Cat IV '
+  Level: Primary
+  Input commodity/level: Crude  4 Resource Primary
+  Output commodity/level: Crude Oil Primary
+  Tier: aggregate
+- technology: oil_extr_5
+  Description: Crude oil extraction, Cat V = Recoverable reserves of nonconventional
+    oil = Shale, tarsands/bitumen and heavy oils
+  Level: Primary
+  Input commodity/level: Crude 5 Resource Primary
+  Output commodity/level: Crude Oil Primary
+  Tier: aggregate
+- technology: oil_extr_6
+  Description: Crude oil extraction, Cat VI = 20% of estimated occurences (-reserves)
+    of shale, heavy oils, tarsands/bitumen
+  Level: Primary
+  Input commodity/level: Crude 6 Resource Primary
+  Output commodity/level: Crude Oil Primary
+  Tier: aggregate
+- technology: oil_extr_7
+  Description: Crude oil extraction, Cat VII = 80% of estimated occurences (-reserves)
+    of shale, heavy oils, tarsands/bitumen
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: aggregate
+- technology: oil_extr_mpen
+  Description: Common Market penetration for all oil extraction technologies
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Exports Secondary
+  Tier: 1
+- technology: oil_imp
+  Description: Net imports of oil
+  Level: Secondary
+  Input commodity/level: Oil Imports
+  Output commodity/level: Crude Oil Secondary
+  Tier: 1
+- technology: oil_ppl
+  Description: oil fueled power plant
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 1
+- technology: plutonium_prod
+  Description: plutonium production
+  Level: Stocks
+  Input commodity/level: PuQ Stocks
+  Output commodity/level: Pu Stocks
+  Tier: 1
+- technology: PM2_AgWasteEM
+  Description: Particulate matters emissions from agricultural waste
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: PM2_IndNonEnergyEM
+  Description: Particulate matters emissions from feedstock in industry (non-energy)
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: PM2_WasteBurnEM
+  Description: Particulate matters from direct waste burning
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: po_turbine
+  Description: pass out turbine
+  Level: Secondary
+  Input commodity/level: ELectricity Secondary
+  Output commodity/level: D_Heat Secondary
+  Tier: 1
+- technology: Population
+  Description: Population
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 2
+- technology: PPP
+  Description: GDP corrected by purchasing power parity
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 2
+- technology: RCspec_1
+  Description: conservation cost curve step for residential/commercial specific demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: RC_Useful
+  Tier: backstop
+- technology: RCspec_2
+  Description: conservation cost curve step for residential/commercial specific demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: RC_Useful
+  Tier: backstop
+- technology: RCspec_3
+  Description: conservation cost curve step for residential/commercial specific demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: RC_Useful
+  Tier: backstop
+- technology: RCspec_4
+  Description: conservation cost curve step for residential/commercial specific demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: RC_Useful
+  Tier: backstop
+- technology: RCspec_5
+  Description: conservation cost curve step for residential/commercial specific demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: RC_Useful
+  Tier: backstop
+- technology: RCspec_con
+  Description: joint diffusion constraint for residential/commercial specific conservation
+    cost curve steps
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Agriculture Primary
+  Tier: backstop
+- technology: RCtherm_1
+  Description: conservation cost curve step for residential/commercial thermal demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: RC_Thermal Useful
+  Tier: backstop
+- technology: RCtherm_2
+  Description: conservation cost curve step for residential/commercial thermal demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: RC_Thermal Useful
+  Tier: backstop
+- technology: RCtherm_3
+  Description: conservation cost curve step for residential/commercial thermal demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: RC_Thermal Useful
+  Tier: backstop
+- technology: RCtherm_4
+  Description: conservation cost curve step for residential/commercial thermal demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: RC_Thermal Useful
+  Tier: backstop
+- technology: RCtherm_5
+  Description: conservation cost curve step for residential/commercial thermal demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: RC_Thermal Useful
+  Tier: backstop
+- technology: RCtherm_con
+  Description: joint diffusion constraint for residential/commercial thermal conservation
+    cost curve steps
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Agriculture Primary
+  Tier: backstop
+- technology: recycling_gas1
+  Description: Recycling gas carts for SF6 recovery during maintenance of gas insulated
+    equipment(SR)
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: 2
+- technology: ref_hil
+  Description: New deeply upgraded refineries
+  Level: Secondary
+  Input commodity/level: Crude Oil Secondary
+  Output commodity/level: Fuel Oil Secondary
+  Tier: 1
+- technology: ref_lol
+  Description: Existing refineries (low yield)
+  Level: Secondary
+  Input commodity/level: Crude Oil Secondary
+  Output commodity/level: Fuel Oil Secondary
+  Tier: 1
+- technology: refrigerant_recovery
+  Description: Recovery of refrigerant, HFC-134a from refrigeration and AC (SR)
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: 3
+- technology: repl_hc
+  Description: Replacement with HC for foams
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: 3
+- technology: replacement_so2
+  Description: Replacing SF6 by SO2(SR)
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: 3
+- technology: rice_red1
+  Description: Mitigation for CH4 emissions from rice
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Agriculture Primary
+  Tier: 3
+- technology: rice_red2
+  Description: Mitigation for CH4 emissions from rice
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Agriculture Primary
+  Tier: 3
+- technology: rice_red3
+  Description: Mitigation for CH4 emissions from rice
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Agriculture Primary
+  Tier: 3
+- technology: rire_con
+  Description: joint diffusion constraint for rice cultivation mitigation technologies
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Dummy  Agriculture Primary
+  Tier: 3
+- technology: SF6_TCE
+  Description: SF6 total carbon equivalent emissions
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: 1
+- technology: sinks_1
+  Description: potential for sinks (50. US$)
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Exports Secondary
+  Tier: backstop
+- technology: sinks_2
+  Description: potential for sinks (100. US$)
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Exports Secondary
+  Tier: backstop
+- technology: sinks_3
+  Description: potential for sinks (200. US$)
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Exports Secondary
+  Tier: backstop
+- technology: sinks_4
+  Description: potential for sinks (300. US$)
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Exports Secondary
+  Tier: backstop
+- technology: SO2_AgWasteEM
+  Description: Sulfur dioxide emissions from agricultural waste
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: SO2_IndNonEnergyEM
+  Description: Sulfur dioxide emissions from feedstock in industry (non-energy)
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: SO2_IntShipEM
+  Description: Sulfur dioxide emissions from internaitonal shipping
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 3
+- technology: SO2_LandUseChangeEM
+  Description: Sulfur dioxide emissions from land use change
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: SO2_SavanBurnEM
+  Description: Sulfur dioxide emissions from savannah burning
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: SO2_WasteBurnEM
+  Description: Sulfur dioxide emissions from direct waste burning
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: soil_red1
+  Description: Mitigation for N2Oemissions from soil
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Agriculture Primary
+  Tier: 3
+- technology: soil_red2
+  Description: Mitigation for N2Oemissions from soil
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Agriculture Primary
+  Tier: 3
+- technology: soil_red3
+  Description: Mitigation for N2Oemissions from soil
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Agriculture Primary
+  Tier: 3
+- technology: solar_curtailment1
+  Description: solar PV curtailment steps
+  Level: Dummy
+  Input commodity/level: ELectricity Secondary
+  Output commodity/level: Dummy Renewable Secondary
+  Tier: 1
+- technology: solar_curtailment2
+  Description: solar PV curtailment steps
+  Level: Dummy
+  Input commodity/level: ELectricity Secondary
+  Output commodity/level: Dummy Renewable Secondary
+  Tier: 1
+- technology: solar_curtailment3
+  Description: solar PV curtailment steps
+  Level: Dummy
+  Input commodity/level: ELectricity Secondary
+  Output commodity/level: Dummy Renewable Secondary
+  Tier: 1
+- technology: solar_cv1
+  Description: quadratic systems integration costs added to solar PV
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Renewable Secondary
+  Tier: 1
+- technology: solar_cv2
+  Description: quadratic systems integration costs added to solar PV
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Renewable Secondary
+  Tier: 1
+- technology: solar_cv3
+  Description: quadratic systems integration costs added to solar PV
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Renewable Secondary
+  Tier: 1
+- technology: solar_cv4
+  Description: quadratic systems integration costs added to solar PV
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Renewable Secondary
+  Tier: 1
+- technology: solar_i
+  Description: solar thermal in industry sector
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: Industry TH Useful
+  Tier: 1
+- technology: solar_pv_I
+  Description: On-site solar photovoltaic power plant (no storage) in industry
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: Industry Useful
+  Tier: 3
+- technology: solar_pv_ppl
+  Description: Solar photovoltaic power plant (no storage)
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Renewable Secondary
+  Tier: 1
+- technology: solar_pv_RC
+  Description: On-site solar photovoltaic power plant (no storage) in residential/commercial
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: RC_Useful
+  Tier: 3
+- technology: solar_rc
+  Description: Solar thermal in residential/commercial sector
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: RC_Thermal Useful
+  Tier: 1
+- technology: solar_res1
+  Description: solar electricity potential category 1
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Electricity Secondary
+  Tier: aggregate
+- technology: solar_res2
+  Description: solar electricity potential category 2
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Electricity Secondary
+  Tier: aggregate
+- technology: solar_res3
+  Description: solar electricity potential category 3
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Electricity Secondary
+  Tier: aggregate
+- technology: solar_res4
+  Description: solar electricity potential category 4
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Electricity Secondary
+  Tier: aggregate
+- technology: solar_res5
+  Description: solar electricity potential category 5
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Electricity Secondary
+  Tier: aggregate
+- technology: solar_res6
+  Description: solar electricity potential category 6
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Electricity Secondary
+  Tier: aggregate
+- technology: solar_res7
+  Description: solar electricity potential category 7
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Electricity Secondary
+  Tier: aggregate
+- technology: solar_th_ppl
+  Description: Solar thermal power plant with storage
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Electricity Secondary
+  Tier: 3
+- technology: sp_coal_I
+  Description: specific use of coal in industry
+  Level: Useful
+  Input commodity/level: 'Coal Final '
+  Output commodity/level: Industry Useful
+  Tier: 1
+- technology: sp_el_I
+  Description: specific use of electricity in industry
+  Level: Useful
+  Input commodity/level: 'Electricity Final '
+  Output commodity/level: Industry Useful
+  Tier: 1
+- technology: sp_el_RC
+  Description: specific use of electricity in residential/commercial
+  Level: Useful
+  Input commodity/level: 'Electricity Final '
+  Output commodity/level: RC_Useful
+  Tier: 1
+- technology: sp_eth_I
+  Description: ethanol (without net C) replacement for specific use of light oil in
+    industry
+  Level: Useful
+  Input commodity/level: 'Ethanol Final '
+  Output commodity/level: Industry Useful
+  Tier: 1
+- technology: sp_liq_I
+  Description: specific use of light oil in industry
+  Level: Useful
+  Input commodity/level: 'Light Oil Final '
+  Output commodity/level: Industry Useful
+  Tier: 1
+- technology: sp_meth_I
+  Description: methanol (with C) replacement for  specific use of light oil in industry
+  Level: Useful
+  Input commodity/level: 'Methanol Final '
+  Output commodity/level: Industry Useful
+  Tier: 1
+- technology: stor_ppl
+  Description: generic electric storage
+  Level: Secondary
+  Input commodity/level: ELectricity Secondary
+  Output commodity/level: Exports Secondary
+  Tier: 1
+- technology: syn_liq
+  Description: Coal liquefaction and lightoil synthesis
+  Level: Secondary
+  Input commodity/level: 'Coal Secondary '
+  Output commodity/level: Light Oil Secondary
+  Tier: 1
+- technology: syn_liq_ccs
+  Description: Coal liquefaction and lightoil synthesis with carbon capture and storage
+  Level: Secondary
+  Input commodity/level: 'Coal Secondary '
+  Output commodity/level: Light Oil Secondary
+  Tier: 1
+- technology: Trans_1
+  Description: conservation cost curve step for transport demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: Useful Transport
+  Tier: backstop
+- technology: Trans_2
+  Description: conservation cost curve step for transport demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: Useful Transport
+  Tier: backstop
+- technology: Trans_3
+  Description: conservation cost curve step for transport demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: Useful Transport
+  Tier: backstop
+- technology: Trans_4
+  Description: conservation cost curve step for transport demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: Useful Transport
+  Tier: backstop
+- technology: Trans_5
+  Description: conservation cost curve step for transport demand
+  Level: Useful
+  Input commodity/level: '-'
+  Output commodity/level: Useful Transport
+  Tier: backstop
+- technology: Trans_con
+  Description: joint diffusion constraint for transport conservation cost curve steps
+  Level: Primary
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Agriculture Primary
+  Tier: backstop
+- technology: u5_imp
+  Description: Net uranium import
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 1
+- technology: u5-reproc
+  Description: Uranium reprocessing
+  Level: Stocks
+  Input commodity/level: Stocks U5Q
+  Output commodity/level: Stock U5
+  Tier: 1
+- technology: Uran_extr
+  Description: Uranium extraction, milling for FBR blanket
+  Level: Stocks
+  Input commodity/level: Uranium Resource
+  Output commodity/level: Stock UQ
+  Tier: 1
+- technology: uran2u5
+  Description: Uranium extraction, milling, fluorination and enrichment per t U5
+  Level: Stocks
+  Input commodity/level: Uranium Resource
+  Output commodity/level: Stock U5
+  Tier: 1
+- technology: useful_feedstock
+  Description: useful energy for feedstocks
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy_Useful -Primary
+  Tier: 1
+- technology: useful_industry_sp
+  Description: useful specific energy for industry
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy_Useful -Primary
+  Tier: 1
+- technology: useful_industry_th
+  Description: useful thermal energy for industry
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy_Useful -Primary
+  Tier: 1
+- technology: useful_res/comm_sp
+  Description: useful specific energy for residential and commercial
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy_Useful -Primary
+  Tier: 1
+- technology: useful_res/comm_th
+  Description: useful thermal energy for residential and commercial
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy_Useful -Primary
+  Tier: 1
+- technology: useful_res_comm_sp
+  Description: useful specific energy for residential and commercial
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 1
+- technology: useful_res_comm_th
+  Description: useful thermal energy for residential and commercial
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 1
+- technology: useful_transport
+  Description: useful energy for transport
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy_Useful -Primary
+  Tier: 1
+- technology: vertical_stud
+  Description: Soderberg process for CF4 from aluminum (SR)
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Primary
+  Tier: dummy
+- technology: VOC_AgWasteEM
+  Description: Volatile organic matters emissions from agricultural waste
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: VOC_IndNonEnergyEM
+  Description: Volatile organic matters emissions from feedstock in industry (non-energy)
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: VOC_IntShipEM
+  Description: Volatile organic matters emissions from internaitonal shipping
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 3
+- technology: VOC_LandUseChangeEM
+  Description: Volatile organic matters emissions from land use change
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: VOC_SavanBurnEM
+  Description: Volatile organic matters emissions from savannah burning
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: VOC_SolventEM
+  Description: Volatile organic matters emissions from solvents
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: VOC_WasteBurnEM
+  Description: Volatile organic matters emissions from direct waste burning
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: WasteDriver
+  Description: Driver for waste caculations
+  Level: emission
+  Input commodity/level: '-'
+  Output commodity/level: '-'
+  Tier: 2
+- technology: wind_curtailment1
+  Description: wind curtailment steps
+  Level: Dummy
+  Input commodity/level: Secondary Electricity
+  Output commodity/level: Dummy Renewable Secondary
+  Tier: 1
+- technology: wind_curtailment2
+  Description: wind curtailment steps
+  Level: Dummy
+  Input commodity/level: Secondary Electricity
+  Output commodity/level: Dummy Renewable Secondary
+  Tier: 1
+- technology: wind_curtailment3
+  Description: wind curtailment steps
+  Level: Dummy
+  Input commodity/level: Secondary Electricity
+  Output commodity/level: Dummy Renewable Secondary
+  Tier: 1
+- technology: wind_cv1
+  Description: quadratic systems integration costs added to wind
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Renewable Secondary
+  Tier: 1
+- technology: wind_cv2
+  Description: quadratic systems integration costs added to wind
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Renewable Secondary
+  Tier: 1
+- technology: wind_cv3
+  Description: quadratic systems integration costs added to wind
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Renewable Secondary
+  Tier: 1
+- technology: wind_cv4
+  Description: quadratic systems integration costs added to wind
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Renewable Secondary
+  Tier: 1
+- technology: wind_ppf
+  Description: Wind power plant offshore
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: 1
+- technology: wind_ppl
+  Description: Wind power plant onshore
+  Level: Dummy
+  Input commodity/level: '-'
+  Output commodity/level: Dummy Renewable Secondary
+  Tier: 1
+- technology: wind_ref1
+  Description: wind offshore potential category 1
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Secondary Electricity
+  Tier: aggregate
+- technology: wind_ref2
+  Description: wind offshore potential category 2
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Secondary Electricity
+  Tier: aggregate
+- technology: wind_ref3
+  Description: wind offshore potential category 3
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Secondary Electricity
+  Tier: aggregate
+- technology: wind_ref4
+  Description: wind offshore potential category 4
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Secondary Electricity
+  Tier: aggregate
+- technology: wind_ref5
+  Description: wind offshore potential category 5
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Secondary Electricity
+  Tier: aggregate
+- technology: wind_res1
+  Description: wind onshore potential category 1
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Secondary Electricity
+  Tier: aggregate
+- technology: wind_res2
+  Description: wind onshore potential category 2
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Secondary Electricity
+  Tier: aggregate
+- technology: wind_res3
+  Description: wind onshore potential category 3
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Secondary Electricity
+  Tier: aggregate
+- technology: wind_res4
+  Description: wind onshore potential category 4
+  Level: Secondary
+  Input commodity/level: '-'
+  Output commodity/level: Secondary Electricity
+  Tier: aggregate
+- technology: gas_exp_afr
+  Description: gas pipeline for exporting to AFR (Africa)
+  Level: .nan
+  Input commodity/level: Secondary Natural gas
+  Output commodity/level: .nan
+  Tier: .nan
+- technology: gas_exp_cpa
+  Description: gas pipeline for exporting to CPA (Centrally Planned Asia)
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: .nan
+- technology: gas_exp_eeu
+  Description: gas pipeline for exporting to EEU (East Europe)
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: .nan
+- technology: gas_exp_sas
+  Description: gas pipeline for exporting to SAS (South Asia)
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: .nan
+- technology: gas_exp_weu
+  Description: gas pipeline for exporting to WEU (West Europe)
+  Level: .nan
+  Input commodity/level: .nan
+  Output commodity/level: .nan
+  Tier: .nan
