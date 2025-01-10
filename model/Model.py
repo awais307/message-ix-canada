@@ -26,6 +26,7 @@ from scipy.optimize import linprog
 from model.policies.obps import apply_obps_baseline, apply_obps_netzero
 from pathlib import Path
 from typing import Union
+from canada_models.message_ix_models.report.legacy.iamc_report_hackathon import report
 from model.utils import (map_yv_ya_lt, config_validation, map_learning_rate)
 
 warnings.filterwarnings("ignore")  # Ignore warnings to keep the output clean
@@ -154,7 +155,7 @@ class model_MSG:
 							time=tech_data["time"],
 							time_origin=tech_data["time"],
 							value=tech_data["commodity"][0]["input"][1]["com_value"],
-							unit=tech_data["unit"][1]["energy"],
+							unit='-',
 						)
 						.pipe(
 							broadcast,
@@ -183,7 +184,7 @@ class model_MSG:
 							time=tech_data["time"],
 							time_origin=tech_data["time"],
 							value=tech_data["commodity"][1]["output"][1]["com_value"],
-							unit=tech_data["unit"][1]["energy"],
+							unit='-',
 						)
 						.pipe(
 							broadcast,
@@ -246,7 +247,7 @@ class model_MSG:
 					self.scenario.add_par("inv_cost", inv_cost_df)
 
 					# emission factor
-					emission_factor_df = message_ix.make_df(
+					'''emission_factor_df = message_ix.make_df(
 						"emission_factor",
 						node_loc=provinces,
 						technology=tech,
@@ -258,7 +259,8 @@ class model_MSG:
 						broadcast,
 						map_yv_ya_lt(years, tech_data["tec_lifetime"], first_year),
 					)
-					self.scenario.add_par("emission_factor", emission_factor_df)
+					self.scenario.add_par("emission_factor", emission_factor_df)'''
+
 
 					# construction time
 					for i, j in zip(
@@ -282,6 +284,7 @@ class model_MSG:
 							"construction_time",
 							tec_construction_df["construction_time"],
 						)
+
 
 			self.scenario.commit("Technologies added successfully")
 
@@ -1192,14 +1195,7 @@ class model_MSG:
 				print(f"Scenario {caseName} did not solve\n")
 
 			if self.use_reporter:
-				self.generate_report(
-					self.scenario,
-					output_path=f"{caseName}.csv",
-					min_year=2020,
-					max_year=2060,
-					from_excel=False,
-					unit_correct=True,
-				)
+				report(mp=self.mp, scen=self.scenario, out_dir="output")
 
 		if self.to_excel:
 			self.scenario.to_excel(f"{caseName}.xlsx")

@@ -9,7 +9,6 @@ h2_atr_ccs:
         - electr
         - gas
       - com_value: 
-        - 1
         - 0.05
         - 1.2
       - com_level: 
@@ -28,7 +27,7 @@ h2_atr_ccs:
   construction_time: 3 # Random number of years for now -- CCF
   # Units for cost and energy
   unit: 
-    - cost: 'USD/kWa'
+    - cost: 'USD/kW'
     - energy: '-'
   # Geographical specs: nodes selection, provinces
   # Specify "all" below for all provinces in Canada to be selected, or "custom" for a sub-set of provinces
@@ -52,6 +51,7 @@ h2_atr_ccs:
   emission_type: CO2_cc
   capacity_factor: 0.9
   investment_lr: 0.9169
+  fixed_cost_lr: 0.9169
 
 h2_atr:
   # Technology specs: mode, commodities, description
@@ -82,7 +82,7 @@ h2_atr:
   construction_time: 3 # Random number of years for now -- CCF
   # Units for cost and energy
   unit: 
-    - cost: 'USD/kWa'
+    - cost: 'USD/kW'
     - energy: '-'
   # Geographical specs: nodes selection, provinces
   # Specify "all" below for all provinces in Canada to be selected, or "custom" for a sub-set of provinces
@@ -105,6 +105,7 @@ h2_atr:
   emission_type: CO2_cc
   capacity_factor: 0.9
   investment_lr: 0.9169
+  fixed_cost_lr: 0.9169
 
 gas_h2:
   # Technology specs: mode, commodities, description
@@ -135,7 +136,7 @@ gas_h2:
   construction_time: 3 # Random number of years for now -- CCF
   # Units for cost and energy
   unit: 
-    - cost: 'USD/kWa'
+    - cost: 'USD/kW'
     - energy: '-'
   # Geographical specs: nodes selection, provinces
   # Specify "all" below for all provinces in Canada to be selected, or "custom" for a sub-set of provinces
@@ -158,6 +159,7 @@ gas_h2:
   emission_type: CO2_cc
   capacity_factor: 0.96
   investment_lr: 0.9169
+  fixed_cost_lr: 0.9169
 
 h2_stor_geo:
   # Technology specs: mode, commodities, description
@@ -190,8 +192,7 @@ h2_stor_geo:
   construction_time: 3 # Random number of years for now -- CCF
   # Units for cost and energy
   unit: 
-    - cost: 'USD/kWa'
-    - cost: 'USD/kWa'
+    - cost: 'USD/kW'
     - energy: '-'
   # Geographical specs: nodes selection, provinces
   # Specify "all" below for all provinces in Canada to be selected, or "custom" for a sub-set of provinces
@@ -220,6 +221,7 @@ h2_stor_geo:
   emission_type: CO2_cc
   capacity_factor: 0.8 #fix this to TC/kWyr
   investment_lr: 0.8
+  fixed_cost_lr: 0.9169
 
 liq_h2:
   # Technology specs: mode, commodities, description
@@ -253,7 +255,7 @@ liq_h2:
   construction_time: 3 # Random number of years for now -- CCF
   # Units for cost and energy
   unit: 
-    - cost: 'USD/kWa'
+    - cost: 'USD/kW'
     - energy: '-'
   # Geographical specs: nodes selection, provinces
   # Specify "all" below for all provinces in Canada to be selected, or "custom" for a sub-set of provinces
@@ -276,6 +278,7 @@ liq_h2:
   emission_type: CO2_cc
   capacity_factor: 0.95
   investment_lr: 0.95
+  fixed_cost_lr: 0.9169
 
 meth_h2:
   # Technology specs: mode, commodities, description
@@ -309,7 +312,7 @@ meth_h2:
   construction_time: 3 # Random number of years for now -- CCF
   # Units for cost and energy
   unit: 
-    - cost: 'USD/kWa'
+    - cost: 'USD/kW'
     - energy: '-'
   # Geographical specs: nodes selection, provinces
   # Specify "all" below for all provinces in Canada to be selected, or "custom" for a sub-set of provinces
@@ -328,10 +331,11 @@ meth_h2:
     - cost_level: primary
     - cost_value: 0
   # Emissions specifications
-  emission_factor: 0 #0.00003459
+  emission_factor: 0 #0.0003459
   emission_type: 'CO2_cc'
   capacity_factor: 0.91
   investment_lr: 0.931
+  fixed_cost_lr: 0.931
 
 h2_gas_fc_trp:
   # Technology specs: mode, commodities, description
@@ -359,7 +363,7 @@ h2_gas_fc_trp:
   construction_time: 0
   # Units for cost and energy
   unit: 
-    - cost: 'USD/kWa'
+    - cost: 'USD/kW'
     - energy: '-'
   # Geographical specs: nodes selection, provinces
   # Specify "all" below for all provinces in Canada to be selected, or "custom" for a sub-set of provinces
@@ -373,7 +377,7 @@ h2_gas_fc_trp:
     - cost_value: 2083.5
   fix_cost_2020: 
     - cost_level: primary
-    - cost_value: 105
+    - cost_value: 62.5
   var_cost_2020:
     - cost_level: primary
     - cost_value: 0
@@ -382,3 +386,4 @@ h2_gas_fc_trp:
   emission_type: 'CO2_cc'
   capacity_factor: 0.91
   investment_lr: 0.91625
+  fixed_cost_lr: 0.9169
