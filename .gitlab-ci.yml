@@ -8,6 +8,7 @@ services:
 
 before_script:
   - apt-get update
+  - apt-get install git -y
   - apt-get install default-jdk -y
   - pip install -e . --break-system-packages
   - sed -i 's/option LP = CPLEX ;/option LP = CBC ;/' /usr/local/lib/python3.11/dist-packages/message_ix/model/MESSAGE/auxiliary_settings.gms
