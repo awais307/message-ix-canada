@@ -25,10 +25,10 @@
     solve = true
 
 [post_process]
-    #generate_reporter_output = true
+    generate_reporter_output = true
     generate_new_reporter_output = false
-    generate_legacy_reporter_output = true
-    export_to_xlsx = true # export model file to Excel
+    generate_legacy_reporter_output = false
+    export_to_xlsx = false # export model file to Excel
     generate_pdfs = false # generate results as PDFs
     export_to_csv = false # export reports to CSV
 
