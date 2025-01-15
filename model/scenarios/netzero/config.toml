@@ -28,7 +28,8 @@
     solve = false
 
 [post_process]
-    generate_new_reporter_output = true
+    generate_reporter_output = true
+    generate_new_reporter_output = false
     generate_legacy_reporter_output = true
     export_to_xlsx = false # export reports to Excel
     generate_pdfs = false # generate results as PDFs
