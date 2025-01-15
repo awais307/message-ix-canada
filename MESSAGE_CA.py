@@ -2,8 +2,8 @@ import os
 from pathlib import Path
 import click
 from model.Model import model_MSG
-from model.Plotter import plotter_MSG
-from model.utils import report_to_pyam
+from model.report.Plotter import plotter_MSG
+from model.utlities.utils import report_to_pyam
 
 # Options for the CLI
 @click.command()

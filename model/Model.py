@@ -501,7 +501,6 @@ class model_MSG:
 				print(f"Scenario {caseName} did not solve because of the following exception:\n{solve_error}\n")
 
 			if self.new_reporter:
-				start = time.time()
 				self.generate_report(
 					output_path=f"model/output/{caseName}_new_reporter.csv",
 					min_year=2020,
