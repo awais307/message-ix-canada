@@ -9,8 +9,8 @@
     process_historical_data = false
     add_hydrogen_shares = false
     [pre_process.add_technology]
-        add_techs = false
-        techs = ["h2_atr_ccs"] 
+        add_techs = true
+        techs = ["h2_atr_ccs", "gas_h2", "h2_stor_geo", "liq_h2", "h2_atr", "h2_gas_fc_trp", "meth_h2"] 
 
 [policies]
     apply_obps_netzero = false
@@ -19,10 +19,13 @@
 [data]
     #TODO Add a read_excel boolean to allow also reading directly from the local database
     provincial_input_file = "scenarios/netzero/model_default_netzero_v3.xlsx"
+    
+    # Brendan's config
+    #provincial_input_file = "scenarios/netzero/model_default_netzero_v1.xlsx"
     scenario_folder = "scenarios/netzero"
 
 [model]
-    solve = true
+    solve = false
 
 [post_process]
     generate_new_reporter_output = true

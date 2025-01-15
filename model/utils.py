@@ -162,6 +162,7 @@ def values_calculation(years, provinces, learning_rate, initial_value, tech_life
 	Args:
 		years (list of int): List of years to calculate the values for
 		provinces (list of str): List of province names to calculate the values for
+<<<<<<< HEAD
 		learning_rate (float): The learning rate to use for calculating the fixed costs
 		initial_value (float): The initial value to use as a base for calculation
 		tech_lifetime (int): The lifetime of technology in years
@@ -175,6 +176,21 @@ def values_calculation(years, provinces, learning_rate, initial_value, tech_life
 		Then it iterates over each year and updates the values using the learning rate, assuming that the previous year's value is the base.
 		Finally, it calculates the fixed costs for each province-year combination within a certain technology lifetime (tech_lifetime).
 		The function returns a list of calculated values.
+=======
+        learning_rate (float): The learning rate to use for calculating the fixed costs
+        initial_value (float): The initial value to use as a base for calculation
+        tech_lifetime (int): The lifetime of technology in years
+
+    Returns:
+        list: A list of calculated values, one for each province and year combination
+
+    Description:
+        This auxelary function for map_learning_rate calculates the fixed cost values for each province and year based on the given learning rate.
+        It starts by initializing a dictionary with the initial value for each province-year combination.
+        Then it iterates over each year and updates the values using the learning rate, assuming that the previous year's value is the base.
+        Finally, it calculates the fixed costs for each province-year combination within a certain technology lifetime (tech_lifetime).
+        The function returns a list of calculated values.
+>>>>>>> brendan_dev
 	"""
 
 	dictionary_vals = {f"{prov}.{year}": initial_value for year in years for prov in provinces}
