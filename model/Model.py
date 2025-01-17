@@ -18,6 +18,9 @@ from model.utlities.pop_gdp import process_gdp_population_data, add_population_g
 from model.utlities.demands import adjust_demands
 from model.utlities.report import generate_report
 from model.utlities.historical_activity import balance_import_export, update_historical_activity
+from model.policies.OBPS import apply_obps
+from model.policies.demand_reduction import demand_reduction
+from model.utlities.utils import (read_config_ctx, read_config, map_yv_ya_lt, config_validation, map_learning_rate)
 
 from message_ix_models.util import (
 	broadcast,
@@ -25,10 +28,10 @@ from message_ix_models.util import (
 	same_node,
 	same_time,
 )
+from message_ix_models import Context
 from scipy.optimize import linprog
 from pathlib import Path
 from typing import Union
-from model.utils import (map_yv_ya_lt, config_validation, map_learning_rate)
 from message_ix_models.report.legacy.iamc_report_hackathon import report
 
 warnings.filterwarnings("ignore")  # Ignore warnings to keep the output clean
@@ -82,6 +85,8 @@ class model_MSG:
 				config_path (str): The path to the scenario's config.toml file.
 				config (dict): The configuration loaded from the scenario's config.toml file.
 		"""
+		ctx = Context.get_instance()
+		read_config_ctx(ctx)
 		self.scenario = scenario_name
 		self.sample_config = toml.load(
 			os.path.join(os.getcwd(), "model/scenarios/baseline", "config.toml")
@@ -89,21 +94,7 @@ class model_MSG:
 		self.scenario_path = os.path.join("model/scenarios", scenario_name)
 		self.config_path = os.path.join(self.scenario_path, "config.toml")
 		self.config = toml.load(self.config_path)
-		
-		self.modelName = self.config["general"]["model_name"]
-		self.scenarioName = self.config["general"]["scenario_name"]
-		self.platform_name = self.config["general"]["ix_platform"]
-		self.version = self.config["general"]["version"]
-		self.annotation = self.config["general"]["annotation"]
-		self.process_historical = self.config["pre_process"]["process_historical_data"]
-		self.add_hydrogen_shares_f = self.config["pre_process"]["add_hydrogen_shares"]
-		self.add_obps_baseline = self.config["policies"]["apply_obps_baseline"]
-		self.add_obps_netzero = self.config["policies"]["apply_obps_netzero"]
-		self.new_reporter = self.config["post_process"]["generate_new_reporter_output"]
-		self.legacy_reporter = self.config["post_process"]["generate_legacy_reporter_output"]
-		self.solve = self.config["model"]["solve"]
-		self.to_excel = self.config["post_process"]["export_to_xlsx"]
-		self.add_techs = self.config["pre_process"]["add_technology"]["add_techs"]
+		read_config(self)
 		self.mp = ixmp.Platform(name=self.platform_name, jvmargs=['-Xmx16G'])
 
 	## Scenario creation functions ##
@@ -287,87 +278,6 @@ class model_MSG:
 						)
 
 			self.scenario.commit("Technologies added successfully")
-	
-	def add_hydrogen_shares(self, path: Union[str, Path]):
-		"""
-		Add hydrogen shares to a MESSAGEix scenario.
-
-		This function modifies the provided MESSAGEix scenario to include hydrogen shares.
-		The specific implementation details, such as the hydrogen share percentages and the affected sectors,
-		should be added within this function.
-
-		Args:
-						path (str or Path): Path to the Excel file containing hydrogen share data.
-
-		Returns:
-						None
-
-		Logic: adds hydrogen shares to the MESSAGEix scenario
-		"""
-		add_hydrogen_shares(self, path)
-
-	def process_gdp_population_data(
-		self, path_to_gdp: Union[str, Path], path_to_pop: Union[str, Path]
-	):
-		"""
-		Process GDP and population data for the model.
-
-		Args:
-						path_to_pop (str or Path): Path to the CSV file containing raw population data.
-						path_to_gdp (str or Path): Path to the CSV file containing raw GDP data.
-
-		Returns:
-						pd.DataFrame: DataFrame containing processed GDP, population, and GDP per capita data for each province.
-		"""
-		return process_gdp_population_data(path_to_gdp, path_to_pop)
-	
-	def adjust_demands(self):
-		"""
-		Adjust demands in the scenario based on population and GDP data.
-
-		Args:
-						None
-
-		Returns:
-						pd.DataFrame: DataFrame containing updated demand data.
-		"""
-		return adjust_demands(self)
-		
-	def add_population_gdp_to_scenario(
-		self, population_data: pd.DataFrame, gdp_data: pd.DataFrame
-	):
-		"""
-		Add processed population and GDP data to the scenario.
-
-		Args:
-						population_data (pd.DataFrame): DataFrame containing processed population data.
-						gdp_data (pd.DataFrame): DataFrame containing processed GDP data.
-
-		Logic:
-						Adds the processed population and GDP data to the scenario's 'bound_activity_lo' parameter.
-		"""
-		add_population_gdp_to_scenario(self, population_data, gdp_data)
-
-	def update_historical_activity(self, path: Union[str, Path]):
-		"""
-		Update the historical activity parameter in the scenario with data from a specified path.
-
-		Args:
-						path (str or Path): Path to the historical activity data.
-		"""
-		update_historical_activity(self, path)
-	
-	def balance_import_export(self, historical_activity: pd.DataFrame):
-		"""
-		Balance energy production, import, and export for each province and year.
-
-		Args:
-						historical_activity (pd.DataFrame): DataFrame containing historical activity data for each province and year.
-
-		Returns:
-						pd.DataFrame: DataFrame with balanced import and export values.
-		"""
-		return balance_import_export(self, historical_activity)
 
 	def generate_report(
 		self,
@@ -451,29 +361,37 @@ class model_MSG:
 		scenario_folder = script_dir / self.config["data"]["scenario_folder"]
 		excel_path = script_dir / self.config["data"]["provincial_input_file"]
 		# Update message scenario
+		#TODO: Print statement
+
+		print('\nModel Logs: Setting up scenario\n')
 		self.scenario.read_excel(
 			excel_path, add_units=True, commit_steps=False, init_items=True
 		)
-
+		
 		if self.process_historical:
-			self.update_historical_activity(path=scenario_folder)
+			print('Model Logs: Processing historical data\n')
+			update_historical_activity(self, path=scenario_folder)
 
 		if self.add_hydrogen_shares_f:
+			print('Model Logs: Adding hydrogen shares\n')
 			path_to_hydrogen_data = script_dir / scenario_folder
-			self.add_hydrogen_shares(path=path_to_hydrogen_data)
+			add_hydrogen_shares(self, path=path_to_hydrogen_data)
 
 		
 		# Technologies
 		if self.add_techs:
+			print('Model Logs: Adding technology\n')
 			self.add_technology(techs_file=f"{scenario_folder}/technology.yaml")
 
-		# Set-up policies
-		if self.add_obps_netzero:
-			path_to_obps_data = script_dir / scenario_folder
-			OBPS.apply_obps_netzero(scenario=self.scenario, data_file_path=path_to_obps_data)
-		elif self.add_obps_baseline:
-			path_to_obps_data = script_dir / scenario_folder
-			OBPS.apply_obps(scenario=self.scenario)
+		# Setting up policies 
+
+		# OBPS 
+		if self.apply_obps:
+			print('Model Logs: Applying OBPS\n')	
+			apply_obps(scenario=self.scenario)
+
+		#remove this later
+		demand_reduction(scenario=self.scenario)
 
   
 		end = time.time()

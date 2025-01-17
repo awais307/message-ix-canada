@@ -17,6 +17,96 @@ from math import prod
 #
 #from message_ix_models.data.report.legacy import default_units as def_units
 
+def read_config(model_obj):
+		model_obj.modelName = model_obj.config["general"]["model_name"]
+		model_obj.scenarioName = model_obj.config["general"]["scenario_name"]
+		model_obj.platform_name = model_obj.config["general"]["ix_platform"]
+		model_obj.version = model_obj.config["general"]["version"]
+		model_obj.annotation = model_obj.config["general"]["annotation"]
+		model_obj.process_historical = model_obj.config["pre_process"]["process_historical_data"]
+		model_obj.add_hydrogen_shares_f = model_obj.config["pre_process"]["add_hydrogen_shares"]
+		model_obj.apply_obps = model_obj.config["policies"]["apply_obps"]
+		model_obj.new_reporter = model_obj.config["post_process"]["generate_new_reporter_output"]
+		model_obj.legacy_reporter = model_obj.config["post_process"]["generate_legacy_reporter_output"]
+		model_obj.solve = model_obj.config["model"]["solve"]
+		model_obj.to_excel = model_obj.config["post_process"]["export_to_xlsx"]
+		model_obj.add_techs = model_obj.config["pre_process"]["add_technology"]["add_techs"]
+
+def read_config_ctx(ctx, config_file="ModelSetup_CA_baseline.xlsx", dir_path="model/scenarios/baseline", verbose=False):
+		path = os.path.join(os.getcwd(), dir_path, config_file)
+
+		if verbose:
+			print(f"Reading configuration from {path}")
+
+		# Excel setup file
+		file = pd.ExcelFile(path)
+
+		# ------------------
+		# Configure scenario
+		# ------------------
+
+		df = file.parse("scenario_config").set_index("item")
+		# Assign platform arguments and load platform
+		platform_args = {}
+		platform_rows = df.loc["platform"]
+		for sub_item in platform_rows["sub-item"].tolist():
+			platform_args[sub_item] = platform_rows.loc[
+				platform_rows["sub-item"] == sub_item, "argument"
+			].iloc[0]
+		ctx.platform_info = platform_args
+		#self.mp = ctx.get_platform()
+
+		# Assign source_scenario arguments and load source scenario
+		base_args = {}
+		base_rows = df.loc["source_scenario"]
+		for sub_item in base_rows["sub-item"].tolist():
+			base_args[sub_item] = base_rows.loc[
+				base_rows["sub-item"] == sub_item, "argument"
+			].iloc[0]
+		ctx.source_scenario = base_args
+
+		# Assign policy_config arguments 
+		policy_configs = {}
+		policy_configs_rows = df.loc["policy_config"]
+		for sub_item in policy_configs_rows["sub-item"].tolist():
+			policy_configs[sub_item] = policy_configs_rows.loc[
+				policy_configs_rows["sub-item"] == sub_item, "argument"
+			].iloc[0]
+		ctx.policy_config = policy_configs
+
+		# Assign post_process_config arguments 
+		# post_process_config = {}
+		# post_process_config_rows = df.loc["post_process_config"]
+		# for sub_item in post_process_config_rows["sub-item"].tolist():
+		# 	# post_process_config[sub_item] = policy_configs_rows.loc[
+		# 	# 	post_process_config_rows["sub-item"] == sub_item, "argument"
+		# 	# ].iloc[0]
+		# 	post_process_config[sub_item] = policy_configs_rows[
+		# 		post_process_config_rows["sub-item"] == sub_item
+		# 	]["argument"]
+		# ctx.post_process_config = post_process_config
+
+		for i in df.index:
+			# Omit an entries for which specific routines have been defined.
+			if i in ["source_scenario", "platform"]:
+				continue
+			# Treat any entries which are True and interpreted as "1"
+			if i in ["regional_mapping_manual"]:
+				ctx[i] = True if df.loc[i, "argument"] == 1 else False
+			# Go over remaining entries
+			else:
+				# Try to evaluate - in case of a list for example
+				try:
+					ctx[i] = eval(df.loc[i, "argument"])
+				# Or, simply assign value
+				except Exception:
+					ctx[i] = df.loc[i, "argument"]
+			# Lastly, ensure that all NaNs are turned into None
+			try:
+				if pd.isnull(ctx[i]):
+					ctx[i] = None
+			except Exception:
+				pass
 
 def config_validation(config_path: str):
 		"""
@@ -162,13 +252,13 @@ def values_calculation(years, provinces, learning_rate, initial_value, tech_life
 	Args:
 		years (list of int): List of years to calculate the values for
 		provinces (list of str): List of province names to calculate the values for
-        learning_rate (float): The learning rate to use for calculating the fixed costs
-        initial_value (float): The initial value to use as a base for calculation
-        tech_lifetime (int): The lifetime of technology in years
+		learning_rate (float): The learning rate to use for calculating the fixed costs
+		initial_value (float): The initial value to use as a base for calculation
+		tech_lifetime (int): The lifetime of technology in years
 
-    Returns:
-        list: A list of calculated values, one for each province and year combination
-
+	Returns:
+		list: A list of calculated values, one for each province and year combination
+		
     Description:
         This auxelary function for map_learning_rate calculates the fixed cost values for each province and year based on the given learning rate.
         It starts by initializing a dictionary with the initial value for each province-year combination.
