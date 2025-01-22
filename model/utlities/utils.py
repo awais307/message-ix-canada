@@ -23,14 +23,14 @@ def read_config(model_obj):
 		model_obj.platform_name = model_obj.config["general"]["ix_platform"]
 		model_obj.version = model_obj.config["general"]["version"]
 		model_obj.annotation = model_obj.config["general"]["annotation"]
-		model_obj.process_historical = model_obj.config["pre_process"]["process_historical_data"]
-		model_obj.add_hydrogen_shares_f = model_obj.config["pre_process"]["add_hydrogen_shares"]
-		model_obj.apply_obps = model_obj.config["policies"]["apply_obps"]
+		# model_obj.process_historical = model_obj.config["pre_process"]["process_historical_data"]
+		# model_obj.add_hydrogen_shares_f = model_obj.config["pre_process"]["add_hydrogen_shares"]
+		# model_obj.apply_obps = model_obj.config["policies"]["apply_obps"]
 		model_obj.new_reporter = model_obj.config["post_process"]["generate_new_reporter_output"]
 		model_obj.legacy_reporter = model_obj.config["post_process"]["generate_legacy_reporter_output"]
 		model_obj.solve = model_obj.config["model"]["solve"]
 		model_obj.to_excel = model_obj.config["post_process"]["export_to_xlsx"]
-		model_obj.add_techs = model_obj.config["pre_process"]["add_technology"]["add_techs"]
+		# model_obj.add_techs = model_obj.config["pre_process"]["add_technology"]["add_techs"]
 
 def read_config_ctx(ctx, config_file="ModelSetup_CA_baseline.xlsx", dir_path="model/scenarios/baseline", verbose=False):
 		path = os.path.join(os.getcwd(), dir_path, config_file)
@@ -55,7 +55,6 @@ def read_config_ctx(ctx, config_file="ModelSetup_CA_baseline.xlsx", dir_path="mo
 			].iloc[0]
 
 		ctx.ITC_input_csv_file = "./data/assumptions_database_example(ITCs).csv"
-		ctx.investment_tax_credit = True
 
 		ctx.platform_info = platform_args
 		#self.mp = ctx.get_platform()
@@ -70,13 +69,11 @@ def read_config_ctx(ctx, config_file="ModelSetup_CA_baseline.xlsx", dir_path="mo
 		ctx.source_scenario = base_args
 
 		# Assign policy_config arguments 
-		policy_configs = {}
 		policy_configs_rows = df.loc["policy_config"]
 		for sub_item in policy_configs_rows["sub-item"].tolist():
-			policy_configs[sub_item] = policy_configs_rows.loc[
+			ctx[sub_item] = bool(policy_configs_rows.loc[
 				policy_configs_rows["sub-item"] == sub_item, "argument"
-			].iloc[0]
-		ctx.policy_config = policy_configs
+			].iloc[0])
 
 		# Assign post_process_config arguments 
 		# post_process_config = {}

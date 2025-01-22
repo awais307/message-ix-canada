@@ -374,34 +374,34 @@ class model_MSG:
 			excel_path, add_units=True, commit_steps=False, init_items=True
 		)
 		
-		if self.process_historical:
+		if ctx.process_historical:
 			print('Model Logs: Processing historical data\n')
 			update_historical_activity(self, path=scenario_folder)
 
-		if self.add_hydrogen_shares_f:
+		if ctx.add_hydrogen_shares_f:
 			print('Model Logs: Adding hydrogen shares\n')
 			path_to_hydrogen_data = script_dir / scenario_folder
 			add_hydrogen_shares(self, path=path_to_hydrogen_data)
 
 		
 		# Technologies
-		if self.add_techs:
+		if ctx.add_techs:
 			print('Model Logs: Adding technology\n')
 			self.add_technology(techs_file=f"{scenario_folder}/technology.yaml")
 
 		# Setting up policies 
 
 		# OBPS 
-		if self.apply_obps:
+		if ctx.apply_obps:
 			print('Model Logs: Applying OBPS\n')	
 			#apply_obps(scenario=self.scenario)
 		
-		if ctx.investment_tax_credit :
+		if ctx.investment_tax_credit:
 			print('Model Logs: Applying Investment Tax Credit\n')	
 			add_investment_tax_credit(scenario=self.scenario)
 			
 		#remove this later
-		demand_reduction(scenario=self.scenario)
+		#demand_reduction(scenario=self.scenario)
 
   
 		end = time.time()

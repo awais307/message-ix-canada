@@ -3,6 +3,7 @@ import pandas as pd
 
 from scipy.optimize import linprog
 from pathlib import Path
+from model.utlities.pop_gdp import process_gdp_population_data
 
 
 def adjust_demands(model_obj):
@@ -18,14 +19,14 @@ def adjust_demands(model_obj):
 
 		# Define directories for data storage
 		script_dir = Path(__file__).resolve().parent
-		data_dir = script_dir / "../data"
+		data_dir = script_dir / "../../data"
 
 		# File paths for GDP and population data
 		gdp_data = data_dir / "gdp/gdp_messageca_prov.csv"
 		population_data = data_dir / "population/pop_messageca_prov.csv"
 
 		# Process GDP and population data for use in the scenario
-		ssp_df = model_obj.process_gdp_population_data(gdp_data, population_data)
+		ssp_df = process_gdp_population_data(gdp_data, population_data)
 
 		# Retrieve demand data from the scenario
 		demand = model_obj.scenario.par("demand")
