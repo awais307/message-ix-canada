@@ -53,6 +53,10 @@ def read_config_ctx(ctx, config_file="ModelSetup_CA_baseline.xlsx", dir_path="mo
 			platform_args[sub_item] = platform_rows.loc[
 				platform_rows["sub-item"] == sub_item, "argument"
 			].iloc[0]
+
+		ctx.ITC_input_csv_file = "./data/assumptions_database_example(ITCs).csv"
+		ctx.investment_tax_credit = True
+
 		ctx.platform_info = platform_args
 		#self.mp = ctx.get_platform()
 

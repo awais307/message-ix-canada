@@ -20,6 +20,7 @@ from model.utlities.report import generate_report
 from model.utlities.historical_activity import balance_import_export, update_historical_activity
 from model.policies.OBPS import apply_obps
 from model.policies.demand_reduction import demand_reduction
+from model.policies.investment_tax_credit import add_investment_tax_credit
 from model.utlities.utils import (read_config_ctx, read_config, map_yv_ya_lt, config_validation, map_learning_rate)
 
 from message_ix_models.util import (
@@ -87,7 +88,10 @@ class model_MSG:
 		"""
 		ctx = Context.get_instance()
 		read_config_ctx(ctx)
+		
 		self.scenario = scenario_name
+		ctx.scenario = self.scenario
+
 		self.sample_config = toml.load(
 			os.path.join(os.getcwd(), "model/scenarios/baseline", "config.toml")
 		)
@@ -339,6 +343,8 @@ class model_MSG:
 		# Config verification:
 		config_validation(self.config_path)
 
+		ctx = Context.get_instance()
+
 		# Scenario set-up
 		start = time.time()
 		
@@ -388,8 +394,12 @@ class model_MSG:
 		# OBPS 
 		if self.apply_obps:
 			print('Model Logs: Applying OBPS\n')	
-			apply_obps(scenario=self.scenario)
-
+			#apply_obps(scenario=self.scenario)
+		
+		if ctx.investment_tax_credit :
+			print('Model Logs: Applying Investment Tax Credit\n')	
+			add_investment_tax_credit(scenario=self.scenario)
+			
 		#remove this later
 		demand_reduction(scenario=self.scenario)
 

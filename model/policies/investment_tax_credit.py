@@ -6,6 +6,17 @@ including hydrogen shares, federal carbon tax, coal phase-out, and investment ta
 import pandas as pd
 import numpy as np
 from pathlib import Path
+from message_ix_models import Context
+
+def disect_years(scenario_years, itc_input_df, ITC, tech):
+    scenario_years = scenario_years[scenario_years['technology'] == tech]['year_vtg'].unique()
+    itc_policy_years_filtered = itc_input_df[itc_input_df['variable'] == ITC]['time'].unique()
+    return [year for year in scenario_years if year in scenario_years and year in itc_policy_years_filtered]
+
+def par_tech_to_itc_rate(ITC, technologies, inv_cost_par_df, itc_input_df, itc_input_dict):
+    return {
+        tech: {year: itc_input_dict[ITC][year] for year in disect_years(inv_cost_par_df, itc_input_df, ITC, tech)} for tech in technologies['technology'].unique()
+    }
 
 def add_investment_tax_credit(scenario):
     """
@@ -21,5 +32,59 @@ def add_investment_tax_credit(scenario):
     Returns:
         None
     """
+    ctx = Context.get_instance()
     
-    pass
+    itc_input_df = pd.read_csv(ctx.ITC_input_csv_file)
+    itc_input_df['value'] = itc_input_df['value'].fillna(0)
+    itc_input_dict = {
+        variable: {row[1]['time']:row[1]['value'] for row in itc_input_df[itc_input_df['variable']==variable].iterrows()} for variable in itc_input_df['variable'].unique()
+    }
+
+    inv_cost_par_df = scenario.par('inv_cost')
+
+    # for CCUS and CCS technologies in the inv_cost parameter
+    ITC = "Input|Policy|ITCs|CCUS"
+    inv_cost_par_filtered_ccus_df =  inv_cost_par_df[inv_cost_par_df['technology'].str.contains('ccs')]
+    tecnologies_filtered_ccus = inv_cost_par_filtered_ccus_df['technology'].unique()
+    par_tech_to_itc_rate_ccus_dict = par_tech_to_itc_rate(ITC, inv_cost_par_filtered_ccus_df, inv_cost_par_df, itc_input_df, itc_input_dict)
+
+    #for Clean Technology and CCS technologies in the inv_cost parameter
+    '''
+    ITC = "Input|Policy|ITCs|Clean Technology"
+    inv_cost_par_filtered_df =  inv_cost_par_df[inv_cost_par_df['technology'].str.contains('ccs')]
+    tecnologies_filtered_clean_tech = inv_cost_par_filtered_df['technology'].unique()
+    par_tech_to_itc_rate_clean_tech_dict = par_tech_to_itc_rate(ITC, inv_cost_par_filtered_df, inv_cost_par_df, itc_input_df, itc_input_dict)
+    '''
+
+    #for Clean Hydrogen and green hydrogen technologies in the inv_cost parameter
+    ITC = "Input|Policy|ITCs|Clean Hydrogen"
+    inv_cost_par_filtered_clean_h_df =  inv_cost_par_df[inv_cost_par_df['technology'].str.contains('h2_elec')]
+    tecnologies_filtered_clean_h = inv_cost_par_filtered_clean_h_df['technology'].unique()
+    par_tech_to_itc_rate_clean_h_dict = par_tech_to_itc_rate(ITC, inv_cost_par_filtered_clean_h_df, inv_cost_par_df, itc_input_df, itc_input_dict)
+
+    for index, row in inv_cost_par_df.iterrows():
+        tech = row['technology']
+        year = row['year_vtg']
+
+        if tech in tecnologies_filtered_ccus and year in par_tech_to_itc_rate_ccus_dict[tech].keys(): #CCUS
+            inv_cost_par_df.iloc[index, 3] *= (100 - par_tech_to_itc_rate_ccus_dict[tech][year])/100
+
+        if tech in tecnologies_filtered_clean_h and year in par_tech_to_itc_rate_clean_h_dict[tech].keys(): #Clean Hydrogen
+            inv_cost_par_df.iloc[index, 3] *= (100 - par_tech_to_itc_rate_clean_h_dict[tech][year])/100
+
+    scenario.check_out()
+    scenario.add_par('inv_cost', inv_cost_par_df)
+    scenario.commit('Applying ITC policies')
+
+    print(
+        f"{'#' * 100}\n Added ITC policy to the model!\n{'#' * 100}"
+    )
+    
+    # for tech in itc_changes_df[]:
+    #     print(tech)
+    # if variable == 'Input|Clean Technology CCUS':
+    #     df.loc[df['technology'].str.contains('ccs')]['value'] *= (100- val)/100
+    # elif variable == 'Clean technlogy ':
+    #     tec_llist = ['']
+    # elif variable == 'Clean Hydrogen' :
+    # df
