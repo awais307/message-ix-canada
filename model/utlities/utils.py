@@ -55,7 +55,6 @@ def read_config_ctx(ctx, config_file="ModelSetup_CA_baseline.xlsx", dir_path="mo
 			].iloc[0]
 
 		ctx.ITC_input_csv_file = "./data/assumptions_database_example(ITCs).csv"
-
 		ctx.platform_info = platform_args
 		#self.mp = ctx.get_platform()
 

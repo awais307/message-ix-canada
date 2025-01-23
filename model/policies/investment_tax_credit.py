@@ -33,6 +33,8 @@ def add_investment_tax_credit(scenario):
         None
     """
     ctx = Context.get_instance()
+
+    clean_tecnologies = ['wind_cv1', 'wind_cv2', 'wind_cv3', 'wind_cv4', 'wind_ppf', 'wind_ppl', 'solar_cv1', 'solar_cv2', 'solar_cv3', 'solar_cv4', 'solar_i', 'solar_pv_ppl', 'solar_th_ppl', 'solar_th_ppl__air', 'solar_th_ppl__cl_fresh', 'solar_th_ppl__ot_fresh', 'solar_th_ppl__ot_saline', 'hydro_hc', 'hydro_lc']
     
     itc_input_df = pd.read_csv(ctx.ITC_input_csv_file)
     itc_input_df['value'] = itc_input_df['value'].fillna(0)
@@ -49,12 +51,10 @@ def add_investment_tax_credit(scenario):
     par_tech_to_itc_rate_ccus_dict = par_tech_to_itc_rate(ITC, inv_cost_par_filtered_ccus_df, inv_cost_par_df, itc_input_df, itc_input_dict)
 
     #for Clean Technology and CCS technologies in the inv_cost parameter
-    '''
     ITC = "Input|Policy|ITCs|Clean Technology"
-    inv_cost_par_filtered_df =  inv_cost_par_df[inv_cost_par_df['technology'].str.contains('ccs')]
-    tecnologies_filtered_clean_tech = inv_cost_par_filtered_df['technology'].unique()
-    par_tech_to_itc_rate_clean_tech_dict = par_tech_to_itc_rate(ITC, inv_cost_par_filtered_df, inv_cost_par_df, itc_input_df, itc_input_dict)
-    '''
+    inv_cost_par_filtered_clean_tech_df =  inv_cost_par_df[inv_cost_par_df['technology'].isin(clean_tecnologies)]
+    tecnologies_filtered_clean_tech = inv_cost_par_filtered_clean_tech_df['technology'].unique()
+    par_tech_to_itc_rate_clean_tech_dict = par_tech_to_itc_rate(ITC, inv_cost_par_filtered_clean_tech_df, inv_cost_par_df, itc_input_df, itc_input_dict)
 
     #for Clean Hydrogen and green hydrogen technologies in the inv_cost parameter
     ITC = "Input|Policy|ITCs|Clean Hydrogen"
@@ -71,6 +71,9 @@ def add_investment_tax_credit(scenario):
 
         if tech in tecnologies_filtered_clean_h and year in par_tech_to_itc_rate_clean_h_dict[tech].keys(): #Clean Hydrogen
             inv_cost_par_df.iloc[index, 3] *= (100 - par_tech_to_itc_rate_clean_h_dict[tech][year])/100
+
+        if tech in tecnologies_filtered_clean_tech and year in par_tech_to_itc_rate_clean_tech_dict[tech].keys(): #Clean Technology
+            inv_cost_par_df.iloc[index, 3] *= (100 - par_tech_to_itc_rate_clean_tech_dict[tech][year])/100
 
     scenario.check_out()
     scenario.add_par('inv_cost', inv_cost_par_df)

@@ -10,8 +10,6 @@ import toml
 import yaml
 import os
 import time
-import pandas as pd
-import pyam
 import warnings
 from model.policies.hydrogen_shares import add_hydrogen_shares
 from model.utlities.pop_gdp import process_gdp_population_data, add_population_gdp_to_scenario
@@ -30,9 +28,7 @@ from message_ix_models.util import (
 	same_time,
 )
 from message_ix_models import Context
-from scipy.optimize import linprog
 from pathlib import Path
-from typing import Union
 from message_ix_models.report.legacy.iamc_report_hackathon import report
 
 warnings.filterwarnings("ignore")  # Ignore warnings to keep the output clean
