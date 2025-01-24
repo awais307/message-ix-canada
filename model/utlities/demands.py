@@ -29,7 +29,7 @@ def adjust_demands(model_obj):
 		ssp_df = process_gdp_population_data(gdp_data, population_data)
 
 		# Retrieve demand data from the scenario
-		demand = model_obj.scenario.par("demand")
+		demand = model_obj.ctx.source_scenario['scenario'].par("demand")
 
 		# Group demand data by specific columns and aggregate it at the 'Canada' level
 		df_ca = (
@@ -49,7 +49,7 @@ def adjust_demands(model_obj):
 		pc = pc[["year", "commodity", "pct_change"]]  # Keep only relevant columns
 
 		# Retrieve historical activity data from the scenario
-		hist_act_df = model_obj.scenario.par("historical_activity")
+		hist_act_df = model_obj.ctx.source_scenario['scenario'].par("historical_activity")
 
 		# Initialize dictionary and lists for storing demands and relevant years
 		dmds_dict = {}
@@ -221,10 +221,10 @@ def adjust_demands(model_obj):
 		dmds.drop(columns=["ei", "gdp", "gdpc"], inplace=True)
 
 		# Update the scenario with the new demand data
-		model_obj.scenario.check_out()
-		df = model_obj.scenario.par("demand")
-		model_obj.scenario.remove_par("demand", df)
-		model_obj.scenario.add_par("demand", dmds)
+		model_obj.ctx.source_scenario['scenario'].check_out()
+		df = model_obj.ctx.source_scenario['scenario'].par("demand")
+		model_obj.ctx.source_scenario['scenario'].remove_par("demand", df)
+		model_obj.ctx.source_scenario['scenario'].add_par("demand", dmds)
 
 		# Commit the changes to the scenario
-		model_obj.scenario.commit("Updated demands")
+		model_obj.ctx.source_scenario['scenario'].commit("Updated demands")

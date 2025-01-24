@@ -19,7 +19,7 @@ def add_hydrogen_shares(model_obj, path: Union[str, Path]):
 		Logic: adds hydrogen shares to the MESSAGEix scenario
 		"""
 		# Checkout the scenario for editing
-		model_obj.scenario.check_out()
+		model_obj.ctx.source_scenario['scenario'].check_out()
 
 		# Resolve the path to the hydrogen shares Excel file
 		path = Path(path)
@@ -35,7 +35,7 @@ def add_hydrogen_shares(model_obj, path: Union[str, Path]):
 			print(f"Sheet name: {sheet_name}")
 
 			# Check if the sheet name corresponds to a set in the scenario
-			if sheet_name in model_obj.scenario.set_list():
+			if sheet_name in model_obj.ctx.source_scenario['scenario'].set_list():
 				# Skip 'cat_tec' as it should not be modified
 				if sheet_name == "cat_tec":
 					continue
@@ -43,20 +43,20 @@ def add_hydrogen_shares(model_obj, path: Union[str, Path]):
 
 				# Add data to the set; handle 'type_tec' and 'shares' specifically
 				if sheet_name in ["type_tec", "shares"]:
-					model_obj.scenario.add_set(sheet_name, df[sheet_name])
+					model_obj.ctx.source_scenario['scenario'].add_set(sheet_name, df[sheet_name])
 				else:
-					model_obj.scenario.add_set(sheet_name, df)
+					model_obj.ctx.source_scenario['scenario'].add_set(sheet_name, df)
 
 			# Check if the sheet name corresponds to a parameter in the scenario
-			elif sheet_name in model_obj.scenario.par_list():
-				model_obj.scenario.add_par(sheet_name, df)
+			elif sheet_name in model_obj.ctx.source_scenario['scenario'].par_list():
+				model_obj.ctx.source_scenario['scenario'].add_par(sheet_name, df)
 				print("par", sheet_name)
 
 		# Commit the changes to the scenario with a descriptive message
-		model_obj.scenario.commit("Updated scenario to include hydrogen shares")
+		model_obj.ctx.source_scenario['scenario'].commit("Updated scenario to include hydrogen shares")
 
 		# Print the unique values of the 'shares' column in the 'share_commodity_lo' parameter
-		print(model_obj.scenario.par("share_commodity_lo")["shares"].unique())
+		print(model_obj.ctx.source_scenario['scenario'].par("share_commodity_lo")["shares"].unique())
 
 		# Optional: Uncomment the line below to print the unique 'shares' values again
 		# print(scenario.par("share_commodity_lo")['shares'].unique())

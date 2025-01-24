@@ -18,7 +18,7 @@ def par_tech_to_itc_rate(ITC, technologies, inv_cost_par_df, itc_input_df, itc_i
         tech: {year: itc_input_dict[ITC][year] for year in disect_years(inv_cost_par_df, itc_input_df, ITC, tech)} for tech in technologies['technology'].unique()
     }
 
-def add_investment_tax_credit(scenario):
+def add_investment_tax_credit(model_obj):
     """
     Add an investment tax credit to a MESSAGEix scenario.
 
@@ -32,17 +32,16 @@ def add_investment_tax_credit(scenario):
     Returns:
         None
     """
-    ctx = Context.get_instance()
 
     clean_tecnologies = ['wind_cv1', 'wind_cv2', 'wind_cv3', 'wind_cv4', 'wind_ppf', 'wind_ppl', 'solar_cv1', 'solar_cv2', 'solar_cv3', 'solar_cv4', 'solar_i', 'solar_pv_ppl', 'solar_th_ppl', 'solar_th_ppl__air', 'solar_th_ppl__cl_fresh', 'solar_th_ppl__ot_fresh', 'solar_th_ppl__ot_saline', 'hydro_hc', 'hydro_lc']
     
-    itc_input_df = pd.read_csv(ctx.ITC_input_csv_file)
+    itc_input_df = pd.read_csv(model_obj.ctx.path['ITC_policy_input_data'])
     itc_input_df['value'] = itc_input_df['value'].fillna(0)
     itc_input_dict = {
         variable: {row[1]['time']:row[1]['value'] for row in itc_input_df[itc_input_df['variable']==variable].iterrows()} for variable in itc_input_df['variable'].unique()
     }
 
-    inv_cost_par_df = scenario.par('inv_cost')
+    inv_cost_par_df = model_obj.ctx.source_scenario['scenario'].par('inv_cost')
 
     # for CCUS and CCS technologies in the inv_cost parameter
     ITC = "Input|Policy|ITCs|CCUS"
@@ -75,19 +74,10 @@ def add_investment_tax_credit(scenario):
         if tech in tecnologies_filtered_clean_tech and year in par_tech_to_itc_rate_clean_tech_dict[tech].keys(): #Clean Technology
             inv_cost_par_df.iloc[index, 3] *= (100 - par_tech_to_itc_rate_clean_tech_dict[tech][year])/100
 
-    scenario.check_out()
-    scenario.add_par('inv_cost', inv_cost_par_df)
-    scenario.commit('Applying ITC policies')
+    model_obj.ctx.source_scenario['scenario'].check_out()
+    model_obj.ctx.source_scenario['scenario'].add_par('inv_cost', inv_cost_par_df)
+    model_obj.ctx.source_scenario['scenario'].commit('Applying ITC policies')
 
     print(
         f"{'#' * 100}\n Added ITC policy to the model!\n{'#' * 100}"
     )
-    
-    # for tech in itc_changes_df[]:
-    #     print(tech)
-    # if variable == 'Input|Clean Technology CCUS':
-    #     df.loc[df['technology'].str.contains('ccs')]['value'] *= (100- val)/100
-    # elif variable == 'Clean technlogy ':
-    #     tec_llist = ['']
-    # elif variable == 'Clean Hydrogen' :
-    # df

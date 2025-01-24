@@ -19,7 +19,7 @@ from model.utlities.historical_activity import balance_import_export, update_his
 from model.policies.OBPS import apply_obps
 from model.policies.demand_reduction import demand_reduction
 from model.policies.investment_tax_credit import add_investment_tax_credit
-from model.utlities.utils import (read_config_ctx, read_config, map_yv_ya_lt, config_validation, map_learning_rate)
+from model.utlities.utils import (read_config_ctx, map_yv_ya_lt, config_validation, map_learning_rate)
 
 from message_ix_models.util import (
 	broadcast,
@@ -83,19 +83,20 @@ class model_MSG:
 				config (dict): The configuration loaded from the scenario's config.toml file.
 		"""
 		ctx = Context.get_instance()
-		read_config_ctx(ctx)
-		
-		self.scenario = scenario_name
-		ctx.scenario = self.scenario
 
-		self.sample_config = toml.load(
-			os.path.join(os.getcwd(), "model/scenarios/baseline", "config.toml")
-		)
 		self.scenario_path = os.path.join("model/scenarios", scenario_name)
-		self.config_path = os.path.join(self.scenario_path, "config.toml")
-		self.config = toml.load(self.config_path)
-		read_config(self)
-		self.mp = ixmp.Platform(name=self.platform_name, jvmargs=['-Xmx16G'])
+
+		read_config_ctx(ctx, dir_path=self.scenario_path)
+
+		self.ctx = ctx
+		
+		self.ctx.source_scenario['scenario'] = scenario_name
+
+		# self.sample_config = toml.load(
+		# 	os.path.join(os.getcwd(), "model/scenarios/baseline", "config.toml")
+		# )
+
+		self.ctx.mp = ixmp.Platform(name=self.ctx.platform['name'], jvmargs=[self.ctx.platform['jvmargs']])
 
 	## Scenario creation functions ##
 	def add_technology(
@@ -110,22 +111,22 @@ class model_MSG:
 
 		Logic: Creates the corresponding technology inside MESSAGE
 		"""
-		self.scenario.check_out()
+		self.ctx.source_scenario['scenario'].check_out()
 
-		tech_config = self.config["pre_process"]["add_technology"]
+		tech_list = self.ctx['policy_config']['add_technology_techs']
 
-		years = self.scenario.set("year").astype(int).to_list()[14:]
-		first_year = self.scenario.firstmodelyear
+		years = self.ctx.source_scenario['scenario'].set("year").astype(int).to_list()[14:]
+		first_year = self.ctx.source_scenario['scenario'].firstmodelyear
 
 		# Read file from path and convert to dictionary
 		with open(techs_file) as data:
 			technologies = yaml.safe_load(data)
 			for tech, tech_data in technologies.items():
-				if tech in tech_config["techs"]:
-					self.scenario.add_set("technology", tech)
+				if tech in tech_list:
+					self.ctx.source_scenario['scenario'].add_set("technology", tech)
 
 					if tech_data["node_select"] == "all":
-						provinces = self.scenario.set("node").to_list()[2:]
+						provinces = self.ctx.source_scenario['scenario'].set("node").to_list()[2:]
 					elif tech_data["node_select"] == "custom":
 						provinces = tech_data["provinces"]
 					else:
@@ -161,7 +162,7 @@ class model_MSG:
 						.pipe(same_node)
 						.pipe(same_time)
 					)
-					self.scenario.add_par("input", input_df)
+					self.ctx.source_scenario['scenario'].add_par("input", input_df)
 
 					# output dataframe
 					output_df = (
@@ -190,7 +191,7 @@ class model_MSG:
 						.pipe(same_node)
 						.pipe(same_time)
 					)
-					self.scenario.add_par("output", output_df)
+					self.ctx.source_scenario['scenario'].add_par("output", output_df)
 
 					# variable cost
 					var_cost_df = message_ix.make_df(
@@ -205,7 +206,7 @@ class model_MSG:
 						broadcast,
 						map_yv_ya_lt(years, tech_data["tec_lifetime"], first_year),
 					)
-					self.scenario.add_par("var_cost", var_cost_df)
+					self.ctx.source_scenario['scenario'].add_par("var_cost", var_cost_df)
 
 										# fixed cost
 					fix_cost_df = message_ix.make_df(
@@ -223,7 +224,7 @@ class model_MSG:
 							initial_cost=tech_data["fix_cost_2020"][1]["cost_value"], 
     						cost_type="fixed", years=years, tech_lifetime=tech_data["tec_lifetime"]
         			)
-					self.scenario.add_par("fix_cost", fix_cost_df)
+					self.ctx.source_scenario['scenario'].add_par("fix_cost", fix_cost_df)
 
 					# investment cost
 					inv_cost_df = message_ix.make_df(
@@ -237,7 +238,7 @@ class model_MSG:
 						unit=tech_data["unit"][0]["cost"],
 					).pipe(broadcast, map_learning_rate(provinces=provinces,initial_cost=tech_data["inv_cost_2020"][1]["cost_value"], l_rate=tech_data["investment_lr"], cost_type="investment", years=years, tech_lifetime=tech_data["tec_lifetime"]))
 					inv_cost_df["year_vtg"] = inv_cost_df["year_vtg"].astype(int)
-					self.scenario.add_par("inv_cost", inv_cost_df)
+					self.ctx.source_scenario['scenario'].add_par("inv_cost", inv_cost_df)
 
 					# emission factor
 					emission_factor_df = message_ix.make_df(
@@ -252,7 +253,7 @@ class model_MSG:
 						broadcast,
 						map_yv_ya_lt(years, tech_data["tec_lifetime"], first_year),
 					)
-					self.scenario.add_par("emission_factor", emission_factor_df)
+					self.ctx.source_scenario['scenario'].add_par("emission_factor", emission_factor_df)
 
 					# construction time
 					for i, j in zip(
@@ -265,19 +266,19 @@ class model_MSG:
 							technical_lifetime=tech_data["tec_lifetime"],
 							construction_time=tech_data["construction_time"],
 						)
-						self.scenario.add_par(
+						self.ctx.source_scenario['scenario'].add_par(
 							"capacity_factor", tec_construction_df["capacity_factor"]
 						)
-						self.scenario.add_par(
+						self.ctx.source_scenario['scenario'].add_par(
 							"technical_lifetime",
 							tec_construction_df["technical_lifetime"],
 						)
-						self.scenario.add_par(
+						self.ctx.source_scenario['scenario'].add_par(
 							"construction_time",
 							tec_construction_df["construction_time"],
 						)
 
-			self.scenario.commit("Technologies added successfully")
+			self.ctx.source_scenario['scenario'].commit("Technologies added successfully")
 
 	def generate_report(
 		self,
@@ -337,9 +338,7 @@ class model_MSG:
 		"""
 
 		# Config verification:
-		config_validation(self.config_path)
-
-		ctx = Context.get_instance()
+		config_validation(self.ctx.config_path)
 
 		# Scenario set-up
 		start = time.time()
@@ -347,57 +346,57 @@ class model_MSG:
 		# TODO add option for SSP
 		# ssp = 'SSP2'
 
-		self.scenario = message_ix.Scenario(
-		self.mp, self.modelName, self.scenarioName, version=self.version, annotation=self.annotation
+		self.ctx.source_scenario['scenario'] = message_ix.Scenario(
+		self.ctx.mp, self.ctx.source_scenario['model'], self.ctx.source_scenario['scenario'], version=self.ctx.source_scenario['version'], annotation=self.ctx.source_scenario['annotation']
 		)
 
 		caseName = (
-			self.scenario.model
+			self.ctx.source_scenario['scenario'].model
 			+ "__"
-			+ self.scenario.scenario
+			+ self.ctx.source_scenario['scenario'].scenario
 			+ "__v"
-			+ str(self.scenario.version)
+			+ str(self.ctx.source_scenario['scenario'].version)
 		)
 
 		script_dir = Path(__file__).resolve().parent
-		scenario_folder = script_dir / self.config["data"]["scenario_folder"]
-		excel_path = script_dir / self.config["data"]["provincial_input_file"]
+		scenario_folder = script_dir /  self.ctx['path']['scenario_folder']
+		excel_path = script_dir / self.ctx['path']['provincial_input_file']
 		# Update message scenario
 		#TODO: Print statement
 
 		print('\nModel Logs: Setting up scenario\n')
-		self.scenario.read_excel(
+		self.ctx.source_scenario['scenario'].read_excel(
 			excel_path, add_units=True, commit_steps=False, init_items=True
 		)
 		
-		if ctx.process_historical:
+		if self.ctx.policy_config['process_historical']:
 			print('Model Logs: Processing historical data\n')
 			update_historical_activity(self, path=scenario_folder)
 
-		if ctx.add_hydrogen_shares_f:
+		if self.ctx.policy_config['add_hydrogen_shares_f']:
 			print('Model Logs: Adding hydrogen shares\n')
 			path_to_hydrogen_data = script_dir / scenario_folder
 			add_hydrogen_shares(self, path=path_to_hydrogen_data)
 
 		
 		# Technologies
-		if ctx.add_techs:
+		if self.ctx.policy_config['add_techs']:
 			print('Model Logs: Adding technology\n')
 			self.add_technology(techs_file=f"{scenario_folder}/technology.yaml")
 
 		# Setting up policies 
 
 		# OBPS 
-		if ctx.apply_obps:
+		if self.ctx.policy_config['apply_obps']:
 			print('Model Logs: Applying OBPS\n')	
-			#apply_obps(scenario=self.scenario)
+			#apply_obps(scenario=self.ctx.source_scenario['scenario'])
 		
-		if ctx.investment_tax_credit:
+		if self.ctx.policy_config['investment_tax_credit']:
 			print('Model Logs: Applying Investment Tax Credit\n')	
-			add_investment_tax_credit(scenario=self.scenario)
+			add_investment_tax_credit(self)
 			
 		#remove this later
-		#demand_reduction(scenario=self.scenario)
+		#demand_reduction(scenario=self.ctx.source_scenario['scenario'])
 
   
 		end = time.time()
@@ -407,11 +406,11 @@ class model_MSG:
 		\n=================================================="
 		)
 		
-		if self.solve:
+		if self.ctx.source_scenario['solve']:
 			start = time.time()
 			try:
 				print("Solving the model...\n")
-				self.scenario.solve(
+				self.ctx.source_scenario['scenario'].solve(
 					solve_options={"barcrossalg": "2", "lpmethod": "1", "threads": 20}, case=caseName
 				)
 				end = time.time()
@@ -424,7 +423,7 @@ class model_MSG:
 			except Exception as solve_error:
 				print(f"Scenario {caseName} did not solve because of the following exception:\n{solve_error}\n")
 
-			if self.new_reporter:
+			if self.ctx.post_process_config['new_reporter']:
 				self.generate_report(
 					output_path=f"model/output/{caseName}_new_reporter.csv",
 					min_year=2020,
@@ -438,9 +437,9 @@ class model_MSG:
 				Reporting with NEW reporter. Process time: {round((end - start) / 60)} Min and {round((end - start) % 60)} Sec\
 				\n=================================================="
 				)
-			elif self.legacy_reporter:
+			elif self.ctx.post_process_config['legacy_reporter']:
 				start = time.time()
-				report(mp=self.mp, scen=self.scenario, out_dir="model/output")
+				report(mp=self.ctx.mp, scen=self.ctx.source_scenario['scenario'], out_dir=self.ctx.path['out_dir']['path'])
 				end = time.time()
 				print(
 					f"\n==================================================\n\
@@ -448,9 +447,9 @@ class model_MSG:
 				\n=================================================="
 				)
 
-		if self.to_excel:
+		if self.ctx.post_process_config['to_excel']:
 			start = time.time()
-			self.scenario.to_excel(f"{caseName}.xlsx")
+			self.ctx.source_scenario['scenario'].to_excel(f"{caseName}.xlsx")
 			print(f"Exported Scenario to Excel: {caseName}.xlsx")
 			end = time.time()
 			print(
@@ -459,4 +458,4 @@ class model_MSG:
 				\n=================================================="
 				)
 
-		return self.mp, self.scenario, scenario_folder
+		return self.ctx.mp, self.ctx.source_scenario['scenario'], scenario_folder

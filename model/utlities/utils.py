@@ -17,23 +17,10 @@ from math import prod
 #
 #from message_ix_models.data.report.legacy import default_units as def_units
 
-def read_config(model_obj):
-		model_obj.modelName = model_obj.config["general"]["model_name"]
-		model_obj.scenarioName = model_obj.config["general"]["scenario_name"]
-		model_obj.platform_name = model_obj.config["general"]["ix_platform"]
-		model_obj.version = model_obj.config["general"]["version"]
-		model_obj.annotation = model_obj.config["general"]["annotation"]
-		# model_obj.process_historical = model_obj.config["pre_process"]["process_historical_data"]
-		# model_obj.add_hydrogen_shares_f = model_obj.config["pre_process"]["add_hydrogen_shares"]
-		# model_obj.apply_obps = model_obj.config["policies"]["apply_obps"]
-		model_obj.new_reporter = model_obj.config["post_process"]["generate_new_reporter_output"]
-		model_obj.legacy_reporter = model_obj.config["post_process"]["generate_legacy_reporter_output"]
-		model_obj.solve = model_obj.config["model"]["solve"]
-		model_obj.to_excel = model_obj.config["post_process"]["export_to_xlsx"]
-		# model_obj.add_techs = model_obj.config["pre_process"]["add_technology"]["add_techs"]
-
-def read_config_ctx(ctx, config_file="ModelSetup_CA_baseline.xlsx", dir_path="model/scenarios/baseline", verbose=False):
+def read_config_ctx(ctx, config_file="ModelSetup_CA.xlsx", dir_path="model/scenarios/baseline", verbose=False):
 		path = os.path.join(os.getcwd(), dir_path, config_file)
+
+		ctx.config_path = path
 
 		if verbose:
 			print(f"Reading configuration from {path}")
@@ -41,78 +28,39 @@ def read_config_ctx(ctx, config_file="ModelSetup_CA_baseline.xlsx", dir_path="mo
 		# Excel setup file
 		file = pd.ExcelFile(path)
 
+		# -----------------------
+		# Read paths to data file
+		# -----------------------
+
+		df_path = file.parse("path_config").set_index("item")
+		
+		ctx["path"] = {}
+		for path_row in df_path.iterrows():
+			ctx["path"][path_row[0]] = path_row[1]['path']
+			
 		# ------------------
 		# Configure scenario
 		# ------------------
 
-		df = file.parse("scenario_config").set_index("item")
-		# Assign platform arguments and load platform
-		platform_args = {}
-		platform_rows = df.loc["platform"]
-		for sub_item in platform_rows["sub-item"].tolist():
-			platform_args[sub_item] = platform_rows.loc[
-				platform_rows["sub-item"] == sub_item, "argument"
-			].iloc[0]
+		df_config = file.parse("scenario_config").set_index("sub-item")
 
-		ctx.ITC_input_csv_file = "./data/assumptions_database_example(ITCs).csv"
-		ctx.platform_info = platform_args
-		#self.mp = ctx.get_platform()
-
-		# Assign source_scenario arguments and load source scenario
-		base_args = {}
-		base_rows = df.loc["source_scenario"]
-		for sub_item in base_rows["sub-item"].tolist():
-			base_args[sub_item] = base_rows.loc[
-				base_rows["sub-item"] == sub_item, "argument"
-			].iloc[0]
-		ctx.source_scenario = base_args
-
-		# Assign policy_config arguments 
-		policy_configs_rows = df.loc["policy_config"]
-		for sub_item in policy_configs_rows["sub-item"].tolist():
-			ctx[sub_item] = bool(policy_configs_rows.loc[
-				policy_configs_rows["sub-item"] == sub_item, "argument"
-			].iloc[0])
-
-		# Assign post_process_config arguments 
-		# post_process_config = {}
-		# post_process_config_rows = df.loc["post_process_config"]
-		# for sub_item in post_process_config_rows["sub-item"].tolist():
-		# 	# post_process_config[sub_item] = policy_configs_rows.loc[
-		# 	# 	post_process_config_rows["sub-item"] == sub_item, "argument"
-		# 	# ].iloc[0]
-		# 	post_process_config[sub_item] = policy_configs_rows[
-		# 		post_process_config_rows["sub-item"] == sub_item
-		# 	]["argument"]
-		# ctx.post_process_config = post_process_config
-
-		for i in df.index:
-			# Omit an entries for which specific routines have been defined.
-			if i in ["source_scenario", "platform"]:
-				continue
-			# Treat any entries which are True and interpreted as "1"
-			if i in ["regional_mapping_manual"]:
-				ctx[i] = True if df.loc[i, "argument"] == 1 else False
-			# Go over remaining entries
+		for item in df_config["item"].unique():
+			ctx[item] = {}
+		
+		for index in df_config.index:
+			if df_config.loc[index]['argument'] in ['true', 'false']:
+				ctx[df_config.loc[index]['item']][index] = bool(df_config.loc[index]['argument'])
+			elif '[' in df_config.loc[index]['argument']:
+				ctx[df_config.loc[index]['item']][index] = list(df_config.loc[index]['argument'].replace(' ','').replace('[','').replace(']','').replace('\'','').replace('"','').split(','))
 			else:
-				# Try to evaluate - in case of a list for example
-				try:
-					ctx[i] = eval(df.loc[i, "argument"])
-				# Or, simply assign value
-				except Exception:
-					ctx[i] = df.loc[i, "argument"]
-			# Lastly, ensure that all NaNs are turned into None
-			try:
-				if pd.isnull(ctx[i]):
-					ctx[i] = None
-			except Exception:
-				pass
+				ctx[df_config.loc[index]['item']][index] = df_config.loc[index]['argument']
+
 
 def config_validation(config_path: str):
 		"""
 		Function to verify the MESSAGE config file
 
-		Input: path to config.toml file
+		Input: path to the config file
 		Output: Error, or success messages
 
 		Logic: only checking for missing fields, since additional settings won't hinder
@@ -122,24 +70,52 @@ def config_validation(config_path: str):
 
 		try:
 			with open(config_path, "r") as config_file:
-				check_config = toml.load(config_file)
+				check_config_file = pd.ExcelFile(config_path)
 				print("Config file read successfully!")
 		except FileNotFoundError:
-			print(f"TOML config file not found in path {config_path}")
+			print(f"Excel config file not found in path {config_path}")
 			sys.exit()
 		# Using baseline scenario as a basis for validation
-		sample_file = toml.load(os.path.join(os.getcwd(), 
-					"model/scenarios/baseline", "config.toml"))
+		sample_file = pd.ExcelFile(os.path.join(os.getcwd(), 
+					"model/scenarios/baseline", "ModelSetup_CA_sample.xlsx"))
+
+		sample_path_df = sample_file.parse("path_config").set_index("item")
+		given_path_df = check_config_file.parse("path_config").set_index("item")
+		sample_items_path = list(sample_path_df.index)
+		given_items_path = list(given_path_df.index)
+
+		sample_scenario_df = sample_file.parse("scenario_config").set_index("sub-item")
+		given_scenario_df = check_config_file.parse("scenario_config").set_index("sub-item")
+
+		given_scenario_config_dict = {}
+
+		for item in given_scenario_df["item"].unique():
+			given_scenario_config_dict[item] = {}
+		for index in given_scenario_df.index:
+			given_scenario_config_dict[given_scenario_df.loc[index]['item']][index] = given_scenario_df.loc[index]['argument']
+
 		# Format verification
-		for section, fields in sample_file.items():
-			for field, sub_field in fields.items():
-				# First check that all fields and sections are present in the config file
-				if section not in check_config:
-					raise Exception(
-						f"Missing section '{section}' in config file '{config_path}'"
-					)
-				elif field not in check_config[section]:
-					raise Exception(f"Missing field '{field}' in section '{section}'")
+		for path in sample_items_path:
+			# First check that all fields and sections are present in the config file
+			if path not in given_items_path:
+				raise Exception(
+					f"Missing path '{path}' in config file '{config_path}'"
+				)
+		
+		# Format verification
+		for row in sample_scenario_df.iterrows():
+			item = row[1]['item'] 
+			sub_item = row[0]
+
+			# First check that all fields and sections are present in the config file
+			if item not in given_scenario_config_dict.keys():
+				raise Exception(
+					f"Missing section '{item}' in config file '{config_path}'"
+				)
+			elif sub_item not in given_scenario_config_dict[item]:
+				raise Exception(
+					f"Missing field '{sub_item}' in section '{item}'"
+				)
 
 		print(
 			f"{'#' * 100}\nConfig file '{config_path}' passed format verification!\n{'#' * 100}"

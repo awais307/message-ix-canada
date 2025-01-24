@@ -11,10 +11,10 @@ def update_historical_activity(model_obj, path: Union[str, Path]):
                     path (str or Path): Path to the historical activity data.
     """
     # Checkout scenario for editing
-    model_obj.scenario.check_out()
+    model_obj.ctx.source_scenario['scenario'].check_out()
 
     # Retrieve the current historical activity data from the scenario
-    ha = model_obj.scenario.par("historical_activity")
+    ha = model_obj.ctx.source_scenario['scenario'].par("historical_activity")
 
     # Read new historical activity data from the specified path
     ha_new = pd.read_csv(Path(f"{path}/historical_activity.csv"))
@@ -23,13 +23,13 @@ def update_historical_activity(model_obj, path: Union[str, Path]):
     ha_new = balance_import_export(model_obj, ha_new)
 
     # Remove the previous historical activity data from the scenario
-    model_obj.scenario.remove_par("historical_activity", ha)
+    model_obj.ctx.source_scenario['scenario'].remove_par("historical_activity", ha)
 
     # Add the new, balanced historical activity data to the scenario
-    model_obj.scenario.add_par("historical_activity", ha_new)
+    model_obj.ctx.source_scenario['scenario'].add_par("historical_activity", ha_new)
 
     # Commit the changes to the scenario with a descriptive message
-    model_obj.scenario.commit("Updated historical activity based on new data")
+    model_obj.ctx.source_scenario['scenario'].commit("Updated historical activity based on new data")
 
     # Adjust demands in the scenario based on the updated historical activity
     adjust_demands(model_obj)
