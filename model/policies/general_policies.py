@@ -7,7 +7,7 @@ import ixmp
 
 from pathlib import Path
 from typing import Union
-from model.utils import expand_grid
+from model.utlities.utils import expand_grid
 from message_ix_models.util import (
 	broadcast,
 	make_matched_dfs,

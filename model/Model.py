@@ -28,7 +28,7 @@ from message_ix_models.util import (
 from scipy.optimize import linprog
 from pathlib import Path
 from typing import Union
-from model.utils import (map_yv_ya_lt, config_validation, map_learning_rate)
+from model.utlities.utils import (map_yv_ya_lt, config_validation, map_learning_rate)
 from message_ix_models.report.legacy.iamc_report_hackathon import report
 
 warnings.filterwarnings("ignore")  # Ignore warnings to keep the output clean
