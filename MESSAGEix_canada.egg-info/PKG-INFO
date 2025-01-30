@@ -5,8 +5,10 @@ Summary: An Open Source Integrated Assessment Model for Canada
 Author: Your Name
 Author-email: your.email@example.com
 License-File: LICENSE
+Requires-Dist: setuptools>=64
 Requires-Dist: pandas
 Requires-Dist: numpy
+Requires-Dist: plotly
 Requires-Dist: pycountry
 Requires-Dist: ixmp
 Requires-Dist: message_ix>=3.4.0
@@ -16,7 +18,8 @@ Requires-Dist: toml
 Requires-Dist: ipykernel
 Requires-Dist: pytest
 Requires-Dist: click
-Requires-Dist: message-ix-models
+Requires-Dist: message-ix-models@ git+https://github.com/criscfer/message-ix-models.git@main
+Requires-Dist: message-ix-models[report]
 Provides-Extra: extras
 Requires-Dist: geotext; extra == "extras"
 Requires-Dist: message-ix-models; extra == "extras"
