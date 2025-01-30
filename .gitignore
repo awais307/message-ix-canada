@@ -7,6 +7,7 @@
 .idea
 # Ignore the Plant UML diagrams from the 'out' folder
 /out 
+/data/assumptions_database_example(ITCs).csv
 
 #/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/
 

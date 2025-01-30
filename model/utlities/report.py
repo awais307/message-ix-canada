@@ -22,7 +22,7 @@ def generate_report(
                     unit_correct (bool): Whether to correct units in the report.
     """
     rep = message_ix.Reporter.from_scenario(
-        model_obj.scenario,
+        model_obj.ctx.source_scenario['scenario'],
         units={"apply": {"var_cost": "", "inv_cost": "", "fix_cost": ""}},
     )
     report = rep.get("message::default")
@@ -35,7 +35,7 @@ def generate_report(
         report_df.columns = report_df.columns.astype(str)
         report_df.columns = report_df.columns.str.title()
 
-    years = model_obj.scenario.set("year").tolist()
+    years = model_obj.ctx.model_obj.ctx.source_scenario['scenario'].set("year").tolist()
     years = [str(x) for x in years if x >= min_year and x <= max_year]
 
     report_df.fillna(0, inplace=True)
