@@ -48,12 +48,14 @@ def read_config_ctx(ctx, config_file="ModelSetup_CA.xlsx", dir_path="model/scena
 			ctx[item] = {}
 		
 		for index in df_config.index:
-			if df_config.loc[index]['argument'] in ['true', 'false']:
-				ctx[df_config.loc[index]['item']][index] = bool(df_config.loc[index]['argument'])
-			elif '[' in df_config.loc[index]['argument']:
+			if isinstance(df_config.loc[index]['argument'], bool):
+				ctx[df_config.loc[index]['item']][index] = df_config.loc[index]['argument']  # Store as boolean
+			elif isinstance(df_config.loc[index]['argument'], str) and '[' in df_config.loc[index]['argument']:
 				ctx[df_config.loc[index]['item']][index] = list(df_config.loc[index]['argument'].replace(' ','').replace('[','').replace(']','').replace('\'','').replace('"','').split(','))
 			else:
 				ctx[df_config.loc[index]['item']][index] = df_config.loc[index]['argument']
+
+
 
 
 def config_validation(config_path: str):
