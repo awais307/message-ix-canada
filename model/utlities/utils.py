@@ -18,42 +18,50 @@ from math import prod
 #from message_ix_models.data.report.legacy import default_units as def_units
 
 def read_config_ctx(ctx, config_file="ModelSetup_CA.xlsx", dir_path="model/scenarios/baseline", verbose=False):
-		path = os.path.join(os.getcwd(), dir_path, config_file)
+    path = os.path.join(os.getcwd(), dir_path, config_file)
+    ctx.config_path = path
+    
+    if verbose:
+        print(f"Reading configuration from {path}")
 
-		ctx.config_path = path
+    # Load Excel file
+    file = pd.ExcelFile(path)
 
-		if verbose:
-			print(f"Reading configuration from {path}")
-
-		# Excel setup file
-		file = pd.ExcelFile(path)
-
-		# -----------------------
-		# Read paths to data file
-		# -----------------------
-
-		df_path = file.parse("path_config").set_index("item")
-		
-		ctx["path"] = {}
-		for path_row in df_path.iterrows():
-			ctx["path"][path_row[0]] = path_row[1]['path']
-			
-		# ------------------
-		# Configure scenario
-		# ------------------
-
-		df_config = file.parse("scenario_config").set_index("sub-item")
-
-		for item in df_config["item"].unique():
-			ctx[item] = {}
-		
-		for index in df_config.index:
-			if isinstance(df_config.loc[index]['argument'], bool):
-				ctx[df_config.loc[index]['item']][index] = df_config.loc[index]['argument']  # Store as boolean
-			elif isinstance(df_config.loc[index]['argument'], str) and '[' in df_config.loc[index]['argument']:
-				ctx[df_config.loc[index]['item']][index] = list(df_config.loc[index]['argument'].replace(' ','').replace('[','').replace(']','').replace('\'','').replace('"','').split(','))
-			else:
-				ctx[df_config.loc[index]['item']][index] = df_config.loc[index]['argument']
+    # -----------------------
+    # Read paths to data file
+    # -----------------------
+    df_path = file.parse("path_config").set_index("item")
+    ctx["path"] = {}
+    for index, row in df_path.iterrows():
+        ctx["path"][index] = row["path"]
+    
+    # ------------------
+    # Configure scenario
+    # ------------------
+    df_config = file.parse("scenario_config").set_index("sub-item")
+    
+    for item in df_config["item"].unique():
+        ctx[item] = {}
+    
+    for index, row in df_config.iterrows():
+        item = row["item"]
+        argument = row["argument"]
+        
+        # Ensure `item` is a string (not a Series)
+        if isinstance(item, pd.Series):
+            item = item.iloc[0]
+        
+        # Ensure ctx[item] exists
+        if item not in ctx:
+            ctx[item] = {}
+        
+        # Handle booleans, lists, and other types
+        if isinstance(argument, bool):
+            ctx[item][index] = argument
+        elif isinstance(argument, str) and "[" in argument:
+            ctx[item][index] = [x.strip() for x in argument.strip("[]").replace("'", "").replace('"', "").split(",")]
+        else:
+            ctx[item][index] = argument
 
 
 
@@ -375,8 +383,11 @@ def report_to_pyam(scenario, directory_path, output_path):
 	return final_df
 
 
+ 
+
+
 if __name__ == "__main__":
-	
+	ßß
 	formatted_inputs = pd.read_excel("model/data/obps_inputs_clean.xlsx", sheet_name="formatted_inputs")
 	mapped_techs = pd.read_excel("model/data/obps_inputs_clean.xlsx", sheet_name="Mapping")
 	unit_conversion(formatted_inputs, mapped_techs)
