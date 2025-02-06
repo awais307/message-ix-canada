@@ -434,7 +434,7 @@ class model_MSG:
 			try:
 				print("Solving the model...\n")
 				self.ctx.source_scenario['scenario'].solve(
-					solve_options={"barcrossalg": "2", "lpmethod": "1", "threads": 20}, case=caseName
+					solve_options={ "lpmethod": "1", "threads": 20}, case=caseName
 				)
 				end = time.time()
 				print(
@@ -462,7 +462,7 @@ class model_MSG:
 				)
 			elif self.ctx.post_process_config['legacy_reporter']:
 				start = time.time()
-				report(mp=self.ctx.mp, scen=self.ctx.source_scenario['scenario'], out_dir="output")
+				report(mp=self.ctx.mp, scen=self.ctx.source_scenario['scenario'], out_dir="reporting_outputs")
 				end = time.time()
 				print(
 					f"\n==================================================\n\
