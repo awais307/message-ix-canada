@@ -379,3 +379,57 @@ h2_gas_fc_trp:
   capacity_factor: 0.91
   investment_lr: 0.91625
   fixed_cost_lr: 1
+
+h2_pyrolysis:
+  # Technology specs: mode, commodities, description
+  description: hydrogen production from methane pyrolysis
+  mode: M1
+  commodity:
+  # Commodities: inputs and outputs 
+    - input: 
+      - com_name: 
+        - gas
+        - electr
+      - com_value: 
+        - 1.83
+        - 0.07
+      - com_level: 
+        - primary
+        - secondary
+    - output: 
+      - com_name: 
+        - hydrogen
+      - com_value: 
+        - 1
+      - com_level: 
+        - secondary
+  # Time specifications: lifetime, construction time
+  time: year
+  tec_lifetime: 20
+  construction_time: 3
+  # Units for cost and energy
+  unit: 
+    - cost: 'USD/kWa'
+    - energy: '-'
+  # Geographical specs: nodes selection, provinces
+  # Specify "all" below for all provinces in Canada to be selected, or "custom" for a sub-set of provinces
+  node_select: all
+  provinces: 
+    - Alberta
+    #- Saskatchewan
+  # Cost specifications: investment, fiixed, and variable
+  inv_cost_2020: 
+    - cost_level: primary
+    - cost_value: 1,228.16
+  fix_cost_2020: 
+    - cost_level: primary
+    - cost_value: 48.77
+  var_cost_2020:
+    - cost_level: primary
+    - cost_value: 0
+  # Emissions specifications
+  #emission_factor: 0.0153
+  #emission_type: 'CO2_cc'
+  capacity_factor: 0.9
+  investment_lr: 0
+  fixed_cost_lr: 0
