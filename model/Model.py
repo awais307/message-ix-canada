@@ -434,7 +434,7 @@ class model_MSG:
 			try:
 				print("Solving the model...\n")
 				self.ctx.source_scenario['scenario'].solve(
-					solve_options={ "lpmethod": "1", "threads": 20}, case=caseName
+					solve_options={ "lpmethod": "1"}, case=caseName
 				)
 				end = time.time()
 				print(
@@ -445,6 +445,7 @@ class model_MSG:
 
 			except Exception as solve_error:
 				print(f"Scenario {caseName} did not solve because of the following exception:\n{solve_error}\n")
+
 
 			if self.ctx.post_process_config['new_reporter']:
 				self.ctx.generate_report(
