@@ -17,45 +17,6 @@ from math import prod
 #
 #from message_ix_models.data.report.legacy import default_units as def_units
 
-# def read_config_ctx(ctx, config_file="ModelSetup_CA.xlsx", dir_path="model/scenarios/baseline", verbose=False):
-#     path = os.path.join(os.getcwd(), dir_path, config_file)
-#     ctx.config_path = path
-    
-#     if verbose:
-#         print(f"Reading configuration from {path}")
-
-#     # Load Excel file
-#     file = pd.ExcelFile(path)
-
-#     df_path = file.parse("path_config").set_index("item")
-#     ctx["path"] = {}
-#     for index, row in df_path.iterrows():
-#         ctx["path"][index] = row["path"]
-
-#     df_config = file.parse("scenario_config").set_index("sub-item")
-    
-#     for item in df_config["item"].unique():
-#         ctx[item] = {}
-    
-#     for index, row in df_config.iterrows():
-#         item = row["item"]
-#         argument = row["argument"]
-        
-#         # Ensure `item` is a string (not a Series)
-#         if isinstance(item, pd.Series):
-#             item = item.iloc[0]
-        
-#         # Ensure ctx[item] exists
-#         if item not in ctx:
-#             ctx[item] = {}
-        
-#         # Handle booleans, lists, and other types
-#         if isinstance(argument, bool):
-#             ctx[item][index] = argument
-#         elif isinstance(argument, str) and "[" in argument:
-#             ctx[item][index] = [x.strip() for x in argument.strip("[]").replace("'", "").replace('"', "").split(",")]
-#         else:
-#             ctx[item][index] = argument
 
 def read_config_ctx(ctx, config_file="ModelSetup_CA.yaml", dir_path="model/scenarios/baseline", verbose=False):
 	path = os.path.join(os.getcwd(), dir_path, config_file)
@@ -64,7 +25,6 @@ def read_config_ctx(ctx, config_file="ModelSetup_CA.yaml", dir_path="model/scena
 	if verbose:
 		print(f"Reading configuration from {path}")
     
-    # Load YAML file
 	with open(path, "r") as file:
 		config = yaml.safe_load(file)
     
@@ -76,16 +36,9 @@ def read_config_ctx(ctx, config_file="ModelSetup_CA.yaml", dir_path="model/scena
     # # ------------------
     # # Configure scenario
     # # ------------------
-    # scenario_data = config.get("scenario_config", {})
-    # for key, value in scenario_data.items():
-    #     ctx[key] = value
 	for section, values in config.get("scenario_config", {}).items():
 		ctx[section] = values
 	
-	for key, value in ctx.items():
-		print(f"{key}: {value}")
-
-
 
 def config_validation(config_path: str):
 		"""
