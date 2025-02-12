@@ -19,7 +19,7 @@ from model.utlities.historical_activity import balance_import_export, update_his
 from model.policies.OBPS import apply_obps
 from model.policies.demand_reduction import demand_reduction
 from model.policies.investment_tax_credit import add_investment_tax_credit
-from model.utlities.utils import (read_config_ctx, map_yv_ya_lt, config_validation, map_learning_rate)
+from model.utlities.utils import (read_config_ctx, map_yv_ya_lt, map_learning_rate)
 from model.policies.apply_renewable_potential import apply_renewable_potential
 
 from message_ix_models.util import (
