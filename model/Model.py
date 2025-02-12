@@ -359,7 +359,7 @@ class model_MSG:
 		"""
 
 		# Config verification:
-		config_validation(self.ctx.config_path)
+		# config_validation(self.ctx.config_path)
 
 		# Scenario set-up
 		start = time.time()
