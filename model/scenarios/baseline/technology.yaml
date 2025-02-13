@@ -420,7 +420,7 @@ h2_pyrolysis:
   # Cost specifications: investment, fiixed, and variable
   inv_cost_2020: 
     - cost_level: primary
-    - cost_value: 1,228.16
+    - cost_value: 1228.16
   fix_cost_2020: 
     - cost_level: primary
     - cost_value: 48.77
@@ -428,8 +428,8 @@ h2_pyrolysis:
     - cost_level: primary
     - cost_value: 0
   # Emissions specifications
-  #emission_factor: 0.0153
-  #emission_type: 'CO2_cc'
+  emission_factor: 0.0153
+  emission_type: 'CO2_cc'
   capacity_factor: 0.9
   investment_lr: 0
   fixed_cost_lr: 0
