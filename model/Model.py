@@ -20,6 +20,7 @@ from model.policies.OBPS import apply_obps
 from model.policies.demand_reduction import demand_reduction
 from model.policies.investment_tax_credit import add_investment_tax_credit
 from model.utlities.utils import (read_config_ctx, map_yv_ya_lt, config_validation, map_learning_rate)
+from model.policies.apply_renewable_potential import apply_renewable_potential
 
 from message_ix_models.util import (
 	broadcast,
@@ -240,20 +241,27 @@ class model_MSG:
 					inv_cost_df["year_vtg"] = inv_cost_df["year_vtg"].astype(int)
 					self.ctx.source_scenario['scenario'].add_par("inv_cost", inv_cost_df)
 
+				import pandas as pd
+				dfs = []
 					# emission factor
+				for year in years:
 					emission_factor_df = message_ix.make_df(
-						"emission_factor",
+						"relation_activity",
+						node_rel=provinces,
 						node_loc=provinces,
-						technology=tech,
+						technology=[tech]*len(provinces),
 						mode=tech_data["mode"],
-						value=tech_data["emission_factor"],
-						emission=tech_data["emission_type"],
-						unit="-",
-					).pipe(
-						broadcast,
-						map_yv_ya_lt(years, tech_data["tec_lifetime"], first_year),
+						value=tech_data["emission_factor"]*len(provinces),
+						relation=tech_data["emission_type"],
+						unit=["-"]*len(provinces),
+						year_rel=[year]*len(provinces),
+						year_act=[year]*len(provinces),
 					)
-					self.ctx.source_scenario['scenario'].add_par("emission_factor", emission_factor_df)
+					dfs.append(emission_factor_df)
+
+					combined_df = pd.concat(dfs, ignore_index=True)
+					self.ctx.source_scenario['scenario'].add_par("relation_activity", combined_df)
+
 
 					# construction time
 					for i, j in zip(
@@ -279,6 +287,26 @@ class model_MSG:
 						)
 
 			self.ctx.source_scenario['scenario'].commit("Technologies added successfully")
+
+	# def write_gdx(self, scenario, step_name=None):
+    #      """Write scenario to gdx
+    #     The modified scenario is written to a gdx file,
+    #     therefore checking for compilation errors.
+    #     The scenarios are not solved as they are incomplete and therefore
+    #     infeasible.
+    #     """
+
+    #     output_name = (
+    #         f"MsgData_{scenario.model}_{scenario.scenario}.gdx"
+    #         if step_name is None
+    #         else f"MsgData_{scenario.model}_{scenario.scenario}_{step_name}.gdx"
+    #     )
+		
+	# 	self.mp._backend.write_file(
+    #         path=ctx.path_gdx / output_name,
+    #         item_type=ItemType.SET | ItemType.PAR,
+    #         filters={"scenario": scenario},
+    #     )
 
 	def generate_report(
 		self,
@@ -369,6 +397,8 @@ class model_MSG:
 			excel_path, add_units=True, commit_steps=False, init_items=True
 		)
 		
+		apply_renewable_potential(self)
+
 		if self.ctx.policy_config['process_historical']:
 			print('Model Logs: Processing historical data\n')
 			update_historical_activity(self, path=scenario_folder)
@@ -411,7 +441,7 @@ class model_MSG:
 			try:
 				print("Solving the model...\n")
 				self.ctx.source_scenario['scenario'].solve(
-					solve_options={"barcrossalg": "2", "lpmethod": "1", "threads": 20}, case=caseName
+					solve_options={ "lpmethod": "1"}, case=caseName
 				)
 				end = time.time()
 				print(
@@ -423,8 +453,9 @@ class model_MSG:
 			except Exception as solve_error:
 				print(f"Scenario {caseName} did not solve because of the following exception:\n{solve_error}\n")
 
+
 			if self.ctx.post_process_config['new_reporter']:
-				self.generate_report(
+				self.ctx.generate_report(
 					output_path=f"model/output/{caseName}_new_reporter.csv",
 					min_year=2020,
 					max_year=2060,
@@ -439,7 +470,7 @@ class model_MSG:
 				)
 			elif self.ctx.post_process_config['legacy_reporter']:
 				start = time.time()
-				report(mp=self.ctx.mp, scen=self.ctx.source_scenario['scenario'], out_dir=self.ctx.path['out_dir']['path'])
+				report(mp=self.ctx.mp, scen=self.ctx.source_scenario['scenario'], out_dir="reporting_outputs")
 				end = time.time()
 				print(
 					f"\n==================================================\n\
@@ -447,7 +478,7 @@ class model_MSG:
 				\n=================================================="
 				)
 
-		if self.ctx.post_process_config['to_excel']:
+		if self.ctx.post_process_config['to_excell']:
 			start = time.time()
 			self.ctx.source_scenario['scenario'].to_excel(f"{caseName}.xlsx")
 			print(f"Exported Scenario to Excel: {caseName}.xlsx")
