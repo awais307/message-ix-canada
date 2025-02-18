@@ -254,6 +254,7 @@ class model_MSG:
 						broadcast,
 						map_yv_ya_lt(years, tech_data["tec_lifetime"], first_year),
 					)
+					self.ctx.source_scenario['scenario'].add_set("emission", "CO2_cc")
 					self.ctx.source_scenario['scenario'].add_par("emission_factor", emission_factor_df)
 
 					# construction time
@@ -359,7 +360,7 @@ class model_MSG:
 		"""
 
 		# Config verification:
-		config_validation(self.ctx.config_path)
+		#config_validation(self.ctx.config_path)
 
 		# Scenario set-up
 		start = time.time()

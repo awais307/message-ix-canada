@@ -56,8 +56,10 @@ def read_config_ctx(ctx, config_file="ModelSetup_CA.xlsx", dir_path="model/scena
             ctx[item] = {}
         
         # Handle booleans, lists, and other types
-        if isinstance(argument, bool):
-            ctx[item][index] = argument
+        if argument == 'False':
+            ctx[item][index] = False
+        elif argument == 'True':
+            ctx[item][index] = True
         elif isinstance(argument, str) and "[" in argument:
             ctx[item][index] = [x.strip() for x in argument.strip("[]").replace("'", "").replace('"', "").split(",")]
         else:
