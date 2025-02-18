@@ -30,7 +30,7 @@ from message_ix_models.util import (
 )
 from message_ix_models import Context
 from pathlib import Path
-from message_ix_models.report.legacy.iamc_report_hackathon import report
+from model.report.legacy.iamc_report_hackathon import report
 
 warnings.filterwarnings("ignore")  # Ignore warnings to keep the output clean
 

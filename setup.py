@@ -23,7 +23,6 @@ setup(
         'ipykernel',
         'pytest',
         'click',
-        'message-ix-models@git+https://github.com/criscfer/message-ix-models.git@main',
         'message-ix-models[report]',
     ],
     #dependency_links=["git+https://github.com/criscfer/message-ix-models.git@main"], 
