@@ -18,9 +18,8 @@ scenario_config:
     annotation: Initial setup for Canadian energy model.
     version: new
   policy_config:
-    add_technology_techs: ["dac_ht", "dacx_lt", 
-    						"co2_stor", "co2_tr_sd", "co2_tr_ld"]
-    process_historical: True
+    add_technology_techs: ["dac_ht", "dacx_lt", "co2_stor", "co2_tr_sd", "co2_tr_ld"]
+    process_historical: False
     add_hydrogen_shares_f: False
     add_techs: True
     investment_tax_credit: False
