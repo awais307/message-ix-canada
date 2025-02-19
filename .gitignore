@@ -54,3 +54,5 @@ model/utlities/utilities.py
 model/utlities/perform_vintage_check.py
 model/utlities/project_vre.py
 model/utlities/read_demand_downscaled.py
+message-ix-canada.code-workspace
+*.textClipping
