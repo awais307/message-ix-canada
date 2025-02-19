@@ -17,123 +17,82 @@ from math import prod
 #
 #from message_ix_models.data.report.legacy import default_units as def_units
 
-def read_config_ctx(ctx, config_file="ModelSetup_CA.xlsx", dir_path="model/scenarios/baseline", verbose=False):
-    path = os.path.join(os.getcwd(), dir_path, config_file)
-    ctx.config_path = path
+def read_config_ctx(ctx, config_file="ModelSetup_CA.yaml", dir_path="model/scenarios/baseline", verbose=False):
+	path = os.path.join(os.getcwd(), dir_path, config_file)
+	ctx["config_path"] = path
     
-    if verbose:
-        print(f"Reading configuration from {path}")
-
-    # Load Excel file
-    file = pd.ExcelFile(path)
-
+	if verbose:
+		print(f"Reading configuration from {path}")
+    
+    # Load YAML file
+	with open(path, "r") as file:
+		config = yaml.safe_load(file)
+    
     # -----------------------
     # Read paths to data file
     # -----------------------
-    df_path = file.parse("path_config").set_index("item")
-    ctx["path"] = {}
-    for index, row in df_path.iterrows():
-        ctx["path"][index] = row["path"]
+	ctx["path"] = config.get("path_config", {})
     
-    # ------------------
-    # Configure scenario
-    # ------------------
-    df_config = file.parse("scenario_config").set_index("sub-item")
-    
-    for item in df_config["item"].unique():
-        ctx[item] = {}
-    
-    for index, row in df_config.iterrows():
-        item = row["item"]
-        argument = row["argument"]
-        
-        # Ensure `item` is a string (not a Series)
-        if isinstance(item, pd.Series):
-            item = item.iloc[0]
-        
-        # Ensure ctx[item] exists
-        if item not in ctx:
-            ctx[item] = {}
-        
-        # Handle booleans, lists, and other types
-        if argument == 'False':
-            ctx[item][index] = False
-        elif argument == 'True':
-            ctx[item][index] = True
-        elif isinstance(argument, str) and "[" in argument:
-            ctx[item][index] = [x.strip() for x in argument.strip("[]").replace("'", "").replace('"', "").split(",")]
-        else:
-            ctx[item][index] = argument
-
-
+    # # ------------------
+    # # Configure scenario
+    # # ------------------
+	for section, values in config.get("scenario_config", {}).items():
+		ctx[section] = values
 
 
 def config_validation(config_path: str):
-		"""
-		Function to verify the MESSAGE config file
+    """
+    Function to verify the MESSAGE config file
 
-		Input: path to the config file
-		Output: Error, or success messages
+    Input: path to the config file
+    Output: Error, or success messages
 
-		Logic: only checking for missing fields, since additional settings won't hinder
-		model execution, only missing settings will cause the model to fail
-		"""
-		validated = False
+    Logic: only checking for missing fields, since additional settings won't hinder
+    model execution, only missing settings will cause the model to fail
+    """
+    validated = False
 
-		try:
-			with open(config_path, "r") as config_file:
-				check_config_file = pd.ExcelFile(config_path)
-				print("Config file read successfully!")
-		except FileNotFoundError:
-			print(f"Excel config file not found in path {config_path}")
-			sys.exit()
-		# Using baseline scenario as a basis for validation
-		sample_file = pd.ExcelFile(os.path.join(os.getcwd(), 
-					"model/scenarios/baseline", "ModelSetup_CA_sample.xlsx"))
+    try:
+        with open(config_path, "r") as config_file:
+            check_config_file = yaml.safe_load(config_file)
+            print("Config file read successfully!")
+    except FileNotFoundError:
+        print(f"YAML config file not found in path {config_path}")
+        sys.exit()
+    
+    # Using baseline scenario as a basis for validation
+    sample_path = os.path.join(os.getcwd(), "model/scenarios/baseline", "ModelSetup_CA_sample.yaml")
+    try:
+        with open(sample_path, "r") as sample_file:
+            sample_config = yaml.safe_load(sample_file)
+    except FileNotFoundError:
+        print(f"Sample YAML config file not found in path {sample_path}")
+        sys.exit()
 
-		sample_path_df = sample_file.parse("path_config").set_index("item")
-		given_path_df = check_config_file.parse("path_config").set_index("item")
-		sample_items_path = list(sample_path_df.index)
-		given_items_path = list(given_path_df.index)
+    # Extract path config
+    sample_items_path = list(sample_config.get("path_config", {}).keys())
+    given_items_path = list(check_config_file.get("path_config", {}).keys())
 
-		sample_scenario_df = sample_file.parse("scenario_config").set_index("sub-item")
-		given_scenario_df = check_config_file.parse("scenario_config").set_index("sub-item")
+    # Extract scenario config
+    sample_scenario_config = sample_config.get("scenario_config", {})
+    given_scenario_config = check_config_file.get("scenario_config", {})
 
-		given_scenario_config_dict = {}
+    # Check for missing fields
+    for path in sample_items_path:
+        if path not in given_items_path:
+            raise Exception(f"Missing path '{path}' in config file '{config_path}'")
+    
+    
+    for item, sub_items in sample_scenario_config.items():
+        if item not in given_scenario_config:
+            raise Exception(f"Missing section '{item}' in config file '{config_path}'")
+        for sub_item in sub_items:
+            if sub_item not in given_scenario_config[item]:
+                raise Exception(f"Missing field '{sub_item}' in section '{item}'")
 
-		for item in given_scenario_df["item"].unique():
-			given_scenario_config_dict[item] = {}
-		for index in given_scenario_df.index:
-			given_scenario_config_dict[given_scenario_df.loc[index]['item']][index] = given_scenario_df.loc[index]['argument']
-
-		# Format verification
-		for path in sample_items_path:
-			# First check that all fields and sections are present in the config file
-			if path not in given_items_path:
-				raise Exception(
-					f"Missing path '{path}' in config file '{config_path}'"
-				)
-		
-		# Format verification
-		for row in sample_scenario_df.iterrows():
-			item = row[1]['item'] 
-			sub_item = row[0]
-
-			# First check that all fields and sections are present in the config file
-			if item not in given_scenario_config_dict.keys():
-				raise Exception(
-					f"Missing section '{item}' in config file '{config_path}'"
-				)
-			elif sub_item not in given_scenario_config_dict[item]:
-				raise Exception(
-					f"Missing field '{sub_item}' in section '{item}'"
-				)
-
-		print(
-			f"{'#' * 100}\nConfig file '{config_path}' passed format verification!\n{'#' * 100}"
-		)
-		validated = True
-		return validated
+    print(f"{'#' * 100}\nConfig file '{config_path}' passed format verification!\n{'#' * 100}")
+    validated = True
+    return validated
 
 def clone_scenario(scenario_name: str, scenario_params: list, keep_solution=False) -> tuple:
 		"""

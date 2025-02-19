@@ -241,21 +241,29 @@ class model_MSG:
 					inv_cost_df["year_vtg"] = inv_cost_df["year_vtg"].astype(int)
 					self.ctx.source_scenario['scenario'].add_par("inv_cost", inv_cost_df)
 
+				import pandas as pd
+				dfs = []
 					# emission factor
+				for year in years:
 					emission_factor_df = message_ix.make_df(
-						"emission_factor",
+						"relation_activity",
+						node_rel=provinces,
 						node_loc=provinces,
-						technology=tech,
+						technology=[tech]*len(provinces),
 						mode=tech_data["mode"],
-						value=tech_data["emission_factor"],
-						emission=tech_data["emission_type"],
-						unit="-",
-					).pipe(
-						broadcast,
-						map_yv_ya_lt(years, tech_data["tec_lifetime"], first_year),
+						value=tech_data["emission_factor"]*len(provinces),
+						relation=tech_data["emission_type"],
+						unit=["-"]*len(provinces),
+						year_rel=[year]*len(provinces),
+						year_act=[year]*len(provinces),
 					)
 					self.ctx.source_scenario['scenario'].add_set("emission", "CO2_cc")
 					self.ctx.source_scenario['scenario'].add_par("emission_factor", emission_factor_df)
+					dfs.append(emission_factor_df)
+
+					combined_df = pd.concat(dfs, ignore_index=True)
+					self.ctx.source_scenario['scenario'].add_par("relation_activity", combined_df)
+
 
 					# construction time
 					for i, j in zip(
@@ -435,7 +443,7 @@ class model_MSG:
 			try:
 				print("Solving the model...\n")
 				self.ctx.source_scenario['scenario'].solve(
-					solve_options={ "lpmethod": "1", "threads": 20}, case=caseName
+					solve_options={ "lpmethod": "1"}, case=caseName
 				)
 				end = time.time()
 				print(
@@ -446,6 +454,7 @@ class model_MSG:
 
 			except Exception as solve_error:
 				print(f"Scenario {caseName} did not solve because of the following exception:\n{solve_error}\n")
+
 
 			if self.ctx.post_process_config['new_reporter']:
 				self.ctx.generate_report(
