@@ -30,7 +30,7 @@ scenario_config:
     legacy_reporter: True
     new_reporter: False
 path_config:
-  provincial_input_file: scenarios/baseline/model_default_v17.xlsx
+  provincial_input_file: scenarios/baseline/model_default_v19.xlsx
   scenario_folder: scenarios/baseline
   out_dir: model/output
   ITC_policy_input_data: ./data/assumptions_database_example(ITCs).csv
