@@ -1,0 +1,36 @@
+region_config:
+  region: Canada
+  per_region:
+    Abb: 
+    Countries: 
+    Parent: 
+    GDP: 
+    Keep_Parent: 
+    historical_split:
+scenario_config:
+  platform:
+    name: local
+    jvmargs: -Xmx16g
+  source_scenario:
+    model: MESSAGEix-CA
+    solve: True
+    scenario: dacs
+    annotation: Initial setup for Canadian energy model.
+    version: new
+  policy_config:
+    add_technology_techs: ["dac_ht", "dacx_lt", 
+    						"co2_stor", "co2_tr_sd", "co2_tr_ld"]
+    process_historical: True
+    add_hydrogen_shares_f: False
+    add_techs: True
+    investment_tax_credit: False
+    apply_obps: False
+  post_process_config:
+    to_excell: False
+    legacy_reporter: True
+    new_reporter: False
+path_config:
+  provincial_input_file: scenarios/dacs/model_default_v19.xlsx
+  scenario_folder: scenarios/dacs
+  out_dir: model/output
+  ITC_policy_input_data: ./data/assumptions_database_example(ITCs).csv
