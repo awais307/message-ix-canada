@@ -3583,13 +3583,7 @@ def retr_CO2emi(units_emi, units_ene_mdl):
     _Other_gases_trans_comb_trade = pp.emi(
         [
             "LNG_trd",
-            "gas_exp_afr",
-            "gas_exp_cpa",
-            "gas_exp_eeu",
-            "gas_exp_nam",
-            "gas_exp_pao",
-            "gas_exp_sas",
-            "gas_exp_weu",
+            "gas_exp"
         ],
         units_ene_mdl,
         emifilter={"relation": ["CO2_trade"]},
@@ -4277,18 +4271,7 @@ def retr_CO2emi(units_emi, units_ene_mdl):
 
     vars["Difference|Stock|Natural Gas"] = pp.emi(
         [
-            "gas_imp",
-            "gas_exp_nam",
-            "gas_exp_weu",
-            "gas_exp_eeu",
-            "gas_exp_pao",
-            "gas_exp_cpa",
-            "gas_exp_sas",
-            "gas_exp_afr",
-            "gas_exp_scs",
-            "gas_exp_cas",
-            "gas_exp_ubm",
-            "gas_exp_rus",
+            "gas_imp"
         ],
         units_ene_mdl,
         emifilter={"relation": ["CO2_Emission"]},
@@ -4299,7 +4282,7 @@ def retr_CO2emi(units_emi, units_ene_mdl):
     vars = {}
 
     vars["Difference|Stock|Activity|Coal"] = (
-        pp.inp(["coal_imp"], units_ene_mdl)
+        pp.out(["coal_imp"], units_ene_mdl)
         - pp.inp(["coal_exp"], units_ene_mdl)
         + pp.inp(["coal_trd"], units_ene_mdl)
         - pp.out(["coal_trd"], units_ene_mdl)
@@ -4307,7 +4290,7 @@ def retr_CO2emi(units_emi, units_ene_mdl):
     #   + pp.inp(["coal_bunker"], units_ene_mdl)
 
     vars["Difference|Stock|Activity|Methanol"] = (
-        pp.inp(["meth_imp"], units_ene_mdl)
+        pp.out(["meth_imp"], units_ene_mdl)
         - pp.inp(["meth_exp"], units_ene_mdl)
         + pp.inp(["meth_bunker"], units_ene_mdl)
         + pp.inp(["meth_trd"], units_ene_mdl)
@@ -4315,7 +4298,7 @@ def retr_CO2emi(units_emi, units_ene_mdl):
     )
 
     vars["Difference|Stock|Activity|Fueloil"] = (
-        pp.inp(["foil_imp"], units_ene_mdl)
+        pp.out(["foil_imp"], units_ene_mdl)
         - pp.inp(["foil_exp"], units_ene_mdl)
         + pp.inp(["foil_bunker"], units_ene_mdl)
         + pp.inp(["foil_trd"], units_ene_mdl)
@@ -4323,7 +4306,7 @@ def retr_CO2emi(units_emi, units_ene_mdl):
     )
 
     vars["Difference|Stock|Activity|Lightoil"] = (
-        pp.inp(["loil_imp"], units_ene_mdl)
+        pp.out(["loil_imp"], units_ene_mdl)
         - pp.inp(["loil_exp"], units_ene_mdl)
         + pp.inp(["loil_bunker"], units_ene_mdl)
         + pp.inp(["loil_trd"], units_ene_mdl)
@@ -4331,7 +4314,7 @@ def retr_CO2emi(units_emi, units_ene_mdl):
     )
 
     vars["Difference|Stock|Activity|Crudeoil"] = (
-        pp.inp(["oil_imp"], units_ene_mdl)
+        pp.out(["oil_imp"], units_ene_mdl)
         - pp.inp(["oil_exp"], units_ene_mdl)
         + pp.inp(["oil_trd"], units_ene_mdl)
         - pp.out(["oil_trd"], units_ene_mdl)
@@ -4339,28 +4322,18 @@ def retr_CO2emi(units_emi, units_ene_mdl):
     #   + pp.inp(["oil_bunker"], units_ene_mdl)
 
     vars["Difference|Stock|Activity|LNG"] = (
-        pp.inp(["LNG_imp"], units_ene_mdl)
+        pp.out(["LNG_imp"], units_ene_mdl)
         - pp.inp(["LNG_exp"], units_ene_mdl)
         + pp.inp(["LNG_bunker"], units_ene_mdl)
         + pp.inp(["LNG_trd"], units_ene_mdl)
         - pp.out(["LNG_trd"], units_ene_mdl)
     )
 
-    vars["Difference|Stock|Activity|Natural Gas"] = pp.inp(
+    vars["Difference|Stock|Activity|Natural Gas"] = pp.out(
         ["gas_imp"], units_ene_mdl
     ) - pp.inp(
         [
-            "gas_exp_nam",
-            "gas_exp_weu",
-            "gas_exp_eeu",
-            "gas_exp_pao",
-            "gas_exp_cpa",
-            "gas_exp_sas",
-            "gas_exp_afr",
-            "gas_exp_scs",
-            "gas_exp_cas",
-            "gas_exp_ubm",
-            "gas_exp_rus",
+            "gas_exp"
         ],
         units_ene_mdl,
     )
@@ -5093,11 +5066,13 @@ def retr_pe(units, method=None):
     # -------------------
 
     vars["Coal"] = (
-        pp.inp(
+        pp.out(
             ["coal_extr_ch4", "coal_extr", "lignite_extr", "coal_imp"],
             units,
             inpfilter={"commodity": ["coal", "lignite"]},
         )
+        - pp.inp("coal_exp", units)
+        + pp.inp(["meth_bunker"], units)
         - pp.inp("coal_exp", units)
         + pp.inp(["meth_bunker"], units)
     )
@@ -5162,7 +5137,7 @@ def retr_pe(units, method=None):
             )
             / 0.9
         ).fillna(0)
-        + pp.inp(["oil_imp", "foil_imp", "loil_imp"], units)
+        + pp.out(["oil_imp", "foil_imp", "loil_imp"], units)
         - pp.inp(["oil_exp", "foil_exp", "loil_exp"], units)
         + pp.inp(["foil_bunker", "loil_bunker"], units)
     )
@@ -5186,7 +5161,7 @@ def retr_pe(units, method=None):
             units,
             inpfilter={"level": ["resource"]},
         )
-        + pp.inp(["LNG_imp", "gas_imp"], units)
+        + pp.out(["LNG_imp", "gas_imp"], units)
         - pp.inp(
             [
                 "LNG_exp",
@@ -5497,12 +5472,12 @@ def retr_pe(units, method=None):
             "lh2_imp",
             "eth_imp",
             "elec_imp",
-            "elec_imp_africa",
-            "elec_imp_america",
-            "elec_imp_asia",
-            "elec_imp_eurasia",
-            "elec_imp_eur_afr",
-            "elec_imp_asia_afr",
+            # "elec_imp_africa",
+            # "elec_imp_america",
+            # "elec_imp_asia",
+            # "elec_imp_eurasia",
+            # "elec_imp_eur_afr",
+            # "elec_imp_asia_afr",
         ],
         units,
     ) - pp.inp(
@@ -7376,73 +7351,51 @@ def retr_trade(units_energy, units_CPrc_co2, units_emi_val, units_emi_vol):
     _H2_exp_reg = pp.inp("lh2_exp", units=units_energy)
 
     # Calculate net trade
-    _Biomass_total = pp.inp("biomass_imp", units=units_energy) - pp.inp(
+    _Biomass_total = pp.out("biomass_imp", units=units_energy) - pp.inp(
         "biomass_exp", units=units_energy
     )
 
-    _Coal_total = pp.inp("coal_imp", units=units_energy) - pp.inp(
+    _Coal_total = pp.out("coal_imp", units=units_energy) - pp.inp(
         "coal_exp", units=units_energy
     )
 
-    _CrudeOil_total = pp.inp(["oil_imp"], units=units_energy) - pp.inp(
+    _CrudeOil_total = pp.out(["oil_imp"], units=units_energy) - pp.inp(
         ["oil_exp"], units=units_energy
     )
 
-    _Oilprod_total = pp.inp(["foil_imp", "loil_imp"], units=units_energy) - pp.inp(
+    _Oilprod_total = pp.out(["foil_imp", "loil_imp"], units=units_energy) - pp.inp(
         ["foil_exp", "loil_exp"], units=units_energy
     )
 
-    _Gas_total = pp.inp(["LNG_imp", "gas_imp"], units=units_energy) - pp.inp(
+    _Gas_total = pp.out(["LNG_imp", "gas_imp"], units=units_energy) - pp.inp(
         [
-            "gas_exp_nam",
-            "gas_exp_weu",
-            "gas_exp_eeu",
-            "gas_exp_pao",
-            "gas_exp_cpa",
-            "gas_exp_afr",
-            "gas_exp_sas",
-            "gas_exp_scs",
-            "gas_exp_cas",
-            "gas_exp_ubm",
-            "gas_exp_rus",
+            "gas_exp"
             "LNG_exp",
         ],
         units=units_energy,
     )
 
-    _Elec_total = pp.inp(
+    _Elec_total = pp.out(
         [
-            "elec_imp",
-            "elec_imp_africa",
-            "elec_imp_america",
-            "elec_imp_asia",
-            "elec_imp_eurasia",
-            "elec_imp_eur_afr",
-            "elec_imp_asia_afr",
+            "elec_imp"
         ],
         units=units_energy,
     ) - pp.inp(
         [
-            "elec_exp",
-            "elec_exp_africa",
-            "elec_exp_america",
-            "elec_exp_asia",
-            "elec_exp_eurasia",
-            "elec_exp_eur_afr",
-            "elec_exp_asia_afr",
+            "elec_exp"
         ],
         units=units_energy,
     )
 
-    _H2_total = pp.inp("lh2_imp", units=units_energy) - pp.inp(
+    _H2_total = pp.out("lh2_imp", units=units_energy) - pp.inp(
         "lh2_exp", units=units_energy
     )
 
-    _BTL_total = pp.inp("eth_imp", units=units_energy) - pp.inp(
+    _BTL_total = pp.out("eth_imp", units=units_energy) - pp.inp(
         "eth_exp", units=units_energy
     )
 
-    _FTL_total = pp.inp("meth_imp", units=units_energy) - pp.inp(
+    _FTL_total = pp.out("meth_imp", units=units_energy) - pp.inp(
         "meth_exp", units=units_energy
     )
 
@@ -7551,44 +7504,44 @@ def retr_trade(units_energy, units_CPrc_co2, units_emi_val, units_emi_vol):
         ["foil_exp", "loil_exp"], units=units_energy
     )
 
-    vars["Gross Import|Primary Energy|Biomass|Volume"] = pp.inp(
+    vars["Gross Import|Primary Energy|Biomass|Volume"] = pp.out(
         "biomass_imp", units=units_energy
     )
 
-    vars["Gross Import|Primary Energy|Coal|Volume"] = pp.inp(
+    vars["Gross Import|Primary Energy|Coal|Volume"] = pp.out(
         "coal_imp", units=units_energy
     )
 
-    vars["Gross Import|Primary Energy|Oil|Volume"] = pp.inp(
+    vars["Gross Import|Primary Energy|Oil|Volume"] = pp.out(
         ["oil_imp"], units=units_energy
     )
 
-    vars["Gross Import|Primary Energy|Gas|Volume"] = pp.inp(
+    vars["Gross Import|Primary Energy|Gas|Volume"] = pp.out(
         ["LNG_imp", "gas_imp"], units=units_energy
     )
 
-    vars["Gross Import|Secondary Energy|Electricity|Volume"] = pp.inp(
+    vars["Gross Import|Secondary Energy|Electricity|Volume"] = pp.out(
         [
             "elec_imp",
-            "elec_imp_africa",
-            "elec_imp_america",
-            "elec_imp_asia",
-            "elec_imp_eurasia",
-            "elec_imp_eur_afr",
-            "elec_imp_asia_afr",
+            # "elec_imp_africa",
+            # "elec_imp_america",
+            # "elec_imp_asia",
+            # "elec_imp_eurasia",
+            # "elec_imp_eur_afr",
+            # "elec_imp_asia_afr",
         ],
         units=units_energy,
     )
 
-    vars["Gross Import|Secondary Energy|Liquids|Biomass|Volume"] = pp.inp(
+    vars["Gross Import|Secondary Energy|Liquids|Biomass|Volume"] = pp.out(
         "eth_imp", units=units_energy
     )
 
-    vars["Gross Import|Secondary Energy|Liquids|Coal|Volume"] = pp.inp(
+    vars["Gross Import|Secondary Energy|Liquids|Coal|Volume"] = pp.out(
         ["meth_imp"], units=units_energy
     )
 
-    vars["Gross Import|Secondary Energy|Liquids|Oil|Volume"] = pp.inp(
+    vars["Gross Import|Secondary Energy|Liquids|Oil|Volume"] = pp.out(
         ["foil_imp", "loil_imp"], units=units_energy
     )
 
@@ -7845,19 +7798,19 @@ def retr_supply_inv(units_energy, units_emi, units_ene_mdl):
             [
                 "elec_t_d",
                 "elec_exp",
-                "elec_exp_africa",
-                "elec_exp_america",
-                "elec_exp_asia",
-                "elec_exp_eurasia",
-                "elec_exp_eur_afr",
-                "elec_exp_asia_afr",
+                # "elec_exp_africa",
+                # "elec_exp_america",
+                # "elec_exp_asia",
+                # "elec_exp_eurasia",
+                # "elec_exp_eur_afr",
+                # "elec_exp_asia_afr",
                 "elec_imp",
-                "elec_imp_africa",
-                "elec_imp_america",
-                "elec_imp_asia",
-                "elec_imp_eurasia",
-                "elec_imp_eur_afr",
-                "elec_imp_asia_afr",
+                # "elec_imp_africa",
+                # "elec_imp_america",
+                # "elec_imp_asia",
+                # "elec_imp_eurasia",
+                # "elec_imp_eur_afr",
+                # "elec_imp_asia_afr",
             ],
             units=units_energy,
         )
@@ -7865,19 +7818,19 @@ def retr_supply_inv(units_energy, units_emi, units_ene_mdl):
             [
                 "elec_t_d",
                 "elec_exp",
-                "elec_exp_africa",
-                "elec_exp_america",
-                "elec_exp_asia",
-                "elec_exp_eurasia",
-                "elec_exp_eur_afr",
-                "elec_exp_asia_afr",
+                # "elec_exp_africa",
+                # "elec_exp_america",
+                # "elec_exp_asia",
+                # "elec_exp_eurasia",
+                # "elec_exp_eur_afr",
+                # "elec_exp_asia_afr",
                 "elec_imp",
-                "elec_imp_africa",
-                "elec_imp_america",
-                "elec_imp_asia",
-                "elec_imp_eurasia",
-                "elec_imp_eur_afr",
-                "elec_imp_asia_afr",
+                # "elec_imp_africa",
+                # "elec_imp_america",
+                # "elec_imp_asia",
+                # "elec_imp_eurasia",
+                # "elec_imp_eur_afr",
+                # "elec_imp_asia_afr",
             ],
             units=units_energy,
         )
