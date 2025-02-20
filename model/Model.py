@@ -257,8 +257,8 @@ class model_MSG:
 						year_rel=[year]*len(provinces),
 						year_act=[year]*len(provinces),
 					)
-					self.ctx.source_scenario['scenario'].add_set("emission", "CO2_cc")
-					self.ctx.source_scenario['scenario'].add_par("emission_factor", emission_factor_df)
+					# self.ctx.source_scenario['scenario'].add_set("emission", "CO2_cc")
+					# self.ctx.source_scenario['scenario'].add_par("emission_factor", emission_factor_df)
 					dfs.append(emission_factor_df)
 
 					combined_df = pd.concat(dfs, ignore_index=True)
@@ -399,8 +399,11 @@ class model_MSG:
 			excel_path, add_units=True, commit_steps=False, init_items=True
 		)
 		
-		apply_renewable_potential(self)
-
+		#TODO
+		#  apply_renewable_potential(self)
+		# if self.ctx.policy_config['apply_renewable_potential']:
+		# 	print('Model Logs: Applying Renewable Potential\n')
+		# 	apply_renewable_potential(self)
 		if self.ctx.policy_config['process_historical']:
 			print('Model Logs: Processing historical data\n')
 			update_historical_activity(self, path=scenario_folder)
@@ -443,7 +446,7 @@ class model_MSG:
 			try:
 				print("Solving the model...\n")
 				self.ctx.source_scenario['scenario'].solve(
-					solve_options={ "lpmethod": "1"}, case=caseName
+					solve_options={ "lpmethod": "2"}, case=caseName
 				)
 				end = time.time()
 				print(
