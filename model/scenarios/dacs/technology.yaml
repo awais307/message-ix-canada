@@ -462,7 +462,7 @@ dac_ht:
   construction_time: 0
   # Units for cost and energy
   unit: 
-    - cost: 'USD/(tC/yr)'
+    - cost: 'USD/kWa' # Note: USD/(tC/yr) is the unit for cost in the MESSAGE global sheet, but it is not included in the DB. Will need to revise values for USD/kWa
     - energy: '-'
   # Geographical specs: nodes selection, provinces
   # Specify "all" below for all provinces in Canada to be selected, or "custom" for a sub-set of provinces
@@ -514,7 +514,7 @@ dac_lt:
   construction_time: 0
   # Units for cost and energy
   unit: 
-    - cost: 'USD/(tC/yr)'
+    - cost: 'USD/kWa' # Note: USD/(tC/yr) is the unit for cost in the MESSAGE global sheet, but it is not included in the DB. Will need to revise values for USD/kWa
     - energy: '-'
   # Geographical specs: nodes selection, provinces
   # Specify "all" below for all provinces in Canada to be selected, or "custom" for a sub-set of provinces
@@ -556,6 +556,8 @@ co2_stor: # Need to edit with the MESSAGE sheet
         - 1
       - com_level: 
         - final
+        - final
+        - final
     - output: 
       - com_name: 
         - dacco2_captured
@@ -567,13 +569,15 @@ co2_stor: # Need to edit with the MESSAGE sheet
         - 1
       - com_level: 
         - useful
+        - useful
+        - useful
   # Time specifications: lifetime, construction time
   time: year
   tec_lifetime: 20
   construction_time: 0
   # Units for cost and energy
   unit: 
-    - cost: 'USD/(tC/yr)'
+    - cost: 'USD/kWa' # Note: USD/(tC/yr) is the unit for cost in the MESSAGE global sheet, but it is not included in the DB. Will need to revise values for USD/kWa
     - energy: '-'
   # Geographical specs: nodes selection, provinces
   # Specify "all" below for all provinces in Canada to be selected, or "custom" for a sub-set of provinces
@@ -628,7 +632,7 @@ co2_tr_ld: # Need to edit with the MESSAGE sheet
   construction_time: 0
   # Units for cost and energy
   unit: 
-    - cost: 'USD/(tC/yr)'
+    - cost: 'USD/kWa' # Note: USD/(tC/yr) is the unit for cost in the MESSAGE global sheet, but it is not included in the DB. Will need to revise values for USD/kWa
     - energy: '-'
   # Geographical specs: nodes selection, provinces
   # Specify "all" below for all provinces in Canada to be selected, or "custom" for a sub-set of provinces
@@ -668,6 +672,7 @@ co2_tr_sd: # Need to edit with the MESSAGE sheet
         - 1
       - com_level: 
         - secondary
+        - secondary
     - output: 
       - com_name:
         - dacco2_captured 
@@ -677,13 +682,14 @@ co2_tr_sd: # Need to edit with the MESSAGE sheet
         - 1
       - com_level: 
         - final
+        - final
   # Time specifications: lifetime, construction time
   time: year
   tec_lifetime: 20
   construction_time: 0
   # Units for cost and energy
   unit: 
-    - cost: 'USD/(tC/yr)'
+    - cost: 'USD/kWa' # Note: USD/(tC/yr) is the unit for cost in the MESSAGE global sheet, but it is not included in the DB. Will need to revise values for USD/kWa
     - energy: '-'
   # Geographical specs: nodes selection, provinces
   # Specify "all" below for all provinces in Canada to be selected, or "custom" for a sub-set of provinces

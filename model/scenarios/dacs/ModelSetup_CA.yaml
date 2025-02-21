@@ -25,11 +25,11 @@ scenario_config:
     investment_tax_credit: False
     apply_obps: False
   post_process_config:
-    to_excell: False
+    to_excell: True
     legacy_reporter: True
     new_reporter: False
 path_config:
-  provincial_input_file: scenarios/dacs/model_default_v19.xlsx
+  provincial_input_file: scenarios/dacs/model_default_dacs.xlsx
   scenario_folder: scenarios/dacs
-  out_dir: model/output
+  out_dir: output
   ITC_policy_input_data: ./data/assumptions_database_example(ITCs).csv
