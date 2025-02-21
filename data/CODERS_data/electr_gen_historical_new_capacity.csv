@@ -1,0 +1,242 @@
+region,technology,year_vtg,value,unit
+British Columbia,hydro_hc,1960,5.6,MW
+Manitoba,hydro_hc,1960,287.0,MW
+Manitoba,hydro_lc,1960,1.2,MW
+New Brunswick,hydro_lc,1960,0.22,MW
+Newfoundland and Labrador,hydro_hc,1960,5.930000000000001,MW
+Nova Scotia,hydro_hc,1960,13.78,MW
+Ontario,hydro_hc,1960,166.11999999999998,MW
+Prince Edward Island,foil_ppl,1960,13.87,MW
+Quebec,hydro_hc,1960,642.5,MW
+Quebec,hydro_lc,1960,408.0,MW
+Saskatchewan,hydro_hc,1960,151.2,MW
+Alberta,gas_ppl,1965,45.0,MW
+Alberta,hydro_hc,1965,253.4,MW
+British Columbia,hydro_hc,1965,3050.0,MW
+Manitoba,hydro_hc,1965,336.0,MW
+New Brunswick,hydro_hc,1965,466.2,MW
+New Brunswick,hydro_lc,1965,1.35,MW
+Newfoundland and Labrador,gas_ct,1965,8.0,MW
+Newfoundland and Labrador,hydro_hc,1965,5625.38,MW
+Newfoundland and Labrador,loil_ppl,1965,2.5,MW
+Nova Scotia,hydro_hc,1965,19.67,MW
+Nova Scotia,igcc,1965,135.0,MW
+Ontario,hydro_hc,1965,234.47,MW
+Ontario,hydro_lc,1965,13.23,MW
+Prince Edward Island,foil_ppl,1965,13.87,MW
+Quebec,hydro_hc,1965,2492.3,MW
+Saskatchewan,hydro_hc,1965,180.6,MW
+Alberta,hydro_hc,1970,84.0,MW
+British Columbia,gas_ct,1970,46.0,MW
+British Columbia,hydro_hc,1970,119.0,MW
+Manitoba,hydro_hc,1970,1224.0,MW
+Newfoundland and Labrador,foil_ppl,1970,340.0,MW
+Newfoundland and Labrador,loil_ppl,1970,5.0,MW
+Ontario,hydro_hc,1970,201.39,MW
+Ontario,nuc_lc,1970,2931.38,MW
+Prince Edward Island,loil_ppl,1970,29.2,MW
+Quebec,hydro_hc,1970,1719.2,MW
+Saskatchewan,gas_cc,1970,85.5,MW
+Alberta,gas_ppl,1975,475.38,MW
+Alberta,igcc,1975,133.2,MW
+British Columbia,hydro_hc,1975,2944.04,MW
+Manitoba,hydro_hc,1975,1094.0,MW
+New Brunswick,foil_ppl,1975,709.5600000000001,MW
+Newfoundland and Labrador,gas_ct,1975,120.0,MW
+Newfoundland and Labrador,hydro_hc,1975,307.4,MW
+Nova Scotia,hydro_hc,1975,201.4,MW
+Nova Scotia,igcc,1975,135.0,MW
+Nova Scotia,loil_ppl,1975,131.39999999999998,MW
+Ontario,hydro_hc,1975,60.27,MW
+Ontario,hydro_lc,1975,34.55,MW
+Ontario,nuc_lc,1975,2954.08,MW
+Quebec,hydro_hc,1975,1386.0,MW
+Saskatchewan,gas_ct,1975,79.0,MW
+Saskatchewan,igcc,1975,255.6,MW
+Alberta,igcc,1980,366.3,MW
+British Columbia,hydro_hc,1980,2716.8,MW
+Manitoba,hydro_hc,1980,7.0,MW
+New Brunswick,loil_ppl,1980,3.65,MW
+Newfoundland and Labrador,foil_ppl,1980,150.0,MW
+Newfoundland and Labrador,hydro_hc,1980,159.86,MW
+Newfoundland and Labrador,loil_ppl,1980,9.7,MW
+Nova Scotia,hydro_hc,1980,6.27,MW
+Nova Scotia,hydro_lc,1980,2.85,MW
+Nova Scotia,igcc,1980,407.7,MW
+Ontario,nuc_lc,1980,772.06,MW
+Quebec,hydro_hc,1980,8033.0,MW
+Saskatchewan,gas_ct,1980,44.0,MW
+Saskatchewan,igcc,1980,523.8,MW
+Alberta,gas_ct,1985,10.0,MW
+Alberta,hydro_lc,1985,0.82,MW
+Alberta,igcc,1985,747.0,MW
+British Columbia,hydro_hc,1985,126.0,MW
+New Brunswick,gas_ct,1985,28.0,MW
+Newfoundland and Labrador,hydro_hc,1985,143.5,MW
+Nova Scotia,igcc,1985,135.0,MW
+Ontario,hydro_lc,1985,8.379999999999999,MW
+Ontario,nuc_lc,1985,2316.18,MW
+Quebec,hydro_hc,1985,2779.0,MW
+Quebec,hydro_lc,1985,2.12,MW
+Saskatchewan,hydro_hc,1985,178.5,MW
+Alberta,bio_ppl,1990,70.08,MW
+Alberta,gas_ppl,1990,23.4,MW
+Alberta,hydro_lc,1990,7.62,MW
+Alberta,igcc,1990,747.0,MW
+British Columbia,bio_ppl,1990,116.16,MW
+British Columbia,gas_ppl,1990,108.0,MW
+British Columbia,hydro_lc,1990,6.49,MW
+Manitoba,hydro_hc,1990,1350.0,MW
+New Brunswick,igcc,1990,419.4,MW
+New Brunswick,loil_ppl,1990,361.34999999999997,MW
+Newfoundland and Labrador,gas_ct,1990,25.0,MW
+Nova Scotia,igcc,1990,292.5,MW
+Ontario,hydro_hc,1990,11.03,MW
+Ontario,hydro_lc,1990,27.2,MW
+Ontario,nuc_lc,1990,3330.2,MW
+Quebec,gas_cc,1990,391.68,MW
+Quebec,hydro_hc,1990,4517.0,MW
+Quebec,hydro_lc,1990,9.98,MW
+Saskatchewan,igcc,1990,248.4,MW
+Alberta,bio_ppl,1995,21.02,MW
+Alberta,gas_cc,1995,72.17999999999999,MW
+Alberta,gas_ct,1995,54.0,MW
+Alberta,gas_ppl,1995,814.5,MW
+British Columbia,bio_ppl,1995,1.73,MW
+British Columbia,hydro_hc,1995,5.04,MW
+British Columbia,hydro_lc,1995,11.1,MW
+New Brunswick,gas_cc,1995,261.0,MW
+Newfoundland and Labrador,hydro_hc,1995,22.47,MW
+Newfoundland and Labrador,hydro_lc,1995,0.6,MW
+Nova Scotia,bio_ppl,1995,29.95,MW
+Ontario,gas_ppl,1995,176.4,MW
+Ontario,hydro_lc,1995,14.7,MW
+Quebec,hydro_hc,1995,1228.5,MW
+Quebec,hydro_lc,1995,11.89,MW
+Quebec,wind_ppl,1995,35.0,MW
+Saskatchewan,gas_ppl,1995,205.20000000000002,MW
+Alberta,bio_ppl,2000,60.480000000000004,MW
+Alberta,gas_cc,2000,486.0,MW
+Alberta,gas_ct,2000,224.1,MW
+Alberta,gas_ppl,2000,1441.8,MW
+Alberta,hydro_hc,2000,22.4,MW
+Alberta,hydro_lc,2000,3.1500000000000004,MW
+Alberta,igcc,2000,835.2,MW
+Alberta,wind_ppl,2000,53.98,MW
+British Columbia,bio_istig,2000,7.01,MW
+British Columbia,bio_ppl,2000,23.81,MW
+British Columbia,gas_cc,2000,247.5,MW
+British Columbia,hydro_hc,2000,193.2,MW
+British Columbia,hydro_lc,2000,23.14,MW
+Manitoba,gas_ct,2000,280.0,MW
+New Brunswick,gas_ppl,2000,88.2,MW
+Newfoundland and Labrador,bio_ppl,2000,7.96,MW
+Newfoundland and Labrador,hydro_hc,2000,40.0,MW
+Nova Scotia,gas_ct,2000,47.0,MW
+Nova Scotia,loil_ppl,2000,255.5,MW
+Ontario,bio_ppl,2000,34.96,MW
+Ontario,hydro_hc,2000,33.08,MW
+Ontario,hydro_lc,2000,27.93,MW
+Prince Edward Island,loil_ppl,2000,10.95,MW
+Prince Edward Island,wind_ppl,2000,2.72,MW
+Quebec,bio_ppl,2000,114.24000000000001,MW
+Quebec,hydro_hc,2000,882.0,MW
+Quebec,hydro_lc,2000,48.28,MW
+Saskatchewan,gas_cc,2000,151.2,MW
+Saskatchewan,gas_ppl,2000,224.10000000000002,MW
+Saskatchewan,wind_ppl,2000,3.9,MW
+Alberta,gas_cc,2005,229.5,MW
+Alberta,gas_ct,2005,299.0,MW
+Alberta,gas_ppl,2005,725.4,MW
+Alberta,igcc,2005,365.4,MW
+Alberta,wind_ppl,2005,44.64,MW
+British Columbia,bio_istig,2005,1.21,MW
+British Columbia,bio_ppl,2005,99.16,MW
+British Columbia,hydro_hc,2005,123.41,MW
+British Columbia,hydro_lc,2005,45.45,MW
+British Columbia,wind_ppl,2005,24.48,MW
+New Brunswick,wind_ppl,2005,37.05,MW
+Newfoundland and Labrador,wind_ppl,2005,11.88,MW
+Nova Scotia,gas_ct,2005,47.0,MW
+Nova Scotia,wind_ppl,2005,6.449999999999999,MW
+Ontario,gas_cc,2005,834.3,MW
+Ontario,gas_ct,2005,2287.0,MW
+Ontario,gas_ppl,2005,688.5,MW
+Ontario,hydro_hc,2005,236.29999999999998,MW
+Ontario,hydro_lc,2005,78.95,MW
+Ontario,wind_ppl,2005,302.14,MW
+Prince Edward Island,loil_ppl,2005,35.77,MW
+Prince Edward Island,wind_ppl,2005,30.0,MW
+Quebec,bio_istig,2005,9.5,MW
+Quebec,bio_ppl,2005,6.72,MW
+Quebec,gas_ppl,2005,521.29,MW
+Quebec,hydro_hc,2005,1061.0,MW
+Quebec,hydro_lc,2005,88.8,MW
+Quebec,wind_ppl,2005,196.28,MW
+Saskatchewan,bio_istig,2005,19.2,MW
+Saskatchewan,gas_ct,2005,92.0,MW
+Saskatchewan,wind_ppl,2005,26.63,MW
+Alberta,bio_ppl,2010,179.62,MW
+Alberta,gas_ct,2010,370.0,MW
+Alberta,gas_ppl,2010,350.1,MW
+Alberta,igcc,2010,1229.4,MW
+Alberta,wind_ppl,2010,135.99,MW
+British Columbia,bio_istig,2010,14.05,MW
+British Columbia,bio_ppl,2010,617.56,MW
+British Columbia,hydro_hc,2010,1027.3,MW
+British Columbia,hydro_lc,2010,102.84,MW
+British Columbia,solar_pv_ppl,2010,0.0,MW
+British Columbia,wind_ppl,2010,99.7,MW
+Manitoba,hydro_hc,2010,147.0,MW
+Manitoba,wind_ppl,2010,45.87,MW
+New Brunswick,bio_ppl,2010,114.24,MW
+New Brunswick,hydro_lc,2010,2.25,MW
+New Brunswick,nuc_lc,2010,623.7,MW
+New Brunswick,wind_ppl,2010,18.810000000000002,MW
+Newfoundland and Labrador,gas_ct,2010,123.5,MW
+Nova Scotia,bio_ppl,2010,61.25,MW
+Nova Scotia,gas_cc,2010,44.1,MW
+Nova Scotia,wind_ppl,2010,56.2,MW
+Ontario,bio_ppl,2010,239.20000000000002,MW
+Ontario,gas_cc,2010,513.0,MW
+Ontario,gas_ct,2010,3276.0,MW
+Ontario,gas_ppl,2010,321.3,MW
+Ontario,hydro_hc,2010,707.0799999999999,MW
+Ontario,hydro_lc,2010,52.64,MW
+Ontario,solar_pv_ppl,2010,7.6,MW
+Ontario,wind_ppl,2010,479.58,MW
+Prince Edward Island,wind_ppl,2010,8.0,MW
+Quebec,bio_istig,2010,18.82,MW
+Quebec,bio_ppl,2010,110.21,MW
+Quebec,hydro_hc,2010,1513.0,MW
+Quebec,hydro_lc,2010,6.61,MW
+Quebec,wind_ppl,2010,849.07,MW
+Saskatchewan,gas_cc,2010,217.8,MW
+Saskatchewan,gas_ct,2010,538.0,MW
+Saskatchewan,wind_ppl,2010,4.62,MW
+Alberta,bio_ppl,2015,8.64,MW
+Alberta,gas_cc,2015,783.0,MW
+Alberta,gas_ct,2015,340.0,MW
+Alberta,gas_ppl,2015,298.89,MW
+Alberta,solar_pv_ppl,2015,3.4,MW
+Alberta,wind_ppl,2015,55.78,MW
+British Columbia,bio_ppl,2015,164.73,MW
+British Columbia,hydro_hc,2015,734.5,MW
+British Columbia,hydro_lc,2015,65.68,MW
+British Columbia,wind_ppl,2015,47.9,MW
+New Brunswick,wind_ppl,2015,3.74,MW
+Newfoundland and Labrador,loil_ppl,2015,23.0,MW
+Nova Scotia,wind_ppl,2015,48.75,MW
+Ontario,gas_cc,2015,520.2,MW
+Ontario,gas_ct,2015,402.8,MW
+Ontario,gas_ppl,2015,115.2,MW
+Ontario,hydro_lc,2015,55.86,MW
+Ontario,solar_pv_ppl,2015,83.22,MW
+Ontario,wind_ppl,2015,379.83,MW
+Quebec,bio_istig,2015,4.61,MW
+Quebec,bio_ppl,2015,75.07000000000001,MW
+Quebec,hydro_hc,2015,584.0,MW
+Quebec,hydro_lc,2015,9.5,MW
+Quebec,wind_ppl,2015,277.74,MW
+Saskatchewan,gas_cc,2015,499.5,MW
+Saskatchewan,wind_ppl,2015,7.63,MW
