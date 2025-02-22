@@ -99,6 +99,7 @@ class model_MSG:
 		# )
 
 		self.ctx.mp = ixmp.Platform(name=self.ctx.platform['name'], jvmargs=[self.ctx.platform['jvmargs']])
+		self.ctx.mp.add_unit('USD/(tC/yr)') # Addiing cost unit for DAC technologies to the database
 
 	## Scenario creation functions ##
 	def add_technology(
