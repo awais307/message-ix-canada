@@ -51,3 +51,19 @@ model_default_v9:
   - description: 
     Updated v10 with emission constraints
   - date: december 06, 2024
+
+
+  model_default_v22:
+  - description: 
+    - fix coal_extr_ch4 history should be zero 
+    - extend oil and gas bounds beyond 2050 - 2060 
+    - double check electricity, demand and supply constraints
+    - update gas_exp and gas_extr bounds
+    - balance_equality added
+    - comulative baseline budget on emissions 
+    - historical validation 
+    - hydro fix 
+    - change units in relation activity 
+    - change TCE_Emission only for global in relations
+    
+  - date: december 06, 2024
