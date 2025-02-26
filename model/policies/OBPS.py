@@ -122,7 +122,8 @@ def apply_obps(ctx):
 		how="left"
 	)
 	merged_data['adjusted_value'] = merged_data['value'] + merged_data['carbon_cost'].fillna(0)
-	merged_data.to_csv('model/data/obps_standard.csv')
+	merged_data_file_path = ctx.path['obps_standart_merged_data_output']
+	merged_data.to_csv(merged_data_file_path)
 	fix_cost_df = merged_data[['technology', 'year_act', 'year_vtg', 'adjusted_value','node_loc','unit']]
 	fix_cost_df.rename(columns={'adjusted_value':'value'},inplace=True)
 	
