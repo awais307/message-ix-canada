@@ -39,3 +39,4 @@ path_config:
   out_dir: model/output
   ITC_policy_input_data: ./data/assumptions_database_example(ITCs).csv
   OBPS_policy_input_data: ./data/obps_inputs_clean.xlsx
+  fix_cost_no_obps_input_data: ./data/fix_cost_no_obps.csv
