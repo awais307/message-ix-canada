@@ -69,7 +69,7 @@ class model_MSG:
 			Adds processed population and GDP data to the scenario.
 	"""
 
-	def __init__(self, scenario_name: str):
+	def __init__(self, scenario_name: str, config: str):
 		"""
 		Initialize the scenario with the given name.
 
@@ -85,17 +85,16 @@ class model_MSG:
 		"""
 		ctx = Context.get_instance()
 
-		self.scenario_path = os.path.join("model/scenarios", scenario_name)
+		if config:
+			self.scenario_path = config #"data/sample_0"
+		else:
+			self.scenario_path = os.path.join("model/scenarios", scenario_name)
 
 		read_config_ctx(ctx, dir_path=self.scenario_path)
 
 		self.ctx = ctx
 		
 		self.ctx.source_scenario['scenario'] = scenario_name
-
-		# self.sample_config = toml.load(
-		# 	os.path.join(os.getcwd(), "model/scenarios/baseline", "config.toml")
-		# )
 
 		self.ctx.mp = ixmp.Platform(name=self.ctx.platform['name'], jvmargs=[self.ctx.platform['jvmargs']])
 
@@ -424,7 +423,7 @@ class model_MSG:
 		# OBPS 
 		if self.ctx.policy_config['apply_obps']:
 			print('Model Logs: Applying OBPS\n')	
-			#apply_obps(scenario=self.ctx.source_scenario['scenario'])
+			apply_obps(self.ctx)
 		
 		if self.ctx.policy_config['investment_tax_credit']:
 			print('Model Logs: Applying Investment Tax Credit\n')	

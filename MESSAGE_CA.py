@@ -12,17 +12,18 @@ from model.utlities.utils import report_to_pyam
 @click.option('--debug/--no-debug', default=False, is_flag=True, help='Enable debug mode or not.')
 @click.option('--report/--no-report', default=False, is_flag=True, help='Generate report or not.')
 @click.option('--plot/--no-plot', default=False, is_flag=True, help='Generate plots')
+@click.option('--config', default=None, help='yaml config path')
 
-def messagerun(scenario, solve, debug, report, plot):
+def messagerun(scenario, solve, debug, report, plot, config):
     """
     This function executes the MESSAGEix-Canada model workflow based on command-line inputs.
     """
     # Print the chosen options
     print(f"Running scenario: {scenario}")
-    print(f"Solve: {solve}, Debug: {debug}, Report: {report}, Plotting: {plot}")
+    print(f"Solve: {solve}, Debug: {debug}, Report: {report}, Plotting: {plot}, Config: {config}")
 
     # Create model instance
-    msg1 = model_MSG(scenario_name=scenario)
+    msg1 = model_MSG(scenario_name=scenario, config=config)
 
     # Set up model with the selected scenario
     platform, msg_scenario, msg_folder = msg1.setup_scenario()

@@ -24,7 +24,11 @@ scenario_config:
     add_hydrogen_shares_f: False
     add_techs: False
     investment_tax_credit: False
-    apply_obps: False
+    apply_obps: True
+    obps_policy_carbon_cost:
+      2025: 165.4251
+      2030: 285.2156 
+      more_than_2025: 387.89325
   post_process_config:
     to_excell: False
     legacy_reporter: True
@@ -34,3 +38,4 @@ path_config:
   scenario_folder: scenarios/baseline
   out_dir: model/output
   ITC_policy_input_data: ./data/assumptions_database_example(ITCs).csv
+  OBPS_policy_input_data: ./data/obps_inputs_clean.xlsx
