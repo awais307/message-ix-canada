@@ -15,7 +15,7 @@ scenario_config:
     model: MESSAGEix-CA
     solve: True
     scenario: dacs
-    annotation: Initial setup for Canadian energy model.
+    annotation: Initial setup for a Canadian IAM energy model with direct air capture technologies included.
     version: new
   policy_config:
     add_technology_techs: ["dac_ht", "dac_lt", "co2_stor", "co2_tr_sd", "co2_tr_ld"]
@@ -25,7 +25,7 @@ scenario_config:
     investment_tax_credit: False # ITC policy
     apply_obps: False # OBPS policy
   post_process_config:
-    to_excell: True # Export input to Excel
+    to_excell: False # Export input to Excel
     legacy_reporter: False # Use legacy reporter for outputting
     new_reporter: False # Use new reporter for outputting
 path_config:

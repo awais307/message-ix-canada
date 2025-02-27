@@ -400,7 +400,7 @@ class model_MSG:
 			excel_path, add_units=True, commit_steps=False, init_items=True
 		)
 		
-		apply_renewable_potential(self)
+		#apply_renewable_potential(self)
 
 		if self.ctx.policy_config['process_historical']:
 			print('Model Logs: Processing historical data\n')
@@ -442,9 +442,9 @@ class model_MSG:
 		if self.ctx.source_scenario['solve']:
 			start = time.time()
 			try:
-				print("Solving the model...\n")
+				print("Model Logs: Solving the model...\n")
 				self.ctx.source_scenario['scenario'].solve(
-					solve_options={ "lpmethod": "1"}, case=caseName
+					solve_options={"write_model_to_file":"true", "writelp":"true", "write_model_file":"true"}, case=caseName
 				)
 				end = time.time()
 				print(
