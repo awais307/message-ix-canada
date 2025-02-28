@@ -444,7 +444,7 @@ class model_MSG:
 			try:
 				print("Model Logs: Solving the model...\n")
 				self.ctx.source_scenario['scenario'].solve(
-					solve_options={"write_model_to_file":"true", "writelp":"true", "write_model_file":"true"}, case=caseName
+					solve_options={"write_model_to_file":"true", "writelp":"true", "write_model_file":"true", "lpmethod":2}, case=caseName
 				)
 				end = time.time()
 				print(
