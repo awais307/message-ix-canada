@@ -400,7 +400,6 @@ class model_MSG:
 			excel_path, add_units=True, commit_steps=False, init_items=True
 		)
 		
-		#apply_renewable_potential(self)
 
 		if self.ctx.policy_config['process_historical']:
 			print('Model Logs: Processing historical data\n')

@@ -40,3 +40,14 @@ Input value or efficiency of coal power plant = 1/2.63158 = 0.379
 Emission factor of coal ppl = 2.11979 * 0.379 = 0.8044 tC/kWyr
 
 we need to convert the bounds to tonne of carbon -
+
+
+## Running the Model
+
+The model can be run in two primary ways:
+
+1. **Command Line:** through the command line, users can run the `MESSAGE_CA.py` file and specify the scenario name corresponding to a folder containing the necessary data and the `ModelSetup_CA.yaml` file. The model will read in these files, perform the necessary preprocessing, and then solve the scenario.
+
+2. **Jupyter Notebooks:** The model can also be run interactively using the `setup_scenario` function within a Jupyter notebook. This allows users to adjust parameters, explore data, and analyze results before and after solving the model. The `MESSAGEix-Canada` repository provides a few notebooks used for model development.
+
+Both methods are supported, providing flexibility depending on the user's preferred workflow. Make sure to follow the instructions specific to each method to ensure the model runs successfully.
