@@ -65,5 +65,16 @@ model_default_v9:
     - hydro fix 
     - change units in relation activity 
     - change TCE_Emission only for global in relations
-    
-  - date: december 06, 2024
+    - update h2_i, h2_i 
+    - historical co2 emissions added
+  - date: february 25, 2025
+
+
+  model_default_v23:
+  - description: 
+    - remove cooling technologies 
+    - mapped emissions (TCE, TCH4 etc) node_rel to Canada instead of province
+    - add gas_exp and oil_ex bounds assuming it follows historical trajectory
+    - remove lower production boudns for oil and gas to allow model to choose
+
+  - date: february 25, 2025
