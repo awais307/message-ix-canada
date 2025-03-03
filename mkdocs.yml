@@ -24,8 +24,5 @@ nav:
 
 plugins:
   - search
-  - macros:
-      module_name: macros.main
-      module_path: "/Users/muhammadawais/Documents/GitHub/message-ix-canada/macros"
-
+  
 
