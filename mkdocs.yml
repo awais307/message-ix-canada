@@ -4,21 +4,24 @@ site_dir: public
 
 
 theme:
-  name: material
+  name: readthedocs
 
 nav:
-  - Home: index.md
-  - Introduction to MESSAGEix-Canada: introduction.md  # Provide the file path
-  - Installation Instructions: installation.md        # Provide the file path
+  - MESSAGEix-Canada: index.md
+  - xyz: introduction.md  # Provide the file path
+  - Installation: installation.md        # Provide the file path
+  - Structure: glossary.md              # Provide the file path
+  - Getting Started: model_run.md        # Provide the file path
+  
   - Core Model:
       - Data: data.md                                 # Provide the file path
-      - model: model.md                               # Provide the file path
+      - Model: model.md                               # Provide the file path
       - Model Run: model_run.md                       # Provide the file path
-      - notebooks: notebooks.md                       # Provide the file path
-      - scenarios: scenarios.md                       # Provide the file path
-      - utilities: utilities.md                       # Already provided
-      - policies: policies.md                         # Already provided
-      - output: output.md                             # Provide the file path
+      - Notebooks: notebooks.md                       # Provide the file path
+      - Scenarios: scenarios.md                       # Provide the file path
+      - Utilities: utilities.md                       # Already provided
+      - Policies: policies.md                         # Already provided
+      - Output: output.md                             # Provide the file path
 
 plugins:
   - search

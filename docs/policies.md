@@ -2,7 +2,7 @@
 
 ::: model.policies.bound_emissions
 
-::: model.policies.coal_phaseout
+::: model.policies.coal_phase_out
 
 ::: model.policies.federal_carbon_tax
 
