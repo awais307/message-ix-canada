@@ -8,10 +8,9 @@ theme:
 
 nav:
   - MESSAGEix-Canada: index.md
-  - xyz: introduction.md  # Provide the file path
   - Installation: installation.md        # Provide the file path
+  - Getting Started: get_started.md        # Provide the file path
   - Structure: glossary.md              # Provide the file path
-  - Getting Started: model_run.md        # Provide the file path
   
   - Core Model:
       - Data: data.md                                 # Provide the file path
@@ -25,8 +24,8 @@ nav:
 
 plugins:
   - search
-  - mkdocstrings:
-      handlers:
-        python:
-          options:
-            docstring_style: google
+  - macros:
+      module_name: macros.main
+      module_path: "/Users/muhammadawais/Documents/GitHub/message-ix-canada/macros"
+
+
