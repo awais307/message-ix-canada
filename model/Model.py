@@ -11,6 +11,7 @@ import yaml
 import os
 import time
 import warnings
+import pandas as pd
 from model.policies.hydrogen_shares import add_hydrogen_shares
 from model.utlities.pop_gdp import process_gdp_population_data, add_population_gdp_to_scenario
 from model.utlities.demands import adjust_demands
@@ -97,6 +98,7 @@ class model_MSG:
 		self.ctx.source_scenario['scenario'] = scenario_name
 
 		self.ctx.mp = ixmp.Platform(name=self.ctx.platform['name'], jvmargs=[self.ctx.platform['jvmargs']])
+		self.ctx.mp.add_unit('USD/(tC/yr)') # Addiing cost unit for DAC technologies to the database
 
 	## Scenario creation functions ##
 	def add_technology(
@@ -240,52 +242,51 @@ class model_MSG:
 					inv_cost_df["year_vtg"] = inv_cost_df["year_vtg"].astype(int)
 					self.ctx.source_scenario['scenario'].add_par("inv_cost", inv_cost_df)
 
-				import pandas as pd
-				dfs = []
-					# emission factor
-				for year in years:
-					emission_factor_df = message_ix.make_df(
-						"relation_activity",
-						node_rel=provinces,
-						node_loc=provinces,
-						technology=[tech]*len(provinces),
-						mode=tech_data["mode"],
-						value=tech_data["emission_factor"]*len(provinces),
-						relation=tech_data["emission_type"],
-						unit=["-"]*len(provinces),
-						year_rel=[year]*len(provinces),
-						year_act=[year]*len(provinces),
-					)
-					# self.ctx.source_scenario['scenario'].add_set("emission", "CO2_cc")
-					# self.ctx.source_scenario['scenario'].add_par("emission_factor", emission_factor_df)
-					dfs.append(emission_factor_df)
+				
+					dfs = []
 
-					combined_df = pd.concat(dfs, ignore_index=True)
-					self.ctx.source_scenario['scenario'].add_par("relation_activity", combined_df)
+					# Emission factor
+					for year in years:
+						emission_factor_df = message_ix.make_df(
+							"relation_activity",
+							node_rel=provinces,
+							node_loc=provinces,
+							technology=[tech]*len(provinces),
+							mode=tech_data["mode"],
+							value=tech_data["emission_factor"]*len(provinces),
+							relation=tech_data["emission_type"],
+							unit=["-"]*len(provinces),
+							year_rel=[year]*len(provinces),
+							year_act=[year]*len(provinces),
+						)
+						dfs.append(emission_factor_df)
+
+						combined_df = pd.concat(dfs, ignore_index=True)
+						self.ctx.source_scenario['scenario'].add_par("relation_activity", combined_df)
 
 
-					# construction time
-					for i, j in zip(
-						tech_data["commodity"][1]["output"][1]["com_value"],
-						tech_data["commodity"][0]["input"][1]["com_value"],
-					):
-						tec_construction_df = make_matched_dfs(
-							input_df,
-							capacity_factor=tech_data["capacity_factor"],
-							technical_lifetime=tech_data["tec_lifetime"],
-							construction_time=tech_data["construction_time"],
-						)
-						self.ctx.source_scenario['scenario'].add_par(
-							"capacity_factor", tec_construction_df["capacity_factor"]
-						)
-						self.ctx.source_scenario['scenario'].add_par(
-							"technical_lifetime",
-							tec_construction_df["technical_lifetime"],
-						)
-						self.ctx.source_scenario['scenario'].add_par(
-							"construction_time",
-							tec_construction_df["construction_time"],
-						)
+						# construction time
+						for i, j in zip(
+							tech_data["commodity"][1]["output"][1]["com_value"],
+							tech_data["commodity"][0]["input"][1]["com_value"],
+						):
+							tec_construction_df = make_matched_dfs(
+								input_df,
+								capacity_factor=tech_data["capacity_factor"],
+								technical_lifetime=tech_data["tec_lifetime"],
+								construction_time=tech_data["construction_time"],
+							)
+							self.ctx.source_scenario['scenario'].add_par(
+								"capacity_factor", tec_construction_df["capacity_factor"]
+							)
+							self.ctx.source_scenario['scenario'].add_par(
+								"technical_lifetime",
+								tec_construction_df["technical_lifetime"],
+							)
+							self.ctx.source_scenario['scenario'].add_par(
+								"construction_time",
+								tec_construction_df["construction_time"],
+							)
 
 			self.ctx.source_scenario['scenario'].commit("Technologies added successfully")
 
@@ -398,11 +399,7 @@ class model_MSG:
 			excel_path, add_units=True, commit_steps=False, init_items=True
 		)
 		
-		#TODO
-		#  apply_renewable_potential(self)
-		# if self.ctx.policy_config['apply_renewable_potential']:
-		# 	print('Model Logs: Applying Renewable Potential\n')
-		# 	apply_renewable_potential(self)
+
 		if self.ctx.policy_config['process_historical']:
 			print('Model Logs: Processing historical data\n')
 			update_historical_activity(self, path=scenario_folder)
@@ -443,9 +440,9 @@ class model_MSG:
 		if self.ctx.source_scenario['solve']:
 			start = time.time()
 			try:
-				print("Solving the model...\n")
+				print("Model Logs: Solving the model...\n")
 				self.ctx.source_scenario['scenario'].solve(
-					solve_options={ "lpmethod": "2"}, case=caseName
+					solve_options={"write_model_to_file":"true", "writelp":"true", "write_model_file":"true", "lpmethod":2}, case=caseName
 				)
 				end = time.time()
 				print(

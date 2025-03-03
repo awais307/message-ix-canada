@@ -20,7 +20,7 @@ scenario_config:
   policy_config:
     add_technology_techs: ['h2_atr_ccs', 'gas_h2', 'h2_stor_geo', 'liq_h2',
       'h2_atr', 'h2_gas_fc_trp', 'meth_h2']
-    process_historical: True
+    process_historical: False
     add_hydrogen_shares_f: False
     add_techs: False
     investment_tax_credit: False
@@ -31,7 +31,7 @@ scenario_config:
       more_than_2025: 387.89325
   post_process_config:
     to_excell: False
-    legacy_reporter: True
+    legacy_reporter: False
     new_reporter: False
 path_config:
   provincial_input_file: scenarios/baseline/model_default_v19.xlsx

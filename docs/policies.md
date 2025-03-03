@@ -2,10 +2,6 @@
 
 ::: model.policies.bound_emissions
 
-::: model.policies.carbon_price
-
-::: model.policies.CER
-
 ::: model.policies.coal_phaseout
 
 ::: model.policies.federal_carbon_tax
@@ -14,12 +10,10 @@
 
 ::: model.policies.investment_tax_credit
 
-::: model.policies.obps
+::: model.policies.OBPS
 
 ::: model.policies.provincial_carbon_tax
 
-::: model.policies.provincial_policies
+::: model.policies.apply_renewable_potential
 
-::: model.policies.renewable_shares
-
-::: model.policies.technology_cost
+::: model.policies.general_policies
