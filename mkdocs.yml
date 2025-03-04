@@ -12,16 +12,8 @@ nav:
   - Solver Installation: solvers.md
   - Getting Started: get_started.md        # Provide the file path
   - Model Structure: model.md              # Provide the file path
-  
-  - Core Model:
-      - Data: data.md                                 # Provide the file path
-      - Model: model.md                               # Provide the file path
-      - Model Run: model_run.md                       # Provide the file path
-      - Notebooks: notebooks.md                       # Provide the file path
-      - Scenarios: scenarios.md                       # Provide the file path
-      - Utilities: utilities.md                       # Already provided
-      - Policies: policies.md                         # Already provided
-      - Output: output.md                             # Provide the file path
+  - Model Scripts & Function: codebase.md
+                             # Provide the file path
 
 plugins:
   - search
