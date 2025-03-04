@@ -5,11 +5,17 @@
 The following functions were developed to add new emission-related policies to the model. These functions will each add a completely new policy to the model, adjusting the way in which the model is to treat certain emission types on either a federal, or a provincial scale. 
 
 ::: model.policies.bound_emissions
+
 ::: model.policies.emissions
+
 ::: model.policies.coal_phase_out
+
 ::: model.policies.federal_carbon_tax
+
 ::: model.policies.provincial_carbon_tax
+
 ::: model.policies.investment_tax_credit
+
 ::: model.policies.OBPS
 
 

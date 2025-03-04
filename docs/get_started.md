@@ -25,8 +25,7 @@ The simplest way to run **MESSAGEix-Canada** is through the command line. This m
    This will run the **baseline** scenario as defined in the yaml file. A sample of the yaml file with options is mentioned below:
 
 ```yaml
-{{ read_file("model/scenarios/baseline/ModelSetup_CA_sample.yaml") }}
-
+{% include "ModelSetup_CA.yaml" %}
 ```
 
 4. **Monitor the process:**
