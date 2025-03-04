@@ -13,7 +13,7 @@ nav:
   - Model Structure: model.md              # Provide the file path
   - Model Scripts & Function: codebase.md
   - Model Setup on Cloud: cloud.md
-  - Choosing Solvers: solver.md
+  - Choosing Solvers: solvers.md
   - Model Sensitivity Analysis: sensitivity.md
                              # Provide the file path
 
