@@ -8,8 +8,7 @@ theme:
 
 nav:
   - MESSAGEix-Canada: index.md
-  - Installation: installation.md        # Provide the file path
-  - Solver Installation: solvers.md
+  - Installation: installation.md  
   - Getting Started: get_started.md        # Provide the file path
   - Model Structure: model.md              # Provide the file path
   - Model Scripts & Function: codebase.md
