@@ -11,7 +11,7 @@ nav:
   - Installation: installation.md        # Provide the file path
   - Solver Installation: solvers.md
   - Getting Started: get_started.md        # Provide the file path
-  - Structure: glossary.md              # Provide the file path
+  - Model Structure: model.md              # Provide the file path
   
   - Core Model:
       - Data: data.md                                 # Provide the file path

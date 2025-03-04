@@ -1,53 +1,71 @@
-# Model
+# Model Input & Assumptions
 
-The `model` directory in MESSAGEix-Canada houses the core components of the model structure itself. This includes all the configurations and setup scripts necessary for defining how the model operates.
+Each scenario file includes sets and parameters used in the model. Many of these input data points are already reported in the output files, such as **efficiency, technical lifetime, and operation & maintenance (O&M) costs for technologies**.
 
-The model is set up and initialized using the `setup_scenario` method of the `model_MSG` class, which reads in a configuration file (`config.toml`) for a given scenario. This function initializes the MESSAGEix scenario object and performs various preprocessing steps such as processing historical data and adding hydrogen shares.
+For certain sheets where data sources and assumptions are required, they are documented below. For a detailed explanation of each set or parameter used in the core model formulation, refer to the following documentation:
 
-Ensure that the configurations within the `config.toml` are correctly defined according to your scenario requirements before running the model.
+- **Sets**: [MESSAGE Sets and Mappings](https://docs.messageix.org/en/latest/model/MESSAGE/sets_maps_def.html#)
+- **Parameters**: [MESSAGE Parameters](https://docs.messageix.org/en/latest/model/MESSAGE/sets_maps_def.html#)
 
-## Model Classes
+For the name and descrion of the MESSAGE commodities, technologies and relations:
 
-### Model_MSG
+* [Technologies](https://docs.messageix.org/projects/models/en/latest/pkg-data/codelists.html#technologies-technology-yaml)
+  * For new technologies that are added in the model. See below.
+* [Commodities](https://docs.messageix.org/projects/models/en/latest/pkg-data/codelists.html#commodities-commodity-yaml)
+* [Relations](https://docs.messageix.org/projects/models/en/latest/pkg-data/relation.html)
+* [Emission Species](https://docs.messageix.org/projects/models/en/latest/pkg-data/codelists.html#emission-species-emission-yaml)
 
-The `model_MSG` class is a wrapper for the MESSAGEix framework, which handles initialization and execution of the model. It also contains methods for performing various calculations on the results from the model. This includes calculating emissions based on historical data, adding hydrogen shares to the energy mix, adding new technologies to the energy grid, and adjusting the demand curves in the model according to GDP and population growth.
+### **📊 Data Sources and Assumptions**
 
-### Plotter_MSG
+The table below summarizes the data sources used for different input parameters:
 
-The `plotter_MSG` class is a wrapper for the MESSAGEix model, which handles the plotting functionalities of the model. It contains methods for creating structured dataframes which are used for visualizing results from the model.
+| **Data Type**                       | **Sheet Name(s)**                                                                                                                     | **Description**                                                                                                                                                                                                                                                                                                                                             |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Costs**                           | `inv_cost`, `fix_cost`, `var_cost`                                                                                                    | Cost data is sourced from**WEO data**, fuel blending, and energy demands. For more details, refer to the MESSAGEix-GLOBIOM documentation [page](https://docs.messageix.org/projects/global/en/latest/energy/tech.html). At this point, there is no provinciial differentiation in technology costs but future work will explore varying technological costs.  |
+| **Energy Resources**                | `historical_activity`, `bound_activity_up`                                                                                              | Historical oil and gas production data is sourced from**[Canada Energy Future](https://www.cer-rec.gc.ca/en/index.html)**. Maximum production is constrained based on federal current measures assumptions. Data and processing scripts are available in `data/oil_gas_production`.                                                                                |
+| **Energy End-Use**                  | `initial_activity_lo`, `growth_activity_lo`, `growth_activity_up`, `initial_activity_up`                                            | Eneergy edn use asumptions growth rates and diffusion rates are based on SSP2 assumptions. For more details on the assumptions and how end-use technologies are mapped to useful demands refer to the documentation[page](https://docs.messageix.org/projects/global/en/latest/energy/enduse/index.html).                                                           |
+| **Population and GDP**              | `bound_activity_lo`, `bound_activity_up`                                                                                                | Population projections for provinces are sourced from**Statistics Canada** (till 2048) and projected till 2060 using linear regression. GDP projections apply federal growth rate predictions to current provincial GDP values.                                                                                                                             |
+| **Energy Service Demands**          | `demand`                                                                                                                                  | Energy demands are calculated using population and GDP data (`data/population` and `data/gdp`).                                                                                                                                                                                                                                                               |
+| **Power Plant Capacity**            | `historical_new_capacity`, `bound_new_capacity_lo`, `bound_new_capacity_up`, `bound_total_capacity_lo`, `bound_total_capacity_up` | Data from**CODERS**. Vintage years are used to bound new capacity installations based on the technical lifetime of each technology.                                                                                                                                                                                                                         |
+| **Renewable Energy Potentials**     | `renewable_potential`                                                                                                                     | Based on**gridded capacity factors** from CODERS data. The maximum producible solar, onshore wind, and offshore wind energy are multiplied by capacity factors.                                                                                                                                                                                             |
+| **Historical Generation & End-Use** | `historical_activity`                                                                                                                     | Calibrated using**CER current measures**, mapped appropriately to individual technologies.                                                                                                                                                                                                                                                                  |
+|                                           |                                                                                                                                             |                                                                                                                                                                                                                                                                                                                                                                   |
 
-## Utilities and Other Scripts
+---
 
-Additional scripts are provided by the `utils.py` file and other files found inside the "model" folder. In the utility's script you can find nscripts for cloning an exisitng model, validating the configuration of a scenario, and an internal mapper function which creates a range of years from a vintage year to all the activity years after.
+# **📉 Emissions Accounting**
 
-## Emissions Calculation
+The model employs **two types of emissions accounting**:
 
-There are two types of emissions accounting in the model. One is top-down (extraction level) and the other one bottom-up which is process level. The top-down emission accounting is used for implementing carbon prices and bounds on the emission and it is parameterized in the realtion `CO2_emission`.For `CO2_emission`, the positive values are extraction and import technologies and the negative values are mitigation technologies (e.g CCS). The technologies in the relation `CO2_emission` then has the `emission_factor` and it gets written in to the emission type `TCE`. When we put a boudn on `TCE` , then we can see above which technologies are contributing. The CH4, N2O and HFCs are just technological groupings. We do not have land use emissions parameterized here.
+## **1️⃣ Top-Down (Extraction-Level) Accounting**
 
-The emission factors for the fuels can be found here: [https://docs.messageix.org/projects/global/en/latest/emissions/message/index.html](https://docs.messageix.org/projects/global/en/latest/emissions/message/index.html) . Hence the value of emission factor in MESSAGEix-Canada is base on input of the relevant power plants. Eg for coal power plant, this value in CO2_CC relation needs to be multiplied by input value of coal_ppl to get the emission factor.
+- Used for **carbon pricing** and **emission constraints**.
+- Parameterized in the relation **`CO2_emission`**.
+- **Positive values** correspond to **extraction and import technologies**.
+- **Negative values** correspond to **mitigation technologies** (e.g., **CCS**).
+- The `CO2_emission` relation assigns an **`emission_factor`** to technologies, categorized under the **emission type `TCE`**.
+- By applying an upper **bound on `TCE`**, the model determines which technologies contribute to emissions.
 
-1 tonne CO2 (or CO2e) emissions = 1 tonne × 12/44 = 0.27 tonnes carbon emissions (the other 0.73 tonnes were oxygen).
+## **2️⃣ Bottom-Up (Process-Level) Accounting**
 
-The relation `CO2_cc` is not what is used for emission bound.
+- Tracks emissions at the **process level** within the system.
+- Includes **technological groupings** for:
+  - **CH₄ (Methane)**
+  - **N₂O (Nitrous Oxide)**
+  - **HFCs (Hydrofluorocarbons)**
+- **Land-use emissions** are **not parameterized** in this model.
 
-Note that model emission are C-equivalent and not CO2 equivalent.
-Emission factors for technologies itself are not wrong.
+---
 
-Coal ppl Example just for fuel related emission factors.
+## **📊 Emission Factors and Calculations**
 
-Relation - CO2_cc value is 2.11979
-Input value or efficiency of coal power plant = 1/2.63158 = 0.379
-Emission factor of coal ppl = 2.11979 * 0.379 = 0.8044 MtC/GWyr
+- The **emission factors** for fuels are mentioned alongwith references in the [MESSAGEix-GLOBIOM documnentation](https://docs.messageix.org/projects/global/en/latest/emissions/message/index.html)
+- In **MESSAGEix-Canada**, the **emission factor** for each power plant is based on **fuel input values**.
+  - Example: For a **coal power plant**, the **CO₂_CC** relation value needs to be **multiplied by the fuel input** (`coal_ppl`) to determine emissions.
 
-we need to convert the bounds to tonne of carbon -
+## **📊 Hydrogen Representation**
 
+## **📊 Direct Air Capture (DAC) Representation**
+ - The net-zero scenario that incorporates direct air capture technologies as part of  emission-mitigating technology. The infrastructure for accomodating such technologies counts on CO2 storage facilities paired with the extraction technologies, as examplified by the figure below.
 
-## Running the Model
-
-The model can be run in two primary ways:
-
-1. **Command Line:** through the command line, users can run the `MESSAGE_CA.py` file and specify the scenario name corresponding to a folder containing the necessary data and the `ModelSetup_CA.yaml` file. The model will read in these files, perform the necessary preprocessing, and then solve the scenario.
-
-2. **Jupyter Notebooks:** The model can also be run interactively using the `setup_scenario` function within a Jupyter notebook. This allows users to adjust parameters, explore data, and analyze results before and after solving the model. The `MESSAGEix-Canada` repository provides a few notebooks used for model development.
-
-Both methods are supported, providing flexibility depending on the user's preferred workflow. Make sure to follow the instructions specific to each method to ensure the model runs successfully.
+![](include/DAC_infrastructure.svg)
