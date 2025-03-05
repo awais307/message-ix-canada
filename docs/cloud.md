@@ -114,45 +114,45 @@ kubectl logs <pod-name>
 
 ### Checking Job Status
 - Get a list of all jobs:
-  ```bash
+  ```
   kubectl get jobs
   ```
 - Check if a job has completed or is still running.
 
 ### Deleting a Job
 - Delete a specific job:
-  ```bash
+  ```
   kubectl delete job <job-name>
   ```
 
 ### Checking Pods
 - List all pods:
-  ```bash
+  ```
   kubectl get pods
   ```
   *(Each job runs in a specific pod. If a job fails, multiple pods may be created for it.)*
 
 - View logs of a specific pod:
-  ```bash
+  ```
   kubectl logs <pod-name>
   ```
   *(Useful for checking where the model stopped running.)*
 
 ### Managing Persistent Volumes
 - Get a list of persistent volumes (PV):
-  ```bash
+  ```
   kubectl get pv
   ```
 - Delete a specific PV:
-  ```bash
+  ```
   kubectl delete pv <pv-name>
   ```
 - Get a list of persistent volume claims (PVC):
-  ```bash
+  ```
   kubectl get pvc
   ```
 - Delete a specific PVC:
-  ```bash
+  ```
   kubectl delete pvc <pvc-name>
   ```
 
@@ -160,5 +160,5 @@ kubectl logs <pod-name>
 
 ### Checking if a Job Completed Successfully
 Check logs to confirm successful job execution:
-```bash
+```
 kubectl logs <pod-name>
