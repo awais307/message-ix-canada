@@ -25,13 +25,14 @@ scenario_config:
     add_techs: False
     investment_tax_credit: False
     apply_obps: True
+    apply_renewable_potential: True
     obps_policy_carbon_cost:
       2025: 165.4251
       2030: 285.2156 
       more_than_2025: 387.89325
   post_process_config:
     to_excell: False
-    legacy_reporter: False
+    legacy_reporter: True
     new_reporter: False
 path_config:
   provincial_input_file: scenarios/baseline/model_default_v23.xlsx
