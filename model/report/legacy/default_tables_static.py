@@ -4790,6 +4790,7 @@ def retr_SE_elecgen(units):
                 "solar_res_hist_2010",
                 "solar_res_hist_2015",
                 "solar_res_hist_2020",
+                "solar_pv_ppl"
             ],
             units,
         )
@@ -4862,6 +4863,8 @@ def retr_SE_elecgen(units):
 
     _Wind_ref_act = pp.out(
         [
+            "wind_ppl",
+            "wind_ppf",
             "wind_ref1",
             "wind_ref2",
             "wind_ref3",
@@ -5335,25 +5338,27 @@ def retr_pe(units, method=None):
     # Primary Energy Wind
     # -------------------
 
-    vars["Wind"] = pp.out(
+    vars["Wind"] = pp.inp(
         [
-            "wind_res1",
-            "wind_res2",
-            "wind_res3",
-            "wind_res4",
-            "wind_ref1",
-            "wind_ref2",
-            "wind_ref3",
-            "wind_ref4",
-            "wind_ref5",
-            "wind_res_hist_2005",
-            "wind_res_hist_2010",
-            "wind_res_hist_2015",
-            "wind_res_hist_2020",
-            "wind_ref_hist_2005",
-            "wind_ref_hist_2010",
-            "wind_ref_hist_2015",
-            "wind_ref_hist_2020",
+            # "wind_res1",
+            # "wind_res2",
+            # "wind_res3",
+            # "wind_res4",
+            # "wind_ref1",
+            # "wind_ref2",
+            # "wind_ref3",
+            # "wind_ref4",
+            # "wind_ref5",
+            # "wind_res_hist_2005",
+            # "wind_res_hist_2010",
+            # "wind_res_hist_2015",
+            # "wind_res_hist_2020",
+            # "wind_ref_hist_2005",
+            # "wind_ref_hist_2010",
+            # "wind_ref_hist_2015",
+            # "wind_ref_hist_2020",
+            "wind_ppl",
+            "wind_ppf"
         ],
         units,
     ) - pp.inp(
@@ -5400,6 +5405,7 @@ def retr_pe(units, method=None):
             "solar_res_hist_2010",
             "solar_res_hist_2015",
             "solar_res_hist_2020",
+            "solar_pv_ppl"
         ],
         units,
     )
