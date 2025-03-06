@@ -1,125 +1,164 @@
-# 🚀 Running MESSAGE on Arbutus & Cloud Setup
+# Running MESSAGE on Arbutus
 
 This guide provides step-by-step instructions for **setting up and running MESSAGEix-Canada on Arbutus**.  
 Additionally, it includes a section on **setting up the model on a cloud environment** for scalability.
 
----
+## Prerequisites (One-Time Setup)
 
-## **1️⃣ Prerequisites (One-Time Setup)**
+### Step 1: Download and Install MobaXterm
+1. Open your web browser and go to [MobaXterm's official website](https://mobaxterm.mobatek.net/download.html).
+2. Download and install the latest version of MobaXterm.
 
-Follow these steps **once** to set up your environment.
-
-### **📥 Step 1: Download and Install MobaXterm**
-- Download **MobaXterm** from its official website:  
-  🔗 [MobaXterm Download](https://mobaxterm.mobatek.net/download.html)
-- Install the latest version on your system.
-
----
-
-### **🔑 Step 2: Generate an SSH Key Pair**
+### Step 2: Generate an SSH Key Pair
 1. Open **MobaXterm**.
-2. Go to **Tools** → Select **MobaKeyGen (SSH key generator)**.
-3. Click **Generate** and move your mouse randomly inside the window until the progress bar completes.
-4. Once generated:
-   - Click **Save private key** → Choose a **secure location**.
-   - Click **Save public key** → Save it in the **same location**.
-5. Copy the **public key** from the text box and send it to **Bipasa Agrawal** for SSH access.
-6. Also, check your **IPv4 address** here:  
-   🔗 [What is My IP](https://whatismyipaddress.com/)  
-   Send this **IPv4 address** to **Bipasa** for firewall access.
+2. Click on **Tools** in the top menu bar.
+3. Select **MobaKeyGen (SSH key generator)**.
+4. Click **Generate** and move your mouse randomly inside the window until the progress bar completes.
+5. Once generated:
+   - Click **Save private key** → Choose a secure location.
+   - Click **Save public key** → Save it in the same location.
+6. Copy the public key from the text box and send it to **Bipasa Agrawal (bipasaagrawal@uvic.ca)** to enable SSH access.
+7. Check your IP address at [whatismyipaddress.com](https://whatismyipaddress.com/) and send your **IPv4 address** to Bipasa to gain access to the Arbutus cloud instance.
 
----
-
-### **🔗 Step 3: Connect to Arbutus via SSH**
+### Step 3: Connect to the Remote Server via SSH
 1. Open **MobaXterm**.
 2. Click **Session** → Select **SSH**.
-3. In the **Remote Host** field, enter:  
+3. In the **Remote Host** field, enter:
    ```plaintext
    206.12.95.240
-4. Check "Specify username" and enter the provided username.
-5. Click Advanced SSH settings.
-6. Under "Use private key", click Browse and select the private key generated earlier.
-7. Click OK to start the SSH session.If prompted with a security warning, select Yes.
+   ```
+4. Check **Specify username** and enter your provided username.
+5. Click **Advanced SSH settings**.
+6. Under **Use private key**, click **Browse** and select the private key you generated earlier.
+7. Click **OK** to start the SSH session.
+8. If prompted with a security warning, select **Yes**.
+9. You are now connected to the server.
 
-✅ You are now connected to the Arbutus server!
+---
 
-## **2 Setting Up the MESSAGEix-Canada Repository**
+## Setting Up the `messageix-canada` Repository and Job Scheduler
 
-Once connected to the Arbutus instance, follow these steps.
-
-📂 Step 1: Accessing the SHARED Folder
-Navigate to the SHARED directory:
-
-sh
-Copy
-Edit
+### 1. Accessing the SHARED Folder
+Once connected to the instance:
+```bash
 cd ..
 cd SHARED
-Create a new folder inside SHARED (use an identifier like your username):
-
-sh
-Copy
-Edit
+```
+Create a new folder inside `SHARED` (use a meaningful name, e.g., with your username):
+```bash
 mkdir message_bipasa
+```
+📌 The **SHARED** folder is accessible by all users with SSH access to this instance.
+
+### 2. Cloning the Repository
+Inside your newly created folder:
+```bash
 cd message_bipasa
-⚠️ Important:
-
-The SHARED folder is accessible by all users with SSH access.
-Do not store personal files here.
-🛠 Step 2: Cloning the Repository
-Inside your new folder, clone the messageix-canada repository:
-
-sh
-Copy
-Edit
 git clone https://gitlab.com/sesit/message-ix.git
 cd message-ix
-Switch to the development branch:
-
-sh
-Copy
-Edit
-git checkout dev
-To pull the latest updates:
-
-sh
-Copy
-Edit
+git checkout dev  # Switch to the dev branch
+```
+To pull the latest changes from the `dev` branch:
+```bash
 git pull origin dev
-Alternatively, you can upload your local repository instead of cloning.
+```
+Alternatively, instead of cloning, you can upload your local `messageix-canada` repository into this folder.
+📌 **CAUTION:** Store all model folders/repos inside `SHARED`, **not** in your personal folder.
 
-⚠️ Important:
-
-Always store model folders or repositories inside the SHARED folder, not in your personal directory.
-📁 Step 3: Setting Up Your Personal Directory
-Move one directory up from the SHARED folder:
-
-sh
-Copy
-Edit
+### 3. Setting Up Your Personal Directory
+Move **one level up** from the `SHARED` folder:
+```bash
 cd ..
-Navigate to your personal user folder (accessible only by you).
-
-🔹 Create a directory for Kubernetes configuration:
-sh
-Copy
-Edit
+```
+Navigate to your personal folder and create a `.kube` directory:
+```bash
 mkdir .kube
 cd .kube
-Upload the config file into .kube. (Message Bipasa if you don’t have this file yet)
+```
+Upload the **config** file here. *(Message Bipasa if you don't have this file.)*
 
-🔹 Set up job scheduling:
-Go back to your personal folder:
-sh
-Copy
-Edit
+Go back to your personal folder and create a directory for job scheduling:
+```bash
 cd ..
-Create a job scheduler directory:
-sh
-Copy
-Edit
 mkdir job_scheduler
 cd job_scheduler
-Upload the create_message_job.py script into the job_scheduler folder.
-(Message Bipasa if you don’t have this file yet)
-✅ You are now ready to schedule MESSAGE jobs! 🎯
+```
+Upload `create_message_job.py` into this folder. *(Message Bipasa if you don't have this file.)*
+
+### 4. You're Ready!
+You can now start running MESSAGE jobs as needed.
+
+---
+
+## Running a MESSAGE Job
+To execute a MESSAGE job, use the following command format (remember to change the folder names):
+```bash
+python3 "/home/bipasa25/job_scheduler/create_message_job.py" \
+        "/home/SHARED/message-bipasa" \
+        "python3 MESSAGE_CA.py" "1"
+```
+📌 **Parameters:**
+- **Path to** `create_message_job.py` (inside your user space)
+- **Path to** `message-bipasa` (inside SHARED folder)
+- **Command to run** the MESSAGE model (`MESSAGE_CA.py`)
+- **Job number** (must be unique unless the previous job and its persistent volume are deleted)
+
+To check job progress in logs:
+```bash
+kubectl logs <pod-name>
+```
+
+---
+
+## Troubleshooting & Checking Status
+
+### Checking Job Status
+- Get a list of all jobs:
+  ```
+  kubectl get jobs
+  ```
+- Check if a job has completed or is still running.
+
+### Deleting a Job
+- Delete a specific job:
+  ```
+  kubectl delete job <job-name>
+  ```
+
+### Checking Pods
+- List all pods:
+  ```
+  kubectl get pods
+  ```
+  *(Each job runs in a specific pod. If a job fails, multiple pods may be created for it.)*
+
+- View logs of a specific pod:
+  ```
+  kubectl logs <pod-name>
+  ```
+  *(Useful for checking where the model stopped running.)*
+
+### Managing Persistent Volumes
+- Get a list of persistent volumes (PV):
+  ```
+  kubectl get pv
+  ```
+- Delete a specific PV:
+  ```
+  kubectl delete pv <pv-name>
+  ```
+- Get a list of persistent volume claims (PVC):
+  ```
+  kubectl get pvc
+  ```
+- Delete a specific PVC:
+  ```
+  kubectl delete pvc <pvc-name>
+  ```
+
+📌 **After completing the job and verifying results in** `message-ix`, **delete the job, PV, and PVC associated with it.**
+
+### Checking if a Job Completed Successfully
+Check logs to confirm successful job execution:
+```
+kubectl logs <pod-name>
