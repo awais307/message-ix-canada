@@ -101,6 +101,7 @@ class model_MSG:
 		self.ctx.mp.add_unit('USD/(tC/yr)') # Addiing cost unit for DAC technologies to the database
 
 	## Scenario creation functions ##
+	#TODO move it to separate technology.py file
 	def add_technology(
 		self,
 		techs_file: str,
@@ -478,6 +479,7 @@ class model_MSG:
 				Reporting with LEGACY reporter. Process time: {round((end - start) / 60)} Min and {round((end - start) % 60)} Sec\
 				\n=================================================="
 				)
+				
 
 		if self.ctx.post_process_config['to_excell']:
 			start = time.time()
