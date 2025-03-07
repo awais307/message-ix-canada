@@ -43,8 +43,7 @@ index_order = [
 
 def convert_format(input_file, output_file_name):
     # Read the Excel file
-    #"C:\Users\brend\Documents\GitHub\message-ix - CA\reporting_outputs\MESSAGEix-CA_baseline_Muhammad.xlsx"
-    df = pd.read_excel(input_file)# '/Users/brend/Documents/GitHub/message-ix - CA/reporting_outputs/MESSAGEix-CA_Validation_no_obps.xlsx')
+    df = pd.read_excel(input_file)
 
     # Convert only the negative values in the columns from 2020 to 2060 to their absolute values
     df.loc[:, 2020:2060] = df.loc[:, 2020:2060].abs()
@@ -71,7 +70,7 @@ def convert_format(input_file, output_file_name):
     df.rename(columns={'year':'time'}, inplace=True)
 
     # Save to CSV
-    df.to_csv(output_file_name) #'/Users/brend/Documents/GitHub/message-ix - CA/reporting_outputs/output_pyam_Validation_no_OBPS.csv')
+    df.to_csv(output_file_name)
 
 def combineDict(*args):
     result = {}
