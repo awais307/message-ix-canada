@@ -45,6 +45,7 @@ def report(
     lu_hist=None,
     verbose=False,
     out_file_timestamp=None,
+    IDEA_format=False,
     *,
     context: Optional[Context] = None,
 ):
@@ -451,7 +452,7 @@ def report(
     #        if df.iloc[index, col] < 0:
     #            df.iloc[index, col] = df.iloc[index, col] * -1
                 
-    pp_utils.write_xlsx(df, out_dir, out_file_timestamp)
+    pp_utils.write_xlsx(df, out_dir, out_file_timestamp, IDEA_format)
     
     # Return the reeport as a dataframe
     return df
