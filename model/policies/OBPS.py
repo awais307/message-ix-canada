@@ -31,7 +31,7 @@ def apply_obps(ctx):
 
 	# Read the required data
 	provinces = scenario.set('node')[2:]
-	data_relation = pd.read_excel(data_file_path, sheet_name='Merged_Sheet')
+	data_relation = pd.read_excel(data_file_path, sheet_name="New_OBPS_Values")#'Merged_Sheet')
 	data_relation["region"] = data_relation['region'].str.replace(" ", "")
 	canada_values = data_relation[data_relation["region"] == "Canada"]
 	for r in provinces:
@@ -97,8 +97,8 @@ def apply_obps(ctx):
 			result.loc[index, 'carbon_cost'] = row['payable_emis_intensity'] * ctx['policy_config']['obps_policy_carbon_cost'][2025]
 		elif row['year_act'] == 2030:
 			result.loc[index, 'carbon_cost'] = row['payable_emis_intensity'] *  ctx['policy_config']['obps_policy_carbon_cost'][2030] 
-		elif row['year_act'] > 2025:
-			result.loc[index, 'carbon_cost'] = row['payable_emis_intensity'] * ctx['policy_config']['obps_policy_carbon_cost']['more_than_2025']
+		elif row['year_act'] >= 2035:
+			result.loc[index, 'carbon_cost'] = row['payable_emis_intensity'] * ctx['policy_config']['obps_policy_carbon_cost']['more_than_2035']
 
 	# Adjust for years 2055 and 2060
 	for index, row in result.iterrows():
