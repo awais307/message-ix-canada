@@ -355,7 +355,7 @@ def cum_vals(df):
     return df.sort_index()
 
 
-def write_xlsx(df, path):
+def write_xlsx(df, path, out_file_timestamp):
     """Writes final results dataframe to xlsx file.
 
     Parameters
@@ -366,7 +366,7 @@ def write_xlsx(df, path):
 
     """
 
-    out_path = path / f"{model_nm}_{scen_nm}.xlsx"
+    out_path = path / f"{model_nm}_{scen_nm}_{out_file_timestamp}.xlsx"
     with pd.ExcelWriter(out_path, engine="xlsxwriter") as writer:
         df.to_excel(writer, sheet_name="data", index=False)
 
