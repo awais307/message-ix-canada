@@ -12,6 +12,7 @@ import os
 import time
 import warnings
 import pandas as pd
+from datetime import datetime
 from model.policies.hydrogen_shares import add_hydrogen_shares
 from model.utlities.pop_gdp import process_gdp_population_data, add_population_gdp_to_scenario
 from model.utlities.demands import adjust_demands
@@ -400,6 +401,9 @@ class model_MSG:
 			excel_path, add_units=True, commit_steps=False, init_items=True
 		)
 		
+		if self.ctx.policy_config['apply_renewable_potential']:
+			print('Model Logs: Applying renewable potential data\n')
+			apply_renewable_potential(self)
 
 		if self.ctx.policy_config['process_historical']:
 			print('Model Logs: Processing historical data\n')
@@ -457,8 +461,9 @@ class model_MSG:
 
 
 			if self.ctx.post_process_config['new_reporter']:
+				timestamp = str(datetime.now())
 				self.ctx.generate_report(
-					output_path=f"reporting_output/{caseName}_new_reporter.csv",
+					output_path=f"reporting_output/{caseName}_{timestamp}_new_reporter.csv",
 					min_year=2020,
 					max_year=2060,
 					from_excel=False,
@@ -471,8 +476,9 @@ class model_MSG:
 				\n=================================================="
 				)
 			elif self.ctx.post_process_config['legacy_reporter']:
+				timestamp = str(datetime.now())
 				start = time.time()
-				report(mp=self.ctx.mp, scen=self.ctx.source_scenario['scenario'], out_dir="reporting_outputs")
+				report(mp=self.ctx.mp, scen=self.ctx.source_scenario['scenario'], out_dir="reporting_outputs", out_file_timestamp = timestamp)
 				end = time.time()
 				print(
 					f"\n==================================================\n\

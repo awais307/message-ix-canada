@@ -129,6 +129,7 @@ Since model constraints are applied in **C-equivalent**, emission bounds must be
 
 Hydrogen production is modeled with specific **conversion efficiencies** and **emission factors** based on feedstock type (e.g., electrolysis, SMR with or without CCS).
 
+![](include/H2_Framework_2025-03-06.png)
 ---
 
 # **🌍 Direct Air Capture (DAC)**

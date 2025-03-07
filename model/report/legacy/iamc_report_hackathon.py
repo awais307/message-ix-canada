@@ -44,6 +44,7 @@ def report(
     kyoto_hist=None,
     lu_hist=None,
     verbose=False,
+    out_file_timestamp=None,
     *,
     context: Optional[Context] = None,
 ):
@@ -450,7 +451,7 @@ def report(
     #        if df.iloc[index, col] < 0:
     #            df.iloc[index, col] = df.iloc[index, col] * -1
                 
-    pp_utils.write_xlsx(df, out_dir)
+    pp_utils.write_xlsx(df, out_dir, out_file_timestamp)
     
     # Return the reeport as a dataframe
     return df
