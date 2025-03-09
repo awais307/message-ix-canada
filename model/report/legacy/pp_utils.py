@@ -8,6 +8,7 @@ from functools import cmp_to_key
 
 import numpy as np
 import pandas as pd
+import pyam 
 from pandas.api.types import is_numeric_dtype
 
 from message_ix_models.util import package_data_path
@@ -40,6 +41,36 @@ index_order = [
     "Vintage",
 ]
 
+def convert_format(input_file, output_file_name):
+    # Read the Excel file
+    df = pd.read_excel(input_file)
+
+    # Convert only the negative values in the columns from 2020 to 2060 to their absolute values
+    df.loc[:, 2020:2060] = df.loc[:, 2020:2060].abs()
+
+    # Drop rows where 'Region' is NaN
+    df = df.dropna(subset=['Region'])
+
+    # Remove duplicate rows
+    df = df.drop_duplicates(subset=['Model', 'Region', 'Scenario', 'Unit', 'Variable'])
+
+    # Now create the pyam.IamDataFrame
+    df_pyam = pyam.IamDataFrame(df)
+
+    # Convert back to pandas DataFrame
+    df = df_pyam.as_pandas()
+
+    # Ensure 'value' column is float
+    df['value'] = df['value'].astype(float)
+
+    # Set model name
+    df['model'] = 'MESSAGEix-Canada'
+
+    # Rename 'year' column to 'time'
+    df.rename(columns={'year':'time'}, inplace=True)
+
+    # Save to CSV
+    df.to_csv(output_file_name)
 
 def combineDict(*args):
     result = {}
@@ -355,7 +386,7 @@ def cum_vals(df):
     return df.sort_index()
 
 
-def write_xlsx(df, path, out_file_timestamp):
+def write_xlsx(df, path, out_file_timestamp, IDEA_format=False):
     """Writes final results dataframe to xlsx file.
 
     Parameters
@@ -367,8 +398,12 @@ def write_xlsx(df, path, out_file_timestamp):
     """
 
     out_path = path / f"{model_nm}_{scen_nm}_{out_file_timestamp}.xlsx"
+    pyam_out_path = path / f"output_pyam_{model_nm}_{scen_nm}_{out_file_timestamp}.xlsx" 
     with pd.ExcelWriter(out_path, engine="xlsxwriter") as writer:
         df.to_excel(writer, sheet_name="data", index=False)
+    
+    if IDEA_format:
+        convert_format(out_path, pyam_out_path)
 
 
 def make_outputdf(vars, units, param="sum", glb=True, weighted_by=None):
