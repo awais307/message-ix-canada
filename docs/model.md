@@ -208,6 +208,18 @@ This section contains a table of unit conversions for the most used units in the
       <td>4.56 e-7</td>
       <td>Mass conversion for lignite coal to gigawatt annual</td>
     </tr>
+    <tr>
+      <td>Megatonnes of Hydrogen [Mt]</td>
+      <td>Gigawatt annual [GWa]</td>
+      <td>0.00536</td>
+      <td>Mass conversion for Hydrogen (density = 71 Kg/m3)</td>
+    </tr>
+    <tr>
+      <td>Gigawatt-hour [GWh]</td>
+      <td>Peta-joules per year [PJ/year]</td>
+      <td>41.1e-3</td>
+      <td>Gigawatt-hour to peta-joules per year</td>
+    </tr>
   </tbody>
 </table>
 </body>
