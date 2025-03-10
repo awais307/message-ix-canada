@@ -10,7 +10,8 @@ class CODERS_pull:
     """
     def __init__(self, key, ref_year, base_year, end_year, time_step, provincial=True):
         self.key = key
-        self.url = 'http://206.12.95.102/'
+        # self.url = 'http://206.12.95.102/'
+        self.url = 'https://api.sesit.ca'
         self.root = os.path.dirname(os.path.dirname(os.getcwd()))
         self.base_year = base_year
         self.ref_year = ref_year
@@ -23,10 +24,12 @@ class CODERS_pull:
 
         # Create gen_generic
         gen_generic = pd.DataFrame.from_dict(requests.get(f'{self.url}/generation_generic?key={self.key}').json())
-        gen_generic = gen_generic.set_index(gen_generic['gen_type'], drop=True)
-        gen_generic = gen_generic.join(pd.read_csv('CODERS-MESSAGE_technologies.csv', index_col=1))
+        gen_generic = gen_generic.set_index(gen_generic['gen_type_copper'], drop=True)
+        # gen_generic = gen_generic.join(pd.read_csv('CODERS-MESSAGE_technologies.csv', index_col=1))
+        gen_generic = gen_generic.join(pd.read_csv(r'C:\Users\bipas\Downloads\message_new\message-ix\model\utlities\coders\CODERS-MESSAGE_technologies.csv', index_col=1))
+
         gen_generic.index = gen_generic.index.str.lower()
-        gen_generic['gen_type'] = gen_generic['gen_type'].str.lower()
+        gen_generic['gen_type_copper'] = gen_generic['gen_type_copper'].str.lower()
         gen_generic['year'] = self.base_year
         self.gen_generic = gen_generic
 
@@ -43,15 +46,20 @@ class CODERS_pull:
             if data.gen_type == 'wind_onshore':
                 gentype = 'wind_ons'
             elif data.gen_type == 'solar_pv':
-                gentype = 'solar_pv'
+                gentype = 'solar'
             elif data.gen_type == 'gas_ct':
                 gentype = 'ng_sc'
+            # elif data.gen_type == 'biogas':
+            #     gentype = 'geothermal'
             else:
                 gentype = data.gen_type
-            if math.isnan(data.closure_year):
-                closure_year[unit] = data.start_year + self.gen_generic.at[gentype, 'service_life']
-            else:
-                closure_year[unit] = data.closure_year
+            try:
+                if math.isnan(data.closure_year):
+                    closure_year[unit] = data.start_year + self.gen_generic.at[gentype, 'service_life']
+                else:
+                    closure_year[unit] = data.closure_year
+            except KeyError:
+                print(f"Warning: Key '{gentype}' not found in gen_generic, skipping unit {unit}")
             updated_gen_type[unit] = gentype
         generators['updated_closure_year'] = pd.Series(closure_year)
         generators['updated_gen_type'] = pd.Series(updated_gen_type)
@@ -81,7 +89,11 @@ class CODERS_pull:
         Pulls investment cost data from CODERS and creates inv_cost csv file in MESSAGE format
         """
         costs = self.gen_generic[['MESSAGE_tech', 'year']]
+
+        self.gen_generic['capital_cost_CAD_per_kW'] = pd.to_numeric(self.gen_generic['capital_cost_CAD_per_kW'], errors='coerce')
         costs['capital_cost_USD_per_MW'] = self.gen_generic['capital_cost_CAD_per_kW'] / 1.3 * 1000
+
+        # costs['capital_cost_USD_per_MW'] = self.gen_generic['capital_cost_CAD_per_kW'] / 1.3 * 1000
 
         if method == 'coders':
             cost_evolution = self.CODERS_cost_evolution()
@@ -178,7 +190,12 @@ class CODERS_pull:
         """
         Pulls cost evolution data from CODERS, returns relative price change for each period
         """
-        cost_evolution = pd.DataFrame.from_dict(requests.get(f'{self.url}/generation_cost_evolution?key={self.key}').json())
+        # cost_evolution = pd.DataFrame.from_dict(requests.get(f'{self.url}/generation_cost_evolution?key={self.key}').json())
+        response = requests.get(f'{self.url}/generation_cost_evolution?key={self.key}')
+        data = response.json()
+
+        # Convert dictionary to DataFrame (treating it as a single-row DataFrame)
+        cost_evolution = pd.DataFrame([data])
         cost_evolution = cost_evolution.set_index(cost_evolution['gen_type'])
         cost_evolution = cost_evolution.loc[:, cost_evolution.columns.str.contains('CAD_per_kW')]
         base_cost = cost_evolution[f'{self.base_year}_CAD_per_kW']
@@ -440,7 +457,7 @@ class CODERS_pull:
 
 
 if __name__ == '__main__':
-    pull = CODERS_pull("vBiOGBwJ3hwNLpqh", ref_year=1960, base_year=2020, end_year=2060, time_step=5, provincial=True)
+    pull = CODERS_pull("{put key here}", ref_year=1960, base_year=2020, end_year=2060, time_step=5, provincial=True)
     pull.run_all_electr_gen()
     #pull.interprovincial_lines()
     #pull.international_lines()
