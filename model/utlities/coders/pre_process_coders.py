@@ -125,7 +125,7 @@ class CODERS_pull:
                     result = pd.concat([result, prov_cost])
             cost_data = cost_data[~(cost_data.node == 'Canada')]
 
-        result.to_csv(rf'C:\Users\bipas\Downloads\message_new\message-ix\data\Old-Coders-Data\electr_gen_inv_costs.csv', index=False)
+        result.to_csv(rf'{self.root}\data\CODERS_data\electr_gen_inv_costs.csv', index=False)
 
 
     def electr_gen_fix_var_cost(self, om_type):
@@ -176,9 +176,9 @@ class CODERS_pull:
             result = result[~(result.node == 'Canada')]
 
         if om_type == 'fixed':
-            result.to_csv(rf'C:\Users\bipas\Downloads\message_new\message-ix\data\Old-Coders-Data\electr_gen_fix_costs.csv', index=False)
+            result.to_csv(rf'{self.root}\data\CODERS_data\electr_gen_fix_costs.csv', index=False)
         elif om_type == 'variable':
-            result.to_csv(rf'C:\Users\bipas\Downloads\message_new\message-ix\data\Old-Coders-Data\electr_gen_var_costs.csv', index=False)
+            result.to_csv(rf'{self.root}\data\CODERS_data\electr_gen_var_costs.csv', index=False)
 
 
     def CODERS_cost_evolution(self):
@@ -236,8 +236,8 @@ class CODERS_pull:
                 else:
                     result = pd.concat([result, prov_data])
             result = result[~(result.node == 'Canada')]
-        # result.to_csv(r'C:\Users\bipas\Downloads\message_new\message-ix\data\Old-Coders-Data\electr_gen_{name}.csv', index=False)
-        result.to_csv(rf'C:\Users\bipas\Downloads\message_new\message-ix\data\Old-Coders-Data\electr_gen_{name}.csv', index=False)
+        # result.to_csv(r'\Old-Coders-Data\electr_gen_{name}.csv', index=False)
+        result.to_csv(rf'{self.root}\data\CODERS_data\electr_gen_{name}.csv', index=False)
 
     
 
@@ -275,7 +275,7 @@ class CODERS_pull:
                     result = pd.concat([result, prov_data])
             result = result[~(result.node == 'Canada')]
 
-        result.to_csv(rf'C:\Users\bipas\Downloads\message_new\message-ix\data\Old-Coders-Data\electr_gen_emission_factor.csv', index=False)
+        result.to_csv(rf'{self.root}\data\CODERS_data\electr_gen_emission_factor.csv', index=False)
 
 
     def electr_gen_historical_new_capacity(self):
@@ -311,7 +311,7 @@ class CODERS_pull:
 
         if not self.provincial:
             result = result[result.index == 'Canada']
-        pd.DataFrame.from_dict(result).to_csv(rf'C:\Users\bipas\Downloads\message_new\message-ix\data\Old-Coders-Data\electr_gen_historical_new_capacity.csv')
+        pd.DataFrame.from_dict(result).to_csv(rf'{self.root}\data\CODERS_data\electr_gen_historical_new_capacity.csv')
 
     
     def electr_gen_historical_activity_raw(self):
@@ -350,7 +350,7 @@ class CODERS_pull:
         if not self.provincial:
             result = result[result.index == 'Canada']
         # saving to excel
-        pd.DataFrame.from_dict(result).to_csv(rf'C:\Users\bipas\Downloads\message_new\message-ix\data\Old-Coders-Data\electr_gen_historical_activity.csv')
+        pd.DataFrame.from_dict(result).to_csv(rf'{self.root}\data\CODERS_data\electr_gen_historical_activity.csv')
 
 
     def electricity_demand(self):
@@ -377,7 +377,7 @@ class CODERS_pull:
         demand['unit'] = 'MWa'
         demand = demand.set_index(demand.node)
         demand = demand[['commodity', 'level', 'year', 'time', 'value', 'unit']]
-        demand.to_csv(rf'C:\Users\bipas\Downloads\message_new\message-ix\data\Old-Coders-Data\electr_demand.csv', index=True)
+        demand.to_csv(rf'{self.root}\data\CODERS_data\\electr_demand.csv', index=True)
 
 
     def interprovincial_lines(self):
@@ -418,18 +418,18 @@ class CODERS_pull:
         lines_input['time_origin'] = 'year'
         lines_input['unit'] = '%'
         temp = lines_input[['node_loc', 'technology', 'year_vtg', 'year_act', 'mode', 'node_origin', 'commodity', 'level', 'time', 'time_origin', 'value', 'unit']]
-        temp.to_csv(rf'C:\Users\bipas\Downloads\message_new\message-ix\data\Old-Coders-Data\electr_trans_inputs.csv',index=False)
+        temp.to_csv(rf'{self.root}\data\CODERS_data\electr_trans_inputs.csv',index=False)
 
         # create output sheet
         lines_input['value'] = 1
         temp = lines_input[['node_loc', 'technology', 'year_vtg', 'year_act', 'mode', 'node_dest', 'commodity', 'level', 'time', 'time_origin', 'value', 'unit']]
-        temp.to_csv(rf'C:\Users\bipas\Downloads\message_new\message-ix\data\Old-Coders-Data\electr_trans_outputs.csv',index=False)
+        temp.to_csv(rf'{self.root}\data\CODERS_data\electr_trans_outputs.csv',index=False)
 
         # create fixed costs
         lines_input['value'] = 25000/1.3 # TAKEN FROM COPPER INPUTS
         lines_input['unit'] = 'USD/MW'
         temp = lines_input[['node_loc', 'technology', 'year_vtg', 'year_act', 'value', 'unit']]
-        temp.to_csv(rf'C:\Users\bipas\Downloads\message_new\message-ix\data\Old-Coders-Data\electr_trans_fix_cost.csv',index=False)
+        temp.to_csv(rf'{self.root}\data\CODERS_data\electr_trans_fix_cost.csv',index=False)
 
         # create historical capacity
         temp = lines_input.copy()
@@ -439,7 +439,7 @@ class CODERS_pull:
         temp = temp[temp.year_vtg == str(self.base_year)]
         temp = temp[temp['mode'] == 'a->b']
         temp = temp[['node_loc', 'technology', 'year_vtg', 'value', 'unit']]
-        temp.to_csv(rf'C:\Users\bipas\Downloads\message_new\message-ix\data\Old-Coders-Data\electr_trans_historical_new_capacity.csv', index=False)
+        temp.to_csv(rf'{self.root}\data\CODERS_data\electr_trans_historical_new_capacity.csv', index=False)
     
 
     def international_lines(self):
