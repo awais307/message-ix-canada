@@ -29,7 +29,7 @@ scenario_config:
     obps_policy_carbon_cost:
       2025: 165.4251
       2030: 285.2156 
-      more_than_2025: 387.89325
+      more_than_2035: 387.89325
   post_process_config:
     to_excell: False
     legacy_reporter: True
