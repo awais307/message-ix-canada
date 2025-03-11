@@ -24,7 +24,7 @@ class CODERS_pull:
         # Create gen_generic
         gen_generic = pd.DataFrame.from_dict(requests.get(f'{self.url}/generation_generic?key={self.key}').json())
         gen_generic = gen_generic.set_index(gen_generic['gen_type'], drop=True)
-        gen_generic = gen_generic.join(pd.read_csv(r'C:\Users\bipas\Downloads\message_new\message-ix\model\utlities\coders\CODERS-MESSAGE_technologies.csv', index_col=1))
+        gen_generic = gen_generic.join(pd.read_csv(r'\message-ix\model\utlities\coders\CODERS-MESSAGE_technologies.csv', index_col=1))
         gen_generic.index = gen_generic.index.str.lower()
         gen_generic['gen_type'] = gen_generic['gen_type'].str.lower()
         gen_generic['year'] = self.base_year
