@@ -449,7 +449,7 @@ class CODERS_pull:
 
 
 if __name__ == '__main__':
-    pull = CODERS_pull("vBiOGBwJ3hwNLpqh", ref_year=1960, base_year=2020, end_year=2060, time_step=5, provincial=True)
+    pull = CODERS_pull("{put key here}", ref_year=1960, base_year=2020, end_year=2060, time_step=5, provincial=True)
     pull.run_all_electr_gen()
     #pull.interprovincial_lines()
     #pull.international_lines()
