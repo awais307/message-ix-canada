@@ -57,15 +57,6 @@ To install open-source solvers via [GAMSlinks](https://github.com/coin-or/GAMSli
 
 We recommend using the **CBC solver** out of the open-source alternatives, which can be installed via **Coin-OR**'s GitHub page, if not through GAMSlinks. Follow the installation guide in the [README](https://github.com/coin-or/Cbc/blob/master/README.md#download).
 
-# Solver Performance Benchmark for MESSAGEix-Canada
-
-Below are benchmarks for different solvers tested with MESSAGEix-Canada:
-
-- **CBC:** 1 min 20 sec
-- **Soplex:** 12 min 42 sec
-- **HiGHS:** 2 min 30 sec
-- **IPOPT:** 15+ minutes
-
 # Solver Options
 
 Each linear solver typically offers a few options which will dictate how the software will approach the optimization problem. In a GAMS system, these options are determined through the options file (`.opt`) which can be found inside the "model" folder for a MESSAGE-ix model. 
