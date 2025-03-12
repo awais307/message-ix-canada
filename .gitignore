@@ -28,6 +28,7 @@ model/utlities/add_UE_share_constraints.py
 model/utlities/adjust_cf_to_history.py
 model/utlities/adjust_lifetime_to_history.py
 model/utlities/apply_LED_setup.py
+
 model/utlities/calibrate_demand.py
 model/utlities/calibrate_extraction.py
 model/utlities/calibrate_historical_capacity.py
@@ -56,4 +57,4 @@ model/utlities/project_vre.py
 model/utlities/read_demand_downscaled.py
 message-ix-canada.code-workspace
 *.textClipping
-reporting_output/
+reporting_outputs/
