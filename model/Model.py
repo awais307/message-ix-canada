@@ -461,7 +461,7 @@ class model_MSG:
 
 
 			if self.ctx.post_process_config['new_reporter']:
-				timestamp = str(datetime.now())
+				timestamp = f'{str(datetime.now().strftime('%Y-%m-%d--%H-%M'))}'
 				self.ctx.generate_report(
 					output_path=f"reporting_output/{caseName}_{timestamp}_new_reporter.csv",
 					min_year=2020,
@@ -476,7 +476,7 @@ class model_MSG:
 				\n=================================================="
 				)
 			elif self.ctx.post_process_config['legacy_reporter']:
-				timestamp = str(datetime.now())
+				timestamp = f'{str(datetime.now().strftime('%Y-%m-%d--%H-%M'))}'
 				start = time.time()
 				report(mp=self.ctx.mp, scen=self.ctx.source_scenario['scenario'], out_dir="reporting_outputs", out_file_timestamp = timestamp, IDEA_format=self.ctx.post_process_config['IDEA_format'])
 				end = time.time()

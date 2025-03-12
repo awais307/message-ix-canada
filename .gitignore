@@ -56,3 +56,4 @@ model/utlities/project_vre.py
 model/utlities/read_demand_downscaled.py
 message-ix-canada.code-workspace
 *.textClipping
+reporting_output/
