@@ -1,0 +1,35 @@
+region_config:
+  region: Canada
+  per_region:
+    Abb: 
+    Countries: 
+    Parent: 
+    GDP: 
+    Keep_Parent: 
+    historical_split:
+scenario_config:
+  platform:
+    name: local
+    jvmargs: -Xmx16g
+  source_scenario:
+    model: MESSAGEix-CA
+    solve: True
+    scenario: dacs
+    annotation: Initial setup for a Canadian IAM energy model with direct air capture technologies included.
+    version: new
+  policy_config:
+    add_technology_techs: ["dac_ht", "dac_lt", "co2_stor", "co2_tr_sd", "co2_tr_ld"]
+    process_historical: False # Pre-process new historical data
+    add_hydrogen_shares_f: False # H2 shares
+    add_techs: True # Add new technologies to the model
+    investment_tax_credit: False # ITC policy
+    apply_obps: False # OBPS policy
+  post_process_config:
+    to_excell: False # Export input to Excel
+    legacy_reporter: False # Use legacy reporter for outputting
+    new_reporter: False # Use new reporter for outputting
+path_config:
+  provincial_input_file: scenarios/dacs/model_default_dacs.xlsx
+  scenario_folder: scenarios/dacs
+  out_dir: output
+  ITC_policy_input_data: ./data/assumptions_database_example(ITCs).csv
