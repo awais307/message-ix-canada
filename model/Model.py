@@ -399,6 +399,8 @@ class model_MSG:
 		)
 		
 		#TODO
+		
+		
 		#  apply_renewable_potential(self)
 		# if self.ctx.policy_config['apply_renewable_potential']:
 		# 	print('Model Logs: Applying Renewable Potential\n')

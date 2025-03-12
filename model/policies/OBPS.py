@@ -15,8 +15,6 @@ from message_ix_models.util import (
 	same_time,
 )
 
-
-
 def apply_obps(ctx):
 	"""
 	Apply the Output-Based Pricing System (OBPS) policy for the Baseline Canada Scenario
@@ -31,7 +29,7 @@ def apply_obps(ctx):
 
 	# Read the required data
 	provinces = scenario.set('node')[2:]
-	data_relation = pd.read_excel(data_file_path, sheet_name='Merged_Sheet')
+	data_relation = pd.read_excel(data_file_path, sheet_name='New_OBPS')
 	data_relation["region"] = data_relation['region'].str.replace(" ", "")
 	canada_values = data_relation[data_relation["region"] == "Canada"]
 	for r in provinces:
@@ -49,8 +47,25 @@ def apply_obps(ctx):
 	#data_relation = data_relation[data_relation["region"].isin(provinces)]
 	tightening_rates = data_relation[data_relation["variable"].str.contains("Tightening")]
 	standards = data_relation[data_relation["variable"].str.contains("Standard")]
-	
-	tightening_rates_co2cc = tightening_rates[tightening_rates['technology'].isin(tecs_co2cc)]
+
+	# Filter Ontario data to include only "Fixed Process"
+	ontario_tightening_rates = tightening_rates[
+		(tightening_rates['region'] == 'Ontario') & 
+		(tightening_rates['variable'].str.contains('Fixed Process'))
+	]
+
+	# For other provinces, include all tightening rates
+	other_provinces_tightening_rates = tightening_rates[
+		~tightening_rates['region'].isin(['Ontario'])
+	]
+
+	# Combine Ontario's fixed process data with other provinces' data
+	tightening_rates_co2cc = pd.concat([
+		ontario_tightening_rates,
+		other_provinces_tightening_rates
+	], ignore_index=True)
+
+	tightening_rates_co2cc = tightening_rates_co2cc[tightening_rates_co2cc['technology'].isin(tecs_co2cc)]
 	tightening_rates_co2cc.drop(columns = ['variable','unit [tCO2/-]','comments'], inplace = True)
 	tightening_rates_co2cc.rename(columns= {'region':'node_rel','value':'rate','time':'year_act'}, inplace=	True)
 	
@@ -97,10 +112,10 @@ def apply_obps(ctx):
 			result.loc[index, 'carbon_cost'] = row['payable_emis_intensity'] * ctx['policy_config']['obps_policy_carbon_cost'][2025]
 		elif row['year_act'] == 2030:
 			result.loc[index, 'carbon_cost'] = row['payable_emis_intensity'] *  ctx['policy_config']['obps_policy_carbon_cost'][2030] 
-		elif row['year_act'] > 2025:
-			result.loc[index, 'carbon_cost'] = row['payable_emis_intensity'] * ctx['policy_config']['obps_policy_carbon_cost']['more_than_2025']
+		elif row['year_act'] >= 2035:
+			result.loc[index, 'carbon_cost'] = row['payable_emis_intensity'] * ctx['policy_config']['obps_policy_carbon_cost']['more_than_2035']
 
-	# Adjust for years 2055 and 2060
+	'''# Adjust for years 2055 and 2060
 	for index, row in result.iterrows():
 		if row['year_act'] > 2050:
 			value_to_assign = result.loc[
@@ -109,10 +124,10 @@ def apply_obps(ctx):
 				'carbon_cost'
 			].values
 			if len(value_to_assign) > 0:
-				result.at[index, 'carbon_cost'] = value_to_assign[0]
+				result.at[index, 'carbon_cost'] = value_to_assign[0]'''
 	
 	# Merge with fix_cost data and update the scenario's fix_cost
-	fix_cost_no_obps_input_data = data_file_path = ctx.path['fix_cost_no_obps_input_data']
+	fix_cost_no_obps_input_data = ctx.path['fix_cost_no_obps_input_data']
 	data_fixcost = pd.read_csv(fix_cost_no_obps_input_data, header=0) #scenario.par('fix_cost')
 	data_fixcost = data_fixcost[data_fixcost['technology'].isin(tecs_co2cc)]
 	merged_data = pd.merge(
@@ -133,3 +148,5 @@ def apply_obps(ctx):
 	print(
 			f"{'#' * 100}\n Added OBPS policy to the model!\n{'#' * 100}"
 		)
+
+
