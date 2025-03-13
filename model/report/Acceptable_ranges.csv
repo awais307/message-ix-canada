@@ -1,0 +1,11 @@
+﻿Region,Variable,Year,Lower,Upper,Source
+
+Alberta,Final Energy,2020,3300,3500,test
+
+Alberta,Final Energy,2040,3672,3772,test
+
+BritishColumbia,Final Energy,2020,150,350,test
+
+BritishColumbia,Final Energy,2040,200,400,test
+
+Yukon,Primary Energy,2050,4,4,test

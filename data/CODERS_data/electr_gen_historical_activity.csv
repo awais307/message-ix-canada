@@ -1,0 +1,1295 @@
+region,technology,year_act,mode,time,value,unit
+Alberta,gas_ppl,1960,default,year,118.26,MWa
+Alberta,hydro_hc,1960,default,year,561.34,MWa
+Alberta,hydro_lc,1960,default,year,139.18,MWa
+British Columbia,hydro_hc,1960,default,year,8927.51,MWa
+British Columbia,hydro_lc,1960,default,year,449.78000000000003,MWa
+Manitoba,hydro_hc,1960,default,year,4876.63,MWa
+Manitoba,hydro_lc,1960,default,year,75.33,MWa
+New Brunswick,hydro_hc,1960,default,year,1089.31,MWa
+New Brunswick,hydro_lc,1960,default,year,94.3,MWa
+Newfoundland and Labrador,hydro_hc,1960,default,year,1814.59,MWa
+Nova Scotia,hydro_hc,1960,default,year,517.48,MWa
+Ontario,hydro_hc,1960,default,year,7693.91,MWa
+Ontario,hydro_lc,1960,default,year,21525.69,MWa
+Quebec,hydro_hc,1960,default,year,40898.02,MWa
+Quebec,hydro_lc,1960,default,year,10303.38,MWa
+Saskatchewan,coal_adv_ccs,1960,default,year,974.11,MWa
+Saskatchewan,gas_cc,1960,default,year,861.99,MWa
+Saskatchewan,igcc,1960,default,year,1948.22,MWa
+Canada,bio_ppl,1960,default,year,9831.3,MWa
+Canada,wind_ppl,1960,default,year,56733.47,MWa
+Canada,gas_ct,1960,default,year,13933.47,MWa
+Canada,gas_ppl,1960,default,year,19366.49,MWa
+Canada,hydro_hc,1960,default,year,366288.76,MWa
+Canada,hydro_lc,1960,default,year,68101.86,MWa
+Canada,igcc,1960,default,year,42627.7,MWa
+Canada,solar_pv_ppl,1960,default,year,4682.56,MWa
+Canada,gas_cc,1960,default,year,61768.85,MWa
+Canada,bio_istig,1960,default,year,595.16,MWa
+Canada,foil_ppl,1960,default,year,1413.69,MWa
+Canada,loil_ppl,1960,default,year,1431.32,MWa
+Canada,nuc_lc,1960,default,year,102150.36,MWa
+Canada,coal_adv_ccs,1960,default,year,974.11,MWa
+Alberta,gas_ppl,1965,default,year,118.26,MWa
+Alberta,hydro_hc,1965,default,year,561.34,MWa
+Alberta,hydro_lc,1965,default,year,139.18,MWa
+British Columbia,hydro_hc,1965,default,year,8927.51,MWa
+British Columbia,hydro_lc,1965,default,year,449.78000000000003,MWa
+Manitoba,hydro_hc,1965,default,year,6686.62,MWa
+Manitoba,hydro_lc,1965,default,year,99.86,MWa
+New Brunswick,hydro_hc,1965,default,year,1089.31,MWa
+New Brunswick,hydro_lc,1965,default,year,116.24,MWa
+Newfoundland and Labrador,hydro_hc,1965,default,year,1841.2,MWa
+Nova Scotia,hydro_hc,1965,default,year,562.36,MWa
+Ontario,hydro_hc,1965,default,year,8296.5,MWa
+Ontario,hydro_lc,1965,default,year,21588.760000000002,MWa
+Prince Edward Island,foil_ppl,1965,default,year,0.0,MWa
+Quebec,hydro_hc,1965,default,year,40898.02,MWa
+Quebec,hydro_lc,1965,default,year,28173.78,MWa
+Saskatchewan,coal_adv_ccs,1965,default,year,974.11,MWa
+Saskatchewan,gas_cc,1965,default,year,861.99,MWa
+Saskatchewan,hydro_hc,1965,default,year,851.46,MWa
+Saskatchewan,igcc,1965,default,year,1948.22,MWa
+Canada,bio_ppl,1965,default,year,9831.3,MWa
+Canada,wind_ppl,1965,default,year,56733.47,MWa
+Canada,gas_ct,1965,default,year,13933.47,MWa
+Canada,gas_ppl,1965,default,year,19366.49,MWa
+Canada,hydro_hc,1965,default,year,366288.76,MWa
+Canada,hydro_lc,1965,default,year,68101.86,MWa
+Canada,igcc,1965,default,year,42627.7,MWa
+Canada,solar_pv_ppl,1965,default,year,4682.56,MWa
+Canada,gas_cc,1965,default,year,61768.85,MWa
+Canada,bio_istig,1965,default,year,595.16,MWa
+Canada,foil_ppl,1965,default,year,1413.69,MWa
+Canada,loil_ppl,1965,default,year,1431.32,MWa
+Canada,nuc_lc,1965,default,year,102150.36,MWa
+Canada,coal_adv_ccs,1965,default,year,974.11,MWa
+Alberta,gas_ppl,1970,default,year,249.66000000000003,MWa
+Alberta,hydro_hc,1970,default,year,1322.41,MWa
+Alberta,hydro_lc,1970,default,year,139.18,MWa
+British Columbia,hydro_hc,1970,default,year,24975.01,MWa
+British Columbia,hydro_lc,1970,default,year,449.78000000000003,MWa
+Manitoba,hydro_hc,1970,default,year,8241.619999999999,MWa
+Manitoba,hydro_lc,1970,default,year,99.86,MWa
+New Brunswick,hydro_hc,1970,default,year,2722.88,MWa
+New Brunswick,hydro_lc,1970,default,year,116.24,MWa
+Newfoundland and Labrador,foil_ppl,1970,default,year,372.3,MWa
+Newfoundland and Labrador,gas_ct,1970,default,year,0.2,MWa
+Newfoundland and Labrador,hydro_hc,1970,default,year,36165.2,MWa
+Newfoundland and Labrador,loil_ppl,1970,default,year,0.07,MWa
+Nova Scotia,hydro_hc,1970,default,year,617.92,MWa
+Nova Scotia,igcc,1970,default,year,640.94,MWa
+Ontario,hydro_hc,1970,default,year,8711.85,MWa
+Ontario,hydro_lc,1970,default,year,21588.760000000002,MWa
+Prince Edward Island,foil_ppl,1970,default,year,0.0,MWa
+Quebec,hydro_hc,1970,default,year,59255.48,MWa
+Quebec,hydro_lc,1970,default,year,28173.78,MWa
+Saskatchewan,coal_adv_ccs,1970,default,year,974.11,MWa
+Saskatchewan,gas_cc,1970,default,year,861.99,MWa
+Saskatchewan,hydro_hc,1970,default,year,1868.48,MWa
+Saskatchewan,igcc,1970,default,year,1948.22,MWa
+Canada,bio_ppl,1970,default,year,9831.3,MWa
+Canada,wind_ppl,1970,default,year,56733.47,MWa
+Canada,gas_ct,1970,default,year,13933.47,MWa
+Canada,gas_ppl,1970,default,year,19366.49,MWa
+Canada,hydro_hc,1970,default,year,366288.76,MWa
+Canada,hydro_lc,1970,default,year,68101.86,MWa
+Canada,igcc,1970,default,year,42627.7,MWa
+Canada,solar_pv_ppl,1970,default,year,4682.56,MWa
+Canada,gas_cc,1970,default,year,61768.85,MWa
+Canada,bio_istig,1970,default,year,595.16,MWa
+Canada,foil_ppl,1970,default,year,1413.69,MWa
+Canada,loil_ppl,1970,default,year,1431.32,MWa
+Canada,nuc_lc,1970,default,year,102150.36,MWa
+Canada,coal_adv_ccs,1970,default,year,974.11,MWa
+Alberta,gas_ppl,1975,default,year,249.66000000000003,MWa
+Alberta,hydro_hc,1975,default,year,1574.69,MWa
+Alberta,hydro_lc,1975,default,year,139.18,MWa
+Alberta,igcc,1975,default,year,713.06,MWa
+British Columbia,gas_ct,1975,default,year,107.21000000000001,MWa
+British Columbia,hydro_hc,1975,default,year,27182.64,MWa
+British Columbia,hydro_lc,1975,default,year,449.78000000000003,MWa
+Manitoba,hydro_hc,1975,default,year,15371.66,MWa
+Manitoba,hydro_lc,1975,default,year,99.86,MWa
+New Brunswick,hydro_hc,1975,default,year,2722.88,MWa
+New Brunswick,hydro_lc,1975,default,year,116.24,MWa
+Newfoundland and Labrador,foil_ppl,1975,default,year,744.6,MWa
+Newfoundland and Labrador,gas_ct,1975,default,year,5.0,MWa
+Newfoundland and Labrador,hydro_hc,1975,default,year,36165.2,MWa
+Newfoundland and Labrador,loil_ppl,1975,default,year,0.51,MWa
+Nova Scotia,hydro_hc,1975,default,year,617.92,MWa
+Nova Scotia,igcc,1975,default,year,640.94,MWa
+Nova Scotia,loil_ppl,1975,default,year,5.26,MWa
+Ontario,hydro_hc,1975,default,year,9022.380000000001,MWa
+Ontario,hydro_lc,1975,default,year,21753.45,MWa
+Ontario,nuc_lc,1975,default,year,23097.5,MWa
+Prince Edward Island,foil_ppl,1975,default,year,0.0,MWa
+Prince Edward Island,loil_ppl,1975,default,year,3.5,MWa
+Quebec,hydro_hc,1975,default,year,70091.15,MWa
+Quebec,hydro_lc,1975,default,year,28173.78,MWa
+Saskatchewan,coal_adv_ccs,1975,default,year,974.11,MWa
+Saskatchewan,gas_cc,1975,default,year,1527.75,MWa
+Saskatchewan,gas_ct,1975,default,year,138.41,MWa
+Saskatchewan,hydro_hc,1975,default,year,1868.48,MWa
+Saskatchewan,igcc,1975,default,year,1948.22,MWa
+Canada,bio_ppl,1975,default,year,9831.3,MWa
+Canada,wind_ppl,1975,default,year,56733.47,MWa
+Canada,gas_ct,1975,default,year,13933.47,MWa
+Canada,gas_ppl,1975,default,year,19366.49,MWa
+Canada,hydro_hc,1975,default,year,366288.76,MWa
+Canada,hydro_lc,1975,default,year,68101.86,MWa
+Canada,igcc,1975,default,year,42627.7,MWa
+Canada,solar_pv_ppl,1975,default,year,4682.56,MWa
+Canada,gas_cc,1975,default,year,61768.85,MWa
+Canada,bio_istig,1975,default,year,595.16,MWa
+Canada,foil_ppl,1975,default,year,1413.69,MWa
+Canada,loil_ppl,1975,default,year,1431.32,MWa
+Canada,nuc_lc,1975,default,year,102150.36,MWa
+Canada,coal_adv_ccs,1975,default,year,974.11,MWa
+Alberta,gas_ppl,1980,default,year,1637.77,MWa
+Alberta,hydro_hc,1980,default,year,1574.69,MWa
+Alberta,hydro_lc,1980,default,year,139.18,MWa
+Alberta,igcc,1980,default,year,713.06,MWa
+British Columbia,gas_ct,1980,default,year,107.21000000000001,MWa
+British Columbia,hydro_hc,1980,default,year,40957.85,MWa
+British Columbia,hydro_lc,1980,default,year,449.78000000000003,MWa
+Manitoba,hydro_hc,1980,default,year,22416.1,MWa
+Manitoba,hydro_lc,1980,default,year,99.86,MWa
+New Brunswick,foil_ppl,1980,default,year,340.59000000000003,MWa
+New Brunswick,hydro_hc,1980,default,year,2722.88,MWa
+New Brunswick,hydro_lc,1980,default,year,116.24,MWa
+Newfoundland and Labrador,foil_ppl,1980,default,year,1073.1,MWa
+Newfoundland and Labrador,gas_ct,1980,default,year,9.379999999999999,MWa
+Newfoundland and Labrador,hydro_hc,1980,default,year,37828.71,MWa
+Newfoundland and Labrador,loil_ppl,1980,default,year,0.51,MWa
+Nova Scotia,hydro_hc,1980,default,year,921.24,MWa
+Nova Scotia,igcc,1980,default,year,1883.4,MWa
+Nova Scotia,loil_ppl,1980,default,year,15.78,MWa
+Ontario,hydro_hc,1980,default,year,8016.69,MWa
+Ontario,hydro_lc,1980,default,year,21746.44,MWa
+Ontario,nuc_lc,1980,default,year,46373.68,MWa
+Prince Edward Island,foil_ppl,1980,default,year,0.0,MWa
+Prince Edward Island,loil_ppl,1980,default,year,3.5,MWa
+Quebec,hydro_hc,1980,default,year,80619.35,MWa
+Quebec,hydro_lc,1980,default,year,28159.329999999998,MWa
+Saskatchewan,coal_adv_ccs,1980,default,year,974.11,MWa
+Saskatchewan,gas_cc,1980,default,year,1527.75,MWa
+Saskatchewan,gas_ct,1980,default,year,138.41,MWa
+Saskatchewan,hydro_hc,1980,default,year,1868.48,MWa
+Saskatchewan,igcc,1980,default,year,3938.49,MWa
+Canada,bio_ppl,1980,default,year,9831.3,MWa
+Canada,wind_ppl,1980,default,year,56733.47,MWa
+Canada,gas_ct,1980,default,year,13933.47,MWa
+Canada,gas_ppl,1980,default,year,19366.49,MWa
+Canada,hydro_hc,1980,default,year,366288.76,MWa
+Canada,hydro_lc,1980,default,year,68101.86,MWa
+Canada,igcc,1980,default,year,42627.7,MWa
+Canada,solar_pv_ppl,1980,default,year,4682.56,MWa
+Canada,gas_cc,1980,default,year,61768.85,MWa
+Canada,bio_istig,1980,default,year,595.16,MWa
+Canada,foil_ppl,1980,default,year,1413.69,MWa
+Canada,loil_ppl,1980,default,year,1431.32,MWa
+Canada,nuc_lc,1980,default,year,102150.36,MWa
+Canada,coal_adv_ccs,1980,default,year,974.11,MWa
+Alberta,gas_ppl,1985,default,year,1637.77,MWa
+Alberta,hydro_hc,1985,default,year,1574.69,MWa
+Alberta,hydro_lc,1985,default,year,139.18,MWa
+Alberta,igcc,1985,default,year,2673.99,MWa
+British Columbia,gas_ct,1985,default,year,107.21000000000001,MWa
+British Columbia,hydro_hc,1985,default,year,48067.35,MWa
+British Columbia,hydro_lc,1985,default,year,449.78000000000003,MWa
+Manitoba,hydro_hc,1985,default,year,22416.1,MWa
+Manitoba,hydro_lc,1985,default,year,99.86,MWa
+New Brunswick,foil_ppl,1985,default,year,340.59000000000003,MWa
+New Brunswick,hydro_hc,1985,default,year,2612.15,MWa
+New Brunswick,hydro_lc,1985,default,year,116.24,MWa
+New Brunswick,loil_ppl,1985,default,year,1.75,MWa
+Newfoundland and Labrador,foil_ppl,1985,default,year,1073.1,MWa
+Newfoundland and Labrador,gas_ct,1985,default,year,9.379999999999999,MWa
+Newfoundland and Labrador,hydro_hc,1985,default,year,38529.94,MWa
+Newfoundland and Labrador,loil_ppl,1985,default,year,1.3599999999999999,MWa
+Nova Scotia,hydro_hc,1985,default,year,934.85,MWa
+Nova Scotia,hydro_lc,1985,default,year,21.97,MWa
+Nova Scotia,igcc,1985,default,year,3270.58,MWa
+Nova Scotia,loil_ppl,1985,default,year,15.78,MWa
+Ontario,hydro_hc,1985,default,year,8016.69,MWa
+Ontario,hydro_lc,1985,default,year,21725.420000000002,MWa
+Ontario,nuc_lc,1985,default,year,58540.44,MWa
+Prince Edward Island,foil_ppl,1985,default,year,0.0,MWa
+Prince Edward Island,loil_ppl,1985,default,year,3.5,MWa
+Quebec,hydro_hc,1985,default,year,126359.25,MWa
+Quebec,hydro_lc,1985,default,year,28093.629999999997,MWa
+Saskatchewan,coal_adv_ccs,1985,default,year,974.11,MWa
+Saskatchewan,gas_cc,1985,default,year,1527.75,MWa
+Saskatchewan,gas_ct,1985,default,year,215.5,MWa
+Saskatchewan,hydro_hc,1985,default,year,2873.69,MWa
+Saskatchewan,igcc,1985,default,year,8017.15,MWa
+Canada,bio_ppl,1985,default,year,9831.3,MWa
+Canada,wind_ppl,1985,default,year,56733.47,MWa
+Canada,gas_ct,1985,default,year,13933.47,MWa
+Canada,gas_ppl,1985,default,year,19366.49,MWa
+Canada,hydro_hc,1985,default,year,366288.76,MWa
+Canada,hydro_lc,1985,default,year,68101.86,MWa
+Canada,igcc,1985,default,year,42627.7,MWa
+Canada,solar_pv_ppl,1985,default,year,4682.56,MWa
+Canada,gas_cc,1985,default,year,61768.85,MWa
+Canada,bio_istig,1985,default,year,595.16,MWa
+Canada,foil_ppl,1985,default,year,1413.69,MWa
+Canada,loil_ppl,1985,default,year,1431.32,MWa
+Canada,nuc_lc,1985,default,year,102150.36,MWa
+Canada,coal_adv_ccs,1985,default,year,974.11,MWa
+Alberta,bio_ppl,1990,default,year,240.9,MWa
+Alberta,gas_ct,1990,default,year,26.28,MWa
+Alberta,gas_ppl,1990,default,year,1637.77,MWa
+Alberta,hydro_hc,1990,default,year,1574.69,MWa
+Alberta,hydro_lc,1990,default,year,150.54,MWa
+Alberta,igcc,1990,default,year,8638.67,MWa
+British Columbia,bio_ppl,1990,default,year,102.10000000000001,MWa
+British Columbia,gas_ct,1990,default,year,107.21000000000001,MWa
+British Columbia,hydro_hc,1990,default,year,48406.75,MWa
+British Columbia,hydro_lc,1990,default,year,372.97,MWa
+Manitoba,hydro_hc,1990,default,year,30046.1,MWa
+Manitoba,hydro_lc,1990,default,year,99.86,MWa
+New Brunswick,foil_ppl,1990,default,year,340.59000000000003,MWa
+New Brunswick,gas_ct,1990,default,year,2.45,MWa
+New Brunswick,hydro_hc,1990,default,year,2612.15,MWa
+New Brunswick,hydro_lc,1990,default,year,116.24,MWa
+New Brunswick,loil_ppl,1990,default,year,1.75,MWa
+Newfoundland and Labrador,foil_ppl,1990,default,year,1073.1,MWa
+Newfoundland and Labrador,gas_ct,1990,default,year,9.379999999999999,MWa
+Newfoundland and Labrador,hydro_hc,1990,default,year,38577.21,MWa
+Newfoundland and Labrador,loil_ppl,1990,default,year,1.3599999999999999,MWa
+Nova Scotia,hydro_hc,1990,default,year,934.85,MWa
+Nova Scotia,hydro_lc,1990,default,year,21.97,MWa
+Nova Scotia,igcc,1990,default,year,4168.48,MWa
+Nova Scotia,loil_ppl,1990,default,year,15.78,MWa
+Ontario,hydro_hc,1990,default,year,8050.28,MWa
+Ontario,hydro_lc,1990,default,year,21582.12,MWa
+Ontario,nuc_lc,1990,default,year,96946.92,MWa
+Prince Edward Island,foil_ppl,1990,default,year,0.0,MWa
+Prince Edward Island,loil_ppl,1990,default,year,3.5,MWa
+Quebec,hydro_hc,1990,default,year,148241.3,MWa
+Quebec,hydro_lc,1990,default,year,28172.47,MWa
+Saskatchewan,coal_adv_ccs,1990,default,year,974.11,MWa
+Saskatchewan,gas_cc,1990,default,year,1527.75,MWa
+Saskatchewan,gas_ct,1990,default,year,215.5,MWa
+Saskatchewan,hydro_hc,1990,default,year,2873.69,MWa
+Saskatchewan,igcc,1990,default,year,8017.15,MWa
+Canada,bio_ppl,1990,default,year,9831.3,MWa
+Canada,wind_ppl,1990,default,year,56733.47,MWa
+Canada,gas_ct,1990,default,year,13933.47,MWa
+Canada,gas_ppl,1990,default,year,19366.49,MWa
+Canada,hydro_hc,1990,default,year,366288.76,MWa
+Canada,hydro_lc,1990,default,year,68101.86,MWa
+Canada,igcc,1990,default,year,42627.7,MWa
+Canada,solar_pv_ppl,1990,default,year,4682.56,MWa
+Canada,gas_cc,1990,default,year,61768.85,MWa
+Canada,bio_istig,1990,default,year,595.16,MWa
+Canada,foil_ppl,1990,default,year,1413.69,MWa
+Canada,loil_ppl,1990,default,year,1431.32,MWa
+Canada,nuc_lc,1990,default,year,102150.36,MWa
+Canada,coal_adv_ccs,1990,default,year,974.11,MWa
+Alberta,bio_ppl,1995,default,year,351.71000000000004,MWa
+Alberta,gas_ct,1995,default,year,26.28,MWa
+Alberta,gas_ppl,1995,default,year,1587.84,MWa
+Alberta,hydro_hc,1995,default,year,1574.69,MWa
+Alberta,hydro_lc,1995,default,year,223.69,MWa
+Alberta,igcc,1995,default,year,10671.87,MWa
+British Columbia,bio_ppl,1995,default,year,490.5,MWa
+British Columbia,gas_ct,1995,default,year,107.21000000000001,MWa
+British Columbia,gas_ppl,1995,default,year,840.0,MWa
+British Columbia,hydro_hc,1995,default,year,48406.75,MWa
+British Columbia,hydro_lc,1995,default,year,427.59,MWa
+Manitoba,hydro_hc,1995,default,year,30046.1,MWa
+Manitoba,hydro_lc,1995,default,year,99.86,MWa
+New Brunswick,foil_ppl,1995,default,year,340.59000000000003,MWa
+New Brunswick,gas_ct,1995,default,year,2.45,MWa
+New Brunswick,hydro_hc,1995,default,year,2612.15,MWa
+New Brunswick,hydro_lc,1995,default,year,106.74,MWa
+New Brunswick,igcc,1995,default,year,2653.4,MWa
+New Brunswick,loil_ppl,1995,default,year,175.2,MWa
+Newfoundland and Labrador,foil_ppl,1995,default,year,1073.1,MWa
+Newfoundland and Labrador,gas_ct,1995,default,year,11.569999999999999,MWa
+Newfoundland and Labrador,hydro_hc,1995,default,year,38577.21,MWa
+Newfoundland and Labrador,loil_ppl,1995,default,year,1.3599999999999999,MWa
+Nova Scotia,bio_ppl,1995,default,year,100.21,MWa
+Nova Scotia,hydro_hc,1995,default,year,934.85,MWa
+Nova Scotia,hydro_lc,1995,default,year,21.97,MWa
+Nova Scotia,igcc,1995,default,year,6342.469999999999,MWa
+Nova Scotia,loil_ppl,1995,default,year,15.78,MWa
+Ontario,hydro_hc,1995,default,year,8050.28,MWa
+Ontario,hydro_lc,1995,default,year,21575.98,MWa
+Ontario,nuc_lc,1995,default,year,96946.92,MWa
+Prince Edward Island,foil_ppl,1995,default,year,0.0,MWa
+Prince Edward Island,loil_ppl,1995,default,year,3.5,MWa
+Quebec,gas_cc,1995,default,year,36.0,MWa
+Quebec,hydro_hc,1995,default,year,176079.26,MWa
+Quebec,hydro_lc,1995,default,year,28529.22,MWa
+Saskatchewan,coal_adv_ccs,1995,default,year,974.11,MWa
+Saskatchewan,gas_cc,1995,default,year,1527.75,MWa
+Saskatchewan,gas_ct,1995,default,year,215.5,MWa
+Saskatchewan,hydro_hc,1995,default,year,2873.69,MWa
+Saskatchewan,igcc,1995,default,year,9951.36,MWa
+Canada,bio_ppl,1995,default,year,9831.3,MWa
+Canada,wind_ppl,1995,default,year,56733.47,MWa
+Canada,gas_ct,1995,default,year,13933.47,MWa
+Canada,gas_ppl,1995,default,year,19366.49,MWa
+Canada,hydro_hc,1995,default,year,366288.76,MWa
+Canada,hydro_lc,1995,default,year,68101.86,MWa
+Canada,igcc,1995,default,year,42627.7,MWa
+Canada,solar_pv_ppl,1995,default,year,4682.56,MWa
+Canada,gas_cc,1995,default,year,61768.85,MWa
+Canada,bio_istig,1995,default,year,595.16,MWa
+Canada,foil_ppl,1995,default,year,1413.69,MWa
+Canada,loil_ppl,1995,default,year,1431.32,MWa
+Canada,nuc_lc,1995,default,year,102150.36,MWa
+Canada,coal_adv_ccs,1995,default,year,974.11,MWa
+Alberta,bio_ppl,2000,default,year,630.6700000000001,MWa
+Alberta,gas_cc,2000,default,year,432.27,MWa
+Alberta,gas_ct,2000,default,year,168.19,MWa
+Alberta,gas_ppl,2000,default,year,4481.2699999999995,MWa
+Alberta,hydro_hc,2000,default,year,1574.69,MWa
+Alberta,hydro_lc,2000,default,year,253.12,MWa
+Alberta,igcc,2000,default,year,10671.87,MWa
+British Columbia,bio_ppl,2000,default,year,493.84,MWa
+British Columbia,gas_ct,2000,default,year,107.21000000000001,MWa
+British Columbia,gas_ppl,2000,default,year,840.0,MWa
+British Columbia,hydro_hc,2000,default,year,48727.73,MWa
+British Columbia,hydro_lc,2000,default,year,704.59,MWa
+Manitoba,hydro_hc,2000,default,year,30046.1,MWa
+Manitoba,hydro_lc,2000,default,year,99.86,MWa
+New Brunswick,foil_ppl,2000,default,year,340.59000000000003,MWa
+New Brunswick,gas_cc,2000,default,year,508.08,MWa
+New Brunswick,gas_ct,2000,default,year,2.45,MWa
+New Brunswick,hydro_hc,2000,default,year,2612.15,MWa
+New Brunswick,hydro_lc,2000,default,year,77.83,MWa
+New Brunswick,igcc,2000,default,year,2653.4,MWa
+New Brunswick,loil_ppl,2000,default,year,175.2,MWa
+Newfoundland and Labrador,foil_ppl,2000,default,year,1073.1,MWa
+Newfoundland and Labrador,gas_ct,2000,default,year,11.569999999999999,MWa
+Newfoundland and Labrador,hydro_hc,2000,default,year,38745.62,MWa
+Newfoundland and Labrador,hydro_lc,2000,default,year,15.0,MWa
+Newfoundland and Labrador,loil_ppl,2000,default,year,1.3599999999999999,MWa
+Nova Scotia,bio_ppl,2000,default,year,100.21,MWa
+Nova Scotia,hydro_hc,2000,default,year,934.85,MWa
+Nova Scotia,hydro_lc,2000,default,year,21.97,MWa
+Nova Scotia,igcc,2000,default,year,6342.469999999999,MWa
+Nova Scotia,loil_ppl,2000,default,year,1241.69,MWa
+Ontario,bio_ppl,2000,default,year,152.01,MWa
+Ontario,gas_ppl,2000,default,year,1.34,MWa
+Ontario,hydro_hc,2000,default,year,8050.28,MWa
+Ontario,hydro_lc,2000,default,year,20980.47,MWa
+Ontario,nuc_lc,2000,default,year,96946.92,MWa
+Prince Edward Island,foil_ppl,2000,default,year,0.0,MWa
+Prince Edward Island,loil_ppl,2000,default,year,4.84,MWa
+Quebec,gas_cc,2000,default,year,36.0,MWa
+Quebec,hydro_hc,2000,default,year,177895.65,MWa
+Quebec,hydro_lc,2000,default,year,28882.49,MWa
+Quebec,wind_ppl,2000,default,year,306.6,MWa
+Saskatchewan,coal_adv_ccs,2000,default,year,974.11,MWa
+Saskatchewan,gas_cc,2000,default,year,1527.75,MWa
+Saskatchewan,gas_ct,2000,default,year,215.5,MWa
+Saskatchewan,gas_ppl,2000,default,year,1597.83,MWa
+Saskatchewan,hydro_hc,2000,default,year,2873.69,MWa
+Saskatchewan,igcc,2000,default,year,9951.36,MWa
+Canada,bio_ppl,2000,default,year,9831.3,MWa
+Canada,wind_ppl,2000,default,year,56733.47,MWa
+Canada,gas_ct,2000,default,year,13933.47,MWa
+Canada,gas_ppl,2000,default,year,19366.49,MWa
+Canada,hydro_hc,2000,default,year,366288.76,MWa
+Canada,hydro_lc,2000,default,year,68101.86,MWa
+Canada,igcc,2000,default,year,42627.7,MWa
+Canada,solar_pv_ppl,2000,default,year,4682.56,MWa
+Canada,gas_cc,2000,default,year,61768.85,MWa
+Canada,bio_istig,2000,default,year,595.16,MWa
+Canada,foil_ppl,2000,default,year,1413.69,MWa
+Canada,loil_ppl,2000,default,year,1431.32,MWa
+Canada,nuc_lc,2000,default,year,102150.36,MWa
+Canada,coal_adv_ccs,2000,default,year,974.11,MWa
+Alberta,bio_ppl,2005,default,year,760.76,MWa
+Alberta,gas_cc,2005,default,year,3270.51,MWa
+Alberta,gas_ct,2005,default,year,757.12,MWa
+Alberta,gas_ppl,2005,default,year,8176.24,MWa
+Alberta,hydro_hc,2005,default,year,1641.97,MWa
+Alberta,hydro_lc,2005,default,year,267.84,MWa
+Alberta,igcc,2005,default,year,15142.98,MWa
+Alberta,wind_ppl,2005,default,year,1064.03,MWa
+British Columbia,bio_istig,2005,default,year,54.5,MWa
+British Columbia,bio_ppl,2005,default,year,662.63,MWa
+British Columbia,gas_cc,2005,default,year,2300.0,MWa
+British Columbia,gas_ct,2005,default,year,107.21000000000001,MWa
+British Columbia,gas_ppl,2005,default,year,840.0,MWa
+British Columbia,hydro_hc,2005,default,year,49434.69,MWa
+British Columbia,hydro_lc,2005,default,year,1514.92,MWa
+Manitoba,gas_ct,2005,default,year,60.36,MWa
+Manitoba,hydro_hc,2005,default,year,30046.1,MWa
+Manitoba,hydro_lc,2005,default,year,99.86,MWa
+New Brunswick,foil_ppl,2005,default,year,340.59000000000003,MWa
+New Brunswick,gas_cc,2005,default,year,508.08,MWa
+New Brunswick,gas_ct,2005,default,year,2.45,MWa
+New Brunswick,gas_ppl,2005,default,year,171.7,MWa
+New Brunswick,hydro_hc,2005,default,year,2504.84,MWa
+New Brunswick,hydro_lc,2005,default,year,21.939999999999998,MWa
+New Brunswick,igcc,2005,default,year,2653.4,MWa
+New Brunswick,loil_ppl,2005,default,year,175.2,MWa
+Newfoundland and Labrador,bio_ppl,2005,default,year,67.0,MWa
+Newfoundland and Labrador,foil_ppl,2005,default,year,1073.1,MWa
+Newfoundland and Labrador,gas_ct,2005,default,year,11.569999999999999,MWa
+Newfoundland and Labrador,hydro_hc,2005,default,year,38129.63,MWa
+Newfoundland and Labrador,hydro_lc,2005,default,year,15.0,MWa
+Newfoundland and Labrador,loil_ppl,2005,default,year,1.3599999999999999,MWa
+Nova Scotia,bio_ppl,2005,default,year,100.21,MWa
+Nova Scotia,gas_ct,2005,default,year,427.28,MWa
+Nova Scotia,hydro_hc,2005,default,year,881.01,MWa
+Nova Scotia,hydro_lc,2005,default,year,21.97,MWa
+Nova Scotia,igcc,2005,default,year,6342.469999999999,MWa
+Nova Scotia,loil_ppl,2005,default,year,1241.69,MWa
+Nova Scotia,wind_ppl,2005,default,year,104.54,MWa
+Ontario,bio_ppl,2005,default,year,152.01,MWa
+Ontario,gas_ppl,2005,default,year,1.34,MWa
+Ontario,hydro_hc,2005,default,year,8196.41,MWa
+Ontario,hydro_lc,2005,default,year,19406.49,MWa
+Ontario,nuc_lc,2005,default,year,96946.92,MWa
+Prince Edward Island,foil_ppl,2005,default,year,0.0,MWa
+Prince Edward Island,loil_ppl,2005,default,year,9.13,MWa
+Prince Edward Island,wind_ppl,2005,default,year,44.08,MWa
+Quebec,bio_ppl,2005,default,year,886.08,MWa
+Quebec,gas_cc,2005,default,year,36.0,MWa
+Quebec,hydro_hc,2005,default,year,185843.92,MWa
+Quebec,hydro_lc,2005,default,year,29754.04,MWa
+Quebec,wind_ppl,2005,default,year,306.6,MWa
+Saskatchewan,gas_cc,2005,default,year,2705.07,MWa
+Saskatchewan,gas_ct,2005,default,year,215.5,MWa
+Saskatchewan,gas_ppl,2005,default,year,3342.81,MWa
+Saskatchewan,hydro_hc,2005,default,year,2873.69,MWa
+Saskatchewan,igcc,2005,default,year,9951.36,MWa
+Saskatchewan,wind_ppl,2005,default,year,86.72,MWa
+Canada,bio_ppl,2005,default,year,9831.3,MWa
+Canada,wind_ppl,2005,default,year,56733.47,MWa
+Canada,gas_ct,2005,default,year,13933.47,MWa
+Canada,gas_ppl,2005,default,year,19366.49,MWa
+Canada,hydro_hc,2005,default,year,366288.76,MWa
+Canada,hydro_lc,2005,default,year,68101.86,MWa
+Canada,igcc,2005,default,year,42627.7,MWa
+Canada,solar_pv_ppl,2005,default,year,4682.56,MWa
+Canada,gas_cc,2005,default,year,61768.85,MWa
+Canada,bio_istig,2005,default,year,595.16,MWa
+Canada,foil_ppl,2005,default,year,1413.69,MWa
+Canada,loil_ppl,2005,default,year,1431.32,MWa
+Canada,nuc_lc,2005,default,year,102150.36,MWa
+Canada,coal_adv_ccs,2005,default,year,974.11,MWa
+Alberta,bio_ppl,2010,default,year,760.76,MWa
+Alberta,gas_cc,2010,default,year,4610.79,MWa
+Alberta,gas_ct,2010,default,year,2186.74,MWa
+Alberta,gas_ppl,2010,default,year,10294.4,MWa
+Alberta,hydro_hc,2010,default,year,1482.18,MWa
+Alberta,hydro_lc,2010,default,year,267.84,MWa
+Alberta,igcc,2010,default,year,17099.09,MWa
+Alberta,wind_ppl,2010,default,year,2415.66,MWa
+British Columbia,bio_istig,2010,default,year,65.03999999999999,MWa
+British Columbia,bio_ppl,2010,default,year,1117.74,MWa
+British Columbia,gas_cc,2010,default,year,2300.0,MWa
+British Columbia,gas_ct,2010,default,year,107.21000000000001,MWa
+British Columbia,gas_ppl,2010,default,year,840.0,MWa
+British Columbia,hydro_hc,2010,default,year,51252.24,MWa
+British Columbia,hydro_lc,2010,default,year,4065.07,MWa
+British Columbia,solar_pv_ppl,2010,default,year,2.1,MWa
+British Columbia,wind_ppl,2010,default,year,301.3,MWa
+Manitoba,gas_ct,2010,default,year,60.36,MWa
+Manitoba,hydro_hc,2010,default,year,27998.35,MWa
+Manitoba,hydro_lc,2010,default,year,99.86,MWa
+New Brunswick,foil_ppl,2010,default,year,340.59000000000003,MWa
+New Brunswick,gas_cc,2010,default,year,508.08,MWa
+New Brunswick,gas_ct,2010,default,year,2.45,MWa
+New Brunswick,gas_ppl,2010,default,year,171.7,MWa
+New Brunswick,hydro_hc,2010,default,year,2185.28,MWa
+New Brunswick,hydro_lc,2010,default,year,21.939999999999998,MWa
+New Brunswick,igcc,2010,default,year,2653.4,MWa
+New Brunswick,loil_ppl,2010,default,year,175.2,MWa
+New Brunswick,wind_ppl,2010,default,year,597.8699999999999,MWa
+Newfoundland and Labrador,bio_ppl,2010,default,year,67.0,MWa
+Newfoundland and Labrador,foil_ppl,2010,default,year,1073.1,MWa
+Newfoundland and Labrador,gas_ct,2010,default,year,11.569999999999999,MWa
+Newfoundland and Labrador,hydro_hc,2010,default,year,38129.63,MWa
+Newfoundland and Labrador,hydro_lc,2010,default,year,15.0,MWa
+Newfoundland and Labrador,loil_ppl,2010,default,year,1.3599999999999999,MWa
+Newfoundland and Labrador,wind_ppl,2010,default,year,189.0,MWa
+Nova Scotia,bio_ppl,2010,default,year,100.21,MWa
+Nova Scotia,gas_ct,2010,default,year,427.28,MWa
+Nova Scotia,hydro_hc,2010,default,year,721.8199999999999,MWa
+Nova Scotia,hydro_lc,2010,default,year,21.97,MWa
+Nova Scotia,igcc,2010,default,year,6342.469999999999,MWa
+Nova Scotia,loil_ppl,2010,default,year,1241.69,MWa
+Nova Scotia,wind_ppl,2010,default,year,399.04,MWa
+Ontario,bio_ppl,2010,default,year,152.01,MWa
+Ontario,gas_cc,2010,default,year,1391.33,MWa
+Ontario,gas_ct,2010,default,year,7191.77,MWa
+Ontario,gas_ppl,2010,default,year,2112.4399999999996,MWa
+Ontario,hydro_hc,2010,default,year,10175.27,MWa
+Ontario,hydro_lc,2010,default,year,19671.12,MWa
+Ontario,nuc_lc,2010,default,year,96946.92,MWa
+Ontario,wind_ppl,2010,default,year,2950.99,MWa
+Prince Edward Island,foil_ppl,2010,default,year,0.0,MWa
+Prince Edward Island,loil_ppl,2010,default,year,9.13,MWa
+Prince Edward Island,wind_ppl,2010,default,year,530.26,MWa
+Quebec,bio_istig,2010,default,year,73.72,MWa
+Quebec,bio_ppl,2010,default,year,938.2,MWa
+Quebec,gas_cc,2010,default,year,36.0,MWa
+Quebec,gas_ppl,2010,default,year,47.92,MWa
+Quebec,hydro_hc,2010,default,year,185200.5,MWa
+Quebec,hydro_lc,2010,default,year,31935.71,MWa
+Quebec,wind_ppl,2010,default,year,2038.58,MWa
+Saskatchewan,bio_istig,2010,default,year,166.44,MWa
+Saskatchewan,gas_cc,2010,default,year,3735.25,MWa
+Saskatchewan,gas_ct,2010,default,year,699.04,MWa
+Saskatchewan,gas_ppl,2010,default,year,3342.81,MWa
+Saskatchewan,hydro_hc,2010,default,year,2873.69,MWa
+Saskatchewan,igcc,2010,default,year,9951.36,MWa
+Saskatchewan,wind_ppl,2010,default,year,678.02,MWa
+Canada,bio_ppl,2010,default,year,9831.3,MWa
+Canada,wind_ppl,2010,default,year,56733.47,MWa
+Canada,gas_ct,2010,default,year,13933.47,MWa
+Canada,gas_ppl,2010,default,year,19366.49,MWa
+Canada,hydro_hc,2010,default,year,366288.76,MWa
+Canada,hydro_lc,2010,default,year,68101.86,MWa
+Canada,igcc,2010,default,year,42627.7,MWa
+Canada,solar_pv_ppl,2010,default,year,4682.56,MWa
+Canada,gas_cc,2010,default,year,61768.85,MWa
+Canada,bio_istig,2010,default,year,595.16,MWa
+Canada,foil_ppl,2010,default,year,1413.69,MWa
+Canada,loil_ppl,2010,default,year,1431.32,MWa
+Canada,nuc_lc,2010,default,year,102150.36,MWa
+Canada,coal_adv_ccs,2010,default,year,974.11,MWa
+Alberta,bio_ppl,2015,default,year,1705.57,MWa
+Alberta,gas_cc,2015,default,year,9183.51,MWa
+Alberta,gas_ct,2015,default,year,2620.36,MWa
+Alberta,gas_ppl,2015,default,year,11466.75,MWa
+Alberta,hydro_hc,2015,default,year,1482.18,MWa
+Alberta,hydro_lc,2015,default,year,267.84,MWa
+Alberta,igcc,2015,default,year,23680.47,MWa
+Alberta,wind_ppl,2015,default,year,4624.13,MWa
+British Columbia,bio_istig,2015,default,year,173.31,MWa
+British Columbia,bio_ppl,2015,default,year,3506.15,MWa
+British Columbia,gas_cc,2015,default,year,2300.0,MWa
+British Columbia,gas_ct,2015,default,year,107.21000000000001,MWa
+British Columbia,gas_ppl,2015,default,year,840.0,MWa
+British Columbia,hydro_hc,2015,default,year,54458.7,MWa
+British Columbia,hydro_lc,2015,default,year,6286.4800000000005,MWa
+British Columbia,solar_pv_ppl,2015,default,year,2.1,MWa
+British Columbia,wind_ppl,2015,default,year,2010.51,MWa
+Manitoba,gas_ct,2015,default,year,60.36,MWa
+Manitoba,hydro_hc,2015,default,year,29498.35,MWa
+Manitoba,hydro_lc,2015,default,year,99.86,MWa
+Manitoba,wind_ppl,2015,default,year,792.4100000000001,MWa
+New Brunswick,bio_ppl,2015,default,year,469.1,MWa
+New Brunswick,foil_ppl,2015,default,year,340.59000000000003,MWa
+New Brunswick,gas_cc,2015,default,year,508.08,MWa
+New Brunswick,gas_ct,2015,default,year,2.45,MWa
+New Brunswick,gas_ppl,2015,default,year,171.7,MWa
+New Brunswick,hydro_hc,2015,default,year,2185.28,MWa
+New Brunswick,hydro_lc,2015,default,year,67.93,MWa
+New Brunswick,igcc,2015,default,year,2653.4,MWa
+New Brunswick,loil_ppl,2015,default,year,175.2,MWa
+New Brunswick,nuc_lc,2015,default,year,5203.44,MWa
+New Brunswick,wind_ppl,2015,default,year,901.4,MWa
+Newfoundland and Labrador,bio_ppl,2015,default,year,67.0,MWa
+Newfoundland and Labrador,foil_ppl,2015,default,year,1073.1,MWa
+Newfoundland and Labrador,gas_ct,2015,default,year,11.37,MWa
+Newfoundland and Labrador,hydro_hc,2015,default,year,38091.69,MWa
+Newfoundland and Labrador,hydro_lc,2015,default,year,15.0,MWa
+Newfoundland and Labrador,loil_ppl,2015,default,year,2.34,MWa
+Newfoundland and Labrador,wind_ppl,2015,default,year,189.0,MWa
+Nova Scotia,bio_ppl,2015,default,year,305.14000000000004,MWa
+Nova Scotia,gas_cc,2015,default,year,102.54,MWa
+Nova Scotia,gas_ct,2015,default,year,427.28,MWa
+Nova Scotia,hydro_hc,2015,default,year,721.8199999999999,MWa
+Nova Scotia,hydro_lc,2015,default,year,21.97,MWa
+Nova Scotia,igcc,2015,default,year,5701.53,MWa
+Nova Scotia,loil_ppl,2015,default,year,1241.69,MWa
+Nova Scotia,wind_ppl,2015,default,year,1868.81,MWa
+Ontario,bio_ppl,2015,default,year,347.90999999999997,MWa
+Ontario,gas_cc,2015,default,year,1714.4299999999998,MWa
+Ontario,gas_ct,2015,default,year,7343.15,MWa
+Ontario,gas_ppl,2015,default,year,2137.0,MWa
+Ontario,hydro_hc,2015,default,year,8838.33,MWa
+Ontario,hydro_lc,2015,default,year,19671.12,MWa
+Ontario,nuc_lc,2015,default,year,96946.92,MWa
+Ontario,solar_pv_ppl,2015,default,year,436.66999999999996,MWa
+Ontario,wind_ppl,2015,default,year,9452.68,MWa
+Prince Edward Island,foil_ppl,2015,default,year,0.0,MWa
+Prince Edward Island,loil_ppl,2015,default,year,9.13,MWa
+Prince Edward Island,wind_ppl,2015,default,year,659.91,MWa
+Quebec,bio_istig,2015,default,year,219.67000000000002,MWa
+Quebec,bio_ppl,2015,default,year,2241.25,MWa
+Quebec,gas_cc,2015,default,year,36.0,MWa
+Quebec,gas_ppl,2015,default,year,47.92,MWa
+Quebec,hydro_hc,2015,default,year,194345.06,MWa
+Quebec,hydro_lc,2015,default,year,30053.4,MWa
+Quebec,wind_ppl,2015,default,year,9994.82,MWa
+Saskatchewan,bio_istig,2015,default,year,166.44,MWa
+Saskatchewan,gas_cc,2015,default,year,4401.01,MWa
+Saskatchewan,gas_ct,2015,default,year,1319.25,MWa
+Saskatchewan,gas_ppl,2015,default,year,3342.81,MWa
+Saskatchewan,hydro_hc,2015,default,year,2873.69,MWa
+Saskatchewan,igcc,2015,default,year,9951.36,MWa
+Saskatchewan,wind_ppl,2015,default,year,871.18,MWa
+Canada,bio_ppl,2015,default,year,9831.3,MWa
+Canada,wind_ppl,2015,default,year,56733.47,MWa
+Canada,gas_ct,2015,default,year,13933.47,MWa
+Canada,gas_ppl,2015,default,year,19366.49,MWa
+Canada,hydro_hc,2015,default,year,366288.76,MWa
+Canada,hydro_lc,2015,default,year,68101.86,MWa
+Canada,igcc,2015,default,year,42627.7,MWa
+Canada,solar_pv_ppl,2015,default,year,4682.56,MWa
+Canada,gas_cc,2015,default,year,61768.85,MWa
+Canada,bio_istig,2015,default,year,595.16,MWa
+Canada,foil_ppl,2015,default,year,1413.69,MWa
+Canada,loil_ppl,2015,default,year,1431.32,MWa
+Canada,nuc_lc,2015,default,year,102150.36,MWa
+Canada,coal_adv_ccs,2015,default,year,974.11,MWa
+Alberta,bio_ppl,2020,default,year,1705.57,MWa
+Alberta,gas_cc,2020,default,year,9183.51,MWa
+Alberta,gas_ct,2020,default,year,3442.92,MWa
+Alberta,gas_ppl,2020,default,year,12171.05,MWa
+Alberta,hydro_hc,2020,default,year,1482.18,MWa
+Alberta,hydro_lc,2020,default,year,267.84,MWa
+Alberta,igcc,2020,default,year,17826.600000000002,MWa
+Alberta,solar_pv_ppl,2020,default,year,127.73,MWa
+Alberta,wind_ppl,2020,default,year,5723.4800000000005,MWa
+British Columbia,bio_istig,2020,default,year,173.31,MWa
+British Columbia,bio_ppl,2020,default,year,3611.65,MWa
+British Columbia,gas_cc,2020,default,year,2300.0,MWa
+British Columbia,gas_ppl,2020,default,year,840.0,MWa
+British Columbia,hydro_hc,2020,default,year,54458.7,MWa
+British Columbia,hydro_lc,2020,default,year,7464.13,MWa
+British Columbia,solar_pv_ppl,2020,default,year,2.1,MWa
+British Columbia,wind_ppl,2020,default,year,2066.51,MWa
+Manitoba,gas_ct,2020,default,year,60.36,MWa
+Manitoba,hydro_hc,2020,default,year,29356.43,MWa
+Manitoba,hydro_lc,2020,default,year,84.53,MWa
+Manitoba,wind_ppl,2020,default,year,792.4100000000001,MWa
+New Brunswick,bio_ppl,2020,default,year,469.1,MWa
+New Brunswick,foil_ppl,2020,default,year,340.59000000000003,MWa
+New Brunswick,gas_cc,2020,default,year,508.08,MWa
+New Brunswick,gas_ct,2020,default,year,2.45,MWa
+New Brunswick,gas_ppl,2020,default,year,171.7,MWa
+New Brunswick,hydro_hc,2020,default,year,2185.28,MWa
+New Brunswick,hydro_lc,2020,default,year,67.93,MWa
+New Brunswick,igcc,2020,default,year,2653.4,MWa
+New Brunswick,loil_ppl,2020,default,year,175.2,MWa
+New Brunswick,nuc_lc,2020,default,year,5203.44,MWa
+New Brunswick,wind_ppl,2020,default,year,1028.49,MWa
+Newfoundland and Labrador,bio_ppl,2020,default,year,67.0,MWa
+Newfoundland and Labrador,foil_ppl,2020,default,year,1073.1,MWa
+Newfoundland and Labrador,gas_ct,2020,default,year,6.57,MWa
+Newfoundland and Labrador,hydro_hc,2020,default,year,43001.69,MWa
+Newfoundland and Labrador,hydro_lc,2020,default,year,15.0,MWa
+Newfoundland and Labrador,loil_ppl,2020,default,year,1.9,MWa
+Newfoundland and Labrador,wind_ppl,2020,default,year,189.0,MWa
+Nova Scotia,bio_ppl,2020,default,year,305.14000000000004,MWa
+Nova Scotia,gas_cc,2020,default,year,102.54,MWa
+Nova Scotia,gas_ct,2020,default,year,427.28,MWa
+Nova Scotia,hydro_hc,2020,default,year,661.66,MWa
+Nova Scotia,hydro_lc,2020,default,year,21.97,MWa
+Nova Scotia,igcc,2020,default,year,5701.53,MWa
+Nova Scotia,loil_ppl,2020,default,year,1239.32,MWa
+Nova Scotia,wind_ppl,2020,default,year,2113.96,MWa
+Ontario,bio_ppl,2020,default,year,347.90999999999997,MWa
+Ontario,gas_cc,2020,default,year,2003.6,MWa
+Ontario,gas_ct,2020,default,year,8405.63,MWa
+Ontario,gas_ppl,2020,default,year,2170.17,MWa
+Ontario,hydro_hc,2020,default,year,8724.3,MWa
+Ontario,hydro_lc,2020,default,year,19882.93,MWa
+Ontario,nuc_lc,2020,default,year,96946.92,MWa
+Ontario,solar_pv_ppl,2020,default,year,759.21,MWa
+Ontario,wind_ppl,2020,default,year,11122.81,MWa
+Prince Edward Island,foil_ppl,2020,default,year,0.0,MWa
+Prince Edward Island,loil_ppl,2020,default,year,5.63,MWa
+Prince Edward Island,wind_ppl,2020,default,year,659.91,MWa
+Quebec,bio_istig,2020,default,year,255.41,MWa
+Quebec,bio_ppl,2020,default,year,2859.64,MWa
+Quebec,gas_cc,2020,default,year,36.0,MWa
+Quebec,gas_ppl,2020,default,year,47.92,MWa
+Quebec,hydro_hc,2020,default,year,196594.19,MWa
+Quebec,hydro_lc,2020,default,year,29373.399999999998,MWa
+Quebec,wind_ppl,2020,default,year,11968.71,MWa
+Saskatchewan,bio_istig,2020,default,year,166.44,MWa
+Saskatchewan,gas_cc,2020,default,year,7428.46,MWa
+Saskatchewan,gas_ct,2020,default,year,1319.25,MWa
+Saskatchewan,gas_ppl,2020,default,year,3342.81,MWa
+Saskatchewan,hydro_hc,2020,default,year,2873.69,MWa
+Saskatchewan,igcc,2020,default,year,9951.36,MWa
+Saskatchewan,wind_ppl,2020,default,year,1777.84,MWa
+Canada,bio_ppl,2020,default,year,9831.3,MWa
+Canada,wind_ppl,2020,default,year,56733.47,MWa
+Canada,gas_ct,2020,default,year,13933.47,MWa
+Canada,gas_ppl,2020,default,year,19366.49,MWa
+Canada,hydro_hc,2020,default,year,366288.76,MWa
+Canada,hydro_lc,2020,default,year,68101.86,MWa
+Canada,igcc,2020,default,year,42627.7,MWa
+Canada,solar_pv_ppl,2020,default,year,4682.56,MWa
+Canada,gas_cc,2020,default,year,61768.85,MWa
+Canada,bio_istig,2020,default,year,595.16,MWa
+Canada,foil_ppl,2020,default,year,1413.69,MWa
+Canada,loil_ppl,2020,default,year,1431.32,MWa
+Canada,nuc_lc,2020,default,year,102150.36,MWa
+Canada,coal_adv_ccs,2020,default,year,974.11,MWa
+Alberta,bio_ppl,2025,default,year,1753.75,MWa
+Alberta,gas_cc,2025,default,year,45297.49,MWa
+Alberta,gas_ct,2025,default,year,3492.85,MWa
+Alberta,gas_ppl,2025,default,year,11072.02,MWa
+Alberta,hydro_hc,2025,default,year,1482.18,MWa
+Alberta,hydro_lc,2025,default,year,267.84,MWa
+Alberta,solar_pv_ppl,2025,default,year,3817.44,MWa
+Alberta,wind_ppl,2025,default,year,16889.420000000002,MWa
+British Columbia,bio_istig,2025,default,year,165.31,MWa
+British Columbia,bio_ppl,2025,default,year,3443.18,MWa
+British Columbia,gas_ppl,2025,default,year,840.0,MWa
+British Columbia,hydro_hc,2025,default,year,59788.28,MWa
+British Columbia,hydro_lc,2025,default,year,7551.43,MWa
+British Columbia,solar_pv_ppl,2025,default,year,2.1,MWa
+British Columbia,wind_ppl,2025,default,year,2162.11,MWa
+Manitoba,gas_ct,2025,default,year,60.36,MWa
+Manitoba,hydro_hc,2025,default,year,33787.43,MWa
+Manitoba,hydro_lc,2025,default,year,84.53,MWa
+Manitoba,wind_ppl,2025,default,year,792.4100000000001,MWa
+New Brunswick,bio_ppl,2025,default,year,476.2,MWa
+New Brunswick,gas_cc,2025,default,year,508.08,MWa
+New Brunswick,gas_ct,2025,default,year,2.45,MWa
+New Brunswick,gas_ppl,2025,default,year,171.7,MWa
+New Brunswick,hydro_hc,2025,default,year,2185.28,MWa
+New Brunswick,hydro_lc,2025,default,year,67.93,MWa
+New Brunswick,igcc,2025,default,year,2653.4,MWa
+New Brunswick,loil_ppl,2025,default,year,175.2,MWa
+New Brunswick,nuc_lc,2025,default,year,5203.44,MWa
+New Brunswick,wind_ppl,2025,default,year,1089.81,MWa
+Newfoundland and Labrador,bio_ppl,2025,default,year,67.0,MWa
+Newfoundland and Labrador,foil_ppl,2025,default,year,1073.1,MWa
+Newfoundland and Labrador,gas_ct,2025,default,year,2.19,MWa
+Newfoundland and Labrador,hydro_hc,2025,default,year,42934.27,MWa
+Newfoundland and Labrador,hydro_lc,2025,default,year,15.0,MWa
+Newfoundland and Labrador,loil_ppl,2025,default,year,1.9,MWa
+Newfoundland and Labrador,wind_ppl,2025,default,year,189.0,MWa
+Nova Scotia,bio_ppl,2025,default,year,305.14000000000004,MWa
+Nova Scotia,gas_cc,2025,default,year,102.54,MWa
+Nova Scotia,gas_ct,2025,default,year,427.28,MWa
+Nova Scotia,hydro_hc,2025,default,year,640.62,MWa
+Nova Scotia,hydro_lc,2025,default,year,21.97,MWa
+Nova Scotia,igcc,2025,default,year,4459.07,MWa
+Nova Scotia,loil_ppl,2025,default,year,1228.8,MWa
+Nova Scotia,wind_ppl,2025,default,year,3193.54,MWa
+Ontario,bio_ppl,2025,default,year,195.89999999999998,MWa
+Ontario,gas_cc,2025,default,year,1994.37,MWa
+Ontario,gas_ct,2025,default,year,8344.359999999999,MWa
+Ontario,gas_ppl,2025,default,year,2170.17,MWa
+Ontario,hydro_hc,2025,default,year,8724.3,MWa
+Ontario,hydro_lc,2025,default,year,19836.76,MWa
+Ontario,nuc_lc,2025,default,year,96946.92,MWa
+Ontario,solar_pv_ppl,2025,default,year,759.21,MWa
+Ontario,wind_ppl,2025,default,year,12065.31,MWa
+Prince Edward Island,loil_ppl,2025,default,year,5.63,MWa
+Prince Edward Island,solar_pv_ppl,2025,default,year,40.730000000000004,MWa
+Prince Edward Island,wind_ppl,2025,default,year,757.15,MWa
+Quebec,bio_istig,2025,default,year,255.41,MWa
+Quebec,bio_ppl,2025,default,year,2859.64,MWa
+Quebec,gas_cc,2025,default,year,36.0,MWa
+Quebec,gas_ppl,2025,default,year,47.92,MWa
+Quebec,hydro_hc,2025,default,year,191429.73,MWa
+Quebec,hydro_lc,2025,default,year,29512.69,MWa
+Quebec,wind_ppl,2025,default,year,12655.49,MWa
+Saskatchewan,bio_istig,2025,default,year,166.44,MWa
+Saskatchewan,bio_ppl,2025,default,year,307.91,MWa
+Saskatchewan,gas_cc,2025,default,year,9215.5,MWa
+Saskatchewan,gas_ct,2025,default,year,1184.3400000000001,MWa
+Saskatchewan,gas_ppl,2025,default,year,3342.81,MWa
+Saskatchewan,hydro_hc,2025,default,year,2873.69,MWa
+Saskatchewan,igcc,2025,default,year,8003.139999999999,MWa
+Saskatchewan,solar_pv_ppl,2025,default,year,63.08,MWa
+Saskatchewan,wind_ppl,2025,default,year,3216.67,MWa
+Canada,bio_ppl,2025,default,year,9831.3,MWa
+Canada,wind_ppl,2025,default,year,56733.47,MWa
+Canada,gas_ct,2025,default,year,13933.47,MWa
+Canada,gas_ppl,2025,default,year,19366.49,MWa
+Canada,hydro_hc,2025,default,year,366288.76,MWa
+Canada,hydro_lc,2025,default,year,68101.86,MWa
+Canada,igcc,2025,default,year,42627.7,MWa
+Canada,solar_pv_ppl,2025,default,year,4682.56,MWa
+Canada,gas_cc,2025,default,year,61768.85,MWa
+Canada,bio_istig,2025,default,year,595.16,MWa
+Canada,foil_ppl,2025,default,year,1413.69,MWa
+Canada,loil_ppl,2025,default,year,1431.32,MWa
+Canada,nuc_lc,2025,default,year,102150.36,MWa
+Canada,coal_adv_ccs,2025,default,year,974.11,MWa
+Alberta,bio_ppl,2030,default,year,1753.75,MWa
+Alberta,gas_cc,2030,default,year,42795.63,MWa
+Alberta,gas_ct,2030,default,year,3492.85,MWa
+Alberta,gas_ppl,2030,default,year,11072.02,MWa
+Alberta,hydro_hc,2030,default,year,1482.18,MWa
+Alberta,hydro_lc,2030,default,year,267.84,MWa
+Alberta,solar_pv_ppl,2030,default,year,3817.44,MWa
+Alberta,wind_ppl,2030,default,year,16889.420000000002,MWa
+British Columbia,bio_istig,2030,default,year,165.31,MWa
+British Columbia,bio_ppl,2030,default,year,3443.18,MWa
+British Columbia,hydro_hc,2030,default,year,59788.28,MWa
+British Columbia,hydro_lc,2030,default,year,7551.43,MWa
+British Columbia,solar_pv_ppl,2030,default,year,2.1,MWa
+British Columbia,wind_ppl,2030,default,year,2162.11,MWa
+Manitoba,gas_ct,2030,default,year,60.36,MWa
+Manitoba,hydro_hc,2030,default,year,33216.47,MWa
+Manitoba,hydro_lc,2030,default,year,84.53,MWa
+Manitoba,wind_ppl,2030,default,year,792.4100000000001,MWa
+New Brunswick,bio_ppl,2030,default,year,476.2,MWa
+New Brunswick,gas_cc,2030,default,year,508.08,MWa
+New Brunswick,gas_ct,2030,default,year,2.45,MWa
+New Brunswick,gas_ppl,2030,default,year,171.7,MWa
+New Brunswick,hydro_hc,2030,default,year,2185.28,MWa
+New Brunswick,hydro_lc,2030,default,year,67.93,MWa
+New Brunswick,igcc,2030,default,year,2653.4,MWa
+New Brunswick,loil_ppl,2030,default,year,173.45,MWa
+New Brunswick,nuc_lc,2030,default,year,5203.44,MWa
+New Brunswick,wind_ppl,2030,default,year,1089.81,MWa
+Newfoundland and Labrador,bio_ppl,2030,default,year,67.0,MWa
+Newfoundland and Labrador,gas_ct,2030,default,year,0.0,MWa
+Newfoundland and Labrador,hydro_hc,2030,default,year,42886.16,MWa
+Newfoundland and Labrador,hydro_lc,2030,default,year,15.0,MWa
+Newfoundland and Labrador,loil_ppl,2030,default,year,1.05,MWa
+Newfoundland and Labrador,wind_ppl,2030,default,year,189.0,MWa
+Nova Scotia,bio_ppl,2030,default,year,305.14000000000004,MWa
+Nova Scotia,gas_cc,2030,default,year,102.54,MWa
+Nova Scotia,gas_ct,2030,default,year,427.28,MWa
+Nova Scotia,hydro_hc,2030,default,year,535.16,MWa
+Nova Scotia,hydro_lc,2030,default,year,21.97,MWa
+Nova Scotia,igcc,2030,default,year,3071.89,MWa
+Nova Scotia,loil_ppl,2030,default,year,1228.8,MWa
+Nova Scotia,wind_ppl,2030,default,year,3193.54,MWa
+Ontario,bio_ppl,2030,default,year,195.89999999999998,MWa
+Ontario,gas_cc,2030,default,year,1994.37,MWa
+Ontario,gas_ct,2030,default,year,8344.359999999999,MWa
+Ontario,gas_ppl,2030,default,year,2170.17,MWa
+Ontario,hydro_hc,2030,default,year,5151.18,MWa
+Ontario,hydro_lc,2030,default,year,19836.76,MWa
+Ontario,nuc_lc,2030,default,year,96946.92,MWa
+Ontario,solar_pv_ppl,2030,default,year,759.21,MWa
+Ontario,wind_ppl,2030,default,year,12065.31,MWa
+Prince Edward Island,loil_ppl,2030,default,year,5.63,MWa
+Prince Edward Island,solar_pv_ppl,2030,default,year,40.730000000000004,MWa
+Prince Edward Island,wind_ppl,2030,default,year,757.15,MWa
+Quebec,bio_istig,2030,default,year,255.41,MWa
+Quebec,bio_ppl,2030,default,year,2859.64,MWa
+Quebec,gas_cc,2030,default,year,36.0,MWa
+Quebec,gas_ppl,2030,default,year,47.92,MWa
+Quebec,hydro_hc,2030,default,year,190325.09,MWa
+Quebec,hydro_lc,2030,default,year,28424.04,MWa
+Quebec,wind_ppl,2030,default,year,16028.09,MWa
+Saskatchewan,bio_istig,2030,default,year,166.44,MWa
+Saskatchewan,bio_ppl,2030,default,year,307.91,MWa
+Saskatchewan,gas_cc,2030,default,year,9215.5,MWa
+Saskatchewan,gas_ct,2030,default,year,1184.3400000000001,MWa
+Saskatchewan,gas_ppl,2030,default,year,3342.81,MWa
+Saskatchewan,hydro_hc,2030,default,year,2873.69,MWa
+Saskatchewan,solar_pv_ppl,2030,default,year,63.08,MWa
+Saskatchewan,wind_ppl,2030,default,year,3216.67,MWa
+Canada,bio_ppl,2030,default,year,9831.3,MWa
+Canada,wind_ppl,2030,default,year,56733.47,MWa
+Canada,gas_ct,2030,default,year,13933.47,MWa
+Canada,gas_ppl,2030,default,year,19366.49,MWa
+Canada,hydro_hc,2030,default,year,366288.76,MWa
+Canada,hydro_lc,2030,default,year,68101.86,MWa
+Canada,igcc,2030,default,year,42627.7,MWa
+Canada,solar_pv_ppl,2030,default,year,4682.56,MWa
+Canada,gas_cc,2030,default,year,61768.85,MWa
+Canada,bio_istig,2030,default,year,595.16,MWa
+Canada,foil_ppl,2030,default,year,1413.69,MWa
+Canada,loil_ppl,2030,default,year,1431.32,MWa
+Canada,nuc_lc,2030,default,year,102150.36,MWa
+Canada,coal_adv_ccs,2030,default,year,974.11,MWa
+Alberta,bio_ppl,2035,default,year,1512.85,MWa
+Alberta,gas_cc,2035,default,year,28283.81,MWa
+Alberta,gas_ct,2035,default,year,3492.85,MWa
+Alberta,gas_ppl,2035,default,year,11072.02,MWa
+Alberta,hydro_hc,2035,default,year,1080.6299999999999,MWa
+Alberta,hydro_lc,2035,default,year,162.29999999999998,MWa
+Alberta,solar_pv_ppl,2035,default,year,3817.44,MWa
+Alberta,wind_ppl,2035,default,year,15825.39,MWa
+British Columbia,bio_istig,2035,default,year,165.31,MWa
+British Columbia,bio_ppl,2035,default,year,3443.18,MWa
+British Columbia,hydro_hc,2035,default,year,57891.08,MWa
+British Columbia,hydro_lc,2035,default,year,7534.08,MWa
+British Columbia,solar_pv_ppl,2035,default,year,2.1,MWa
+British Columbia,wind_ppl,2035,default,year,2162.11,MWa
+Manitoba,gas_ct,2035,default,year,60.36,MWa
+Manitoba,hydro_hc,2035,default,year,31171.43,MWa
+Manitoba,hydro_lc,2035,default,year,54.53,MWa
+Manitoba,wind_ppl,2035,default,year,792.4100000000001,MWa
+New Brunswick,bio_ppl,2035,default,year,476.2,MWa
+New Brunswick,gas_cc,2035,default,year,508.08,MWa
+New Brunswick,gas_ppl,2035,default,year,171.7,MWa
+New Brunswick,hydro_hc,2035,default,year,2088.92,MWa
+New Brunswick,hydro_lc,2035,default,year,67.93,MWa
+New Brunswick,igcc,2035,default,year,2653.4,MWa
+New Brunswick,loil_ppl,2035,default,year,173.45,MWa
+New Brunswick,nuc_lc,2035,default,year,5203.44,MWa
+New Brunswick,wind_ppl,2035,default,year,1089.81,MWa
+Newfoundland and Labrador,bio_ppl,2035,default,year,67.0,MWa
+Newfoundland and Labrador,gas_ct,2035,default,year,0.0,MWa
+Newfoundland and Labrador,hydro_hc,2035,default,year,42814.56,MWa
+Newfoundland and Labrador,hydro_lc,2035,default,year,15.0,MWa
+Newfoundland and Labrador,loil_ppl,2035,default,year,1.05,MWa
+Newfoundland and Labrador,wind_ppl,2035,default,year,189.0,MWa
+Nova Scotia,bio_ppl,2035,default,year,305.14000000000004,MWa
+Nova Scotia,gas_cc,2035,default,year,102.54,MWa
+Nova Scotia,gas_ct,2035,default,year,427.28,MWa
+Nova Scotia,hydro_hc,2035,default,year,442.98,MWa
+Nova Scotia,hydro_lc,2035,default,year,21.97,MWa
+Nova Scotia,igcc,2035,default,year,2173.99,MWa
+Nova Scotia,loil_ppl,2035,default,year,1228.8,MWa
+Nova Scotia,wind_ppl,2035,default,year,3089.0,MWa
+Ontario,bio_ppl,2035,default,year,195.89999999999998,MWa
+Ontario,gas_cc,2035,default,year,1994.37,MWa
+Ontario,gas_ct,2035,default,year,8344.359999999999,MWa
+Ontario,gas_ppl,2035,default,year,2170.17,MWa
+Ontario,hydro_hc,2035,default,year,4234.46,MWa
+Ontario,hydro_lc,2035,default,year,10105.34,MWa
+Ontario,nuc_lc,2035,default,year,73849.42,MWa
+Ontario,solar_pv_ppl,2035,default,year,759.21,MWa
+Ontario,wind_ppl,2035,default,year,12065.31,MWa
+Prince Edward Island,loil_ppl,2035,default,year,5.63,MWa
+Prince Edward Island,solar_pv_ppl,2035,default,year,40.730000000000004,MWa
+Prince Edward Island,wind_ppl,2035,default,year,713.0699999999999,MWa
+Quebec,bio_istig,2035,default,year,255.41,MWa
+Quebec,bio_ppl,2035,default,year,2859.64,MWa
+Quebec,gas_cc,2035,default,year,36.0,MWa
+Quebec,gas_ppl,2035,default,year,47.92,MWa
+Quebec,hydro_hc,2035,default,year,183393.61,MWa
+Quebec,hydro_lc,2035,default,year,26413.62,MWa
+Quebec,wind_ppl,2035,default,year,16028.09,MWa
+Saskatchewan,bio_istig,2035,default,year,166.44,MWa
+Saskatchewan,bio_ppl,2035,default,year,307.91,MWa
+Saskatchewan,gas_cc,2035,default,year,9215.5,MWa
+Saskatchewan,gas_ct,2035,default,year,1184.3400000000001,MWa
+Saskatchewan,gas_ppl,2035,default,year,3342.81,MWa
+Saskatchewan,hydro_hc,2035,default,year,2873.69,MWa
+Saskatchewan,solar_pv_ppl,2035,default,year,63.08,MWa
+Saskatchewan,wind_ppl,2035,default,year,3173.31,MWa
+Canada,bio_ppl,2035,default,year,9831.3,MWa
+Canada,wind_ppl,2035,default,year,56733.47,MWa
+Canada,gas_ct,2035,default,year,13933.47,MWa
+Canada,gas_ppl,2035,default,year,19366.49,MWa
+Canada,hydro_hc,2035,default,year,366288.76,MWa
+Canada,hydro_lc,2035,default,year,68101.86,MWa
+Canada,igcc,2035,default,year,42627.7,MWa
+Canada,solar_pv_ppl,2035,default,year,4682.56,MWa
+Canada,gas_cc,2035,default,year,61768.85,MWa
+Canada,bio_istig,2035,default,year,595.16,MWa
+Canada,foil_ppl,2035,default,year,1413.69,MWa
+Canada,loil_ppl,2035,default,year,1431.32,MWa
+Canada,nuc_lc,2035,default,year,102150.36,MWa
+Canada,coal_adv_ccs,2035,default,year,974.11,MWa
+Alberta,bio_ppl,2040,default,year,1402.04,MWa
+Alberta,gas_cc,2040,default,year,18644.31,MWa
+Alberta,gas_ct,2040,default,year,3492.85,MWa
+Alberta,gas_ppl,2040,default,year,11072.02,MWa
+Alberta,hydro_hc,2040,default,year,1080.6299999999999,MWa
+Alberta,hydro_lc,2040,default,year,162.29999999999998,MWa
+Alberta,solar_pv_ppl,2040,default,year,3817.44,MWa
+Alberta,wind_ppl,2040,default,year,14473.76,MWa
+British Columbia,bio_istig,2040,default,year,165.31,MWa
+British Columbia,bio_ppl,2040,default,year,3054.7799999999997,MWa
+British Columbia,hydro_hc,2040,default,year,57110.7,MWa
+British Columbia,hydro_lc,2040,default,year,7534.08,MWa
+British Columbia,wind_ppl,2040,default,year,1860.81,MWa
+Manitoba,gas_ct,2040,default,year,60.36,MWa
+Manitoba,hydro_hc,2040,default,year,31100.47,MWa
+Manitoba,hydro_lc,2040,default,year,24.53,MWa
+Manitoba,wind_ppl,2040,default,year,792.4100000000001,MWa
+New Brunswick,bio_ppl,2040,default,year,476.2,MWa
+New Brunswick,gas_cc,2040,default,year,508.08,MWa
+New Brunswick,gas_ppl,2040,default,year,171.7,MWa
+New Brunswick,hydro_hc,2040,default,year,1633.57,MWa
+New Brunswick,hydro_lc,2040,default,year,67.93,MWa
+New Brunswick,nuc_lc,2040,default,year,5203.44,MWa
+New Brunswick,wind_ppl,2040,default,year,491.94,MWa
+Newfoundland and Labrador,bio_ppl,2040,default,year,67.0,MWa
+Newfoundland and Labrador,gas_ct,2040,default,year,0.0,MWa
+Newfoundland and Labrador,hydro_hc,2040,default,year,42717.53,MWa
+Newfoundland and Labrador,hydro_lc,2040,default,year,15.0,MWa
+Newfoundland and Labrador,loil_ppl,2040,default,year,1.05,MWa
+Nova Scotia,bio_ppl,2040,default,year,204.93,MWa
+Nova Scotia,gas_cc,2040,default,year,102.54,MWa
+Nova Scotia,gas_ct,2040,default,year,427.28,MWa
+Nova Scotia,hydro_hc,2040,default,year,417.37,MWa
+Nova Scotia,hydro_lc,2040,default,year,21.97,MWa
+Nova Scotia,loil_ppl,2040,default,year,1228.8,MWa
+Nova Scotia,wind_ppl,2040,default,year,2794.5,MWa
+Ontario,bio_ppl,2040,default,year,195.89999999999998,MWa
+Ontario,gas_cc,2040,default,year,1994.37,MWa
+Ontario,gas_ct,2040,default,year,8344.359999999999,MWa
+Ontario,gas_ppl,2040,default,year,2170.17,MWa
+Ontario,hydro_hc,2040,default,year,4169.19,MWa
+Ontario,hydro_lc,2040,default,year,1791.17,MWa
+Ontario,nuc_lc,2040,default,year,50573.240000000005,MWa
+Ontario,solar_pv_ppl,2040,default,year,759.21,MWa
+Ontario,wind_ppl,2040,default,year,9114.32,MWa
+Prince Edward Island,loil_ppl,2040,default,year,5.63,MWa
+Prince Edward Island,solar_pv_ppl,2040,default,year,40.730000000000004,MWa
+Prince Edward Island,wind_ppl,2040,default,year,226.89,MWa
+Quebec,bio_istig,2040,default,year,255.41,MWa
+Quebec,bio_ppl,2040,default,year,2859.64,MWa
+Quebec,gas_ppl,2040,default,year,47.92,MWa
+Quebec,hydro_hc,2040,default,year,170654.86,MWa
+Quebec,hydro_lc,2040,default,year,25897.219999999998,MWa
+Quebec,wind_ppl,2040,default,year,14296.11,MWa
+Saskatchewan,bio_istig,2040,default,year,166.44,MWa
+Saskatchewan,bio_ppl,2040,default,year,307.91,MWa
+Saskatchewan,gas_cc,2040,default,year,9215.5,MWa
+Saskatchewan,gas_ct,2040,default,year,1184.3400000000001,MWa
+Saskatchewan,gas_ppl,2040,default,year,3342.81,MWa
+Saskatchewan,hydro_hc,2040,default,year,2873.69,MWa
+Saskatchewan,solar_pv_ppl,2040,default,year,63.08,MWa
+Saskatchewan,wind_ppl,2040,default,year,2582.0099999999998,MWa
+Canada,bio_ppl,2040,default,year,9831.3,MWa
+Canada,wind_ppl,2040,default,year,56733.47,MWa
+Canada,gas_ct,2040,default,year,13933.47,MWa
+Canada,gas_ppl,2040,default,year,19366.49,MWa
+Canada,hydro_hc,2040,default,year,366288.76,MWa
+Canada,hydro_lc,2040,default,year,68101.86,MWa
+Canada,igcc,2040,default,year,42627.7,MWa
+Canada,solar_pv_ppl,2040,default,year,4682.56,MWa
+Canada,gas_cc,2040,default,year,61768.85,MWa
+Canada,bio_istig,2040,default,year,595.16,MWa
+Canada,foil_ppl,2040,default,year,1413.69,MWa
+Canada,loil_ppl,2040,default,year,1431.32,MWa
+Canada,nuc_lc,2040,default,year,102150.36,MWa
+Canada,coal_adv_ccs,2040,default,year,974.11,MWa
+Alberta,bio_ppl,2045,default,year,1123.08,MWa
+Alberta,gas_cc,2045,default,year,18212.04,MWa
+Alberta,gas_ct,2045,default,year,3350.94,MWa
+Alberta,gas_ppl,2045,default,year,8178.59,MWa
+Alberta,hydro_hc,2045,default,year,1080.6299999999999,MWa
+Alberta,hydro_lc,2045,default,year,162.29999999999998,MWa
+Alberta,solar_pv_ppl,2045,default,year,3817.44,MWa
+Alberta,wind_ppl,2045,default,year,12265.29,MWa
+British Columbia,bio_istig,2045,default,year,110.81,MWa
+British Columbia,bio_ppl,2045,default,year,3051.44,MWa
+British Columbia,hydro_hc,2045,default,year,57110.7,MWa
+British Columbia,hydro_lc,2045,default,year,7534.08,MWa
+British Columbia,wind_ppl,2045,default,year,151.6,MWa
+Manitoba,gas_ct,2045,default,year,60.36,MWa
+Manitoba,hydro_hc,2045,default,year,31100.47,MWa
+New Brunswick,bio_ppl,2045,default,year,476.2,MWa
+New Brunswick,gas_ppl,2045,default,year,171.7,MWa
+New Brunswick,hydro_hc,2045,default,year,1633.57,MWa
+New Brunswick,hydro_lc,2045,default,year,45.99,MWa
+New Brunswick,nuc_lc,2045,default,year,5203.44,MWa
+New Brunswick,wind_ppl,2045,default,year,188.41,MWa
+Newfoundland and Labrador,bio_ppl,2045,default,year,67.0,MWa
+Newfoundland and Labrador,gas_ct,2045,default,year,0.0,MWa
+Newfoundland and Labrador,hydro_hc,2045,default,year,42690.92,MWa
+Newfoundland and Labrador,hydro_lc,2045,default,year,15.0,MWa
+Newfoundland and Labrador,loil_ppl,2045,default,year,1.05,MWa
+Nova Scotia,bio_ppl,2045,default,year,204.93,MWa
+Nova Scotia,gas_cc,2045,default,year,102.54,MWa
+Nova Scotia,gas_ct,2045,default,year,427.28,MWa
+Nova Scotia,hydro_hc,2045,default,year,372.49,MWa
+Nova Scotia,hydro_lc,2045,default,year,21.97,MWa
+Nova Scotia,loil_ppl,2045,default,year,2.89,MWa
+Nova Scotia,wind_ppl,2045,default,year,1324.73,MWa
+Ontario,bio_ppl,2045,default,year,195.89999999999998,MWa
+Ontario,gas_cc,2045,default,year,1994.37,MWa
+Ontario,gas_ct,2045,default,year,8344.359999999999,MWa
+Ontario,gas_ppl,2045,default,year,2168.83,MWa
+Ontario,hydro_hc,2045,default,year,3566.6,MWa
+Ontario,hydro_lc,2045,default,year,1728.1,MWa
+Ontario,nuc_lc,2045,default,year,38406.48,MWa
+Ontario,solar_pv_ppl,2045,default,year,322.53999999999996,MWa
+Ontario,wind_ppl,2045,default,year,2612.63,MWa
+Prince Edward Island,loil_ppl,2045,default,year,4.29,MWa
+Prince Edward Island,solar_pv_ppl,2045,default,year,40.730000000000004,MWa
+Prince Edward Island,wind_ppl,2045,default,year,97.24,MWa
+Quebec,bio_istig,2045,default,year,255.41,MWa
+Quebec,bio_ppl,2045,default,year,2859.64,MWa
+Quebec,gas_ppl,2045,default,year,47.92,MWa
+Quebec,hydro_hc,2045,default,year,170654.86,MWa
+Quebec,hydro_lc,2045,default,year,8026.82,MWa
+Quebec,wind_ppl,2045,default,year,6339.87,MWa
+Saskatchewan,bio_istig,2045,default,year,166.44,MWa
+Saskatchewan,bio_ppl,2045,default,year,307.91,MWa
+Saskatchewan,gas_cc,2045,default,year,9215.5,MWa
+Saskatchewan,gas_ct,2045,default,year,1184.3400000000001,MWa
+Saskatchewan,gas_ppl,2045,default,year,1744.98,MWa
+Saskatchewan,hydro_hc,2045,default,year,2022.23,MWa
+Saskatchewan,solar_pv_ppl,2045,default,year,63.08,MWa
+Saskatchewan,wind_ppl,2045,default,year,2388.85,MWa
+Canada,bio_ppl,2045,default,year,9831.3,MWa
+Canada,wind_ppl,2045,default,year,56733.47,MWa
+Canada,gas_ct,2045,default,year,13933.47,MWa
+Canada,gas_ppl,2045,default,year,19366.49,MWa
+Canada,hydro_hc,2045,default,year,366288.76,MWa
+Canada,hydro_lc,2045,default,year,68101.86,MWa
+Canada,igcc,2045,default,year,42627.7,MWa
+Canada,solar_pv_ppl,2045,default,year,4682.56,MWa
+Canada,gas_cc,2045,default,year,61768.85,MWa
+Canada,bio_istig,2045,default,year,595.16,MWa
+Canada,foil_ppl,2045,default,year,1413.69,MWa
+Canada,loil_ppl,2045,default,year,1431.32,MWa
+Canada,nuc_lc,2045,default,year,102150.36,MWa
+Canada,coal_adv_ccs,2045,default,year,974.11,MWa
+Alberta,bio_ppl,2050,default,year,992.99,MWa
+Alberta,gas_cc,2050,default,year,15373.8,MWa
+Alberta,gas_ct,2050,default,year,2762.0099999999998,MWa
+Alberta,gas_ppl,2050,default,year,4499.39,MWa
+Alberta,hydro_hc,2050,default,year,319.56,MWa
+Alberta,hydro_lc,2050,default,year,162.29999999999998,MWa
+Alberta,solar_pv_ppl,2050,default,year,3689.71,MWa
+Alberta,wind_ppl,2050,default,year,11165.94,MWa
+British Columbia,bio_istig,2050,default,year,100.27000000000001,MWa
+British Columbia,bio_ppl,2050,default,year,2882.65,MWa
+British Columbia,hydro_hc,2050,default,year,53803.66,MWa
+British Columbia,hydro_lc,2050,default,year,7534.08,MWa
+British Columbia,wind_ppl,2050,default,year,95.6,MWa
+Manitoba,hydro_hc,2050,default,year,29545.47,MWa
+New Brunswick,bio_ppl,2050,default,year,476.2,MWa
+New Brunswick,hydro_lc,2050,default,year,45.99,MWa
+New Brunswick,nuc_lc,2050,default,year,5203.44,MWa
+New Brunswick,wind_ppl,2050,default,year,61.32,MWa
+Newfoundland and Labrador,gas_ct,2050,default,year,0.0,MWa
+Newfoundland and Labrador,hydro_hc,2050,default,year,42690.92,MWa
+Newfoundland and Labrador,hydro_lc,2050,default,year,15.0,MWa
+Newfoundland and Labrador,loil_ppl,2050,default,year,1.05,MWa
+Nova Scotia,bio_ppl,2050,default,year,204.93,MWa
+Nova Scotia,gas_cc,2050,default,year,102.54,MWa
+Nova Scotia,hydro_hc,2050,default,year,316.93,MWa
+Nova Scotia,hydro_lc,2050,default,year,21.97,MWa
+Nova Scotia,loil_ppl,2050,default,year,2.89,MWa
+Nova Scotia,wind_ppl,2050,default,year,1079.58,MWa
+Ontario,bio_ppl,2050,default,year,195.89999999999998,MWa
+Ontario,gas_cc,2050,default,year,1994.37,MWa
+Ontario,gas_ct,2050,default,year,8344.359999999999,MWa
+Ontario,gas_ppl,2050,default,year,2168.83,MWa
+Ontario,hydro_hc,2050,default,year,3151.25,MWa
+Ontario,hydro_lc,2050,default,year,1728.1,MWa
+Ontario,wind_ppl,2050,default,year,942.5,MWa
+Prince Edward Island,solar_pv_ppl,2050,default,year,40.730000000000004,MWa
+Prince Edward Island,wind_ppl,2050,default,year,97.24,MWa
+Quebec,bio_istig,2050,default,year,181.69,MWa
+Quebec,bio_ppl,2050,default,year,1973.56,MWa
+Quebec,gas_ppl,2050,default,year,47.92,MWa
+Quebec,hydro_hc,2050,default,year,156385.69,MWa
+Quebec,hydro_lc,2050,default,year,8026.82,MWa
+Quebec,wind_ppl,2050,default,year,4365.9800000000005,MWa
+Saskatchewan,bio_ppl,2050,default,year,307.91,MWa
+Saskatchewan,gas_cc,2050,default,year,8038.18,MWa
+Saskatchewan,gas_ct,2050,default,year,1184.3400000000001,MWa
+Saskatchewan,hydro_hc,2050,default,year,1005.21,MWa
+Saskatchewan,solar_pv_ppl,2050,default,year,63.08,MWa
+Saskatchewan,wind_ppl,2050,default,year,1482.19,MWa
+Canada,bio_ppl,2050,default,year,9831.3,MWa
+Canada,wind_ppl,2050,default,year,56733.47,MWa
+Canada,gas_ct,2050,default,year,13933.47,MWa
+Canada,gas_ppl,2050,default,year,19366.49,MWa
+Canada,hydro_hc,2050,default,year,366288.76,MWa
+Canada,hydro_lc,2050,default,year,68101.86,MWa
+Canada,igcc,2050,default,year,42627.7,MWa
+Canada,solar_pv_ppl,2050,default,year,4682.56,MWa
+Canada,gas_cc,2050,default,year,61768.85,MWa
+Canada,bio_istig,2050,default,year,595.16,MWa
+Canada,foil_ppl,2050,default,year,1413.69,MWa
+Canada,loil_ppl,2050,default,year,1431.32,MWa
+Canada,nuc_lc,2050,default,year,102150.36,MWa
+Canada,coal_adv_ccs,2050,default,year,974.11,MWa
+Alberta,bio_ppl,2055,default,year,992.99,MWa
+Alberta,gas_cc,2055,default,year,14033.52,MWa
+Alberta,gas_ct,2055,default,year,1332.39,MWa
+Alberta,gas_ppl,2055,default,year,2381.23,MWa
+Alberta,hydro_hc,2055,default,year,67.28,MWa
+Alberta,hydro_lc,2055,default,year,162.29999999999998,MWa
+British Columbia,bio_ppl,2055,default,year,2336.39,MWa
+British Columbia,hydro_hc,2055,default,year,51596.03,MWa
+British Columbia,hydro_lc,2055,default,year,7534.08,MWa
+Manitoba,hydro_hc,2055,default,year,29545.47,MWa
+New Brunswick,bio_ppl,2055,default,year,476.2,MWa
+New Brunswick,hydro_lc,2055,default,year,45.99,MWa
+New Brunswick,nuc_lc,2055,default,year,5203.44,MWa
+Newfoundland and Labrador,gas_ct,2055,default,year,0.0,MWa
+Newfoundland and Labrador,hydro_hc,2055,default,year,42690.92,MWa
+Newfoundland and Labrador,hydro_lc,2055,default,year,15.0,MWa
+Newfoundland and Labrador,loil_ppl,2055,default,year,1.05,MWa
+Nova Scotia,bio_ppl,2055,default,year,204.93,MWa
+Nova Scotia,gas_cc,2055,default,year,102.54,MWa
+Nova Scotia,hydro_hc,2055,default,year,316.93,MWa
+Nova Scotia,hydro_lc,2055,default,year,21.97,MWa
+Nova Scotia,loil_ppl,2055,default,year,2.89,MWa
+Ontario,bio_ppl,2055,default,year,195.89999999999998,MWa
+Ontario,gas_cc,2055,default,year,603.04,MWa
+Ontario,gas_ct,2055,default,year,1152.59,MWa
+Ontario,gas_ppl,2055,default,year,57.730000000000004,MWa
+Ontario,hydro_hc,2055,default,year,2840.72,MWa
+Ontario,hydro_lc,2055,default,year,1563.41,MWa
+Quebec,bio_istig,2055,default,year,35.74,MWa
+Quebec,bio_ppl,2055,default,year,1921.44,MWa
+Quebec,hydro_hc,2055,default,year,153476.06,MWa
+Quebec,hydro_lc,2055,default,year,8026.82,MWa
+Quebec,wind_ppl,2055,default,year,3679.2000000000003,MWa
+Saskatchewan,bio_ppl,2055,default,year,307.91,MWa
+Saskatchewan,gas_cc,2055,default,year,7008.000000000001,MWa
+Saskatchewan,gas_ct,2055,default,year,700.8000000000001,MWa
+Saskatchewan,hydro_hc,2055,default,year,1005.21,MWa
+Canada,bio_ppl,2055,default,year,9831.3,MWa
+Canada,wind_ppl,2055,default,year,56733.47,MWa
+Canada,gas_ct,2055,default,year,13933.47,MWa
+Canada,gas_ppl,2055,default,year,19366.49,MWa
+Canada,hydro_hc,2055,default,year,366288.76,MWa
+Canada,hydro_lc,2055,default,year,68101.86,MWa
+Canada,igcc,2055,default,year,42627.7,MWa
+Canada,solar_pv_ppl,2055,default,year,4682.56,MWa
+Canada,gas_cc,2055,default,year,61768.85,MWa
+Canada,bio_istig,2055,default,year,595.16,MWa
+Canada,foil_ppl,2055,default,year,1413.69,MWa
+Canada,loil_ppl,2055,default,year,1431.32,MWa
+Canada,nuc_lc,2055,default,year,102150.36,MWa
+Canada,coal_adv_ccs,2055,default,year,974.11,MWa
+Alberta,bio_ppl,2060,default,year,48.18,MWa
+Alberta,gas_cc,2060,default,year,9460.8,MWa
+Alberta,gas_ct,2060,default,year,898.77,MWa
+Alberta,gas_ppl,2060,default,year,1077.48,MWa
+Alberta,hydro_hc,2060,default,year,67.28,MWa
+Alberta,hydro_lc,2060,default,year,162.29999999999998,MWa
+British Columbia,bio_ppl,2060,default,year,105.5,MWa
+British Columbia,hydro_hc,2060,default,year,49260.75,MWa
+British Columbia,hydro_lc,2060,default,year,7534.08,MWa
+Manitoba,hydro_hc,2060,default,year,29506.05,MWa
+New Brunswick,bio_ppl,2060,default,year,7.1,MWa
+New Brunswick,hydro_lc,2060,default,year,45.99,MWa
+New Brunswick,nuc_lc,2060,default,year,5203.44,MWa
+Newfoundland and Labrador,hydro_hc,2060,default,year,42336.92,MWa
+Newfoundland and Labrador,hydro_lc,2060,default,year,15.0,MWa
+Nova Scotia,hydro_hc,2060,default,year,13.61,MWa
+Nova Scotia,hydro_lc,2060,default,year,21.97,MWa
+Nova Scotia,loil_ppl,2060,default,year,2.89,MWa
+Ontario,gas_cc,2060,default,year,279.94,MWa
+Ontario,gas_ct,2060,default,year,1051.71,MWa
+Ontario,gas_ppl,2060,default,year,33.17,MWa
+Ontario,hydro_hc,2060,default,year,2703.49,MWa
+Ontario,hydro_lc,2060,default,year,1563.41,MWa
+Quebec,bio_ppl,2060,default,year,618.39,MWa
+Quebec,hydro_hc,2060,default,year,135949.94,MWa
+Quebec,hydro_lc,2060,default,year,8026.82,MWa
+Saskatchewan,bio_ppl,2060,default,year,307.91,MWa
+Saskatchewan,gas_cc,2060,default,year,6342.240000000001,MWa
+Saskatchewan,gas_ct,2060,default,year,80.59,MWa
+Saskatchewan,hydro_hc,2060,default,year,1005.21,MWa
+Canada,bio_ppl,2060,default,year,9831.3,MWa
+Canada,wind_ppl,2060,default,year,56733.47,MWa
+Canada,gas_ct,2060,default,year,13933.47,MWa
+Canada,gas_ppl,2060,default,year,19366.49,MWa
+Canada,hydro_hc,2060,default,year,366288.76,MWa
+Canada,hydro_lc,2060,default,year,68101.86,MWa
+Canada,igcc,2060,default,year,42627.7,MWa
+Canada,solar_pv_ppl,2060,default,year,4682.56,MWa
+Canada,gas_cc,2060,default,year,61768.85,MWa
+Canada,bio_istig,2060,default,year,595.16,MWa
+Canada,foil_ppl,2060,default,year,1413.69,MWa
+Canada,loil_ppl,2060,default,year,1431.32,MWa
+Canada,nuc_lc,2060,default,year,102150.36,MWa
+Canada,coal_adv_ccs,2060,default,year,974.11,MWa

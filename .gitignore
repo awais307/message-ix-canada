@@ -1,11 +1,30 @@
+# Ignored folders
 .vscode
 .DS_Store
-model/pre_process/__pycache__/__init__.cpython-38.pyc
 *.pyc
 .vscode
+/MESSAGEix_canada.egg-info/
+.idea
+# Ignore the Plant UML diagrams from the 'out' folder
+/out 
+reporting_outputs/
+
+#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/
+
+# Ignored files
 ed_ma
 ssh_ma
 ssh_ma.pub
-/MESSAGE_CANADA.egg-info
 *.txt
-/MESSAGEix_Canada.egg-info
+*PKG-INFO
+message-ix-models/
+balanced_df.csv
+baseline_v28.xlsx
+/data/data_country
+
+model/utlities/*.py
+/data/assumptions_database_example(ITCs).csv
+
+
+message-ix-canada.code-workspace
+*.textClipping
