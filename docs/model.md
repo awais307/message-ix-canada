@@ -129,6 +129,19 @@ Since model constraints are applied in **C-equivalent**, emission bounds must be
 
 Hydrogen production is modeled with specific **conversion efficiencies** and **emission factors** based on feedstock type (e.g., electrolysis, SMR with or without CCS).
 
+Aside from documneted MESSAGEix Hydrogen technologies, the following list of technologies have been incorporated in respect to the Canadian context:
+
+| **Technology**     | **Description**                                                         |
+| -------------------|-------------------------------------------------------------------------|
+| h2_atr             | Auto Thermal Reforming                                                  |
+| h2_atr_ccs         | Auto Thermal Reforming With CCS                                         |
+| gas_h2             | Hydrogen Methanation                                                    |
+| liq_h2             | Fischer Tropsch Synthesis - Lightoil Production From Hydrogen           |
+| h2_stor_geo        | Geological Hydrogen Storage                                             |
+| meth_h2            | Methanol Production From Hydrogen                                       |
+| h2_gas_fc_trp      | Hydrogen Gas fuel Cell Transportation                                   |
+| h2_pyrolysis       | Methane Pyrolysis to produce Hydorgen                                   |
+
 ![](include/H2_Framework_2025-03-06.png)
 ---
 
