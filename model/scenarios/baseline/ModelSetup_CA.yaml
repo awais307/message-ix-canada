@@ -24,6 +24,7 @@ scenario_config:
     add_hydrogen_shares_f: False
     add_techs: False
     investment_tax_credit: False
+    apply_renewable_potential: False
     apply_obps: False
     obps_policy_carbon_cost:
       2025: 165.4251
@@ -33,6 +34,7 @@ scenario_config:
     to_excell: False
     legacy_reporter: False
     new_reporter: False
+    IDEA_format: False
 path_config:
   provincial_input_file: scenarios/baseline/model_default_v27.xlsx
   scenario_folder: scenarios/baseline
