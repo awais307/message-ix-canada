@@ -8,6 +8,7 @@
 # Ignore the Plant UML diagrams from the 'out' folder
 /out 
 reporting_outputs/
+model/notebooks/
 
 #/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/
 
@@ -17,14 +18,10 @@ ssh_ma
 ssh_ma.pub
 *.txt
 *PKG-INFO
-message-ix-models/
-balanced_df.csv
-baseline_v28.xlsx
-/data/data_country
 
-model/utlities/*.py
 /data/assumptions_database_example(ITCs).csv
 
+model/notebooks/!development.ipynb
 
 message-ix-canada.code-workspace
 *.textClipping

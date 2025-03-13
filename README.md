@@ -13,7 +13,7 @@ The full documentation for MESSAGE-ix Canada can be found in the following [Read
 
 ## Project Contributors
 
-- Dr. Muhammad Awais2
+- Muhammad Awais
 - Brendan Danaher
 - Cristiano Fernandes
 - Omar Attia
@@ -26,6 +26,4 @@ The full documentation for MESSAGE-ix Canada can be found in the following [Read
 ## Release Notes
 
 Below is a structured change log for the updates made to each project version. Each entry briefly describes the change and its impact or purpose.
-
-### Version 1.0 - [PLACEHOLDER DATE]
 
