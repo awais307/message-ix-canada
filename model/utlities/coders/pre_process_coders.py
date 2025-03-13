@@ -24,7 +24,7 @@ class CODERS_pull:
         # Create gen_generic
         gen_generic = pd.DataFrame.from_dict(requests.get(f'{self.url}/generation_generic?key={self.key}').json())
         gen_generic = gen_generic.set_index(gen_generic['gen_type'], drop=True)
-        gen_generic = gen_generic.join(pd.read_csv(r'\message-ix\model\utlities\coders\CODERS-MESSAGE_technologies.csv', index_col=1))
+        gen_generic = gen_generic.join(pd.read_csv(r'C:\Users\bipas\Downloads\message_new\message-ix\model\utlities\coders\CODERS-MESSAGE_technologies.csv', index_col=1))
         gen_generic.index = gen_generic.index.str.lower()
         gen_generic['gen_type'] = gen_generic['gen_type'].str.lower()
         gen_generic['year'] = self.base_year
@@ -125,7 +125,7 @@ class CODERS_pull:
                     result = pd.concat([result, prov_cost])
             cost_data = cost_data[~(cost_data.node == 'Canada')]
 
-        result.to_csv(rf'{self.root}\data\CODERS_data\electr_gen_inv_costs.csv', index=False)
+        result.to_csv(rf'C:\Users\bipas\Downloads\message_new\message-ix\data\old_coders_data\electr_gen_inv_costs.csv', index=False)
 
 
     def electr_gen_fix_var_cost(self, om_type):
@@ -176,9 +176,9 @@ class CODERS_pull:
             result = result[~(result.node == 'Canada')]
 
         if om_type == 'fixed':
-            result.to_csv(rf'{self.root}\data\CODERS_data\electr_gen_fix_costs.csv', index=False)
+            result.to_csv(rf'C:\Users\bipas\Downloads\message_new\message-ix\data\old_coders_data\electr_gen_fix_costs.csv', index=False)
         elif om_type == 'variable':
-            result.to_csv(rf'{self.root}\data\CODERS_data\electr_gen_var_costs.csv', index=False)
+            result.to_csv(rf'C:\Users\bipas\Downloads\message_new\message-ix\data\old_coders_data\electr_gen_var_costs.csv', index=False)
 
 
     def CODERS_cost_evolution(self):
@@ -237,7 +237,7 @@ class CODERS_pull:
                     result = pd.concat([result, prov_data])
             result = result[~(result.node == 'Canada')]
         # result.to_csv(r'\Old-Coders-Data\electr_gen_{name}.csv', index=False)
-        result.to_csv(rf'{self.root}\data\CODERS_data\electr_gen_{name}.csv', index=False)
+        result.to_csv(rf'C:\Users\bipas\Downloads\message_new\message-ix\data\old_coders_data\electr_gen_{name}.csv', index=False)
 
     
 
@@ -275,7 +275,7 @@ class CODERS_pull:
                     result = pd.concat([result, prov_data])
             result = result[~(result.node == 'Canada')]
 
-        result.to_csv(rf'{self.root}\data\CODERS_data\electr_gen_emission_factor.csv', index=False)
+        result.to_csv(rf'C:\Users\bipas\Downloads\message_new\message-ix\data\old_coders_data\electr_gen_emission_factor.csv', index=False)
 
 
     def electr_gen_historical_new_capacity(self):
@@ -311,7 +311,7 @@ class CODERS_pull:
 
         if not self.provincial:
             result = result[result.index == 'Canada']
-        pd.DataFrame.from_dict(result).to_csv(rf'{self.root}\data\CODERS_data\electr_gen_historical_new_capacity.csv')
+        pd.DataFrame.from_dict(result).to_csv(rf'C:\Users\bipas\Downloads\message_new\message-ix\data\old_coders_data\electr_gen_historical_new_capacity.csv')
 
     
     def electr_gen_historical_activity_raw(self):
@@ -325,7 +325,14 @@ class CODERS_pull:
         for year in self.years:
             generators_year = generators[generators.start_year <= year]
             generators_year = generators_year[generators_year.updated_closure_year > year]
-            gen_prov_tech = pd.DataFrame(generators_year.groupby(['region-technology']).sum().unit_average_annual_energy)
+            # gen_prov_tech = pd.DataFrame(generators_year.groupby(['region-technology']).sum().unit_average_annual_energy)
+            # gen_prov_tech = (generators_year.groupby(['region-technology'])['unit_average_annual_energy'].apply(pd.to_numeric, errors='coerce').sum().reset_index())
+            generators_year['unit_average_annual_energy'] = pd.to_numeric(generators_year['unit_average_annual_energy'], errors='coerce')
+            gen_prov_tech = (
+                
+                generators_year.groupby(['region-technology'])['unit_average_annual_energy'].sum().reset_index())
+
+
             # Calculate national capacity
             for tech in generators['MESSAGE_tech']:
                 name = f'Canada-{tech}'
@@ -350,7 +357,7 @@ class CODERS_pull:
         if not self.provincial:
             result = result[result.index == 'Canada']
         # saving to excel
-        pd.DataFrame.from_dict(result).to_csv(rf'{self.root}\data\CODERS_data\electr_gen_historical_activity.csv')
+        pd.DataFrame.from_dict(result).to_csv(rf'C:\Users\bipas\Downloads\message_new\message-ix\data\old_coders_data\electr_gen_historical_activity.csv')
 
 
     def electricity_demand(self):
@@ -377,7 +384,7 @@ class CODERS_pull:
         demand['unit'] = 'MWa'
         demand = demand.set_index(demand.node)
         demand = demand[['commodity', 'level', 'year', 'time', 'value', 'unit']]
-        demand.to_csv(rf'{self.root}\data\CODERS_data\\electr_demand.csv', index=True)
+        demand.to_csv(rf'C:\Users\bipas\Downloads\message_new\message-ix\data\old_coders_data\\electr_demand.csv', index=True)
 
 
     def interprovincial_lines(self):
@@ -418,18 +425,18 @@ class CODERS_pull:
         lines_input['time_origin'] = 'year'
         lines_input['unit'] = '%'
         temp = lines_input[['node_loc', 'technology', 'year_vtg', 'year_act', 'mode', 'node_origin', 'commodity', 'level', 'time', 'time_origin', 'value', 'unit']]
-        temp.to_csv(rf'{self.root}\data\CODERS_data\electr_trans_inputs.csv',index=False)
+        temp.to_csv(rf'C:\Users\bipas\Downloads\message_new\message-ix\data\old_coders_data\electr_trans_inputs.csv',index=False)
 
         # create output sheet
         lines_input['value'] = 1
         temp = lines_input[['node_loc', 'technology', 'year_vtg', 'year_act', 'mode', 'node_dest', 'commodity', 'level', 'time', 'time_origin', 'value', 'unit']]
-        temp.to_csv(rf'{self.root}\data\CODERS_data\electr_trans_outputs.csv',index=False)
+        temp.to_csv(rf'C:\Users\bipas\Downloads\message_new\message-ix\data\old_coders_data\electr_trans_outputs.csv',index=False)
 
         # create fixed costs
         lines_input['value'] = 25000/1.3 # TAKEN FROM COPPER INPUTS
         lines_input['unit'] = 'USD/MW'
         temp = lines_input[['node_loc', 'technology', 'year_vtg', 'year_act', 'value', 'unit']]
-        temp.to_csv(rf'{self.root}\data\CODERS_data\electr_trans_fix_cost.csv',index=False)
+        temp.to_csv(rf'C:\Users\bipas\Downloads\message_new\message-ix\data\old_coders_data\electr_trans_fix_cost.csv',index=False)
 
         # create historical capacity
         temp = lines_input.copy()
@@ -439,7 +446,7 @@ class CODERS_pull:
         temp = temp[temp.year_vtg == str(self.base_year)]
         temp = temp[temp['mode'] == 'a->b']
         temp = temp[['node_loc', 'technology', 'year_vtg', 'value', 'unit']]
-        temp.to_csv(rf'{self.root}\data\CODERS_data\electr_trans_historical_new_capacity.csv', index=False)
+        temp.to_csv(rf'C:\Users\bipas\Downloads\message_new\message-ix\data\old_coders_data\electr_trans_historical_new_capacity.csv', index=False)
     
 
     def international_lines(self):
@@ -449,7 +456,7 @@ class CODERS_pull:
 
 
 if __name__ == '__main__':
-    pull = CODERS_pull("{put key here}", ref_year=1960, base_year=2020, end_year=2060, time_step=5, provincial=True)
+    pull = CODERS_pull("", ref_year=1960, base_year=2020, end_year=2060, time_step=5, provincial=True)
     pull.run_all_electr_gen()
     #pull.interprovincial_lines()
     #pull.international_lines()
