@@ -23,7 +23,7 @@ def messagerun(scenario, solve, debug, report, plot, config):
     print(f"Solve: {solve}, Debug: {debug}, Report: {report}, Plotting: {plot}, Config: {config}")
 
     # Create model instance
-    msg1 = model_MSG(scenario_name=scenario, config=config, report=report)
+    msg1 = model_MSG(scenario_name=scenario, config=config, report=report, solve=solve)
 
     # Set up model with the selected scenario
     platform, msg_scenario, msg_folder = msg1.setup_scenario()
@@ -42,9 +42,6 @@ def messagerun(scenario, solve, debug, report, plot, config):
     # Implement solve logic
     if solve:
         print("Solving the model...")
-        #TODO Add solve method here
-        #TODO this would need a bit of adjustment on how we take solve.
-        # In future, one could use the messagerun function and cal it manually in notebook if required.
     
     # Plotter
     if plot:
@@ -58,13 +55,10 @@ def messagerun(scenario, solve, debug, report, plot, config):
     # Debug mode logic
     if debug:
         print("Debug mode enabled")
-        #TODO Add debug specific logs here
 
     # Report generation logic - report to PYAM, not the MESSAGE Reporter
     if report:
         print("Generating report...")
-        #TODO Add report generation logic here
-        #report_summary = report_to_pyam(msg_scenario,"results", "output")
 
 
 if __name__ == "__main__":
