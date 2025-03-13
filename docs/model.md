@@ -129,7 +129,7 @@ Since model constraints are applied in **C-equivalent**, emission bounds must be
 
 Hydrogen production is modeled with specific **conversion efficiencies** and **emission factors** based on feedstock type (e.g., electrolysis, SMR with or without CCS).
 
-Aside from documneted MESSAGEix Hydrogen technologies, The following list of technologies have been incorporated in respect to the Canadian context:
+Aside from documneted MESSAGEix Hydrogen technologies, the following list of technologies have been incorporated in respect to the Canadian context:
 
 | **Technology**     | **Description**                                                         |
 | -------------------|-------------------------------------------------------------------------|
