@@ -23,7 +23,7 @@ def messagerun(scenario, solve, debug, report, plot, config):
     print(f"Solve: {solve}, Debug: {debug}, Report: {report}, Plotting: {plot}, Config: {config}")
 
     # Create model instance
-    msg1 = model_MSG(scenario_name=scenario, config=config)
+    msg1 = model_MSG(scenario_name=scenario, config=config, report=report)
 
     # Set up model with the selected scenario
     platform, msg_scenario, msg_folder = msg1.setup_scenario()

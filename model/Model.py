@@ -71,7 +71,7 @@ class model_MSG:
 			Adds processed population and GDP data to the scenario.
 	"""
 
-	def __init__(self, scenario_name: str, config: str):
+	def __init__(self, scenario_name: str, config: str, report: bool = False):
 		"""
 		Initialize the scenario with the given name.
 
@@ -100,6 +100,8 @@ class model_MSG:
 
 		self.ctx.mp = ixmp.Platform(name=self.ctx.platform['name'], jvmargs=[self.ctx.platform['jvmargs']])
 		self.ctx.mp.add_unit('USD/(tC/yr)') # Addiing cost unit for DAC technologies to the database
+		if report:
+			self.ctx.post_process_config['legacy_reporter'] = True
 
 	## Scenario creation functions ##
 	#TODO move it to separate technology.py file
