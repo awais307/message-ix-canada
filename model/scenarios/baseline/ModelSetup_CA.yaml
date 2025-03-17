@@ -25,6 +25,7 @@ scenario_config:
     add_hydrogen_shares_f: False
     add_techs: False
     investment_tax_credit: False
+    apply_renewable_potential: False
     apply_obps: False
     obps_policy_carbon_cost:
       2025: 165.4251
