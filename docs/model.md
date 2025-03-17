@@ -224,8 +224,8 @@ This section contains a table of unit conversions for the most used units in the
     <tr>
       <td>Megatonnes of Hydrogen [Mt]</td>
       <td>Gigawatt annual [GWa]</td>
-      <td>0.00536</td>
-      <td>Mass conversion for Hydrogen (density = 71 Kg/m3)</td>
+      <td>3.81</td>
+      <td>Mass conversion for Hydrogen</td>
     </tr>
     <tr>
       <td>Gigawatt-hour [GWh]</td>
