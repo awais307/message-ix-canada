@@ -229,7 +229,7 @@ This section contains a table of unit conversions for the most used units in the
     </tr>
     <tr>
       <td>Gigawatt-hour [GWh]</td>
-      <td>Peta-joules per year [PJ]</td>
+      <td>Peta-joules [PJ]</td>
       <td>0.0036</td>
       <td>Gigawatt-hour to peta-joules</td>
     </tr>
