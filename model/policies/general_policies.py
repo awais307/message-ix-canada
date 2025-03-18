@@ -1,19 +1,5 @@
-import numpy as np
 import pandas as pd
-import os
-import sys
-import message_ix
-import ixmp
-
-from pathlib import Path
-from typing import Union
 from model.utlities.utils import expand_grid
-from message_ix_models.util import (
-	broadcast,
-	make_matched_dfs,
-	same_node,
-	same_time,
-)
 
 def shares(msgSDG, path, nodeName, suffix):
 	"""
@@ -21,11 +7,13 @@ def shares(msgSDG, path, nodeName, suffix):
 	This function modifies the provided MESSAGEix scenario to include share constraints for renewable energy 
 	technologies. It sets up the necessary sets and parameters to define the shares for renewable electricity 
 	technologies.
+	
 	Args:
 		msgSDG (MESSAGEix.Scenario): The MESSAGEix scenario object to be modified.
 		path (str): The path to the directory containing the input Excel file.
 		nodeName (str): The name of the node for which the shares are being defined.
 		suffix (str): The suffix for the input Excel file name.
+
 	Returns:
 		None
 	"""

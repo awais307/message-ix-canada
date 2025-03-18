@@ -3,8 +3,6 @@ This module provides functions to implement climate policies in MESSAGEix scenar
 including federal carbon tax and coal phase-out.
 """
 
-import pandas as pd
-import numpy as np
 from pathlib import Path
 import yaml
 
@@ -22,8 +20,6 @@ def demand_reduction(scenario):
     Returns:
         None
     """
-
-
 
     data = scenario.par('demand')
     # Loop through each unique combination of node and commodity

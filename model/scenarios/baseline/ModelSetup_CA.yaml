@@ -15,6 +15,7 @@ scenario_config:
     model: MESSAGEix-CA
     solve: True
     scenario: baseline
+    scenario_name: baseline_1
     annotation: Initial setup for Canadian energy model.
     version: new
   policy_config:
@@ -37,7 +38,7 @@ scenario_config:
     new_reporter: False
     IDEA_format: False
 path_config:
-  provincial_input_file: scenarios/baseline/model_default_v27.xlsx
+  provincial_input_file: scenarios/baseline/model_default_v28.xlsx
   scenario_folder: scenarios/baseline
   out_dir: model/output
   ITC_policy_input_data: ./data/assumptions_database_example(ITCs).csv

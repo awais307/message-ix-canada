@@ -4,9 +4,6 @@ including hydrogen shares, federal carbon tax, coal phase-out, and investment ta
 """
 
 import pandas as pd
-import numpy as np
-from pathlib import Path
-from message_ix_models import Context
 
 def disect_years(scenario_years, itc_input_df, ITC, tech):
     scenario_years = scenario_years[scenario_years['technology'] == tech]['year_vtg'].unique()

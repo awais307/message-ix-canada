@@ -1,5 +1,5 @@
 """
-
+This module provides a function to update the model input with the VRE data for renewable generation.
 """
 
 import pandas as pd
