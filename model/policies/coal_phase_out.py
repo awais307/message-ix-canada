@@ -1,21 +1,8 @@
-import numpy as np
-import pandas as pd
-import os
-import sys
 import message_ix
-import ixmp
-
-from pathlib import Path
-from typing import Union
-from model.utils import expand_grid
 from message_ix_models.util import (
 	broadcast,
-	make_matched_dfs,
 	same_node,
-	same_time,
 )
-
-
 
 def coal_phase_out(scenario, province, nodes_tax):
 	"""
