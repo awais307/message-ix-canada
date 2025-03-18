@@ -466,10 +466,11 @@ class model_MSG:
 
 
 
-		timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M')
-		filename = os.path.join("reporting_outputs", "Validation_results_reporting_outputs")
-
-		# filename = rf'reporting_outputs/Validation_results_{path_name}.csv'
+		# timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M')
+		# filenm = f"Validation_results_reporting_outputs_{timestamp}.csv"
+		pwd = os.getcwd()
+		filename = os.path.join(pwd, path_name, "Validation result")
+		print(filename)
 		results_df = pd.DataFrame(results)
 		results_df.to_csv(filename, index=False)
 		print(f"Values within acceptable deviation: {within_deviation_count}")
@@ -610,29 +611,8 @@ class model_MSG:
 				Reporting with LEGACY reporter. Process time: {round((end - start) / 60)} Min and {round((end - start) % 60)} Sec\
 				\n=================================================="
 				)
-				#Preprocess script for MESSAGEix-Canada Output before validation process
-				
-				# pwd = os.getcwd()
-				# path_name = os.path.join(pwd, path_name)
 				if os.path.exists(path_name):
-					print("running preprocess with path", path_name)
 					self.validate_scenario(path_name)
-				# 	df_correction = pd.read_excel(path_name)
-				# else:
-				# 	print(f"File not found at {path_name}")
-				# 	# Print the current directory and its contents
-				# 	current_dir = os.getcwd()
-				# 	print(f"Current directory: {current_dir}")
-				# 	print("Contents of the current directory:")
-				# 	for filename in os.listdir(current_dir):
-				# 		print(filename)
-				# 	print(f"Contents of the {reporting_outputs_dir} folder:")
-					
-				# 	for filename in os.listdir(reporting_outputs_dir):
-				# 		print(filename)
-
-
-				# file_path = "MESSAGEix-CA_netzero.xlsx"  
 				
 
 
