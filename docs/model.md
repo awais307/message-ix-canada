@@ -186,9 +186,9 @@ This section contains a table of unit conversions for the most used units in the
   </thead>
   <tbody>
     <tr>
-      <td>Cubic Metres per Day [m³/d]</td>
+      <td>Cubic Metres per day of natural gas [m³/d]</td>
       <td>Gigawatt annual [GWa]</td>
-      <td>4.32 e-7</td>
+      <td>4.32 e-10</td>
       <td>Volume conversion for natural gas to gigawatt annual</td>
     </tr>
     <tr>
@@ -224,14 +224,26 @@ This section contains a table of unit conversions for the most used units in the
     <tr>
       <td>Megatonnes of Hydrogen [Mt]</td>
       <td>Gigawatt annual [GWa]</td>
-      <td>0.00536</td>
-      <td>Mass conversion for Hydrogen (density = 71 Kg/m3)</td>
+      <td>3.81</td>
+      <td>Mass conversion for Hydrogen</td>
+    </tr>
+    <tr>
+      <td>Peta-joules [PJ]</td>
+      <td>Tonnes [t]</td>
+      <td>120</td>
+      <td>Hydrogen gravimetric energy density</td>
     </tr>
     <tr>
       <td>Gigawatt-hour [GWh]</td>
-      <td>Peta-joules per year [PJ/year]</td>
-      <td>41.1e-3</td>
-      <td>Gigawatt-hour to peta-joules per year</td>
+      <td>Peta-joules [PJ]</td>
+      <td>0.0036</td>
+      <td>Gigawatt-hour to peta-joules</td>
+    </tr>
+    <tr>
+      <td>Cubic metre of heavy crude oil [m³]</td>
+      <td>Peta-joules [PJ]</td>
+      <td>40.9 e-6</td>
+      <td>Volumetric energy of heavy crude oil</td>
     </tr>
   </tbody>
 </table>

@@ -8,6 +8,34 @@ Before we begin with the installation of our solver of choice, it is important t
 
 The recommended solver to run MESSAGE-ix is [CPLEX](https://www.ibm.com/products/ilog-cplex-optimization-studio/cplex-optimizer), however, this solver both requires a more expensive license to be used with GAMS, and is a paid sofyware of its own. There exist many open-source alternatives can can achieve comparable results in approximately the same time as CPLEX.
 
+## Installing GAMSlinks and Solvers
+
+To install open-source solvers via [GAMSlinks](https://github.com/coin-or/GAMSlinks/releases), follow these steps:
+
+1. **Download the latest release**:
+
+    - **Windows:** Download and unzip `GAMSlinks-windows.zip` to any folder of your choice.
+    
+    - **Linux:** Download `GAMSlinks-linux.tar.bz2` and extract it from within your terminal using:
+      
+      ```
+      tar -xvjf GAMSlinks-linux.tar.bz2
+      ```
+    
+    - **Mac OS:** Download `GAMSlinks-macos.tar.bz2` and extract it from within your terminal using:
+      
+      ```
+      tar -xvjf GAMSlinks-macos.tar.bz2
+      ```
+
+2. **Update GAMS configuration:**
+   Modify the `gamsconfig.yaml` file and add it to your **GAMS path**. Refer to the official [GAMS documentation](https://www.gams.com/latest/docs/UG_STANDARD_LOCATIONS.html) for details.
+
+
+## Using CBC Solver
+
+We recommend using the **CBC solver** out of the open-source alternatives, which can be installed via **Coin-OR**'s GitHub page, if not through GAMSlinks. Follow the installation guide in the [README](https://github.com/coin-or/Cbc/blob/master/README.md#download).
+
 ## Configuring Open-Source Solvers
 
 MESSAGEix-Canada can be executed using open-source solvers such as **CBC** or **GLPK**. To enable these solvers, modify the **auxiliary settings file** located in:
@@ -19,43 +47,6 @@ anaconda3/envs/messageix-canada/lib/python3.12/site-packages/message_ix/model/ME
 For further details, refer to the discussions [here](https://github.com/iiasa/message_ix/issues/576) and [here](https://github.com/iiasa/message_ix/discussions/794).
 
 A collection of verified **open-source solvers** for **GAMS** is available via the **COIN-OR Foundation**. The latest release and installation instructions for GAMSlinks can be found [here](https://github.com/coin-or/GAMSlinks/releases).
-
-## Installing GAMSlinks and Solvers
-
-To install open-source solvers via [GAMSlinks](https://github.com/coin-or/GAMSlinks/releases), follow these steps:
-
-1. **Download the latest release**:
-
-    - **Windows:** Download and unzip `GAMSlinks-windows.zip`.
-    
-    - **Linux:** Download `GAMSlinks-linux.tar.bz2` and extract it using:
-      ```bash
-      tar -xvjf GAMSlinks-linux.tar.bz2
-      ```
-    
-    - **Mac OS:** Download `GAMSlinks-macos.tar.bz2` and extract it using:
-      ```bash
-      tar -xvjf GAMSlinks-macos.tar.bz2
-      ```
-
-2. **Configure the solver package:**
-   
-
-
-    1. `configure`
-    
-    2. `make`
-    
-    3. `make install`
-    
-
-3. **Update GAMS configuration:**
-   Modify the `gamsconfig.yaml` file and add it to your **GAMS path**. Refer to the official [GAMS documentation](https://www.gams.com/latest/docs/UG_STANDARD_LOCATIONS.html) for details.
-
-
-## Using CBC Solver
-
-We recommend using the **CBC solver** out of the open-source alternatives, which can be installed via **Coin-OR**'s GitHub page, if not through GAMSlinks. Follow the installation guide in the [README](https://github.com/coin-or/Cbc/blob/master/README.md#download).
 
 # Solver Options
 

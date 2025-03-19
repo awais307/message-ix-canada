@@ -1,28 +1,17 @@
-import numpy as np
 import pandas as pd
-import os
-import sys
-import message_ix
-import ixmp
-
-from pathlib import Path
-from typing import Union
-from model.utlities.utils import expand_grid
-from message_ix_models.util import (
-	broadcast,
-	make_matched_dfs,
-	same_node,
-	same_time,
-)
 
 def apply_obps(ctx):
 	"""
 	Apply the Output-Based Pricing System (OBPS) policy for the Baseline Canada Scenario
 	to the given MESSAGEix scenario.
 	This function modifies the scenario's fixed costs based on emissions intensity and carbon pricing.
+	
 	Args:
 		scenario (ixmp.Scenario): The MESSAGEix scenario to apply the OBPS policy to.
 		data_file_path (str): Path to the Excel file containing necessary data.
+
+	Returns:
+        None
 	"""
 	scenario = ctx.source_scenario['scenario']
 	data_file_path = ctx.path['OBPS_policy_input_data']
