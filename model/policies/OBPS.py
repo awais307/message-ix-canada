@@ -18,7 +18,8 @@ def apply_obps(ctx):
 
 	# Read the required data
 	provinces = scenario.set('node')[2:]
-	data_relation = pd.read_excel(data_file_path, sheet_name='New_OBPS')
+	excel_sheet = ctx['policy_config']['obps_excel_sheet']
+	data_relation = pd.read_excel(data_file_path, sheet_name=excel_sheet)
 	data_relation["region"] = data_relation['region'].str.replace(" ", "")
 	canada_values = data_relation[data_relation["region"] == "Canada"]
 	for r in provinces:
