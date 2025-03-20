@@ -405,6 +405,8 @@ def write_xlsx(df, path, out_file_timestamp, IDEA_format=False):
     if IDEA_format:
         convert_format(out_path, pyam_out_path)
 
+    return out_path
+
 
 def make_outputdf(vars, units, param="sum", glb=True, weighted_by=None):
     """Data is reformatted to the iamc-template output
