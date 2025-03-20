@@ -464,13 +464,10 @@ class model_MSG:
 										else:
 											within_deviation_count += 1
 
-
-
-		# timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M')
-		# filenm = f"Validation_results_reporting_outputs_{timestamp}.csv"
 		pwd = os.getcwd()
-		filename = os.path.join(pwd, path_name, "Validation result")
-		print(filename)
+		path_name_no_ext = os.path.splitext(path_name)[0]
+		val_name = str(path_name_no_ext) + "_Validation result.xlsx"
+		filename = os.path.join(pwd, val_name)
 		results_df = pd.DataFrame(results)
 		results_df.to_csv(filename, index=False)
 		print(f"Values within acceptable deviation: {within_deviation_count}")
