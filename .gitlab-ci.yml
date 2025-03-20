@@ -1,4 +1,4 @@
-image: registry.gitlab.com/sesit/message-ix
+image: registry.gitlab.com/sesit/message-ix-canada/message2-kubernetes
 
 stages:
   - test
