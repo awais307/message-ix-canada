@@ -298,7 +298,7 @@ class model_MSG:
 								tec_construction_df["construction_time"],
 							)
 
-			self.ctx.source_scenario['scenario'].commit(" added successfully")
+			self.ctx.source_scenario['scenario'].commit("Technologies added successfully")
 
 	# def write_gdx(self, scenario, step_name=None):
     #      """Write scenario to gdx
@@ -334,7 +334,7 @@ class model_MSG:
 		Args:
 						output_path (str): The path where the output CSV file will be saved.
 						min_year (int): The minimum year for the report.
-						max_year (int): The maximum year for the report.Technologies
+						max_year (int): The maximum year for the report.
 						from_excel (bool): Whether to read the report from an Excel file.
 						unit_correct (bool): Whether to correct units in the report.
 		"""
@@ -625,3 +625,4 @@ class model_MSG:
 				)
 
 		return self.ctx.mp, self.ctx.source_scenario['scenario'], scenario_folder
+		
