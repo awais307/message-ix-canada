@@ -22,9 +22,7 @@ model_units:
         gwp_HFC4310: 1360. / 1650.
         gwp_HFC236fa: 1360. / 8060.
         gwp_HFC152a: 1360. / 148.
-conversion_factors: 
-# Converts higher level from lower level using the conversion given. Example: GWa = Mwa * 1000
-# Source table for conversions: https://apps.cer-rec.gc.ca/Conversion/conversion-tables.aspx?GoCTemplateCulture=en-CA
+conversion_factors:
         GWa:
             EJ/yr: .03154
             PJ/yr: 31.536
@@ -34,51 +32,18 @@ conversion_factors:
             ZJ: .00003154
             km3/yr: 1.
             Index (2005 = 1): 1
-            TWh: 8.760
-            Mt CO2/yr: 0 #"float(f\"{mu['conv_c2co2']}\")"
-            GWh: 8760
-            MWh: 8760000
-            GJ: 0.0024334
-            Tonnes of hydrogen gas: 2.62e-9
-            cubic metres of propane and butane combined at a temperature of 15°C and at an equilibrium pressure: 0.0658843 # Used average GJ value between propane and butane to arrive at this number
-            m3 of bitumen: 0.1041495
-            barrels of bitumen and heavy crude oil: 0.626 # Assumed heavy crude oil for this conversion
-            barrels of synthetic crude oil: 0.603
-            100 000 cubic metres of pipeline-transmission- quality natural gas at a temperature of 15°C and a pressure of 101.325 kPa: 9.076582            
-        
-        Kwa:
-            EJ/yr: .03154e-6
-            PJ/yr: 31.536e-6
-            GWa: 1.0e-6
-            ???: 1
-            MWa: 1.0e-3
-            ZJ: .00000003154
-            km3/yr: 0.000001
-            Index (2005 = 1): 1
-            TWh: 0.000008760
-            Mt CO2/yr: 0 #"float(f\"{mu['conv_c2co2']}\")"
-            KWh: 8760
-            GWh: 0.008760
-            MWh: 8.760
-            GJ: 2.4334e-9
-            Tonnes of hydrogen gas: 2.62e-12
-            cubic metres of propane and butane combined at a temperature of 15°C and at an equilibrium pressure: 6.58843e-8 # Used average GJ value between propane and butane to arrive at this number
-            m3 of bitumen: 1.041495e-7
-            barrels of bitumen and heavy crude oil: 6.26e-7 # Assumed heavy crude oil for this conversion
-            barrels of synthetic crude oil: 6.03e-7
-            100 000 cubic metres of pipeline-transmission- quality natural gas at a temperature of 15°C and a pressure of 101.325 kPa: 9.076582e-6            
-
-
+            TWh: 8760. / 1000.
+            Mt CO2/yr: "float(f\"{mu['conv_c2co2']}\")"
         GWa/a:
             EJ/yr: .03154
             PJ/yr: 31.536
+            PJ: 31.536
             GWa: 1.
             ???: 1.
             MWa: .001
             ZJ: .00003154
             km3/yr: 1.
             Index (2005 = 1): 1
-            Mt CO2/yr: "float(f\"{mu['conv_c2co2']}\")"
         EJ/yr:
             ZJ: .001
         y:
