@@ -27,7 +27,8 @@ scenario_config:
     add_techs: False
     investment_tax_credit: False
     apply_renewable_potential: False
-    apply_obps: False
+    apply_obps: True
+    obps_excel_sheet: 'New_OBPS'
     obps_policy_carbon_cost:
       2025: 165.4251
       2030: 285.2156 
