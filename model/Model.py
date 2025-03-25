@@ -12,6 +12,7 @@ import os
 import time
 import warnings
 import pandas as pd
+from datetime import datetime
 from model.policies.hydrogen_shares import add_hydrogen_shares
 from model.utlities.pop_gdp import process_gdp_population_data, add_population_gdp_to_scenario
 from model.utlities.demands import adjust_demands
@@ -31,7 +32,7 @@ from message_ix_models.util import (
 )
 from message_ix_models import Context
 from pathlib import Path
-from message_ix_models.report.legacy.iamc_report_hackathon import report
+from model.report.legacy.iamc_report_hackathon import report
 
 warnings.filterwarnings("ignore")  # Ignore warnings to keep the output clean
 
@@ -70,7 +71,7 @@ class model_MSG:
 			Adds processed population and GDP data to the scenario.
 	"""
 
-	def __init__(self, scenario_name: str):
+	def __init__(self, scenario_name: str, config: str, report: bool = False, solve: bool = True):
 		"""
 		Initialize the scenario with the given name.
 
@@ -86,22 +87,27 @@ class model_MSG:
 		"""
 		ctx = Context.get_instance()
 
-		self.scenario_path = os.path.join("model/scenarios", scenario_name)
+		if config:
+			self.scenario_path = config #"data/sample_0"
+		else:
+			self.scenario_path = os.path.join("model/scenarios", scenario_name)
 
 		read_config_ctx(ctx, dir_path=self.scenario_path)
+
 
 		self.ctx = ctx
 		
 		self.ctx.source_scenario['scenario'] = scenario_name
 
-		# self.sample_config = toml.load(
-		# 	os.path.join(os.getcwd(), "model/scenarios/baseline", "config.toml")
-		# )
-
 		self.ctx.mp = ixmp.Platform(name=self.ctx.platform['name'], jvmargs=[self.ctx.platform['jvmargs']])
 		self.ctx.mp.add_unit('USD/(tC/yr)') # Addiing cost unit for DAC technologies to the database
+		if report:
+			self.ctx.post_process_config['legacy_reporter'] = True
+		if solve:
+			self.ctx.source_scenario['solve'] = True
 
 	## Scenario creation functions ##
+	#TODO move it to separate technology.py file
 	def add_technology(
 		self,
 		techs_file: str,
@@ -369,7 +375,7 @@ class model_MSG:
 		"""
 
 		# Config verification:
-		config_validation(self.ctx.config_path)
+		#config_validation(self.ctx.config_path)
 
 		# Scenario set-up
 		start = time.time()
@@ -400,7 +406,9 @@ class model_MSG:
 			excel_path, add_units=True, commit_steps=False, init_items=True
 		)
 		
-		#apply_renewable_potential(self)
+		if self.ctx.policy_config['apply_renewable_potential']:
+			print('Model Logs: Applying renewable potential data\n')
+			apply_renewable_potential(self)
 
 		if self.ctx.policy_config['process_historical']:
 			print('Model Logs: Processing historical data\n')
@@ -422,7 +430,7 @@ class model_MSG:
 		# OBPS 
 		if self.ctx.policy_config['apply_obps']:
 			print('Model Logs: Applying OBPS\n')	
-			#apply_obps(scenario=self.ctx.source_scenario['scenario'])
+			apply_obps(self.ctx)
 		
 		if self.ctx.policy_config['investment_tax_credit']:
 			print('Model Logs: Applying Investment Tax Credit\n')	
@@ -458,8 +466,9 @@ class model_MSG:
 
 
 			if self.ctx.post_process_config['new_reporter']:
+				timestamp = f'{str(datetime.now().strftime('%Y-%m-%d--%H-%M'))}'
 				self.ctx.generate_report(
-					output_path=f"model/output/{caseName}_new_reporter.csv",
+					output_path=f"reporting_output/{caseName}_{timestamp}_new_reporter.csv",
 					min_year=2020,
 					max_year=2060,
 					from_excel=False,
@@ -472,14 +481,16 @@ class model_MSG:
 				\n=================================================="
 				)
 			elif self.ctx.post_process_config['legacy_reporter']:
+				timestamp = f'{str(datetime.now().strftime('%Y-%m-%d--%H-%M'))}'
 				start = time.time()
-				report(mp=self.ctx.mp, scen=self.ctx.source_scenario['scenario'], out_dir="reporting_outputs")
+				report(mp=self.ctx.mp, scen=self.ctx.source_scenario['scenario'], out_dir="reporting_outputs", out_file_timestamp = timestamp, IDEA_format=self.ctx.post_process_config['IDEA_format'])
 				end = time.time()
 				print(
 					f"\n==================================================\n\
 				Reporting with LEGACY reporter. Process time: {round((end - start) / 60)} Min and {round((end - start) % 60)} Sec\
 				\n=================================================="
 				)
+				
 
 		if self.ctx.post_process_config['to_excell']:
 			start = time.time()

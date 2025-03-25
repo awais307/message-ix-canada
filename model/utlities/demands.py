@@ -226,5 +226,6 @@ def adjust_demands(model_obj):
 		model_obj.ctx.source_scenario['scenario'].remove_par("demand", df)
 		model_obj.ctx.source_scenario['scenario'].add_par("demand", dmds)
 
+		print('demands adjusted based on historical data')
 		# Commit the changes to the scenario
 		model_obj.ctx.source_scenario['scenario'].commit("Updated demands")

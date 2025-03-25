@@ -13,9 +13,8 @@ import yaml
 from typing import Optional, Tuple
 from math import prod
 
-#import message_ix_models.data.report
-#
-#from message_ix_models.data.report.legacy import default_units as def_units
+#import models.data.report
+#from models.data.report.legacy import default_units as def_units
 
 def read_config_ctx(ctx, config_file="ModelSetup_CA.yaml", dir_path="model/scenarios/baseline", verbose=False):
 	path = os.path.join(os.getcwd(), dir_path, config_file)

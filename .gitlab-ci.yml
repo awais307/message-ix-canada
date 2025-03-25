@@ -31,7 +31,7 @@ pages:
   before_script: []
   timeout: 10m
   script:
-    - pip install mkdocs mkdocs-material mkdocstrings[python]
+    - pip install mkdocs mkdocs-material mkdocstrings[python] mkdocs-macros-plugin
     - mkdocs build -d public
   artifacts:
     paths:

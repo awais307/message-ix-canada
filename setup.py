@@ -1,5 +1,4 @@
 from setuptools import setup, find_packages
-from setuptools import setup
 #from Cython.Build import cythonize
 
 setup(
@@ -23,7 +22,6 @@ setup(
         'ipykernel',
         'pytest',
         'click',
-        'message-ix-models@git+https://github.com/criscfer/message-ix-models.git@main',
         'message-ix-models[report]',
     ],
     #dependency_links=["git+https://github.com/criscfer/message-ix-models.git@main"], 

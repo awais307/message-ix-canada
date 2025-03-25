@@ -24,6 +24,7 @@ scenario_config:
     add_techs: True # Add new technologies to the model
     investment_tax_credit: False # ITC policy
     apply_obps: False # OBPS policy
+    apply_renewable_potential: False # Renewable potential
   post_process_config:
     to_excell: False # Export input to Excel
     legacy_reporter: False # Use legacy reporter for outputting

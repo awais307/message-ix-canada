@@ -7,7 +7,7 @@
 .idea
 # Ignore the Plant UML diagrams from the 'out' folder
 /out 
-/data/assumptions_database_example(ITCs).csv
+reporting_outputs/
 
 #/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/
 
@@ -21,36 +21,10 @@ message-ix-models/
 balanced_df.csv
 baseline_v28.xlsx
 /data/data_country
-model/utlities/compile_capacity_data.py
-model/utlities/apply_ssp_vre.py
-model/utlities/add_reliability_peak.py
-model/utlities/add_UE_share_constraints.py
-model/utlities/adjust_cf_to_history.py
-model/utlities/adjust_lifetime_to_history.py
-model/utlities/apply_LED_setup.py
-model/utlities/calibrate_demand.py
-model/utlities/calibrate_extraction.py
-model/utlities/calibrate_historical_capacity.py
-model/utlities/calibrate_to_IEA_offline.py
-model/utlities/calibrate_UE_gr_to_demand.py
-model/utlities/calibrate_UE_share_constraints.py
-model/utlities/calibrate_vre.py
-model/utlities/change_technology_lifetime.py
-model/utlities/compile_IEA_data_offline.py
-model/utlities/compile_IEA_data_offline_extraction.py
-model/utlities/update_rc_demand.py
-model/utlities/rescale_demands.py
-model/utlities/update_gdp_pop.py
-model/utlities/update_trp_demand.py
-model/utlities/utilities_main/get_historical_years.py
-model/utlities/utilities_main/get_nodes.py
-model/utlities/utilities_main/get_optimization_years.py
-model/utlities/utilities_main/utilities.py
-model/utlities/copy_parameter.py
-model/utlities/get_codes.py
-model/utlities/get_historical_years.py
-model/utlities/get_nodes.py
-model/utlities/utilities.py
-model/utlities/perform_vintage_check.py
-model/utlities/project_vre.py
-model/utlities/read_demand_downscaled.py
+
+model/utlities/*.py
+/data/assumptions_database_example(ITCs).csv
+
+
+message-ix-canada.code-workspace
+*.textClipping

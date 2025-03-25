@@ -1,0 +1,4831 @@
+node,technology,year_vtg,value,unit
+Alberta,bio_istig,1960,40,y
+Alberta,bio_ppl,1960,45,y
+Alberta,igcc,1960,45,y
+Alberta,coal_adv_ccs,1960,45,y
+Alberta,loil_ppl,1960,45,y
+Alberta,geo_ppl,1960,40,y
+Alberta,HYDROGEN_BLUE,1960,45,y
+Alberta,HYDROGEN_GREEN,1960,45,y
+Alberta,hydro_hc,1960,100,y
+Alberta,hydro_lc,1960,80,y
+Alberta,gas_cc,1960,45,y
+Alberta,gas_cc_ccs,1960,45,y
+Alberta,gas_ppl,1960,45,y
+Alberta,gas_ct,1960,45,y
+Alberta,nuc_lc,1960,60,y
+Alberta,nuc_hc,1960,60,y
+Alberta,foil_ppl,1960,45,y
+Alberta,solar_pv_ppl,1960,30,y
+Alberta,nan,1960,30,y
+Alberta,stor_ppl,1960,15,y
+Alberta,STOR_PUMP,1960,100,y
+Alberta,wind_ppf,1960,30,y
+Alberta,wind_ppl,1960,30,y
+Alberta,bio_istig,1965,40,y
+Alberta,bio_ppl,1965,45,y
+Alberta,igcc,1965,45,y
+Alberta,coal_adv_ccs,1965,45,y
+Alberta,loil_ppl,1965,45,y
+Alberta,geo_ppl,1965,40,y
+Alberta,HYDROGEN_BLUE,1965,45,y
+Alberta,HYDROGEN_GREEN,1965,45,y
+Alberta,hydro_hc,1965,100,y
+Alberta,hydro_lc,1965,80,y
+Alberta,gas_cc,1965,45,y
+Alberta,gas_cc_ccs,1965,45,y
+Alberta,gas_ppl,1965,45,y
+Alberta,gas_ct,1965,45,y
+Alberta,nuc_lc,1965,60,y
+Alberta,nuc_hc,1965,60,y
+Alberta,foil_ppl,1965,45,y
+Alberta,solar_pv_ppl,1965,30,y
+Alberta,nan,1965,30,y
+Alberta,stor_ppl,1965,15,y
+Alberta,STOR_PUMP,1965,100,y
+Alberta,wind_ppf,1965,30,y
+Alberta,wind_ppl,1965,30,y
+Alberta,bio_istig,1970,40,y
+Alberta,bio_ppl,1970,45,y
+Alberta,igcc,1970,45,y
+Alberta,coal_adv_ccs,1970,45,y
+Alberta,loil_ppl,1970,45,y
+Alberta,geo_ppl,1970,40,y
+Alberta,HYDROGEN_BLUE,1970,45,y
+Alberta,HYDROGEN_GREEN,1970,45,y
+Alberta,hydro_hc,1970,100,y
+Alberta,hydro_lc,1970,80,y
+Alberta,gas_cc,1970,45,y
+Alberta,gas_cc_ccs,1970,45,y
+Alberta,gas_ppl,1970,45,y
+Alberta,gas_ct,1970,45,y
+Alberta,nuc_lc,1970,60,y
+Alberta,nuc_hc,1970,60,y
+Alberta,foil_ppl,1970,45,y
+Alberta,solar_pv_ppl,1970,30,y
+Alberta,nan,1970,30,y
+Alberta,stor_ppl,1970,15,y
+Alberta,STOR_PUMP,1970,100,y
+Alberta,wind_ppf,1970,30,y
+Alberta,wind_ppl,1970,30,y
+Alberta,bio_istig,1975,40,y
+Alberta,bio_ppl,1975,45,y
+Alberta,igcc,1975,45,y
+Alberta,coal_adv_ccs,1975,45,y
+Alberta,loil_ppl,1975,45,y
+Alberta,geo_ppl,1975,40,y
+Alberta,HYDROGEN_BLUE,1975,45,y
+Alberta,HYDROGEN_GREEN,1975,45,y
+Alberta,hydro_hc,1975,100,y
+Alberta,hydro_lc,1975,80,y
+Alberta,gas_cc,1975,45,y
+Alberta,gas_cc_ccs,1975,45,y
+Alberta,gas_ppl,1975,45,y
+Alberta,gas_ct,1975,45,y
+Alberta,nuc_lc,1975,60,y
+Alberta,nuc_hc,1975,60,y
+Alberta,foil_ppl,1975,45,y
+Alberta,solar_pv_ppl,1975,30,y
+Alberta,nan,1975,30,y
+Alberta,stor_ppl,1975,15,y
+Alberta,STOR_PUMP,1975,100,y
+Alberta,wind_ppf,1975,30,y
+Alberta,wind_ppl,1975,30,y
+Alberta,bio_istig,1980,40,y
+Alberta,bio_ppl,1980,45,y
+Alberta,igcc,1980,45,y
+Alberta,coal_adv_ccs,1980,45,y
+Alberta,loil_ppl,1980,45,y
+Alberta,geo_ppl,1980,40,y
+Alberta,HYDROGEN_BLUE,1980,45,y
+Alberta,HYDROGEN_GREEN,1980,45,y
+Alberta,hydro_hc,1980,100,y
+Alberta,hydro_lc,1980,80,y
+Alberta,gas_cc,1980,45,y
+Alberta,gas_cc_ccs,1980,45,y
+Alberta,gas_ppl,1980,45,y
+Alberta,gas_ct,1980,45,y
+Alberta,nuc_lc,1980,60,y
+Alberta,nuc_hc,1980,60,y
+Alberta,foil_ppl,1980,45,y
+Alberta,solar_pv_ppl,1980,30,y
+Alberta,nan,1980,30,y
+Alberta,stor_ppl,1980,15,y
+Alberta,STOR_PUMP,1980,100,y
+Alberta,wind_ppf,1980,30,y
+Alberta,wind_ppl,1980,30,y
+Alberta,bio_istig,1985,40,y
+Alberta,bio_ppl,1985,45,y
+Alberta,igcc,1985,45,y
+Alberta,coal_adv_ccs,1985,45,y
+Alberta,loil_ppl,1985,45,y
+Alberta,geo_ppl,1985,40,y
+Alberta,HYDROGEN_BLUE,1985,45,y
+Alberta,HYDROGEN_GREEN,1985,45,y
+Alberta,hydro_hc,1985,100,y
+Alberta,hydro_lc,1985,80,y
+Alberta,gas_cc,1985,45,y
+Alberta,gas_cc_ccs,1985,45,y
+Alberta,gas_ppl,1985,45,y
+Alberta,gas_ct,1985,45,y
+Alberta,nuc_lc,1985,60,y
+Alberta,nuc_hc,1985,60,y
+Alberta,foil_ppl,1985,45,y
+Alberta,solar_pv_ppl,1985,30,y
+Alberta,nan,1985,30,y
+Alberta,stor_ppl,1985,15,y
+Alberta,STOR_PUMP,1985,100,y
+Alberta,wind_ppf,1985,30,y
+Alberta,wind_ppl,1985,30,y
+Alberta,bio_istig,1990,40,y
+Alberta,bio_ppl,1990,45,y
+Alberta,igcc,1990,45,y
+Alberta,coal_adv_ccs,1990,45,y
+Alberta,loil_ppl,1990,45,y
+Alberta,geo_ppl,1990,40,y
+Alberta,HYDROGEN_BLUE,1990,45,y
+Alberta,HYDROGEN_GREEN,1990,45,y
+Alberta,hydro_hc,1990,100,y
+Alberta,hydro_lc,1990,80,y
+Alberta,gas_cc,1990,45,y
+Alberta,gas_cc_ccs,1990,45,y
+Alberta,gas_ppl,1990,45,y
+Alberta,gas_ct,1990,45,y
+Alberta,nuc_lc,1990,60,y
+Alberta,nuc_hc,1990,60,y
+Alberta,foil_ppl,1990,45,y
+Alberta,solar_pv_ppl,1990,30,y
+Alberta,nan,1990,30,y
+Alberta,stor_ppl,1990,15,y
+Alberta,STOR_PUMP,1990,100,y
+Alberta,wind_ppf,1990,30,y
+Alberta,wind_ppl,1990,30,y
+Alberta,bio_istig,1995,40,y
+Alberta,bio_ppl,1995,45,y
+Alberta,igcc,1995,45,y
+Alberta,coal_adv_ccs,1995,45,y
+Alberta,loil_ppl,1995,45,y
+Alberta,geo_ppl,1995,40,y
+Alberta,HYDROGEN_BLUE,1995,45,y
+Alberta,HYDROGEN_GREEN,1995,45,y
+Alberta,hydro_hc,1995,100,y
+Alberta,hydro_lc,1995,80,y
+Alberta,gas_cc,1995,45,y
+Alberta,gas_cc_ccs,1995,45,y
+Alberta,gas_ppl,1995,45,y
+Alberta,gas_ct,1995,45,y
+Alberta,nuc_lc,1995,60,y
+Alberta,nuc_hc,1995,60,y
+Alberta,foil_ppl,1995,45,y
+Alberta,solar_pv_ppl,1995,30,y
+Alberta,nan,1995,30,y
+Alberta,stor_ppl,1995,15,y
+Alberta,STOR_PUMP,1995,100,y
+Alberta,wind_ppf,1995,30,y
+Alberta,wind_ppl,1995,30,y
+Alberta,bio_istig,2000,40,y
+Alberta,bio_ppl,2000,45,y
+Alberta,igcc,2000,45,y
+Alberta,coal_adv_ccs,2000,45,y
+Alberta,loil_ppl,2000,45,y
+Alberta,geo_ppl,2000,40,y
+Alberta,HYDROGEN_BLUE,2000,45,y
+Alberta,HYDROGEN_GREEN,2000,45,y
+Alberta,hydro_hc,2000,100,y
+Alberta,hydro_lc,2000,80,y
+Alberta,gas_cc,2000,45,y
+Alberta,gas_cc_ccs,2000,45,y
+Alberta,gas_ppl,2000,45,y
+Alberta,gas_ct,2000,45,y
+Alberta,nuc_lc,2000,60,y
+Alberta,nuc_hc,2000,60,y
+Alberta,foil_ppl,2000,45,y
+Alberta,solar_pv_ppl,2000,30,y
+Alberta,nan,2000,30,y
+Alberta,stor_ppl,2000,15,y
+Alberta,STOR_PUMP,2000,100,y
+Alberta,wind_ppf,2000,30,y
+Alberta,wind_ppl,2000,30,y
+Alberta,bio_istig,2005,40,y
+Alberta,bio_ppl,2005,45,y
+Alberta,igcc,2005,45,y
+Alberta,coal_adv_ccs,2005,45,y
+Alberta,loil_ppl,2005,45,y
+Alberta,geo_ppl,2005,40,y
+Alberta,HYDROGEN_BLUE,2005,45,y
+Alberta,HYDROGEN_GREEN,2005,45,y
+Alberta,hydro_hc,2005,100,y
+Alberta,hydro_lc,2005,80,y
+Alberta,gas_cc,2005,45,y
+Alberta,gas_cc_ccs,2005,45,y
+Alberta,gas_ppl,2005,45,y
+Alberta,gas_ct,2005,45,y
+Alberta,nuc_lc,2005,60,y
+Alberta,nuc_hc,2005,60,y
+Alberta,foil_ppl,2005,45,y
+Alberta,solar_pv_ppl,2005,30,y
+Alberta,nan,2005,30,y
+Alberta,stor_ppl,2005,15,y
+Alberta,STOR_PUMP,2005,100,y
+Alberta,wind_ppf,2005,30,y
+Alberta,wind_ppl,2005,30,y
+Alberta,bio_istig,2010,40,y
+Alberta,bio_ppl,2010,45,y
+Alberta,igcc,2010,45,y
+Alberta,coal_adv_ccs,2010,45,y
+Alberta,loil_ppl,2010,45,y
+Alberta,geo_ppl,2010,40,y
+Alberta,HYDROGEN_BLUE,2010,45,y
+Alberta,HYDROGEN_GREEN,2010,45,y
+Alberta,hydro_hc,2010,100,y
+Alberta,hydro_lc,2010,80,y
+Alberta,gas_cc,2010,45,y
+Alberta,gas_cc_ccs,2010,45,y
+Alberta,gas_ppl,2010,45,y
+Alberta,gas_ct,2010,45,y
+Alberta,nuc_lc,2010,60,y
+Alberta,nuc_hc,2010,60,y
+Alberta,foil_ppl,2010,45,y
+Alberta,solar_pv_ppl,2010,30,y
+Alberta,nan,2010,30,y
+Alberta,stor_ppl,2010,15,y
+Alberta,STOR_PUMP,2010,100,y
+Alberta,wind_ppf,2010,30,y
+Alberta,wind_ppl,2010,30,y
+Alberta,bio_istig,2015,40,y
+Alberta,bio_ppl,2015,45,y
+Alberta,igcc,2015,45,y
+Alberta,coal_adv_ccs,2015,45,y
+Alberta,loil_ppl,2015,45,y
+Alberta,geo_ppl,2015,40,y
+Alberta,HYDROGEN_BLUE,2015,45,y
+Alberta,HYDROGEN_GREEN,2015,45,y
+Alberta,hydro_hc,2015,100,y
+Alberta,hydro_lc,2015,80,y
+Alberta,gas_cc,2015,45,y
+Alberta,gas_cc_ccs,2015,45,y
+Alberta,gas_ppl,2015,45,y
+Alberta,gas_ct,2015,45,y
+Alberta,nuc_lc,2015,60,y
+Alberta,nuc_hc,2015,60,y
+Alberta,foil_ppl,2015,45,y
+Alberta,solar_pv_ppl,2015,30,y
+Alberta,nan,2015,30,y
+Alberta,stor_ppl,2015,15,y
+Alberta,STOR_PUMP,2015,100,y
+Alberta,wind_ppf,2015,30,y
+Alberta,wind_ppl,2015,30,y
+Alberta,bio_istig,2020,40,y
+Alberta,bio_ppl,2020,45,y
+Alberta,igcc,2020,45,y
+Alberta,coal_adv_ccs,2020,45,y
+Alberta,loil_ppl,2020,45,y
+Alberta,geo_ppl,2020,40,y
+Alberta,HYDROGEN_BLUE,2020,45,y
+Alberta,HYDROGEN_GREEN,2020,45,y
+Alberta,hydro_hc,2020,100,y
+Alberta,hydro_lc,2020,80,y
+Alberta,gas_cc,2020,45,y
+Alberta,gas_cc_ccs,2020,45,y
+Alberta,gas_ppl,2020,45,y
+Alberta,gas_ct,2020,45,y
+Alberta,nuc_lc,2020,60,y
+Alberta,nuc_hc,2020,60,y
+Alberta,foil_ppl,2020,45,y
+Alberta,solar_pv_ppl,2020,30,y
+Alberta,nan,2020,30,y
+Alberta,stor_ppl,2020,15,y
+Alberta,STOR_PUMP,2020,100,y
+Alberta,wind_ppf,2020,30,y
+Alberta,wind_ppl,2020,30,y
+Alberta,bio_istig,2025,40,y
+Alberta,bio_ppl,2025,45,y
+Alberta,igcc,2025,45,y
+Alberta,coal_adv_ccs,2025,45,y
+Alberta,loil_ppl,2025,45,y
+Alberta,geo_ppl,2025,40,y
+Alberta,HYDROGEN_BLUE,2025,45,y
+Alberta,HYDROGEN_GREEN,2025,45,y
+Alberta,hydro_hc,2025,100,y
+Alberta,hydro_lc,2025,80,y
+Alberta,gas_cc,2025,45,y
+Alberta,gas_cc_ccs,2025,45,y
+Alberta,gas_ppl,2025,45,y
+Alberta,gas_ct,2025,45,y
+Alberta,nuc_lc,2025,60,y
+Alberta,nuc_hc,2025,60,y
+Alberta,foil_ppl,2025,45,y
+Alberta,solar_pv_ppl,2025,30,y
+Alberta,nan,2025,30,y
+Alberta,stor_ppl,2025,15,y
+Alberta,STOR_PUMP,2025,100,y
+Alberta,wind_ppf,2025,30,y
+Alberta,wind_ppl,2025,30,y
+Alberta,bio_istig,2030,40,y
+Alberta,bio_ppl,2030,45,y
+Alberta,igcc,2030,45,y
+Alberta,coal_adv_ccs,2030,45,y
+Alberta,loil_ppl,2030,45,y
+Alberta,geo_ppl,2030,40,y
+Alberta,HYDROGEN_BLUE,2030,45,y
+Alberta,HYDROGEN_GREEN,2030,45,y
+Alberta,hydro_hc,2030,100,y
+Alberta,hydro_lc,2030,80,y
+Alberta,gas_cc,2030,45,y
+Alberta,gas_cc_ccs,2030,45,y
+Alberta,gas_ppl,2030,45,y
+Alberta,gas_ct,2030,45,y
+Alberta,nuc_lc,2030,60,y
+Alberta,nuc_hc,2030,60,y
+Alberta,foil_ppl,2030,45,y
+Alberta,solar_pv_ppl,2030,30,y
+Alberta,nan,2030,30,y
+Alberta,stor_ppl,2030,15,y
+Alberta,STOR_PUMP,2030,100,y
+Alberta,wind_ppf,2030,30,y
+Alberta,wind_ppl,2030,30,y
+Alberta,bio_istig,2035,40,y
+Alberta,bio_ppl,2035,45,y
+Alberta,igcc,2035,45,y
+Alberta,coal_adv_ccs,2035,45,y
+Alberta,loil_ppl,2035,45,y
+Alberta,geo_ppl,2035,40,y
+Alberta,HYDROGEN_BLUE,2035,45,y
+Alberta,HYDROGEN_GREEN,2035,45,y
+Alberta,hydro_hc,2035,100,y
+Alberta,hydro_lc,2035,80,y
+Alberta,gas_cc,2035,45,y
+Alberta,gas_cc_ccs,2035,45,y
+Alberta,gas_ppl,2035,45,y
+Alberta,gas_ct,2035,45,y
+Alberta,nuc_lc,2035,60,y
+Alberta,nuc_hc,2035,60,y
+Alberta,foil_ppl,2035,45,y
+Alberta,solar_pv_ppl,2035,30,y
+Alberta,nan,2035,30,y
+Alberta,stor_ppl,2035,15,y
+Alberta,STOR_PUMP,2035,100,y
+Alberta,wind_ppf,2035,30,y
+Alberta,wind_ppl,2035,30,y
+Alberta,bio_istig,2040,40,y
+Alberta,bio_ppl,2040,45,y
+Alberta,igcc,2040,45,y
+Alberta,coal_adv_ccs,2040,45,y
+Alberta,loil_ppl,2040,45,y
+Alberta,geo_ppl,2040,40,y
+Alberta,HYDROGEN_BLUE,2040,45,y
+Alberta,HYDROGEN_GREEN,2040,45,y
+Alberta,hydro_hc,2040,100,y
+Alberta,hydro_lc,2040,80,y
+Alberta,gas_cc,2040,45,y
+Alberta,gas_cc_ccs,2040,45,y
+Alberta,gas_ppl,2040,45,y
+Alberta,gas_ct,2040,45,y
+Alberta,nuc_lc,2040,60,y
+Alberta,nuc_hc,2040,60,y
+Alberta,foil_ppl,2040,45,y
+Alberta,solar_pv_ppl,2040,30,y
+Alberta,nan,2040,30,y
+Alberta,stor_ppl,2040,15,y
+Alberta,STOR_PUMP,2040,100,y
+Alberta,wind_ppf,2040,30,y
+Alberta,wind_ppl,2040,30,y
+Alberta,bio_istig,2045,40,y
+Alberta,bio_ppl,2045,45,y
+Alberta,igcc,2045,45,y
+Alberta,coal_adv_ccs,2045,45,y
+Alberta,loil_ppl,2045,45,y
+Alberta,geo_ppl,2045,40,y
+Alberta,HYDROGEN_BLUE,2045,45,y
+Alberta,HYDROGEN_GREEN,2045,45,y
+Alberta,hydro_hc,2045,100,y
+Alberta,hydro_lc,2045,80,y
+Alberta,gas_cc,2045,45,y
+Alberta,gas_cc_ccs,2045,45,y
+Alberta,gas_ppl,2045,45,y
+Alberta,gas_ct,2045,45,y
+Alberta,nuc_lc,2045,60,y
+Alberta,nuc_hc,2045,60,y
+Alberta,foil_ppl,2045,45,y
+Alberta,solar_pv_ppl,2045,30,y
+Alberta,nan,2045,30,y
+Alberta,stor_ppl,2045,15,y
+Alberta,STOR_PUMP,2045,100,y
+Alberta,wind_ppf,2045,30,y
+Alberta,wind_ppl,2045,30,y
+Alberta,bio_istig,2050,40,y
+Alberta,bio_ppl,2050,45,y
+Alberta,igcc,2050,45,y
+Alberta,coal_adv_ccs,2050,45,y
+Alberta,loil_ppl,2050,45,y
+Alberta,geo_ppl,2050,40,y
+Alberta,HYDROGEN_BLUE,2050,45,y
+Alberta,HYDROGEN_GREEN,2050,45,y
+Alberta,hydro_hc,2050,100,y
+Alberta,hydro_lc,2050,80,y
+Alberta,gas_cc,2050,45,y
+Alberta,gas_cc_ccs,2050,45,y
+Alberta,gas_ppl,2050,45,y
+Alberta,gas_ct,2050,45,y
+Alberta,nuc_lc,2050,60,y
+Alberta,nuc_hc,2050,60,y
+Alberta,foil_ppl,2050,45,y
+Alberta,solar_pv_ppl,2050,30,y
+Alberta,nan,2050,30,y
+Alberta,stor_ppl,2050,15,y
+Alberta,STOR_PUMP,2050,100,y
+Alberta,wind_ppf,2050,30,y
+Alberta,wind_ppl,2050,30,y
+Alberta,bio_istig,2055,40,y
+Alberta,bio_ppl,2055,45,y
+Alberta,igcc,2055,45,y
+Alberta,coal_adv_ccs,2055,45,y
+Alberta,loil_ppl,2055,45,y
+Alberta,geo_ppl,2055,40,y
+Alberta,HYDROGEN_BLUE,2055,45,y
+Alberta,HYDROGEN_GREEN,2055,45,y
+Alberta,hydro_hc,2055,100,y
+Alberta,hydro_lc,2055,80,y
+Alberta,gas_cc,2055,45,y
+Alberta,gas_cc_ccs,2055,45,y
+Alberta,gas_ppl,2055,45,y
+Alberta,gas_ct,2055,45,y
+Alberta,nuc_lc,2055,60,y
+Alberta,nuc_hc,2055,60,y
+Alberta,foil_ppl,2055,45,y
+Alberta,solar_pv_ppl,2055,30,y
+Alberta,nan,2055,30,y
+Alberta,stor_ppl,2055,15,y
+Alberta,STOR_PUMP,2055,100,y
+Alberta,wind_ppf,2055,30,y
+Alberta,wind_ppl,2055,30,y
+Alberta,bio_istig,2060,40,y
+Alberta,bio_ppl,2060,45,y
+Alberta,igcc,2060,45,y
+Alberta,coal_adv_ccs,2060,45,y
+Alberta,loil_ppl,2060,45,y
+Alberta,geo_ppl,2060,40,y
+Alberta,HYDROGEN_BLUE,2060,45,y
+Alberta,HYDROGEN_GREEN,2060,45,y
+Alberta,hydro_hc,2060,100,y
+Alberta,hydro_lc,2060,80,y
+Alberta,gas_cc,2060,45,y
+Alberta,gas_cc_ccs,2060,45,y
+Alberta,gas_ppl,2060,45,y
+Alberta,gas_ct,2060,45,y
+Alberta,nuc_lc,2060,60,y
+Alberta,nuc_hc,2060,60,y
+Alberta,foil_ppl,2060,45,y
+Alberta,solar_pv_ppl,2060,30,y
+Alberta,nan,2060,30,y
+Alberta,stor_ppl,2060,15,y
+Alberta,STOR_PUMP,2060,100,y
+Alberta,wind_ppf,2060,30,y
+Alberta,wind_ppl,2060,30,y
+British Columbia,bio_istig,1960,40,y
+British Columbia,bio_ppl,1960,45,y
+British Columbia,igcc,1960,45,y
+British Columbia,coal_adv_ccs,1960,45,y
+British Columbia,loil_ppl,1960,45,y
+British Columbia,geo_ppl,1960,40,y
+British Columbia,HYDROGEN_BLUE,1960,45,y
+British Columbia,HYDROGEN_GREEN,1960,45,y
+British Columbia,hydro_hc,1960,100,y
+British Columbia,hydro_lc,1960,80,y
+British Columbia,gas_cc,1960,45,y
+British Columbia,gas_cc_ccs,1960,45,y
+British Columbia,gas_ppl,1960,45,y
+British Columbia,gas_ct,1960,45,y
+British Columbia,nuc_lc,1960,60,y
+British Columbia,nuc_hc,1960,60,y
+British Columbia,foil_ppl,1960,45,y
+British Columbia,solar_pv_ppl,1960,30,y
+British Columbia,nan,1960,30,y
+British Columbia,stor_ppl,1960,15,y
+British Columbia,STOR_PUMP,1960,100,y
+British Columbia,wind_ppf,1960,30,y
+British Columbia,wind_ppl,1960,30,y
+British Columbia,bio_istig,1965,40,y
+British Columbia,bio_ppl,1965,45,y
+British Columbia,igcc,1965,45,y
+British Columbia,coal_adv_ccs,1965,45,y
+British Columbia,loil_ppl,1965,45,y
+British Columbia,geo_ppl,1965,40,y
+British Columbia,HYDROGEN_BLUE,1965,45,y
+British Columbia,HYDROGEN_GREEN,1965,45,y
+British Columbia,hydro_hc,1965,100,y
+British Columbia,hydro_lc,1965,80,y
+British Columbia,gas_cc,1965,45,y
+British Columbia,gas_cc_ccs,1965,45,y
+British Columbia,gas_ppl,1965,45,y
+British Columbia,gas_ct,1965,45,y
+British Columbia,nuc_lc,1965,60,y
+British Columbia,nuc_hc,1965,60,y
+British Columbia,foil_ppl,1965,45,y
+British Columbia,solar_pv_ppl,1965,30,y
+British Columbia,nan,1965,30,y
+British Columbia,stor_ppl,1965,15,y
+British Columbia,STOR_PUMP,1965,100,y
+British Columbia,wind_ppf,1965,30,y
+British Columbia,wind_ppl,1965,30,y
+British Columbia,bio_istig,1970,40,y
+British Columbia,bio_ppl,1970,45,y
+British Columbia,igcc,1970,45,y
+British Columbia,coal_adv_ccs,1970,45,y
+British Columbia,loil_ppl,1970,45,y
+British Columbia,geo_ppl,1970,40,y
+British Columbia,HYDROGEN_BLUE,1970,45,y
+British Columbia,HYDROGEN_GREEN,1970,45,y
+British Columbia,hydro_hc,1970,100,y
+British Columbia,hydro_lc,1970,80,y
+British Columbia,gas_cc,1970,45,y
+British Columbia,gas_cc_ccs,1970,45,y
+British Columbia,gas_ppl,1970,45,y
+British Columbia,gas_ct,1970,45,y
+British Columbia,nuc_lc,1970,60,y
+British Columbia,nuc_hc,1970,60,y
+British Columbia,foil_ppl,1970,45,y
+British Columbia,solar_pv_ppl,1970,30,y
+British Columbia,nan,1970,30,y
+British Columbia,stor_ppl,1970,15,y
+British Columbia,STOR_PUMP,1970,100,y
+British Columbia,wind_ppf,1970,30,y
+British Columbia,wind_ppl,1970,30,y
+British Columbia,bio_istig,1975,40,y
+British Columbia,bio_ppl,1975,45,y
+British Columbia,igcc,1975,45,y
+British Columbia,coal_adv_ccs,1975,45,y
+British Columbia,loil_ppl,1975,45,y
+British Columbia,geo_ppl,1975,40,y
+British Columbia,HYDROGEN_BLUE,1975,45,y
+British Columbia,HYDROGEN_GREEN,1975,45,y
+British Columbia,hydro_hc,1975,100,y
+British Columbia,hydro_lc,1975,80,y
+British Columbia,gas_cc,1975,45,y
+British Columbia,gas_cc_ccs,1975,45,y
+British Columbia,gas_ppl,1975,45,y
+British Columbia,gas_ct,1975,45,y
+British Columbia,nuc_lc,1975,60,y
+British Columbia,nuc_hc,1975,60,y
+British Columbia,foil_ppl,1975,45,y
+British Columbia,solar_pv_ppl,1975,30,y
+British Columbia,nan,1975,30,y
+British Columbia,stor_ppl,1975,15,y
+British Columbia,STOR_PUMP,1975,100,y
+British Columbia,wind_ppf,1975,30,y
+British Columbia,wind_ppl,1975,30,y
+British Columbia,bio_istig,1980,40,y
+British Columbia,bio_ppl,1980,45,y
+British Columbia,igcc,1980,45,y
+British Columbia,coal_adv_ccs,1980,45,y
+British Columbia,loil_ppl,1980,45,y
+British Columbia,geo_ppl,1980,40,y
+British Columbia,HYDROGEN_BLUE,1980,45,y
+British Columbia,HYDROGEN_GREEN,1980,45,y
+British Columbia,hydro_hc,1980,100,y
+British Columbia,hydro_lc,1980,80,y
+British Columbia,gas_cc,1980,45,y
+British Columbia,gas_cc_ccs,1980,45,y
+British Columbia,gas_ppl,1980,45,y
+British Columbia,gas_ct,1980,45,y
+British Columbia,nuc_lc,1980,60,y
+British Columbia,nuc_hc,1980,60,y
+British Columbia,foil_ppl,1980,45,y
+British Columbia,solar_pv_ppl,1980,30,y
+British Columbia,nan,1980,30,y
+British Columbia,stor_ppl,1980,15,y
+British Columbia,STOR_PUMP,1980,100,y
+British Columbia,wind_ppf,1980,30,y
+British Columbia,wind_ppl,1980,30,y
+British Columbia,bio_istig,1985,40,y
+British Columbia,bio_ppl,1985,45,y
+British Columbia,igcc,1985,45,y
+British Columbia,coal_adv_ccs,1985,45,y
+British Columbia,loil_ppl,1985,45,y
+British Columbia,geo_ppl,1985,40,y
+British Columbia,HYDROGEN_BLUE,1985,45,y
+British Columbia,HYDROGEN_GREEN,1985,45,y
+British Columbia,hydro_hc,1985,100,y
+British Columbia,hydro_lc,1985,80,y
+British Columbia,gas_cc,1985,45,y
+British Columbia,gas_cc_ccs,1985,45,y
+British Columbia,gas_ppl,1985,45,y
+British Columbia,gas_ct,1985,45,y
+British Columbia,nuc_lc,1985,60,y
+British Columbia,nuc_hc,1985,60,y
+British Columbia,foil_ppl,1985,45,y
+British Columbia,solar_pv_ppl,1985,30,y
+British Columbia,nan,1985,30,y
+British Columbia,stor_ppl,1985,15,y
+British Columbia,STOR_PUMP,1985,100,y
+British Columbia,wind_ppf,1985,30,y
+British Columbia,wind_ppl,1985,30,y
+British Columbia,bio_istig,1990,40,y
+British Columbia,bio_ppl,1990,45,y
+British Columbia,igcc,1990,45,y
+British Columbia,coal_adv_ccs,1990,45,y
+British Columbia,loil_ppl,1990,45,y
+British Columbia,geo_ppl,1990,40,y
+British Columbia,HYDROGEN_BLUE,1990,45,y
+British Columbia,HYDROGEN_GREEN,1990,45,y
+British Columbia,hydro_hc,1990,100,y
+British Columbia,hydro_lc,1990,80,y
+British Columbia,gas_cc,1990,45,y
+British Columbia,gas_cc_ccs,1990,45,y
+British Columbia,gas_ppl,1990,45,y
+British Columbia,gas_ct,1990,45,y
+British Columbia,nuc_lc,1990,60,y
+British Columbia,nuc_hc,1990,60,y
+British Columbia,foil_ppl,1990,45,y
+British Columbia,solar_pv_ppl,1990,30,y
+British Columbia,nan,1990,30,y
+British Columbia,stor_ppl,1990,15,y
+British Columbia,STOR_PUMP,1990,100,y
+British Columbia,wind_ppf,1990,30,y
+British Columbia,wind_ppl,1990,30,y
+British Columbia,bio_istig,1995,40,y
+British Columbia,bio_ppl,1995,45,y
+British Columbia,igcc,1995,45,y
+British Columbia,coal_adv_ccs,1995,45,y
+British Columbia,loil_ppl,1995,45,y
+British Columbia,geo_ppl,1995,40,y
+British Columbia,HYDROGEN_BLUE,1995,45,y
+British Columbia,HYDROGEN_GREEN,1995,45,y
+British Columbia,hydro_hc,1995,100,y
+British Columbia,hydro_lc,1995,80,y
+British Columbia,gas_cc,1995,45,y
+British Columbia,gas_cc_ccs,1995,45,y
+British Columbia,gas_ppl,1995,45,y
+British Columbia,gas_ct,1995,45,y
+British Columbia,nuc_lc,1995,60,y
+British Columbia,nuc_hc,1995,60,y
+British Columbia,foil_ppl,1995,45,y
+British Columbia,solar_pv_ppl,1995,30,y
+British Columbia,nan,1995,30,y
+British Columbia,stor_ppl,1995,15,y
+British Columbia,STOR_PUMP,1995,100,y
+British Columbia,wind_ppf,1995,30,y
+British Columbia,wind_ppl,1995,30,y
+British Columbia,bio_istig,2000,40,y
+British Columbia,bio_ppl,2000,45,y
+British Columbia,igcc,2000,45,y
+British Columbia,coal_adv_ccs,2000,45,y
+British Columbia,loil_ppl,2000,45,y
+British Columbia,geo_ppl,2000,40,y
+British Columbia,HYDROGEN_BLUE,2000,45,y
+British Columbia,HYDROGEN_GREEN,2000,45,y
+British Columbia,hydro_hc,2000,100,y
+British Columbia,hydro_lc,2000,80,y
+British Columbia,gas_cc,2000,45,y
+British Columbia,gas_cc_ccs,2000,45,y
+British Columbia,gas_ppl,2000,45,y
+British Columbia,gas_ct,2000,45,y
+British Columbia,nuc_lc,2000,60,y
+British Columbia,nuc_hc,2000,60,y
+British Columbia,foil_ppl,2000,45,y
+British Columbia,solar_pv_ppl,2000,30,y
+British Columbia,nan,2000,30,y
+British Columbia,stor_ppl,2000,15,y
+British Columbia,STOR_PUMP,2000,100,y
+British Columbia,wind_ppf,2000,30,y
+British Columbia,wind_ppl,2000,30,y
+British Columbia,bio_istig,2005,40,y
+British Columbia,bio_ppl,2005,45,y
+British Columbia,igcc,2005,45,y
+British Columbia,coal_adv_ccs,2005,45,y
+British Columbia,loil_ppl,2005,45,y
+British Columbia,geo_ppl,2005,40,y
+British Columbia,HYDROGEN_BLUE,2005,45,y
+British Columbia,HYDROGEN_GREEN,2005,45,y
+British Columbia,hydro_hc,2005,100,y
+British Columbia,hydro_lc,2005,80,y
+British Columbia,gas_cc,2005,45,y
+British Columbia,gas_cc_ccs,2005,45,y
+British Columbia,gas_ppl,2005,45,y
+British Columbia,gas_ct,2005,45,y
+British Columbia,nuc_lc,2005,60,y
+British Columbia,nuc_hc,2005,60,y
+British Columbia,foil_ppl,2005,45,y
+British Columbia,solar_pv_ppl,2005,30,y
+British Columbia,nan,2005,30,y
+British Columbia,stor_ppl,2005,15,y
+British Columbia,STOR_PUMP,2005,100,y
+British Columbia,wind_ppf,2005,30,y
+British Columbia,wind_ppl,2005,30,y
+British Columbia,bio_istig,2010,40,y
+British Columbia,bio_ppl,2010,45,y
+British Columbia,igcc,2010,45,y
+British Columbia,coal_adv_ccs,2010,45,y
+British Columbia,loil_ppl,2010,45,y
+British Columbia,geo_ppl,2010,40,y
+British Columbia,HYDROGEN_BLUE,2010,45,y
+British Columbia,HYDROGEN_GREEN,2010,45,y
+British Columbia,hydro_hc,2010,100,y
+British Columbia,hydro_lc,2010,80,y
+British Columbia,gas_cc,2010,45,y
+British Columbia,gas_cc_ccs,2010,45,y
+British Columbia,gas_ppl,2010,45,y
+British Columbia,gas_ct,2010,45,y
+British Columbia,nuc_lc,2010,60,y
+British Columbia,nuc_hc,2010,60,y
+British Columbia,foil_ppl,2010,45,y
+British Columbia,solar_pv_ppl,2010,30,y
+British Columbia,nan,2010,30,y
+British Columbia,stor_ppl,2010,15,y
+British Columbia,STOR_PUMP,2010,100,y
+British Columbia,wind_ppf,2010,30,y
+British Columbia,wind_ppl,2010,30,y
+British Columbia,bio_istig,2015,40,y
+British Columbia,bio_ppl,2015,45,y
+British Columbia,igcc,2015,45,y
+British Columbia,coal_adv_ccs,2015,45,y
+British Columbia,loil_ppl,2015,45,y
+British Columbia,geo_ppl,2015,40,y
+British Columbia,HYDROGEN_BLUE,2015,45,y
+British Columbia,HYDROGEN_GREEN,2015,45,y
+British Columbia,hydro_hc,2015,100,y
+British Columbia,hydro_lc,2015,80,y
+British Columbia,gas_cc,2015,45,y
+British Columbia,gas_cc_ccs,2015,45,y
+British Columbia,gas_ppl,2015,45,y
+British Columbia,gas_ct,2015,45,y
+British Columbia,nuc_lc,2015,60,y
+British Columbia,nuc_hc,2015,60,y
+British Columbia,foil_ppl,2015,45,y
+British Columbia,solar_pv_ppl,2015,30,y
+British Columbia,nan,2015,30,y
+British Columbia,stor_ppl,2015,15,y
+British Columbia,STOR_PUMP,2015,100,y
+British Columbia,wind_ppf,2015,30,y
+British Columbia,wind_ppl,2015,30,y
+British Columbia,bio_istig,2020,40,y
+British Columbia,bio_ppl,2020,45,y
+British Columbia,igcc,2020,45,y
+British Columbia,coal_adv_ccs,2020,45,y
+British Columbia,loil_ppl,2020,45,y
+British Columbia,geo_ppl,2020,40,y
+British Columbia,HYDROGEN_BLUE,2020,45,y
+British Columbia,HYDROGEN_GREEN,2020,45,y
+British Columbia,hydro_hc,2020,100,y
+British Columbia,hydro_lc,2020,80,y
+British Columbia,gas_cc,2020,45,y
+British Columbia,gas_cc_ccs,2020,45,y
+British Columbia,gas_ppl,2020,45,y
+British Columbia,gas_ct,2020,45,y
+British Columbia,nuc_lc,2020,60,y
+British Columbia,nuc_hc,2020,60,y
+British Columbia,foil_ppl,2020,45,y
+British Columbia,solar_pv_ppl,2020,30,y
+British Columbia,nan,2020,30,y
+British Columbia,stor_ppl,2020,15,y
+British Columbia,STOR_PUMP,2020,100,y
+British Columbia,wind_ppf,2020,30,y
+British Columbia,wind_ppl,2020,30,y
+British Columbia,bio_istig,2025,40,y
+British Columbia,bio_ppl,2025,45,y
+British Columbia,igcc,2025,45,y
+British Columbia,coal_adv_ccs,2025,45,y
+British Columbia,loil_ppl,2025,45,y
+British Columbia,geo_ppl,2025,40,y
+British Columbia,HYDROGEN_BLUE,2025,45,y
+British Columbia,HYDROGEN_GREEN,2025,45,y
+British Columbia,hydro_hc,2025,100,y
+British Columbia,hydro_lc,2025,80,y
+British Columbia,gas_cc,2025,45,y
+British Columbia,gas_cc_ccs,2025,45,y
+British Columbia,gas_ppl,2025,45,y
+British Columbia,gas_ct,2025,45,y
+British Columbia,nuc_lc,2025,60,y
+British Columbia,nuc_hc,2025,60,y
+British Columbia,foil_ppl,2025,45,y
+British Columbia,solar_pv_ppl,2025,30,y
+British Columbia,nan,2025,30,y
+British Columbia,stor_ppl,2025,15,y
+British Columbia,STOR_PUMP,2025,100,y
+British Columbia,wind_ppf,2025,30,y
+British Columbia,wind_ppl,2025,30,y
+British Columbia,bio_istig,2030,40,y
+British Columbia,bio_ppl,2030,45,y
+British Columbia,igcc,2030,45,y
+British Columbia,coal_adv_ccs,2030,45,y
+British Columbia,loil_ppl,2030,45,y
+British Columbia,geo_ppl,2030,40,y
+British Columbia,HYDROGEN_BLUE,2030,45,y
+British Columbia,HYDROGEN_GREEN,2030,45,y
+British Columbia,hydro_hc,2030,100,y
+British Columbia,hydro_lc,2030,80,y
+British Columbia,gas_cc,2030,45,y
+British Columbia,gas_cc_ccs,2030,45,y
+British Columbia,gas_ppl,2030,45,y
+British Columbia,gas_ct,2030,45,y
+British Columbia,nuc_lc,2030,60,y
+British Columbia,nuc_hc,2030,60,y
+British Columbia,foil_ppl,2030,45,y
+British Columbia,solar_pv_ppl,2030,30,y
+British Columbia,nan,2030,30,y
+British Columbia,stor_ppl,2030,15,y
+British Columbia,STOR_PUMP,2030,100,y
+British Columbia,wind_ppf,2030,30,y
+British Columbia,wind_ppl,2030,30,y
+British Columbia,bio_istig,2035,40,y
+British Columbia,bio_ppl,2035,45,y
+British Columbia,igcc,2035,45,y
+British Columbia,coal_adv_ccs,2035,45,y
+British Columbia,loil_ppl,2035,45,y
+British Columbia,geo_ppl,2035,40,y
+British Columbia,HYDROGEN_BLUE,2035,45,y
+British Columbia,HYDROGEN_GREEN,2035,45,y
+British Columbia,hydro_hc,2035,100,y
+British Columbia,hydro_lc,2035,80,y
+British Columbia,gas_cc,2035,45,y
+British Columbia,gas_cc_ccs,2035,45,y
+British Columbia,gas_ppl,2035,45,y
+British Columbia,gas_ct,2035,45,y
+British Columbia,nuc_lc,2035,60,y
+British Columbia,nuc_hc,2035,60,y
+British Columbia,foil_ppl,2035,45,y
+British Columbia,solar_pv_ppl,2035,30,y
+British Columbia,nan,2035,30,y
+British Columbia,stor_ppl,2035,15,y
+British Columbia,STOR_PUMP,2035,100,y
+British Columbia,wind_ppf,2035,30,y
+British Columbia,wind_ppl,2035,30,y
+British Columbia,bio_istig,2040,40,y
+British Columbia,bio_ppl,2040,45,y
+British Columbia,igcc,2040,45,y
+British Columbia,coal_adv_ccs,2040,45,y
+British Columbia,loil_ppl,2040,45,y
+British Columbia,geo_ppl,2040,40,y
+British Columbia,HYDROGEN_BLUE,2040,45,y
+British Columbia,HYDROGEN_GREEN,2040,45,y
+British Columbia,hydro_hc,2040,100,y
+British Columbia,hydro_lc,2040,80,y
+British Columbia,gas_cc,2040,45,y
+British Columbia,gas_cc_ccs,2040,45,y
+British Columbia,gas_ppl,2040,45,y
+British Columbia,gas_ct,2040,45,y
+British Columbia,nuc_lc,2040,60,y
+British Columbia,nuc_hc,2040,60,y
+British Columbia,foil_ppl,2040,45,y
+British Columbia,solar_pv_ppl,2040,30,y
+British Columbia,nan,2040,30,y
+British Columbia,stor_ppl,2040,15,y
+British Columbia,STOR_PUMP,2040,100,y
+British Columbia,wind_ppf,2040,30,y
+British Columbia,wind_ppl,2040,30,y
+British Columbia,bio_istig,2045,40,y
+British Columbia,bio_ppl,2045,45,y
+British Columbia,igcc,2045,45,y
+British Columbia,coal_adv_ccs,2045,45,y
+British Columbia,loil_ppl,2045,45,y
+British Columbia,geo_ppl,2045,40,y
+British Columbia,HYDROGEN_BLUE,2045,45,y
+British Columbia,HYDROGEN_GREEN,2045,45,y
+British Columbia,hydro_hc,2045,100,y
+British Columbia,hydro_lc,2045,80,y
+British Columbia,gas_cc,2045,45,y
+British Columbia,gas_cc_ccs,2045,45,y
+British Columbia,gas_ppl,2045,45,y
+British Columbia,gas_ct,2045,45,y
+British Columbia,nuc_lc,2045,60,y
+British Columbia,nuc_hc,2045,60,y
+British Columbia,foil_ppl,2045,45,y
+British Columbia,solar_pv_ppl,2045,30,y
+British Columbia,nan,2045,30,y
+British Columbia,stor_ppl,2045,15,y
+British Columbia,STOR_PUMP,2045,100,y
+British Columbia,wind_ppf,2045,30,y
+British Columbia,wind_ppl,2045,30,y
+British Columbia,bio_istig,2050,40,y
+British Columbia,bio_ppl,2050,45,y
+British Columbia,igcc,2050,45,y
+British Columbia,coal_adv_ccs,2050,45,y
+British Columbia,loil_ppl,2050,45,y
+British Columbia,geo_ppl,2050,40,y
+British Columbia,HYDROGEN_BLUE,2050,45,y
+British Columbia,HYDROGEN_GREEN,2050,45,y
+British Columbia,hydro_hc,2050,100,y
+British Columbia,hydro_lc,2050,80,y
+British Columbia,gas_cc,2050,45,y
+British Columbia,gas_cc_ccs,2050,45,y
+British Columbia,gas_ppl,2050,45,y
+British Columbia,gas_ct,2050,45,y
+British Columbia,nuc_lc,2050,60,y
+British Columbia,nuc_hc,2050,60,y
+British Columbia,foil_ppl,2050,45,y
+British Columbia,solar_pv_ppl,2050,30,y
+British Columbia,nan,2050,30,y
+British Columbia,stor_ppl,2050,15,y
+British Columbia,STOR_PUMP,2050,100,y
+British Columbia,wind_ppf,2050,30,y
+British Columbia,wind_ppl,2050,30,y
+British Columbia,bio_istig,2055,40,y
+British Columbia,bio_ppl,2055,45,y
+British Columbia,igcc,2055,45,y
+British Columbia,coal_adv_ccs,2055,45,y
+British Columbia,loil_ppl,2055,45,y
+British Columbia,geo_ppl,2055,40,y
+British Columbia,HYDROGEN_BLUE,2055,45,y
+British Columbia,HYDROGEN_GREEN,2055,45,y
+British Columbia,hydro_hc,2055,100,y
+British Columbia,hydro_lc,2055,80,y
+British Columbia,gas_cc,2055,45,y
+British Columbia,gas_cc_ccs,2055,45,y
+British Columbia,gas_ppl,2055,45,y
+British Columbia,gas_ct,2055,45,y
+British Columbia,nuc_lc,2055,60,y
+British Columbia,nuc_hc,2055,60,y
+British Columbia,foil_ppl,2055,45,y
+British Columbia,solar_pv_ppl,2055,30,y
+British Columbia,nan,2055,30,y
+British Columbia,stor_ppl,2055,15,y
+British Columbia,STOR_PUMP,2055,100,y
+British Columbia,wind_ppf,2055,30,y
+British Columbia,wind_ppl,2055,30,y
+British Columbia,bio_istig,2060,40,y
+British Columbia,bio_ppl,2060,45,y
+British Columbia,igcc,2060,45,y
+British Columbia,coal_adv_ccs,2060,45,y
+British Columbia,loil_ppl,2060,45,y
+British Columbia,geo_ppl,2060,40,y
+British Columbia,HYDROGEN_BLUE,2060,45,y
+British Columbia,HYDROGEN_GREEN,2060,45,y
+British Columbia,hydro_hc,2060,100,y
+British Columbia,hydro_lc,2060,80,y
+British Columbia,gas_cc,2060,45,y
+British Columbia,gas_cc_ccs,2060,45,y
+British Columbia,gas_ppl,2060,45,y
+British Columbia,gas_ct,2060,45,y
+British Columbia,nuc_lc,2060,60,y
+British Columbia,nuc_hc,2060,60,y
+British Columbia,foil_ppl,2060,45,y
+British Columbia,solar_pv_ppl,2060,30,y
+British Columbia,nan,2060,30,y
+British Columbia,stor_ppl,2060,15,y
+British Columbia,STOR_PUMP,2060,100,y
+British Columbia,wind_ppf,2060,30,y
+British Columbia,wind_ppl,2060,30,y
+New Brunswick,bio_istig,1960,40,y
+New Brunswick,bio_ppl,1960,45,y
+New Brunswick,igcc,1960,45,y
+New Brunswick,coal_adv_ccs,1960,45,y
+New Brunswick,loil_ppl,1960,45,y
+New Brunswick,geo_ppl,1960,40,y
+New Brunswick,HYDROGEN_BLUE,1960,45,y
+New Brunswick,HYDROGEN_GREEN,1960,45,y
+New Brunswick,hydro_hc,1960,100,y
+New Brunswick,hydro_lc,1960,80,y
+New Brunswick,gas_cc,1960,45,y
+New Brunswick,gas_cc_ccs,1960,45,y
+New Brunswick,gas_ppl,1960,45,y
+New Brunswick,gas_ct,1960,45,y
+New Brunswick,nuc_lc,1960,60,y
+New Brunswick,nuc_hc,1960,60,y
+New Brunswick,foil_ppl,1960,45,y
+New Brunswick,solar_pv_ppl,1960,30,y
+New Brunswick,nan,1960,30,y
+New Brunswick,stor_ppl,1960,15,y
+New Brunswick,STOR_PUMP,1960,100,y
+New Brunswick,wind_ppf,1960,30,y
+New Brunswick,wind_ppl,1960,30,y
+New Brunswick,bio_istig,1965,40,y
+New Brunswick,bio_ppl,1965,45,y
+New Brunswick,igcc,1965,45,y
+New Brunswick,coal_adv_ccs,1965,45,y
+New Brunswick,loil_ppl,1965,45,y
+New Brunswick,geo_ppl,1965,40,y
+New Brunswick,HYDROGEN_BLUE,1965,45,y
+New Brunswick,HYDROGEN_GREEN,1965,45,y
+New Brunswick,hydro_hc,1965,100,y
+New Brunswick,hydro_lc,1965,80,y
+New Brunswick,gas_cc,1965,45,y
+New Brunswick,gas_cc_ccs,1965,45,y
+New Brunswick,gas_ppl,1965,45,y
+New Brunswick,gas_ct,1965,45,y
+New Brunswick,nuc_lc,1965,60,y
+New Brunswick,nuc_hc,1965,60,y
+New Brunswick,foil_ppl,1965,45,y
+New Brunswick,solar_pv_ppl,1965,30,y
+New Brunswick,nan,1965,30,y
+New Brunswick,stor_ppl,1965,15,y
+New Brunswick,STOR_PUMP,1965,100,y
+New Brunswick,wind_ppf,1965,30,y
+New Brunswick,wind_ppl,1965,30,y
+New Brunswick,bio_istig,1970,40,y
+New Brunswick,bio_ppl,1970,45,y
+New Brunswick,igcc,1970,45,y
+New Brunswick,coal_adv_ccs,1970,45,y
+New Brunswick,loil_ppl,1970,45,y
+New Brunswick,geo_ppl,1970,40,y
+New Brunswick,HYDROGEN_BLUE,1970,45,y
+New Brunswick,HYDROGEN_GREEN,1970,45,y
+New Brunswick,hydro_hc,1970,100,y
+New Brunswick,hydro_lc,1970,80,y
+New Brunswick,gas_cc,1970,45,y
+New Brunswick,gas_cc_ccs,1970,45,y
+New Brunswick,gas_ppl,1970,45,y
+New Brunswick,gas_ct,1970,45,y
+New Brunswick,nuc_lc,1970,60,y
+New Brunswick,nuc_hc,1970,60,y
+New Brunswick,foil_ppl,1970,45,y
+New Brunswick,solar_pv_ppl,1970,30,y
+New Brunswick,nan,1970,30,y
+New Brunswick,stor_ppl,1970,15,y
+New Brunswick,STOR_PUMP,1970,100,y
+New Brunswick,wind_ppf,1970,30,y
+New Brunswick,wind_ppl,1970,30,y
+New Brunswick,bio_istig,1975,40,y
+New Brunswick,bio_ppl,1975,45,y
+New Brunswick,igcc,1975,45,y
+New Brunswick,coal_adv_ccs,1975,45,y
+New Brunswick,loil_ppl,1975,45,y
+New Brunswick,geo_ppl,1975,40,y
+New Brunswick,HYDROGEN_BLUE,1975,45,y
+New Brunswick,HYDROGEN_GREEN,1975,45,y
+New Brunswick,hydro_hc,1975,100,y
+New Brunswick,hydro_lc,1975,80,y
+New Brunswick,gas_cc,1975,45,y
+New Brunswick,gas_cc_ccs,1975,45,y
+New Brunswick,gas_ppl,1975,45,y
+New Brunswick,gas_ct,1975,45,y
+New Brunswick,nuc_lc,1975,60,y
+New Brunswick,nuc_hc,1975,60,y
+New Brunswick,foil_ppl,1975,45,y
+New Brunswick,solar_pv_ppl,1975,30,y
+New Brunswick,nan,1975,30,y
+New Brunswick,stor_ppl,1975,15,y
+New Brunswick,STOR_PUMP,1975,100,y
+New Brunswick,wind_ppf,1975,30,y
+New Brunswick,wind_ppl,1975,30,y
+New Brunswick,bio_istig,1980,40,y
+New Brunswick,bio_ppl,1980,45,y
+New Brunswick,igcc,1980,45,y
+New Brunswick,coal_adv_ccs,1980,45,y
+New Brunswick,loil_ppl,1980,45,y
+New Brunswick,geo_ppl,1980,40,y
+New Brunswick,HYDROGEN_BLUE,1980,45,y
+New Brunswick,HYDROGEN_GREEN,1980,45,y
+New Brunswick,hydro_hc,1980,100,y
+New Brunswick,hydro_lc,1980,80,y
+New Brunswick,gas_cc,1980,45,y
+New Brunswick,gas_cc_ccs,1980,45,y
+New Brunswick,gas_ppl,1980,45,y
+New Brunswick,gas_ct,1980,45,y
+New Brunswick,nuc_lc,1980,60,y
+New Brunswick,nuc_hc,1980,60,y
+New Brunswick,foil_ppl,1980,45,y
+New Brunswick,solar_pv_ppl,1980,30,y
+New Brunswick,nan,1980,30,y
+New Brunswick,stor_ppl,1980,15,y
+New Brunswick,STOR_PUMP,1980,100,y
+New Brunswick,wind_ppf,1980,30,y
+New Brunswick,wind_ppl,1980,30,y
+New Brunswick,bio_istig,1985,40,y
+New Brunswick,bio_ppl,1985,45,y
+New Brunswick,igcc,1985,45,y
+New Brunswick,coal_adv_ccs,1985,45,y
+New Brunswick,loil_ppl,1985,45,y
+New Brunswick,geo_ppl,1985,40,y
+New Brunswick,HYDROGEN_BLUE,1985,45,y
+New Brunswick,HYDROGEN_GREEN,1985,45,y
+New Brunswick,hydro_hc,1985,100,y
+New Brunswick,hydro_lc,1985,80,y
+New Brunswick,gas_cc,1985,45,y
+New Brunswick,gas_cc_ccs,1985,45,y
+New Brunswick,gas_ppl,1985,45,y
+New Brunswick,gas_ct,1985,45,y
+New Brunswick,nuc_lc,1985,60,y
+New Brunswick,nuc_hc,1985,60,y
+New Brunswick,foil_ppl,1985,45,y
+New Brunswick,solar_pv_ppl,1985,30,y
+New Brunswick,nan,1985,30,y
+New Brunswick,stor_ppl,1985,15,y
+New Brunswick,STOR_PUMP,1985,100,y
+New Brunswick,wind_ppf,1985,30,y
+New Brunswick,wind_ppl,1985,30,y
+New Brunswick,bio_istig,1990,40,y
+New Brunswick,bio_ppl,1990,45,y
+New Brunswick,igcc,1990,45,y
+New Brunswick,coal_adv_ccs,1990,45,y
+New Brunswick,loil_ppl,1990,45,y
+New Brunswick,geo_ppl,1990,40,y
+New Brunswick,HYDROGEN_BLUE,1990,45,y
+New Brunswick,HYDROGEN_GREEN,1990,45,y
+New Brunswick,hydro_hc,1990,100,y
+New Brunswick,hydro_lc,1990,80,y
+New Brunswick,gas_cc,1990,45,y
+New Brunswick,gas_cc_ccs,1990,45,y
+New Brunswick,gas_ppl,1990,45,y
+New Brunswick,gas_ct,1990,45,y
+New Brunswick,nuc_lc,1990,60,y
+New Brunswick,nuc_hc,1990,60,y
+New Brunswick,foil_ppl,1990,45,y
+New Brunswick,solar_pv_ppl,1990,30,y
+New Brunswick,nan,1990,30,y
+New Brunswick,stor_ppl,1990,15,y
+New Brunswick,STOR_PUMP,1990,100,y
+New Brunswick,wind_ppf,1990,30,y
+New Brunswick,wind_ppl,1990,30,y
+New Brunswick,bio_istig,1995,40,y
+New Brunswick,bio_ppl,1995,45,y
+New Brunswick,igcc,1995,45,y
+New Brunswick,coal_adv_ccs,1995,45,y
+New Brunswick,loil_ppl,1995,45,y
+New Brunswick,geo_ppl,1995,40,y
+New Brunswick,HYDROGEN_BLUE,1995,45,y
+New Brunswick,HYDROGEN_GREEN,1995,45,y
+New Brunswick,hydro_hc,1995,100,y
+New Brunswick,hydro_lc,1995,80,y
+New Brunswick,gas_cc,1995,45,y
+New Brunswick,gas_cc_ccs,1995,45,y
+New Brunswick,gas_ppl,1995,45,y
+New Brunswick,gas_ct,1995,45,y
+New Brunswick,nuc_lc,1995,60,y
+New Brunswick,nuc_hc,1995,60,y
+New Brunswick,foil_ppl,1995,45,y
+New Brunswick,solar_pv_ppl,1995,30,y
+New Brunswick,nan,1995,30,y
+New Brunswick,stor_ppl,1995,15,y
+New Brunswick,STOR_PUMP,1995,100,y
+New Brunswick,wind_ppf,1995,30,y
+New Brunswick,wind_ppl,1995,30,y
+New Brunswick,bio_istig,2000,40,y
+New Brunswick,bio_ppl,2000,45,y
+New Brunswick,igcc,2000,45,y
+New Brunswick,coal_adv_ccs,2000,45,y
+New Brunswick,loil_ppl,2000,45,y
+New Brunswick,geo_ppl,2000,40,y
+New Brunswick,HYDROGEN_BLUE,2000,45,y
+New Brunswick,HYDROGEN_GREEN,2000,45,y
+New Brunswick,hydro_hc,2000,100,y
+New Brunswick,hydro_lc,2000,80,y
+New Brunswick,gas_cc,2000,45,y
+New Brunswick,gas_cc_ccs,2000,45,y
+New Brunswick,gas_ppl,2000,45,y
+New Brunswick,gas_ct,2000,45,y
+New Brunswick,nuc_lc,2000,60,y
+New Brunswick,nuc_hc,2000,60,y
+New Brunswick,foil_ppl,2000,45,y
+New Brunswick,solar_pv_ppl,2000,30,y
+New Brunswick,nan,2000,30,y
+New Brunswick,stor_ppl,2000,15,y
+New Brunswick,STOR_PUMP,2000,100,y
+New Brunswick,wind_ppf,2000,30,y
+New Brunswick,wind_ppl,2000,30,y
+New Brunswick,bio_istig,2005,40,y
+New Brunswick,bio_ppl,2005,45,y
+New Brunswick,igcc,2005,45,y
+New Brunswick,coal_adv_ccs,2005,45,y
+New Brunswick,loil_ppl,2005,45,y
+New Brunswick,geo_ppl,2005,40,y
+New Brunswick,HYDROGEN_BLUE,2005,45,y
+New Brunswick,HYDROGEN_GREEN,2005,45,y
+New Brunswick,hydro_hc,2005,100,y
+New Brunswick,hydro_lc,2005,80,y
+New Brunswick,gas_cc,2005,45,y
+New Brunswick,gas_cc_ccs,2005,45,y
+New Brunswick,gas_ppl,2005,45,y
+New Brunswick,gas_ct,2005,45,y
+New Brunswick,nuc_lc,2005,60,y
+New Brunswick,nuc_hc,2005,60,y
+New Brunswick,foil_ppl,2005,45,y
+New Brunswick,solar_pv_ppl,2005,30,y
+New Brunswick,nan,2005,30,y
+New Brunswick,stor_ppl,2005,15,y
+New Brunswick,STOR_PUMP,2005,100,y
+New Brunswick,wind_ppf,2005,30,y
+New Brunswick,wind_ppl,2005,30,y
+New Brunswick,bio_istig,2010,40,y
+New Brunswick,bio_ppl,2010,45,y
+New Brunswick,igcc,2010,45,y
+New Brunswick,coal_adv_ccs,2010,45,y
+New Brunswick,loil_ppl,2010,45,y
+New Brunswick,geo_ppl,2010,40,y
+New Brunswick,HYDROGEN_BLUE,2010,45,y
+New Brunswick,HYDROGEN_GREEN,2010,45,y
+New Brunswick,hydro_hc,2010,100,y
+New Brunswick,hydro_lc,2010,80,y
+New Brunswick,gas_cc,2010,45,y
+New Brunswick,gas_cc_ccs,2010,45,y
+New Brunswick,gas_ppl,2010,45,y
+New Brunswick,gas_ct,2010,45,y
+New Brunswick,nuc_lc,2010,60,y
+New Brunswick,nuc_hc,2010,60,y
+New Brunswick,foil_ppl,2010,45,y
+New Brunswick,solar_pv_ppl,2010,30,y
+New Brunswick,nan,2010,30,y
+New Brunswick,stor_ppl,2010,15,y
+New Brunswick,STOR_PUMP,2010,100,y
+New Brunswick,wind_ppf,2010,30,y
+New Brunswick,wind_ppl,2010,30,y
+New Brunswick,bio_istig,2015,40,y
+New Brunswick,bio_ppl,2015,45,y
+New Brunswick,igcc,2015,45,y
+New Brunswick,coal_adv_ccs,2015,45,y
+New Brunswick,loil_ppl,2015,45,y
+New Brunswick,geo_ppl,2015,40,y
+New Brunswick,HYDROGEN_BLUE,2015,45,y
+New Brunswick,HYDROGEN_GREEN,2015,45,y
+New Brunswick,hydro_hc,2015,100,y
+New Brunswick,hydro_lc,2015,80,y
+New Brunswick,gas_cc,2015,45,y
+New Brunswick,gas_cc_ccs,2015,45,y
+New Brunswick,gas_ppl,2015,45,y
+New Brunswick,gas_ct,2015,45,y
+New Brunswick,nuc_lc,2015,60,y
+New Brunswick,nuc_hc,2015,60,y
+New Brunswick,foil_ppl,2015,45,y
+New Brunswick,solar_pv_ppl,2015,30,y
+New Brunswick,nan,2015,30,y
+New Brunswick,stor_ppl,2015,15,y
+New Brunswick,STOR_PUMP,2015,100,y
+New Brunswick,wind_ppf,2015,30,y
+New Brunswick,wind_ppl,2015,30,y
+New Brunswick,bio_istig,2020,40,y
+New Brunswick,bio_ppl,2020,45,y
+New Brunswick,igcc,2020,45,y
+New Brunswick,coal_adv_ccs,2020,45,y
+New Brunswick,loil_ppl,2020,45,y
+New Brunswick,geo_ppl,2020,40,y
+New Brunswick,HYDROGEN_BLUE,2020,45,y
+New Brunswick,HYDROGEN_GREEN,2020,45,y
+New Brunswick,hydro_hc,2020,100,y
+New Brunswick,hydro_lc,2020,80,y
+New Brunswick,gas_cc,2020,45,y
+New Brunswick,gas_cc_ccs,2020,45,y
+New Brunswick,gas_ppl,2020,45,y
+New Brunswick,gas_ct,2020,45,y
+New Brunswick,nuc_lc,2020,60,y
+New Brunswick,nuc_hc,2020,60,y
+New Brunswick,foil_ppl,2020,45,y
+New Brunswick,solar_pv_ppl,2020,30,y
+New Brunswick,nan,2020,30,y
+New Brunswick,stor_ppl,2020,15,y
+New Brunswick,STOR_PUMP,2020,100,y
+New Brunswick,wind_ppf,2020,30,y
+New Brunswick,wind_ppl,2020,30,y
+New Brunswick,bio_istig,2025,40,y
+New Brunswick,bio_ppl,2025,45,y
+New Brunswick,igcc,2025,45,y
+New Brunswick,coal_adv_ccs,2025,45,y
+New Brunswick,loil_ppl,2025,45,y
+New Brunswick,geo_ppl,2025,40,y
+New Brunswick,HYDROGEN_BLUE,2025,45,y
+New Brunswick,HYDROGEN_GREEN,2025,45,y
+New Brunswick,hydro_hc,2025,100,y
+New Brunswick,hydro_lc,2025,80,y
+New Brunswick,gas_cc,2025,45,y
+New Brunswick,gas_cc_ccs,2025,45,y
+New Brunswick,gas_ppl,2025,45,y
+New Brunswick,gas_ct,2025,45,y
+New Brunswick,nuc_lc,2025,60,y
+New Brunswick,nuc_hc,2025,60,y
+New Brunswick,foil_ppl,2025,45,y
+New Brunswick,solar_pv_ppl,2025,30,y
+New Brunswick,nan,2025,30,y
+New Brunswick,stor_ppl,2025,15,y
+New Brunswick,STOR_PUMP,2025,100,y
+New Brunswick,wind_ppf,2025,30,y
+New Brunswick,wind_ppl,2025,30,y
+New Brunswick,bio_istig,2030,40,y
+New Brunswick,bio_ppl,2030,45,y
+New Brunswick,igcc,2030,45,y
+New Brunswick,coal_adv_ccs,2030,45,y
+New Brunswick,loil_ppl,2030,45,y
+New Brunswick,geo_ppl,2030,40,y
+New Brunswick,HYDROGEN_BLUE,2030,45,y
+New Brunswick,HYDROGEN_GREEN,2030,45,y
+New Brunswick,hydro_hc,2030,100,y
+New Brunswick,hydro_lc,2030,80,y
+New Brunswick,gas_cc,2030,45,y
+New Brunswick,gas_cc_ccs,2030,45,y
+New Brunswick,gas_ppl,2030,45,y
+New Brunswick,gas_ct,2030,45,y
+New Brunswick,nuc_lc,2030,60,y
+New Brunswick,nuc_hc,2030,60,y
+New Brunswick,foil_ppl,2030,45,y
+New Brunswick,solar_pv_ppl,2030,30,y
+New Brunswick,nan,2030,30,y
+New Brunswick,stor_ppl,2030,15,y
+New Brunswick,STOR_PUMP,2030,100,y
+New Brunswick,wind_ppf,2030,30,y
+New Brunswick,wind_ppl,2030,30,y
+New Brunswick,bio_istig,2035,40,y
+New Brunswick,bio_ppl,2035,45,y
+New Brunswick,igcc,2035,45,y
+New Brunswick,coal_adv_ccs,2035,45,y
+New Brunswick,loil_ppl,2035,45,y
+New Brunswick,geo_ppl,2035,40,y
+New Brunswick,HYDROGEN_BLUE,2035,45,y
+New Brunswick,HYDROGEN_GREEN,2035,45,y
+New Brunswick,hydro_hc,2035,100,y
+New Brunswick,hydro_lc,2035,80,y
+New Brunswick,gas_cc,2035,45,y
+New Brunswick,gas_cc_ccs,2035,45,y
+New Brunswick,gas_ppl,2035,45,y
+New Brunswick,gas_ct,2035,45,y
+New Brunswick,nuc_lc,2035,60,y
+New Brunswick,nuc_hc,2035,60,y
+New Brunswick,foil_ppl,2035,45,y
+New Brunswick,solar_pv_ppl,2035,30,y
+New Brunswick,nan,2035,30,y
+New Brunswick,stor_ppl,2035,15,y
+New Brunswick,STOR_PUMP,2035,100,y
+New Brunswick,wind_ppf,2035,30,y
+New Brunswick,wind_ppl,2035,30,y
+New Brunswick,bio_istig,2040,40,y
+New Brunswick,bio_ppl,2040,45,y
+New Brunswick,igcc,2040,45,y
+New Brunswick,coal_adv_ccs,2040,45,y
+New Brunswick,loil_ppl,2040,45,y
+New Brunswick,geo_ppl,2040,40,y
+New Brunswick,HYDROGEN_BLUE,2040,45,y
+New Brunswick,HYDROGEN_GREEN,2040,45,y
+New Brunswick,hydro_hc,2040,100,y
+New Brunswick,hydro_lc,2040,80,y
+New Brunswick,gas_cc,2040,45,y
+New Brunswick,gas_cc_ccs,2040,45,y
+New Brunswick,gas_ppl,2040,45,y
+New Brunswick,gas_ct,2040,45,y
+New Brunswick,nuc_lc,2040,60,y
+New Brunswick,nuc_hc,2040,60,y
+New Brunswick,foil_ppl,2040,45,y
+New Brunswick,solar_pv_ppl,2040,30,y
+New Brunswick,nan,2040,30,y
+New Brunswick,stor_ppl,2040,15,y
+New Brunswick,STOR_PUMP,2040,100,y
+New Brunswick,wind_ppf,2040,30,y
+New Brunswick,wind_ppl,2040,30,y
+New Brunswick,bio_istig,2045,40,y
+New Brunswick,bio_ppl,2045,45,y
+New Brunswick,igcc,2045,45,y
+New Brunswick,coal_adv_ccs,2045,45,y
+New Brunswick,loil_ppl,2045,45,y
+New Brunswick,geo_ppl,2045,40,y
+New Brunswick,HYDROGEN_BLUE,2045,45,y
+New Brunswick,HYDROGEN_GREEN,2045,45,y
+New Brunswick,hydro_hc,2045,100,y
+New Brunswick,hydro_lc,2045,80,y
+New Brunswick,gas_cc,2045,45,y
+New Brunswick,gas_cc_ccs,2045,45,y
+New Brunswick,gas_ppl,2045,45,y
+New Brunswick,gas_ct,2045,45,y
+New Brunswick,nuc_lc,2045,60,y
+New Brunswick,nuc_hc,2045,60,y
+New Brunswick,foil_ppl,2045,45,y
+New Brunswick,solar_pv_ppl,2045,30,y
+New Brunswick,nan,2045,30,y
+New Brunswick,stor_ppl,2045,15,y
+New Brunswick,STOR_PUMP,2045,100,y
+New Brunswick,wind_ppf,2045,30,y
+New Brunswick,wind_ppl,2045,30,y
+New Brunswick,bio_istig,2050,40,y
+New Brunswick,bio_ppl,2050,45,y
+New Brunswick,igcc,2050,45,y
+New Brunswick,coal_adv_ccs,2050,45,y
+New Brunswick,loil_ppl,2050,45,y
+New Brunswick,geo_ppl,2050,40,y
+New Brunswick,HYDROGEN_BLUE,2050,45,y
+New Brunswick,HYDROGEN_GREEN,2050,45,y
+New Brunswick,hydro_hc,2050,100,y
+New Brunswick,hydro_lc,2050,80,y
+New Brunswick,gas_cc,2050,45,y
+New Brunswick,gas_cc_ccs,2050,45,y
+New Brunswick,gas_ppl,2050,45,y
+New Brunswick,gas_ct,2050,45,y
+New Brunswick,nuc_lc,2050,60,y
+New Brunswick,nuc_hc,2050,60,y
+New Brunswick,foil_ppl,2050,45,y
+New Brunswick,solar_pv_ppl,2050,30,y
+New Brunswick,nan,2050,30,y
+New Brunswick,stor_ppl,2050,15,y
+New Brunswick,STOR_PUMP,2050,100,y
+New Brunswick,wind_ppf,2050,30,y
+New Brunswick,wind_ppl,2050,30,y
+New Brunswick,bio_istig,2055,40,y
+New Brunswick,bio_ppl,2055,45,y
+New Brunswick,igcc,2055,45,y
+New Brunswick,coal_adv_ccs,2055,45,y
+New Brunswick,loil_ppl,2055,45,y
+New Brunswick,geo_ppl,2055,40,y
+New Brunswick,HYDROGEN_BLUE,2055,45,y
+New Brunswick,HYDROGEN_GREEN,2055,45,y
+New Brunswick,hydro_hc,2055,100,y
+New Brunswick,hydro_lc,2055,80,y
+New Brunswick,gas_cc,2055,45,y
+New Brunswick,gas_cc_ccs,2055,45,y
+New Brunswick,gas_ppl,2055,45,y
+New Brunswick,gas_ct,2055,45,y
+New Brunswick,nuc_lc,2055,60,y
+New Brunswick,nuc_hc,2055,60,y
+New Brunswick,foil_ppl,2055,45,y
+New Brunswick,solar_pv_ppl,2055,30,y
+New Brunswick,nan,2055,30,y
+New Brunswick,stor_ppl,2055,15,y
+New Brunswick,STOR_PUMP,2055,100,y
+New Brunswick,wind_ppf,2055,30,y
+New Brunswick,wind_ppl,2055,30,y
+New Brunswick,bio_istig,2060,40,y
+New Brunswick,bio_ppl,2060,45,y
+New Brunswick,igcc,2060,45,y
+New Brunswick,coal_adv_ccs,2060,45,y
+New Brunswick,loil_ppl,2060,45,y
+New Brunswick,geo_ppl,2060,40,y
+New Brunswick,HYDROGEN_BLUE,2060,45,y
+New Brunswick,HYDROGEN_GREEN,2060,45,y
+New Brunswick,hydro_hc,2060,100,y
+New Brunswick,hydro_lc,2060,80,y
+New Brunswick,gas_cc,2060,45,y
+New Brunswick,gas_cc_ccs,2060,45,y
+New Brunswick,gas_ppl,2060,45,y
+New Brunswick,gas_ct,2060,45,y
+New Brunswick,nuc_lc,2060,60,y
+New Brunswick,nuc_hc,2060,60,y
+New Brunswick,foil_ppl,2060,45,y
+New Brunswick,solar_pv_ppl,2060,30,y
+New Brunswick,nan,2060,30,y
+New Brunswick,stor_ppl,2060,15,y
+New Brunswick,STOR_PUMP,2060,100,y
+New Brunswick,wind_ppf,2060,30,y
+New Brunswick,wind_ppl,2060,30,y
+Newfoundland and Labrador,bio_istig,1960,40,y
+Newfoundland and Labrador,bio_ppl,1960,45,y
+Newfoundland and Labrador,igcc,1960,45,y
+Newfoundland and Labrador,coal_adv_ccs,1960,45,y
+Newfoundland and Labrador,loil_ppl,1960,45,y
+Newfoundland and Labrador,geo_ppl,1960,40,y
+Newfoundland and Labrador,HYDROGEN_BLUE,1960,45,y
+Newfoundland and Labrador,HYDROGEN_GREEN,1960,45,y
+Newfoundland and Labrador,hydro_hc,1960,100,y
+Newfoundland and Labrador,hydro_lc,1960,80,y
+Newfoundland and Labrador,gas_cc,1960,45,y
+Newfoundland and Labrador,gas_cc_ccs,1960,45,y
+Newfoundland and Labrador,gas_ppl,1960,45,y
+Newfoundland and Labrador,gas_ct,1960,45,y
+Newfoundland and Labrador,nuc_lc,1960,60,y
+Newfoundland and Labrador,nuc_hc,1960,60,y
+Newfoundland and Labrador,foil_ppl,1960,45,y
+Newfoundland and Labrador,solar_pv_ppl,1960,30,y
+Newfoundland and Labrador,nan,1960,30,y
+Newfoundland and Labrador,stor_ppl,1960,15,y
+Newfoundland and Labrador,STOR_PUMP,1960,100,y
+Newfoundland and Labrador,wind_ppf,1960,30,y
+Newfoundland and Labrador,wind_ppl,1960,30,y
+Newfoundland and Labrador,bio_istig,1965,40,y
+Newfoundland and Labrador,bio_ppl,1965,45,y
+Newfoundland and Labrador,igcc,1965,45,y
+Newfoundland and Labrador,coal_adv_ccs,1965,45,y
+Newfoundland and Labrador,loil_ppl,1965,45,y
+Newfoundland and Labrador,geo_ppl,1965,40,y
+Newfoundland and Labrador,HYDROGEN_BLUE,1965,45,y
+Newfoundland and Labrador,HYDROGEN_GREEN,1965,45,y
+Newfoundland and Labrador,hydro_hc,1965,100,y
+Newfoundland and Labrador,hydro_lc,1965,80,y
+Newfoundland and Labrador,gas_cc,1965,45,y
+Newfoundland and Labrador,gas_cc_ccs,1965,45,y
+Newfoundland and Labrador,gas_ppl,1965,45,y
+Newfoundland and Labrador,gas_ct,1965,45,y
+Newfoundland and Labrador,nuc_lc,1965,60,y
+Newfoundland and Labrador,nuc_hc,1965,60,y
+Newfoundland and Labrador,foil_ppl,1965,45,y
+Newfoundland and Labrador,solar_pv_ppl,1965,30,y
+Newfoundland and Labrador,nan,1965,30,y
+Newfoundland and Labrador,stor_ppl,1965,15,y
+Newfoundland and Labrador,STOR_PUMP,1965,100,y
+Newfoundland and Labrador,wind_ppf,1965,30,y
+Newfoundland and Labrador,wind_ppl,1965,30,y
+Newfoundland and Labrador,bio_istig,1970,40,y
+Newfoundland and Labrador,bio_ppl,1970,45,y
+Newfoundland and Labrador,igcc,1970,45,y
+Newfoundland and Labrador,coal_adv_ccs,1970,45,y
+Newfoundland and Labrador,loil_ppl,1970,45,y
+Newfoundland and Labrador,geo_ppl,1970,40,y
+Newfoundland and Labrador,HYDROGEN_BLUE,1970,45,y
+Newfoundland and Labrador,HYDROGEN_GREEN,1970,45,y
+Newfoundland and Labrador,hydro_hc,1970,100,y
+Newfoundland and Labrador,hydro_lc,1970,80,y
+Newfoundland and Labrador,gas_cc,1970,45,y
+Newfoundland and Labrador,gas_cc_ccs,1970,45,y
+Newfoundland and Labrador,gas_ppl,1970,45,y
+Newfoundland and Labrador,gas_ct,1970,45,y
+Newfoundland and Labrador,nuc_lc,1970,60,y
+Newfoundland and Labrador,nuc_hc,1970,60,y
+Newfoundland and Labrador,foil_ppl,1970,45,y
+Newfoundland and Labrador,solar_pv_ppl,1970,30,y
+Newfoundland and Labrador,nan,1970,30,y
+Newfoundland and Labrador,stor_ppl,1970,15,y
+Newfoundland and Labrador,STOR_PUMP,1970,100,y
+Newfoundland and Labrador,wind_ppf,1970,30,y
+Newfoundland and Labrador,wind_ppl,1970,30,y
+Newfoundland and Labrador,bio_istig,1975,40,y
+Newfoundland and Labrador,bio_ppl,1975,45,y
+Newfoundland and Labrador,igcc,1975,45,y
+Newfoundland and Labrador,coal_adv_ccs,1975,45,y
+Newfoundland and Labrador,loil_ppl,1975,45,y
+Newfoundland and Labrador,geo_ppl,1975,40,y
+Newfoundland and Labrador,HYDROGEN_BLUE,1975,45,y
+Newfoundland and Labrador,HYDROGEN_GREEN,1975,45,y
+Newfoundland and Labrador,hydro_hc,1975,100,y
+Newfoundland and Labrador,hydro_lc,1975,80,y
+Newfoundland and Labrador,gas_cc,1975,45,y
+Newfoundland and Labrador,gas_cc_ccs,1975,45,y
+Newfoundland and Labrador,gas_ppl,1975,45,y
+Newfoundland and Labrador,gas_ct,1975,45,y
+Newfoundland and Labrador,nuc_lc,1975,60,y
+Newfoundland and Labrador,nuc_hc,1975,60,y
+Newfoundland and Labrador,foil_ppl,1975,45,y
+Newfoundland and Labrador,solar_pv_ppl,1975,30,y
+Newfoundland and Labrador,nan,1975,30,y
+Newfoundland and Labrador,stor_ppl,1975,15,y
+Newfoundland and Labrador,STOR_PUMP,1975,100,y
+Newfoundland and Labrador,wind_ppf,1975,30,y
+Newfoundland and Labrador,wind_ppl,1975,30,y
+Newfoundland and Labrador,bio_istig,1980,40,y
+Newfoundland and Labrador,bio_ppl,1980,45,y
+Newfoundland and Labrador,igcc,1980,45,y
+Newfoundland and Labrador,coal_adv_ccs,1980,45,y
+Newfoundland and Labrador,loil_ppl,1980,45,y
+Newfoundland and Labrador,geo_ppl,1980,40,y
+Newfoundland and Labrador,HYDROGEN_BLUE,1980,45,y
+Newfoundland and Labrador,HYDROGEN_GREEN,1980,45,y
+Newfoundland and Labrador,hydro_hc,1980,100,y
+Newfoundland and Labrador,hydro_lc,1980,80,y
+Newfoundland and Labrador,gas_cc,1980,45,y
+Newfoundland and Labrador,gas_cc_ccs,1980,45,y
+Newfoundland and Labrador,gas_ppl,1980,45,y
+Newfoundland and Labrador,gas_ct,1980,45,y
+Newfoundland and Labrador,nuc_lc,1980,60,y
+Newfoundland and Labrador,nuc_hc,1980,60,y
+Newfoundland and Labrador,foil_ppl,1980,45,y
+Newfoundland and Labrador,solar_pv_ppl,1980,30,y
+Newfoundland and Labrador,nan,1980,30,y
+Newfoundland and Labrador,stor_ppl,1980,15,y
+Newfoundland and Labrador,STOR_PUMP,1980,100,y
+Newfoundland and Labrador,wind_ppf,1980,30,y
+Newfoundland and Labrador,wind_ppl,1980,30,y
+Newfoundland and Labrador,bio_istig,1985,40,y
+Newfoundland and Labrador,bio_ppl,1985,45,y
+Newfoundland and Labrador,igcc,1985,45,y
+Newfoundland and Labrador,coal_adv_ccs,1985,45,y
+Newfoundland and Labrador,loil_ppl,1985,45,y
+Newfoundland and Labrador,geo_ppl,1985,40,y
+Newfoundland and Labrador,HYDROGEN_BLUE,1985,45,y
+Newfoundland and Labrador,HYDROGEN_GREEN,1985,45,y
+Newfoundland and Labrador,hydro_hc,1985,100,y
+Newfoundland and Labrador,hydro_lc,1985,80,y
+Newfoundland and Labrador,gas_cc,1985,45,y
+Newfoundland and Labrador,gas_cc_ccs,1985,45,y
+Newfoundland and Labrador,gas_ppl,1985,45,y
+Newfoundland and Labrador,gas_ct,1985,45,y
+Newfoundland and Labrador,nuc_lc,1985,60,y
+Newfoundland and Labrador,nuc_hc,1985,60,y
+Newfoundland and Labrador,foil_ppl,1985,45,y
+Newfoundland and Labrador,solar_pv_ppl,1985,30,y
+Newfoundland and Labrador,nan,1985,30,y
+Newfoundland and Labrador,stor_ppl,1985,15,y
+Newfoundland and Labrador,STOR_PUMP,1985,100,y
+Newfoundland and Labrador,wind_ppf,1985,30,y
+Newfoundland and Labrador,wind_ppl,1985,30,y
+Newfoundland and Labrador,bio_istig,1990,40,y
+Newfoundland and Labrador,bio_ppl,1990,45,y
+Newfoundland and Labrador,igcc,1990,45,y
+Newfoundland and Labrador,coal_adv_ccs,1990,45,y
+Newfoundland and Labrador,loil_ppl,1990,45,y
+Newfoundland and Labrador,geo_ppl,1990,40,y
+Newfoundland and Labrador,HYDROGEN_BLUE,1990,45,y
+Newfoundland and Labrador,HYDROGEN_GREEN,1990,45,y
+Newfoundland and Labrador,hydro_hc,1990,100,y
+Newfoundland and Labrador,hydro_lc,1990,80,y
+Newfoundland and Labrador,gas_cc,1990,45,y
+Newfoundland and Labrador,gas_cc_ccs,1990,45,y
+Newfoundland and Labrador,gas_ppl,1990,45,y
+Newfoundland and Labrador,gas_ct,1990,45,y
+Newfoundland and Labrador,nuc_lc,1990,60,y
+Newfoundland and Labrador,nuc_hc,1990,60,y
+Newfoundland and Labrador,foil_ppl,1990,45,y
+Newfoundland and Labrador,solar_pv_ppl,1990,30,y
+Newfoundland and Labrador,nan,1990,30,y
+Newfoundland and Labrador,stor_ppl,1990,15,y
+Newfoundland and Labrador,STOR_PUMP,1990,100,y
+Newfoundland and Labrador,wind_ppf,1990,30,y
+Newfoundland and Labrador,wind_ppl,1990,30,y
+Newfoundland and Labrador,bio_istig,1995,40,y
+Newfoundland and Labrador,bio_ppl,1995,45,y
+Newfoundland and Labrador,igcc,1995,45,y
+Newfoundland and Labrador,coal_adv_ccs,1995,45,y
+Newfoundland and Labrador,loil_ppl,1995,45,y
+Newfoundland and Labrador,geo_ppl,1995,40,y
+Newfoundland and Labrador,HYDROGEN_BLUE,1995,45,y
+Newfoundland and Labrador,HYDROGEN_GREEN,1995,45,y
+Newfoundland and Labrador,hydro_hc,1995,100,y
+Newfoundland and Labrador,hydro_lc,1995,80,y
+Newfoundland and Labrador,gas_cc,1995,45,y
+Newfoundland and Labrador,gas_cc_ccs,1995,45,y
+Newfoundland and Labrador,gas_ppl,1995,45,y
+Newfoundland and Labrador,gas_ct,1995,45,y
+Newfoundland and Labrador,nuc_lc,1995,60,y
+Newfoundland and Labrador,nuc_hc,1995,60,y
+Newfoundland and Labrador,foil_ppl,1995,45,y
+Newfoundland and Labrador,solar_pv_ppl,1995,30,y
+Newfoundland and Labrador,nan,1995,30,y
+Newfoundland and Labrador,stor_ppl,1995,15,y
+Newfoundland and Labrador,STOR_PUMP,1995,100,y
+Newfoundland and Labrador,wind_ppf,1995,30,y
+Newfoundland and Labrador,wind_ppl,1995,30,y
+Newfoundland and Labrador,bio_istig,2000,40,y
+Newfoundland and Labrador,bio_ppl,2000,45,y
+Newfoundland and Labrador,igcc,2000,45,y
+Newfoundland and Labrador,coal_adv_ccs,2000,45,y
+Newfoundland and Labrador,loil_ppl,2000,45,y
+Newfoundland and Labrador,geo_ppl,2000,40,y
+Newfoundland and Labrador,HYDROGEN_BLUE,2000,45,y
+Newfoundland and Labrador,HYDROGEN_GREEN,2000,45,y
+Newfoundland and Labrador,hydro_hc,2000,100,y
+Newfoundland and Labrador,hydro_lc,2000,80,y
+Newfoundland and Labrador,gas_cc,2000,45,y
+Newfoundland and Labrador,gas_cc_ccs,2000,45,y
+Newfoundland and Labrador,gas_ppl,2000,45,y
+Newfoundland and Labrador,gas_ct,2000,45,y
+Newfoundland and Labrador,nuc_lc,2000,60,y
+Newfoundland and Labrador,nuc_hc,2000,60,y
+Newfoundland and Labrador,foil_ppl,2000,45,y
+Newfoundland and Labrador,solar_pv_ppl,2000,30,y
+Newfoundland and Labrador,nan,2000,30,y
+Newfoundland and Labrador,stor_ppl,2000,15,y
+Newfoundland and Labrador,STOR_PUMP,2000,100,y
+Newfoundland and Labrador,wind_ppf,2000,30,y
+Newfoundland and Labrador,wind_ppl,2000,30,y
+Newfoundland and Labrador,bio_istig,2005,40,y
+Newfoundland and Labrador,bio_ppl,2005,45,y
+Newfoundland and Labrador,igcc,2005,45,y
+Newfoundland and Labrador,coal_adv_ccs,2005,45,y
+Newfoundland and Labrador,loil_ppl,2005,45,y
+Newfoundland and Labrador,geo_ppl,2005,40,y
+Newfoundland and Labrador,HYDROGEN_BLUE,2005,45,y
+Newfoundland and Labrador,HYDROGEN_GREEN,2005,45,y
+Newfoundland and Labrador,hydro_hc,2005,100,y
+Newfoundland and Labrador,hydro_lc,2005,80,y
+Newfoundland and Labrador,gas_cc,2005,45,y
+Newfoundland and Labrador,gas_cc_ccs,2005,45,y
+Newfoundland and Labrador,gas_ppl,2005,45,y
+Newfoundland and Labrador,gas_ct,2005,45,y
+Newfoundland and Labrador,nuc_lc,2005,60,y
+Newfoundland and Labrador,nuc_hc,2005,60,y
+Newfoundland and Labrador,foil_ppl,2005,45,y
+Newfoundland and Labrador,solar_pv_ppl,2005,30,y
+Newfoundland and Labrador,nan,2005,30,y
+Newfoundland and Labrador,stor_ppl,2005,15,y
+Newfoundland and Labrador,STOR_PUMP,2005,100,y
+Newfoundland and Labrador,wind_ppf,2005,30,y
+Newfoundland and Labrador,wind_ppl,2005,30,y
+Newfoundland and Labrador,bio_istig,2010,40,y
+Newfoundland and Labrador,bio_ppl,2010,45,y
+Newfoundland and Labrador,igcc,2010,45,y
+Newfoundland and Labrador,coal_adv_ccs,2010,45,y
+Newfoundland and Labrador,loil_ppl,2010,45,y
+Newfoundland and Labrador,geo_ppl,2010,40,y
+Newfoundland and Labrador,HYDROGEN_BLUE,2010,45,y
+Newfoundland and Labrador,HYDROGEN_GREEN,2010,45,y
+Newfoundland and Labrador,hydro_hc,2010,100,y
+Newfoundland and Labrador,hydro_lc,2010,80,y
+Newfoundland and Labrador,gas_cc,2010,45,y
+Newfoundland and Labrador,gas_cc_ccs,2010,45,y
+Newfoundland and Labrador,gas_ppl,2010,45,y
+Newfoundland and Labrador,gas_ct,2010,45,y
+Newfoundland and Labrador,nuc_lc,2010,60,y
+Newfoundland and Labrador,nuc_hc,2010,60,y
+Newfoundland and Labrador,foil_ppl,2010,45,y
+Newfoundland and Labrador,solar_pv_ppl,2010,30,y
+Newfoundland and Labrador,nan,2010,30,y
+Newfoundland and Labrador,stor_ppl,2010,15,y
+Newfoundland and Labrador,STOR_PUMP,2010,100,y
+Newfoundland and Labrador,wind_ppf,2010,30,y
+Newfoundland and Labrador,wind_ppl,2010,30,y
+Newfoundland and Labrador,bio_istig,2015,40,y
+Newfoundland and Labrador,bio_ppl,2015,45,y
+Newfoundland and Labrador,igcc,2015,45,y
+Newfoundland and Labrador,coal_adv_ccs,2015,45,y
+Newfoundland and Labrador,loil_ppl,2015,45,y
+Newfoundland and Labrador,geo_ppl,2015,40,y
+Newfoundland and Labrador,HYDROGEN_BLUE,2015,45,y
+Newfoundland and Labrador,HYDROGEN_GREEN,2015,45,y
+Newfoundland and Labrador,hydro_hc,2015,100,y
+Newfoundland and Labrador,hydro_lc,2015,80,y
+Newfoundland and Labrador,gas_cc,2015,45,y
+Newfoundland and Labrador,gas_cc_ccs,2015,45,y
+Newfoundland and Labrador,gas_ppl,2015,45,y
+Newfoundland and Labrador,gas_ct,2015,45,y
+Newfoundland and Labrador,nuc_lc,2015,60,y
+Newfoundland and Labrador,nuc_hc,2015,60,y
+Newfoundland and Labrador,foil_ppl,2015,45,y
+Newfoundland and Labrador,solar_pv_ppl,2015,30,y
+Newfoundland and Labrador,nan,2015,30,y
+Newfoundland and Labrador,stor_ppl,2015,15,y
+Newfoundland and Labrador,STOR_PUMP,2015,100,y
+Newfoundland and Labrador,wind_ppf,2015,30,y
+Newfoundland and Labrador,wind_ppl,2015,30,y
+Newfoundland and Labrador,bio_istig,2020,40,y
+Newfoundland and Labrador,bio_ppl,2020,45,y
+Newfoundland and Labrador,igcc,2020,45,y
+Newfoundland and Labrador,coal_adv_ccs,2020,45,y
+Newfoundland and Labrador,loil_ppl,2020,45,y
+Newfoundland and Labrador,geo_ppl,2020,40,y
+Newfoundland and Labrador,HYDROGEN_BLUE,2020,45,y
+Newfoundland and Labrador,HYDROGEN_GREEN,2020,45,y
+Newfoundland and Labrador,hydro_hc,2020,100,y
+Newfoundland and Labrador,hydro_lc,2020,80,y
+Newfoundland and Labrador,gas_cc,2020,45,y
+Newfoundland and Labrador,gas_cc_ccs,2020,45,y
+Newfoundland and Labrador,gas_ppl,2020,45,y
+Newfoundland and Labrador,gas_ct,2020,45,y
+Newfoundland and Labrador,nuc_lc,2020,60,y
+Newfoundland and Labrador,nuc_hc,2020,60,y
+Newfoundland and Labrador,foil_ppl,2020,45,y
+Newfoundland and Labrador,solar_pv_ppl,2020,30,y
+Newfoundland and Labrador,nan,2020,30,y
+Newfoundland and Labrador,stor_ppl,2020,15,y
+Newfoundland and Labrador,STOR_PUMP,2020,100,y
+Newfoundland and Labrador,wind_ppf,2020,30,y
+Newfoundland and Labrador,wind_ppl,2020,30,y
+Newfoundland and Labrador,bio_istig,2025,40,y
+Newfoundland and Labrador,bio_ppl,2025,45,y
+Newfoundland and Labrador,igcc,2025,45,y
+Newfoundland and Labrador,coal_adv_ccs,2025,45,y
+Newfoundland and Labrador,loil_ppl,2025,45,y
+Newfoundland and Labrador,geo_ppl,2025,40,y
+Newfoundland and Labrador,HYDROGEN_BLUE,2025,45,y
+Newfoundland and Labrador,HYDROGEN_GREEN,2025,45,y
+Newfoundland and Labrador,hydro_hc,2025,100,y
+Newfoundland and Labrador,hydro_lc,2025,80,y
+Newfoundland and Labrador,gas_cc,2025,45,y
+Newfoundland and Labrador,gas_cc_ccs,2025,45,y
+Newfoundland and Labrador,gas_ppl,2025,45,y
+Newfoundland and Labrador,gas_ct,2025,45,y
+Newfoundland and Labrador,nuc_lc,2025,60,y
+Newfoundland and Labrador,nuc_hc,2025,60,y
+Newfoundland and Labrador,foil_ppl,2025,45,y
+Newfoundland and Labrador,solar_pv_ppl,2025,30,y
+Newfoundland and Labrador,nan,2025,30,y
+Newfoundland and Labrador,stor_ppl,2025,15,y
+Newfoundland and Labrador,STOR_PUMP,2025,100,y
+Newfoundland and Labrador,wind_ppf,2025,30,y
+Newfoundland and Labrador,wind_ppl,2025,30,y
+Newfoundland and Labrador,bio_istig,2030,40,y
+Newfoundland and Labrador,bio_ppl,2030,45,y
+Newfoundland and Labrador,igcc,2030,45,y
+Newfoundland and Labrador,coal_adv_ccs,2030,45,y
+Newfoundland and Labrador,loil_ppl,2030,45,y
+Newfoundland and Labrador,geo_ppl,2030,40,y
+Newfoundland and Labrador,HYDROGEN_BLUE,2030,45,y
+Newfoundland and Labrador,HYDROGEN_GREEN,2030,45,y
+Newfoundland and Labrador,hydro_hc,2030,100,y
+Newfoundland and Labrador,hydro_lc,2030,80,y
+Newfoundland and Labrador,gas_cc,2030,45,y
+Newfoundland and Labrador,gas_cc_ccs,2030,45,y
+Newfoundland and Labrador,gas_ppl,2030,45,y
+Newfoundland and Labrador,gas_ct,2030,45,y
+Newfoundland and Labrador,nuc_lc,2030,60,y
+Newfoundland and Labrador,nuc_hc,2030,60,y
+Newfoundland and Labrador,foil_ppl,2030,45,y
+Newfoundland and Labrador,solar_pv_ppl,2030,30,y
+Newfoundland and Labrador,nan,2030,30,y
+Newfoundland and Labrador,stor_ppl,2030,15,y
+Newfoundland and Labrador,STOR_PUMP,2030,100,y
+Newfoundland and Labrador,wind_ppf,2030,30,y
+Newfoundland and Labrador,wind_ppl,2030,30,y
+Newfoundland and Labrador,bio_istig,2035,40,y
+Newfoundland and Labrador,bio_ppl,2035,45,y
+Newfoundland and Labrador,igcc,2035,45,y
+Newfoundland and Labrador,coal_adv_ccs,2035,45,y
+Newfoundland and Labrador,loil_ppl,2035,45,y
+Newfoundland and Labrador,geo_ppl,2035,40,y
+Newfoundland and Labrador,HYDROGEN_BLUE,2035,45,y
+Newfoundland and Labrador,HYDROGEN_GREEN,2035,45,y
+Newfoundland and Labrador,hydro_hc,2035,100,y
+Newfoundland and Labrador,hydro_lc,2035,80,y
+Newfoundland and Labrador,gas_cc,2035,45,y
+Newfoundland and Labrador,gas_cc_ccs,2035,45,y
+Newfoundland and Labrador,gas_ppl,2035,45,y
+Newfoundland and Labrador,gas_ct,2035,45,y
+Newfoundland and Labrador,nuc_lc,2035,60,y
+Newfoundland and Labrador,nuc_hc,2035,60,y
+Newfoundland and Labrador,foil_ppl,2035,45,y
+Newfoundland and Labrador,solar_pv_ppl,2035,30,y
+Newfoundland and Labrador,nan,2035,30,y
+Newfoundland and Labrador,stor_ppl,2035,15,y
+Newfoundland and Labrador,STOR_PUMP,2035,100,y
+Newfoundland and Labrador,wind_ppf,2035,30,y
+Newfoundland and Labrador,wind_ppl,2035,30,y
+Newfoundland and Labrador,bio_istig,2040,40,y
+Newfoundland and Labrador,bio_ppl,2040,45,y
+Newfoundland and Labrador,igcc,2040,45,y
+Newfoundland and Labrador,coal_adv_ccs,2040,45,y
+Newfoundland and Labrador,loil_ppl,2040,45,y
+Newfoundland and Labrador,geo_ppl,2040,40,y
+Newfoundland and Labrador,HYDROGEN_BLUE,2040,45,y
+Newfoundland and Labrador,HYDROGEN_GREEN,2040,45,y
+Newfoundland and Labrador,hydro_hc,2040,100,y
+Newfoundland and Labrador,hydro_lc,2040,80,y
+Newfoundland and Labrador,gas_cc,2040,45,y
+Newfoundland and Labrador,gas_cc_ccs,2040,45,y
+Newfoundland and Labrador,gas_ppl,2040,45,y
+Newfoundland and Labrador,gas_ct,2040,45,y
+Newfoundland and Labrador,nuc_lc,2040,60,y
+Newfoundland and Labrador,nuc_hc,2040,60,y
+Newfoundland and Labrador,foil_ppl,2040,45,y
+Newfoundland and Labrador,solar_pv_ppl,2040,30,y
+Newfoundland and Labrador,nan,2040,30,y
+Newfoundland and Labrador,stor_ppl,2040,15,y
+Newfoundland and Labrador,STOR_PUMP,2040,100,y
+Newfoundland and Labrador,wind_ppf,2040,30,y
+Newfoundland and Labrador,wind_ppl,2040,30,y
+Newfoundland and Labrador,bio_istig,2045,40,y
+Newfoundland and Labrador,bio_ppl,2045,45,y
+Newfoundland and Labrador,igcc,2045,45,y
+Newfoundland and Labrador,coal_adv_ccs,2045,45,y
+Newfoundland and Labrador,loil_ppl,2045,45,y
+Newfoundland and Labrador,geo_ppl,2045,40,y
+Newfoundland and Labrador,HYDROGEN_BLUE,2045,45,y
+Newfoundland and Labrador,HYDROGEN_GREEN,2045,45,y
+Newfoundland and Labrador,hydro_hc,2045,100,y
+Newfoundland and Labrador,hydro_lc,2045,80,y
+Newfoundland and Labrador,gas_cc,2045,45,y
+Newfoundland and Labrador,gas_cc_ccs,2045,45,y
+Newfoundland and Labrador,gas_ppl,2045,45,y
+Newfoundland and Labrador,gas_ct,2045,45,y
+Newfoundland and Labrador,nuc_lc,2045,60,y
+Newfoundland and Labrador,nuc_hc,2045,60,y
+Newfoundland and Labrador,foil_ppl,2045,45,y
+Newfoundland and Labrador,solar_pv_ppl,2045,30,y
+Newfoundland and Labrador,nan,2045,30,y
+Newfoundland and Labrador,stor_ppl,2045,15,y
+Newfoundland and Labrador,STOR_PUMP,2045,100,y
+Newfoundland and Labrador,wind_ppf,2045,30,y
+Newfoundland and Labrador,wind_ppl,2045,30,y
+Newfoundland and Labrador,bio_istig,2050,40,y
+Newfoundland and Labrador,bio_ppl,2050,45,y
+Newfoundland and Labrador,igcc,2050,45,y
+Newfoundland and Labrador,coal_adv_ccs,2050,45,y
+Newfoundland and Labrador,loil_ppl,2050,45,y
+Newfoundland and Labrador,geo_ppl,2050,40,y
+Newfoundland and Labrador,HYDROGEN_BLUE,2050,45,y
+Newfoundland and Labrador,HYDROGEN_GREEN,2050,45,y
+Newfoundland and Labrador,hydro_hc,2050,100,y
+Newfoundland and Labrador,hydro_lc,2050,80,y
+Newfoundland and Labrador,gas_cc,2050,45,y
+Newfoundland and Labrador,gas_cc_ccs,2050,45,y
+Newfoundland and Labrador,gas_ppl,2050,45,y
+Newfoundland and Labrador,gas_ct,2050,45,y
+Newfoundland and Labrador,nuc_lc,2050,60,y
+Newfoundland and Labrador,nuc_hc,2050,60,y
+Newfoundland and Labrador,foil_ppl,2050,45,y
+Newfoundland and Labrador,solar_pv_ppl,2050,30,y
+Newfoundland and Labrador,nan,2050,30,y
+Newfoundland and Labrador,stor_ppl,2050,15,y
+Newfoundland and Labrador,STOR_PUMP,2050,100,y
+Newfoundland and Labrador,wind_ppf,2050,30,y
+Newfoundland and Labrador,wind_ppl,2050,30,y
+Newfoundland and Labrador,bio_istig,2055,40,y
+Newfoundland and Labrador,bio_ppl,2055,45,y
+Newfoundland and Labrador,igcc,2055,45,y
+Newfoundland and Labrador,coal_adv_ccs,2055,45,y
+Newfoundland and Labrador,loil_ppl,2055,45,y
+Newfoundland and Labrador,geo_ppl,2055,40,y
+Newfoundland and Labrador,HYDROGEN_BLUE,2055,45,y
+Newfoundland and Labrador,HYDROGEN_GREEN,2055,45,y
+Newfoundland and Labrador,hydro_hc,2055,100,y
+Newfoundland and Labrador,hydro_lc,2055,80,y
+Newfoundland and Labrador,gas_cc,2055,45,y
+Newfoundland and Labrador,gas_cc_ccs,2055,45,y
+Newfoundland and Labrador,gas_ppl,2055,45,y
+Newfoundland and Labrador,gas_ct,2055,45,y
+Newfoundland and Labrador,nuc_lc,2055,60,y
+Newfoundland and Labrador,nuc_hc,2055,60,y
+Newfoundland and Labrador,foil_ppl,2055,45,y
+Newfoundland and Labrador,solar_pv_ppl,2055,30,y
+Newfoundland and Labrador,nan,2055,30,y
+Newfoundland and Labrador,stor_ppl,2055,15,y
+Newfoundland and Labrador,STOR_PUMP,2055,100,y
+Newfoundland and Labrador,wind_ppf,2055,30,y
+Newfoundland and Labrador,wind_ppl,2055,30,y
+Newfoundland and Labrador,bio_istig,2060,40,y
+Newfoundland and Labrador,bio_ppl,2060,45,y
+Newfoundland and Labrador,igcc,2060,45,y
+Newfoundland and Labrador,coal_adv_ccs,2060,45,y
+Newfoundland and Labrador,loil_ppl,2060,45,y
+Newfoundland and Labrador,geo_ppl,2060,40,y
+Newfoundland and Labrador,HYDROGEN_BLUE,2060,45,y
+Newfoundland and Labrador,HYDROGEN_GREEN,2060,45,y
+Newfoundland and Labrador,hydro_hc,2060,100,y
+Newfoundland and Labrador,hydro_lc,2060,80,y
+Newfoundland and Labrador,gas_cc,2060,45,y
+Newfoundland and Labrador,gas_cc_ccs,2060,45,y
+Newfoundland and Labrador,gas_ppl,2060,45,y
+Newfoundland and Labrador,gas_ct,2060,45,y
+Newfoundland and Labrador,nuc_lc,2060,60,y
+Newfoundland and Labrador,nuc_hc,2060,60,y
+Newfoundland and Labrador,foil_ppl,2060,45,y
+Newfoundland and Labrador,solar_pv_ppl,2060,30,y
+Newfoundland and Labrador,nan,2060,30,y
+Newfoundland and Labrador,stor_ppl,2060,15,y
+Newfoundland and Labrador,STOR_PUMP,2060,100,y
+Newfoundland and Labrador,wind_ppf,2060,30,y
+Newfoundland and Labrador,wind_ppl,2060,30,y
+Nova Scotia,bio_istig,1960,40,y
+Nova Scotia,bio_ppl,1960,45,y
+Nova Scotia,igcc,1960,45,y
+Nova Scotia,coal_adv_ccs,1960,45,y
+Nova Scotia,loil_ppl,1960,45,y
+Nova Scotia,geo_ppl,1960,40,y
+Nova Scotia,HYDROGEN_BLUE,1960,45,y
+Nova Scotia,HYDROGEN_GREEN,1960,45,y
+Nova Scotia,hydro_hc,1960,100,y
+Nova Scotia,hydro_lc,1960,80,y
+Nova Scotia,gas_cc,1960,45,y
+Nova Scotia,gas_cc_ccs,1960,45,y
+Nova Scotia,gas_ppl,1960,45,y
+Nova Scotia,gas_ct,1960,45,y
+Nova Scotia,nuc_lc,1960,60,y
+Nova Scotia,nuc_hc,1960,60,y
+Nova Scotia,foil_ppl,1960,45,y
+Nova Scotia,solar_pv_ppl,1960,30,y
+Nova Scotia,nan,1960,30,y
+Nova Scotia,stor_ppl,1960,15,y
+Nova Scotia,STOR_PUMP,1960,100,y
+Nova Scotia,wind_ppf,1960,30,y
+Nova Scotia,wind_ppl,1960,30,y
+Nova Scotia,bio_istig,1965,40,y
+Nova Scotia,bio_ppl,1965,45,y
+Nova Scotia,igcc,1965,45,y
+Nova Scotia,coal_adv_ccs,1965,45,y
+Nova Scotia,loil_ppl,1965,45,y
+Nova Scotia,geo_ppl,1965,40,y
+Nova Scotia,HYDROGEN_BLUE,1965,45,y
+Nova Scotia,HYDROGEN_GREEN,1965,45,y
+Nova Scotia,hydro_hc,1965,100,y
+Nova Scotia,hydro_lc,1965,80,y
+Nova Scotia,gas_cc,1965,45,y
+Nova Scotia,gas_cc_ccs,1965,45,y
+Nova Scotia,gas_ppl,1965,45,y
+Nova Scotia,gas_ct,1965,45,y
+Nova Scotia,nuc_lc,1965,60,y
+Nova Scotia,nuc_hc,1965,60,y
+Nova Scotia,foil_ppl,1965,45,y
+Nova Scotia,solar_pv_ppl,1965,30,y
+Nova Scotia,nan,1965,30,y
+Nova Scotia,stor_ppl,1965,15,y
+Nova Scotia,STOR_PUMP,1965,100,y
+Nova Scotia,wind_ppf,1965,30,y
+Nova Scotia,wind_ppl,1965,30,y
+Nova Scotia,bio_istig,1970,40,y
+Nova Scotia,bio_ppl,1970,45,y
+Nova Scotia,igcc,1970,45,y
+Nova Scotia,coal_adv_ccs,1970,45,y
+Nova Scotia,loil_ppl,1970,45,y
+Nova Scotia,geo_ppl,1970,40,y
+Nova Scotia,HYDROGEN_BLUE,1970,45,y
+Nova Scotia,HYDROGEN_GREEN,1970,45,y
+Nova Scotia,hydro_hc,1970,100,y
+Nova Scotia,hydro_lc,1970,80,y
+Nova Scotia,gas_cc,1970,45,y
+Nova Scotia,gas_cc_ccs,1970,45,y
+Nova Scotia,gas_ppl,1970,45,y
+Nova Scotia,gas_ct,1970,45,y
+Nova Scotia,nuc_lc,1970,60,y
+Nova Scotia,nuc_hc,1970,60,y
+Nova Scotia,foil_ppl,1970,45,y
+Nova Scotia,solar_pv_ppl,1970,30,y
+Nova Scotia,nan,1970,30,y
+Nova Scotia,stor_ppl,1970,15,y
+Nova Scotia,STOR_PUMP,1970,100,y
+Nova Scotia,wind_ppf,1970,30,y
+Nova Scotia,wind_ppl,1970,30,y
+Nova Scotia,bio_istig,1975,40,y
+Nova Scotia,bio_ppl,1975,45,y
+Nova Scotia,igcc,1975,45,y
+Nova Scotia,coal_adv_ccs,1975,45,y
+Nova Scotia,loil_ppl,1975,45,y
+Nova Scotia,geo_ppl,1975,40,y
+Nova Scotia,HYDROGEN_BLUE,1975,45,y
+Nova Scotia,HYDROGEN_GREEN,1975,45,y
+Nova Scotia,hydro_hc,1975,100,y
+Nova Scotia,hydro_lc,1975,80,y
+Nova Scotia,gas_cc,1975,45,y
+Nova Scotia,gas_cc_ccs,1975,45,y
+Nova Scotia,gas_ppl,1975,45,y
+Nova Scotia,gas_ct,1975,45,y
+Nova Scotia,nuc_lc,1975,60,y
+Nova Scotia,nuc_hc,1975,60,y
+Nova Scotia,foil_ppl,1975,45,y
+Nova Scotia,solar_pv_ppl,1975,30,y
+Nova Scotia,nan,1975,30,y
+Nova Scotia,stor_ppl,1975,15,y
+Nova Scotia,STOR_PUMP,1975,100,y
+Nova Scotia,wind_ppf,1975,30,y
+Nova Scotia,wind_ppl,1975,30,y
+Nova Scotia,bio_istig,1980,40,y
+Nova Scotia,bio_ppl,1980,45,y
+Nova Scotia,igcc,1980,45,y
+Nova Scotia,coal_adv_ccs,1980,45,y
+Nova Scotia,loil_ppl,1980,45,y
+Nova Scotia,geo_ppl,1980,40,y
+Nova Scotia,HYDROGEN_BLUE,1980,45,y
+Nova Scotia,HYDROGEN_GREEN,1980,45,y
+Nova Scotia,hydro_hc,1980,100,y
+Nova Scotia,hydro_lc,1980,80,y
+Nova Scotia,gas_cc,1980,45,y
+Nova Scotia,gas_cc_ccs,1980,45,y
+Nova Scotia,gas_ppl,1980,45,y
+Nova Scotia,gas_ct,1980,45,y
+Nova Scotia,nuc_lc,1980,60,y
+Nova Scotia,nuc_hc,1980,60,y
+Nova Scotia,foil_ppl,1980,45,y
+Nova Scotia,solar_pv_ppl,1980,30,y
+Nova Scotia,nan,1980,30,y
+Nova Scotia,stor_ppl,1980,15,y
+Nova Scotia,STOR_PUMP,1980,100,y
+Nova Scotia,wind_ppf,1980,30,y
+Nova Scotia,wind_ppl,1980,30,y
+Nova Scotia,bio_istig,1985,40,y
+Nova Scotia,bio_ppl,1985,45,y
+Nova Scotia,igcc,1985,45,y
+Nova Scotia,coal_adv_ccs,1985,45,y
+Nova Scotia,loil_ppl,1985,45,y
+Nova Scotia,geo_ppl,1985,40,y
+Nova Scotia,HYDROGEN_BLUE,1985,45,y
+Nova Scotia,HYDROGEN_GREEN,1985,45,y
+Nova Scotia,hydro_hc,1985,100,y
+Nova Scotia,hydro_lc,1985,80,y
+Nova Scotia,gas_cc,1985,45,y
+Nova Scotia,gas_cc_ccs,1985,45,y
+Nova Scotia,gas_ppl,1985,45,y
+Nova Scotia,gas_ct,1985,45,y
+Nova Scotia,nuc_lc,1985,60,y
+Nova Scotia,nuc_hc,1985,60,y
+Nova Scotia,foil_ppl,1985,45,y
+Nova Scotia,solar_pv_ppl,1985,30,y
+Nova Scotia,nan,1985,30,y
+Nova Scotia,stor_ppl,1985,15,y
+Nova Scotia,STOR_PUMP,1985,100,y
+Nova Scotia,wind_ppf,1985,30,y
+Nova Scotia,wind_ppl,1985,30,y
+Nova Scotia,bio_istig,1990,40,y
+Nova Scotia,bio_ppl,1990,45,y
+Nova Scotia,igcc,1990,45,y
+Nova Scotia,coal_adv_ccs,1990,45,y
+Nova Scotia,loil_ppl,1990,45,y
+Nova Scotia,geo_ppl,1990,40,y
+Nova Scotia,HYDROGEN_BLUE,1990,45,y
+Nova Scotia,HYDROGEN_GREEN,1990,45,y
+Nova Scotia,hydro_hc,1990,100,y
+Nova Scotia,hydro_lc,1990,80,y
+Nova Scotia,gas_cc,1990,45,y
+Nova Scotia,gas_cc_ccs,1990,45,y
+Nova Scotia,gas_ppl,1990,45,y
+Nova Scotia,gas_ct,1990,45,y
+Nova Scotia,nuc_lc,1990,60,y
+Nova Scotia,nuc_hc,1990,60,y
+Nova Scotia,foil_ppl,1990,45,y
+Nova Scotia,solar_pv_ppl,1990,30,y
+Nova Scotia,nan,1990,30,y
+Nova Scotia,stor_ppl,1990,15,y
+Nova Scotia,STOR_PUMP,1990,100,y
+Nova Scotia,wind_ppf,1990,30,y
+Nova Scotia,wind_ppl,1990,30,y
+Nova Scotia,bio_istig,1995,40,y
+Nova Scotia,bio_ppl,1995,45,y
+Nova Scotia,igcc,1995,45,y
+Nova Scotia,coal_adv_ccs,1995,45,y
+Nova Scotia,loil_ppl,1995,45,y
+Nova Scotia,geo_ppl,1995,40,y
+Nova Scotia,HYDROGEN_BLUE,1995,45,y
+Nova Scotia,HYDROGEN_GREEN,1995,45,y
+Nova Scotia,hydro_hc,1995,100,y
+Nova Scotia,hydro_lc,1995,80,y
+Nova Scotia,gas_cc,1995,45,y
+Nova Scotia,gas_cc_ccs,1995,45,y
+Nova Scotia,gas_ppl,1995,45,y
+Nova Scotia,gas_ct,1995,45,y
+Nova Scotia,nuc_lc,1995,60,y
+Nova Scotia,nuc_hc,1995,60,y
+Nova Scotia,foil_ppl,1995,45,y
+Nova Scotia,solar_pv_ppl,1995,30,y
+Nova Scotia,nan,1995,30,y
+Nova Scotia,stor_ppl,1995,15,y
+Nova Scotia,STOR_PUMP,1995,100,y
+Nova Scotia,wind_ppf,1995,30,y
+Nova Scotia,wind_ppl,1995,30,y
+Nova Scotia,bio_istig,2000,40,y
+Nova Scotia,bio_ppl,2000,45,y
+Nova Scotia,igcc,2000,45,y
+Nova Scotia,coal_adv_ccs,2000,45,y
+Nova Scotia,loil_ppl,2000,45,y
+Nova Scotia,geo_ppl,2000,40,y
+Nova Scotia,HYDROGEN_BLUE,2000,45,y
+Nova Scotia,HYDROGEN_GREEN,2000,45,y
+Nova Scotia,hydro_hc,2000,100,y
+Nova Scotia,hydro_lc,2000,80,y
+Nova Scotia,gas_cc,2000,45,y
+Nova Scotia,gas_cc_ccs,2000,45,y
+Nova Scotia,gas_ppl,2000,45,y
+Nova Scotia,gas_ct,2000,45,y
+Nova Scotia,nuc_lc,2000,60,y
+Nova Scotia,nuc_hc,2000,60,y
+Nova Scotia,foil_ppl,2000,45,y
+Nova Scotia,solar_pv_ppl,2000,30,y
+Nova Scotia,nan,2000,30,y
+Nova Scotia,stor_ppl,2000,15,y
+Nova Scotia,STOR_PUMP,2000,100,y
+Nova Scotia,wind_ppf,2000,30,y
+Nova Scotia,wind_ppl,2000,30,y
+Nova Scotia,bio_istig,2005,40,y
+Nova Scotia,bio_ppl,2005,45,y
+Nova Scotia,igcc,2005,45,y
+Nova Scotia,coal_adv_ccs,2005,45,y
+Nova Scotia,loil_ppl,2005,45,y
+Nova Scotia,geo_ppl,2005,40,y
+Nova Scotia,HYDROGEN_BLUE,2005,45,y
+Nova Scotia,HYDROGEN_GREEN,2005,45,y
+Nova Scotia,hydro_hc,2005,100,y
+Nova Scotia,hydro_lc,2005,80,y
+Nova Scotia,gas_cc,2005,45,y
+Nova Scotia,gas_cc_ccs,2005,45,y
+Nova Scotia,gas_ppl,2005,45,y
+Nova Scotia,gas_ct,2005,45,y
+Nova Scotia,nuc_lc,2005,60,y
+Nova Scotia,nuc_hc,2005,60,y
+Nova Scotia,foil_ppl,2005,45,y
+Nova Scotia,solar_pv_ppl,2005,30,y
+Nova Scotia,nan,2005,30,y
+Nova Scotia,stor_ppl,2005,15,y
+Nova Scotia,STOR_PUMP,2005,100,y
+Nova Scotia,wind_ppf,2005,30,y
+Nova Scotia,wind_ppl,2005,30,y
+Nova Scotia,bio_istig,2010,40,y
+Nova Scotia,bio_ppl,2010,45,y
+Nova Scotia,igcc,2010,45,y
+Nova Scotia,coal_adv_ccs,2010,45,y
+Nova Scotia,loil_ppl,2010,45,y
+Nova Scotia,geo_ppl,2010,40,y
+Nova Scotia,HYDROGEN_BLUE,2010,45,y
+Nova Scotia,HYDROGEN_GREEN,2010,45,y
+Nova Scotia,hydro_hc,2010,100,y
+Nova Scotia,hydro_lc,2010,80,y
+Nova Scotia,gas_cc,2010,45,y
+Nova Scotia,gas_cc_ccs,2010,45,y
+Nova Scotia,gas_ppl,2010,45,y
+Nova Scotia,gas_ct,2010,45,y
+Nova Scotia,nuc_lc,2010,60,y
+Nova Scotia,nuc_hc,2010,60,y
+Nova Scotia,foil_ppl,2010,45,y
+Nova Scotia,solar_pv_ppl,2010,30,y
+Nova Scotia,nan,2010,30,y
+Nova Scotia,stor_ppl,2010,15,y
+Nova Scotia,STOR_PUMP,2010,100,y
+Nova Scotia,wind_ppf,2010,30,y
+Nova Scotia,wind_ppl,2010,30,y
+Nova Scotia,bio_istig,2015,40,y
+Nova Scotia,bio_ppl,2015,45,y
+Nova Scotia,igcc,2015,45,y
+Nova Scotia,coal_adv_ccs,2015,45,y
+Nova Scotia,loil_ppl,2015,45,y
+Nova Scotia,geo_ppl,2015,40,y
+Nova Scotia,HYDROGEN_BLUE,2015,45,y
+Nova Scotia,HYDROGEN_GREEN,2015,45,y
+Nova Scotia,hydro_hc,2015,100,y
+Nova Scotia,hydro_lc,2015,80,y
+Nova Scotia,gas_cc,2015,45,y
+Nova Scotia,gas_cc_ccs,2015,45,y
+Nova Scotia,gas_ppl,2015,45,y
+Nova Scotia,gas_ct,2015,45,y
+Nova Scotia,nuc_lc,2015,60,y
+Nova Scotia,nuc_hc,2015,60,y
+Nova Scotia,foil_ppl,2015,45,y
+Nova Scotia,solar_pv_ppl,2015,30,y
+Nova Scotia,nan,2015,30,y
+Nova Scotia,stor_ppl,2015,15,y
+Nova Scotia,STOR_PUMP,2015,100,y
+Nova Scotia,wind_ppf,2015,30,y
+Nova Scotia,wind_ppl,2015,30,y
+Nova Scotia,bio_istig,2020,40,y
+Nova Scotia,bio_ppl,2020,45,y
+Nova Scotia,igcc,2020,45,y
+Nova Scotia,coal_adv_ccs,2020,45,y
+Nova Scotia,loil_ppl,2020,45,y
+Nova Scotia,geo_ppl,2020,40,y
+Nova Scotia,HYDROGEN_BLUE,2020,45,y
+Nova Scotia,HYDROGEN_GREEN,2020,45,y
+Nova Scotia,hydro_hc,2020,100,y
+Nova Scotia,hydro_lc,2020,80,y
+Nova Scotia,gas_cc,2020,45,y
+Nova Scotia,gas_cc_ccs,2020,45,y
+Nova Scotia,gas_ppl,2020,45,y
+Nova Scotia,gas_ct,2020,45,y
+Nova Scotia,nuc_lc,2020,60,y
+Nova Scotia,nuc_hc,2020,60,y
+Nova Scotia,foil_ppl,2020,45,y
+Nova Scotia,solar_pv_ppl,2020,30,y
+Nova Scotia,nan,2020,30,y
+Nova Scotia,stor_ppl,2020,15,y
+Nova Scotia,STOR_PUMP,2020,100,y
+Nova Scotia,wind_ppf,2020,30,y
+Nova Scotia,wind_ppl,2020,30,y
+Nova Scotia,bio_istig,2025,40,y
+Nova Scotia,bio_ppl,2025,45,y
+Nova Scotia,igcc,2025,45,y
+Nova Scotia,coal_adv_ccs,2025,45,y
+Nova Scotia,loil_ppl,2025,45,y
+Nova Scotia,geo_ppl,2025,40,y
+Nova Scotia,HYDROGEN_BLUE,2025,45,y
+Nova Scotia,HYDROGEN_GREEN,2025,45,y
+Nova Scotia,hydro_hc,2025,100,y
+Nova Scotia,hydro_lc,2025,80,y
+Nova Scotia,gas_cc,2025,45,y
+Nova Scotia,gas_cc_ccs,2025,45,y
+Nova Scotia,gas_ppl,2025,45,y
+Nova Scotia,gas_ct,2025,45,y
+Nova Scotia,nuc_lc,2025,60,y
+Nova Scotia,nuc_hc,2025,60,y
+Nova Scotia,foil_ppl,2025,45,y
+Nova Scotia,solar_pv_ppl,2025,30,y
+Nova Scotia,nan,2025,30,y
+Nova Scotia,stor_ppl,2025,15,y
+Nova Scotia,STOR_PUMP,2025,100,y
+Nova Scotia,wind_ppf,2025,30,y
+Nova Scotia,wind_ppl,2025,30,y
+Nova Scotia,bio_istig,2030,40,y
+Nova Scotia,bio_ppl,2030,45,y
+Nova Scotia,igcc,2030,45,y
+Nova Scotia,coal_adv_ccs,2030,45,y
+Nova Scotia,loil_ppl,2030,45,y
+Nova Scotia,geo_ppl,2030,40,y
+Nova Scotia,HYDROGEN_BLUE,2030,45,y
+Nova Scotia,HYDROGEN_GREEN,2030,45,y
+Nova Scotia,hydro_hc,2030,100,y
+Nova Scotia,hydro_lc,2030,80,y
+Nova Scotia,gas_cc,2030,45,y
+Nova Scotia,gas_cc_ccs,2030,45,y
+Nova Scotia,gas_ppl,2030,45,y
+Nova Scotia,gas_ct,2030,45,y
+Nova Scotia,nuc_lc,2030,60,y
+Nova Scotia,nuc_hc,2030,60,y
+Nova Scotia,foil_ppl,2030,45,y
+Nova Scotia,solar_pv_ppl,2030,30,y
+Nova Scotia,nan,2030,30,y
+Nova Scotia,stor_ppl,2030,15,y
+Nova Scotia,STOR_PUMP,2030,100,y
+Nova Scotia,wind_ppf,2030,30,y
+Nova Scotia,wind_ppl,2030,30,y
+Nova Scotia,bio_istig,2035,40,y
+Nova Scotia,bio_ppl,2035,45,y
+Nova Scotia,igcc,2035,45,y
+Nova Scotia,coal_adv_ccs,2035,45,y
+Nova Scotia,loil_ppl,2035,45,y
+Nova Scotia,geo_ppl,2035,40,y
+Nova Scotia,HYDROGEN_BLUE,2035,45,y
+Nova Scotia,HYDROGEN_GREEN,2035,45,y
+Nova Scotia,hydro_hc,2035,100,y
+Nova Scotia,hydro_lc,2035,80,y
+Nova Scotia,gas_cc,2035,45,y
+Nova Scotia,gas_cc_ccs,2035,45,y
+Nova Scotia,gas_ppl,2035,45,y
+Nova Scotia,gas_ct,2035,45,y
+Nova Scotia,nuc_lc,2035,60,y
+Nova Scotia,nuc_hc,2035,60,y
+Nova Scotia,foil_ppl,2035,45,y
+Nova Scotia,solar_pv_ppl,2035,30,y
+Nova Scotia,nan,2035,30,y
+Nova Scotia,stor_ppl,2035,15,y
+Nova Scotia,STOR_PUMP,2035,100,y
+Nova Scotia,wind_ppf,2035,30,y
+Nova Scotia,wind_ppl,2035,30,y
+Nova Scotia,bio_istig,2040,40,y
+Nova Scotia,bio_ppl,2040,45,y
+Nova Scotia,igcc,2040,45,y
+Nova Scotia,coal_adv_ccs,2040,45,y
+Nova Scotia,loil_ppl,2040,45,y
+Nova Scotia,geo_ppl,2040,40,y
+Nova Scotia,HYDROGEN_BLUE,2040,45,y
+Nova Scotia,HYDROGEN_GREEN,2040,45,y
+Nova Scotia,hydro_hc,2040,100,y
+Nova Scotia,hydro_lc,2040,80,y
+Nova Scotia,gas_cc,2040,45,y
+Nova Scotia,gas_cc_ccs,2040,45,y
+Nova Scotia,gas_ppl,2040,45,y
+Nova Scotia,gas_ct,2040,45,y
+Nova Scotia,nuc_lc,2040,60,y
+Nova Scotia,nuc_hc,2040,60,y
+Nova Scotia,foil_ppl,2040,45,y
+Nova Scotia,solar_pv_ppl,2040,30,y
+Nova Scotia,nan,2040,30,y
+Nova Scotia,stor_ppl,2040,15,y
+Nova Scotia,STOR_PUMP,2040,100,y
+Nova Scotia,wind_ppf,2040,30,y
+Nova Scotia,wind_ppl,2040,30,y
+Nova Scotia,bio_istig,2045,40,y
+Nova Scotia,bio_ppl,2045,45,y
+Nova Scotia,igcc,2045,45,y
+Nova Scotia,coal_adv_ccs,2045,45,y
+Nova Scotia,loil_ppl,2045,45,y
+Nova Scotia,geo_ppl,2045,40,y
+Nova Scotia,HYDROGEN_BLUE,2045,45,y
+Nova Scotia,HYDROGEN_GREEN,2045,45,y
+Nova Scotia,hydro_hc,2045,100,y
+Nova Scotia,hydro_lc,2045,80,y
+Nova Scotia,gas_cc,2045,45,y
+Nova Scotia,gas_cc_ccs,2045,45,y
+Nova Scotia,gas_ppl,2045,45,y
+Nova Scotia,gas_ct,2045,45,y
+Nova Scotia,nuc_lc,2045,60,y
+Nova Scotia,nuc_hc,2045,60,y
+Nova Scotia,foil_ppl,2045,45,y
+Nova Scotia,solar_pv_ppl,2045,30,y
+Nova Scotia,nan,2045,30,y
+Nova Scotia,stor_ppl,2045,15,y
+Nova Scotia,STOR_PUMP,2045,100,y
+Nova Scotia,wind_ppf,2045,30,y
+Nova Scotia,wind_ppl,2045,30,y
+Nova Scotia,bio_istig,2050,40,y
+Nova Scotia,bio_ppl,2050,45,y
+Nova Scotia,igcc,2050,45,y
+Nova Scotia,coal_adv_ccs,2050,45,y
+Nova Scotia,loil_ppl,2050,45,y
+Nova Scotia,geo_ppl,2050,40,y
+Nova Scotia,HYDROGEN_BLUE,2050,45,y
+Nova Scotia,HYDROGEN_GREEN,2050,45,y
+Nova Scotia,hydro_hc,2050,100,y
+Nova Scotia,hydro_lc,2050,80,y
+Nova Scotia,gas_cc,2050,45,y
+Nova Scotia,gas_cc_ccs,2050,45,y
+Nova Scotia,gas_ppl,2050,45,y
+Nova Scotia,gas_ct,2050,45,y
+Nova Scotia,nuc_lc,2050,60,y
+Nova Scotia,nuc_hc,2050,60,y
+Nova Scotia,foil_ppl,2050,45,y
+Nova Scotia,solar_pv_ppl,2050,30,y
+Nova Scotia,nan,2050,30,y
+Nova Scotia,stor_ppl,2050,15,y
+Nova Scotia,STOR_PUMP,2050,100,y
+Nova Scotia,wind_ppf,2050,30,y
+Nova Scotia,wind_ppl,2050,30,y
+Nova Scotia,bio_istig,2055,40,y
+Nova Scotia,bio_ppl,2055,45,y
+Nova Scotia,igcc,2055,45,y
+Nova Scotia,coal_adv_ccs,2055,45,y
+Nova Scotia,loil_ppl,2055,45,y
+Nova Scotia,geo_ppl,2055,40,y
+Nova Scotia,HYDROGEN_BLUE,2055,45,y
+Nova Scotia,HYDROGEN_GREEN,2055,45,y
+Nova Scotia,hydro_hc,2055,100,y
+Nova Scotia,hydro_lc,2055,80,y
+Nova Scotia,gas_cc,2055,45,y
+Nova Scotia,gas_cc_ccs,2055,45,y
+Nova Scotia,gas_ppl,2055,45,y
+Nova Scotia,gas_ct,2055,45,y
+Nova Scotia,nuc_lc,2055,60,y
+Nova Scotia,nuc_hc,2055,60,y
+Nova Scotia,foil_ppl,2055,45,y
+Nova Scotia,solar_pv_ppl,2055,30,y
+Nova Scotia,nan,2055,30,y
+Nova Scotia,stor_ppl,2055,15,y
+Nova Scotia,STOR_PUMP,2055,100,y
+Nova Scotia,wind_ppf,2055,30,y
+Nova Scotia,wind_ppl,2055,30,y
+Nova Scotia,bio_istig,2060,40,y
+Nova Scotia,bio_ppl,2060,45,y
+Nova Scotia,igcc,2060,45,y
+Nova Scotia,coal_adv_ccs,2060,45,y
+Nova Scotia,loil_ppl,2060,45,y
+Nova Scotia,geo_ppl,2060,40,y
+Nova Scotia,HYDROGEN_BLUE,2060,45,y
+Nova Scotia,HYDROGEN_GREEN,2060,45,y
+Nova Scotia,hydro_hc,2060,100,y
+Nova Scotia,hydro_lc,2060,80,y
+Nova Scotia,gas_cc,2060,45,y
+Nova Scotia,gas_cc_ccs,2060,45,y
+Nova Scotia,gas_ppl,2060,45,y
+Nova Scotia,gas_ct,2060,45,y
+Nova Scotia,nuc_lc,2060,60,y
+Nova Scotia,nuc_hc,2060,60,y
+Nova Scotia,foil_ppl,2060,45,y
+Nova Scotia,solar_pv_ppl,2060,30,y
+Nova Scotia,nan,2060,30,y
+Nova Scotia,stor_ppl,2060,15,y
+Nova Scotia,STOR_PUMP,2060,100,y
+Nova Scotia,wind_ppf,2060,30,y
+Nova Scotia,wind_ppl,2060,30,y
+Ontario,bio_istig,1960,40,y
+Ontario,bio_ppl,1960,45,y
+Ontario,igcc,1960,45,y
+Ontario,coal_adv_ccs,1960,45,y
+Ontario,loil_ppl,1960,45,y
+Ontario,geo_ppl,1960,40,y
+Ontario,HYDROGEN_BLUE,1960,45,y
+Ontario,HYDROGEN_GREEN,1960,45,y
+Ontario,hydro_hc,1960,100,y
+Ontario,hydro_lc,1960,80,y
+Ontario,gas_cc,1960,45,y
+Ontario,gas_cc_ccs,1960,45,y
+Ontario,gas_ppl,1960,45,y
+Ontario,gas_ct,1960,45,y
+Ontario,nuc_lc,1960,60,y
+Ontario,nuc_hc,1960,60,y
+Ontario,foil_ppl,1960,45,y
+Ontario,solar_pv_ppl,1960,30,y
+Ontario,nan,1960,30,y
+Ontario,stor_ppl,1960,15,y
+Ontario,STOR_PUMP,1960,100,y
+Ontario,wind_ppf,1960,30,y
+Ontario,wind_ppl,1960,30,y
+Ontario,bio_istig,1965,40,y
+Ontario,bio_ppl,1965,45,y
+Ontario,igcc,1965,45,y
+Ontario,coal_adv_ccs,1965,45,y
+Ontario,loil_ppl,1965,45,y
+Ontario,geo_ppl,1965,40,y
+Ontario,HYDROGEN_BLUE,1965,45,y
+Ontario,HYDROGEN_GREEN,1965,45,y
+Ontario,hydro_hc,1965,100,y
+Ontario,hydro_lc,1965,80,y
+Ontario,gas_cc,1965,45,y
+Ontario,gas_cc_ccs,1965,45,y
+Ontario,gas_ppl,1965,45,y
+Ontario,gas_ct,1965,45,y
+Ontario,nuc_lc,1965,60,y
+Ontario,nuc_hc,1965,60,y
+Ontario,foil_ppl,1965,45,y
+Ontario,solar_pv_ppl,1965,30,y
+Ontario,nan,1965,30,y
+Ontario,stor_ppl,1965,15,y
+Ontario,STOR_PUMP,1965,100,y
+Ontario,wind_ppf,1965,30,y
+Ontario,wind_ppl,1965,30,y
+Ontario,bio_istig,1970,40,y
+Ontario,bio_ppl,1970,45,y
+Ontario,igcc,1970,45,y
+Ontario,coal_adv_ccs,1970,45,y
+Ontario,loil_ppl,1970,45,y
+Ontario,geo_ppl,1970,40,y
+Ontario,HYDROGEN_BLUE,1970,45,y
+Ontario,HYDROGEN_GREEN,1970,45,y
+Ontario,hydro_hc,1970,100,y
+Ontario,hydro_lc,1970,80,y
+Ontario,gas_cc,1970,45,y
+Ontario,gas_cc_ccs,1970,45,y
+Ontario,gas_ppl,1970,45,y
+Ontario,gas_ct,1970,45,y
+Ontario,nuc_lc,1970,60,y
+Ontario,nuc_hc,1970,60,y
+Ontario,foil_ppl,1970,45,y
+Ontario,solar_pv_ppl,1970,30,y
+Ontario,nan,1970,30,y
+Ontario,stor_ppl,1970,15,y
+Ontario,STOR_PUMP,1970,100,y
+Ontario,wind_ppf,1970,30,y
+Ontario,wind_ppl,1970,30,y
+Ontario,bio_istig,1975,40,y
+Ontario,bio_ppl,1975,45,y
+Ontario,igcc,1975,45,y
+Ontario,coal_adv_ccs,1975,45,y
+Ontario,loil_ppl,1975,45,y
+Ontario,geo_ppl,1975,40,y
+Ontario,HYDROGEN_BLUE,1975,45,y
+Ontario,HYDROGEN_GREEN,1975,45,y
+Ontario,hydro_hc,1975,100,y
+Ontario,hydro_lc,1975,80,y
+Ontario,gas_cc,1975,45,y
+Ontario,gas_cc_ccs,1975,45,y
+Ontario,gas_ppl,1975,45,y
+Ontario,gas_ct,1975,45,y
+Ontario,nuc_lc,1975,60,y
+Ontario,nuc_hc,1975,60,y
+Ontario,foil_ppl,1975,45,y
+Ontario,solar_pv_ppl,1975,30,y
+Ontario,nan,1975,30,y
+Ontario,stor_ppl,1975,15,y
+Ontario,STOR_PUMP,1975,100,y
+Ontario,wind_ppf,1975,30,y
+Ontario,wind_ppl,1975,30,y
+Ontario,bio_istig,1980,40,y
+Ontario,bio_ppl,1980,45,y
+Ontario,igcc,1980,45,y
+Ontario,coal_adv_ccs,1980,45,y
+Ontario,loil_ppl,1980,45,y
+Ontario,geo_ppl,1980,40,y
+Ontario,HYDROGEN_BLUE,1980,45,y
+Ontario,HYDROGEN_GREEN,1980,45,y
+Ontario,hydro_hc,1980,100,y
+Ontario,hydro_lc,1980,80,y
+Ontario,gas_cc,1980,45,y
+Ontario,gas_cc_ccs,1980,45,y
+Ontario,gas_ppl,1980,45,y
+Ontario,gas_ct,1980,45,y
+Ontario,nuc_lc,1980,60,y
+Ontario,nuc_hc,1980,60,y
+Ontario,foil_ppl,1980,45,y
+Ontario,solar_pv_ppl,1980,30,y
+Ontario,nan,1980,30,y
+Ontario,stor_ppl,1980,15,y
+Ontario,STOR_PUMP,1980,100,y
+Ontario,wind_ppf,1980,30,y
+Ontario,wind_ppl,1980,30,y
+Ontario,bio_istig,1985,40,y
+Ontario,bio_ppl,1985,45,y
+Ontario,igcc,1985,45,y
+Ontario,coal_adv_ccs,1985,45,y
+Ontario,loil_ppl,1985,45,y
+Ontario,geo_ppl,1985,40,y
+Ontario,HYDROGEN_BLUE,1985,45,y
+Ontario,HYDROGEN_GREEN,1985,45,y
+Ontario,hydro_hc,1985,100,y
+Ontario,hydro_lc,1985,80,y
+Ontario,gas_cc,1985,45,y
+Ontario,gas_cc_ccs,1985,45,y
+Ontario,gas_ppl,1985,45,y
+Ontario,gas_ct,1985,45,y
+Ontario,nuc_lc,1985,60,y
+Ontario,nuc_hc,1985,60,y
+Ontario,foil_ppl,1985,45,y
+Ontario,solar_pv_ppl,1985,30,y
+Ontario,nan,1985,30,y
+Ontario,stor_ppl,1985,15,y
+Ontario,STOR_PUMP,1985,100,y
+Ontario,wind_ppf,1985,30,y
+Ontario,wind_ppl,1985,30,y
+Ontario,bio_istig,1990,40,y
+Ontario,bio_ppl,1990,45,y
+Ontario,igcc,1990,45,y
+Ontario,coal_adv_ccs,1990,45,y
+Ontario,loil_ppl,1990,45,y
+Ontario,geo_ppl,1990,40,y
+Ontario,HYDROGEN_BLUE,1990,45,y
+Ontario,HYDROGEN_GREEN,1990,45,y
+Ontario,hydro_hc,1990,100,y
+Ontario,hydro_lc,1990,80,y
+Ontario,gas_cc,1990,45,y
+Ontario,gas_cc_ccs,1990,45,y
+Ontario,gas_ppl,1990,45,y
+Ontario,gas_ct,1990,45,y
+Ontario,nuc_lc,1990,60,y
+Ontario,nuc_hc,1990,60,y
+Ontario,foil_ppl,1990,45,y
+Ontario,solar_pv_ppl,1990,30,y
+Ontario,nan,1990,30,y
+Ontario,stor_ppl,1990,15,y
+Ontario,STOR_PUMP,1990,100,y
+Ontario,wind_ppf,1990,30,y
+Ontario,wind_ppl,1990,30,y
+Ontario,bio_istig,1995,40,y
+Ontario,bio_ppl,1995,45,y
+Ontario,igcc,1995,45,y
+Ontario,coal_adv_ccs,1995,45,y
+Ontario,loil_ppl,1995,45,y
+Ontario,geo_ppl,1995,40,y
+Ontario,HYDROGEN_BLUE,1995,45,y
+Ontario,HYDROGEN_GREEN,1995,45,y
+Ontario,hydro_hc,1995,100,y
+Ontario,hydro_lc,1995,80,y
+Ontario,gas_cc,1995,45,y
+Ontario,gas_cc_ccs,1995,45,y
+Ontario,gas_ppl,1995,45,y
+Ontario,gas_ct,1995,45,y
+Ontario,nuc_lc,1995,60,y
+Ontario,nuc_hc,1995,60,y
+Ontario,foil_ppl,1995,45,y
+Ontario,solar_pv_ppl,1995,30,y
+Ontario,nan,1995,30,y
+Ontario,stor_ppl,1995,15,y
+Ontario,STOR_PUMP,1995,100,y
+Ontario,wind_ppf,1995,30,y
+Ontario,wind_ppl,1995,30,y
+Ontario,bio_istig,2000,40,y
+Ontario,bio_ppl,2000,45,y
+Ontario,igcc,2000,45,y
+Ontario,coal_adv_ccs,2000,45,y
+Ontario,loil_ppl,2000,45,y
+Ontario,geo_ppl,2000,40,y
+Ontario,HYDROGEN_BLUE,2000,45,y
+Ontario,HYDROGEN_GREEN,2000,45,y
+Ontario,hydro_hc,2000,100,y
+Ontario,hydro_lc,2000,80,y
+Ontario,gas_cc,2000,45,y
+Ontario,gas_cc_ccs,2000,45,y
+Ontario,gas_ppl,2000,45,y
+Ontario,gas_ct,2000,45,y
+Ontario,nuc_lc,2000,60,y
+Ontario,nuc_hc,2000,60,y
+Ontario,foil_ppl,2000,45,y
+Ontario,solar_pv_ppl,2000,30,y
+Ontario,nan,2000,30,y
+Ontario,stor_ppl,2000,15,y
+Ontario,STOR_PUMP,2000,100,y
+Ontario,wind_ppf,2000,30,y
+Ontario,wind_ppl,2000,30,y
+Ontario,bio_istig,2005,40,y
+Ontario,bio_ppl,2005,45,y
+Ontario,igcc,2005,45,y
+Ontario,coal_adv_ccs,2005,45,y
+Ontario,loil_ppl,2005,45,y
+Ontario,geo_ppl,2005,40,y
+Ontario,HYDROGEN_BLUE,2005,45,y
+Ontario,HYDROGEN_GREEN,2005,45,y
+Ontario,hydro_hc,2005,100,y
+Ontario,hydro_lc,2005,80,y
+Ontario,gas_cc,2005,45,y
+Ontario,gas_cc_ccs,2005,45,y
+Ontario,gas_ppl,2005,45,y
+Ontario,gas_ct,2005,45,y
+Ontario,nuc_lc,2005,60,y
+Ontario,nuc_hc,2005,60,y
+Ontario,foil_ppl,2005,45,y
+Ontario,solar_pv_ppl,2005,30,y
+Ontario,nan,2005,30,y
+Ontario,stor_ppl,2005,15,y
+Ontario,STOR_PUMP,2005,100,y
+Ontario,wind_ppf,2005,30,y
+Ontario,wind_ppl,2005,30,y
+Ontario,bio_istig,2010,40,y
+Ontario,bio_ppl,2010,45,y
+Ontario,igcc,2010,45,y
+Ontario,coal_adv_ccs,2010,45,y
+Ontario,loil_ppl,2010,45,y
+Ontario,geo_ppl,2010,40,y
+Ontario,HYDROGEN_BLUE,2010,45,y
+Ontario,HYDROGEN_GREEN,2010,45,y
+Ontario,hydro_hc,2010,100,y
+Ontario,hydro_lc,2010,80,y
+Ontario,gas_cc,2010,45,y
+Ontario,gas_cc_ccs,2010,45,y
+Ontario,gas_ppl,2010,45,y
+Ontario,gas_ct,2010,45,y
+Ontario,nuc_lc,2010,60,y
+Ontario,nuc_hc,2010,60,y
+Ontario,foil_ppl,2010,45,y
+Ontario,solar_pv_ppl,2010,30,y
+Ontario,nan,2010,30,y
+Ontario,stor_ppl,2010,15,y
+Ontario,STOR_PUMP,2010,100,y
+Ontario,wind_ppf,2010,30,y
+Ontario,wind_ppl,2010,30,y
+Ontario,bio_istig,2015,40,y
+Ontario,bio_ppl,2015,45,y
+Ontario,igcc,2015,45,y
+Ontario,coal_adv_ccs,2015,45,y
+Ontario,loil_ppl,2015,45,y
+Ontario,geo_ppl,2015,40,y
+Ontario,HYDROGEN_BLUE,2015,45,y
+Ontario,HYDROGEN_GREEN,2015,45,y
+Ontario,hydro_hc,2015,100,y
+Ontario,hydro_lc,2015,80,y
+Ontario,gas_cc,2015,45,y
+Ontario,gas_cc_ccs,2015,45,y
+Ontario,gas_ppl,2015,45,y
+Ontario,gas_ct,2015,45,y
+Ontario,nuc_lc,2015,60,y
+Ontario,nuc_hc,2015,60,y
+Ontario,foil_ppl,2015,45,y
+Ontario,solar_pv_ppl,2015,30,y
+Ontario,nan,2015,30,y
+Ontario,stor_ppl,2015,15,y
+Ontario,STOR_PUMP,2015,100,y
+Ontario,wind_ppf,2015,30,y
+Ontario,wind_ppl,2015,30,y
+Ontario,bio_istig,2020,40,y
+Ontario,bio_ppl,2020,45,y
+Ontario,igcc,2020,45,y
+Ontario,coal_adv_ccs,2020,45,y
+Ontario,loil_ppl,2020,45,y
+Ontario,geo_ppl,2020,40,y
+Ontario,HYDROGEN_BLUE,2020,45,y
+Ontario,HYDROGEN_GREEN,2020,45,y
+Ontario,hydro_hc,2020,100,y
+Ontario,hydro_lc,2020,80,y
+Ontario,gas_cc,2020,45,y
+Ontario,gas_cc_ccs,2020,45,y
+Ontario,gas_ppl,2020,45,y
+Ontario,gas_ct,2020,45,y
+Ontario,nuc_lc,2020,60,y
+Ontario,nuc_hc,2020,60,y
+Ontario,foil_ppl,2020,45,y
+Ontario,solar_pv_ppl,2020,30,y
+Ontario,nan,2020,30,y
+Ontario,stor_ppl,2020,15,y
+Ontario,STOR_PUMP,2020,100,y
+Ontario,wind_ppf,2020,30,y
+Ontario,wind_ppl,2020,30,y
+Ontario,bio_istig,2025,40,y
+Ontario,bio_ppl,2025,45,y
+Ontario,igcc,2025,45,y
+Ontario,coal_adv_ccs,2025,45,y
+Ontario,loil_ppl,2025,45,y
+Ontario,geo_ppl,2025,40,y
+Ontario,HYDROGEN_BLUE,2025,45,y
+Ontario,HYDROGEN_GREEN,2025,45,y
+Ontario,hydro_hc,2025,100,y
+Ontario,hydro_lc,2025,80,y
+Ontario,gas_cc,2025,45,y
+Ontario,gas_cc_ccs,2025,45,y
+Ontario,gas_ppl,2025,45,y
+Ontario,gas_ct,2025,45,y
+Ontario,nuc_lc,2025,60,y
+Ontario,nuc_hc,2025,60,y
+Ontario,foil_ppl,2025,45,y
+Ontario,solar_pv_ppl,2025,30,y
+Ontario,nan,2025,30,y
+Ontario,stor_ppl,2025,15,y
+Ontario,STOR_PUMP,2025,100,y
+Ontario,wind_ppf,2025,30,y
+Ontario,wind_ppl,2025,30,y
+Ontario,bio_istig,2030,40,y
+Ontario,bio_ppl,2030,45,y
+Ontario,igcc,2030,45,y
+Ontario,coal_adv_ccs,2030,45,y
+Ontario,loil_ppl,2030,45,y
+Ontario,geo_ppl,2030,40,y
+Ontario,HYDROGEN_BLUE,2030,45,y
+Ontario,HYDROGEN_GREEN,2030,45,y
+Ontario,hydro_hc,2030,100,y
+Ontario,hydro_lc,2030,80,y
+Ontario,gas_cc,2030,45,y
+Ontario,gas_cc_ccs,2030,45,y
+Ontario,gas_ppl,2030,45,y
+Ontario,gas_ct,2030,45,y
+Ontario,nuc_lc,2030,60,y
+Ontario,nuc_hc,2030,60,y
+Ontario,foil_ppl,2030,45,y
+Ontario,solar_pv_ppl,2030,30,y
+Ontario,nan,2030,30,y
+Ontario,stor_ppl,2030,15,y
+Ontario,STOR_PUMP,2030,100,y
+Ontario,wind_ppf,2030,30,y
+Ontario,wind_ppl,2030,30,y
+Ontario,bio_istig,2035,40,y
+Ontario,bio_ppl,2035,45,y
+Ontario,igcc,2035,45,y
+Ontario,coal_adv_ccs,2035,45,y
+Ontario,loil_ppl,2035,45,y
+Ontario,geo_ppl,2035,40,y
+Ontario,HYDROGEN_BLUE,2035,45,y
+Ontario,HYDROGEN_GREEN,2035,45,y
+Ontario,hydro_hc,2035,100,y
+Ontario,hydro_lc,2035,80,y
+Ontario,gas_cc,2035,45,y
+Ontario,gas_cc_ccs,2035,45,y
+Ontario,gas_ppl,2035,45,y
+Ontario,gas_ct,2035,45,y
+Ontario,nuc_lc,2035,60,y
+Ontario,nuc_hc,2035,60,y
+Ontario,foil_ppl,2035,45,y
+Ontario,solar_pv_ppl,2035,30,y
+Ontario,nan,2035,30,y
+Ontario,stor_ppl,2035,15,y
+Ontario,STOR_PUMP,2035,100,y
+Ontario,wind_ppf,2035,30,y
+Ontario,wind_ppl,2035,30,y
+Ontario,bio_istig,2040,40,y
+Ontario,bio_ppl,2040,45,y
+Ontario,igcc,2040,45,y
+Ontario,coal_adv_ccs,2040,45,y
+Ontario,loil_ppl,2040,45,y
+Ontario,geo_ppl,2040,40,y
+Ontario,HYDROGEN_BLUE,2040,45,y
+Ontario,HYDROGEN_GREEN,2040,45,y
+Ontario,hydro_hc,2040,100,y
+Ontario,hydro_lc,2040,80,y
+Ontario,gas_cc,2040,45,y
+Ontario,gas_cc_ccs,2040,45,y
+Ontario,gas_ppl,2040,45,y
+Ontario,gas_ct,2040,45,y
+Ontario,nuc_lc,2040,60,y
+Ontario,nuc_hc,2040,60,y
+Ontario,foil_ppl,2040,45,y
+Ontario,solar_pv_ppl,2040,30,y
+Ontario,nan,2040,30,y
+Ontario,stor_ppl,2040,15,y
+Ontario,STOR_PUMP,2040,100,y
+Ontario,wind_ppf,2040,30,y
+Ontario,wind_ppl,2040,30,y
+Ontario,bio_istig,2045,40,y
+Ontario,bio_ppl,2045,45,y
+Ontario,igcc,2045,45,y
+Ontario,coal_adv_ccs,2045,45,y
+Ontario,loil_ppl,2045,45,y
+Ontario,geo_ppl,2045,40,y
+Ontario,HYDROGEN_BLUE,2045,45,y
+Ontario,HYDROGEN_GREEN,2045,45,y
+Ontario,hydro_hc,2045,100,y
+Ontario,hydro_lc,2045,80,y
+Ontario,gas_cc,2045,45,y
+Ontario,gas_cc_ccs,2045,45,y
+Ontario,gas_ppl,2045,45,y
+Ontario,gas_ct,2045,45,y
+Ontario,nuc_lc,2045,60,y
+Ontario,nuc_hc,2045,60,y
+Ontario,foil_ppl,2045,45,y
+Ontario,solar_pv_ppl,2045,30,y
+Ontario,nan,2045,30,y
+Ontario,stor_ppl,2045,15,y
+Ontario,STOR_PUMP,2045,100,y
+Ontario,wind_ppf,2045,30,y
+Ontario,wind_ppl,2045,30,y
+Ontario,bio_istig,2050,40,y
+Ontario,bio_ppl,2050,45,y
+Ontario,igcc,2050,45,y
+Ontario,coal_adv_ccs,2050,45,y
+Ontario,loil_ppl,2050,45,y
+Ontario,geo_ppl,2050,40,y
+Ontario,HYDROGEN_BLUE,2050,45,y
+Ontario,HYDROGEN_GREEN,2050,45,y
+Ontario,hydro_hc,2050,100,y
+Ontario,hydro_lc,2050,80,y
+Ontario,gas_cc,2050,45,y
+Ontario,gas_cc_ccs,2050,45,y
+Ontario,gas_ppl,2050,45,y
+Ontario,gas_ct,2050,45,y
+Ontario,nuc_lc,2050,60,y
+Ontario,nuc_hc,2050,60,y
+Ontario,foil_ppl,2050,45,y
+Ontario,solar_pv_ppl,2050,30,y
+Ontario,nan,2050,30,y
+Ontario,stor_ppl,2050,15,y
+Ontario,STOR_PUMP,2050,100,y
+Ontario,wind_ppf,2050,30,y
+Ontario,wind_ppl,2050,30,y
+Ontario,bio_istig,2055,40,y
+Ontario,bio_ppl,2055,45,y
+Ontario,igcc,2055,45,y
+Ontario,coal_adv_ccs,2055,45,y
+Ontario,loil_ppl,2055,45,y
+Ontario,geo_ppl,2055,40,y
+Ontario,HYDROGEN_BLUE,2055,45,y
+Ontario,HYDROGEN_GREEN,2055,45,y
+Ontario,hydro_hc,2055,100,y
+Ontario,hydro_lc,2055,80,y
+Ontario,gas_cc,2055,45,y
+Ontario,gas_cc_ccs,2055,45,y
+Ontario,gas_ppl,2055,45,y
+Ontario,gas_ct,2055,45,y
+Ontario,nuc_lc,2055,60,y
+Ontario,nuc_hc,2055,60,y
+Ontario,foil_ppl,2055,45,y
+Ontario,solar_pv_ppl,2055,30,y
+Ontario,nan,2055,30,y
+Ontario,stor_ppl,2055,15,y
+Ontario,STOR_PUMP,2055,100,y
+Ontario,wind_ppf,2055,30,y
+Ontario,wind_ppl,2055,30,y
+Ontario,bio_istig,2060,40,y
+Ontario,bio_ppl,2060,45,y
+Ontario,igcc,2060,45,y
+Ontario,coal_adv_ccs,2060,45,y
+Ontario,loil_ppl,2060,45,y
+Ontario,geo_ppl,2060,40,y
+Ontario,HYDROGEN_BLUE,2060,45,y
+Ontario,HYDROGEN_GREEN,2060,45,y
+Ontario,hydro_hc,2060,100,y
+Ontario,hydro_lc,2060,80,y
+Ontario,gas_cc,2060,45,y
+Ontario,gas_cc_ccs,2060,45,y
+Ontario,gas_ppl,2060,45,y
+Ontario,gas_ct,2060,45,y
+Ontario,nuc_lc,2060,60,y
+Ontario,nuc_hc,2060,60,y
+Ontario,foil_ppl,2060,45,y
+Ontario,solar_pv_ppl,2060,30,y
+Ontario,nan,2060,30,y
+Ontario,stor_ppl,2060,15,y
+Ontario,STOR_PUMP,2060,100,y
+Ontario,wind_ppf,2060,30,y
+Ontario,wind_ppl,2060,30,y
+Quebec,bio_istig,1960,40,y
+Quebec,bio_ppl,1960,45,y
+Quebec,igcc,1960,45,y
+Quebec,coal_adv_ccs,1960,45,y
+Quebec,loil_ppl,1960,45,y
+Quebec,geo_ppl,1960,40,y
+Quebec,HYDROGEN_BLUE,1960,45,y
+Quebec,HYDROGEN_GREEN,1960,45,y
+Quebec,hydro_hc,1960,100,y
+Quebec,hydro_lc,1960,80,y
+Quebec,gas_cc,1960,45,y
+Quebec,gas_cc_ccs,1960,45,y
+Quebec,gas_ppl,1960,45,y
+Quebec,gas_ct,1960,45,y
+Quebec,nuc_lc,1960,60,y
+Quebec,nuc_hc,1960,60,y
+Quebec,foil_ppl,1960,45,y
+Quebec,solar_pv_ppl,1960,30,y
+Quebec,nan,1960,30,y
+Quebec,stor_ppl,1960,15,y
+Quebec,STOR_PUMP,1960,100,y
+Quebec,wind_ppf,1960,30,y
+Quebec,wind_ppl,1960,30,y
+Quebec,bio_istig,1965,40,y
+Quebec,bio_ppl,1965,45,y
+Quebec,igcc,1965,45,y
+Quebec,coal_adv_ccs,1965,45,y
+Quebec,loil_ppl,1965,45,y
+Quebec,geo_ppl,1965,40,y
+Quebec,HYDROGEN_BLUE,1965,45,y
+Quebec,HYDROGEN_GREEN,1965,45,y
+Quebec,hydro_hc,1965,100,y
+Quebec,hydro_lc,1965,80,y
+Quebec,gas_cc,1965,45,y
+Quebec,gas_cc_ccs,1965,45,y
+Quebec,gas_ppl,1965,45,y
+Quebec,gas_ct,1965,45,y
+Quebec,nuc_lc,1965,60,y
+Quebec,nuc_hc,1965,60,y
+Quebec,foil_ppl,1965,45,y
+Quebec,solar_pv_ppl,1965,30,y
+Quebec,nan,1965,30,y
+Quebec,stor_ppl,1965,15,y
+Quebec,STOR_PUMP,1965,100,y
+Quebec,wind_ppf,1965,30,y
+Quebec,wind_ppl,1965,30,y
+Quebec,bio_istig,1970,40,y
+Quebec,bio_ppl,1970,45,y
+Quebec,igcc,1970,45,y
+Quebec,coal_adv_ccs,1970,45,y
+Quebec,loil_ppl,1970,45,y
+Quebec,geo_ppl,1970,40,y
+Quebec,HYDROGEN_BLUE,1970,45,y
+Quebec,HYDROGEN_GREEN,1970,45,y
+Quebec,hydro_hc,1970,100,y
+Quebec,hydro_lc,1970,80,y
+Quebec,gas_cc,1970,45,y
+Quebec,gas_cc_ccs,1970,45,y
+Quebec,gas_ppl,1970,45,y
+Quebec,gas_ct,1970,45,y
+Quebec,nuc_lc,1970,60,y
+Quebec,nuc_hc,1970,60,y
+Quebec,foil_ppl,1970,45,y
+Quebec,solar_pv_ppl,1970,30,y
+Quebec,nan,1970,30,y
+Quebec,stor_ppl,1970,15,y
+Quebec,STOR_PUMP,1970,100,y
+Quebec,wind_ppf,1970,30,y
+Quebec,wind_ppl,1970,30,y
+Quebec,bio_istig,1975,40,y
+Quebec,bio_ppl,1975,45,y
+Quebec,igcc,1975,45,y
+Quebec,coal_adv_ccs,1975,45,y
+Quebec,loil_ppl,1975,45,y
+Quebec,geo_ppl,1975,40,y
+Quebec,HYDROGEN_BLUE,1975,45,y
+Quebec,HYDROGEN_GREEN,1975,45,y
+Quebec,hydro_hc,1975,100,y
+Quebec,hydro_lc,1975,80,y
+Quebec,gas_cc,1975,45,y
+Quebec,gas_cc_ccs,1975,45,y
+Quebec,gas_ppl,1975,45,y
+Quebec,gas_ct,1975,45,y
+Quebec,nuc_lc,1975,60,y
+Quebec,nuc_hc,1975,60,y
+Quebec,foil_ppl,1975,45,y
+Quebec,solar_pv_ppl,1975,30,y
+Quebec,nan,1975,30,y
+Quebec,stor_ppl,1975,15,y
+Quebec,STOR_PUMP,1975,100,y
+Quebec,wind_ppf,1975,30,y
+Quebec,wind_ppl,1975,30,y
+Quebec,bio_istig,1980,40,y
+Quebec,bio_ppl,1980,45,y
+Quebec,igcc,1980,45,y
+Quebec,coal_adv_ccs,1980,45,y
+Quebec,loil_ppl,1980,45,y
+Quebec,geo_ppl,1980,40,y
+Quebec,HYDROGEN_BLUE,1980,45,y
+Quebec,HYDROGEN_GREEN,1980,45,y
+Quebec,hydro_hc,1980,100,y
+Quebec,hydro_lc,1980,80,y
+Quebec,gas_cc,1980,45,y
+Quebec,gas_cc_ccs,1980,45,y
+Quebec,gas_ppl,1980,45,y
+Quebec,gas_ct,1980,45,y
+Quebec,nuc_lc,1980,60,y
+Quebec,nuc_hc,1980,60,y
+Quebec,foil_ppl,1980,45,y
+Quebec,solar_pv_ppl,1980,30,y
+Quebec,nan,1980,30,y
+Quebec,stor_ppl,1980,15,y
+Quebec,STOR_PUMP,1980,100,y
+Quebec,wind_ppf,1980,30,y
+Quebec,wind_ppl,1980,30,y
+Quebec,bio_istig,1985,40,y
+Quebec,bio_ppl,1985,45,y
+Quebec,igcc,1985,45,y
+Quebec,coal_adv_ccs,1985,45,y
+Quebec,loil_ppl,1985,45,y
+Quebec,geo_ppl,1985,40,y
+Quebec,HYDROGEN_BLUE,1985,45,y
+Quebec,HYDROGEN_GREEN,1985,45,y
+Quebec,hydro_hc,1985,100,y
+Quebec,hydro_lc,1985,80,y
+Quebec,gas_cc,1985,45,y
+Quebec,gas_cc_ccs,1985,45,y
+Quebec,gas_ppl,1985,45,y
+Quebec,gas_ct,1985,45,y
+Quebec,nuc_lc,1985,60,y
+Quebec,nuc_hc,1985,60,y
+Quebec,foil_ppl,1985,45,y
+Quebec,solar_pv_ppl,1985,30,y
+Quebec,nan,1985,30,y
+Quebec,stor_ppl,1985,15,y
+Quebec,STOR_PUMP,1985,100,y
+Quebec,wind_ppf,1985,30,y
+Quebec,wind_ppl,1985,30,y
+Quebec,bio_istig,1990,40,y
+Quebec,bio_ppl,1990,45,y
+Quebec,igcc,1990,45,y
+Quebec,coal_adv_ccs,1990,45,y
+Quebec,loil_ppl,1990,45,y
+Quebec,geo_ppl,1990,40,y
+Quebec,HYDROGEN_BLUE,1990,45,y
+Quebec,HYDROGEN_GREEN,1990,45,y
+Quebec,hydro_hc,1990,100,y
+Quebec,hydro_lc,1990,80,y
+Quebec,gas_cc,1990,45,y
+Quebec,gas_cc_ccs,1990,45,y
+Quebec,gas_ppl,1990,45,y
+Quebec,gas_ct,1990,45,y
+Quebec,nuc_lc,1990,60,y
+Quebec,nuc_hc,1990,60,y
+Quebec,foil_ppl,1990,45,y
+Quebec,solar_pv_ppl,1990,30,y
+Quebec,nan,1990,30,y
+Quebec,stor_ppl,1990,15,y
+Quebec,STOR_PUMP,1990,100,y
+Quebec,wind_ppf,1990,30,y
+Quebec,wind_ppl,1990,30,y
+Quebec,bio_istig,1995,40,y
+Quebec,bio_ppl,1995,45,y
+Quebec,igcc,1995,45,y
+Quebec,coal_adv_ccs,1995,45,y
+Quebec,loil_ppl,1995,45,y
+Quebec,geo_ppl,1995,40,y
+Quebec,HYDROGEN_BLUE,1995,45,y
+Quebec,HYDROGEN_GREEN,1995,45,y
+Quebec,hydro_hc,1995,100,y
+Quebec,hydro_lc,1995,80,y
+Quebec,gas_cc,1995,45,y
+Quebec,gas_cc_ccs,1995,45,y
+Quebec,gas_ppl,1995,45,y
+Quebec,gas_ct,1995,45,y
+Quebec,nuc_lc,1995,60,y
+Quebec,nuc_hc,1995,60,y
+Quebec,foil_ppl,1995,45,y
+Quebec,solar_pv_ppl,1995,30,y
+Quebec,nan,1995,30,y
+Quebec,stor_ppl,1995,15,y
+Quebec,STOR_PUMP,1995,100,y
+Quebec,wind_ppf,1995,30,y
+Quebec,wind_ppl,1995,30,y
+Quebec,bio_istig,2000,40,y
+Quebec,bio_ppl,2000,45,y
+Quebec,igcc,2000,45,y
+Quebec,coal_adv_ccs,2000,45,y
+Quebec,loil_ppl,2000,45,y
+Quebec,geo_ppl,2000,40,y
+Quebec,HYDROGEN_BLUE,2000,45,y
+Quebec,HYDROGEN_GREEN,2000,45,y
+Quebec,hydro_hc,2000,100,y
+Quebec,hydro_lc,2000,80,y
+Quebec,gas_cc,2000,45,y
+Quebec,gas_cc_ccs,2000,45,y
+Quebec,gas_ppl,2000,45,y
+Quebec,gas_ct,2000,45,y
+Quebec,nuc_lc,2000,60,y
+Quebec,nuc_hc,2000,60,y
+Quebec,foil_ppl,2000,45,y
+Quebec,solar_pv_ppl,2000,30,y
+Quebec,nan,2000,30,y
+Quebec,stor_ppl,2000,15,y
+Quebec,STOR_PUMP,2000,100,y
+Quebec,wind_ppf,2000,30,y
+Quebec,wind_ppl,2000,30,y
+Quebec,bio_istig,2005,40,y
+Quebec,bio_ppl,2005,45,y
+Quebec,igcc,2005,45,y
+Quebec,coal_adv_ccs,2005,45,y
+Quebec,loil_ppl,2005,45,y
+Quebec,geo_ppl,2005,40,y
+Quebec,HYDROGEN_BLUE,2005,45,y
+Quebec,HYDROGEN_GREEN,2005,45,y
+Quebec,hydro_hc,2005,100,y
+Quebec,hydro_lc,2005,80,y
+Quebec,gas_cc,2005,45,y
+Quebec,gas_cc_ccs,2005,45,y
+Quebec,gas_ppl,2005,45,y
+Quebec,gas_ct,2005,45,y
+Quebec,nuc_lc,2005,60,y
+Quebec,nuc_hc,2005,60,y
+Quebec,foil_ppl,2005,45,y
+Quebec,solar_pv_ppl,2005,30,y
+Quebec,nan,2005,30,y
+Quebec,stor_ppl,2005,15,y
+Quebec,STOR_PUMP,2005,100,y
+Quebec,wind_ppf,2005,30,y
+Quebec,wind_ppl,2005,30,y
+Quebec,bio_istig,2010,40,y
+Quebec,bio_ppl,2010,45,y
+Quebec,igcc,2010,45,y
+Quebec,coal_adv_ccs,2010,45,y
+Quebec,loil_ppl,2010,45,y
+Quebec,geo_ppl,2010,40,y
+Quebec,HYDROGEN_BLUE,2010,45,y
+Quebec,HYDROGEN_GREEN,2010,45,y
+Quebec,hydro_hc,2010,100,y
+Quebec,hydro_lc,2010,80,y
+Quebec,gas_cc,2010,45,y
+Quebec,gas_cc_ccs,2010,45,y
+Quebec,gas_ppl,2010,45,y
+Quebec,gas_ct,2010,45,y
+Quebec,nuc_lc,2010,60,y
+Quebec,nuc_hc,2010,60,y
+Quebec,foil_ppl,2010,45,y
+Quebec,solar_pv_ppl,2010,30,y
+Quebec,nan,2010,30,y
+Quebec,stor_ppl,2010,15,y
+Quebec,STOR_PUMP,2010,100,y
+Quebec,wind_ppf,2010,30,y
+Quebec,wind_ppl,2010,30,y
+Quebec,bio_istig,2015,40,y
+Quebec,bio_ppl,2015,45,y
+Quebec,igcc,2015,45,y
+Quebec,coal_adv_ccs,2015,45,y
+Quebec,loil_ppl,2015,45,y
+Quebec,geo_ppl,2015,40,y
+Quebec,HYDROGEN_BLUE,2015,45,y
+Quebec,HYDROGEN_GREEN,2015,45,y
+Quebec,hydro_hc,2015,100,y
+Quebec,hydro_lc,2015,80,y
+Quebec,gas_cc,2015,45,y
+Quebec,gas_cc_ccs,2015,45,y
+Quebec,gas_ppl,2015,45,y
+Quebec,gas_ct,2015,45,y
+Quebec,nuc_lc,2015,60,y
+Quebec,nuc_hc,2015,60,y
+Quebec,foil_ppl,2015,45,y
+Quebec,solar_pv_ppl,2015,30,y
+Quebec,nan,2015,30,y
+Quebec,stor_ppl,2015,15,y
+Quebec,STOR_PUMP,2015,100,y
+Quebec,wind_ppf,2015,30,y
+Quebec,wind_ppl,2015,30,y
+Quebec,bio_istig,2020,40,y
+Quebec,bio_ppl,2020,45,y
+Quebec,igcc,2020,45,y
+Quebec,coal_adv_ccs,2020,45,y
+Quebec,loil_ppl,2020,45,y
+Quebec,geo_ppl,2020,40,y
+Quebec,HYDROGEN_BLUE,2020,45,y
+Quebec,HYDROGEN_GREEN,2020,45,y
+Quebec,hydro_hc,2020,100,y
+Quebec,hydro_lc,2020,80,y
+Quebec,gas_cc,2020,45,y
+Quebec,gas_cc_ccs,2020,45,y
+Quebec,gas_ppl,2020,45,y
+Quebec,gas_ct,2020,45,y
+Quebec,nuc_lc,2020,60,y
+Quebec,nuc_hc,2020,60,y
+Quebec,foil_ppl,2020,45,y
+Quebec,solar_pv_ppl,2020,30,y
+Quebec,nan,2020,30,y
+Quebec,stor_ppl,2020,15,y
+Quebec,STOR_PUMP,2020,100,y
+Quebec,wind_ppf,2020,30,y
+Quebec,wind_ppl,2020,30,y
+Quebec,bio_istig,2025,40,y
+Quebec,bio_ppl,2025,45,y
+Quebec,igcc,2025,45,y
+Quebec,coal_adv_ccs,2025,45,y
+Quebec,loil_ppl,2025,45,y
+Quebec,geo_ppl,2025,40,y
+Quebec,HYDROGEN_BLUE,2025,45,y
+Quebec,HYDROGEN_GREEN,2025,45,y
+Quebec,hydro_hc,2025,100,y
+Quebec,hydro_lc,2025,80,y
+Quebec,gas_cc,2025,45,y
+Quebec,gas_cc_ccs,2025,45,y
+Quebec,gas_ppl,2025,45,y
+Quebec,gas_ct,2025,45,y
+Quebec,nuc_lc,2025,60,y
+Quebec,nuc_hc,2025,60,y
+Quebec,foil_ppl,2025,45,y
+Quebec,solar_pv_ppl,2025,30,y
+Quebec,nan,2025,30,y
+Quebec,stor_ppl,2025,15,y
+Quebec,STOR_PUMP,2025,100,y
+Quebec,wind_ppf,2025,30,y
+Quebec,wind_ppl,2025,30,y
+Quebec,bio_istig,2030,40,y
+Quebec,bio_ppl,2030,45,y
+Quebec,igcc,2030,45,y
+Quebec,coal_adv_ccs,2030,45,y
+Quebec,loil_ppl,2030,45,y
+Quebec,geo_ppl,2030,40,y
+Quebec,HYDROGEN_BLUE,2030,45,y
+Quebec,HYDROGEN_GREEN,2030,45,y
+Quebec,hydro_hc,2030,100,y
+Quebec,hydro_lc,2030,80,y
+Quebec,gas_cc,2030,45,y
+Quebec,gas_cc_ccs,2030,45,y
+Quebec,gas_ppl,2030,45,y
+Quebec,gas_ct,2030,45,y
+Quebec,nuc_lc,2030,60,y
+Quebec,nuc_hc,2030,60,y
+Quebec,foil_ppl,2030,45,y
+Quebec,solar_pv_ppl,2030,30,y
+Quebec,nan,2030,30,y
+Quebec,stor_ppl,2030,15,y
+Quebec,STOR_PUMP,2030,100,y
+Quebec,wind_ppf,2030,30,y
+Quebec,wind_ppl,2030,30,y
+Quebec,bio_istig,2035,40,y
+Quebec,bio_ppl,2035,45,y
+Quebec,igcc,2035,45,y
+Quebec,coal_adv_ccs,2035,45,y
+Quebec,loil_ppl,2035,45,y
+Quebec,geo_ppl,2035,40,y
+Quebec,HYDROGEN_BLUE,2035,45,y
+Quebec,HYDROGEN_GREEN,2035,45,y
+Quebec,hydro_hc,2035,100,y
+Quebec,hydro_lc,2035,80,y
+Quebec,gas_cc,2035,45,y
+Quebec,gas_cc_ccs,2035,45,y
+Quebec,gas_ppl,2035,45,y
+Quebec,gas_ct,2035,45,y
+Quebec,nuc_lc,2035,60,y
+Quebec,nuc_hc,2035,60,y
+Quebec,foil_ppl,2035,45,y
+Quebec,solar_pv_ppl,2035,30,y
+Quebec,nan,2035,30,y
+Quebec,stor_ppl,2035,15,y
+Quebec,STOR_PUMP,2035,100,y
+Quebec,wind_ppf,2035,30,y
+Quebec,wind_ppl,2035,30,y
+Quebec,bio_istig,2040,40,y
+Quebec,bio_ppl,2040,45,y
+Quebec,igcc,2040,45,y
+Quebec,coal_adv_ccs,2040,45,y
+Quebec,loil_ppl,2040,45,y
+Quebec,geo_ppl,2040,40,y
+Quebec,HYDROGEN_BLUE,2040,45,y
+Quebec,HYDROGEN_GREEN,2040,45,y
+Quebec,hydro_hc,2040,100,y
+Quebec,hydro_lc,2040,80,y
+Quebec,gas_cc,2040,45,y
+Quebec,gas_cc_ccs,2040,45,y
+Quebec,gas_ppl,2040,45,y
+Quebec,gas_ct,2040,45,y
+Quebec,nuc_lc,2040,60,y
+Quebec,nuc_hc,2040,60,y
+Quebec,foil_ppl,2040,45,y
+Quebec,solar_pv_ppl,2040,30,y
+Quebec,nan,2040,30,y
+Quebec,stor_ppl,2040,15,y
+Quebec,STOR_PUMP,2040,100,y
+Quebec,wind_ppf,2040,30,y
+Quebec,wind_ppl,2040,30,y
+Quebec,bio_istig,2045,40,y
+Quebec,bio_ppl,2045,45,y
+Quebec,igcc,2045,45,y
+Quebec,coal_adv_ccs,2045,45,y
+Quebec,loil_ppl,2045,45,y
+Quebec,geo_ppl,2045,40,y
+Quebec,HYDROGEN_BLUE,2045,45,y
+Quebec,HYDROGEN_GREEN,2045,45,y
+Quebec,hydro_hc,2045,100,y
+Quebec,hydro_lc,2045,80,y
+Quebec,gas_cc,2045,45,y
+Quebec,gas_cc_ccs,2045,45,y
+Quebec,gas_ppl,2045,45,y
+Quebec,gas_ct,2045,45,y
+Quebec,nuc_lc,2045,60,y
+Quebec,nuc_hc,2045,60,y
+Quebec,foil_ppl,2045,45,y
+Quebec,solar_pv_ppl,2045,30,y
+Quebec,nan,2045,30,y
+Quebec,stor_ppl,2045,15,y
+Quebec,STOR_PUMP,2045,100,y
+Quebec,wind_ppf,2045,30,y
+Quebec,wind_ppl,2045,30,y
+Quebec,bio_istig,2050,40,y
+Quebec,bio_ppl,2050,45,y
+Quebec,igcc,2050,45,y
+Quebec,coal_adv_ccs,2050,45,y
+Quebec,loil_ppl,2050,45,y
+Quebec,geo_ppl,2050,40,y
+Quebec,HYDROGEN_BLUE,2050,45,y
+Quebec,HYDROGEN_GREEN,2050,45,y
+Quebec,hydro_hc,2050,100,y
+Quebec,hydro_lc,2050,80,y
+Quebec,gas_cc,2050,45,y
+Quebec,gas_cc_ccs,2050,45,y
+Quebec,gas_ppl,2050,45,y
+Quebec,gas_ct,2050,45,y
+Quebec,nuc_lc,2050,60,y
+Quebec,nuc_hc,2050,60,y
+Quebec,foil_ppl,2050,45,y
+Quebec,solar_pv_ppl,2050,30,y
+Quebec,nan,2050,30,y
+Quebec,stor_ppl,2050,15,y
+Quebec,STOR_PUMP,2050,100,y
+Quebec,wind_ppf,2050,30,y
+Quebec,wind_ppl,2050,30,y
+Quebec,bio_istig,2055,40,y
+Quebec,bio_ppl,2055,45,y
+Quebec,igcc,2055,45,y
+Quebec,coal_adv_ccs,2055,45,y
+Quebec,loil_ppl,2055,45,y
+Quebec,geo_ppl,2055,40,y
+Quebec,HYDROGEN_BLUE,2055,45,y
+Quebec,HYDROGEN_GREEN,2055,45,y
+Quebec,hydro_hc,2055,100,y
+Quebec,hydro_lc,2055,80,y
+Quebec,gas_cc,2055,45,y
+Quebec,gas_cc_ccs,2055,45,y
+Quebec,gas_ppl,2055,45,y
+Quebec,gas_ct,2055,45,y
+Quebec,nuc_lc,2055,60,y
+Quebec,nuc_hc,2055,60,y
+Quebec,foil_ppl,2055,45,y
+Quebec,solar_pv_ppl,2055,30,y
+Quebec,nan,2055,30,y
+Quebec,stor_ppl,2055,15,y
+Quebec,STOR_PUMP,2055,100,y
+Quebec,wind_ppf,2055,30,y
+Quebec,wind_ppl,2055,30,y
+Quebec,bio_istig,2060,40,y
+Quebec,bio_ppl,2060,45,y
+Quebec,igcc,2060,45,y
+Quebec,coal_adv_ccs,2060,45,y
+Quebec,loil_ppl,2060,45,y
+Quebec,geo_ppl,2060,40,y
+Quebec,HYDROGEN_BLUE,2060,45,y
+Quebec,HYDROGEN_GREEN,2060,45,y
+Quebec,hydro_hc,2060,100,y
+Quebec,hydro_lc,2060,80,y
+Quebec,gas_cc,2060,45,y
+Quebec,gas_cc_ccs,2060,45,y
+Quebec,gas_ppl,2060,45,y
+Quebec,gas_ct,2060,45,y
+Quebec,nuc_lc,2060,60,y
+Quebec,nuc_hc,2060,60,y
+Quebec,foil_ppl,2060,45,y
+Quebec,solar_pv_ppl,2060,30,y
+Quebec,nan,2060,30,y
+Quebec,stor_ppl,2060,15,y
+Quebec,STOR_PUMP,2060,100,y
+Quebec,wind_ppf,2060,30,y
+Quebec,wind_ppl,2060,30,y
+Saskatchewan,bio_istig,1960,40,y
+Saskatchewan,bio_ppl,1960,45,y
+Saskatchewan,igcc,1960,45,y
+Saskatchewan,coal_adv_ccs,1960,45,y
+Saskatchewan,loil_ppl,1960,45,y
+Saskatchewan,geo_ppl,1960,40,y
+Saskatchewan,HYDROGEN_BLUE,1960,45,y
+Saskatchewan,HYDROGEN_GREEN,1960,45,y
+Saskatchewan,hydro_hc,1960,100,y
+Saskatchewan,hydro_lc,1960,80,y
+Saskatchewan,gas_cc,1960,45,y
+Saskatchewan,gas_cc_ccs,1960,45,y
+Saskatchewan,gas_ppl,1960,45,y
+Saskatchewan,gas_ct,1960,45,y
+Saskatchewan,nuc_lc,1960,60,y
+Saskatchewan,nuc_hc,1960,60,y
+Saskatchewan,foil_ppl,1960,45,y
+Saskatchewan,solar_pv_ppl,1960,30,y
+Saskatchewan,nan,1960,30,y
+Saskatchewan,stor_ppl,1960,15,y
+Saskatchewan,STOR_PUMP,1960,100,y
+Saskatchewan,wind_ppf,1960,30,y
+Saskatchewan,wind_ppl,1960,30,y
+Saskatchewan,bio_istig,1965,40,y
+Saskatchewan,bio_ppl,1965,45,y
+Saskatchewan,igcc,1965,45,y
+Saskatchewan,coal_adv_ccs,1965,45,y
+Saskatchewan,loil_ppl,1965,45,y
+Saskatchewan,geo_ppl,1965,40,y
+Saskatchewan,HYDROGEN_BLUE,1965,45,y
+Saskatchewan,HYDROGEN_GREEN,1965,45,y
+Saskatchewan,hydro_hc,1965,100,y
+Saskatchewan,hydro_lc,1965,80,y
+Saskatchewan,gas_cc,1965,45,y
+Saskatchewan,gas_cc_ccs,1965,45,y
+Saskatchewan,gas_ppl,1965,45,y
+Saskatchewan,gas_ct,1965,45,y
+Saskatchewan,nuc_lc,1965,60,y
+Saskatchewan,nuc_hc,1965,60,y
+Saskatchewan,foil_ppl,1965,45,y
+Saskatchewan,solar_pv_ppl,1965,30,y
+Saskatchewan,nan,1965,30,y
+Saskatchewan,stor_ppl,1965,15,y
+Saskatchewan,STOR_PUMP,1965,100,y
+Saskatchewan,wind_ppf,1965,30,y
+Saskatchewan,wind_ppl,1965,30,y
+Saskatchewan,bio_istig,1970,40,y
+Saskatchewan,bio_ppl,1970,45,y
+Saskatchewan,igcc,1970,45,y
+Saskatchewan,coal_adv_ccs,1970,45,y
+Saskatchewan,loil_ppl,1970,45,y
+Saskatchewan,geo_ppl,1970,40,y
+Saskatchewan,HYDROGEN_BLUE,1970,45,y
+Saskatchewan,HYDROGEN_GREEN,1970,45,y
+Saskatchewan,hydro_hc,1970,100,y
+Saskatchewan,hydro_lc,1970,80,y
+Saskatchewan,gas_cc,1970,45,y
+Saskatchewan,gas_cc_ccs,1970,45,y
+Saskatchewan,gas_ppl,1970,45,y
+Saskatchewan,gas_ct,1970,45,y
+Saskatchewan,nuc_lc,1970,60,y
+Saskatchewan,nuc_hc,1970,60,y
+Saskatchewan,foil_ppl,1970,45,y
+Saskatchewan,solar_pv_ppl,1970,30,y
+Saskatchewan,nan,1970,30,y
+Saskatchewan,stor_ppl,1970,15,y
+Saskatchewan,STOR_PUMP,1970,100,y
+Saskatchewan,wind_ppf,1970,30,y
+Saskatchewan,wind_ppl,1970,30,y
+Saskatchewan,bio_istig,1975,40,y
+Saskatchewan,bio_ppl,1975,45,y
+Saskatchewan,igcc,1975,45,y
+Saskatchewan,coal_adv_ccs,1975,45,y
+Saskatchewan,loil_ppl,1975,45,y
+Saskatchewan,geo_ppl,1975,40,y
+Saskatchewan,HYDROGEN_BLUE,1975,45,y
+Saskatchewan,HYDROGEN_GREEN,1975,45,y
+Saskatchewan,hydro_hc,1975,100,y
+Saskatchewan,hydro_lc,1975,80,y
+Saskatchewan,gas_cc,1975,45,y
+Saskatchewan,gas_cc_ccs,1975,45,y
+Saskatchewan,gas_ppl,1975,45,y
+Saskatchewan,gas_ct,1975,45,y
+Saskatchewan,nuc_lc,1975,60,y
+Saskatchewan,nuc_hc,1975,60,y
+Saskatchewan,foil_ppl,1975,45,y
+Saskatchewan,solar_pv_ppl,1975,30,y
+Saskatchewan,nan,1975,30,y
+Saskatchewan,stor_ppl,1975,15,y
+Saskatchewan,STOR_PUMP,1975,100,y
+Saskatchewan,wind_ppf,1975,30,y
+Saskatchewan,wind_ppl,1975,30,y
+Saskatchewan,bio_istig,1980,40,y
+Saskatchewan,bio_ppl,1980,45,y
+Saskatchewan,igcc,1980,45,y
+Saskatchewan,coal_adv_ccs,1980,45,y
+Saskatchewan,loil_ppl,1980,45,y
+Saskatchewan,geo_ppl,1980,40,y
+Saskatchewan,HYDROGEN_BLUE,1980,45,y
+Saskatchewan,HYDROGEN_GREEN,1980,45,y
+Saskatchewan,hydro_hc,1980,100,y
+Saskatchewan,hydro_lc,1980,80,y
+Saskatchewan,gas_cc,1980,45,y
+Saskatchewan,gas_cc_ccs,1980,45,y
+Saskatchewan,gas_ppl,1980,45,y
+Saskatchewan,gas_ct,1980,45,y
+Saskatchewan,nuc_lc,1980,60,y
+Saskatchewan,nuc_hc,1980,60,y
+Saskatchewan,foil_ppl,1980,45,y
+Saskatchewan,solar_pv_ppl,1980,30,y
+Saskatchewan,nan,1980,30,y
+Saskatchewan,stor_ppl,1980,15,y
+Saskatchewan,STOR_PUMP,1980,100,y
+Saskatchewan,wind_ppf,1980,30,y
+Saskatchewan,wind_ppl,1980,30,y
+Saskatchewan,bio_istig,1985,40,y
+Saskatchewan,bio_ppl,1985,45,y
+Saskatchewan,igcc,1985,45,y
+Saskatchewan,coal_adv_ccs,1985,45,y
+Saskatchewan,loil_ppl,1985,45,y
+Saskatchewan,geo_ppl,1985,40,y
+Saskatchewan,HYDROGEN_BLUE,1985,45,y
+Saskatchewan,HYDROGEN_GREEN,1985,45,y
+Saskatchewan,hydro_hc,1985,100,y
+Saskatchewan,hydro_lc,1985,80,y
+Saskatchewan,gas_cc,1985,45,y
+Saskatchewan,gas_cc_ccs,1985,45,y
+Saskatchewan,gas_ppl,1985,45,y
+Saskatchewan,gas_ct,1985,45,y
+Saskatchewan,nuc_lc,1985,60,y
+Saskatchewan,nuc_hc,1985,60,y
+Saskatchewan,foil_ppl,1985,45,y
+Saskatchewan,solar_pv_ppl,1985,30,y
+Saskatchewan,nan,1985,30,y
+Saskatchewan,stor_ppl,1985,15,y
+Saskatchewan,STOR_PUMP,1985,100,y
+Saskatchewan,wind_ppf,1985,30,y
+Saskatchewan,wind_ppl,1985,30,y
+Saskatchewan,bio_istig,1990,40,y
+Saskatchewan,bio_ppl,1990,45,y
+Saskatchewan,igcc,1990,45,y
+Saskatchewan,coal_adv_ccs,1990,45,y
+Saskatchewan,loil_ppl,1990,45,y
+Saskatchewan,geo_ppl,1990,40,y
+Saskatchewan,HYDROGEN_BLUE,1990,45,y
+Saskatchewan,HYDROGEN_GREEN,1990,45,y
+Saskatchewan,hydro_hc,1990,100,y
+Saskatchewan,hydro_lc,1990,80,y
+Saskatchewan,gas_cc,1990,45,y
+Saskatchewan,gas_cc_ccs,1990,45,y
+Saskatchewan,gas_ppl,1990,45,y
+Saskatchewan,gas_ct,1990,45,y
+Saskatchewan,nuc_lc,1990,60,y
+Saskatchewan,nuc_hc,1990,60,y
+Saskatchewan,foil_ppl,1990,45,y
+Saskatchewan,solar_pv_ppl,1990,30,y
+Saskatchewan,nan,1990,30,y
+Saskatchewan,stor_ppl,1990,15,y
+Saskatchewan,STOR_PUMP,1990,100,y
+Saskatchewan,wind_ppf,1990,30,y
+Saskatchewan,wind_ppl,1990,30,y
+Saskatchewan,bio_istig,1995,40,y
+Saskatchewan,bio_ppl,1995,45,y
+Saskatchewan,igcc,1995,45,y
+Saskatchewan,coal_adv_ccs,1995,45,y
+Saskatchewan,loil_ppl,1995,45,y
+Saskatchewan,geo_ppl,1995,40,y
+Saskatchewan,HYDROGEN_BLUE,1995,45,y
+Saskatchewan,HYDROGEN_GREEN,1995,45,y
+Saskatchewan,hydro_hc,1995,100,y
+Saskatchewan,hydro_lc,1995,80,y
+Saskatchewan,gas_cc,1995,45,y
+Saskatchewan,gas_cc_ccs,1995,45,y
+Saskatchewan,gas_ppl,1995,45,y
+Saskatchewan,gas_ct,1995,45,y
+Saskatchewan,nuc_lc,1995,60,y
+Saskatchewan,nuc_hc,1995,60,y
+Saskatchewan,foil_ppl,1995,45,y
+Saskatchewan,solar_pv_ppl,1995,30,y
+Saskatchewan,nan,1995,30,y
+Saskatchewan,stor_ppl,1995,15,y
+Saskatchewan,STOR_PUMP,1995,100,y
+Saskatchewan,wind_ppf,1995,30,y
+Saskatchewan,wind_ppl,1995,30,y
+Saskatchewan,bio_istig,2000,40,y
+Saskatchewan,bio_ppl,2000,45,y
+Saskatchewan,igcc,2000,45,y
+Saskatchewan,coal_adv_ccs,2000,45,y
+Saskatchewan,loil_ppl,2000,45,y
+Saskatchewan,geo_ppl,2000,40,y
+Saskatchewan,HYDROGEN_BLUE,2000,45,y
+Saskatchewan,HYDROGEN_GREEN,2000,45,y
+Saskatchewan,hydro_hc,2000,100,y
+Saskatchewan,hydro_lc,2000,80,y
+Saskatchewan,gas_cc,2000,45,y
+Saskatchewan,gas_cc_ccs,2000,45,y
+Saskatchewan,gas_ppl,2000,45,y
+Saskatchewan,gas_ct,2000,45,y
+Saskatchewan,nuc_lc,2000,60,y
+Saskatchewan,nuc_hc,2000,60,y
+Saskatchewan,foil_ppl,2000,45,y
+Saskatchewan,solar_pv_ppl,2000,30,y
+Saskatchewan,nan,2000,30,y
+Saskatchewan,stor_ppl,2000,15,y
+Saskatchewan,STOR_PUMP,2000,100,y
+Saskatchewan,wind_ppf,2000,30,y
+Saskatchewan,wind_ppl,2000,30,y
+Saskatchewan,bio_istig,2005,40,y
+Saskatchewan,bio_ppl,2005,45,y
+Saskatchewan,igcc,2005,45,y
+Saskatchewan,coal_adv_ccs,2005,45,y
+Saskatchewan,loil_ppl,2005,45,y
+Saskatchewan,geo_ppl,2005,40,y
+Saskatchewan,HYDROGEN_BLUE,2005,45,y
+Saskatchewan,HYDROGEN_GREEN,2005,45,y
+Saskatchewan,hydro_hc,2005,100,y
+Saskatchewan,hydro_lc,2005,80,y
+Saskatchewan,gas_cc,2005,45,y
+Saskatchewan,gas_cc_ccs,2005,45,y
+Saskatchewan,gas_ppl,2005,45,y
+Saskatchewan,gas_ct,2005,45,y
+Saskatchewan,nuc_lc,2005,60,y
+Saskatchewan,nuc_hc,2005,60,y
+Saskatchewan,foil_ppl,2005,45,y
+Saskatchewan,solar_pv_ppl,2005,30,y
+Saskatchewan,nan,2005,30,y
+Saskatchewan,stor_ppl,2005,15,y
+Saskatchewan,STOR_PUMP,2005,100,y
+Saskatchewan,wind_ppf,2005,30,y
+Saskatchewan,wind_ppl,2005,30,y
+Saskatchewan,bio_istig,2010,40,y
+Saskatchewan,bio_ppl,2010,45,y
+Saskatchewan,igcc,2010,45,y
+Saskatchewan,coal_adv_ccs,2010,45,y
+Saskatchewan,loil_ppl,2010,45,y
+Saskatchewan,geo_ppl,2010,40,y
+Saskatchewan,HYDROGEN_BLUE,2010,45,y
+Saskatchewan,HYDROGEN_GREEN,2010,45,y
+Saskatchewan,hydro_hc,2010,100,y
+Saskatchewan,hydro_lc,2010,80,y
+Saskatchewan,gas_cc,2010,45,y
+Saskatchewan,gas_cc_ccs,2010,45,y
+Saskatchewan,gas_ppl,2010,45,y
+Saskatchewan,gas_ct,2010,45,y
+Saskatchewan,nuc_lc,2010,60,y
+Saskatchewan,nuc_hc,2010,60,y
+Saskatchewan,foil_ppl,2010,45,y
+Saskatchewan,solar_pv_ppl,2010,30,y
+Saskatchewan,nan,2010,30,y
+Saskatchewan,stor_ppl,2010,15,y
+Saskatchewan,STOR_PUMP,2010,100,y
+Saskatchewan,wind_ppf,2010,30,y
+Saskatchewan,wind_ppl,2010,30,y
+Saskatchewan,bio_istig,2015,40,y
+Saskatchewan,bio_ppl,2015,45,y
+Saskatchewan,igcc,2015,45,y
+Saskatchewan,coal_adv_ccs,2015,45,y
+Saskatchewan,loil_ppl,2015,45,y
+Saskatchewan,geo_ppl,2015,40,y
+Saskatchewan,HYDROGEN_BLUE,2015,45,y
+Saskatchewan,HYDROGEN_GREEN,2015,45,y
+Saskatchewan,hydro_hc,2015,100,y
+Saskatchewan,hydro_lc,2015,80,y
+Saskatchewan,gas_cc,2015,45,y
+Saskatchewan,gas_cc_ccs,2015,45,y
+Saskatchewan,gas_ppl,2015,45,y
+Saskatchewan,gas_ct,2015,45,y
+Saskatchewan,nuc_lc,2015,60,y
+Saskatchewan,nuc_hc,2015,60,y
+Saskatchewan,foil_ppl,2015,45,y
+Saskatchewan,solar_pv_ppl,2015,30,y
+Saskatchewan,nan,2015,30,y
+Saskatchewan,stor_ppl,2015,15,y
+Saskatchewan,STOR_PUMP,2015,100,y
+Saskatchewan,wind_ppf,2015,30,y
+Saskatchewan,wind_ppl,2015,30,y
+Saskatchewan,bio_istig,2020,40,y
+Saskatchewan,bio_ppl,2020,45,y
+Saskatchewan,igcc,2020,45,y
+Saskatchewan,coal_adv_ccs,2020,45,y
+Saskatchewan,loil_ppl,2020,45,y
+Saskatchewan,geo_ppl,2020,40,y
+Saskatchewan,HYDROGEN_BLUE,2020,45,y
+Saskatchewan,HYDROGEN_GREEN,2020,45,y
+Saskatchewan,hydro_hc,2020,100,y
+Saskatchewan,hydro_lc,2020,80,y
+Saskatchewan,gas_cc,2020,45,y
+Saskatchewan,gas_cc_ccs,2020,45,y
+Saskatchewan,gas_ppl,2020,45,y
+Saskatchewan,gas_ct,2020,45,y
+Saskatchewan,nuc_lc,2020,60,y
+Saskatchewan,nuc_hc,2020,60,y
+Saskatchewan,foil_ppl,2020,45,y
+Saskatchewan,solar_pv_ppl,2020,30,y
+Saskatchewan,nan,2020,30,y
+Saskatchewan,stor_ppl,2020,15,y
+Saskatchewan,STOR_PUMP,2020,100,y
+Saskatchewan,wind_ppf,2020,30,y
+Saskatchewan,wind_ppl,2020,30,y
+Saskatchewan,bio_istig,2025,40,y
+Saskatchewan,bio_ppl,2025,45,y
+Saskatchewan,igcc,2025,45,y
+Saskatchewan,coal_adv_ccs,2025,45,y
+Saskatchewan,loil_ppl,2025,45,y
+Saskatchewan,geo_ppl,2025,40,y
+Saskatchewan,HYDROGEN_BLUE,2025,45,y
+Saskatchewan,HYDROGEN_GREEN,2025,45,y
+Saskatchewan,hydro_hc,2025,100,y
+Saskatchewan,hydro_lc,2025,80,y
+Saskatchewan,gas_cc,2025,45,y
+Saskatchewan,gas_cc_ccs,2025,45,y
+Saskatchewan,gas_ppl,2025,45,y
+Saskatchewan,gas_ct,2025,45,y
+Saskatchewan,nuc_lc,2025,60,y
+Saskatchewan,nuc_hc,2025,60,y
+Saskatchewan,foil_ppl,2025,45,y
+Saskatchewan,solar_pv_ppl,2025,30,y
+Saskatchewan,nan,2025,30,y
+Saskatchewan,stor_ppl,2025,15,y
+Saskatchewan,STOR_PUMP,2025,100,y
+Saskatchewan,wind_ppf,2025,30,y
+Saskatchewan,wind_ppl,2025,30,y
+Saskatchewan,bio_istig,2030,40,y
+Saskatchewan,bio_ppl,2030,45,y
+Saskatchewan,igcc,2030,45,y
+Saskatchewan,coal_adv_ccs,2030,45,y
+Saskatchewan,loil_ppl,2030,45,y
+Saskatchewan,geo_ppl,2030,40,y
+Saskatchewan,HYDROGEN_BLUE,2030,45,y
+Saskatchewan,HYDROGEN_GREEN,2030,45,y
+Saskatchewan,hydro_hc,2030,100,y
+Saskatchewan,hydro_lc,2030,80,y
+Saskatchewan,gas_cc,2030,45,y
+Saskatchewan,gas_cc_ccs,2030,45,y
+Saskatchewan,gas_ppl,2030,45,y
+Saskatchewan,gas_ct,2030,45,y
+Saskatchewan,nuc_lc,2030,60,y
+Saskatchewan,nuc_hc,2030,60,y
+Saskatchewan,foil_ppl,2030,45,y
+Saskatchewan,solar_pv_ppl,2030,30,y
+Saskatchewan,nan,2030,30,y
+Saskatchewan,stor_ppl,2030,15,y
+Saskatchewan,STOR_PUMP,2030,100,y
+Saskatchewan,wind_ppf,2030,30,y
+Saskatchewan,wind_ppl,2030,30,y
+Saskatchewan,bio_istig,2035,40,y
+Saskatchewan,bio_ppl,2035,45,y
+Saskatchewan,igcc,2035,45,y
+Saskatchewan,coal_adv_ccs,2035,45,y
+Saskatchewan,loil_ppl,2035,45,y
+Saskatchewan,geo_ppl,2035,40,y
+Saskatchewan,HYDROGEN_BLUE,2035,45,y
+Saskatchewan,HYDROGEN_GREEN,2035,45,y
+Saskatchewan,hydro_hc,2035,100,y
+Saskatchewan,hydro_lc,2035,80,y
+Saskatchewan,gas_cc,2035,45,y
+Saskatchewan,gas_cc_ccs,2035,45,y
+Saskatchewan,gas_ppl,2035,45,y
+Saskatchewan,gas_ct,2035,45,y
+Saskatchewan,nuc_lc,2035,60,y
+Saskatchewan,nuc_hc,2035,60,y
+Saskatchewan,foil_ppl,2035,45,y
+Saskatchewan,solar_pv_ppl,2035,30,y
+Saskatchewan,nan,2035,30,y
+Saskatchewan,stor_ppl,2035,15,y
+Saskatchewan,STOR_PUMP,2035,100,y
+Saskatchewan,wind_ppf,2035,30,y
+Saskatchewan,wind_ppl,2035,30,y
+Saskatchewan,bio_istig,2040,40,y
+Saskatchewan,bio_ppl,2040,45,y
+Saskatchewan,igcc,2040,45,y
+Saskatchewan,coal_adv_ccs,2040,45,y
+Saskatchewan,loil_ppl,2040,45,y
+Saskatchewan,geo_ppl,2040,40,y
+Saskatchewan,HYDROGEN_BLUE,2040,45,y
+Saskatchewan,HYDROGEN_GREEN,2040,45,y
+Saskatchewan,hydro_hc,2040,100,y
+Saskatchewan,hydro_lc,2040,80,y
+Saskatchewan,gas_cc,2040,45,y
+Saskatchewan,gas_cc_ccs,2040,45,y
+Saskatchewan,gas_ppl,2040,45,y
+Saskatchewan,gas_ct,2040,45,y
+Saskatchewan,nuc_lc,2040,60,y
+Saskatchewan,nuc_hc,2040,60,y
+Saskatchewan,foil_ppl,2040,45,y
+Saskatchewan,solar_pv_ppl,2040,30,y
+Saskatchewan,nan,2040,30,y
+Saskatchewan,stor_ppl,2040,15,y
+Saskatchewan,STOR_PUMP,2040,100,y
+Saskatchewan,wind_ppf,2040,30,y
+Saskatchewan,wind_ppl,2040,30,y
+Saskatchewan,bio_istig,2045,40,y
+Saskatchewan,bio_ppl,2045,45,y
+Saskatchewan,igcc,2045,45,y
+Saskatchewan,coal_adv_ccs,2045,45,y
+Saskatchewan,loil_ppl,2045,45,y
+Saskatchewan,geo_ppl,2045,40,y
+Saskatchewan,HYDROGEN_BLUE,2045,45,y
+Saskatchewan,HYDROGEN_GREEN,2045,45,y
+Saskatchewan,hydro_hc,2045,100,y
+Saskatchewan,hydro_lc,2045,80,y
+Saskatchewan,gas_cc,2045,45,y
+Saskatchewan,gas_cc_ccs,2045,45,y
+Saskatchewan,gas_ppl,2045,45,y
+Saskatchewan,gas_ct,2045,45,y
+Saskatchewan,nuc_lc,2045,60,y
+Saskatchewan,nuc_hc,2045,60,y
+Saskatchewan,foil_ppl,2045,45,y
+Saskatchewan,solar_pv_ppl,2045,30,y
+Saskatchewan,nan,2045,30,y
+Saskatchewan,stor_ppl,2045,15,y
+Saskatchewan,STOR_PUMP,2045,100,y
+Saskatchewan,wind_ppf,2045,30,y
+Saskatchewan,wind_ppl,2045,30,y
+Saskatchewan,bio_istig,2050,40,y
+Saskatchewan,bio_ppl,2050,45,y
+Saskatchewan,igcc,2050,45,y
+Saskatchewan,coal_adv_ccs,2050,45,y
+Saskatchewan,loil_ppl,2050,45,y
+Saskatchewan,geo_ppl,2050,40,y
+Saskatchewan,HYDROGEN_BLUE,2050,45,y
+Saskatchewan,HYDROGEN_GREEN,2050,45,y
+Saskatchewan,hydro_hc,2050,100,y
+Saskatchewan,hydro_lc,2050,80,y
+Saskatchewan,gas_cc,2050,45,y
+Saskatchewan,gas_cc_ccs,2050,45,y
+Saskatchewan,gas_ppl,2050,45,y
+Saskatchewan,gas_ct,2050,45,y
+Saskatchewan,nuc_lc,2050,60,y
+Saskatchewan,nuc_hc,2050,60,y
+Saskatchewan,foil_ppl,2050,45,y
+Saskatchewan,solar_pv_ppl,2050,30,y
+Saskatchewan,nan,2050,30,y
+Saskatchewan,stor_ppl,2050,15,y
+Saskatchewan,STOR_PUMP,2050,100,y
+Saskatchewan,wind_ppf,2050,30,y
+Saskatchewan,wind_ppl,2050,30,y
+Saskatchewan,bio_istig,2055,40,y
+Saskatchewan,bio_ppl,2055,45,y
+Saskatchewan,igcc,2055,45,y
+Saskatchewan,coal_adv_ccs,2055,45,y
+Saskatchewan,loil_ppl,2055,45,y
+Saskatchewan,geo_ppl,2055,40,y
+Saskatchewan,HYDROGEN_BLUE,2055,45,y
+Saskatchewan,HYDROGEN_GREEN,2055,45,y
+Saskatchewan,hydro_hc,2055,100,y
+Saskatchewan,hydro_lc,2055,80,y
+Saskatchewan,gas_cc,2055,45,y
+Saskatchewan,gas_cc_ccs,2055,45,y
+Saskatchewan,gas_ppl,2055,45,y
+Saskatchewan,gas_ct,2055,45,y
+Saskatchewan,nuc_lc,2055,60,y
+Saskatchewan,nuc_hc,2055,60,y
+Saskatchewan,foil_ppl,2055,45,y
+Saskatchewan,solar_pv_ppl,2055,30,y
+Saskatchewan,nan,2055,30,y
+Saskatchewan,stor_ppl,2055,15,y
+Saskatchewan,STOR_PUMP,2055,100,y
+Saskatchewan,wind_ppf,2055,30,y
+Saskatchewan,wind_ppl,2055,30,y
+Saskatchewan,bio_istig,2060,40,y
+Saskatchewan,bio_ppl,2060,45,y
+Saskatchewan,igcc,2060,45,y
+Saskatchewan,coal_adv_ccs,2060,45,y
+Saskatchewan,loil_ppl,2060,45,y
+Saskatchewan,geo_ppl,2060,40,y
+Saskatchewan,HYDROGEN_BLUE,2060,45,y
+Saskatchewan,HYDROGEN_GREEN,2060,45,y
+Saskatchewan,hydro_hc,2060,100,y
+Saskatchewan,hydro_lc,2060,80,y
+Saskatchewan,gas_cc,2060,45,y
+Saskatchewan,gas_cc_ccs,2060,45,y
+Saskatchewan,gas_ppl,2060,45,y
+Saskatchewan,gas_ct,2060,45,y
+Saskatchewan,nuc_lc,2060,60,y
+Saskatchewan,nuc_hc,2060,60,y
+Saskatchewan,foil_ppl,2060,45,y
+Saskatchewan,solar_pv_ppl,2060,30,y
+Saskatchewan,nan,2060,30,y
+Saskatchewan,stor_ppl,2060,15,y
+Saskatchewan,STOR_PUMP,2060,100,y
+Saskatchewan,wind_ppf,2060,30,y
+Saskatchewan,wind_ppl,2060,30,y
+Manitoba,bio_istig,1960,40,y
+Manitoba,bio_ppl,1960,45,y
+Manitoba,igcc,1960,45,y
+Manitoba,coal_adv_ccs,1960,45,y
+Manitoba,loil_ppl,1960,45,y
+Manitoba,geo_ppl,1960,40,y
+Manitoba,HYDROGEN_BLUE,1960,45,y
+Manitoba,HYDROGEN_GREEN,1960,45,y
+Manitoba,hydro_hc,1960,100,y
+Manitoba,hydro_lc,1960,80,y
+Manitoba,gas_cc,1960,45,y
+Manitoba,gas_cc_ccs,1960,45,y
+Manitoba,gas_ppl,1960,45,y
+Manitoba,gas_ct,1960,45,y
+Manitoba,nuc_lc,1960,60,y
+Manitoba,nuc_hc,1960,60,y
+Manitoba,foil_ppl,1960,45,y
+Manitoba,solar_pv_ppl,1960,30,y
+Manitoba,nan,1960,30,y
+Manitoba,stor_ppl,1960,15,y
+Manitoba,STOR_PUMP,1960,100,y
+Manitoba,wind_ppf,1960,30,y
+Manitoba,wind_ppl,1960,30,y
+Manitoba,bio_istig,1965,40,y
+Manitoba,bio_ppl,1965,45,y
+Manitoba,igcc,1965,45,y
+Manitoba,coal_adv_ccs,1965,45,y
+Manitoba,loil_ppl,1965,45,y
+Manitoba,geo_ppl,1965,40,y
+Manitoba,HYDROGEN_BLUE,1965,45,y
+Manitoba,HYDROGEN_GREEN,1965,45,y
+Manitoba,hydro_hc,1965,100,y
+Manitoba,hydro_lc,1965,80,y
+Manitoba,gas_cc,1965,45,y
+Manitoba,gas_cc_ccs,1965,45,y
+Manitoba,gas_ppl,1965,45,y
+Manitoba,gas_ct,1965,45,y
+Manitoba,nuc_lc,1965,60,y
+Manitoba,nuc_hc,1965,60,y
+Manitoba,foil_ppl,1965,45,y
+Manitoba,solar_pv_ppl,1965,30,y
+Manitoba,nan,1965,30,y
+Manitoba,stor_ppl,1965,15,y
+Manitoba,STOR_PUMP,1965,100,y
+Manitoba,wind_ppf,1965,30,y
+Manitoba,wind_ppl,1965,30,y
+Manitoba,bio_istig,1970,40,y
+Manitoba,bio_ppl,1970,45,y
+Manitoba,igcc,1970,45,y
+Manitoba,coal_adv_ccs,1970,45,y
+Manitoba,loil_ppl,1970,45,y
+Manitoba,geo_ppl,1970,40,y
+Manitoba,HYDROGEN_BLUE,1970,45,y
+Manitoba,HYDROGEN_GREEN,1970,45,y
+Manitoba,hydro_hc,1970,100,y
+Manitoba,hydro_lc,1970,80,y
+Manitoba,gas_cc,1970,45,y
+Manitoba,gas_cc_ccs,1970,45,y
+Manitoba,gas_ppl,1970,45,y
+Manitoba,gas_ct,1970,45,y
+Manitoba,nuc_lc,1970,60,y
+Manitoba,nuc_hc,1970,60,y
+Manitoba,foil_ppl,1970,45,y
+Manitoba,solar_pv_ppl,1970,30,y
+Manitoba,nan,1970,30,y
+Manitoba,stor_ppl,1970,15,y
+Manitoba,STOR_PUMP,1970,100,y
+Manitoba,wind_ppf,1970,30,y
+Manitoba,wind_ppl,1970,30,y
+Manitoba,bio_istig,1975,40,y
+Manitoba,bio_ppl,1975,45,y
+Manitoba,igcc,1975,45,y
+Manitoba,coal_adv_ccs,1975,45,y
+Manitoba,loil_ppl,1975,45,y
+Manitoba,geo_ppl,1975,40,y
+Manitoba,HYDROGEN_BLUE,1975,45,y
+Manitoba,HYDROGEN_GREEN,1975,45,y
+Manitoba,hydro_hc,1975,100,y
+Manitoba,hydro_lc,1975,80,y
+Manitoba,gas_cc,1975,45,y
+Manitoba,gas_cc_ccs,1975,45,y
+Manitoba,gas_ppl,1975,45,y
+Manitoba,gas_ct,1975,45,y
+Manitoba,nuc_lc,1975,60,y
+Manitoba,nuc_hc,1975,60,y
+Manitoba,foil_ppl,1975,45,y
+Manitoba,solar_pv_ppl,1975,30,y
+Manitoba,nan,1975,30,y
+Manitoba,stor_ppl,1975,15,y
+Manitoba,STOR_PUMP,1975,100,y
+Manitoba,wind_ppf,1975,30,y
+Manitoba,wind_ppl,1975,30,y
+Manitoba,bio_istig,1980,40,y
+Manitoba,bio_ppl,1980,45,y
+Manitoba,igcc,1980,45,y
+Manitoba,coal_adv_ccs,1980,45,y
+Manitoba,loil_ppl,1980,45,y
+Manitoba,geo_ppl,1980,40,y
+Manitoba,HYDROGEN_BLUE,1980,45,y
+Manitoba,HYDROGEN_GREEN,1980,45,y
+Manitoba,hydro_hc,1980,100,y
+Manitoba,hydro_lc,1980,80,y
+Manitoba,gas_cc,1980,45,y
+Manitoba,gas_cc_ccs,1980,45,y
+Manitoba,gas_ppl,1980,45,y
+Manitoba,gas_ct,1980,45,y
+Manitoba,nuc_lc,1980,60,y
+Manitoba,nuc_hc,1980,60,y
+Manitoba,foil_ppl,1980,45,y
+Manitoba,solar_pv_ppl,1980,30,y
+Manitoba,nan,1980,30,y
+Manitoba,stor_ppl,1980,15,y
+Manitoba,STOR_PUMP,1980,100,y
+Manitoba,wind_ppf,1980,30,y
+Manitoba,wind_ppl,1980,30,y
+Manitoba,bio_istig,1985,40,y
+Manitoba,bio_ppl,1985,45,y
+Manitoba,igcc,1985,45,y
+Manitoba,coal_adv_ccs,1985,45,y
+Manitoba,loil_ppl,1985,45,y
+Manitoba,geo_ppl,1985,40,y
+Manitoba,HYDROGEN_BLUE,1985,45,y
+Manitoba,HYDROGEN_GREEN,1985,45,y
+Manitoba,hydro_hc,1985,100,y
+Manitoba,hydro_lc,1985,80,y
+Manitoba,gas_cc,1985,45,y
+Manitoba,gas_cc_ccs,1985,45,y
+Manitoba,gas_ppl,1985,45,y
+Manitoba,gas_ct,1985,45,y
+Manitoba,nuc_lc,1985,60,y
+Manitoba,nuc_hc,1985,60,y
+Manitoba,foil_ppl,1985,45,y
+Manitoba,solar_pv_ppl,1985,30,y
+Manitoba,nan,1985,30,y
+Manitoba,stor_ppl,1985,15,y
+Manitoba,STOR_PUMP,1985,100,y
+Manitoba,wind_ppf,1985,30,y
+Manitoba,wind_ppl,1985,30,y
+Manitoba,bio_istig,1990,40,y
+Manitoba,bio_ppl,1990,45,y
+Manitoba,igcc,1990,45,y
+Manitoba,coal_adv_ccs,1990,45,y
+Manitoba,loil_ppl,1990,45,y
+Manitoba,geo_ppl,1990,40,y
+Manitoba,HYDROGEN_BLUE,1990,45,y
+Manitoba,HYDROGEN_GREEN,1990,45,y
+Manitoba,hydro_hc,1990,100,y
+Manitoba,hydro_lc,1990,80,y
+Manitoba,gas_cc,1990,45,y
+Manitoba,gas_cc_ccs,1990,45,y
+Manitoba,gas_ppl,1990,45,y
+Manitoba,gas_ct,1990,45,y
+Manitoba,nuc_lc,1990,60,y
+Manitoba,nuc_hc,1990,60,y
+Manitoba,foil_ppl,1990,45,y
+Manitoba,solar_pv_ppl,1990,30,y
+Manitoba,nan,1990,30,y
+Manitoba,stor_ppl,1990,15,y
+Manitoba,STOR_PUMP,1990,100,y
+Manitoba,wind_ppf,1990,30,y
+Manitoba,wind_ppl,1990,30,y
+Manitoba,bio_istig,1995,40,y
+Manitoba,bio_ppl,1995,45,y
+Manitoba,igcc,1995,45,y
+Manitoba,coal_adv_ccs,1995,45,y
+Manitoba,loil_ppl,1995,45,y
+Manitoba,geo_ppl,1995,40,y
+Manitoba,HYDROGEN_BLUE,1995,45,y
+Manitoba,HYDROGEN_GREEN,1995,45,y
+Manitoba,hydro_hc,1995,100,y
+Manitoba,hydro_lc,1995,80,y
+Manitoba,gas_cc,1995,45,y
+Manitoba,gas_cc_ccs,1995,45,y
+Manitoba,gas_ppl,1995,45,y
+Manitoba,gas_ct,1995,45,y
+Manitoba,nuc_lc,1995,60,y
+Manitoba,nuc_hc,1995,60,y
+Manitoba,foil_ppl,1995,45,y
+Manitoba,solar_pv_ppl,1995,30,y
+Manitoba,nan,1995,30,y
+Manitoba,stor_ppl,1995,15,y
+Manitoba,STOR_PUMP,1995,100,y
+Manitoba,wind_ppf,1995,30,y
+Manitoba,wind_ppl,1995,30,y
+Manitoba,bio_istig,2000,40,y
+Manitoba,bio_ppl,2000,45,y
+Manitoba,igcc,2000,45,y
+Manitoba,coal_adv_ccs,2000,45,y
+Manitoba,loil_ppl,2000,45,y
+Manitoba,geo_ppl,2000,40,y
+Manitoba,HYDROGEN_BLUE,2000,45,y
+Manitoba,HYDROGEN_GREEN,2000,45,y
+Manitoba,hydro_hc,2000,100,y
+Manitoba,hydro_lc,2000,80,y
+Manitoba,gas_cc,2000,45,y
+Manitoba,gas_cc_ccs,2000,45,y
+Manitoba,gas_ppl,2000,45,y
+Manitoba,gas_ct,2000,45,y
+Manitoba,nuc_lc,2000,60,y
+Manitoba,nuc_hc,2000,60,y
+Manitoba,foil_ppl,2000,45,y
+Manitoba,solar_pv_ppl,2000,30,y
+Manitoba,nan,2000,30,y
+Manitoba,stor_ppl,2000,15,y
+Manitoba,STOR_PUMP,2000,100,y
+Manitoba,wind_ppf,2000,30,y
+Manitoba,wind_ppl,2000,30,y
+Manitoba,bio_istig,2005,40,y
+Manitoba,bio_ppl,2005,45,y
+Manitoba,igcc,2005,45,y
+Manitoba,coal_adv_ccs,2005,45,y
+Manitoba,loil_ppl,2005,45,y
+Manitoba,geo_ppl,2005,40,y
+Manitoba,HYDROGEN_BLUE,2005,45,y
+Manitoba,HYDROGEN_GREEN,2005,45,y
+Manitoba,hydro_hc,2005,100,y
+Manitoba,hydro_lc,2005,80,y
+Manitoba,gas_cc,2005,45,y
+Manitoba,gas_cc_ccs,2005,45,y
+Manitoba,gas_ppl,2005,45,y
+Manitoba,gas_ct,2005,45,y
+Manitoba,nuc_lc,2005,60,y
+Manitoba,nuc_hc,2005,60,y
+Manitoba,foil_ppl,2005,45,y
+Manitoba,solar_pv_ppl,2005,30,y
+Manitoba,nan,2005,30,y
+Manitoba,stor_ppl,2005,15,y
+Manitoba,STOR_PUMP,2005,100,y
+Manitoba,wind_ppf,2005,30,y
+Manitoba,wind_ppl,2005,30,y
+Manitoba,bio_istig,2010,40,y
+Manitoba,bio_ppl,2010,45,y
+Manitoba,igcc,2010,45,y
+Manitoba,coal_adv_ccs,2010,45,y
+Manitoba,loil_ppl,2010,45,y
+Manitoba,geo_ppl,2010,40,y
+Manitoba,HYDROGEN_BLUE,2010,45,y
+Manitoba,HYDROGEN_GREEN,2010,45,y
+Manitoba,hydro_hc,2010,100,y
+Manitoba,hydro_lc,2010,80,y
+Manitoba,gas_cc,2010,45,y
+Manitoba,gas_cc_ccs,2010,45,y
+Manitoba,gas_ppl,2010,45,y
+Manitoba,gas_ct,2010,45,y
+Manitoba,nuc_lc,2010,60,y
+Manitoba,nuc_hc,2010,60,y
+Manitoba,foil_ppl,2010,45,y
+Manitoba,solar_pv_ppl,2010,30,y
+Manitoba,nan,2010,30,y
+Manitoba,stor_ppl,2010,15,y
+Manitoba,STOR_PUMP,2010,100,y
+Manitoba,wind_ppf,2010,30,y
+Manitoba,wind_ppl,2010,30,y
+Manitoba,bio_istig,2015,40,y
+Manitoba,bio_ppl,2015,45,y
+Manitoba,igcc,2015,45,y
+Manitoba,coal_adv_ccs,2015,45,y
+Manitoba,loil_ppl,2015,45,y
+Manitoba,geo_ppl,2015,40,y
+Manitoba,HYDROGEN_BLUE,2015,45,y
+Manitoba,HYDROGEN_GREEN,2015,45,y
+Manitoba,hydro_hc,2015,100,y
+Manitoba,hydro_lc,2015,80,y
+Manitoba,gas_cc,2015,45,y
+Manitoba,gas_cc_ccs,2015,45,y
+Manitoba,gas_ppl,2015,45,y
+Manitoba,gas_ct,2015,45,y
+Manitoba,nuc_lc,2015,60,y
+Manitoba,nuc_hc,2015,60,y
+Manitoba,foil_ppl,2015,45,y
+Manitoba,solar_pv_ppl,2015,30,y
+Manitoba,nan,2015,30,y
+Manitoba,stor_ppl,2015,15,y
+Manitoba,STOR_PUMP,2015,100,y
+Manitoba,wind_ppf,2015,30,y
+Manitoba,wind_ppl,2015,30,y
+Manitoba,bio_istig,2020,40,y
+Manitoba,bio_ppl,2020,45,y
+Manitoba,igcc,2020,45,y
+Manitoba,coal_adv_ccs,2020,45,y
+Manitoba,loil_ppl,2020,45,y
+Manitoba,geo_ppl,2020,40,y
+Manitoba,HYDROGEN_BLUE,2020,45,y
+Manitoba,HYDROGEN_GREEN,2020,45,y
+Manitoba,hydro_hc,2020,100,y
+Manitoba,hydro_lc,2020,80,y
+Manitoba,gas_cc,2020,45,y
+Manitoba,gas_cc_ccs,2020,45,y
+Manitoba,gas_ppl,2020,45,y
+Manitoba,gas_ct,2020,45,y
+Manitoba,nuc_lc,2020,60,y
+Manitoba,nuc_hc,2020,60,y
+Manitoba,foil_ppl,2020,45,y
+Manitoba,solar_pv_ppl,2020,30,y
+Manitoba,nan,2020,30,y
+Manitoba,stor_ppl,2020,15,y
+Manitoba,STOR_PUMP,2020,100,y
+Manitoba,wind_ppf,2020,30,y
+Manitoba,wind_ppl,2020,30,y
+Manitoba,bio_istig,2025,40,y
+Manitoba,bio_ppl,2025,45,y
+Manitoba,igcc,2025,45,y
+Manitoba,coal_adv_ccs,2025,45,y
+Manitoba,loil_ppl,2025,45,y
+Manitoba,geo_ppl,2025,40,y
+Manitoba,HYDROGEN_BLUE,2025,45,y
+Manitoba,HYDROGEN_GREEN,2025,45,y
+Manitoba,hydro_hc,2025,100,y
+Manitoba,hydro_lc,2025,80,y
+Manitoba,gas_cc,2025,45,y
+Manitoba,gas_cc_ccs,2025,45,y
+Manitoba,gas_ppl,2025,45,y
+Manitoba,gas_ct,2025,45,y
+Manitoba,nuc_lc,2025,60,y
+Manitoba,nuc_hc,2025,60,y
+Manitoba,foil_ppl,2025,45,y
+Manitoba,solar_pv_ppl,2025,30,y
+Manitoba,nan,2025,30,y
+Manitoba,stor_ppl,2025,15,y
+Manitoba,STOR_PUMP,2025,100,y
+Manitoba,wind_ppf,2025,30,y
+Manitoba,wind_ppl,2025,30,y
+Manitoba,bio_istig,2030,40,y
+Manitoba,bio_ppl,2030,45,y
+Manitoba,igcc,2030,45,y
+Manitoba,coal_adv_ccs,2030,45,y
+Manitoba,loil_ppl,2030,45,y
+Manitoba,geo_ppl,2030,40,y
+Manitoba,HYDROGEN_BLUE,2030,45,y
+Manitoba,HYDROGEN_GREEN,2030,45,y
+Manitoba,hydro_hc,2030,100,y
+Manitoba,hydro_lc,2030,80,y
+Manitoba,gas_cc,2030,45,y
+Manitoba,gas_cc_ccs,2030,45,y
+Manitoba,gas_ppl,2030,45,y
+Manitoba,gas_ct,2030,45,y
+Manitoba,nuc_lc,2030,60,y
+Manitoba,nuc_hc,2030,60,y
+Manitoba,foil_ppl,2030,45,y
+Manitoba,solar_pv_ppl,2030,30,y
+Manitoba,nan,2030,30,y
+Manitoba,stor_ppl,2030,15,y
+Manitoba,STOR_PUMP,2030,100,y
+Manitoba,wind_ppf,2030,30,y
+Manitoba,wind_ppl,2030,30,y
+Manitoba,bio_istig,2035,40,y
+Manitoba,bio_ppl,2035,45,y
+Manitoba,igcc,2035,45,y
+Manitoba,coal_adv_ccs,2035,45,y
+Manitoba,loil_ppl,2035,45,y
+Manitoba,geo_ppl,2035,40,y
+Manitoba,HYDROGEN_BLUE,2035,45,y
+Manitoba,HYDROGEN_GREEN,2035,45,y
+Manitoba,hydro_hc,2035,100,y
+Manitoba,hydro_lc,2035,80,y
+Manitoba,gas_cc,2035,45,y
+Manitoba,gas_cc_ccs,2035,45,y
+Manitoba,gas_ppl,2035,45,y
+Manitoba,gas_ct,2035,45,y
+Manitoba,nuc_lc,2035,60,y
+Manitoba,nuc_hc,2035,60,y
+Manitoba,foil_ppl,2035,45,y
+Manitoba,solar_pv_ppl,2035,30,y
+Manitoba,nan,2035,30,y
+Manitoba,stor_ppl,2035,15,y
+Manitoba,STOR_PUMP,2035,100,y
+Manitoba,wind_ppf,2035,30,y
+Manitoba,wind_ppl,2035,30,y
+Manitoba,bio_istig,2040,40,y
+Manitoba,bio_ppl,2040,45,y
+Manitoba,igcc,2040,45,y
+Manitoba,coal_adv_ccs,2040,45,y
+Manitoba,loil_ppl,2040,45,y
+Manitoba,geo_ppl,2040,40,y
+Manitoba,HYDROGEN_BLUE,2040,45,y
+Manitoba,HYDROGEN_GREEN,2040,45,y
+Manitoba,hydro_hc,2040,100,y
+Manitoba,hydro_lc,2040,80,y
+Manitoba,gas_cc,2040,45,y
+Manitoba,gas_cc_ccs,2040,45,y
+Manitoba,gas_ppl,2040,45,y
+Manitoba,gas_ct,2040,45,y
+Manitoba,nuc_lc,2040,60,y
+Manitoba,nuc_hc,2040,60,y
+Manitoba,foil_ppl,2040,45,y
+Manitoba,solar_pv_ppl,2040,30,y
+Manitoba,nan,2040,30,y
+Manitoba,stor_ppl,2040,15,y
+Manitoba,STOR_PUMP,2040,100,y
+Manitoba,wind_ppf,2040,30,y
+Manitoba,wind_ppl,2040,30,y
+Manitoba,bio_istig,2045,40,y
+Manitoba,bio_ppl,2045,45,y
+Manitoba,igcc,2045,45,y
+Manitoba,coal_adv_ccs,2045,45,y
+Manitoba,loil_ppl,2045,45,y
+Manitoba,geo_ppl,2045,40,y
+Manitoba,HYDROGEN_BLUE,2045,45,y
+Manitoba,HYDROGEN_GREEN,2045,45,y
+Manitoba,hydro_hc,2045,100,y
+Manitoba,hydro_lc,2045,80,y
+Manitoba,gas_cc,2045,45,y
+Manitoba,gas_cc_ccs,2045,45,y
+Manitoba,gas_ppl,2045,45,y
+Manitoba,gas_ct,2045,45,y
+Manitoba,nuc_lc,2045,60,y
+Manitoba,nuc_hc,2045,60,y
+Manitoba,foil_ppl,2045,45,y
+Manitoba,solar_pv_ppl,2045,30,y
+Manitoba,nan,2045,30,y
+Manitoba,stor_ppl,2045,15,y
+Manitoba,STOR_PUMP,2045,100,y
+Manitoba,wind_ppf,2045,30,y
+Manitoba,wind_ppl,2045,30,y
+Manitoba,bio_istig,2050,40,y
+Manitoba,bio_ppl,2050,45,y
+Manitoba,igcc,2050,45,y
+Manitoba,coal_adv_ccs,2050,45,y
+Manitoba,loil_ppl,2050,45,y
+Manitoba,geo_ppl,2050,40,y
+Manitoba,HYDROGEN_BLUE,2050,45,y
+Manitoba,HYDROGEN_GREEN,2050,45,y
+Manitoba,hydro_hc,2050,100,y
+Manitoba,hydro_lc,2050,80,y
+Manitoba,gas_cc,2050,45,y
+Manitoba,gas_cc_ccs,2050,45,y
+Manitoba,gas_ppl,2050,45,y
+Manitoba,gas_ct,2050,45,y
+Manitoba,nuc_lc,2050,60,y
+Manitoba,nuc_hc,2050,60,y
+Manitoba,foil_ppl,2050,45,y
+Manitoba,solar_pv_ppl,2050,30,y
+Manitoba,nan,2050,30,y
+Manitoba,stor_ppl,2050,15,y
+Manitoba,STOR_PUMP,2050,100,y
+Manitoba,wind_ppf,2050,30,y
+Manitoba,wind_ppl,2050,30,y
+Manitoba,bio_istig,2055,40,y
+Manitoba,bio_ppl,2055,45,y
+Manitoba,igcc,2055,45,y
+Manitoba,coal_adv_ccs,2055,45,y
+Manitoba,loil_ppl,2055,45,y
+Manitoba,geo_ppl,2055,40,y
+Manitoba,HYDROGEN_BLUE,2055,45,y
+Manitoba,HYDROGEN_GREEN,2055,45,y
+Manitoba,hydro_hc,2055,100,y
+Manitoba,hydro_lc,2055,80,y
+Manitoba,gas_cc,2055,45,y
+Manitoba,gas_cc_ccs,2055,45,y
+Manitoba,gas_ppl,2055,45,y
+Manitoba,gas_ct,2055,45,y
+Manitoba,nuc_lc,2055,60,y
+Manitoba,nuc_hc,2055,60,y
+Manitoba,foil_ppl,2055,45,y
+Manitoba,solar_pv_ppl,2055,30,y
+Manitoba,nan,2055,30,y
+Manitoba,stor_ppl,2055,15,y
+Manitoba,STOR_PUMP,2055,100,y
+Manitoba,wind_ppf,2055,30,y
+Manitoba,wind_ppl,2055,30,y
+Manitoba,bio_istig,2060,40,y
+Manitoba,bio_ppl,2060,45,y
+Manitoba,igcc,2060,45,y
+Manitoba,coal_adv_ccs,2060,45,y
+Manitoba,loil_ppl,2060,45,y
+Manitoba,geo_ppl,2060,40,y
+Manitoba,HYDROGEN_BLUE,2060,45,y
+Manitoba,HYDROGEN_GREEN,2060,45,y
+Manitoba,hydro_hc,2060,100,y
+Manitoba,hydro_lc,2060,80,y
+Manitoba,gas_cc,2060,45,y
+Manitoba,gas_cc_ccs,2060,45,y
+Manitoba,gas_ppl,2060,45,y
+Manitoba,gas_ct,2060,45,y
+Manitoba,nuc_lc,2060,60,y
+Manitoba,nuc_hc,2060,60,y
+Manitoba,foil_ppl,2060,45,y
+Manitoba,solar_pv_ppl,2060,30,y
+Manitoba,nan,2060,30,y
+Manitoba,stor_ppl,2060,15,y
+Manitoba,STOR_PUMP,2060,100,y
+Manitoba,wind_ppf,2060,30,y
+Manitoba,wind_ppl,2060,30,y
+Prince Edward Island,bio_istig,1960,40,y
+Prince Edward Island,bio_ppl,1960,45,y
+Prince Edward Island,igcc,1960,45,y
+Prince Edward Island,coal_adv_ccs,1960,45,y
+Prince Edward Island,loil_ppl,1960,45,y
+Prince Edward Island,geo_ppl,1960,40,y
+Prince Edward Island,HYDROGEN_BLUE,1960,45,y
+Prince Edward Island,HYDROGEN_GREEN,1960,45,y
+Prince Edward Island,hydro_hc,1960,100,y
+Prince Edward Island,hydro_lc,1960,80,y
+Prince Edward Island,gas_cc,1960,45,y
+Prince Edward Island,gas_cc_ccs,1960,45,y
+Prince Edward Island,gas_ppl,1960,45,y
+Prince Edward Island,gas_ct,1960,45,y
+Prince Edward Island,nuc_lc,1960,60,y
+Prince Edward Island,nuc_hc,1960,60,y
+Prince Edward Island,foil_ppl,1960,45,y
+Prince Edward Island,solar_pv_ppl,1960,30,y
+Prince Edward Island,nan,1960,30,y
+Prince Edward Island,stor_ppl,1960,15,y
+Prince Edward Island,STOR_PUMP,1960,100,y
+Prince Edward Island,wind_ppf,1960,30,y
+Prince Edward Island,wind_ppl,1960,30,y
+Prince Edward Island,bio_istig,1965,40,y
+Prince Edward Island,bio_ppl,1965,45,y
+Prince Edward Island,igcc,1965,45,y
+Prince Edward Island,coal_adv_ccs,1965,45,y
+Prince Edward Island,loil_ppl,1965,45,y
+Prince Edward Island,geo_ppl,1965,40,y
+Prince Edward Island,HYDROGEN_BLUE,1965,45,y
+Prince Edward Island,HYDROGEN_GREEN,1965,45,y
+Prince Edward Island,hydro_hc,1965,100,y
+Prince Edward Island,hydro_lc,1965,80,y
+Prince Edward Island,gas_cc,1965,45,y
+Prince Edward Island,gas_cc_ccs,1965,45,y
+Prince Edward Island,gas_ppl,1965,45,y
+Prince Edward Island,gas_ct,1965,45,y
+Prince Edward Island,nuc_lc,1965,60,y
+Prince Edward Island,nuc_hc,1965,60,y
+Prince Edward Island,foil_ppl,1965,45,y
+Prince Edward Island,solar_pv_ppl,1965,30,y
+Prince Edward Island,nan,1965,30,y
+Prince Edward Island,stor_ppl,1965,15,y
+Prince Edward Island,STOR_PUMP,1965,100,y
+Prince Edward Island,wind_ppf,1965,30,y
+Prince Edward Island,wind_ppl,1965,30,y
+Prince Edward Island,bio_istig,1970,40,y
+Prince Edward Island,bio_ppl,1970,45,y
+Prince Edward Island,igcc,1970,45,y
+Prince Edward Island,coal_adv_ccs,1970,45,y
+Prince Edward Island,loil_ppl,1970,45,y
+Prince Edward Island,geo_ppl,1970,40,y
+Prince Edward Island,HYDROGEN_BLUE,1970,45,y
+Prince Edward Island,HYDROGEN_GREEN,1970,45,y
+Prince Edward Island,hydro_hc,1970,100,y
+Prince Edward Island,hydro_lc,1970,80,y
+Prince Edward Island,gas_cc,1970,45,y
+Prince Edward Island,gas_cc_ccs,1970,45,y
+Prince Edward Island,gas_ppl,1970,45,y
+Prince Edward Island,gas_ct,1970,45,y
+Prince Edward Island,nuc_lc,1970,60,y
+Prince Edward Island,nuc_hc,1970,60,y
+Prince Edward Island,foil_ppl,1970,45,y
+Prince Edward Island,solar_pv_ppl,1970,30,y
+Prince Edward Island,nan,1970,30,y
+Prince Edward Island,stor_ppl,1970,15,y
+Prince Edward Island,STOR_PUMP,1970,100,y
+Prince Edward Island,wind_ppf,1970,30,y
+Prince Edward Island,wind_ppl,1970,30,y
+Prince Edward Island,bio_istig,1975,40,y
+Prince Edward Island,bio_ppl,1975,45,y
+Prince Edward Island,igcc,1975,45,y
+Prince Edward Island,coal_adv_ccs,1975,45,y
+Prince Edward Island,loil_ppl,1975,45,y
+Prince Edward Island,geo_ppl,1975,40,y
+Prince Edward Island,HYDROGEN_BLUE,1975,45,y
+Prince Edward Island,HYDROGEN_GREEN,1975,45,y
+Prince Edward Island,hydro_hc,1975,100,y
+Prince Edward Island,hydro_lc,1975,80,y
+Prince Edward Island,gas_cc,1975,45,y
+Prince Edward Island,gas_cc_ccs,1975,45,y
+Prince Edward Island,gas_ppl,1975,45,y
+Prince Edward Island,gas_ct,1975,45,y
+Prince Edward Island,nuc_lc,1975,60,y
+Prince Edward Island,nuc_hc,1975,60,y
+Prince Edward Island,foil_ppl,1975,45,y
+Prince Edward Island,solar_pv_ppl,1975,30,y
+Prince Edward Island,nan,1975,30,y
+Prince Edward Island,stor_ppl,1975,15,y
+Prince Edward Island,STOR_PUMP,1975,100,y
+Prince Edward Island,wind_ppf,1975,30,y
+Prince Edward Island,wind_ppl,1975,30,y
+Prince Edward Island,bio_istig,1980,40,y
+Prince Edward Island,bio_ppl,1980,45,y
+Prince Edward Island,igcc,1980,45,y
+Prince Edward Island,coal_adv_ccs,1980,45,y
+Prince Edward Island,loil_ppl,1980,45,y
+Prince Edward Island,geo_ppl,1980,40,y
+Prince Edward Island,HYDROGEN_BLUE,1980,45,y
+Prince Edward Island,HYDROGEN_GREEN,1980,45,y
+Prince Edward Island,hydro_hc,1980,100,y
+Prince Edward Island,hydro_lc,1980,80,y
+Prince Edward Island,gas_cc,1980,45,y
+Prince Edward Island,gas_cc_ccs,1980,45,y
+Prince Edward Island,gas_ppl,1980,45,y
+Prince Edward Island,gas_ct,1980,45,y
+Prince Edward Island,nuc_lc,1980,60,y
+Prince Edward Island,nuc_hc,1980,60,y
+Prince Edward Island,foil_ppl,1980,45,y
+Prince Edward Island,solar_pv_ppl,1980,30,y
+Prince Edward Island,nan,1980,30,y
+Prince Edward Island,stor_ppl,1980,15,y
+Prince Edward Island,STOR_PUMP,1980,100,y
+Prince Edward Island,wind_ppf,1980,30,y
+Prince Edward Island,wind_ppl,1980,30,y
+Prince Edward Island,bio_istig,1985,40,y
+Prince Edward Island,bio_ppl,1985,45,y
+Prince Edward Island,igcc,1985,45,y
+Prince Edward Island,coal_adv_ccs,1985,45,y
+Prince Edward Island,loil_ppl,1985,45,y
+Prince Edward Island,geo_ppl,1985,40,y
+Prince Edward Island,HYDROGEN_BLUE,1985,45,y
+Prince Edward Island,HYDROGEN_GREEN,1985,45,y
+Prince Edward Island,hydro_hc,1985,100,y
+Prince Edward Island,hydro_lc,1985,80,y
+Prince Edward Island,gas_cc,1985,45,y
+Prince Edward Island,gas_cc_ccs,1985,45,y
+Prince Edward Island,gas_ppl,1985,45,y
+Prince Edward Island,gas_ct,1985,45,y
+Prince Edward Island,nuc_lc,1985,60,y
+Prince Edward Island,nuc_hc,1985,60,y
+Prince Edward Island,foil_ppl,1985,45,y
+Prince Edward Island,solar_pv_ppl,1985,30,y
+Prince Edward Island,nan,1985,30,y
+Prince Edward Island,stor_ppl,1985,15,y
+Prince Edward Island,STOR_PUMP,1985,100,y
+Prince Edward Island,wind_ppf,1985,30,y
+Prince Edward Island,wind_ppl,1985,30,y
+Prince Edward Island,bio_istig,1990,40,y
+Prince Edward Island,bio_ppl,1990,45,y
+Prince Edward Island,igcc,1990,45,y
+Prince Edward Island,coal_adv_ccs,1990,45,y
+Prince Edward Island,loil_ppl,1990,45,y
+Prince Edward Island,geo_ppl,1990,40,y
+Prince Edward Island,HYDROGEN_BLUE,1990,45,y
+Prince Edward Island,HYDROGEN_GREEN,1990,45,y
+Prince Edward Island,hydro_hc,1990,100,y
+Prince Edward Island,hydro_lc,1990,80,y
+Prince Edward Island,gas_cc,1990,45,y
+Prince Edward Island,gas_cc_ccs,1990,45,y
+Prince Edward Island,gas_ppl,1990,45,y
+Prince Edward Island,gas_ct,1990,45,y
+Prince Edward Island,nuc_lc,1990,60,y
+Prince Edward Island,nuc_hc,1990,60,y
+Prince Edward Island,foil_ppl,1990,45,y
+Prince Edward Island,solar_pv_ppl,1990,30,y
+Prince Edward Island,nan,1990,30,y
+Prince Edward Island,stor_ppl,1990,15,y
+Prince Edward Island,STOR_PUMP,1990,100,y
+Prince Edward Island,wind_ppf,1990,30,y
+Prince Edward Island,wind_ppl,1990,30,y
+Prince Edward Island,bio_istig,1995,40,y
+Prince Edward Island,bio_ppl,1995,45,y
+Prince Edward Island,igcc,1995,45,y
+Prince Edward Island,coal_adv_ccs,1995,45,y
+Prince Edward Island,loil_ppl,1995,45,y
+Prince Edward Island,geo_ppl,1995,40,y
+Prince Edward Island,HYDROGEN_BLUE,1995,45,y
+Prince Edward Island,HYDROGEN_GREEN,1995,45,y
+Prince Edward Island,hydro_hc,1995,100,y
+Prince Edward Island,hydro_lc,1995,80,y
+Prince Edward Island,gas_cc,1995,45,y
+Prince Edward Island,gas_cc_ccs,1995,45,y
+Prince Edward Island,gas_ppl,1995,45,y
+Prince Edward Island,gas_ct,1995,45,y
+Prince Edward Island,nuc_lc,1995,60,y
+Prince Edward Island,nuc_hc,1995,60,y
+Prince Edward Island,foil_ppl,1995,45,y
+Prince Edward Island,solar_pv_ppl,1995,30,y
+Prince Edward Island,nan,1995,30,y
+Prince Edward Island,stor_ppl,1995,15,y
+Prince Edward Island,STOR_PUMP,1995,100,y
+Prince Edward Island,wind_ppf,1995,30,y
+Prince Edward Island,wind_ppl,1995,30,y
+Prince Edward Island,bio_istig,2000,40,y
+Prince Edward Island,bio_ppl,2000,45,y
+Prince Edward Island,igcc,2000,45,y
+Prince Edward Island,coal_adv_ccs,2000,45,y
+Prince Edward Island,loil_ppl,2000,45,y
+Prince Edward Island,geo_ppl,2000,40,y
+Prince Edward Island,HYDROGEN_BLUE,2000,45,y
+Prince Edward Island,HYDROGEN_GREEN,2000,45,y
+Prince Edward Island,hydro_hc,2000,100,y
+Prince Edward Island,hydro_lc,2000,80,y
+Prince Edward Island,gas_cc,2000,45,y
+Prince Edward Island,gas_cc_ccs,2000,45,y
+Prince Edward Island,gas_ppl,2000,45,y
+Prince Edward Island,gas_ct,2000,45,y
+Prince Edward Island,nuc_lc,2000,60,y
+Prince Edward Island,nuc_hc,2000,60,y
+Prince Edward Island,foil_ppl,2000,45,y
+Prince Edward Island,solar_pv_ppl,2000,30,y
+Prince Edward Island,nan,2000,30,y
+Prince Edward Island,stor_ppl,2000,15,y
+Prince Edward Island,STOR_PUMP,2000,100,y
+Prince Edward Island,wind_ppf,2000,30,y
+Prince Edward Island,wind_ppl,2000,30,y
+Prince Edward Island,bio_istig,2005,40,y
+Prince Edward Island,bio_ppl,2005,45,y
+Prince Edward Island,igcc,2005,45,y
+Prince Edward Island,coal_adv_ccs,2005,45,y
+Prince Edward Island,loil_ppl,2005,45,y
+Prince Edward Island,geo_ppl,2005,40,y
+Prince Edward Island,HYDROGEN_BLUE,2005,45,y
+Prince Edward Island,HYDROGEN_GREEN,2005,45,y
+Prince Edward Island,hydro_hc,2005,100,y
+Prince Edward Island,hydro_lc,2005,80,y
+Prince Edward Island,gas_cc,2005,45,y
+Prince Edward Island,gas_cc_ccs,2005,45,y
+Prince Edward Island,gas_ppl,2005,45,y
+Prince Edward Island,gas_ct,2005,45,y
+Prince Edward Island,nuc_lc,2005,60,y
+Prince Edward Island,nuc_hc,2005,60,y
+Prince Edward Island,foil_ppl,2005,45,y
+Prince Edward Island,solar_pv_ppl,2005,30,y
+Prince Edward Island,nan,2005,30,y
+Prince Edward Island,stor_ppl,2005,15,y
+Prince Edward Island,STOR_PUMP,2005,100,y
+Prince Edward Island,wind_ppf,2005,30,y
+Prince Edward Island,wind_ppl,2005,30,y
+Prince Edward Island,bio_istig,2010,40,y
+Prince Edward Island,bio_ppl,2010,45,y
+Prince Edward Island,igcc,2010,45,y
+Prince Edward Island,coal_adv_ccs,2010,45,y
+Prince Edward Island,loil_ppl,2010,45,y
+Prince Edward Island,geo_ppl,2010,40,y
+Prince Edward Island,HYDROGEN_BLUE,2010,45,y
+Prince Edward Island,HYDROGEN_GREEN,2010,45,y
+Prince Edward Island,hydro_hc,2010,100,y
+Prince Edward Island,hydro_lc,2010,80,y
+Prince Edward Island,gas_cc,2010,45,y
+Prince Edward Island,gas_cc_ccs,2010,45,y
+Prince Edward Island,gas_ppl,2010,45,y
+Prince Edward Island,gas_ct,2010,45,y
+Prince Edward Island,nuc_lc,2010,60,y
+Prince Edward Island,nuc_hc,2010,60,y
+Prince Edward Island,foil_ppl,2010,45,y
+Prince Edward Island,solar_pv_ppl,2010,30,y
+Prince Edward Island,nan,2010,30,y
+Prince Edward Island,stor_ppl,2010,15,y
+Prince Edward Island,STOR_PUMP,2010,100,y
+Prince Edward Island,wind_ppf,2010,30,y
+Prince Edward Island,wind_ppl,2010,30,y
+Prince Edward Island,bio_istig,2015,40,y
+Prince Edward Island,bio_ppl,2015,45,y
+Prince Edward Island,igcc,2015,45,y
+Prince Edward Island,coal_adv_ccs,2015,45,y
+Prince Edward Island,loil_ppl,2015,45,y
+Prince Edward Island,geo_ppl,2015,40,y
+Prince Edward Island,HYDROGEN_BLUE,2015,45,y
+Prince Edward Island,HYDROGEN_GREEN,2015,45,y
+Prince Edward Island,hydro_hc,2015,100,y
+Prince Edward Island,hydro_lc,2015,80,y
+Prince Edward Island,gas_cc,2015,45,y
+Prince Edward Island,gas_cc_ccs,2015,45,y
+Prince Edward Island,gas_ppl,2015,45,y
+Prince Edward Island,gas_ct,2015,45,y
+Prince Edward Island,nuc_lc,2015,60,y
+Prince Edward Island,nuc_hc,2015,60,y
+Prince Edward Island,foil_ppl,2015,45,y
+Prince Edward Island,solar_pv_ppl,2015,30,y
+Prince Edward Island,nan,2015,30,y
+Prince Edward Island,stor_ppl,2015,15,y
+Prince Edward Island,STOR_PUMP,2015,100,y
+Prince Edward Island,wind_ppf,2015,30,y
+Prince Edward Island,wind_ppl,2015,30,y
+Prince Edward Island,bio_istig,2020,40,y
+Prince Edward Island,bio_ppl,2020,45,y
+Prince Edward Island,igcc,2020,45,y
+Prince Edward Island,coal_adv_ccs,2020,45,y
+Prince Edward Island,loil_ppl,2020,45,y
+Prince Edward Island,geo_ppl,2020,40,y
+Prince Edward Island,HYDROGEN_BLUE,2020,45,y
+Prince Edward Island,HYDROGEN_GREEN,2020,45,y
+Prince Edward Island,hydro_hc,2020,100,y
+Prince Edward Island,hydro_lc,2020,80,y
+Prince Edward Island,gas_cc,2020,45,y
+Prince Edward Island,gas_cc_ccs,2020,45,y
+Prince Edward Island,gas_ppl,2020,45,y
+Prince Edward Island,gas_ct,2020,45,y
+Prince Edward Island,nuc_lc,2020,60,y
+Prince Edward Island,nuc_hc,2020,60,y
+Prince Edward Island,foil_ppl,2020,45,y
+Prince Edward Island,solar_pv_ppl,2020,30,y
+Prince Edward Island,nan,2020,30,y
+Prince Edward Island,stor_ppl,2020,15,y
+Prince Edward Island,STOR_PUMP,2020,100,y
+Prince Edward Island,wind_ppf,2020,30,y
+Prince Edward Island,wind_ppl,2020,30,y
+Prince Edward Island,bio_istig,2025,40,y
+Prince Edward Island,bio_ppl,2025,45,y
+Prince Edward Island,igcc,2025,45,y
+Prince Edward Island,coal_adv_ccs,2025,45,y
+Prince Edward Island,loil_ppl,2025,45,y
+Prince Edward Island,geo_ppl,2025,40,y
+Prince Edward Island,HYDROGEN_BLUE,2025,45,y
+Prince Edward Island,HYDROGEN_GREEN,2025,45,y
+Prince Edward Island,hydro_hc,2025,100,y
+Prince Edward Island,hydro_lc,2025,80,y
+Prince Edward Island,gas_cc,2025,45,y
+Prince Edward Island,gas_cc_ccs,2025,45,y
+Prince Edward Island,gas_ppl,2025,45,y
+Prince Edward Island,gas_ct,2025,45,y
+Prince Edward Island,nuc_lc,2025,60,y
+Prince Edward Island,nuc_hc,2025,60,y
+Prince Edward Island,foil_ppl,2025,45,y
+Prince Edward Island,solar_pv_ppl,2025,30,y
+Prince Edward Island,nan,2025,30,y
+Prince Edward Island,stor_ppl,2025,15,y
+Prince Edward Island,STOR_PUMP,2025,100,y
+Prince Edward Island,wind_ppf,2025,30,y
+Prince Edward Island,wind_ppl,2025,30,y
+Prince Edward Island,bio_istig,2030,40,y
+Prince Edward Island,bio_ppl,2030,45,y
+Prince Edward Island,igcc,2030,45,y
+Prince Edward Island,coal_adv_ccs,2030,45,y
+Prince Edward Island,loil_ppl,2030,45,y
+Prince Edward Island,geo_ppl,2030,40,y
+Prince Edward Island,HYDROGEN_BLUE,2030,45,y
+Prince Edward Island,HYDROGEN_GREEN,2030,45,y
+Prince Edward Island,hydro_hc,2030,100,y
+Prince Edward Island,hydro_lc,2030,80,y
+Prince Edward Island,gas_cc,2030,45,y
+Prince Edward Island,gas_cc_ccs,2030,45,y
+Prince Edward Island,gas_ppl,2030,45,y
+Prince Edward Island,gas_ct,2030,45,y
+Prince Edward Island,nuc_lc,2030,60,y
+Prince Edward Island,nuc_hc,2030,60,y
+Prince Edward Island,foil_ppl,2030,45,y
+Prince Edward Island,solar_pv_ppl,2030,30,y
+Prince Edward Island,nan,2030,30,y
+Prince Edward Island,stor_ppl,2030,15,y
+Prince Edward Island,STOR_PUMP,2030,100,y
+Prince Edward Island,wind_ppf,2030,30,y
+Prince Edward Island,wind_ppl,2030,30,y
+Prince Edward Island,bio_istig,2035,40,y
+Prince Edward Island,bio_ppl,2035,45,y
+Prince Edward Island,igcc,2035,45,y
+Prince Edward Island,coal_adv_ccs,2035,45,y
+Prince Edward Island,loil_ppl,2035,45,y
+Prince Edward Island,geo_ppl,2035,40,y
+Prince Edward Island,HYDROGEN_BLUE,2035,45,y
+Prince Edward Island,HYDROGEN_GREEN,2035,45,y
+Prince Edward Island,hydro_hc,2035,100,y
+Prince Edward Island,hydro_lc,2035,80,y
+Prince Edward Island,gas_cc,2035,45,y
+Prince Edward Island,gas_cc_ccs,2035,45,y
+Prince Edward Island,gas_ppl,2035,45,y
+Prince Edward Island,gas_ct,2035,45,y
+Prince Edward Island,nuc_lc,2035,60,y
+Prince Edward Island,nuc_hc,2035,60,y
+Prince Edward Island,foil_ppl,2035,45,y
+Prince Edward Island,solar_pv_ppl,2035,30,y
+Prince Edward Island,nan,2035,30,y
+Prince Edward Island,stor_ppl,2035,15,y
+Prince Edward Island,STOR_PUMP,2035,100,y
+Prince Edward Island,wind_ppf,2035,30,y
+Prince Edward Island,wind_ppl,2035,30,y
+Prince Edward Island,bio_istig,2040,40,y
+Prince Edward Island,bio_ppl,2040,45,y
+Prince Edward Island,igcc,2040,45,y
+Prince Edward Island,coal_adv_ccs,2040,45,y
+Prince Edward Island,loil_ppl,2040,45,y
+Prince Edward Island,geo_ppl,2040,40,y
+Prince Edward Island,HYDROGEN_BLUE,2040,45,y
+Prince Edward Island,HYDROGEN_GREEN,2040,45,y
+Prince Edward Island,hydro_hc,2040,100,y
+Prince Edward Island,hydro_lc,2040,80,y
+Prince Edward Island,gas_cc,2040,45,y
+Prince Edward Island,gas_cc_ccs,2040,45,y
+Prince Edward Island,gas_ppl,2040,45,y
+Prince Edward Island,gas_ct,2040,45,y
+Prince Edward Island,nuc_lc,2040,60,y
+Prince Edward Island,nuc_hc,2040,60,y
+Prince Edward Island,foil_ppl,2040,45,y
+Prince Edward Island,solar_pv_ppl,2040,30,y
+Prince Edward Island,nan,2040,30,y
+Prince Edward Island,stor_ppl,2040,15,y
+Prince Edward Island,STOR_PUMP,2040,100,y
+Prince Edward Island,wind_ppf,2040,30,y
+Prince Edward Island,wind_ppl,2040,30,y
+Prince Edward Island,bio_istig,2045,40,y
+Prince Edward Island,bio_ppl,2045,45,y
+Prince Edward Island,igcc,2045,45,y
+Prince Edward Island,coal_adv_ccs,2045,45,y
+Prince Edward Island,loil_ppl,2045,45,y
+Prince Edward Island,geo_ppl,2045,40,y
+Prince Edward Island,HYDROGEN_BLUE,2045,45,y
+Prince Edward Island,HYDROGEN_GREEN,2045,45,y
+Prince Edward Island,hydro_hc,2045,100,y
+Prince Edward Island,hydro_lc,2045,80,y
+Prince Edward Island,gas_cc,2045,45,y
+Prince Edward Island,gas_cc_ccs,2045,45,y
+Prince Edward Island,gas_ppl,2045,45,y
+Prince Edward Island,gas_ct,2045,45,y
+Prince Edward Island,nuc_lc,2045,60,y
+Prince Edward Island,nuc_hc,2045,60,y
+Prince Edward Island,foil_ppl,2045,45,y
+Prince Edward Island,solar_pv_ppl,2045,30,y
+Prince Edward Island,nan,2045,30,y
+Prince Edward Island,stor_ppl,2045,15,y
+Prince Edward Island,STOR_PUMP,2045,100,y
+Prince Edward Island,wind_ppf,2045,30,y
+Prince Edward Island,wind_ppl,2045,30,y
+Prince Edward Island,bio_istig,2050,40,y
+Prince Edward Island,bio_ppl,2050,45,y
+Prince Edward Island,igcc,2050,45,y
+Prince Edward Island,coal_adv_ccs,2050,45,y
+Prince Edward Island,loil_ppl,2050,45,y
+Prince Edward Island,geo_ppl,2050,40,y
+Prince Edward Island,HYDROGEN_BLUE,2050,45,y
+Prince Edward Island,HYDROGEN_GREEN,2050,45,y
+Prince Edward Island,hydro_hc,2050,100,y
+Prince Edward Island,hydro_lc,2050,80,y
+Prince Edward Island,gas_cc,2050,45,y
+Prince Edward Island,gas_cc_ccs,2050,45,y
+Prince Edward Island,gas_ppl,2050,45,y
+Prince Edward Island,gas_ct,2050,45,y
+Prince Edward Island,nuc_lc,2050,60,y
+Prince Edward Island,nuc_hc,2050,60,y
+Prince Edward Island,foil_ppl,2050,45,y
+Prince Edward Island,solar_pv_ppl,2050,30,y
+Prince Edward Island,nan,2050,30,y
+Prince Edward Island,stor_ppl,2050,15,y
+Prince Edward Island,STOR_PUMP,2050,100,y
+Prince Edward Island,wind_ppf,2050,30,y
+Prince Edward Island,wind_ppl,2050,30,y
+Prince Edward Island,bio_istig,2055,40,y
+Prince Edward Island,bio_ppl,2055,45,y
+Prince Edward Island,igcc,2055,45,y
+Prince Edward Island,coal_adv_ccs,2055,45,y
+Prince Edward Island,loil_ppl,2055,45,y
+Prince Edward Island,geo_ppl,2055,40,y
+Prince Edward Island,HYDROGEN_BLUE,2055,45,y
+Prince Edward Island,HYDROGEN_GREEN,2055,45,y
+Prince Edward Island,hydro_hc,2055,100,y
+Prince Edward Island,hydro_lc,2055,80,y
+Prince Edward Island,gas_cc,2055,45,y
+Prince Edward Island,gas_cc_ccs,2055,45,y
+Prince Edward Island,gas_ppl,2055,45,y
+Prince Edward Island,gas_ct,2055,45,y
+Prince Edward Island,nuc_lc,2055,60,y
+Prince Edward Island,nuc_hc,2055,60,y
+Prince Edward Island,foil_ppl,2055,45,y
+Prince Edward Island,solar_pv_ppl,2055,30,y
+Prince Edward Island,nan,2055,30,y
+Prince Edward Island,stor_ppl,2055,15,y
+Prince Edward Island,STOR_PUMP,2055,100,y
+Prince Edward Island,wind_ppf,2055,30,y
+Prince Edward Island,wind_ppl,2055,30,y
+Prince Edward Island,bio_istig,2060,40,y
+Prince Edward Island,bio_ppl,2060,45,y
+Prince Edward Island,igcc,2060,45,y
+Prince Edward Island,coal_adv_ccs,2060,45,y
+Prince Edward Island,loil_ppl,2060,45,y
+Prince Edward Island,geo_ppl,2060,40,y
+Prince Edward Island,HYDROGEN_BLUE,2060,45,y
+Prince Edward Island,HYDROGEN_GREEN,2060,45,y
+Prince Edward Island,hydro_hc,2060,100,y
+Prince Edward Island,hydro_lc,2060,80,y
+Prince Edward Island,gas_cc,2060,45,y
+Prince Edward Island,gas_cc_ccs,2060,45,y
+Prince Edward Island,gas_ppl,2060,45,y
+Prince Edward Island,gas_ct,2060,45,y
+Prince Edward Island,nuc_lc,2060,60,y
+Prince Edward Island,nuc_hc,2060,60,y
+Prince Edward Island,foil_ppl,2060,45,y
+Prince Edward Island,solar_pv_ppl,2060,30,y
+Prince Edward Island,nan,2060,30,y
+Prince Edward Island,stor_ppl,2060,15,y
+Prince Edward Island,STOR_PUMP,2060,100,y
+Prince Edward Island,wind_ppf,2060,30,y
+Prince Edward Island,wind_ppl,2060,30,y

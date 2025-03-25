@@ -129,17 +129,17 @@ def balance_import_export(model_obj, historical_activity: pd.DataFrame):
                         pd.Series: Updated row with balanced production, import, and export values.
         """
         production = row[prod_col]
-        imports = row[imp_col]
-        exports = row[exp_col]
+        imports = 0#row[imp_col]
+        exports = 0#row[exp_col]
         demand = row[demand_col]
 
         # Calculate the net balance of energy
         net_balance = production + imports - exports
 
         # Adjust imports or exports to meet the demand
-        if net_balance < demand:
+        if production < demand:
             imports += demand - net_balance
-        elif net_balance > demand:
+        elif production > demand:
             exports += net_balance - demand
 
         # Ensure imports are not negative
