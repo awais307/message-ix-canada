@@ -14,13 +14,18 @@ h2_atr_ccs:
       - com_level: 
         - secondary
         - secondary
+      - com_mode:
+        - M1
+        - M1
     - output: 
       - com_name: 
         - hydrogen
       - com_value: 
         - 1
       - com_level: 
-        - secondary 
+        - secondary
+      - com_mode:
+        - M1
   # Time specifications: lifetime, construction time
   time: year
   tec_lifetime: 40  #40
@@ -66,6 +71,8 @@ h2_atr:
         - 1.2
       - com_level: 
         - secondary
+      - com_mode: 
+        - M1
     - output: 
       - com_name: 
         - hydrogen
@@ -76,6 +83,9 @@ h2_atr:
       - com_level: 
         - secondary 
         - secondary
+      - com_mode:
+        - M1
+        - M1
   # Time specifications: lifetime, construction time
   time: year
   tec_lifetime: 40
@@ -120,6 +130,8 @@ gas_h2:
         - 1.28
       - com_level: 
         - secondary
+      - com_mode: 
+        - M1
     - output: 
       - com_name: 
         - d_heat
@@ -130,6 +142,9 @@ gas_h2:
       - com_level: 
         - secondary 
         - secondary
+      - com_mode:
+        - M1
+        - M1
   # Time specifications: lifetime, construction time
   time: year
   tec_lifetime: 30
@@ -177,13 +192,18 @@ h2_stor_geo:
       - com_level: 
         - secondary
         - secondary
+      - com_mode:
+        - M1
+        - M1
     - output: 
       - com_name: 
         - hydrogen
       - com_value: 
         - 1
       - com_level: 
-        - secondary 
+        - secondary
+      - com_mode:
+        - M1
   # Time specifications: lifetime, construction time
   time: year
   tec_lifetime: 40
@@ -231,6 +251,9 @@ liq_h2:
       - com_level: 
         - secondary
         - secondary
+      - com_mode: 
+        - M1
+        - M1
     - output: 
       - com_name: 
         - lightoil
@@ -241,6 +264,9 @@ liq_h2:
       - com_level: 
         - secondary 
         - secondary
+      - com_mode:
+        - M1
+        - M1
   # Time specifications: lifetime, construction time
   time: year
   tec_lifetime: 30
@@ -288,6 +314,9 @@ meth_h2:
       - com_level: 
         - secondary
         - secondary
+      - com_mode: 
+        - M1
+        - M1
     - output: 
       - com_name: 
         - methanol
@@ -298,6 +327,9 @@ meth_h2:
       - com_level: 
         - primary 
         - secondary
+      - com_mode: 
+        - M1
+        - M1
   # Time specifications: lifetime, construction time
   time: year
   tec_lifetime: 30
@@ -342,6 +374,8 @@ h2_gas_fc_trp:
         - 0.5556
       - com_level: 
         - secondary
+      - com_mode: 
+        - M1
     - output: 
       - com_name: 
         - transport
@@ -349,6 +383,8 @@ h2_gas_fc_trp:
         - 1
       - com_level: 
         - useful
+      - com_mode:
+        - M1
   # Time specifications: lifetime, construction time
   time: year
   tec_lifetime: 25
@@ -396,6 +432,9 @@ h2_pyrolysis:
       - com_level: 
         - primary
         - secondary
+      - com_mode: 
+        - M1
+        - M1
     - output: 
       - com_name: 
         - hydrogen
@@ -403,6 +442,8 @@ h2_pyrolysis:
         - 1
       - com_level: 
         - secondary
+      - com_mode:
+        - M1
   # Time specifications: lifetime, construction time
   time: year
   tec_lifetime: 20
@@ -449,6 +490,8 @@ dac_ht:
         -  1.05
       - com_level: 
         - secondary # Secondary level of commodity as per MESSAGE global sheet
+      - com_mode: 
+        - M1
     - output: 
       - com_name: 
         - dacco2_captured # captured CO2 as an output for storage
@@ -456,6 +499,8 @@ dac_ht:
         - 1
       - com_level: 
         - secondary # Secondary level of commodity as per MESSAGE global sheet
+      - com_mode:
+        - M1
   # Time specifications: lifetime, construction time
   time: year
   tec_lifetime: 30
@@ -487,7 +532,6 @@ dac_ht:
   investment_lr: 0.92
   fixed_cost_lr: 1.22 # From the MESSAGE global sheet
 
-
 dac_lt:
   # Technology specs: mode, commodities, description
   description: direct air capture with liquid transport (?)
@@ -501,6 +545,8 @@ dac_lt:
         - 1.05
       - com_level: 
         - secondary
+      - com_mode: 
+        - M1
     - output: 
       - com_name: 
         - dacco2_captured
@@ -508,6 +554,8 @@ dac_lt:
         - 1
       - com_level: 
         - secondary
+      - com_mode:
+        - M1
   # Time specifications: lifetime, construction time
   time: year
   tec_lifetime: 20
@@ -558,6 +606,10 @@ co2_stor: # Need to edit with the MESSAGE sheet
         - final
         - final
         - final
+      - com_mode: 
+        - M3 
+        - M1 
+        - M2 
     - output: 
       - com_name: 
         - dacco2_captured
@@ -571,6 +623,10 @@ co2_stor: # Need to edit with the MESSAGE sheet
         - useful
         - useful
         - useful
+      - com_mode: 
+        - M3 
+        - M1 
+        - M2 
   # Time specifications: lifetime, construction time
   time: year
   tec_lifetime: 20
@@ -619,6 +675,8 @@ co2_tr_ld: # Need to edit with the MESSAGE sheet
         - 1
       - com_level: 
         - secondary
+      - com_mode: 
+        - M1  
     - output: 
       - com_name: 
         - bco2_captured
@@ -626,6 +684,8 @@ co2_tr_ld: # Need to edit with the MESSAGE sheet
         - 1
       - com_level: 
         - final
+      - com_mode: 
+        - M1  
   # Time specifications: lifetime, construction time
   time: year
   tec_lifetime: 20
@@ -673,6 +733,9 @@ co2_tr_sd: # Need to edit with the MESSAGE sheet
       - com_level: 
         - secondary
         - secondary
+      - com_mode:
+        - M1
+        - M1
     - output: 
       - com_name:
         - dacco2_captured 
@@ -683,6 +746,9 @@ co2_tr_sd: # Need to edit with the MESSAGE sheet
       - com_level: 
         - final
         - final
+      - com_mode:
+        - M1
+        - M1
   # Time specifications: lifetime, construction time
   time: year
   tec_lifetime: 20

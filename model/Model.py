@@ -152,9 +152,9 @@ class model_MSG:
 							"input",
 							# node_loc=provinces,
 							technology=tech,
-							mode=tech_data["mode"],
 							commodity=tech_data["commodity"][0]["input"][0]["com_name"],
 							level=tech_data["commodity"][0]["input"][2]["com_level"],
+       						mode=tech_data["commodity"][0]["input"][3]["com_mode"],
 							time=tech_data["time"],
 							time_origin=tech_data["time"],
 							value=tech_data["commodity"][0]["input"][1]["com_value"],
@@ -179,11 +179,11 @@ class model_MSG:
 							"output",
 							# node_loc=provinces,
 							technology=tech,
-							mode=tech_data["mode"],
 							commodity=tech_data["commodity"][1]["output"][0][
 								"com_name"
 							],
 							level=tech_data["commodity"][1]["output"][2]["com_level"],
+							mode=tech_data["commodity"][1]["output"][3]["com_mode"],
 							time=tech_data["time"],
 							time_origin=tech_data["time"],
 							value=tech_data["commodity"][1]["output"][1]["com_value"],
@@ -207,7 +207,7 @@ class model_MSG:
 						"var_cost",
 						node_loc=provinces,
 						technology=tech,
-						mode=tech_data["mode"],
+    					mode=tech_data["mode"],
 						value=tech_data["var_cost_2020"][1]["cost_value"],
 						time=tech_data["time"],
 						unit=tech_data["unit"][0]["cost"],
@@ -466,7 +466,7 @@ class model_MSG:
 
 
 			if self.ctx.post_process_config['new_reporter']:
-				timestamp = f'{str(datetime.now().strftime('%Y-%m-%d--%H-%M'))}'
+				timestamp = f"{str(datetime.now().strftime('%Y-%m-%d--%H-%M'))}"
 				self.ctx.generate_report(
 					output_path=f"reporting_output/{caseName}_{timestamp}_new_reporter.csv",
 					min_year=2020,
@@ -481,7 +481,7 @@ class model_MSG:
 				\n=================================================="
 				)
 			elif self.ctx.post_process_config['legacy_reporter']:
-				timestamp = f'{str(datetime.now().strftime('%Y-%m-%d--%H-%M'))}'
+				timestamp = f"{str(datetime.now().strftime('%Y-%m-%d--%H-%M'))}"
 				start = time.time()
 				report(mp=self.ctx.mp, scen=self.ctx.source_scenario['scenario'], out_dir="reporting_outputs", out_file_timestamp = timestamp, IDEA_format=self.ctx.post_process_config['IDEA_format'])
 				end = time.time()
