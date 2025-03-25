@@ -1,4 +1,4 @@
-image: registry.gitlab.com/sesit/message-ix
+image: registry.gitlab.com/sesit/message-ix-canada/message2-kubernetes
 
 stages:
   - test
@@ -21,21 +21,21 @@ job:
 
   script:
     - echo 'Running pipeline now'
-    - python3 MESSAGE_CA.py --solve
+    - python3 MESSAGE_CA.py --report --solve
 
-pages:
-  # TODO once the changes are merged to the main branch we can uncomment this rule and only updates to main will change the website documentation
-  # rules:
-  #   - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-  image: python:3.8-buster
-  before_script: []
-  timeout: 10m
-  script:
-    - pip install mkdocs mkdocs-material mkdocstrings[python] mkdocs-macros-plugin
-    - mkdocs build -d public
-  artifacts:
-    paths:
-      - public
+# pages:
+#   # TODO once the changes are merged to the main branch we can uncomment this rule and only updates to main will change the website documentation
+#   # rules:
+#   #   - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+#   image: python:3.8-buster
+#   before_script: []
+#   timeout: 10m
+#   script:
+#     - pip install mkdocs mkdocs-material mkdocstrings[python] mkdocs-macros-plugin
+#     - mkdocs build -d public
+#   artifacts:
+#     paths:
+#       - public
 
 
 

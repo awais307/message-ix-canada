@@ -10,6 +10,8 @@ Before proceeding with the installation, ensure you have the following dependenc
 - **[Git](https://git-scm.com/downloads)** – Needed to clone the MESSAGEix-Canada repository.
 - **[GAMS](https://www.gams.com/download/)** – Required for running MESSAGEix models.
 
+> Note: if your GAMS license [does not include CPLEX](https://www.gams.com/49/docs/UG_License.html?search=licenses#No_License_for_a_particular_Solver_found) you will need to use an open-source solver instead. Refer to the [solvers section](docs/solvers.md) of this documentation to understand how to update your solver of choice.
+
 ## **Setting Up MESSAGEix-Canada**
 
 ### **1. Clone the Repository**

@@ -5,9 +5,6 @@ This function add share of different constraints technologies
 """
 
 import pandas as pd
-import numpy as np
-import pycountry
-from geotext import GeoText
 from itertools import product
 
 def expand_grid(dictionary):
@@ -15,6 +12,18 @@ def expand_grid(dictionary):
                        columns=dictionary.keys())
 
 def shares(msgSDG, path, nodeName, suffix):
+    """
+    This function add share of different constraints technologies 
+
+    Args:
+        msgSDG: The MESSAGEix scenario 
+        path: path to the shares excel files  
+        nodeName: name of the node
+        suffix: suffix in the name of the shares excel files  
+
+    Returns:
+        None
+    """
 
     msgSDG.check_out()   
     # add type_tec for renewable

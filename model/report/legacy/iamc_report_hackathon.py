@@ -452,7 +452,7 @@ def report(
     #        if df.iloc[index, col] < 0:
     #            df.iloc[index, col] = df.iloc[index, col] * -1
                 
-    pp_utils.write_xlsx(df, out_dir, out_file_timestamp, IDEA_format)
+    path_name = pp_utils.write_xlsx(df, out_dir, out_file_timestamp, IDEA_format)
     
     # Return the reeport as a dataframe
-    return df
+    return df, path_name

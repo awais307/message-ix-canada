@@ -15,6 +15,7 @@ scenario_config:
     model: MESSAGEix-CA
     solve: True
     scenario: baseline
+    scenario_name: baseline_1
     annotation: Initial setup for Canadian energy model.
     version: new
   policy_config:
@@ -26,7 +27,8 @@ scenario_config:
     add_techs: False
     investment_tax_credit: False
     apply_renewable_potential: False
-    apply_obps: False
+    apply_obps: True
+    obps_excel_sheet: 'New_OBPS'
     obps_policy_carbon_cost:
       2025: 165.4251
       2030: 285.2156 
@@ -37,7 +39,7 @@ scenario_config:
     new_reporter: False
     IDEA_format: False
 path_config:
-  provincial_input_file: scenarios/baseline/model_default_v27.xlsx
+  provincial_input_file: scenarios/baseline/model_default_v28.xlsx
   scenario_folder: scenarios/baseline
   out_dir: model/output
   ITC_policy_input_data: ./data/assumptions_database_example(ITCs).csv

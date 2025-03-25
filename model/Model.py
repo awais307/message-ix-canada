@@ -13,6 +13,9 @@ import time
 import warnings
 import pandas as pd
 from datetime import datetime
+import pyam
+import numpy as np
+
 from model.policies.hydrogen_shares import add_hydrogen_shares
 from model.utlities.pop_gdp import process_gdp_population_data, add_population_gdp_to_scenario
 from model.utlities.demands import adjust_demands
@@ -98,6 +101,7 @@ class model_MSG:
 		self.ctx = ctx
 		
 		self.ctx.source_scenario['scenario'] = scenario_name
+		self.ctx.source_scenario['scenario'] = self.ctx.source_scenario['scenario_name']
 
 		self.ctx.mp = ixmp.Platform(name=self.ctx.platform['name'], jvmargs=[self.ctx.platform['jvmargs']])
 		self.ctx.mp.add_unit('USD/(tC/yr)') # Addiing cost unit for DAC technologies to the database
@@ -356,7 +360,120 @@ class model_MSG:
 			None
 		"""
 		pass 
-	
+	def validate_scenario(self, path_name):
+		df_correction = pd.read_excel(path_name)
+
+		# Replace empty values in the 'region' column with 'Unknown'
+		df_correction['Region'] = df_correction['Region'].replace(np.nan, 'Unkown')
+		duplicates = df_correction[df_correction.duplicated()]
+
+		print("Duplicated rows:")
+		print(duplicates)
+
+		num_duplicates = duplicates.shape[0]
+		print(f"Number of duplicated rows: {num_duplicates}")
+
+		df_correction = df_correction.drop_duplicates()
+		
+
+		data = pyam.IamDataFrame(df_correction)
+		ranges_df = pd.read_csv('source_data.csv')
+
+		ranges_df = ranges_df.dropna(how='all')
+		# Define the acceptable lower limit for each variable, year, region, and scenario
+		acceptable_ranges = {}
+		for _, row in ranges_df.iterrows():
+			region = row['Region']
+			variable = row['Variable']
+			year = int(row['Year'])
+			scenario = row['Scenario']
+			lower = float(row['Lower'])
+			unit = row['Unit'] 
+
+			if region not in acceptable_ranges:
+				acceptable_ranges[region] = {}
+			if variable not in acceptable_ranges[region]:
+				acceptable_ranges[region][variable] = {}
+			if year not in acceptable_ranges[region][variable]:
+				acceptable_ranges[region][variable][year] = {}
+			acceptable_ranges[region][variable][year][scenario] = {'lower': lower, 'unit': unit}
+
+		# Define acceptable deviation percentages
+		deviation_percentage = {
+			2020: 0.10,
+			2030: 0.20,
+			2040: 0.20,
+			2050: 0.20
+		}
+
+		# Filter for specific years of interest
+		years_of_interest = [2020, 2030, 2040, 2050]
+
+		results = []
+
+		within_deviation_count = 0
+		outside_deviation_count = 0
+
+		for year in years_of_interest:
+			for region in data.region:
+				for variable in data.variable:
+					for scenario in data.scenario:
+						if region in acceptable_ranges and variable in acceptable_ranges[region]:
+							if year in acceptable_ranges[region][variable]:
+								if scenario in acceptable_ranges[region][variable][year]:
+									acceptable_range = acceptable_ranges[region][variable][year][scenario]
+									lower_limit = acceptable_range['lower']
+									lower_unit = acceptable_range['unit'] 
+
+									df_filtered = data.filter(year=year, region=region, variable=variable, scenario=scenario)
+									
+									if not df_filtered.empty:
+										row = df_filtered.data.iloc[0]
+										value = row['value']
+										unit = row['unit']  
+										
+										# Unit check
+										if unit != lower_unit:
+											print(f"Warning: Unit mismatch for {variable} in {region}, {year}, {scenario}. "
+												f"Message output unit: {unit}, Expected source unit: {lower_unit}.")
+
+										deviation = 0
+										if lower_limit == 0:
+											if value==0:
+												deviation = 0
+											else:
+												deviation = 100
+										elif value < lower_limit:
+											deviation = (lower_limit - value) / lower_limit * 100
+										elif value > lower_limit:
+											deviation = (value - lower_limit) / lower_limit * 100
+											
+										acceptable_dev = deviation_percentage.get(year, 0) * 100
+										
+										if deviation > acceptable_dev:
+											results.append({
+												'Year': year,
+												'Region': region,
+												'Variable': variable,
+												'Scenario': scenario,  
+												'Value': value,
+												'Deviation %': deviation,
+												'Unit': lower_unit,  
+												'Source-value': lower_limit
+											})
+											outside_deviation_count += 1
+										else:
+											within_deviation_count += 1
+
+		pwd = os.getcwd()
+		path_name_no_ext = os.path.splitext(path_name)[0]
+		val_name = str(path_name_no_ext) + "_Validation result.xlsx"
+		filename = os.path.join(pwd, val_name)
+		results_df = pd.DataFrame(results)
+		results_df.to_csv(filename, index=False)
+		print(f"Values within acceptable deviation: {within_deviation_count}")
+		print(f"Values outside acceptable deviation: {outside_deviation_count}")
+
 	# Full scenario set-up
 	def setup_scenario(self) -> tuple:
 		"""
@@ -378,6 +495,8 @@ class model_MSG:
 		#config_validation(self.ctx.config_path)
 
 		# Scenario set-up
+		# from datetime import datetime
+
 		start = time.time()
 		
 		# TODO add option for SSP
@@ -483,14 +602,17 @@ class model_MSG:
 			elif self.ctx.post_process_config['legacy_reporter']:
 				timestamp = f'{str(datetime.now().strftime('%Y-%m-%d--%H-%M'))}'
 				start = time.time()
-				report(mp=self.ctx.mp, scen=self.ctx.source_scenario['scenario'], out_dir="reporting_outputs", out_file_timestamp = timestamp, IDEA_format=self.ctx.post_process_config['IDEA_format'])
+				df, path_name= report(mp=self.ctx.mp, scen=self.ctx.source_scenario['scenario'], out_dir="reporting_outputs", out_file_timestamp = timestamp, IDEA_format=self.ctx.post_process_config['IDEA_format'])
 				end = time.time()
 				print(
 					f"\n==================================================\n\
 				Reporting with LEGACY reporter. Process time: {round((end - start) / 60)} Min and {round((end - start) % 60)} Sec\
 				\n=================================================="
 				)
+				if os.path.exists(path_name):
+					self.validate_scenario(path_name)
 				
+
 
 		if self.ctx.post_process_config['to_excell']:
 			start = time.time()
@@ -504,3 +626,4 @@ class model_MSG:
 				)
 
 		return self.ctx.mp, self.ctx.source_scenario['scenario'], scenario_folder
+		

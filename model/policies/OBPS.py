@@ -27,7 +27,7 @@ def apply_obps(ctx):
 	scenario = ctx.source_scenario['scenario']
 	data_file_path = ctx.path['OBPS_policy_input_data']
 
-	# Read the required data
+	'''# Read the required data
 	provinces = scenario.set('node')[2:]
 	data_relation = pd.read_excel(data_file_path, sheet_name='New_OBPS')
 	data_relation["region"] = data_relation['region'].str.replace(" ", "")
@@ -41,8 +41,11 @@ def apply_obps(ctx):
 	
 	# Now you have a dataframe with the correct units which is for Standard, it would be tc/KW or tonne of carbon per Kwyr. 
 
-	rel_co2cc = scenario.par('relation_activity', filters = {'relation':'CO2_cc'})
+	#rel_co2cc = scenario.par('relation_activity', filters = {'relation':'CO2_cc'})
+	#tecs_co2cc = rel_co2cc['technology'].unique()
+	rel_co2cc = scenario.par('relation_activity', filters={'relation': ['CO2_cc', 'CO2_ind', 'CO2_feedstocks']})
 	tecs_co2cc = rel_co2cc['technology'].unique()
+
 	
 	#data_relation = data_relation[data_relation["region"].isin(provinces)]
 	tightening_rates = data_relation[data_relation["variable"].str.contains("Tightening")]
@@ -63,9 +66,78 @@ def apply_obps(ctx):
 	tightening_rates_co2cc = pd.concat([
 		ontario_tightening_rates,
 		other_provinces_tightening_rates
-	], ignore_index=True)
+	], ignore_index=True)'''
 
-	tightening_rates_co2cc = tightening_rates_co2cc[tightening_rates_co2cc['technology'].isin(tecs_co2cc)]
+	# Read the required data
+	provinces = scenario.set('node')[2:]
+	#data_relation = pd.read_excel(data_file_path, sheet_name='New_OBPS_Stringent')
+	excel_sheet = ctx['policy_config']['obps_excel_sheet']
+	data_relation = pd.read_excel(data_file_path, sheet_name=excel_sheet)
+	data_relation["region"] = data_relation['region'].str.replace(" ", "")
+
+	# Create complete province x tech x variable x time grid with Canada fallback
+	# ===========================================================================
+	# 1. Get all unique combinations from Canada data
+	canada_values = data_relation[data_relation["region"] == "Canada"]
+	unique_combos = canada_values[['variable', 'technology', 'time']].drop_duplicates()
+
+	# 2. Create province grid with all possible combinations
+	province_grid = pd.DataFrame({
+		'region': provinces,
+		'key': 1
+	}).merge(
+		unique_combos.assign(key=1),
+		on='key'
+	).drop(columns='key')
+
+	# 3. Merge with existing data (province-specific values)
+	data_relation = pd.merge(
+		province_grid,
+		data_relation,
+		on=['region', 'variable', 'technology', 'time'],
+		how='left'
+	)
+
+	# 4. Add Canada values as fallback
+	data_relation = pd.merge(
+		data_relation,
+		canada_values,
+		on=['variable', 'technology', 'time'],
+		suffixes=('', '_CAN'),
+		how='left'
+	)
+
+	# 5. Coalesce values: province first, then Canada
+	data_relation['value'] = data_relation['value'].fillna(data_relation['value_CAN'])
+	data_relation = data_relation[['region', 'variable', 'technology', 'time', 'value', 'unit [tCO2/-]', 'comments']]
+
+	# Ontario Special Handling
+	# ========================
+	# Filter Ontario data to include only "Fixed Process"
+	ontario_mask = (
+		(data_relation['region'] == 'Ontario') & 
+		(data_relation['variable'].str.contains('Fixed Process'))
+	)
+
+	# Split into Ontario and other provinces
+	ontario_data = data_relation[ontario_mask]
+	other_provinces_data = data_relation[~data_relation['region'].isin(['Ontario'])]
+
+	# Combine with priority to Ontario's filtered data
+	data_relation = pd.concat([ontario_data, other_provinces_data], ignore_index=True)
+
+	# Rest of your original processing
+	# ================================
+	tightening_rates = data_relation[data_relation["variable"].str.contains("Tightening")]
+	standards = data_relation[data_relation["variable"].str.contains("Standard")]
+
+
+
+	rel_co2cc = scenario.par('relation_activity', filters={'relation': ['CO2_cc', 'CO2_ind', 'CO2_feedstocks']})
+	tecs_co2cc = rel_co2cc['technology'].unique()
+
+
+	tightening_rates_co2cc = tightening_rates[tightening_rates['technology'].isin(tecs_co2cc)]
 	tightening_rates_co2cc.drop(columns = ['variable','unit [tCO2/-]','comments'], inplace = True)
 	tightening_rates_co2cc.rename(columns= {'region':'node_rel','value':'rate','time':'year_act'}, inplace=	True)
 	
@@ -75,7 +147,7 @@ def apply_obps(ctx):
 	# Calculate Emission intensity standard
 	result['emis_standard'] = 0.0
 	for index, row in result.iterrows():
-		if row['year_act'] > 2020:
+		'''if row['year_act'] > 2020:
 			value_cal = result.loc[
 				(result['technology'] == row['technology']) & 
 				(result['year_act'] == 2015), 
@@ -96,13 +168,50 @@ def apply_obps(ctx):
 					(result['year_act'] == 2020), 
 					'value'
 				]
+				result.at[index, 'emis_standard'] = row['value'] - row['rate'] * value_cal.values[0]'''
+	
+	# Revised code section
+		if row['year_act'] > 2020:
+			value_cal = result.loc[
+				(result['technology'] == row['technology']) & 
+				(result['year_act'] == 2015), 
+				'value'
+			]
+			
+			if not value_cal.empty:
 				result.at[index, 'emis_standard'] = row['value'] - row['rate'] * value_cal.values[0]
-	# Calculate Payable emission intensity
+			
+			elif row['technology'] == 'oil_extr_7':
+				value_cal = result.loc[
+					(result['technology'] == row['technology']) & 
+					(result['year_act'] == 2030), 
+					'value'
+				]
+				# Add empty check here
+				if not value_cal.empty:
+					result.at[index, 'emis_standard'] = row['value'] - row['rate'] * value_cal.values[0]
+				else:
+					print(f"Missing 2030 data for {row['technology']}")
+					result.at[index, 'emis_standard'] = 0  # Or handle differently
+			
+			else:
+				value_cal = result.loc[
+					(result['technology'] == row['technology']) & 
+					(result['year_act'] == 2020), 
+					'value'
+				]
+				# Add empty check here
+				if not value_cal.empty:
+					result.at[index, 'emis_standard'] = row['value'] - row['rate'] * value_cal.values[0]
+				else:
+					print(f"Missing 2020 data for {row['technology']}")
+					result.at[index, 'emis_standard'] = 0  # Or handle differently
+
+# Calculate Payable emission intensity
 	result['payable_emis_intensity'] = 0.0
 	for index, row in result.iterrows():
 		if row['year_act'] > 2020:
 			result.loc[index, 'payable_emis_intensity'] = row['value'] - row['emis_standard']
-
    
 	# Calculate carbon cost
 	# rate = 0.73
