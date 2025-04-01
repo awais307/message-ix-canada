@@ -37,7 +37,7 @@ scenario_config:
     to_excell: False
     legacy_reporter: True
     new_reporter: False
-    IDEA_format: False
+    IDEA_format: True
 path_config:
   provincial_input_file: scenarios/baseline/model_default_v28.xlsx
   scenario_folder: scenarios/baseline

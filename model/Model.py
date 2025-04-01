@@ -524,6 +524,10 @@ class model_MSG:
 		self.ctx.source_scenario['scenario'].read_excel(
 			excel_path, add_units=True, commit_steps=False, init_items=True
 		)
+
+		# self.ctx.source_scenario['scenario'].read_excel(
+		# 	"model/scenarios/baseline/model_default_v32_override.xlsx", add_units=True, commit_steps=False, init_items=False
+		# )
 		
 		if self.ctx.policy_config['apply_renewable_potential']:
 			print('Model Logs: Applying renewable potential data\n')

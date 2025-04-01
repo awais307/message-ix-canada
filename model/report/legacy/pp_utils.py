@@ -70,7 +70,10 @@ def convert_format(input_file, output_file_name):
     df.rename(columns={'year':'time'}, inplace=True)
 
     # Save to CSV
-    df.to_csv(output_file_name)
+    #df.to_csv(output_file_name)
+    with pd.ExcelWriter(output_file_name, engine="xlsxwriter") as writer:
+        df.to_excel(writer, sheet_name="data", index=False)
+    
 
 def combineDict(*args):
     result = {}
