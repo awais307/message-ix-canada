@@ -470,7 +470,7 @@ class model_MSG:
 		val_name = str(path_name_no_ext) + "_Validation result.xlsx"
 		filename = os.path.join(pwd, val_name)
 		results_df = pd.DataFrame(results)
-		results_df.to_csv(filename, index=False)
+		results_df.to_excel(filename, index=False)
 		print(f"Values within acceptable deviation: {within_deviation_count}")
 		print(f"Values outside acceptable deviation: {outside_deviation_count}")
 
@@ -609,8 +609,9 @@ class model_MSG:
 				Reporting with LEGACY reporter. Process time: {round((end - start) / 60)} Min and {round((end - start) % 60)} Sec\
 				\n=================================================="
 				)
-				if os.path.exists(path_name):
-					self.validate_scenario(path_name)
+				if self.ctx.post_process_config['validation']:
+					if os.path.exists(path_name):
+						self.validate_scenario(path_name)
 				
 
 
