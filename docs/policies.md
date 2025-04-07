@@ -12,7 +12,7 @@ In Messageix-Canada, the OBPS framework is incorporated by first developing a pa
 
 ![](include/Payable_Emission_Intensity_Diagram.png)
 
-This payable emission intensity is then multiplied by the federal carbon price to create cost that is then applied to the mapped MESSAGEix-Canada technologies for each respective temporal period. Like the OBPS tightening rates, it is assumed that federal carbon price will continue to grow post 2035 at the same specified rate as before 2035, however this can be varried by users should one desire.
+This payable emission intensity is then multiplied by the federal carbon price to createa carbon cost that is then applied to the mapped MESSAGEix-Canada technologies for each respective temporal period. Like the OBPS tightening rates, it is assumed that federal carbon price will continue to grow post 2035 at the same specified rate as before 2035, however this can be varried by users should one desire.
 
 ![](include/Carbon_Cost_Diagram.png)
 
