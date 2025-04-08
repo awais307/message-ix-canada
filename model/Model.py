@@ -401,27 +401,43 @@ class model_MSG:
 		# Define acceptable deviation percentages
 		deviation_percentage = {
 			2020: 0.10,
+			2025: 0.20,
 			2030: 0.20,
-			2040: 0.20,
 			2050: 0.20
 		}
 
 		# Filter for specific years of interest
-		years_of_interest = [2020, 2030, 2040, 2050]
+		years_of_interest = [2020, 2025, 2030, 2050]
 
 		results = []
 
 		within_deviation_count = 0
 		outside_deviation_count = 0
 
+		# for year in years_of_interest:
+		# 	for region in data.region:
+		# 		for variable in data.variable:
+		# 			for scenario in data.scenario:
+		# 				if region in acceptable_ranges and variable in acceptable_ranges[region]:
+		# 					if year in acceptable_ranges[region][variable]:
+		# 						if scenario in acceptable_ranges[region][variable][year]:
+		# 							acceptable_range = acceptable_ranges[region][variable][year][scenario]
+		# 							lower_limit = acceptable_range['lower']
+		# 							lower_unit = acceptable_range['unit'] 
 		for year in years_of_interest:
 			for region in data.region:
 				for variable in data.variable:
 					for scenario in data.scenario:
 						if region in acceptable_ranges and variable in acceptable_ranges[region]:
 							if year in acceptable_ranges[region][variable]:
-								if scenario in acceptable_ranges[region][variable][year]:
-									acceptable_range = acceptable_ranges[region][variable][year][scenario]
+								matched_scenario = None
+								for src_scenario in acceptable_ranges[region][variable][year].keys():
+									if scenario.startswith(src_scenario):  
+										matched_scenario = src_scenario
+										break
+
+								if matched_scenario:
+									acceptable_range = acceptable_ranges[region][variable][year][matched_scenario]
 									lower_limit = acceptable_range['lower']
 									lower_unit = acceptable_range['unit'] 
 
