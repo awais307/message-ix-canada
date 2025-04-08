@@ -46,7 +46,10 @@ def convert_format(input_file, output_file_name):
     df = pd.read_excel(input_file)
 
     # Convert only the negative values in the columns from 2020 to 2060 to their absolute values
-    df.loc[:, 2020:2060] = df.loc[:, 2020:2060].abs()
+    # df.loc[:, 2020:2060] = df.loc[:, 2020:2060].abs()
+
+    for year in years:
+        df[year] = df[year].abs()
 
     # Drop rows where 'Region' is NaN
     df = df.dropna(subset=['Region'])
@@ -70,7 +73,10 @@ def convert_format(input_file, output_file_name):
     df.rename(columns={'year':'time'}, inplace=True)
 
     # Save to CSV
-    df.to_csv(output_file_name)
+    #df.to_csv(output_file_name)
+    with pd.ExcelWriter(output_file_name, engine="xlsxwriter") as writer:
+        df.to_excel(writer, sheet_name="data", index=False)
+    
 
 def combineDict(*args):
     result = {}

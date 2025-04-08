@@ -12,11 +12,11 @@ def process_gdp_population_data(
 		Process GDP and population data for the model.
 
 		Args:
-						path_to_pop (str or Path): Path to the CSV file containing raw population data.
-						path_to_gdp (str or Path): Path to the CSV file containing raw GDP data.
+			path_to_pop (str or Path): Path to the CSV file containing raw population data.
+			path_to_gdp (str or Path): Path to the CSV file containing raw GDP data.
 
 		Returns:
-						pd.DataFrame: DataFrame containing processed GDP, population, and GDP per capita data for each province.
+			pd.DataFrame: DataFrame containing processed GDP, population, and GDP per capita data for each province.
 		"""
 		# Resolve the full paths to the GDP and population data files
 		path_to_gdp = Path(path_to_gdp).resolve()
@@ -24,6 +24,11 @@ def process_gdp_population_data(
 
 		# Read the CSV files containing GDP and population data into DataFrames
 		ssp_gdp_df = pd.read_csv(path_to_gdp)
+		ssp_gdp_df.rename(columns={"node_loc": "Province","year_act":"Year","value":"GDP"}, inplace=True)
+		ssp_gdp_df = ssp_gdp_df[["Province", "Year", "GDP"]]
+		# Convert GDP figures to consistent units (billions to single units)
+		ssp_gdp_df['GDP'] = ssp_gdp_df['GDP'] * 1e9
+		ssp_gdp_df = ssp_gdp_df[ssp_gdp_df["Year"] != 2020]
 		ssp_pop_df = pd.read_csv(path_to_pop)
 
 		# Convert population figures to consistent units (thousands to single units)
@@ -96,7 +101,7 @@ def process_gdp_population_data(
 		return ssp_df  # Return the processed DataFrame
 
 def add_population_gdp_to_scenario(
-		model_obj, population_data: pd.DataFrame, gdp_data: pd.DataFrame
+		scenario, population_data: pd.DataFrame, gdp_data: pd.DataFrame
 	):
 		"""
 		Add processed population and GDP data to the scenario.

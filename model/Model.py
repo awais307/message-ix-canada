@@ -540,6 +540,10 @@ class model_MSG:
 		self.ctx.source_scenario['scenario'].read_excel(
 			excel_path, add_units=True, commit_steps=False, init_items=True
 		)
+
+		# self.ctx.source_scenario['scenario'].read_excel(
+		# 	"model/scenarios/baseline/model_default_v32_override.xlsx", add_units=True, commit_steps=False, init_items=False
+		# )
 		
 		if self.ctx.policy_config['apply_renewable_potential']:
 			print('Model Logs: Applying renewable potential data\n')
@@ -601,7 +605,7 @@ class model_MSG:
 
 
 			if self.ctx.post_process_config['new_reporter']:
-				timestamp = f'{str(datetime.now().strftime('%Y-%m-%d--%H-%M'))}'
+				timestamp = str(datetime.now().strftime('%Y-%m-%d--%H-%M'))
 				self.ctx.generate_report(
 					output_path=f"reporting_output/{caseName}_{timestamp}_new_reporter.csv",
 					min_year=2020,
@@ -616,7 +620,7 @@ class model_MSG:
 				\n=================================================="
 				)
 			elif self.ctx.post_process_config['legacy_reporter']:
-				timestamp = f'{str(datetime.now().strftime('%Y-%m-%d--%H-%M'))}'
+				timestamp = str(datetime.now().strftime('%Y-%m-%d--%H-%M'))
 				start = time.time()
 				df, path_name= report(mp=self.ctx.mp, scen=self.ctx.source_scenario['scenario'], out_dir="reporting_outputs", out_file_timestamp = timestamp, IDEA_format=self.ctx.post_process_config['IDEA_format'])
 				end = time.time()

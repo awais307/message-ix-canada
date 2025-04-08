@@ -25,6 +25,7 @@ def model_calibrate(msg, nodeNames, replace_negative=False):
         "heat_t_d": ["heat_i", "heat_rc"],
         "elec_t_d": ["sp_el_I", "sp_el_RC"],
         "loil_t_d": ["loil_trp", "loil_i", "loil_rc"],
+        "foil_t_d": ["foil_trp", "foil_i", "foil_rc"],
         "biomass_t_d": ["biomass_nc", "biomass_rc", "biomass_i"],
         "land_use_biomass": ["biomass_nc", "biomass_rc", "biomass_i"],
         "coal_t_d": ["coal_rc", "coal_i"],
