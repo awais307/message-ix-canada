@@ -16,6 +16,7 @@ from datetime import datetime
 import pyam
 import numpy as np
 
+
 from model.policies.hydrogen_shares import add_hydrogen_shares
 from model.utlities.pop_gdp import process_gdp_population_data, add_population_gdp_to_scenario
 from model.utlities.demands import adjust_demands
@@ -24,7 +25,7 @@ from model.utlities.historical_activity import balance_import_export, update_his
 from model.policies.OBPS import apply_obps
 from model.policies.demand_reduction import demand_reduction
 from model.policies.investment_tax_credit import add_investment_tax_credit
-from model.utlities.utils import (read_config_ctx, map_yv_ya_lt, config_validation, map_learning_rate)
+from model.utlities.utils import (read_config_ctx, map_yv_ya_lt, config_validation, map_learning_rate, copy_excel_sheet, copy_excel_file)
 from model.policies.apply_renewable_potential import apply_renewable_potential
 
 from message_ix_models.util import (
@@ -490,6 +491,15 @@ class model_MSG:
 		print(f"Values within acceptable deviation: {within_deviation_count}")
 		print(f"Values outside acceptable deviation: {outside_deviation_count}")
 
+	def read_config(self, excel_path):
+		new_excel_path = copy_excel_file(excel_path)
+		copy_excel_sheet(self.ctx['path']['provincial_input_file_override'], new_excel_path, sheets=self.ctx['platform']['provincial_input_file_sheets_overwrite'])
+		self.ctx['path']['provincial_input_file_override']
+		self.ctx.source_scenario['scenario'].read_excel(
+			new_excel_path, add_units=True, commit_steps=False, init_items=True
+		)
+		self.ctx.source_scenario['scenario'].check_out()
+
 	# Full scenario set-up
 	def setup_scenario(self) -> tuple:
 		"""
@@ -537,14 +547,24 @@ class model_MSG:
 		#TODO: Print statement
 
 		print('\nModel Logs: Setting up scenario\n')
-		self.ctx.source_scenario['scenario'].read_excel(
-			excel_path, add_units=True, commit_steps=False, init_items=True
-		)
+
+		self.read_config(excel_path)
+
+		# self.ctx.source_scenario['scenario'].read_excel(
+		# 	excel_path, add_units=True, commit_steps=False, init_items=True
+		# )
+		# self.ctx.source_scenario['scenario'].check_out()
+		
+		# print(self.ctx.source_scenario['scenario'].par_list())
+		# print(self.ctx.source_scenario['scenario'].par('tax_emission'))
+
 
 		# self.ctx.source_scenario['scenario'].read_excel(
 		# 	"model/scenarios/baseline/model_default_v32_override.xlsx", add_units=True, commit_steps=False, init_items=False
 		# )
-		
+		# print(self.ctx.source_scenario['scenario'].par_list())
+		# print(self.ctx.source_scenario['scenario'].par('tax_emission'))
+
 		if self.ctx.policy_config['apply_renewable_potential']:
 			print('Model Logs: Applying renewable potential data\n')
 			apply_renewable_potential(self)

@@ -3,18 +3,64 @@
 # --- This script contains all the auxiliary functions to the model ---#
 
 import os
+import shutil
 import sys
 import toml
 import message_ix
 import numpy as np
 import pandas as pd
 import yaml
-
+from openpyxl import load_workbook
 from typing import Optional, Tuple
 from math import prod
+from pathlib import Path
 
 #import models.data.report
 #from models.data.report.legacy import default_units as def_units
+
+def copy_excel_file(source_path):
+	excel_file_path = source_path.parts[:-1]
+	new_excel_file = Path(*excel_file_path)
+	new_excel_file = new_excel_file.joinpath("temp_input.xlsx")
+	shutil.copyfile(source_path, new_excel_file)
+	return new_excel_file
+
+def copy_excel_sheet(source_path, target_path, sheets):
+	"""
+	Copy a sheet from source Excel file and add it to target Excel file.
+
+	Parameters:
+	    source_path (str): Path to the source Excel file.
+	    target_path (str): Path to the target Excel file.
+	    sheets
+	"""
+	# Load workbooks
+	source_wb = load_workbook(source_path)
+	target_wb = load_workbook(target_path)
+	for sheet in sheets:
+		# Get source sheet
+		if sheet not in source_wb.sheetnames:
+			print(f"Sheet '{sheet}' not found in source file.")
+
+		source_sheet = source_wb[sheet]
+
+		# Determine new sheet name
+		new_sheet_name = sheet
+
+		if new_sheet_name in target_wb.sheetnames:
+			print(f"Sheet '{new_sheet_name}' already exists in target file.")
+
+		# Create a new sheet in the target workbook
+		target_sheet = target_wb.create_sheet(title=new_sheet_name)
+
+		# Copy contents
+		for row in source_sheet.iter_rows():
+			for cell in row:
+				target_sheet[cell.coordinate].value = cell.value
+
+	# Save the target workbook
+	target_wb.save(target_path)
+
 
 def read_config_ctx(ctx, config_file="ModelSetup_CA.yaml", dir_path="model/scenarios/baseline", verbose=False):
 	path = os.path.join(os.getcwd(), dir_path, config_file)
