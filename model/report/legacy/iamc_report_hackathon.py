@@ -46,6 +46,7 @@ def report(
     verbose=False,
     out_file_timestamp=None,
     IDEA_format=False,
+    ctx = None,
     *,
     context: Optional[Context] = None,
 ):
@@ -301,6 +302,8 @@ def report(
             return pd.DataFrame()
         #func_dict[run_tables[i]["function"]](**run_tables[i]["args"])
     
+    # pp_utils.tec_to_IDEA = ctx['tec_to_IDEA']
+    # pp_utils.carbon_cost = ctx['carbon_cost']
     dfs = {}
     for i in run_tables:
         if run_tables[i]["active"] is True:
@@ -452,7 +455,7 @@ def report(
     #        if df.iloc[index, col] < 0:
     #            df.iloc[index, col] = df.iloc[index, col] * -1
                 
-    path_name = pp_utils.write_xlsx(df, out_dir, out_file_timestamp, IDEA_format)
+    path_name = pp_utils.write_xlsx(scen, df, out_dir, out_file_timestamp, IDEA_format)
     
     # Return the reeport as a dataframe
     return df, path_name

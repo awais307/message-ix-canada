@@ -27,8 +27,8 @@ scenario_config:
     add_techs: False
     investment_tax_credit: False
     apply_renewable_potential: False
-    apply_obps: False
-    obps_excel_sheet: 'New_OBPS'
+    apply_obps: True
+    obps_excel_sheet: 'New_OBPS_Stringent'
     obps_policy_carbon_cost:
       2025: 165.4251
       2030: 285.2156 
@@ -37,7 +37,7 @@ scenario_config:
     to_excell: False
     legacy_reporter: True
     new_reporter: False
-    IDEA_format: False
+    IDEA_format: True
     validation: True
 path_config:
   provincial_input_file: scenarios/baseline/model_default_v32.xlsx
@@ -46,4 +46,5 @@ path_config:
   ITC_policy_input_data: ./data/assumptions_database_example(ITCs).csv
   OBPS_policy_input_data: ./data/New_OBPS.xlsx
   fix_cost_no_obps_input_data: ./data/fix_cost_no_obps.csv
+  var_cost_no_obps_input_data: ./data/var_cost_no_obps.csv
   obps_standart_merged_data_output: ./data/obps_standard.csv

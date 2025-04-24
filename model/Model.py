@@ -622,7 +622,7 @@ class model_MSG:
 			elif self.ctx.post_process_config['legacy_reporter']:
 				timestamp = str(datetime.now().strftime('%Y-%m-%d--%H-%M'))
 				start = time.time()
-				df, path_name= report(mp=self.ctx.mp, scen=self.ctx.source_scenario['scenario'], out_dir="reporting_outputs", out_file_timestamp = timestamp, IDEA_format=self.ctx.post_process_config['IDEA_format'])
+				df, path_name= report(mp=self.ctx.mp, scen=self.ctx.source_scenario['scenario'], out_dir="reporting_outputs", out_file_timestamp = timestamp, IDEA_format=self.ctx.post_process_config['IDEA_format'], ctx=self.ctx)
 				end = time.time()
 				print(
 					f"\n==================================================\n\

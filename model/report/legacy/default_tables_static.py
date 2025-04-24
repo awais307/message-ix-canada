@@ -1383,6 +1383,7 @@ def retr_demands_output(units):
 
 
 ###
+# include OBPS here?
 def retr_price(
     units_CPrc_co2,
     units_CPrc_co2_outp,
@@ -1422,6 +1423,33 @@ def retr_price(
     vars = {}
     vars["Carbon"] = pp.cprc(units_CPrc_co2)
     dfs.append(pp_utils.make_outputdf(vars, units_CPrc_co2_outp, param="max"))
+
+    # -------------------------------------------------
+    # Calculate Final Energy Prices incl. carbon prices
+    # -------------------------------------------------
+
+    # Carbon price must also be multiplied by factor as retrieved
+    # prices are already converted to $/GJ
+    
+    # vars = {}
+
+    # tec_to_IDEA = pp_utils.tec_to_IDEA
+    # carbon_cost = pp_utils.carbon_cost
+    # sorted_years = sorted(pp_utils.years)
+    # nodes = set(dfs[0]['Region'])
+    # columns = list(dfs[0].columns)
+    # new_df = {}
+
+    # for node in nodes:
+    #     for year in years:
+    #         for tec in tecs:
+    #             pass
+    # for tech, df in tec_to_IDEA.items():
+    #     vars[tech] = df
+    #     dfs.append(vars)
+
+    # vars["Carbon Cost"] = new_df
+    # dfs.append(pp_utils.make_outputdf(vars, units_CPrc_co2_outp, param="max"))
 
     # -------------------------------------------------
     # Calculate Final Energy Prices incl. carbon prices
