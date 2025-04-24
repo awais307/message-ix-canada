@@ -18,48 +18,40 @@ from pathlib import Path
 #import models.data.report
 #from models.data.report.legacy import default_units as def_units
 
-def copy_excel_file(source_path):
-	excel_file_path = source_path.parts[:-1]
-	new_excel_file = Path(*excel_file_path)
-	new_excel_file = new_excel_file.joinpath("temp_input.xlsx")
-	shutil.copyfile(source_path, new_excel_file)
-	return new_excel_file
+def copy_excel_file(source_path, new_path):
+	shutil.copyfile(source_path, new_path)
 
 def copy_excel_sheet(source_path, target_path, sheets):
-	"""
-	Copy a sheet from source Excel file and add it to target Excel file.
+    """
+    Replace specified sheets in the target Excel file with those from the source Excel file.
 
-	Parameters:
-	    source_path (str): Path to the source Excel file.
-	    target_path (str): Path to the target Excel file.
-	    sheets
-	"""
-	# Load workbooks
-	source_wb = load_workbook(source_path)
-	target_wb = load_workbook(target_path)
-	for sheet in sheets:
-		# Get source sheet
-		if sheet not in source_wb.sheetnames:
-			print(f"Sheet '{sheet}' not found in source file.")
+    Parameters:
+        source_path (str): Path to the source Excel file.
+        target_path (str): Path to the target Excel file.
+        sheets (list of str): Sheet names to copy.
+    """
+    source_wb = load_workbook(source_path, data_only=True)
+    target_wb = load_workbook(target_path)
 
-		source_sheet = source_wb[sheet]
+    for sheet_name in sheets:
+        if sheet_name not in source_wb.sheetnames:
+            print(f"❌ Sheet '{sheet_name}' not found in source file.")
+            continue
 
-		# Determine new sheet name
-		new_sheet_name = sheet
+        # Remove the sheet in target if it already exists
+        if sheet_name in target_wb.sheetnames:
+            std = target_wb[sheet_name]
+            target_wb.remove(std)
 
-		if new_sheet_name in target_wb.sheetnames:
-			print(f"Sheet '{new_sheet_name}' already exists in target file.")
+        # Create new sheet in target workbook
+        target_sheet = target_wb.create_sheet(title=sheet_name)
+        source_sheet = source_wb[sheet_name]
 
-		# Create a new sheet in the target workbook
-		target_sheet = target_wb.create_sheet(title=new_sheet_name)
+        for row in source_sheet.iter_rows():
+            for cell in row:
+                target_sheet[cell.coordinate].value = cell.value
 
-		# Copy contents
-		for row in source_sheet.iter_rows():
-			for cell in row:
-				target_sheet[cell.coordinate].value = cell.value
-
-	# Save the target workbook
-	target_wb.save(target_path)
+    target_wb.save(target_path)
 
 
 def read_config_ctx(ctx, config_file="ModelSetup_CA.yaml", dir_path="model/scenarios/baseline", verbose=False):

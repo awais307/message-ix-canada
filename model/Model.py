@@ -7,6 +7,7 @@
 import message_ix
 import ixmp
 import toml
+import shutil
 import yaml
 import os
 import time
@@ -492,13 +493,21 @@ class model_MSG:
 		print(f"Values outside acceptable deviation: {outside_deviation_count}")
 
 	def read_config(self, excel_path):
-		new_excel_path = copy_excel_file(excel_path)
+		
+		# excel_file_path = source_path.parts[:-1]
+		# new_excel_file = Path(*excel_file_path)
+		# new_excel_file = new_excel_file.joinpath("temp_input.xlsx")
+		new_excel_path = os.path.join(self.scenario_path,"temp_input.xlsx")
+		shutil.copyfile(excel_path, new_excel_path)
 		copy_excel_sheet(self.ctx['path']['provincial_input_file_override'], new_excel_path, sheets=self.ctx['platform']['provincial_input_file_sheets_overwrite'])
-		self.ctx['path']['provincial_input_file_override']
+		#self.ctx['path']['provincial_input_file_override']
+		#self.ctx.source_scenario['scenario'].check_out()
 		self.ctx.source_scenario['scenario'].read_excel(
 			new_excel_path, add_units=True, commit_steps=False, init_items=True
 		)
-		self.ctx.source_scenario['scenario'].check_out()
+
+		# self.ctx.source_scenario['scenario'].commit('read_config2')
+		# self.ctx.source_scenario['scenario'].check_out()
 
 	# Full scenario set-up
 	def setup_scenario(self) -> tuple:
