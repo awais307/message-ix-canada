@@ -46,6 +46,7 @@ def report(
     verbose=False,
     out_file_timestamp=None,
     IDEA_format=False,
+    ctx=None,
     *,
     context: Optional[Context] = None,
 ):
@@ -451,8 +452,8 @@ def report(
     #    for index in range(df.shape[0]):
     #        if df.iloc[index, col] < 0:
     #            df.iloc[index, col] = df.iloc[index, col] * -1
-                
-    path_name = pp_utils.write_xlsx(df, out_dir, out_file_timestamp, IDEA_format)
+           
+    path_name = pp_utils.write_xlsx(scen, df, out_dir, out_file_timestamp, IDEA_format)
     
     # Return the reeport as a dataframe
     return df, path_name

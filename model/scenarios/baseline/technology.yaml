@@ -169,7 +169,7 @@ h2_stor_geo:
   # Commodities: inputs and outputs 
     - input: 
       - com_name: 
-        - hydrogen
+        - hydrogenliq_h2
       - com_value: 
         - 1
       - com_level: 
@@ -479,7 +479,7 @@ h2_stor_geo_charge:
     - cost_value: 6.34
   var_cost_2020:
     - cost_level: primary
-    - cost_value: 0 # example value for now
+    - cost_value: 0 # example value for n
   # Emissions specifications
   emission_factor: 0
   emission_type: CO2_cc

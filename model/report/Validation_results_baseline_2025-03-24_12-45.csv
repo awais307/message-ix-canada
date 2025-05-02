@@ -1,0 +1,649 @@
+Year,Region,Variable,Scenario,Value,Deviation %,Unit,Source-value
+2025,Alberta,Carbon Sequestration|CCS,baseline,0.9894845749776959,86.6915995827957,Mt CO2/yr,7.4350376
+2025,Alberta,Final Energy,baseline,3363.982066446895,20.651280344722135,PJ/yr,4239.4913
+2025,Alberta,Final Energy|Electricity,baseline,301.8410220879832,0.10241761509491545,PJ/yr,301.5322
+2025,Alberta,Final Energy|Gases,baseline,1855.257033713204,24.53955028902009,PJ/yr,2458.582
+2025,Alberta,Final Energy|Hydrogen,baseline,5.822775915699433,87.00212305554629,PJ/yr,44.7979
+2025,Alberta,Final Energy|Industry,baseline,2571.396547002296,18.31985335918564,PJ/yr,3148.1292
+2025,Alberta,Final Energy|Industry|Electricity,baseline,195.7063726744376,0.5516404357734352,PJ/yr,194.6327
+2025,Alberta,Final Energy|Industry|Hydrogen,baseline,5.451534965852561,87.82596032636766,PJ/yr,44.78
+2025,Alberta,Final Energy|Liquids|Biomass,baseline,11.57031287663219,24.658193975171876,PJ/yr,15.3570952
+2025,Alberta,Final Energy|Liquids|Gas,baseline,0.0,100.0,PJ/yr,247.9231969
+2025,Alberta,Final Energy|Liquids|Oil,baseline,1059.489379760937,64.7804266046348,PJ/yr,642.9704071
+2025,Alberta,Final Energy|Residential and Commercial,baseline,393.4533799804005,35.1211918172769,PJ/yr,606.4436
+2025,Alberta,Final Energy|Residential and Commercial|Electricity,baseline,99.94188176727836,6.001546452101705,PJ/yr,106.3229
+2025,Alberta,Final Energy|Solids|Biomass,baseline,85.15417138916519,72.96130385685441,PJ/yr,49.2330767
+2025,Alberta,Final Energy|Solids|Coal,baseline,11.54211437500146,80.85551575341326,PJ/yr,6.3819532
+2025,Alberta,Final Energy|Transportation,baseline,399.1321394641982,17.69088218655337,PJ/yr,484.9185
+2025,Alberta,Resource|Extraction|Gas,baseline,2207.584929272761,40.83059844236315,PJ/yr,3730.957
+2025,Alberta,Resource|Extraction|Oil,baseline,4834.891208931253,57.6879899518306,PJ/yr,11426.75851
+2025,Alberta,Secondary Energy|Electricity,baseline,87.28285961103774,73.93150824816904,PJ/yr,334.8212871
+2025,Alberta,Secondary Energy|Gases|Natural Gas,baseline,2100.092953937094,55.07926005842838,PJ/yr,4675.10766
+2025,Alberta,Secondary Energy|Hydrogen,baseline,6.632792971397,79.81769644545838,PJ/yr,32.86440001
+2025,Alberta,Secondary Energy|Liquids|Biomass,baseline,11.68718472270218,91.2067338717927,PJ/yr,132.9106222
+2025,Alberta,Secondary Energy|Liquids|Oil,baseline,0.0,100.0,PJ/yr,10287.85915
+2025,Alberta,Secondary Energy|Solids|Coal,baseline,11.54211437500146,95.79446928761799,PJ/yr,274.4508402
+2025,BritishColumbia,Carbon Sequestration|CCS,baseline,0.9893650424132168,1344145.9815396967,Mt CO2/yr,7.36e-05
+2025,BritishColumbia,Final Energy,baseline,1002.994761662048,26.08919984677998,PJ/yr,1357.0341
+2025,BritishColumbia,Final Energy|Electricity,baseline,210.2749030989565,15.924240779268398,PJ/yr,250.1017
+2025,BritishColumbia,Final Energy|Gases,baseline,140.5172874370821,64.61020036798797,PJ/yr,397.0559
+2025,BritishColumbia,Final Energy|Hydrogen,baseline,10.44373884405854,33808.243000190065,PJ/yr,0.0308
+2025,BritishColumbia,Final Energy|Industry,baseline,391.2995054656351,41.56054226962308,PJ/yr,669.581
+2025,BritishColumbia,Final Energy|Industry|Electricity,baseline,79.8258214153429,24.735011116057375,PJ/yr,106.0597
+2025,BritishColumbia,Final Energy|Industry|Hydrogen,baseline,3.390193178096821,14265.225330918733,PJ/yr,0.0236
+2025,BritishColumbia,Final Energy|Liquids|Biomass,baseline,14.7417443669357,71.93029158907125,PJ/yr,52.5183381
+2025,BritishColumbia,Final Energy|Liquids|Gas,baseline,0.0,100.0,PJ/yr,1.5014828
+2025,BritishColumbia,Final Energy|Liquids|Oil,baseline,397.1316576306014,2.2221045918315308,PJ/yr,406.1568885
+2025,BritishColumbia,Final Energy|Residential and Commercial,baseline,279.8274225004062,9.205014162887306,PJ/yr,308.197
+2025,BritishColumbia,Final Energy|Residential and Commercial|Electricity,baseline,123.6571452368019,11.488668672663064,PJ/yr,139.7077
+2025,BritishColumbia,Final Energy|Solids|Biomass,baseline,198.9237776076044,154.2373502808923,PJ/yr,78.2433334
+2025,BritishColumbia,Final Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,7.4520929
+2025,BritishColumbia,Final Energy|Transportation,baseline,331.8678336960071,12.495057114175069,PJ/yr,379.2561
+2025,BritishColumbia,Resource|Extraction|Gas,baseline,171.4233015546339,93.4465515806656,PJ/yr,2615.7725
+2025,BritishColumbia,Resource|Extraction|Oil,baseline,0.0,100.0,PJ/yr,450.1962814
+2025,BritishColumbia,Secondary Energy|Electricity,baseline,269.8846714066091,3.5135459076572784,PJ/yr,260.7240135
+2025,BritishColumbia,Secondary Energy|Gases|Natural Gas,baseline,168.186536288827,94.93464464696518,PJ/yr,3320.330452
+2025,BritishColumbia,Secondary Energy|Hydrogen,baseline,11.831114678597,38262.88681896282,PJ/yr,0.030840001
+2025,BritishColumbia,Secondary Energy|Liquids|Biomass,baseline,14.89065087420356,97.32792772834907,PJ/yr,557.2697652
+2025,BritishColumbia,Secondary Energy|Liquids|Oil,baseline,0.0,100.0,PJ/yr,19.8887121
+2025,BritishColumbia,Secondary Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,906.3455856
+2025,Canada,Carbon Sequestration|CCS,baseline,0.0,100.0,Mt CO2/yr,8.8474684
+2025,Canada,Emissions|CO2,baseline,0.0,100.0,Mt CO2/yr,653.6296093
+2025,Canada,Final Energy,baseline,0.0,100.0,PJ/yr,12117.853
+2025,Canada,Final Energy|Electricity,baseline,0.0,100.0,PJ/yr,2226.7285
+2025,Canada,Final Energy|Gases,baseline,0.0,100.0,PJ/yr,4418.5677
+2025,Canada,Final Energy|Hydrogen,baseline,0.0,100.0,PJ/yr,45.9571
+2025,Canada,Final Energy|Industry,baseline,0.0,100.0,PJ/yr,6391.1421
+2025,Canada,Final Energy|Industry|Electricity,baseline,0.0,100.0,PJ/yr,930.5838
+2025,Canada,Final Energy|Industry|Hydrogen,baseline,0.0,100.0,PJ/yr,45.8929
+2025,Canada,Final Energy|Liquids|Biomass,baseline,0.0,100.0,PJ/yr,187.8495031
+2025,Canada,Final Energy|Liquids|Gas,baseline,0.0,100.0,PJ/yr,454.6305509
+2025,Canada,Final Energy|Liquids|Oil,baseline,0.0,100.0,PJ/yr,3394.111115
+2025,Canada,Final Energy|Residential and Commercial,baseline,0.0,100.0,PJ/yr,3026.7965
+2025,Canada,Final Energy|Residential and Commercial|Electricity,baseline,0.0,100.0,PJ/yr,1279.6085
+2025,Canada,Final Energy|Solids|Biomass,baseline,0.0,100.0,PJ/yr,460.3473634
+2025,Canada,Final Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,206.8386492
+2025,Canada,Final Energy|Transportation,baseline,0.0,100.0,PJ/yr,2699.914
+2025,Canada,Resource|Extraction|Gas,baseline,0.0,100.0,PJ/yr,6481.013
+2025,Canada,Resource|Extraction|Oil,baseline,0.0,100.0,PJ/yr,13776.67882
+2025,Canada,Secondary Energy|Electricity,baseline,0.0,100.0,PJ/yr,2430.37552
+2025,Canada,Secondary Energy|Gases|Natural Gas,baseline,0.0,100.0,PJ/yr,8206.274239
+2025,Canada,Secondary Energy|Hydrogen,baseline,0.0,100.0,PJ/yr,33.68484
+2025,Canada,Secondary Energy|Liquids|Biomass,baseline,0.0,100.0,PJ/yr,1226.872771
+2025,Canada,Secondary Energy|Liquids|Oil,baseline,0.0,100.0,PJ/yr,12285.76161
+2025,Canada,Secondary Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,1193.308615
+2025,Manitoba,Carbon Sequestration|CCS,baseline,0.932658583793795,100.0,Mt CO2/yr,0.0
+2025,Manitoba,Final Energy,baseline,267.1305140851085,20.679708800663803,PJ/yr,336.7745
+2025,Manitoba,Final Energy|Electricity,baseline,89.81115472020979,2.8914340576576243,PJ/yr,87.2873
+2025,Manitoba,Final Energy|Gases,baseline,68.18229527183779,25.538354132124248,PJ/yr,91.567
+2025,Manitoba,Final Energy|Hydrogen,baseline,0.0,100.0,PJ/yr,0.0048
+2025,Manitoba,Final Energy|Industry,baseline,104.2626833719391,9.431932915737988,PJ/yr,115.1208
+2025,Manitoba,Final Energy|Industry|Electricity,baseline,26.31153906305266,8.113321539436496,PJ/yr,24.337
+2025,Manitoba,Final Energy|Industry|Hydrogen,baseline,0.0,100.0,PJ/yr,0.0028
+2025,Manitoba,Final Energy|Liquids|Biomass,baseline,7.368187714008866,1.2721482890077027,PJ/yr,7.2756309
+2025,Manitoba,Final Energy|Liquids|Gas,baseline,0.0,100.0,PJ/yr,1.5563477
+2025,Manitoba,Final Energy|Liquids|Oil,baseline,68.4165177227774,43.06712119525869,PJ/yr,120.170487
+2025,Manitoba,Final Energy|Residential and Commercial,baseline,96.102477334647,19.28183910484354,PJ/yr,119.0593
+2025,Manitoba,Final Energy|Residential and Commercial|Electricity,baseline,57.95737415107777,7.732638349877618,PJ/yr,62.8146
+2025,Manitoba,Final Energy|Solids|Biomass,baseline,7.215568516629408,19.83430714986599,PJ/yr,6.0212878
+2025,Manitoba,Final Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,0.7117106
+2025,Manitoba,Final Energy|Transportation,baseline,66.7653533785224,34.923004200499825,PJ/yr,102.5944
+2025,Manitoba,Resource|Extraction|Oil,baseline,51.91252423957094,30.771209513359015,PJ/yr,74.9869005
+2025,Manitoba,Secondary Energy|Electricity,baseline,112.8933381371063,0.3668022989794913,PJ/yr,113.308958
+2025,Manitoba,Secondary Energy|Gases|Natural Gas,baseline,93.50736173824573,100.0,PJ/yr,0.0
+2025,Manitoba,Secondary Energy|Hydrogen,baseline,6.632792971397,138094.64554346382,PJ/yr,0.004799602
+2025,Manitoba,Secondary Energy|Liquids|Biomass,baseline,7.442613851789947,42.763075057029205,PJ/yr,13.0031686
+2025,Manitoba,Secondary Energy|Liquids|Oil,baseline,42.67872902229816,54.828114122714844,PJ/yr,94.4807333
+2025,NewBrunswick,Final Energy,baseline,191.947885577942,14.186772422359525,PJ/yr,223.681
+2025,NewBrunswick,Final Energy|Electricity,baseline,55.35303455989109,0.28468520287030546,PJ/yr,55.1959
+2025,NewBrunswick,Final Energy|Gases,baseline,0.2464441448009941,99.24734711483538,PJ/yr,32.7434
+2025,NewBrunswick,Final Energy|Hydrogen,baseline,0.0,100.0,PJ/yr,0.0043
+2025,NewBrunswick,Final Energy|Industry,baseline,88.13938750052736,28.359027076861075,PJ/yr,123.0293
+2025,NewBrunswick,Final Energy|Industry|Electricity,baseline,17.83066751136791,8.26571843122291,PJ/yr,19.4373
+2025,NewBrunswick,Final Energy|Industry|Hydrogen,baseline,0.0,100.0,PJ/yr,0.0043
+2025,NewBrunswick,Final Energy|Residential and Commercial,baseline,62.29450933074856,15.349949135537134,PJ/yr,54.0048
+2025,NewBrunswick,Final Energy|Residential and Commercial|Electricity,baseline,31.98012554244382,10.426590867234637,PJ/yr,35.7027
+2025,NewBrunswick,Final Energy|Transportation,baseline,41.51398874666608,11.003756419684743,PJ/yr,46.6469
+2025,NewBrunswick,Resource|Extraction|Gas,baseline,0.0,100.0,PJ/yr,1.2045
+2025,NewBrunswick,Secondary Energy|Electricity,baseline,25.85974758935921,40.19584562080756,PJ/yr,43.24072108
+2025,NewBrunswick,Secondary Energy|Hydrogen,baseline,10.87179492489362,258555.06642063888,PJ/yr,0.004203202
+2025,NewfoundlandandLabrador,Final Energy,baseline,122.9222837013374,25.704944529764074,PJ/yr,165.4515
+2025,NewfoundlandandLabrador,Final Energy|Electricity,baseline,48.36926971722333,9.267846298060014,PJ/yr,44.2667
+2025,NewfoundlandandLabrador,Final Energy|Gases,baseline,24.91422234229605,14.599257334517226,PJ/yr,21.7403
+2025,NewfoundlandandLabrador,Final Energy|Hydrogen,baseline,0.9882643440766583,9782.643440766584,PJ/yr,0.01
+2025,NewfoundlandandLabrador,Final Energy|Industry,baseline,65.4345490778969,7.3141396269353915,PJ/yr,70.5982
+2025,NewfoundlandandLabrador,Final Energy|Industry|Electricity,baseline,14.22740321663389,21.782759287538532,PJ/yr,18.1896
+2025,NewfoundlandandLabrador,Final Energy|Industry|Hydrogen,baseline,0.9878946988094413,9778.946988094413,PJ/yr,0.01
+2025,NewfoundlandandLabrador,Final Energy|Residential and Commercial,baseline,32.87079872262996,18.598353872786817,PJ/yr,40.381
+2025,NewfoundlandandLabrador,Final Energy|Residential and Commercial|Electricity,baseline,28.59962499451008,9.83001084685456,PJ/yr,26.0399
+2025,NewfoundlandandLabrador,Final Energy|Transportation,baseline,24.61693590081058,54.80834130225715,PJ/yr,54.4723
+2025,NewfoundlandandLabrador,Resource|Extraction|Oil,baseline,348.3108974967936,41.299598494367764,PJ/yr,593.3705538
+2025,NewfoundlandandLabrador,Secondary Energy|Electricity,baseline,162.1868214220126,0.21139452938176004,PJ/yr,162.5304018
+2025,NewfoundlandandLabrador,Secondary Energy|Hydrogen,baseline,6.632792971397,149371.32353736405,PJ/yr,0.004437502
+2025,NorthwestTerritories,Final Energy,baseline,25.02448892537265,31.653096477636417,PJ/yr,19.0079
+2025,NorthwestTerritories,Final Energy|Electricity,baseline,6.220905054914287,447.51848749465637,PJ/yr,1.1362
+2025,NorthwestTerritories,Final Energy|Gases,baseline,3.516028154175445,10.195439462212793,PJ/yr,3.9152
+2025,NorthwestTerritories,Final Energy|Hydrogen,baseline,0.6159332646135587,205211.0882045196,PJ/yr,0.0003
+2025,NorthwestTerritories,Final Energy|Industry,baseline,8.347517978000807,3.7152013170256146,PJ/yr,8.0485
+2025,NorthwestTerritories,Final Energy|Industry|Electricity,baseline,0.5532288377915712,1775.3519925138007,PJ/yr,0.0295
+2025,NorthwestTerritories,Final Energy|Industry|Hydrogen,baseline,0.2758736143745041,91857.87145816803,PJ/yr,0.0003
+2025,NorthwestTerritories,Final Energy|Residential and Commercial,baseline,14.98077132900669,302.63314239274035,PJ/yr,3.7207
+2025,NorthwestTerritories,Final Energy|Residential and Commercial|Electricity,baseline,5.017079103229231,354.40441112482847,PJ/yr,1.1041
+2025,NorthwestTerritories,Final Energy|Transportation,baseline,1.696199618365157,76.56762100425273,PJ/yr,7.2387
+2025,NorthwestTerritories,Resource|Extraction|Gas,baseline,0.0,100.0,PJ/yr,1.898
+2025,NorthwestTerritories,Resource|Extraction|Oil,baseline,0.0,100.0,PJ/yr,16.59550588
+2025,NorthwestTerritories,Secondary Energy|Electricity,baseline,1.904970728305152,55.483977021422646,PJ/yr,1.225187807
+2025,NorthwestTerritories,Secondary Energy|Hydrogen,baseline,6.632792971397,1842496.0417248663,PJ/yr,0.00035997
+2025,NovaScotia,Final Energy,baseline,138.632703847901,19.024656112429284,PJ/yr,171.2036
+2025,NovaScotia,Final Energy|Electricity,baseline,47.17875687827695,11.212948183199645,PJ/yr,42.422
+2025,NovaScotia,Final Energy|Gases,baseline,8.185125441933392,34.184654509440826,PJ/yr,12.4365
+2025,NovaScotia,Final Energy|Hydrogen,baseline,0.0,100.0,PJ/yr,0.0075
+2025,NovaScotia,Final Energy|Industry,baseline,34.57593026844992,5.694447387896366,PJ/yr,32.7131
+2025,NovaScotia,Final Energy|Industry|Electricity,baseline,9.755243586497093,17.00161419212844,PJ/yr,8.3377
+2025,NovaScotia,Final Energy|Industry|Hydrogen,baseline,0.0,100.0,PJ/yr,0.0075
+2025,NovaScotia,Final Energy|Residential and Commercial,baseline,67.21961554111655,5.975242419204891,PJ/yr,71.4914
+2025,NovaScotia,Final Energy|Residential and Commercial|Electricity,baseline,31.8812717857005,6.29494228698088,PJ/yr,34.023
+2025,NovaScotia,Final Energy|Transportation,baseline,36.83715803833451,45.01842854854094,PJ/yr,66.9991
+2025,NovaScotia,Secondary Energy|Electricity,baseline,17.53522751553815,37.66511339883281,PJ/yr,28.13068006
+2025,NovaScotia,Secondary Energy|Hydrogen,baseline,6.632792971397,122658.95853543788,PJ/yr,0.005403103
+2025,Nunavut,Final Energy,baseline,8.911076186821296,37.17578526841175,PJ/yr,6.4961
+2025,Nunavut,Final Energy|Electricity,baseline,4.005767226200313,313.2639251212538,PJ/yr,0.9693
+2025,Nunavut,Final Energy|Gases,baseline,1.955279285228571e-05,100.0,PJ/yr,0.0
+2025,Nunavut,Final Energy|Industry,baseline,2.701441454918438,7.695800307703637,PJ/yr,2.5084
+2025,Nunavut,Final Energy|Industry|Electricity,baseline,0.4931358374154913,75.8687009327715,PJ/yr,0.2804
+2025,Nunavut,Final Energy|Residential and Commercial,baseline,5.603837824259631,671.4534449696628,PJ/yr,0.7264
+2025,Nunavut,Final Energy|Residential and Commercial|Electricity,baseline,3.280275276680006,377.6868030697548,PJ/yr,0.6867
+2025,Nunavut,Final Energy|Transportation,baseline,0.6057969076432275,81.42468010783345,PJ/yr,3.2613
+2025,Nunavut,Secondary Energy|Electricity,baseline,1.244279973977992,20.14549392687553,PJ/yr,1.035644312
+2025,Nunavut,Secondary Energy|Hydrogen,baseline,2.970232533828328,100.0,PJ/yr,0.0
+2025,Ontario,Carbon Sequestration|CCS,baseline,0.9894846311490759,100.0,Mt CO2/yr,0.0
+2025,Ontario,Final Energy,baseline,2872.151779408718,3.124021803879148,PJ/yr,2964.7719
+2025,Ontario,Final Energy|Electricity,baseline,516.710018831719,7.9092729069737615,PJ/yr,561.088
+2025,Ontario,Final Energy|Gases,baseline,908.8112767697622,7.937830667712413,PJ/yr,841.9766
+2025,Ontario,Final Energy|Hydrogen,baseline,0.0,100.0,PJ/yr,0.0659
+2025,Ontario,Final Energy|Industry,baseline,825.9681555708858,19.98941460111095,PJ/yr,1032.3236
+2025,Ontario,Final Energy|Industry|Electricity,baseline,164.3220567084328,3.345905528504539,PJ/yr,159.002
+2025,Ontario,Final Energy|Industry|Hydrogen,baseline,0.0,100.0,PJ/yr,0.0352
+2025,Ontario,Final Energy|Liquids|Biomass,baseline,8.907173849056063,86.86843870535625,PJ/yr,67.8302728
+2025,Ontario,Final Energy|Liquids|Gas,baseline,0.0,100.0,PJ/yr,121.3816013
+2025,Ontario,Final Energy|Liquids|Oil,baseline,1238.429482005434,20.578967433297223,PJ/yr,1027.069238
+2025,Ontario,Final Energy|Residential and Commercial,baseline,1147.365745186131,9.229454789958472,PJ/yr,1050.4179
+2025,Ontario,Final Energy|Residential and Commercial|Electricity,baseline,344.226496943241,13.432693581802205,PJ/yr,397.6403
+2025,Ontario,Final Energy|Solids|Biomass,baseline,146.1713238693573,24.103165453423507,PJ/yr,117.7821076
+2025,Ontario,Final Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,134.7912332
+2025,Ontario,Final Energy|Transportation,baseline,898.8178786517018,1.9032766502947975,PJ/yr,882.0304
+2025,Ontario,Resource|Extraction|Gas,baseline,0.0,100.0,PJ/yr,1.314
+2025,Ontario,Resource|Extraction|Oil,baseline,0.0,100.0,PJ/yr,2.010062811
+2025,Ontario,Secondary Energy|Electricity,baseline,287.9669693868231,46.098716813857806,PJ/yr,534.24882
+2025,Ontario,Secondary Energy|Gases|Natural Gas,baseline,1036.269256244468,3426.264539865101,PJ/yr,29.3871672
+2025,Ontario,Secondary Energy|Hydrogen,baseline,6.632792971397,9752.628817631448,PJ/yr,0.067320033
+2025,Ontario,Secondary Energy|Liquids|Biomass,baseline,8.997145301177119,93.37768345590003,PJ/yr,135.8609973
+2025,Ontario,Secondary Energy|Liquids|Oil,baseline,866.1768983707418,100.0,PJ/yr,0.0
+2025,PrinceEdwardIsland,Final Energy,baseline,17.36171269576646,34.705611169028614,PJ/yr,26.5899
+2025,PrinceEdwardIsland,Final Energy|Electricity,baseline,10.09548817113718,49.41890285113861,PJ/yr,6.7565
+2025,PrinceEdwardIsland,Final Energy|Gases,baseline,4.443535831049982e-05,99.99666175656897,PJ/yr,1.3311
+2025,PrinceEdwardIsland,Final Energy|Hydrogen,baseline,0.0,100.0,PJ/yr,0.0005
+2025,PrinceEdwardIsland,Final Energy|Industry,baseline,5.715964491079388,5.149685693055634,PJ/yr,6.0263
+2025,PrinceEdwardIsland,Final Energy|Industry|Electricity,baseline,2.827556920542433,7.609869102695719,PJ/yr,2.6276
+2025,PrinceEdwardIsland,Final Energy|Industry|Hydrogen,baseline,0.0,100.0,PJ/yr,0.0005
+2025,PrinceEdwardIsland,Final Energy|Residential and Commercial,baseline,7.643036417940184,18.49514345191434,PJ/yr,9.3774
+2025,PrinceEdwardIsland,Final Energy|Residential and Commercial|Electricity,baseline,5.73438091070296,39.282041016806986,PJ/yr,4.1171
+2025,PrinceEdwardIsland,Final Energy|Transportation,baseline,4.00271178674689,64.21741264462561,PJ/yr,11.1862
+2025,PrinceEdwardIsland,Secondary Energy|Electricity,baseline,7.953885386068677,76.90209529674459,PJ/yr,4.496207562
+2025,PrinceEdwardIsland,Secondary Energy|Hydrogen,baseline,3.764678878659494,784273.464176076,PJ/yr,0.00047996
+2025,Quebec,Carbon Sequestration|CCS,baseline,0.9894365358120996,100.0,Mt CO2/yr,0.0
+2025,Quebec,Final Energy,baseline,1671.205253449752,10.889622200819353,PJ/yr,1875.4328
+2025,Quebec,Final Energy|Electricity,baseline,652.5432946085599,15.941703531752294,PJ/yr,776.2985
+2025,Quebec,Final Energy|Gases,baseline,244.5825642914431,11.281329925547714,PJ/yr,219.7876
+2025,Quebec,Final Energy|Hydrogen,baseline,0.0,100.0,PJ/yr,1.0116
+2025,Quebec,Final Energy|Industry,baseline,589.3920156668877,21.73663427555774,PJ/yr,753.088
+2025,Quebec,Final Energy|Industry|Electricity,baseline,314.8058281351737,8.393686807895188,PJ/yr,343.6508
+2025,Quebec,Final Energy|Industry|Hydrogen,baseline,0.0,100.0,PJ/yr,1.0092
+2025,Quebec,Final Energy|Liquids|Biomass,baseline,23.82654161602027,36.37309643387038,PJ/yr,37.4472751
+2025,Quebec,Final Energy|Liquids|Gas,baseline,0.0,100.0,PJ/yr,55.1748545
+2025,Quebec,Final Energy|Liquids|Oil,baseline,587.6166012566733,4.731520626934638,PJ/yr,616.8006513
+2025,Quebec,Final Energy|Residential and Commercial,baseline,565.8702397082708,7.803451237571048,PJ/yr,613.7651
+2025,Quebec,Final Energy|Residential and Commercial|Electricity,baseline,329.1651426841684,22.70965109663927,PJ/yr,425.8813
+2025,Quebec,Final Energy|Solids|Biomass,baseline,129.904907215303,11.52966972358907,PJ/yr,146.8344323
+2025,Quebec,Final Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,30.9377403
+2025,Quebec,Final Energy|Transportation,baseline,515.9429980745933,1.447815961705379,PJ/yr,508.5797
+2025,Quebec,Secondary Energy|Electricity,baseline,1023.139428531427,20.634326602316214,PJ/yr,848.1329132
+2025,Quebec,Secondary Energy|Gases|Natural Gas,baseline,284.9868300180597,5084.582203203968,PJ/yr,5.4968138
+2025,Quebec,Secondary Energy|Hydrogen,baseline,6.632792971397,876.7322181788302,PJ/yr,0.679079982
+2025,Quebec,Secondary Energy|Liquids|Biomass,baseline,24.06721375114912,91.30935270753993,PJ/yr,276.9323497
+2025,Quebec,Secondary Energy|Liquids|Oil,baseline,501.034245716556,100.0,PJ/yr,0.0
+2025,Saskatchewan,Carbon Sequestration|CCS,baseline,1.281736629040235,9.248409039849479,Mt CO2/yr,1.4123572
+2025,Saskatchewan,Final Energy,baseline,548.7166570212681,23.6371046689242,PJ/yr,718.5645
+2025,Saskatchewan,Final Energy|Electricity,baseline,90.0336106943704,7.287174061663563,PJ/yr,97.1102
+2025,Saskatchewan,Final Energy|Gases,baseline,249.7030609425556,25.9547155199755,PJ/yr,337.2302
+2025,Saskatchewan,Final Energy|Hydrogen,baseline,0.0,100.0,PJ/yr,0.0235
+2025,Saskatchewan,Final Energy|Industry,baseline,307.0013134014681,27.65843773492513,PJ/yr,424.3775
+2025,Saskatchewan,Final Energy|Industry|Electricity,baseline,44.82023822249138,15.842075691987045,PJ/yr,53.2573
+2025,Saskatchewan,Final Energy|Industry|Hydrogen,baseline,0.0,100.0,PJ/yr,0.0195
+2025,Saskatchewan,Final Energy|Liquids|Biomass,baseline,8.907173849056063,20.028361136904756,PJ/yr,7.420891
+2025,Saskatchewan,Final Energy|Liquids|Gas,baseline,0.0,100.0,PJ/yr,9.105097
+2025,Saskatchewan,Final Energy|Liquids|Oil,baseline,168.5850924466548,28.10152024518986,PJ/yr,234.4765745
+2025,Saskatchewan,Final Energy|Residential and Commercial,baseline,131.7293692326374,10.38227064463614,PJ/yr,146.9903
+2025,Saskatchewan,Final Energy|Residential and Commercial|Electricity,baseline,39.67113096579966,9.337220807281009,PJ/yr,43.7568
+2025,Saskatchewan,Final Energy|Solids|Biomass,baseline,4.536642494870963,1.4351464162122705,PJ/yr,4.4724562
+2025,Saskatchewan,Final Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,11.8473648
+2025,Saskatchewan,Final Energy|Transportation,baseline,109.9859743871626,25.279592282189338,PJ/yr,147.1967
+2025,Saskatchewan,Resource|Extraction|Gas,baseline,0.0,100.0,PJ/yr,129.9035
+2025,Saskatchewan,Resource|Extraction|Oil,baseline,564.2041622273841,53.47771243457946,PJ/yr,1212.761005
+2025,Saskatchewan,Secondary Energy|Electricity,baseline,60.13178784063739,37.213482430753785,PJ/yr,95.77181562
+2025,Saskatchewan,Secondary Energy|Gases|Natural Gas,baseline,304.6492207983841,73.14322533198366,PJ/yr,175.9521461
+2025,Saskatchewan,Secondary Energy|Hydrogen,baseline,6.632792971397,28100.68755786626,PJ/yr,0.023519969
+2025,Saskatchewan,Secondary Energy|Liquids|Biomass,baseline,8.997145301177119,61.895354427209234,PJ/yr,23.6116756
+2025,Saskatchewan,Secondary Energy|Liquids|Oil,baseline,0.0,100.0,PJ/yr,1250.158734
+2025,Saskatchewan,Secondary Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,12.5121888
+2025,Yukon,Final Energy,baseline,7.122927150385108,46.66032282415543,PJ/yr,13.3539
+2025,Yukon,Final Energy|Electricity,baseline,2.043570180145224,20.29757487733136,PJ/yr,2.564
+2025,Yukon,Final Energy|Gases,baseline,0.2375482407760178,17.656384733044973,PJ/yr,0.2019
+2025,Yukon,Final Energy|Industry,baseline,4.493439228169562,19.73421406577897,PJ/yr,5.5982
+2025,Yukon,Final Energy|Industry|Electricity,baseline,0.03646470106757754,95.0869440760472,PJ/yr,0.7422
+2025,Yukon,Final Energy|Residential and Commercial,baseline,2.02370234422799,8.907888718581663,PJ/yr,2.2216
+2025,Yukon,Final Energy|Residential and Commercial|Electricity,baseline,1.77474936697283,2.023331844273483,PJ/yr,1.8114
+2025,Yukon,Final Energy|Transportation,baseline,0.6057855779875561,89.05358453971637,PJ/yr,5.5341
+2025,Yukon,Secondary Energy|Electricity,baseline,0.0748131592148088,97.23821571408514,PJ/yr,2.708870479
+2025,Yukon,Secondary Energy|Hydrogen,baseline,4.220699960122861,100.0,PJ/yr,0.0
+2030,Alberta,Carbon Sequestration|CCS,baseline,1.153287254856034,92.3215937760771,Mt CO2/yr,15.0198781
+2030,Alberta,Final Energy|Gases,baseline,1833.881449362383,21.77553170857707,PJ/yr,2344.3834
+2030,Alberta,Final Energy|Hydrogen,baseline,28.23111268676648,55.69720762680021,PJ/yr,63.7231
+2030,Alberta,Final Energy|Industry|Hydrogen,baseline,28.18092300608573,55.76354362581747,PJ/yr,63.7052
+2030,Alberta,Final Energy|Liquids|Gas,baseline,0.0,100.0,PJ/yr,279.5851319
+2030,Alberta,Final Energy|Liquids|Oil,baseline,1408.644785904251,122.28785965225914,PJ/yr,633.7029778
+2030,Alberta,Final Energy|Solids|Biomass,baseline,118.3484374347932,135.0432674487199,PJ/yr,50.3517666
+2030,Alberta,Final Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,4.4166912
+2030,Alberta,Final Energy|Transportation,baseline,393.5743333508275,22.72549911650254,PJ/yr,509.3198
+2030,Alberta,Resource|Extraction|Gas,baseline,2141.730666730482,36.33630705541632,PJ/yr,3364.132
+2030,Alberta,Resource|Extraction|Oil,baseline,5869.924106064025,51.89604847469166,PJ/yr,12202.58195
+2030,Alberta,Secondary Energy|Electricity,baseline,116.3855346706408,69.42518703569817,PJ/yr,380.6582065
+2030,Alberta,Secondary Energy|Gases|Natural Gas,baseline,2044.464159470367,50.199306818701785,PJ/yr,4105.292575
+2030,Alberta,Secondary Energy|Hydrogen,baseline,33.21307374249442,65.51005323396517,PJ/yr,96.29783997
+2030,Alberta,Secondary Energy|Liquids|Biomass,baseline,3.491835784862826,97.69638905390738,PJ/yr,151.5809686
+2030,Alberta,Secondary Energy|Liquids|Oil,baseline,1428.112210024836,87.44306490638029,PJ/yr,11373.09542
+2030,Alberta,Secondary Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,184.7818455
+2030,BritishColumbia,Carbon Sequestration|CCS,baseline,0.3427013057098645,23.629383140840623,Mt CO2/yr,0.4487345
+2030,BritishColumbia,Final Energy,baseline,1117.727087192084,23.758041487110948,PJ/yr,1466.0262
+2030,BritishColumbia,Final Energy|Electricity,baseline,227.9928863790161,22.753004043391087,PJ/yr,295.1479
+2030,BritishColumbia,Final Energy|Gases,baseline,140.3410829617241,66.43910697201628,PJ/yr,418.1685
+2030,BritishColumbia,Final Energy|Hydrogen,baseline,6.392623716490573,14297.801163267055,PJ/yr,0.0444
+2030,BritishColumbia,Final Energy|Industry,baseline,529.9160277090969,32.273579915001775,PJ/yr,782.4362
+2030,BritishColumbia,Final Energy|Industry|Electricity,baseline,82.23452884692315,35.43771739645076,PJ/yr,127.3724
+2030,BritishColumbia,Final Energy|Industry|Hydrogen,baseline,5.934913388285824,15559.402079909825,PJ/yr,0.0379
+2030,BritishColumbia,Final Energy|Liquids|Biomass,baseline,13.42843011429432,78.90960268433534,PJ/yr,63.6708257
+2030,BritishColumbia,Final Energy|Liquids|Gas,baseline,0.0,100.0,PJ/yr,1.5354692
+2030,BritishColumbia,Final Energy|Solids|Biomass,baseline,291.7146778882658,285.9704050327556,PJ/yr,75.5795455
+2030,BritishColumbia,Final Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,6.7008054
+2030,BritishColumbia,Resource|Extraction|Gas,baseline,140.0948550242053,95.7805118440893,PJ/yr,3320.186
+2030,BritishColumbia,Secondary Energy|Gases|Natural Gas,baseline,149.6701790358006,96.28239188234166,PJ/yr,4025.980531
+2030,BritishColumbia,Secondary Energy|Hydrogen,baseline,7.451249845316991,18831.01806264204,PJ/yr,0.039360006
+2030,BritishColumbia,Secondary Energy|Liquids|Biomass,baseline,2.500405627162384,99.59479085683616,PJ/yr,617.0654511
+2030,BritishColumbia,Secondary Energy|Liquids|Oil,baseline,410.585711037574,2950.2013157431725,PJ/yr,13.4609381
+2030,BritishColumbia,Secondary Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,1017.154224
+2030,Canada,Carbon Sequestration|CCS,baseline,0.0,100.0,Mt CO2/yr,20.048165
+2030,Canada,Emissions|CO2,baseline,0.0,100.0,Mt CO2/yr,612.5667918
+2030,Canada,Final Energy,baseline,0.0,100.0,PJ/yr,12153.227
+2030,Canada,Final Energy|Electricity,baseline,0.0,100.0,PJ/yr,2466.4334
+2030,Canada,Final Energy|Gases,baseline,0.0,100.0,PJ/yr,4238.8144
+2030,Canada,Final Energy|Hydrogen,baseline,0.0,100.0,PJ/yr,65.4154
+2030,Canada,Final Energy|Industry,baseline,0.0,100.0,PJ/yr,6428.4504
+2030,Canada,Final Energy|Industry|Electricity,baseline,0.0,100.0,PJ/yr,1040.2674
+2030,Canada,Final Energy|Industry|Hydrogen,baseline,0.0,100.0,PJ/yr,65.3558
+2030,Canada,Final Energy|Liquids|Biomass,baseline,0.0,100.0,PJ/yr,228.5679888
+2030,Canada,Final Energy|Liquids|Gas,baseline,0.0,100.0,PJ/yr,455.0151684
+2030,Canada,Final Energy|Liquids|Oil,baseline,0.0,100.0,PJ/yr,3147.76628
+2030,Canada,Final Energy|Residential and Commercial,baseline,0.0,100.0,PJ/yr,3029.5123
+2030,Canada,Final Energy|Residential and Commercial|Electricity,baseline,0.0,100.0,PJ/yr,1376.836
+2030,Canada,Final Energy|Solids|Biomass,baseline,0.0,100.0,PJ/yr,475.4331235
+2030,Canada,Final Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,142.2849404
+2030,Canada,Final Energy|Transportation,baseline,0.0,100.0,PJ/yr,2695.264
+2030,Canada,Resource|Extraction|Gas,baseline,0.0,100.0,PJ/yr,6821.412
+2030,Canada,Resource|Extraction|Oil,baseline,0.0,100.0,PJ/yr,14919.817
+2030,Canada,Secondary Energy|Electricity,baseline,0.0,100.0,PJ/yr,2710.771825
+2030,Canada,Secondary Energy|Gases|Natural Gas,baseline,0.0,100.0,PJ/yr,8337.667705
+2030,Canada,Secondary Energy|Hydrogen,baseline,0.0,100.0,PJ/yr,186.97044
+2030,Canada,Secondary Energy|Liquids|Biomass,baseline,0.0,100.0,PJ/yr,1352.26498
+2030,Canada,Secondary Energy|Liquids|Oil,baseline,0.0,100.0,PJ/yr,13251.06454
+2030,Canada,Secondary Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,1239.351665
+2030,Manitoba,Carbon Sequestration|CCS,baseline,0.5233110096588001,100.0,Mt CO2/yr,0.0
+2030,Manitoba,Final Energy,baseline,253.6412816229522,26.29747158862313,PJ/yr,344.1419
+2030,Manitoba,Final Energy|Gases,baseline,38.40705704810087,55.687505424859275,PJ/yr,86.6732
+2030,Manitoba,Final Energy|Hydrogen,baseline,5.551309298063135,45402.53523002569,PJ/yr,0.0122
+2030,Manitoba,Final Energy|Industry|Hydrogen,baseline,5.551309298063135,53277.974019837835,PJ/yr,0.0104
+2030,Manitoba,Final Energy|Liquids|Gas,baseline,0.0,100.0,PJ/yr,0.5252677
+2030,Manitoba,Final Energy|Liquids|Oil,baseline,59.3514552001745,49.000018119652076,PJ/yr,116.3754437
+2030,Manitoba,Final Energy|Residential and Commercial,baseline,87.15237744183324,26.71689069314493,PJ/yr,118.9256
+2030,Manitoba,Final Energy|Solids|Biomass,baseline,19.5983406395583,206.8048060527053,PJ/yr,6.3878858
+2030,Manitoba,Final Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,0.2872438
+2030,Manitoba,Final Energy|Transportation,baseline,64.41941357600442,38.62456261646918,PJ/yr,104.9596
+2030,Manitoba,Secondary Energy|Gases|Natural Gas,baseline,51.82582046028158,100.0,PJ/yr,0.0
+2030,Manitoba,Secondary Energy|Hydrogen,baseline,11.40987102968655,115513.18521661048,PJ/yr,0.009869005
+2030,Manitoba,Secondary Energy|Liquids|Biomass,baseline,2.362870118310803,82.64485756997638,PJ/yr,13.6148126
+2030,Manitoba,Secondary Energy|Liquids|Oil,baseline,59.72659128864329,34.734584709635676,PJ/yr,91.5133858
+2030,NewBrunswick,Final Energy|Gases,baseline,0.2465121803155003,99.189531232524,PJ/yr,30.416
+2030,NewBrunswick,Final Energy|Hydrogen,baseline,0.0,100.0,PJ/yr,0.0045
+2030,NewBrunswick,Final Energy|Industry,baseline,88.24600876276948,23.71877729909083,PJ/yr,115.6851
+2030,NewBrunswick,Final Energy|Industry|Hydrogen,baseline,0.0,100.0,PJ/yr,0.0045
+2030,NewBrunswick,Resource|Extraction|Gas,baseline,0.0,100.0,PJ/yr,0.6935
+2030,NewBrunswick,Secondary Energy|Electricity,baseline,52.68172614850257,45.61455880960748,PJ/yr,36.17888663
+2030,NewBrunswick,Secondary Energy|Hydrogen,baseline,0.2584155565236571,5569.2431911454805,PJ/yr,0.004558202
+2030,NewfoundlandandLabrador,Final Energy,baseline,128.7538761104024,24.68216766654398,PJ/yr,170.9474
+2030,NewfoundlandandLabrador,Final Energy|Gases,baseline,24.48809766766702,24.33467845868359,PJ/yr,32.3637
+2030,NewfoundlandandLabrador,Final Energy|Hydrogen,baseline,5.553650866230483,27807.79329764062,PJ/yr,0.0199
+2030,NewfoundlandandLabrador,Final Energy|Industry|Electricity,baseline,14.10894576013298,24.52283870896603,PJ/yr,18.693
+2030,NewfoundlandandLabrador,Final Energy|Industry|Hydrogen,baseline,5.553650866230483,27807.79329764062,PJ/yr,0.0199
+2030,NewfoundlandandLabrador,Final Energy|Residential and Commercial,baseline,31.85652645950841,20.327611619760685,PJ/yr,39.9844
+2030,NewfoundlandandLabrador,Final Energy|Transportation,baseline,33.15910040621868,38.053951304491626,PJ/yr,53.529
+2030,NewfoundlandandLabrador,Resource|Extraction|Oil,baseline,368.1280321855246,57.05199687169513,PJ/yr,857.1481917
+2030,NewfoundlandandLabrador,Secondary Energy|Hydrogen,baseline,7.172521398802972,85.50436494311685,PJ/yr,49.48055998
+2030,NorthwestTerritories,Final Energy,baseline,26.93013572451289,52.55619979217164,PJ/yr,17.6526
+2030,NorthwestTerritories,Final Energy|Electricity,baseline,5.231384203677345,350.3214430298136,PJ/yr,1.1617
+2030,NorthwestTerritories,Final Energy|Gases,baseline,5.122373342037336,46.65101611948054,PJ/yr,3.4929
+2030,NorthwestTerritories,Final Energy|Hydrogen,baseline,2.335461093593654,1167630.546796827,PJ/yr,0.0002
+2030,NorthwestTerritories,Final Energy|Industry|Electricity,baseline,0.4891466706855838,1107.769557248355,PJ/yr,0.0405
+2030,NorthwestTerritories,Final Energy|Industry|Hydrogen,baseline,2.335461093593654,1167630.546796827,PJ/yr,0.0002
+2030,NorthwestTerritories,Final Energy|Residential and Commercial,baseline,15.78954537614743,371.92137534064886,PJ/yr,3.3458
+2030,NorthwestTerritories,Final Energy|Residential and Commercial|Electricity,baseline,4.093275513003231,267.0111640817028,PJ/yr,1.1153
+2030,NorthwestTerritories,Final Energy|Transportation,baseline,3.034875794465365,58.001192974559366,PJ/yr,7.2261
+2030,NorthwestTerritories,Resource|Extraction|Gas,baseline,0.9364657400149312,32.4826431135594,PJ/yr,1.387
+2030,NorthwestTerritories,Resource|Extraction|Oil,baseline,4.049939988045516,69.76767719069382,PJ/yr,13.39605962
+2030,NorthwestTerritories,Secondary Energy|Electricity,baseline,1.698170843527016,35.87001786271885,PJ/yr,1.249849577
+2030,NorthwestTerritories,Secondary Energy|Hydrogen,baseline,2.747601286031249,763186.1866353443,PJ/yr,0.00035997
+2030,NovaScotia,Final Energy,baseline,136.4178882518605,20.16888255663639,PJ/yr,170.8831
+2030,NovaScotia,Final Energy|Gases,baseline,8.980518994817919,27.391424963472083,PJ/yr,12.3684
+2030,NovaScotia,Final Energy|Hydrogen,baseline,0.5596921329850566,3985.344036387274,PJ/yr,0.0137
+2030,NovaScotia,Final Energy|Industry|Hydrogen,baseline,0.01072616723655817,21.706808492276128,PJ/yr,0.0137
+2030,NovaScotia,Final Energy|Residential and Commercial,baseline,57.26302589243218,21.446447728251194,PJ/yr,72.8968
+2030,NovaScotia,Final Energy|Transportation,baseline,42.16928717639762,33.27127075295772,PJ/yr,63.1951
+2030,NovaScotia,Secondary Energy|Electricity,baseline,67.0682660584774,96.21466870275198,PJ/yr,34.18106633
+2030,NovaScotia,Secondary Energy|Hydrogen,baseline,3.087746455256638,92.19525778481533,PJ/yr,39.56243999
+2030,Nunavut,Final Energy,baseline,9.297556359248228,34.346102350204134,PJ/yr,6.9206
+2030,Nunavut,Final Energy|Electricity,baseline,3.846545529440382,272.90795244211165,PJ/yr,1.0315
+2030,Nunavut,Final Energy|Gases,baseline,0.4923634912952417,100.0,PJ/yr,0.0
+2030,Nunavut,Final Energy|Hydrogen,baseline,1.358680349832006,100.0,PJ/yr,0.0
+2030,Nunavut,Final Energy|Industry|Electricity,baseline,0.5534341296334222,79.68640572513708,PJ/yr,0.308
+2030,Nunavut,Final Energy|Industry|Hydrogen,baseline,1.358680349832006,100.0,PJ/yr,0.0
+2030,Nunavut,Final Energy|Residential and Commercial,baseline,5.726521560863447,664.7598238332595,PJ/yr,0.7488
+2030,Nunavut,Final Energy|Residential and Commercial|Electricity,baseline,3.061339249811056,326.19229427969594,PJ/yr,0.7183
+2030,Nunavut,Final Energy|Transportation,baseline,1.069009885987911,69.75327827326738,PJ/yr,3.5343
+2030,Nunavut,Secondary Energy|Electricity,baseline,1.591302118656423,45.10057655973554,PJ/yr,1.096689039
+2030,Nunavut,Secondary Energy|Hydrogen,baseline,2.378190944323407,100.0,PJ/yr,0.0
+2030,Ontario,Carbon Sequestration|CCS,baseline,0.5149912755113738,100.0,Mt CO2/yr,0.0
+2030,Ontario,Final Energy|Hydrogen,baseline,0.1658529879711556,113.45300897188622,PJ/yr,0.0777
+2030,Ontario,Final Energy|Industry|Hydrogen,baseline,0.1158020091706772,130.6812931686797,PJ/yr,0.0502
+2030,Ontario,Final Energy|Liquids|Biomass,baseline,6.23463629238287,92.50515492111646,PJ/yr,83.1856593
+2030,Ontario,Final Energy|Liquids|Gas,baseline,0.0,100.0,PJ/yr,107.9206904
+2030,Ontario,Final Energy|Liquids|Oil,baseline,1211.66899735327,26.25643450760638,PJ/yr,959.6889078
+2030,Ontario,Final Energy|Residential and Commercial|Electricity,baseline,345.3765611521921,21.345318361923972,PJ/yr,439.1049
+2030,Ontario,Final Energy|Solids|Biomass,baseline,164.7101700555196,27.96757403343404,PJ/yr,128.7124268
+2030,Ontario,Final Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,63.0684815
+2030,Ontario,Resource|Extraction|Gas,baseline,0.0,100.0,PJ/yr,0.2555
+2030,Ontario,Resource|Extraction|Oil,baseline,2.177765285383894,21.198790602663284,PJ/yr,1.796853974
+2030,Ontario,Secondary Energy|Electricity,baseline,327.0308814671473,44.717261298196135,PJ/yr,591.5605651
+2030,Ontario,Secondary Energy|Gases|Natural Gas,baseline,1099.727345921193,3269.3358074674684,PJ/yr,32.6392918
+2030,Ontario,Secondary Energy|Hydrogen,baseline,5.524877709170405,6907.708826856058,PJ/yr,0.078840001
+2030,Ontario,Secondary Energy|Liquids|Biomass,baseline,6.297612415918592,95.7697733652296,PJ/yr,148.8717499
+2030,Ontario,Secondary Energy|Liquids|Oil,baseline,668.1715779188052,100.0,PJ/yr,0.0
+2030,PrinceEdwardIsland,Final Energy,baseline,20.01849098865346,26.747057078467567,PJ/yr,27.3279
+2030,PrinceEdwardIsland,Final Energy|Electricity,baseline,10.09548817113718,34.683727618997295,PJ/yr,7.4957
+2030,PrinceEdwardIsland,Final Energy|Gases,baseline,0.4924295376490504,64.8741324167879,PJ/yr,1.4019
+2030,PrinceEdwardIsland,Final Energy|Hydrogen,baseline,0.0,100.0,PJ/yr,0.0011
+2030,PrinceEdwardIsland,Final Energy|Industry|Hydrogen,baseline,0.0,100.0,PJ/yr,0.0011
+2030,PrinceEdwardIsland,Final Energy|Residential and Commercial,baseline,7.547546513357807,21.289534744417494,PJ/yr,9.589
+2030,PrinceEdwardIsland,Final Energy|Residential and Commercial|Electricity,baseline,5.64362785868509,28.832302850867215,PJ/yr,4.3806
+2030,PrinceEdwardIsland,Final Energy|Transportation,baseline,7.025111884929561,36.95210334368804,PJ/yr,11.1425
+2030,PrinceEdwardIsland,Secondary Energy|Electricity,baseline,9.401842905490913,58.27965237137065,PJ/yr,5.940019936
+2030,PrinceEdwardIsland,Secondary Energy|Hydrogen,baseline,2.747601286031249,228885.66515331253,PJ/yr,0.001199901
+2030,Quebec,Carbon Sequestration|CCS,baseline,0.638126515982869,100.0,Mt CO2/yr,0.0
+2030,Quebec,Final Energy|Electricity,baseline,665.5609054350689,20.660915107191073,PJ/yr,838.8815
+2030,Quebec,Final Energy|Gases,baseline,264.7241309995368,43.642606688206634,PJ/yr,184.2936
+2030,Quebec,Final Energy|Hydrogen,baseline,6.744529977671393,356.5752760405763,PJ/yr,1.4772
+2030,Quebec,Final Energy|Industry|Hydrogen,baseline,6.744529977671393,357.19427722826686,PJ/yr,1.4752
+2030,Quebec,Final Energy|Liquids|Biomass,baseline,19.70459554367839,62.382840438562226,PJ/yr,52.3819336
+2030,Quebec,Final Energy|Liquids|Gas,baseline,0.0,100.0,PJ/yr,38.3740843
+2030,Quebec,Final Energy|Residential and Commercial|Electricity,baseline,330.4840489721009,25.18325351240243,PJ/yr,441.7247
+2030,Quebec,Final Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,27.838806
+2030,Quebec,Secondary Energy|Gases|Natural Gas,baseline,305.57099607433,7084.277373527086,PJ/yr,4.2533296
+2030,Quebec,Secondary Energy|Hydrogen,baseline,7.934741148614691,442.9250602356306,PJ/yr,1.461479996
+2030,Quebec,Secondary Energy|Liquids|Biomass,baseline,19.90363186031104,93.44398465397916,PJ/yr,303.59343
+2030,Quebec,Secondary Energy|Liquids|Oil,baseline,383.6243431439214,100.0,PJ/yr,0.0
+2030,Saskatchewan,Carbon Sequestration|CCS,baseline,0.8636250215220556,81.14171547590425,Mt CO2/yr,4.5795524
+2030,Saskatchewan,Final Energy|Gases,baseline,251.2753145903864,23.74576635435076,PJ/yr,329.5231
+2030,Saskatchewan,Final Energy|Hydrogen,baseline,5.613492698741198,13459.161108070526,PJ/yr,0.0414
+2030,Saskatchewan,Final Energy|Industry|Hydrogen,baseline,5.613492698741198,14869.313863309864,PJ/yr,0.0375
+2030,Saskatchewan,Final Energy|Liquids|Gas,baseline,0.0,100.0,PJ/yr,9.5426487
+2030,Saskatchewan,Final Energy|Liquids|Oil,baseline,159.1118706434485,30.87285249741505,PJ/yr,230.1727706
+2030,Saskatchewan,Final Energy|Residential and Commercial,baseline,106.501050681652,26.82925022936777,PJ/yr,145.5514
+2030,Saskatchewan,Final Energy|Solids|Biomass,baseline,23.64365137389302,330.5186539631993,PJ/yr,5.4918994
+2030,Saskatchewan,Final Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,36.2409499
+2030,Saskatchewan,Final Energy|Transportation,baseline,105.7294895116163,30.569434832854093,PJ/yr,152.2809
+2030,Saskatchewan,Resource|Extraction|Gas,baseline,67.55257454524619,49.87119536855238,PJ/yr,134.758
+2030,Saskatchewan,Resource|Extraction|Oil,baseline,666.2456795561043,45.93197844984541,PJ/yr,1232.236099
+2030,Saskatchewan,Secondary Energy|Electricity,baseline,76.56474601302736,25.095473125741343,PJ/yr,102.216447
+2030,Saskatchewan,Secondary Energy|Gases|Natural Gas,baseline,323.070040845769,90.59956922318105,PJ/yr,169.5019785
+2030,Saskatchewan,Secondary Energy|Hydrogen,baseline,9.698386719723782,28458.242075967086,PJ/yr,0.033960027
+2030,Saskatchewan,Secondary Energy|Liquids|Biomass,baseline,2.334177395206967,90.8550026681383,PJ/yr,25.5240905
+2030,Saskatchewan,Secondary Energy|Liquids|Oil,baseline,169.5790218848473,87.01014033951,PJ/yr,1305.472317
+2030,Saskatchewan,Secondary Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,37.4155951
+2030,Yukon,Final Energy,baseline,7.251307575051781,54.581393786278035,PJ/yr,15.9655
+2030,Yukon,Final Energy|Electricity,baseline,1.869801701648351,39.240862362762364,PJ/yr,3.0774
+2030,Yukon,Final Energy|Hydrogen,baseline,2.183011961096174,100.0,PJ/yr,0.0
+2030,Yukon,Final Energy|Industry,baseline,4.09363102445972,47.699930697315516,PJ/yr,7.8272
+2030,Yukon,Final Energy|Industry|Electricity,baseline,0.03646470106757754,96.89159482843938,PJ/yr,1.1731
+2030,Yukon,Final Energy|Industry|Hydrogen,baseline,2.183011961096174,100.0,PJ/yr,0.0
+2030,Yukon,Final Energy|Transportation,baseline,1.062199369622016,82.04166887093365,PJ/yr,5.9148
+2030,Yukon,Secondary Energy|Electricity,baseline,0.6837716560826073,78.57937984588705,PJ/yr,3.192118861
+2030,Yukon,Secondary Energy|Hydrogen,baseline,2.568249365481848,100.0,PJ/yr,0.0
+2050,Alberta,Carbon Sequestration|CCS,baseline,4.62616669925327,80.69297905428033,Mt CO2/yr,23.9610591
+2050,Alberta,Final Energy|Electricity,baseline,313.6113095101117,26.037283904441612,PJ/yr,424.0127
+2050,Alberta,Final Energy|Gases,baseline,865.7436162527576,60.841056793449056,PJ/yr,2210.8452
+2050,Alberta,Final Energy|Hydrogen,baseline,198.7711962907342,188.90952288244154,PJ/yr,68.8005
+2050,Alberta,Final Energy|Industry|Hydrogen,baseline,198.726396591741,188.92377698649204,PJ/yr,68.7816
+2050,Alberta,Final Energy|Liquids|Biomass,baseline,162.0300545465994,1090.465080647567,PJ/yr,13.6106516
+2050,Alberta,Final Energy|Liquids|Gas,baseline,0.0,100.0,PJ/yr,485.5257982
+2050,Alberta,Final Energy|Liquids|Oil,baseline,1367.680235031275,124.56329237846356,PJ/yr,609.0399818
+2050,Alberta,Final Energy|Residential and Commercial,baseline,513.5620151988201,26.775164850218037,PJ/yr,701.3495
+2050,Alberta,Final Energy|Residential and Commercial|Electricity,baseline,84.67399319315211,46.239792617953476,PJ/yr,157.5031
+2050,Alberta,Final Energy|Solids|Biomass,baseline,228.912,190.88170078268175,PJ/yr,78.6959095
+2050,Alberta,Final Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,19.8117934
+2050,Alberta,Final Energy|Transportation,baseline,429.8934351798281,24.70470619765079,PJ/yr,570.9433
+2050,Alberta,Resource|Extraction|Gas,baseline,1356.991463439376,63.84286753604974,PJ/yr,3753.0395
+2050,Alberta,Secondary Energy|Gases|Natural Gas,baseline,1378.217617938525,67.32987146318607,PJ/yr,4218.586457
+2050,Alberta,Secondary Energy|Hydrogen,baseline,222.2966401616235,38.33254686179099,PJ/yr,160.69728
+2050,Alberta,Secondary Energy|Liquids|Biomass,baseline,0.0,100.0,PJ/yr,222.6133612
+2050,Alberta,Secondary Energy|Liquids|Oil,baseline,1491.47862175275,87.56655116176356,PJ/yr,11995.69517
+2050,Alberta,Secondary Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,203.1569005
+2050,BritishColumbia,Carbon Sequestration|CCS,baseline,0.0,100.0,Mt CO2/yr,0.6668274
+2050,BritishColumbia,Final Energy,baseline,972.0611061550492,41.472716039251935,PJ/yr,1660.8683
+2050,BritishColumbia,Final Energy|Electricity,baseline,245.4485552815751,40.06438866499078,PJ/yr,409.5204
+2050,BritishColumbia,Final Energy|Gases,baseline,26.95312532110882,94.10263564747765,PJ/yr,457.0368
+2050,BritishColumbia,Final Energy|Hydrogen,baseline,34.73340859275635,13352.133459626782,PJ/yr,0.2582
+2050,BritishColumbia,Final Energy|Industry,baseline,505.1307208233634,44.43324245220698,PJ/yr,909.052
+2050,BritishColumbia,Final Energy|Industry|Electricity,baseline,82.14089305900075,50.70302160725322,PJ/yr,166.6246
+2050,BritishColumbia,Final Energy|Industry|Hydrogen,baseline,14.50112724223598,5665.855762320469,PJ/yr,0.2515
+2050,BritishColumbia,Final Energy|Liquids|Biomass,baseline,0.0,100.0,PJ/yr,8.5175687
+2050,BritishColumbia,Final Energy|Liquids|Gas,baseline,0.0,100.0,PJ/yr,0.3633805
+2050,BritishColumbia,Final Energy|Residential and Commercial,baseline,232.6878327099144,36.31742981827093,PJ/yr,365.387
+2050,BritishColumbia,Final Energy|Residential and Commercial|Electricity,baseline,112.0671038365618,45.73949158494369,PJ/yr,206.5353
+2050,BritishColumbia,Final Energy|Solids|Biomass,baseline,314.1129175204983,295.6848178289339,PJ/yr,79.3846272
+2050,BritishColumbia,Final Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,5.0411327
+2050,BritishColumbia,Final Energy|Transportation,baseline,234.2425526217714,39.38281786040256,PJ/yr,386.4293
+2050,BritishColumbia,Resource|Extraction|Gas,baseline,7.650878028365855,99.82586224647963,PJ/yr,4393.578
+2050,BritishColumbia,Resource|Extraction|Oil,baseline,473.3049233313019,25.784943967763663,PJ/yr,637.7478488
+2050,BritishColumbia,Secondary Energy|Gases|Natural Gas,baseline,28.36969907957638,99.52922373446914,PJ/yr,6026.153219
+2050,BritishColumbia,Secondary Energy|Hydrogen,baseline,38.20874274328566,15083.888963646072,PJ/yr,0.25164003
+2050,BritishColumbia,Secondary Energy|Liquids|Biomass,baseline,0.0,100.0,PJ/yr,833.7845186
+2050,BritishColumbia,Secondary Energy|Liquids|Oil,baseline,398.5748136665193,6152.334595558341,PJ/yr,6.3748158
+2050,BritishColumbia,Secondary Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,1325.946618
+2050,Canada,Carbon Sequestration|CCS,baseline,0.0,100.0,Mt CO2/yr,51.6491444
+2050,Canada,Emissions|CO2,baseline,0.0,100.0,Mt CO2/yr,566.4471344
+2050,Canada,Final Energy,baseline,0.0,100.0,PJ/yr,12630.5837
+2050,Canada,Final Energy|Electricity,baseline,0.0,100.0,PJ/yr,3211.7741
+2050,Canada,Final Energy|Gases,baseline,0.0,100.0,PJ/yr,4017.3548
+2050,Canada,Final Energy|Hydrogen,baseline,0.0,100.0,PJ/yr,72.173
+2050,Canada,Final Energy|Industry,baseline,0.0,100.0,PJ/yr,6645.9063
+2050,Canada,Final Energy|Industry|Electricity,baseline,0.0,100.0,PJ/yr,1308.5675
+2050,Canada,Final Energy|Industry|Hydrogen,baseline,0.0,100.0,PJ/yr,72.1193
+2050,Canada,Final Energy|Liquids|Biomass,baseline,0.0,100.0,PJ/yr,79.8466015
+2050,Canada,Final Energy|Liquids|Gas,baseline,0.0,100.0,PJ/yr,660.8412164
+2050,Canada,Final Energy|Liquids|Oil,baseline,0.0,100.0,PJ/yr,2634.576797
+2050,Canada,Final Energy|Residential and Commercial,baseline,0.0,100.0,PJ/yr,3280.449
+2050,Canada,Final Energy|Residential and Commercial|Electricity,baseline,0.0,100.0,PJ/yr,1696.3395
+2050,Canada,Final Energy|Solids|Biomass,baseline,0.0,100.0,PJ/yr,575.5306553
+2050,Canada,Final Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,395.7579922
+2050,Canada,Final Energy|Transportation,baseline,0.0,100.0,PJ/yr,2704.228
+2050,Canada,Resource|Extraction|Gas,baseline,0.0,100.0,PJ/yr,8269.951
+2050,Canada,Resource|Extraction|Oil,baseline,0.0,100.0,PJ/yr,14858.18854
+2050,Canada,Secondary Energy|Electricity,baseline,0.0,100.0,PJ/yr,3500.936935
+2050,Canada,Secondary Energy|Gases|Natural Gas,baseline,0.0,100.0,PJ/yr,10483.48862
+2050,Canada,Secondary Energy|Hydrogen,baseline,0.0,100.0,PJ/yr,384.65976
+2050,Canada,Secondary Energy|Liquids|Biomass,baseline,0.0,100.0,PJ/yr,1818.561097
+2050,Canada,Secondary Energy|Liquids|Oil,baseline,0.0,100.0,PJ/yr,14293.47421
+2050,Canada,Secondary Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,1825.683344
+2050,Manitoba,Carbon Sequestration|CCS,baseline,0.6360959439855424,45.60046072059581,Mt CO2/yr,0.4368777
+2050,Manitoba,Final Energy,baseline,246.3624107641147,33.645474123681,PJ/yr,371.282
+2050,Manitoba,Final Energy|Electricity,baseline,90.14357556753517,25.793465105596336,PJ/yr,121.4766
+2050,Manitoba,Final Energy|Gases,baseline,42.66935221959808,49.37755848351266,PJ/yr,84.2894
+2050,Manitoba,Final Energy|Hydrogen,baseline,18.30046232957202,9486.412954202213,PJ/yr,0.1909
+2050,Manitoba,Final Energy|Industry,baseline,98.3116876638989,28.547307859153253,PJ/yr,137.5899
+2050,Manitoba,Final Energy|Industry|Hydrogen,baseline,18.30046232957202,9552.142578888199,PJ/yr,0.1896
+2050,Manitoba,Final Energy|Liquids|Biomass,baseline,0.0,100.0,PJ/yr,5.7267077
+2050,Manitoba,Final Energy|Liquids|Gas,baseline,0.0,100.0,PJ/yr,0.2238446
+2050,Manitoba,Final Energy|Liquids|Oil,baseline,35.5132555667518,64.34944226377024,PJ/yr,99.6148667
+2050,Manitoba,Final Energy|Residential and Commercial,baseline,83.25655185129725,33.65536026384582,PJ/yr,125.491
+2050,Manitoba,Final Energy|Residential and Commercial|Electricity,baseline,49.48093120684819,40.210309773342146,PJ/yr,82.7583
+2050,Manitoba,Final Energy|Solids|Biomass,baseline,32.95749999999998,275.2773231952185,PJ/yr,8.782172
+2050,Manitoba,Final Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,0.6311239
+2050,Manitoba,Final Energy|Transportation,baseline,64.79417124891853,40.116901538969074,PJ/yr,108.2011
+2050,Manitoba,Resource|Extraction|Oil,baseline,35.64020017989221,23.143391881910958,PJ/yr,28.94203224
+2050,Manitoba,Secondary Energy|Electricity,baseline,117.7778515180632,28.30234796259549,PJ/yr,164.2701653
+2050,Manitoba,Secondary Energy|Gases|Natural Gas,baseline,65.76736728281482,100.0,PJ/yr,0.0
+2050,Manitoba,Secondary Energy|Hydrogen,baseline,21.52995567754344,11064.67307918311,PJ/yr,0.192840001
+2050,Manitoba,Secondary Energy|Liquids|Biomass,baseline,0.0,100.0,PJ/yr,16.6654836
+2050,Manitoba,Secondary Energy|Liquids|Oil,baseline,32.84244401424429,71.01595137706586,PJ/yr,113.312134
+2050,NewBrunswick,Final Energy|Electricity,baseline,49.08653481065262,29.69106457641552,PJ/yr,69.8155
+2050,NewBrunswick,Final Energy|Gases,baseline,1.860125877563218,93.36186155934588,PJ/yr,28.0218
+2050,NewBrunswick,Final Energy|Hydrogen,baseline,3.204532573894875,15380.833690313406,PJ/yr,0.0207
+2050,NewBrunswick,Final Energy|Industry,baseline,79.88836990765759,29.95148508016191,PJ/yr,114.0472
+2050,NewBrunswick,Final Energy|Industry|Hydrogen,baseline,3.204532573894875,15380.833690313406,PJ/yr,0.0207
+2050,NewBrunswick,Final Energy|Residential and Commercial|Electricity,baseline,28.3724022000013,34.816845099153404,PJ/yr,43.5272
+2050,NewBrunswick,Final Energy|Transportation,baseline,48.81771132522559,42.26057263942041,PJ/yr,34.3157
+2050,NewBrunswick,Resource|Extraction|Gas,baseline,0.09016965363432489,23.520073471677936,PJ/yr,0.073
+2050,NewBrunswick,Secondary Energy|Hydrogen,baseline,3.770038321475257,17162.107099778714,PJ/yr,0.021839966
+2050,NewfoundlandandLabrador,Final Energy|Gases,baseline,19.03508834428246,177.26116969561073,PJ/yr,6.8654
+2050,NewfoundlandandLabrador,Final Energy|Hydrogen,baseline,17.28739163892529,31736.817014595374,PJ/yr,0.0543
+2050,NewfoundlandandLabrador,Final Energy|Industry|Electricity,baseline,12.03289361493751,42.264742869095265,PJ/yr,20.8415
+2050,NewfoundlandandLabrador,Final Energy|Industry|Hydrogen,baseline,17.28739163892529,31736.817014595374,PJ/yr,0.0543
+2050,NewfoundlandandLabrador,Resource|Extraction|Oil,baseline,160.386566896723,42.030976862612576,PJ/yr,112.9236526
+2050,NewfoundlandandLabrador,Secondary Energy|Hydrogen,baseline,20.33810780643271,83.88255980932364,PJ/yr,126.18696
+2050,NorthwestTerritories,Final Energy,baseline,28.35615239805669,80.59288101324499,PJ/yr,15.7017
+2050,NorthwestTerritories,Final Energy|Electricity,baseline,2.256703469773996,51.64998788885129,PJ/yr,1.4881
+2050,NorthwestTerritories,Final Energy|Gases,baseline,11.37852106442071,228.0341645117972,PJ/yr,3.4687
+2050,NorthwestTerritories,Final Energy|Hydrogen,baseline,4.122730665260318,1374143.5550867727,PJ/yr,0.0003
+2050,NorthwestTerritories,Final Energy|Industry,baseline,7.776277948057498,34.894755114012824,PJ/yr,5.7647
+2050,NorthwestTerritories,Final Energy|Industry|Electricity,baseline,0.483815187096416,524.277660769569,PJ/yr,0.0775
+2050,NorthwestTerritories,Final Energy|Industry|Hydrogen,baseline,4.122730665260318,1374143.5550867727,PJ/yr,0.0003
+2050,NorthwestTerritories,Final Energy|Residential and Commercial,baseline,17.50285116152361,526.2424831487211,PJ/yr,2.7949
+2050,NorthwestTerritories,Final Energy|Transportation,baseline,3.077023288475575,56.917107174702465,PJ/yr,7.1421
+2050,NorthwestTerritories,Resource|Extraction|Gas,baseline,0.1723619657072483,57.07049421986344,PJ/yr,0.4015
+2050,NorthwestTerritories,Resource|Extraction|Oil,baseline,7.06927866689602,32.15261449946211,PJ/yr,5.349329405
+2050,NorthwestTerritories,Secondary Energy|Electricity,baseline,1.864919192257556,33.87296926598241,PJ/yr,1.39305134
+2050,NorthwestTerritories,Secondary Energy|Hydrogen,baseline,5.11831863028927,1421773.664552399,PJ/yr,0.00035997
+2050,NovaScotia,Final Energy,baseline,129.6123832547667,20.099678915995113,PJ/yr,162.2176
+2050,NovaScotia,Final Energy|Gases,baseline,8.462112738508573,28.71849370328206,PJ/yr,11.8714
+2050,NovaScotia,Final Energy|Hydrogen,baseline,0.1091802752635939,63.93434724263347,PJ/yr,0.0666
+2050,NovaScotia,Final Energy|Industry|Electricity,baseline,8.476747593508673,22.10733102835101,PJ/yr,10.8826
+2050,NovaScotia,Final Energy|Residential and Commercial,baseline,52.01710257317765,29.455709261620182,PJ/yr,73.7368
+2050,NovaScotia,Secondary Energy|Electricity,baseline,108.8147307968443,119.24289699570775,PJ/yr,49.63204386
+2050,NovaScotia,Secondary Energy|Hydrogen,baseline,22.13246032739602,76.62082160060184,PJ/yr,94.66739998
+2050,Nunavut,Final Energy|Electricity,baseline,2.54290110960976,77.713404822822,PJ/yr,1.4309
+2050,Nunavut,Final Energy|Gases,baseline,3.27063926454386,100.0,PJ/yr,0.0
+2050,Nunavut,Final Energy|Hydrogen,baseline,1.29225464479,100.0,PJ/yr,0.0
+2050,Nunavut,Final Energy|Industry,baseline,2.515732719003648,39.05390961278046,PJ/yr,4.1278
+2050,Nunavut,Final Energy|Industry|Hydrogen,baseline,1.29225464479,100.0,PJ/yr,0.0
+2050,Nunavut,Final Energy|Residential and Commercial,baseline,6.563036391761862,588.2378766528799,PJ/yr,0.9536
+2050,Nunavut,Final Energy|Residential and Commercial|Electricity,baseline,1.786084745530336,93.0067803685256,PJ/yr,0.9254
+2050,Nunavut,Final Energy|Transportation,baseline,1.100029732720742,77.86705030641754,PJ/yr,4.9701
+2050,Nunavut,Secondary Energy|Hydrogen,baseline,1.598447470070906,100.0,PJ/yr,0.0
+2050,Ontario,Carbon Sequestration|CCS,baseline,0.0,100.0,Mt CO2/yr,0.422276
+2050,Ontario,Final Energy,baseline,2254.952118420543,27.838394046622927,PJ/yr,3124.8641
+2050,Ontario,Final Energy|Electricity,baseline,683.9065401502755,27.22772745504043,PJ/yr,939.79
+2050,Ontario,Final Energy|Hydrogen,baseline,0.6488399125526219,21.46696773751854,PJ/yr,0.8262
+2050,Ontario,Final Energy|Industry|Electricity,baseline,157.6561412147098,44.766611249266546,PJ/yr,285.4363
+2050,Ontario,Final Energy|Industry|Hydrogen,baseline,0.5896032675016669,26.73005250383162,PJ/yr,0.8047
+2050,Ontario,Final Energy|Liquids|Biomass,baseline,0.0,100.0,PJ/yr,15.7696482
+2050,Ontario,Final Energy|Liquids|Gas,baseline,0.0,100.0,PJ/yr,127.9927523
+2050,Ontario,Final Energy|Liquids|Oil,baseline,462.2379265999766,46.192868851350475,PJ/yr,859.0644339
+2050,Ontario,Final Energy|Residential and Commercial,baseline,738.9112328658659,33.47428459916044,PJ/yr,1110.7152
+2050,Ontario,Final Energy|Residential and Commercial|Electricity,baseline,396.4532063155413,31.624802599919544,PJ/yr,579.8202
+2050,Ontario,Final Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,72.0504898
+2050,Ontario,Final Energy|Transportation,baseline,597.1936664114938,33.19276670777535,PJ/yr,893.9057
+2050,Ontario,Resource|Extraction|Gas,baseline,7.859074638782303e-08,100.0,PJ/yr,0.0
+2050,Ontario,Resource|Extraction|Oil,baseline,1.481230661270267,21.095069779509142,PJ/yr,1.223196505
+2050,Ontario,Secondary Energy|Gases|Natural Gas,baseline,1428.691610624544,3520.0243873166974,PJ/yr,39.4663532
+2050,Ontario,Secondary Energy|Hydrogen,baseline,42.9608494170151,5096.793333811983,PJ/yr,0.826679967
+2050,Ontario,Secondary Energy|Liquids|Biomass,baseline,0.0,100.0,PJ/yr,211.267684
+2050,Ontario,Secondary Energy|Liquids|Oil,baseline,393.2146756796139,100.0,PJ/yr,0.0
+2050,PrinceEdwardIsland,Final Energy,baseline,20.61991554649974,30.96711534933481,PJ/yr,29.8697
+2050,PrinceEdwardIsland,Final Energy|Electricity,baseline,8.513256469170155,27.887981388746397,PJ/yr,11.8056
+2050,PrinceEdwardIsland,Final Energy|Gases,baseline,4.157362678300465,150.12710897662384,PJ/yr,1.6621
+2050,PrinceEdwardIsland,Final Energy|Industry,baseline,5.598745721244804,37.96541105743025,PJ/yr,9.0252
+2050,PrinceEdwardIsland,Final Energy|Industry|Electricity,baseline,2.690048867039813,44.54765172765325,PJ/yr,4.8511
+2050,PrinceEdwardIsland,Final Energy|Residential and Commercial,baseline,7.949737839895514,23.95433436425149,PJ/yr,10.4539
+2050,PrinceEdwardIsland,Final Energy|Residential and Commercial|Electricity,baseline,4.310740315244463,25.01364977743728,PJ/yr,5.7487
+2050,PrinceEdwardIsland,Final Energy|Transportation,baseline,7.071431985359426,31.94394947972758,PJ/yr,10.3906
+2050,PrinceEdwardIsland,Secondary Energy|Hydrogen,baseline,3.214934344218608,14701.739855599326,PJ/yr,0.021719976
+2050,Quebec,Carbon Sequestration|CCS,baseline,0.319544273663626,64.1008481851953,Mt CO2/yr,0.8901165
+2050,Quebec,Final Energy,baseline,1475.938931120297,22.785299139810586,PJ/yr,1911.474
+2050,Quebec,Final Energy|Electricity,baseline,665.41877291849,32.82829392329336,PJ/yr,990.6236
+2050,Quebec,Final Energy|Gases,baseline,337.0447466572534,106.91809504521721,PJ/yr,162.888
+2050,Quebec,Final Energy|Hydrogen,baseline,6.11793893428039,290.0005695340339,PJ/yr,1.5687
+2050,Quebec,Final Energy|Industry,baseline,671.7322130359678,21.47915872103927,PJ/yr,855.4827
+2050,Quebec,Final Energy|Industry|Electricity,baseline,299.7451949148083,32.67378529773863,PJ/yr,445.2132
+2050,Quebec,Final Energy|Industry|Hydrogen,baseline,6.11793893428039,290.3489398507235,PJ/yr,1.5673
+2050,Quebec,Final Energy|Liquids|Biomass,baseline,0.0,100.0,PJ/yr,30.2251527
+2050,Quebec,Final Energy|Liquids|Gas,baseline,0.0,100.0,PJ/yr,16.0608684
+2050,Quebec,Final Energy|Liquids|Oil,baseline,124.7324537745074,61.700570052047055,PJ/yr,325.6770504
+2050,Quebec,Final Energy|Residential and Commercial,baseline,440.6449768580827,30.392325919896045,PJ/yr,633.0408
+2050,Quebec,Final Energy|Residential and Commercial|Electricity,baseline,288.6294110565556,41.20710912943535,PJ/yr,490.9257
+2050,Quebec,Final Energy|Solids|Biomass,baseline,234.4785,70.69338527343223,PJ/yr,137.3682405
+2050,Quebec,Final Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,4.6131945
+2050,Quebec,Secondary Energy|Gases|Natural Gas,baseline,380.3562581867809,5254.236771375021,PJ/yr,7.1038371
+2050,Quebec,Secondary Energy|Hydrogen,baseline,7.197575215360943,406.9714688131529,PJ/yr,1.419719976
+2050,Quebec,Secondary Energy|Liquids|Biomass,baseline,0.0,100.0,PJ/yr,383.5510173
+2050,Quebec,Secondary Energy|Liquids|Oil,baseline,125.9923775374083,100.0,PJ/yr,0.0
+2050,Saskatchewan,Carbon Sequestration|CCS,baseline,2.488725449114521,90.15223705863565,Mt CO2/yr,25.2719878
+2050,Saskatchewan,Final Energy,baseline,553.5237760522396,29.94847212572139,PJ/yr,790.1666
+2050,Saskatchewan,Final Energy|Electricity,baseline,95.19816190961177,27.627644713590172,PJ/yr,131.5394
+2050,Saskatchewan,Final Energy|Gases,baseline,133.1032307247076,60.19022368462461,PJ/yr,334.3481
+2050,Saskatchewan,Final Energy|Hydrogen,baseline,99.20893125535,27028.50184723817,PJ/yr,0.3657
+2050,Saskatchewan,Final Energy|Industry,baseline,355.1195208913271,23.127530738892553,PJ/yr,461.9593
+2050,Saskatchewan,Final Energy|Industry|Electricity,baseline,44.50094453693109,35.901338356068315,PJ/yr,69.4257
+2050,Saskatchewan,Final Energy|Industry|Hydrogen,baseline,99.20893125535,27320.931800815368,PJ/yr,0.3618
+2050,Saskatchewan,Final Energy|Liquids|Biomass,baseline,0.0,100.0,PJ/yr,5.9968728
+2050,Saskatchewan,Final Energy|Liquids|Gas,baseline,0.0,100.0,PJ/yr,14.4507014
+2050,Saskatchewan,Final Energy|Liquids|Oil,baseline,85.8789513665385,58.95527024720665,PJ/yr,209.2325906
+2050,Saskatchewan,Final Energy|Residential and Commercial,baseline,101.6383594490079,35.27905185909665,PJ/yr,157.0409
+2050,Saskatchewan,Final Energy|Residential and Commercial|Electricity,baseline,32.56571623909354,41.60176699125518,PJ/yr,55.7649
+2050,Saskatchewan,Final Energy|Solids|Biomass,baseline,52.10790000000001,367.05359372293407,PJ/yr,11.1567282
+2050,Saskatchewan,Final Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,288.7539483
+2050,Saskatchewan,Final Energy|Transportation,baseline,96.76589571190462,43.466769347310795,PJ/yr,171.1664
+2050,Saskatchewan,Resource|Extraction|Gas,baseline,54.63784596738098,55.5280069287712,PJ/yr,122.859
+2050,Saskatchewan,Secondary Energy|Electricity,baseline,172.0583736906031,26.40343813857628,PJ/yr,136.1184286
+2050,Saskatchewan,Secondary Energy|Gases|Natural Gas,baseline,305.6119114836962,59.0248197824145,PJ/yr,192.1787504
+2050,Saskatchewan,Secondary Energy|Hydrogen,baseline,116.7163896888332,31154.386916325035,PJ/yr,0.373440023
+2050,Saskatchewan,Secondary Energy|Liquids|Biomass,baseline,0.0,100.0,PJ/yr,36.6921517
+2050,Saskatchewan,Secondary Energy|Liquids|Oil,baseline,101.7440091744105,94.99499381737559,PJ/yr,2032.844825
+2050,Saskatchewan,Secondary Energy|Solids|Coal,baseline,0.0,100.0,PJ/yr,296.5798251
+2050,Yukon,Final Energy,baseline,7.172613333389764,36.07524390048694,PJ/yr,11.2204
+2050,Yukon,Final Energy|Electricity,baseline,1.580804904471582,29.69513433526431,PJ/yr,2.2485
+2050,Yukon,Final Energy|Gases,baseline,1.145823917732063,470.91376070356904,PJ/yr,0.2007
+2050,Yukon,Final Energy|Hydrogen,baseline,2.515621631222063,100.0,PJ/yr,0.0
+2050,Yukon,Final Energy|Industry,baseline,4.025850316949296,96.27762259028309,PJ/yr,2.0511
+2050,Yukon,Final Energy|Industry|Electricity,baseline,0.0293867525432734,72.4585262012433,PJ/yr,0.1067
+2050,Yukon,Final Energy|Industry|Hydrogen,baseline,2.515621631222063,100.0,PJ/yr,0.0
+2050,Yukon,Final Energy|Residential and Commercial|Electricity,baseline,1.322256441794084,36.84594536972422,PJ/yr,2.0937
+2050,Yukon,Final Energy|Transportation,baseline,1.08875785927174,83.90197301211332,PJ/yr,6.7633
+2050,Yukon,Secondary Energy|Electricity,baseline,1.086821442846847,51.54293153077361,PJ/yr,2.242854298
+2050,Yukon,Secondary Energy|Hydrogen,baseline,3.21906117354276,100.0,PJ/yr,0.0

@@ -41,12 +41,222 @@ index_order = [
     "Vintage",
 ]
 
-def convert_format(input_file, output_file_name):
+def OBPS_credits_tracking(scen, years):
+    act_df=scen.var("ACT")
+    carbon_cost_df = pd.read_csv("./data/OBPS_credits.csv")
+    carbon_cost_df.drop(columns=['2020'], inplace=True)
+    carbon_cost_df.fillna(0, inplace=True)
+    new_carbon_cost_df = pd.DataFrame(columns=carbon_cost_df.columns.tolist())
+    years = sorted(years)
+    aggregation_lable_mapping = {
+        'coal_adv_positive':'Carbon Cost|coal',
+        'coal_adv_negative':'Carbon Credit|coal',
+        'coal_adv_ccs_positive':'Carbon Cost|coal',
+        'coal_adv_ccs_negative':'Carbon Credit|coal',
+        'coal_fs_positive':'Carbon Cost|coal',
+        'coal_fs_negative':'Carbon Credit|coal',
+        'coal_gas_positive':'Carbon Cost|coal',
+        'coal_gas_negative':'Carbon Credit|coal',
+        'coal_i_positive':'Carbon Cost|coal',
+        'coal_i_negative':'Carbon Credit|coal',
+       'coal_ppl_positive':'Carbon Cost|coal',
+       'coal_ppl_negative':'Carbon Credit|coal',
+       'coal_ppl_u_positive':'Carbon Cost|coal',
+       'coal_ppl_u_negative':'Carbon Credit|coal',
+       'foil_fs_positive':'Carbon Cost|foil',
+       'foil_fs_negative':'Carbon Credit|foil',
+       'foil_i_positive':'Carbon Cost|foil',
+       'foil_i_negative':'Carbon Credit|foil',
+       'foil_ppl_positive':'Carbon Cost|foil',
+       'foil_ppl_negative':'Carbon Credit|foil',
+       'gas_cc_positive':'Carbon Cost|gas',
+       'gas_cc_negative':'Carbon Credit|gas',
+        'gas_cc_ccs_positive':'Carbon Cost|gas',
+        'gas_cc_ccs_negative':'Carbon Credit|gas',
+        'gas_ct_positive':'Carbon Cost|gas',
+        'gas_ct_negative':'Carbon Credit|gas',
+        'gas_extr_1_positive':'Carbon Cost|gas',
+        'gas_extr_1_negative':'Carbon Credit|gas',
+        'gas_extr_2_positive':'Carbon Cost|gas',
+        'gas_extr_2_negative':'Carbon Credit|gas',
+       'gas_extr_3_positive':'Carbon Cost|gas',
+       'gas_extr_3_negative':'Carbon Credit|gas',
+       'gas_extr_4_positive':'Carbon Cost|gas',
+       'gas_extr_4_negative':'Carbon Credit|gas',
+       'gas_extr_5_positive':'Carbon Cost|gas',
+       'gas_extr_5_negative':'Carbon Credit|gas',
+       'gas_extr_6_positive':'Carbon Cost|gas',
+       'gas_extr_6_negative':'Carbon Credit|gas',
+       'gas_fs_positive':'Carbon Cost|gas',
+       'gas_fs_negative':'Carbon Credit|gas',
+       'gas_i_positive':'Carbon Cost|gas',
+       'gas_i_negative':'Carbon Credit|gas',
+       'gas_ppl_positive':'Carbon Cost|gas',
+       'gas_ppl_negative':'Carbon Credit|gas',
+       'gas_t_d_positive':'Carbon Cost|gas',
+       'gas_t_d_negative':'Carbon Credit|gas',
+       'gas_t_d_ch4_positive':'Carbon Cost|gas',
+       'gas_t_d_ch4_negative':'Carbon Credit|gas',
+       'h2_atr_positive': 'Carbon Cost|h2',
+       'h2_atr_negative': 'Carbon Credit|h2',
+       'h2_atr_ccs_positive': 'Carbon Cost|h2',
+       'h2_atr_ccs_negative': 'Carbon Credit|h2',
+       'h2_coal_positive': 'Carbon Cost|h2',
+       'h2_coal_negative': 'Carbon Credit|h2',
+       'h2_coal_ccs_positive': 'Carbon Cost|h2',
+       'h2_coal_ccs_negative': 'Carbon Credit|h2',
+       'h2_smr_positive': 'Carbon Cost|h2',
+       'h2_smr_negative': 'Carbon Credit|h2',
+       'h2_smr_ccs_positive': 'Carbon Cost|h2',
+       'h2_smr_ccs_negative': 'Carbon Credit|h2',
+       'igcc_positive': 'Carbon Cost|igcc',
+       'igcc_negative': 'Carbon Credit|igcc',
+       'igcc_ccs_positive': 'Carbon Cost|igcc',
+       'igcc_ccs_negative': 'Carbon Credit|igcc',
+       'loil_cc_positive': 'Carbon Cost|loil',
+       'loil_cc_negative': 'Carbon Credit|loil',
+       'loil_fs_positive': 'Carbon Cost|loil',
+       'loil_fs_negative': 'Carbon Credit|loil',
+       'loil_i_positive': 'Carbon Cost|loil',
+       'loil_i_negative': 'Carbon Credit|loil',
+       'loil_ppl_positive': 'Carbon Cost|loil',
+       'loil_ppl_negative': 'Carbon Credit|loil',
+       'meth_coal_positive': 'Carbon Cost|meth',
+       'meth_coal_negative': 'Carbon Credit|meth',
+       'meth_coal_ccs_positive': 'Carbon Cost|meth',
+       'meth_coal_ccs_negative': 'Carbon Credit|meth',
+       'meth_h2_positive': 'Carbon Cost|meth',
+       'meth_h2_negative': 'Carbon Credit|meth',
+       'meth_i_positive': 'Carbon Cost|meth',
+       'meth_i_negative': 'Carbon Credit|meth',
+       'meth_ng_positive': 'Carbon Cost|meth',
+       'meth_ng_negative': 'Carbon Credit|meth',
+       'meth_ng_ccs_positive': 'Carbon Cost|meth',
+       'meth_ng_ccs_negative': 'Carbon Credit|meth',
+       'methanol_fs_positive': 'Carbon Cost|methanol',
+       'methanol_fs_negative': 'Carbon Credit|methanol',
+       'oil_extr_1_positive': 'Carbon Cost|oil',
+       'oil_extr_1_negative': 'Carbon Credit|oil',
+       'oil_extr_1_ch4_positive': 'Carbon Cost|oil',
+       'oil_extr_1_ch4_negative': 'Carbon Credit|oil',
+       'oil_extr_2_positive': 'Carbon Cost|oil',
+       'oil_extr_2_negative': 'Carbon Credit|oil',
+       'oil_extr_2_ch4_positive': 'Carbon Cost|oil',
+       'oil_extr_2_ch4_negative': 'Carbon Credit|oil',
+       'oil_extr_3_positive': 'Carbon Cost|oil',
+       'oil_extr_3_negative': 'Carbon Credit|oil',
+       'oil_extr_3_ch4_positive': 'Carbon Cost|oil',
+       'oil_extr_3_ch4_negative': 'Carbon Credit|oil',
+       'oil_extr_4_positive': 'Carbon Cost|oil',
+       'oil_extr_4_negative': 'Carbon Credit|oil',
+       'oil_extr_4_ch4_positive': 'Carbon Cost|oil',
+       'oil_extr_4_ch4_negative': 'Carbon Credit|oil',
+       'oil_extr_5_positive': 'Carbon Cost|oil',
+       'oil_extr_5_negative': 'Carbon Credit|oil',
+       'oil_extr_6_positive': 'Carbon Cost|oil',
+       'oil_extr_6_negative': 'Carbon Credit|oil',
+       'oil_extr_7_positive': 'Carbon Cost|oil',
+       'oil_extr_7_negative': 'Carbon Credit|oil',
+       'ref_hil_positive': 'Carbon Cost|ref',
+       'ref_hil_negative': 'Carbon Credit|ref',
+       'ref_lol_positive': 'Carbon Cost|ref',
+       'ref_lol_negative': 'Carbon Credit|ref',
+       'syn_liq_positive': 'Carbon Cost|syn_liq',
+       'syn_liq_negative': 'Carbon Credit|syn_liq',
+       'syn_liq_ccs_positive': 'Carbon Cost|syn_liq',
+       'syn_liq_ccs_negative': 'Carbon Credit|syn_liq'
+    }
+    total_credits = {AP:{year:0 for year in years} for AP in list(carbon_cost_df['node_loc'].unique())}
+    total_debits = {AP:{year:0 for year in years} for AP in list(carbon_cost_df['node_loc'].unique())}
+    for index, row in carbon_cost_df.iterrows():
+        new_row = row.copy()
+        new_row_positive = new_row.copy()
+        new_row_negative = new_row.copy()
+        new_row_positive["Variable"] += "_positive"
+        new_row_negative["Variable"] += "_negative"
+        province = row["node_loc"]
+        flag = False
+        for year in years:
+            act_row = act_df[
+                (act_df['node_loc'] == row['node_loc']) &
+                (act_df['technology'] == row['Variable']) &
+                (act_df['year_act'] == year)
+            ]
+            if not act_row.empty:
+                activity_value = list(dict(act_row)['mrg'])[0]
+                new_row[str(year)] *= activity_value
+                if new_row[str(year)]>=0:
+                    new_row_negative[str(year)] = (-1)*new_row[str(year)]
+                    new_row_positive[str(year)] = 0
+                    total_credits[province][year] += (-1)*new_row[str(year)]
+                else:
+                    new_row_negative[str(year)] = 0
+                    new_row_positive[str(year)] = (-1)*new_row[str(year)]
+                    total_debits[province][year] += (-1)*new_row[str(year)]
+                flag = True
+            # else:
+            #     print("scen row Not found!")
+            #     print(row['Variable'], year, row['node_loc'])
+        if flag:
+            #new_row['Variable'] = aggregation_lable_mapping[variable]
+            new_row_positive["Variable"] = aggregation_lable_mapping[new_row_positive["Variable"]]
+            new_row_negative["Variable"] = aggregation_lable_mapping[new_row_negative["Variable"]]
+            new_carbon_cost_df = pd.concat([new_carbon_cost_df, pd.DataFrame([new_row_positive])], ignore_index=True)
+            new_carbon_cost_df = pd.concat([new_carbon_cost_df, pd.DataFrame([new_row_negative])], ignore_index=True)
+    for province in list(carbon_cost_df['node_loc'].unique()):
+        new_row = {
+            'Variable': "Total Carbon Cost",
+            'Scenario': "baseline",
+            'Unit': "Unit",
+            'node_loc': province,
+        }
+        for year in years:
+            new_row[str(year)] = total_debits[province][year]
+        new_carbon_cost_df = pd.concat([new_carbon_cost_df, pd.DataFrame([new_row])], ignore_index=True)
+    for province in list(carbon_cost_df['node_loc'].unique()):
+        new_row = {
+            'Variable': "Total Carbon Credits",
+            'Scenario': "baseline",
+            'Unit': "Unit",
+            'node_loc': province,
+        }
+        for year in years:
+            new_row[str(year)] = total_credits[province][year]
+        new_carbon_cost_df = pd.concat([new_carbon_cost_df, pd.DataFrame([new_row])], ignore_index=True)
+    # Step 1: Ensure numeric columns are actually numeric
+    for col in new_carbon_cost_df.columns:
+        if col not in ['Variable', 'Scenario', 'Unit', 'node_loc', 'Unnamed: 0']:
+            new_carbon_cost_df[col] = pd.to_numeric(new_carbon_cost_df[col], errors='coerce')
+    # Step 2: Define grouping keys
+    group_cols = ['Variable', 'Scenario', 'Unit', 'node_loc']
+    new_carbon_cost_df["Model"] = scen.model
+    # Step 3: Get numeric columns (e.g., years like 2025, 2030)
+    numeric_cols = new_carbon_cost_df.select_dtypes(include='number').columns
+    # Optional: remove index-like columns
+    numeric_cols = [col for col in numeric_cols if not col.startswith('Unnamed')]
+    # Step 4: Group and sum
+    summed_df = new_carbon_cost_df.groupby(group_cols, as_index=False)[numeric_cols].sum()
+    summed_df["Scenario"] = scen.scenario
+    summed_df["Model"] = scen.model
+    summed_df["Unit"] = "$"
+    return summed_df
+
+def convert_format(scen, input_file, output_file_name):
     # Read the Excel file
     df = pd.read_excel(input_file)
 
     # Convert only the negative values in the columns from 2020 to 2060 to their absolute values
-    df.loc[:, 2020:2060] = df.loc[:, 2020:2060].abs()
+    # df.loc[:, 2020:2060] = df.loc[:, 2020:2060].abs()
+    years = list(df.columns[0:-5])
+
+    for year in years:
+        df[year] = df[year].abs()
+
+    summed_df = OBPS_credits_tracking(scen, years)
+    
+    summed_df = summed_df.rename(columns={'node_loc': 'Region', '2025':2025, '2030':2030, '2035':2035, '2040':2040, '2045':2045, '2050':2050, '2055':2055, '2060':2060})
+
+    df = pd.concat([df, summed_df[df.columns]], ignore_index=True)
 
     # Drop rows where 'Region' is NaN
     df = df.dropna(subset=['Region'])
@@ -69,8 +279,9 @@ def convert_format(input_file, output_file_name):
     # Rename 'year' column to 'time'
     df.rename(columns={'year':'time'}, inplace=True)
 
-    # Save to CSV
-    df.to_csv(output_file_name)
+    with pd.ExcelWriter(output_file_name, engine="xlsxwriter") as writer:
+        df.to_excel(writer, sheet_name="data", index=False)
+    
 
 def combineDict(*args):
     result = {}
@@ -386,7 +597,7 @@ def cum_vals(df):
     return df.sort_index()
 
 
-def write_xlsx(df, path, out_file_timestamp, IDEA_format=False):
+def write_xlsx(scen, df, path, out_file_timestamp, IDEA_format=False):
     """Writes final results dataframe to xlsx file.
 
     Parameters
@@ -403,7 +614,7 @@ def write_xlsx(df, path, out_file_timestamp, IDEA_format=False):
         df.to_excel(writer, sheet_name="data", index=False)
     
     if IDEA_format:
-        convert_format(out_path, pyam_out_path)
+        convert_format(scen, out_path, pyam_out_path)
 
     return out_path
 
