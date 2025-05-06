@@ -15,7 +15,7 @@ scenario_config:
     model: MESSAGEix-CA
     solve: True
     scenario: baseline
-    scenario_name: baseline
+    scenario_name: OBPS
     annotation: Initial setup for Canadian energy model.
     version: new
   policy_config:
@@ -27,7 +27,7 @@ scenario_config:
     add_techs: False
     investment_tax_credit: False
     apply_renewable_potential: False
-    apply_obps: False
+    apply_obps: True
     obps_excel_sheet: 'New_OBPS_Stringent'
     obps_policy_carbon_cost:
       2025: 125
