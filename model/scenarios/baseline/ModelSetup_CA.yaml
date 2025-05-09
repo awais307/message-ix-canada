@@ -30,7 +30,7 @@ scenario_config:
     apply_obps: True
     obps_excel_sheet: 'New_OBPS_Stringent'
     obps_policy_carbon_cost:
-      2025: 125
+      2025: 95
       2030: 170
       more_than_2035: 170
   post_process_config:
@@ -39,7 +39,7 @@ scenario_config:
     new_reporter: False
     IDEA_format: True
 path_config:
-  provincial_input_file: scenarios/baseline/model_default_v32.xlsx
+  provincial_input_file: scenarios/baseline/baseline_v1.xlsx
   scenario_folder: scenarios/baseline
   out_dir: model/output
   ITC_policy_input_data: ./data/assumptions_database_example(ITCs).csv
