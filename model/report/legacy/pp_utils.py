@@ -45,7 +45,8 @@ def OBPS_credits_tracking(scen, years):
     act_df=scen.var("ACT")
     act_df["lvl"]=act_df["lvl"]*10**6
     carbon_cost_df = pd.read_csv("./data/OBPS_credits.csv")
-    carbon_cost_df.drop(columns=['2020'], inplace=True)
+    carbon_cost_df = carbon_cost_df[['2025','2030','2035','2040','2045','2050','2055','2060','Model','node_loc','Scenario', 'Unit', 'Variable']]
+    #carbon_cost_df.drop(columns=['2020'], inplace=True)
     carbon_cost_df.fillna(0, inplace=True)
     new_carbon_cost_df = pd.DataFrame(columns=carbon_cost_df.columns.tolist())
     years = sorted(years)
@@ -169,7 +170,8 @@ def OBPS_credits_tracking(scen, years):
     }
     total_credits = {AP:{year:0 for year in years} for AP in list(carbon_cost_df['node_loc'].unique())}
     total_debits = {AP:{year:0 for year in years} for AP in list(carbon_cost_df['node_loc'].unique())}
-    for index, row in carbon_cost_df.iterrows():
+
+    for _, row in carbon_cost_df.iterrows():
         new_row = row.copy()
         new_row_positive = new_row.copy()
         new_row_negative = new_row.copy()
@@ -178,14 +180,18 @@ def OBPS_credits_tracking(scen, years):
         province = row["node_loc"]
         flag = False
         for year in years:
-            act_row = act_df[
-                (act_df['node_loc'] == row['node_loc']) &
-                (act_df['technology'] == row['Variable']) &
-                (act_df['year_act'] == year)
-            ]
+            try:
+                act_row = act_df[
+                    (act_df['node_loc'] == row['node_loc']) &
+                    (act_df['technology'] == row['Variable']) &
+                    (act_df['year_act'] == year)
+                ]
+            except:
+                print("188")
 
-            if not act_row.empty:
-                activity_value = list(dict(act_row)['lvl'])[0]
+            #if not act_row.empty:
+            try:
+                activity_value = act_row['lvl'].sum() #list(dict(act_row)['lvl'])[0]
                 new_row[str(year)] *= activity_value
                 if new_row[str(year)]>=0:
                     new_row_negative[str(year)] = 0
@@ -196,6 +202,8 @@ def OBPS_credits_tracking(scen, years):
                     new_row_positive[str(year)] = 0
                     total_credits[province][year] += new_row[str(year)]
                 flag = True
+            except:
+                print("act was empty!:  ",act_row)
             # else:
             #     print("scen row Not found!")
             #     print(row['Variable'], year, row['node_loc'])
@@ -205,6 +213,10 @@ def OBPS_credits_tracking(scen, years):
             new_row_negative["Variable"] = aggregation_lable_mapping[new_row_negative["Variable"]]
             new_carbon_cost_df = pd.concat([new_carbon_cost_df, pd.DataFrame([new_row_positive])], ignore_index=True)
             new_carbon_cost_df = pd.concat([new_carbon_cost_df, pd.DataFrame([new_row_negative])], ignore_index=True)
+
+    year_columns = ['2025', '2030', '2035', '2040', '2045', '2050', '2055', '2060']
+    new_carbon_cost_df = new_carbon_cost_df.groupby(['node_loc', 'Variable'])[year_columns].sum().reset_index()
+
     for province in list(carbon_cost_df['node_loc'].unique()):
         new_row = {
             'Variable': "Carbon Credit|Bought|Total",
@@ -215,6 +227,7 @@ def OBPS_credits_tracking(scen, years):
         for year in years:
             new_row[str(year)] = total_debits[province][year]
         new_carbon_cost_df = pd.concat([new_carbon_cost_df, pd.DataFrame([new_row])], ignore_index=True)
+
     for province in list(carbon_cost_df['node_loc'].unique()):
         new_row = {
             'Variable': "Carbon Credit|Sold|Total",
@@ -225,10 +238,14 @@ def OBPS_credits_tracking(scen, years):
         for year in years:
             new_row[str(year)] = total_credits[province][year]
         new_carbon_cost_df = pd.concat([new_carbon_cost_df, pd.DataFrame([new_row])], ignore_index=True)
+
     # Step 1: Ensure numeric columns are actually numeric
     for col in new_carbon_cost_df.columns:
         if col not in ['Variable', 'Scenario', 'Unit', 'node_loc', 'Unnamed: 0']:
             new_carbon_cost_df[col] = pd.to_numeric(new_carbon_cost_df[col], errors='coerce')
+
+    new_carbon_cost_df.to_excel("obps_dbg.xlsx", sheet_name="data")
+
     # Step 2: Define grouping keys
     group_cols = ['Variable', 'Scenario', 'Unit', 'node_loc']
     new_carbon_cost_df["Model"] = scen.model
@@ -237,12 +254,12 @@ def OBPS_credits_tracking(scen, years):
     # Optional: remove index-like columns
     numeric_cols = [col for col in numeric_cols if not col.startswith('Unnamed')]
     # Step 4: Group and sum
-    summed_df = new_carbon_cost_df.groupby(group_cols, as_index=False)[numeric_cols].sum()
-    summed_df["Scenario"] = scen.scenario
-    summed_df["Model"] = scen.model
-    summed_df["Unit"] = "$"
+    #summed_df = new_carbon_cost_df.groupby(group_cols, as_index=False)[numeric_cols].sum()
+    new_carbon_cost_df["Scenario"] = scen.scenario
+    new_carbon_cost_df["Model"] = scen.model
+    new_carbon_cost_df["Unit"] = "$"
     
-    return summed_df
+    return new_carbon_cost_df
 
 def convert_format(scen, input_file, output_file_name):
     # Read the Excel file
