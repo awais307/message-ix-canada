@@ -89,8 +89,8 @@ def OBPS_credits_tracking(scen, years):
         'gas_extr_5_negative': 'Carbon Credit|Sold|gas_extr',
         'gas_extr_6_positive': 'Carbon Credit|Bought|gas_extr',
         'gas_extr_6_negative': 'Carbon Credit|Sold|gas_extr',
-        'gas_fs_positive': 'Carbon Credit|Bought|gas_ind',
-        'gas_fs_negative': 'Carbon Credit|Sold|gas_ind',
+        'gas_fs_positive': 'Carbon Credit|Bought|gas_feed',
+        'gas_fs_negative': 'Carbon Credit|Sold|gas_feed',
         'gas_i_positive': 'Carbon Credit|Bought|gas_ind',
         'gas_i_negative': 'Carbon Credit|Sold|gas_ind',
         'gas_ppl_positive': 'Carbon Credit|Bought|gas_elec',
@@ -166,7 +166,13 @@ def OBPS_credits_tracking(scen, years):
         'syn_liq_positive': 'Carbon Credit|Bought|syn_liq',
         'syn_liq_negative': 'Carbon Credit|Sold|syn_liq',
         'syn_liq_ccs_positive': 'Carbon Credit|Bought|syn_liq',
-        'syn_liq_ccs_negative': 'Carbon Credit|Sold|syn_liq'
+        'syn_liq_ccs_negative': 'Carbon Credit|Sold|syn_liq',
+        'h2_i_positive': 'Carbon Credit|Bought|h2_ind',
+        'h2_i_negative': 'Carbon Credit|Sold|h2_ind',
+        'biomass_i_positive': 'Carbon Credit|Bought|biomass_ind',
+        'biomass_i_negative': 'Carbon Credit|Sold|biomass_ind',
+        'elec_i_positive': 'Carbon Credit|Bought|elec_ind',
+        'elec_i_negative': 'Carbon Credit|Sold|elec_ind'
     }
     total_credits = {AP:{year:0 for year in years} for AP in list(carbon_cost_df['node_loc'].unique())}
     total_debits = {AP:{year:0 for year in years} for AP in list(carbon_cost_df['node_loc'].unique())}
@@ -272,11 +278,11 @@ def convert_format(scen, input_file, output_file_name):
     for year in years:
         df[year] = df[year].abs()
 
-    summed_df = OBPS_credits_tracking(scen, years)
+    #summed_df = OBPS_credits_tracking(scen, years)
     
-    summed_df = summed_df.rename(columns={'node_loc': 'Region', '2025':2025, '2030':2030, '2035':2035, '2040':2040, '2045':2045, '2050':2050, '2055':2055, '2060':2060})
+    #summed_df = summed_df.rename(columns={'node_loc': 'Region', '2025':2025, '2030':2030, '2035':2035, '2040':2040, '2045':2045, '2050':2050, '2055':2055, '2060':2060})
 
-    df = pd.concat([df, summed_df[df.columns]], ignore_index=True)
+    #df = pd.concat([df, summed_df[df.columns]], ignore_index=True)
 
     # Drop rows where 'Region' is NaN
     df = df.dropna(subset=['Region'])
