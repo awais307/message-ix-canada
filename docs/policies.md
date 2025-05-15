@@ -39,117 +39,99 @@ This payable emission intensity is then multiplied by the federal carbon price t
 
 As MESSAGEix-Canada is unable to depict revenue streams, credits must be depicted a different way. When OBPS mapped technologies have a lower emission intensity then the OBPS emission standards a negative “receivable emission intensity” can be defined. The amount of “payable” and “receivable” emission intensities can then be tracked. Through an iterative process, the credit price was varied until supply and demand of credits roughly matched in the model results.
 
-# Canada Electricity Regulation (CER)
+
+# Canada Electricity Regulation (CER) Implementation in MESSAGEix-Canada
 
 ## Overview
 
-This documentation describes the implementation of the **Canada Electricity Regulation** **(CER)** policy in the MESSAGEix-Canada model. The policy enforces direct emission intensity limits on electricity generation technologies, while allowing offset purchases as a compliance mechanism. This feature is designed to reflect Canada's **Clean Electricity Regulations** framework and provincial climate policies such as those in **British Columbia (BC)** and  **Alberta** .
+This documentation explains the integration of the **Canada Electricity Regulation (CER)** in the MESSAGEix-Canada energy system model. The CER policy enforces a direct emission intensity limit on electricity generation technologies and allows offset credit purchases to partially comply with the regulation. This implementation reflects the design principles of Canada's  **Clean Electricity Regulations** , as well as regional policy variants from provinces such as **British Columbia (BC)** and  **Alberta** .
 
 ## Objective
 
-To ensure that electricity generation technologies meet a  **maximum allowed emission intensity threshold** , while optionally purchasing offset credits if the emissions exceed the allowed limit.
+Ensure that electricity generation emissions remain within a specified emission intensity threshold (e.g., tCO₂/MWh), while enabling partial compliance through the use of  **carbon offset credits** .
 
 ---
 
 ## Methodology
 
-### Relation Setup
+### 1. Relation Setup
 
-A new relation `cer_direct_emission_intensity` is introduced in the model to enforce the CER constraint.
+Two new relations are introduced:
 
-#### Step 1: Adding Technologies
+* `cer_direct_emission_intensity` → Enforces the main emissions intensity constraint.
+* `cer_offset_limit` → Limits the maximum share of emissions that can be offset using purchased credits.
 
-We identify **electricity generation technologies** from the model that emit carbon dioxide, using the following logic:
+### 2. Relation Construction
 
-* **Include** fossil and bioenergy-based generation technologies.
-* **Exclude** renewables (e.g., wind, solar), zero-emission imports, and negative-emission technologies unless they are partial CCS.
+#### a. Emission Intensity Constraint
 
-#### Step 2: Constructing the Relation
+For each emitting technology:
 
-The CER relation is constructed by assigning:
+* **+1** assigned to the emission flow technology (e.g., `CO2_TCE`)
+* **-λ** assigned to the electricity-generating technology's output flow (e.g., `electr` at `secondary` level)
 
-* **+1** to the emitting technology's **CO2 emission activity** (e.g., `CO2_TCE` or `CO2_emission` technology).
-* **-λ** to the technology's **electricity output** (e.g., `electr` at `secondary` level), where λ is the emission intensity threshold.
-
-This structure ensures that a technology can only operate within the allowed emission limits:
+This defines a linear inequality:
 
 ```
-(+1 × Emissions) - (λ × Electricity Output) <= 0
+(+1 * Emissions) - (λ * Electricity Output) <= 0
 ```
 
-> Example: If λ = 0.065 tCO2/MWh, it is transformed to 0.5694 MtC/GWyr.
+Example: If λ = 0.065 tCO₂/MWh, it is transformed to 0.5694 MtC/GWyr.
 
-#### Step 3: Offsets
+#### b. Offset Contribution Constraint
 
-Technologies can purchase offsets to compensate for excess emissions:
+Offsets are included with **+1** values in the `cer_direct_emission_intensity` relation. Additionally, the `cer_offset_limit` relation limits the contribution of offset purchases:
 
-* Offset technologies (e.g., `credits_purchase`) are added to the relation with a **+1** value, contributing positively.
-* These are assigned a `tax_emission` cost based on provincial/federal carbon market values.
+```
+Total Offsets <= 10% of total allowed emissions
+```
 
-#### Step 4: Emission Constraint Application
+This is applied by:
 
-The upper bound of the relation is set to 0, making it a  **hard constraint** :
+* **+1** for offset technologies
+* **-0.1 * λ** for electricity-generating technologies
+
+### 3. Bound Setup
+
+Both relations are given a hard constraint by setting:
 
 ```yaml
 relation_upper:
-  relation: cer_direct_emission_intensity
-  node_rel: <Province>
-  year_rel: <Year>
   value: 0
 ```
+
+This ensures emissions must stay within the permissible limit, including the offset cap.
 
 ---
 
 ## Provincial Carbon Prices for Offsets
 
-| Province         | CAD/tCO2 (2025) | USD2010/tCO2 |
-| ---------------- | --------------- | ------------ |
-| Alberta          | 65              | 39.00        |
-| British Columbia | 40              | 24.00        |
-| Federal (Rest)   | 50              | 30.00        |
+| Province         | CAD/tCO₂ (2025) | USD2010/tCO₂ |
+| ---------------- | ---------------- | ------------- |
+| Alberta          | 65               | 39.00         |
+| British Columbia | 40               | 24.00         |
+| Federal (Rest)   | 50               | 30.00         |
 
-> Conversion: 1 CAD2025 = 0.75 USD2025, then divided by 1.25 to convert to USD2010.
+**Conversion Note:** 1 CAD2025 → 0.75 USD2025, then divided by 1.25 to convert to USD2010.
 
-Carbon prices are applied using the `tax_emission` parameter.
-
----
-
-## Sample Implementation Snippets
-
-### Emission Relation Example
-
-```csv
-relation,node_rel,year_rel,node_loc,technology,year_act,mode,value,unit
-cer_direct_emission_intensity,Alberta,2030,Alberta,CO2_TCE,2030,M1,1,-
-cer_direct_emission_intensity,Alberta,2030,Alberta,bio_istig,2030,M1,-0.5694,-
-```
-
-### Offset Example
-
-```csv
-relation,node_rel,year_rel,node_loc,technology,year_act,mode,value,unit
-cer_direct_emission_intensity,Alberta,2030,Alberta,credits_purchase,2030,M1,1,-
-```
-
-### Tax Emission for Offsets
-
-```csv
-tax_emission,node,year,technology,mode,emission,value,unit
-Alberta,2030,credits_purchase,M1,TCE,39.0,USD/tC
-```
-
----
+These are added via the `tax_emission` parameter.
 
 ## References
 
-* [*Clean Electricity Regulations*](https://www.canada.ca/en/services/environment/weather/climatechange/climate-plan/clean-electricity.html)
-* British Columbia Carbon Pricing (TODO: Add Link)
-* Alberta TIER Regulation (TODO: Add Link)
+* [*Canada Clean Electricity Regulations*](https://www.canada.ca/en/services/environment/weather/climatechange/climate-plan/clean-electricity.html)
+* Alberta TIER Regulation (Add Link)
+* British Columbia Carbon Market (Add Link)
 
 ---
 
-## Notes and Limitations
+## Limitations
 
-* The emission factor values are not modified during this implementation. Existing `emission factors`  are used.
-* Renewable technologies (wind, hydro, solar) are excluded from the CER relation.
-* This relation is enforced from 2025 onwards.
+* **Vintaging not accounted** : The CER does not currently differentiate between newly built and existing plants based on their commissioning date.
+* **Static Thresholds** : The emission limits are hardcoded per policy design but may require updating for future policy revisions.
+* **Technology Classification** : Inclusion of partial CCS and hydrogen-based generation can be context-sensitive and may require modeler judgment.
+
+---
+
+## Conclusion
+
+This implementation of the CER provides a structured and policy-aligned mechanism for regulating emissions from electricity generation, offering flexibility via offsets, and maintaining system integrity through capped compliance mechanisms. This feature allows MESSAGEix-Canada to simulate decarbonization pathways under federal and provincial constraints effectively.
