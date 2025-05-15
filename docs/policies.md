@@ -142,10 +142,9 @@ Alberta,2030,credits_purchase,M1,TCE,39.0,USD/tC
 
 ## References
 
-* Government of Canada (2023).  *Regulations Amending the Reduction of Carbon Dioxide Emissions from Coal-fired Generation of Electricity Regulations* . [https://www.canada.ca](https://www.canada.ca/)
-* Environment and Climate Change Canada (ECCC).  *Clean Electricity Regulations Discussion Paper* .
-* British Columbia Carbon Pricing: [https://www2.gov.bc.ca](https://www2.gov.bc.ca/)
-* Alberta TIER Regulation: [https://www.alberta.ca/tier](https://www.alberta.ca/tier)
+* [*Clean Electricity Regulations*](https://www.canada.ca/en/services/environment/weather/climatechange/climate-plan/clean-electricity.html)
+* British Columbia Carbon Pricing (TODO: Add Link)
+* Alberta TIER Regulation (TODO: Add Link)
 
 ---
 
