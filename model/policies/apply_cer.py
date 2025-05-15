@@ -1,21 +1,28 @@
 import pandas as pd
 from message_ix import make_df
+import pandas as pd
+
+import pandas as pd
+from message_ix import make_df
 
 def add_cer_emission_constraint_and_offsets(
     scen,
-    relation_name="cer_direct_emission_intensity",
+    relation_name_direct="cer_direct_emission_intensity",
+    relation_name_offset="cer_offset_limit",
     tech_list=None,
     offset_techs=None,
     years=None,
     mode="M1",
-    emission="TCE",
+    emission="CO2_TCE",
     output_commodity="electr",
     output_level="secondary",
     output_time="year",
     intensity_limit=0.5694,
+    offset_limit=0.1
 ):
     """
-    Add CER emission constraint relation and offset purchasing options using tax_emission.
+    Add CER emission constraint and offset purchasing limits.
+    One relation enforces direct emission intensity, another bounds offset usage.
     """
 
     print("🔧 Starting CER constraint and offset implementation...")
@@ -23,40 +30,36 @@ def add_cer_emission_constraint_and_offsets(
     if tech_list is None or years is None or offset_techs is None:
         raise ValueError("❌ tech_list, offset_techs, and years must all be provided.")
 
-    # Filter years
     years = [y for y in years if y >= 2030]
     print(f"📅 Target years filtered to: {years}")
 
-    # Get subnational nodes
     all_nodes = scen.set("node")
     subnational_nodes = [n for n in all_nodes if n not in ["World", "Canada"]]
     print(f"🌎 Operating on subnational nodes: {subnational_nodes}")
 
-    records_relation = []
-    records_upper = []
-    records_tax = []
-
-    print(f"⚙️ Adding relation_activity entries for techs and offsets...")
+    records_relation_direct = []
+    records_relation_offset = []
+    records_upper_direct = []
+    records_upper_offset = []
 
     for node in subnational_nodes:
         for year in years:
-
-            # Electricity technologies
+            # Add relation enforcing intensity limit
             for tec in tech_list:
-                records_relation.extend([
+                records_relation_direct.extend([
                     {
-                        "relation": relation_name,
+                        "relation": relation_name_direct,
                         "node_rel": node,
                         "node_loc": node,
                         "year_rel": year,
-                        "technology": 'CO2_TCE',
+                        "technology": emission,
                         "year_act": year,
                         "mode": mode,
                         "value": 1.0,
                         "unit": "-"
                     },
                     {
-                        "relation": relation_name,
+                        "relation": relation_name_direct,
                         "node_rel": node,
                         "node_loc": node,
                         "year_rel": year,
@@ -68,10 +71,18 @@ def add_cer_emission_constraint_and_offsets(
                     }
                 ])
 
-            # Offset technologies
+            records_upper_direct.append({
+                "relation": relation_name_direct,
+                "node_rel": node,
+                "year_rel": year,
+                "value": 0,
+                "unit": "-"
+            })
+
+            # Add offset limit relation
             for tec in offset_techs:
-                records_relation.append({
-                    "relation": relation_name,
+                records_relation_offset.append({
+                    "relation": relation_name_offset,
                     "node_rel": node,
                     "node_loc": node,
                     "year_rel": year,
@@ -82,63 +93,36 @@ def add_cer_emission_constraint_and_offsets(
                     "unit": "-"
                 })
 
-                # Assign province-specific offset cost
-                if node == "Alberta":
-                    tax_cad_2025 = 60
-                elif node == "BritishColumbia":
-                    tax_cad_2025 = 35
-                else:
-                    tax_cad_2025 = 85 #USD/tC
-
-                # Convert CAD 2025 to USD 2010
-                tax_usd_2010 = (tax_cad_2025 * 0.75) / 1.25
-
-                records_tax.append({
-                    "node": node,
-                    "type_year": year,
-                    "type_tec": 'credits_p',
-                    "mode": mode,
-                    "type_emission": emission,
-                    "value": tax_usd_2010,
-                    "unit": "USD/tC"
-                })
-
-            records_upper.append({
-                "relation": relation_name,
+            records_upper_offset.append({
+                "relation": relation_name_offset,
                 "node_rel": node,
                 "year_rel": year,
-                "value": 0,
+                "value": offset_limit,
                 "unit": "-"
             })
 
-    print("📋 DataFrames being created...")
+    df_relation_direct = pd.DataFrame(records_relation_direct)
+    df_relation_offset = pd.DataFrame(records_relation_offset)
+    df_upper_direct = pd.DataFrame(records_upper_direct)
+    df_upper_offset = pd.DataFrame(records_upper_offset)
 
-    df_relation_activity = pd.DataFrame(records_relation)
-    df_relation_upper = pd.DataFrame(records_upper)
-    df_tax_emission = pd.DataFrame(records_tax)
-    df_cat_tech = make_df('cat_tec',
-             type_tec = 'credits_p',
-             technology = 'credits_purchase')
-    
-
-    
-    print(f"🧾 Number of relation_activity entries: {len(df_relation_activity)}")
-    print(f"📈 Number of tax_emission entries: {len(df_tax_emission)}")
-    print(f"🛑 Setting relation_upper for all nodes and years...")
+    df_cat_tech = make_df("cat_tec", type_tec="credits_b", technology="credits_buy")
 
     print("💾 Committing changes to scenario...")
+    with scen.transact("Add CER emission intensity and offset constraint"):
+        scen.add_set("technology", offset_techs)
+        scen.add_set("relation", relation_name_direct)
+        scen.add_set("relation", relation_name_offset)
+        scen.add_set("type_tec", "credits_b")
+        scen.add_set("cat_tec", df_cat_tech)
 
-    with scen.transact("Add CER constraint and offset tax"):
-        scen.add_set('technology', offset_techs)
-        scen.add_set("relation", relation_name)
-        scen.add_set('type_tec', 'credits_p')
-        scen.add_set('cat_tec', df_cat_tech)
-        scen.add_par("relation_activity", df_relation_activity)
-        scen.add_par("relation_upper", df_relation_upper)
-        scen.add_par("tax_emission", df_tax_emission)
+        scen.add_par("relation_activity", df_relation_direct)
+        scen.add_par("relation_activity", df_relation_offset)
+        scen.add_par("relation_upper", df_upper_direct)
+        scen.add_par("relation_upper", df_upper_offset)
 
-    print("✅ CER emission constraint and offset implementation complete.")
-import pandas as pd
+    print("✅ CER policy successfully implemented in model.")
+
 
 def add_technical_lifetime(scen, techs, start_year=2025, lifetime=25):
     """
@@ -184,35 +168,51 @@ def add_technical_lifetime(scen, techs, start_year=2025, lifetime=25):
 
 def main ():
 
-# Get electricity generation techs
-tech_list_cer = [
-    # Fossil and bio without CCS
-    'bio_istig', 'coal_adv', 'coal_ppl',  'gas_cc',
-    'liq_bio', 'loil_cc', 'loil_ppl', 
-   , 'elec_imp', 'gas_ct', 'gas_ppl', 'foil_ppl',
+    # === Import and setup ===
+    import pandas as pd# Make sure function is modularized
 
-    # Partial CCS (optional – remove if full capture assumed)
-    'coal_adv_ccs', 'gas_cc_ccs'
-]
+    # === Define electricity generation technologies for CER constraint ===
+    tech_list_cer = [
+        # Fossil and bio-based generators without full CCS
+        'bio_istig', 'coal_adv', 'coal_ppl', 'gas_cc',
+        'liq_bio', 'loil_cc', 'loil_ppl', 'syn_liq',
+        'elec_imp', 'gas_ct', 'gas_ppl', 'foil_ppl',
+
+        # Partial CCS technologies (only if they do not fully eliminate emissions)
+        'coal_adv_ccs', 'gas_cc_ccs'
+    ]
+
+    # === Define offset technology (e.g., credit market) ===
+    offset_techs = ['credits_buy']
+
+    # === Extract model sets ===
+    years = scenario.set('year')
+    nodes = scenario.set('node')
+
+    # === Optional: Filter for relevant years and provinces ===
+    # This keeps only future years (e.g., from 2030 onwards)
+    target_years = sorted([y for y in years if int(y) > 2030])
+    subnational_nodes = sorted([n for n in nodes if n not in {"World", "Canada"}])
+
+    # === Call the CER implementation function ===
+    add_cer_emission_constraint_and_offsets(
+        scenario,
+        relation_name_direct="cer_direct_emission_intensity",
+        relation_name_offset="cer_offset_limit",
+        tech_list=tech_list_cer,
+        offset_techs=offset_techs,
+        years=target_years,
+        mode="M1",
+        emission="CO2_TCE",
+        output_commodity="electr",
+        output_level="secondary",
+        output_time="year",
+        intensity_limit=0.5694,
+        offset_limit=0.1  # Adjust to match CER threshold (e.g., 0.042 MtCO₂/GWh = ~0.5694 MtC/GWyr)
+    )
+
+    print("✅ CER policy constraints added to scenario.")
 
 
-
-# Define offset tech(s)
-offset_techs = ['credits_purchase']  # or ['offset_ccs', ...]
-
-
-
-# Years and nodes
-years = scenario.set('year')
-nodes = scenario.set('node')
-
-# Apply function
-add_cer_emission_constraint_and_offsets(
-    scenario,
-    tech_list=tech_list_cer,
-    offset_techs=offset_techs,
-    years=years
-)
-
-techs = ["bio_istig_ccs", "eth_bio_ccs", "h2_bio_ccs", "liq_bio_ccs"]
-add_technical_lifetime(scenario, techs)
+    techs = ["bio_istig_ccs", "eth_bio_ccs", "h2_bio_ccs", "liq_bio_ccs"]
+    add_technical_lifetime(scenario, techs)
