@@ -187,10 +187,9 @@ def main ():
 # Get electricity generation techs
 tech_list_cer = [
     # Fossil and bio without CCS
-    'bio_istig', 'coal_adv', 'coal_ppl', 'eth_bio', 'gas_cc',
-    'geo_ppl', 'h2_bio', 'h2_coal', 'h2_smr', 'igcc',
-    'liq_bio', 'loil_cc', 'loil_ppl', 'meth_coal', 'meth_ng',
-    'syn_liq', 'elec_imp', 'gas_ct', 'gas_ppl', 'foil_ppl', 'h2_atr',
+    'bio_istig', 'coal_adv', 'coal_ppl',  'gas_cc',
+    'liq_bio', 'loil_cc', 'loil_ppl', 
+   , 'elec_imp', 'gas_ct', 'gas_ppl', 'foil_ppl',
 
     # Partial CCS (optional – remove if full capture assumed)
     'coal_adv_ccs', 'gas_cc_ccs'
