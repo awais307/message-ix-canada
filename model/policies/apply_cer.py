@@ -193,9 +193,7 @@ tech_list_cer = [
     'syn_liq', 'elec_imp', 'gas_ct', 'gas_ppl', 'foil_ppl', 'h2_atr',
 
     # Partial CCS (optional – remove if full capture assumed)
-    'coal_adv_ccs', 'gas_cc_ccs', 'eth_bio_ccs', 'h2_bio_ccs',
-    'h2_coal_ccs', 'h2_smr_ccs', 'igcc_ccs', 'liq_bio_ccs',
-    'meth_coal_ccs', 'meth_ng_ccs', 'syn_liq_ccs',
+    'coal_adv_ccs', 'gas_cc_ccs'
 ]
 
 
