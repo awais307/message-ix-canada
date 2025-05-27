@@ -13,14 +13,14 @@ scenario_config:
     jvmargs: -Xmx16g
   source_scenario:
     model: MESSAGEix-CA
-    solve: True
-    scenario: baseline
-    scenario_name: baseline
+    solve: False
+    scenario: netzero_pes
+    scenario_name: netzero_pes
     annotation: Initial setup for Canadian energy model.
     version: new
   policy_config:
-    add_technology_techs: ['h2_atr_ccs', 'gas_h2', 'h2_stor_geo', 'liq_h2',
-      'h2_atr', 'h2_gas_fc_trp', 'meth_h2'] #'h2_pyrolysis', 'h2_stor_geo_charge', 'h2_stor_geo_discharge'
+    add_technology_techs: ['h2_atr_ccs', 'gas_h2', 'liq_h2',
+      'h2_atr', 'h2_gas_fc_trp', 'meth_h2','h2_pyrolysis','h2_stor_geo','h2_stor_geo_charge', 'h2_stor_geo_discharge']
     process_historical: False
     apply_renewable_potential: False
     add_hydrogen_shares_f: False
@@ -35,12 +35,12 @@ scenario_config:
       more_than_2035: 170
   post_process_config:
     to_excell: False
-    legacy_reporter: True
+    legacy_reporter: false
     new_reporter: False
-    IDEA_format: True
+    IDEA_format: False
 path_config:
-  provincial_input_file: scenarios/baseline/baseline_v1.xlsx
-  scenario_folder: scenarios/baseline
+  provincial_input_file: scenarios/netzero_pes/netzero_OBPS_CER.xlsx
+  scenario_folder: scenarios/netzero
   out_dir: model/output
   ITC_policy_input_data: ./data/assumptions_database_example(ITCs).csv
   OBPS_policy_input_data: ./data/New_OBPS.xlsx
