@@ -1,4 +1,4 @@
-```python
+
 """
 Module: cer_constraints.py
 
