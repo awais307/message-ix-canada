@@ -13,9 +13,9 @@ scenario_config:
     jvmargs: -Xmx16g
   source_scenario:
     model: MESSAGEix-CA
-    solve: False
+    solve: True
     scenario: baseline
-    scenario_name: baseline
+    scenario_name: baseline_obps
     annotation: Initial setup for Canadian energy model.
     version: new
   policy_config:
@@ -23,11 +23,10 @@ scenario_config:
       'h2_atr', 'h2_gas_fc_trp', 'meth_h2'] #'h2_pyrolysis', 'h2_stor_geo_charge', 'h2_stor_geo_discharge'
     process_historical: False
     apply_renewable_potential: False
+    apply_cer: False
     add_hydrogen_shares_f: False
     add_techs: False
     investment_tax_credit: False
-    apply_renewable_potential: False
-    apply_obps: False
     apply_obps: False
     obps_excel_sheet: 'New_OBPS'
     obps_policy_carbon_cost:
@@ -38,10 +37,10 @@ scenario_config:
     to_excell: False
     legacy_reporter: True
     new_reporter: False
-    IDEA_format: False
+    IDEA_format: True
+    validation: False
 path_config:
-  provincial_input_file: scenarios/baseline/model_default_v32.xlsx
-  provincial_input_file: scenarios/baseline/model_default_v32.xlsx
+  provincial_input_file: scenarios/baseline/baseline_v1_OBPS.xlsx
   scenario_folder: scenarios/baseline
   out_dir: model/output
   ITC_policy_input_data: ./data/assumptions_database_example(ITCs).csv
