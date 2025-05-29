@@ -6,13 +6,6 @@ from collections import defaultdict
 from datetime import datetime, timedelta
 import subprocess
 import os
-import random
-import math
-import tkinter as tk
-from tkinter import filedialog
-import tkinter.messagebox as tkmb
-from collections import defaultdict
-import configparser
 
 
 API_KEY = ""
@@ -88,6 +81,7 @@ def analyze_generator_distribution(generators):
 def process_messageix_file(filepath):
     df = pd.read_excel(filepath)
     
+    # Filter for relevant variables (excluding ones with a number suffix at the end)
     df_filtered = df[df["Variable"].str.contains(r"^Capacity\|Electricity(?!.*\|\d+$)", na=False)].copy()
 
     # Add MESSAGE -> CODERS conversion
@@ -98,20 +92,24 @@ def process_messageix_file(filepath):
     df_filtered['gen_type_coders'] = df_filtered['Variable'].map(conversion_with_prefix)
     df_filtered.to_csv('message_with_total.csv', index=False)
     
-
+    # Remove rows with 'total' from analysis
     df_filtered = df_filtered[~df_filtered["gen_type_coders"].str.contains("total", na=False)]
     df_filtered.to_csv('message_without_total.csv', index=False)
     
-
+    # Normalize region names
     df_filtered['Region'] = df_filtered['Region'].str.lower().str.replace(' ', '', regex=True)
     df_filtered.to_csv('message_ungrouped.csv', index=False)
 
-    year_cols = [2020, 2025, 2030, 2035, 2040, 2045, 2050, 2055, 2060]
+    # Define the year columns
+    # year_cols = [2020, 2025, 2030, 2035, 2040, 2045, 2050, 2055, 2060]
     # year_cols = [2025, 2030, 2035, 2040, 2045, 2050, 2055, 2060]
+    year_cols = [col for col in df_filtered.columns if isinstance(col, int)]
 
+    # Group and aggregate
     df_grouped = df_filtered.groupby(['Region', 'Scenario', 'gen_type_coders'])[year_cols].sum().reset_index()
     df_grouped.to_csv('message_grouped.csv', index=False)
 
+    # --- Process 'storage_LI' into 98% 'storage_LI' and 2% 'storage_PH'
     storage_li_rows = df_grouped[df_grouped['gen_type_coders'] == 'storage_LI'].copy()
     if not storage_li_rows.empty:
         storage_ph_rows = storage_li_rows.copy()
@@ -122,6 +120,7 @@ def process_messageix_file(filepath):
         df_grouped = df_grouped[df_grouped['gen_type_coders'] != 'storage_LI']
         df_grouped = pd.concat([df_grouped, storage_li_rows, storage_ph_rows], ignore_index=True)
 
+    # --- Process 'hydro_run' into 41.8% 'hydro_run', 41.4% 'hydro_daily', 16.8% 'hydro_monthly'
     hydro_run_rows = df_grouped[df_grouped['gen_type_coders'] == 'hydro_run'].copy()
     if not hydro_run_rows.empty:
         hydro_daily_rows = hydro_run_rows.copy()
@@ -209,6 +208,12 @@ def compare_message_and_coders(message_df, generators_grouped,  year):
     return merged_df
 
 
+import pandas as pd
+import random
+import math
+import tkinter as tk
+from tkinter import filedialog
+import tkinter.messagebox as tkmb
 
 def select_options(options, message):
         selected_options = []
@@ -466,6 +471,10 @@ def add_new_message_generators(existing_generators_df, new_generators_df, avg_ge
     """
     # append new generators to existing generators
     new_generators_df.sort_values(by='dif', ascending=False, inplace=True)
+    new_generators_df['gen_type_copper'] = new_generators_df['gen_type_copper'].replace('ng_cc', 'NG_CC')
+    existing_generators_df['gen_type_copper']  = existing_generators_df['gen_type_copper'] .replace('ng_cc', 'NG_CC')
+    new_generators_df['gen_type_copper'] = new_generators_df['gen_type_copper'].replace('ng_ccs', 'NG_CCS')
+    existing_generators_df['gen_type_copper']  = existing_generators_df['gen_type_copper'] .replace('ng_ccs', 'NG_CCS')
 
     for index, row in new_generators_df.iterrows():
 
@@ -561,6 +570,8 @@ def add_new_solar(row, existing_generators, num_gen_needed, avg_gen_size):
 def add_vre_generators(existing_generators, new_generators, avg_gen_size_canada):
     existing_generators.reset_index(drop=True, inplace=True)
 
+    # to get rid of outliers, minimum generator size is set
+    # TO DO: make this so user can set this themselves?
     min_vre_gen_size = 10000
 
     # TODO: This function can likely be shortened a great deal by utilizing sub-functions
@@ -825,9 +836,9 @@ def generate_hourly_demand_profiles(input_csv, year, output_folder="output_hourl
 #         # Save result
 #         output_file = os.path.join(output_folder, f"{province}_aggregated_hourly_demand.csv")
 #         aggregated_df.to_csv(output_file, index=False)
-#         print(f"Aggregated: {province}")
+#         print(f"✅ Aggregated: {province}")
 
-#     print(f"Aggregation complete. Results saved in: {output_folder}")
+#     print(f"📁 Aggregation complete. Results saved in: {output_folder}")
     merge_province_hourly_demand(output_folder, year)
 
 # def merge_province_hourly_demand(input_folder, year, output_file="combined_hourly_demand.csv"):
@@ -864,9 +875,9 @@ def generate_hourly_demand_profiles(input_csv, year, output_folder="output_hourl
 #     if merged_df is not None:
 #         merged_df = merged_df.sort_values("hour_index")
 #         merged_df.to_csv(output_file, index=False)
-#         print(f"Merged CSV saved to {output_file}")
+#         print(f"✅ Merged CSV saved to {output_file}")
 #     else:
-#         print("No matching CSV files found in the specified folder.")
+#         print("⚠️ No matching CSV files found in the specified folder.")
 
 #     # Define the start date corresponding to hour_index = 0
 #     start_date = datetime(int(year), 1, 1, 0, 0)
@@ -915,7 +926,7 @@ def generate_hourly_demand_profiles(input_csv, year, output_folder="output_hourl
 
 #     print(f"Saved with datetime column to: {output_file}")
 def merge_province_hourly_demand(input_folder, year, output_file="combined_hourly_demand.csv"):
-    
+    from collections import defaultdict
 
     # Initialize dictionary to hold data by (province, sector)
     hourly_data = defaultdict(dict)
@@ -939,7 +950,7 @@ def merge_province_hourly_demand(input_folder, year, output_file="combined_hourl
         if sector in target_sectors:
             col_name = f"{province}_{sector}"
             df2 = df.rename(columns={"hourly_demand": col_name})
-            df2 = df2[["hour_index", col_name]]  
+            df2 = df2[["hour_index", col_name]]  # ✅ Keep only hour_index and the renamed demand column
             hourly_data[province][sector] = df2
         else:
             continue  # ignore unknown files
@@ -969,11 +980,12 @@ def merge_province_hourly_demand(input_folder, year, output_file="combined_hourl
         print("⚠️ No data to merge.")
         return
 
+    # Add date column
     start_date = datetime(int(year), 1, 1, 0, 0)
     all_merged["date"] = all_merged["hour_index"].apply(lambda x: start_date + timedelta(hours=int(x)))
     all_merged["date"] = all_merged["date"].dt.strftime("%-m/%-d/%Y %H:%M")
 
- 
+    # Reorder columns
     cols = ["date"] + [col for col in all_merged.columns if col not in ["date", "hour_index"]]
     all_merged = all_merged[cols]
 
@@ -998,18 +1010,22 @@ def merge_province_hourly_demand(input_folder, year, output_file="combined_hourl
     for full_name, short_code in rename_dict.items():
         all_merged.columns = [col.replace(full_name, short_code) for col in all_merged.columns]
 
-    
+    # Save final file
     name, ext = os.path.splitext(output_file)
     output_file = f"{name}{ext}"
     all_merged.to_csv(output_file, index=False)
-    print(f"Saved merged sectoral demand to: {output_file}")
+    print(f"✅ Saved merged sectoral demand to: {output_file}")
+
+
+import configparser
+
 
 
 def update_config_file(config_path, year, province):
     config = configparser.ConfigParser()
     config.read(config_path)
 
-    
+    # Update start and end dates
     if config.has_option('Commitment_Times', 'user_startdate'):
         _, m, d = config['Commitment_Times']['user_startdate'].split('/')
         config['Commitment_Times']['user_startdate'] = f"{year}/{m}/{d}"
@@ -1042,8 +1058,8 @@ def main():
     analyze_generator_distribution(generators)
 
     print("\nFetching and processing MESSAGEix data...")
-    message_path = BASE_DIR / "MESSAGEix-CA_baseline_2025-03-17--11-11.xlsx"
-    # message_path = BASE_DIR / "nz-dmd-reduction.xlsx"
+    # message_path = BASE_DIR / "MESSAGEix-CA_baseline_2025-03-17--11-11.xlsx"
+    message_path = BASE_DIR / "nz-dmd-reduction.xlsx"
     message_df = process_messageix_file(message_path)
     message_df.to_csv('message_final.csv', index=False)
 
@@ -1062,7 +1078,9 @@ def main():
     "Nunavut",
     "Yukon"]
 
-    possible_years = [2020, 2025, 2030, 2035, 2040, 2045, 2050, 2055, 2060]
+    # possible_years = [2020, 2025, 2030, 2035, 2040, 2045, 2050, 2055, 2060]
+    possible_years = [col for col in message_df.columns if isinstance(col, int)]
+
 
     selected_provinces = select_options(possible_provinces, "Select provinces to convert for generator disaggregation")                                
     selected_years = select_options(possible_years, "Select years to convert for generator disaggregation")
@@ -1157,10 +1175,10 @@ def main():
         for year in selected_years:
             print(f"Updating config for {province}, {year}")
             update_config_file(config_path, year, province)
-            print(f"Running SILVER_Runner for {province}, {year}") #make sure silver locally is set to linkage branch and linkage scenario with the correct config exists 
+            print(f"Running SILVER_Runner for {province}, {year}")
             subprocess.run(
                 ["python", silver_script, "-sc", "linkage"],
-                cwd=silver_script_dir,  
+                cwd=silver_script_dir,  # Set working directory so relative paths inside the script resolve correctly
                 check=True
             )
 
