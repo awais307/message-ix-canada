@@ -4811,7 +4811,7 @@ def retr_SE_elecgen(units):
     #     (_SolarPV_OR / (_Wind_OR + _SolarPV_OR)).fillna(0)
 
     vars["Solar|PV"] = SolarPV
-    vars["Solar|PV|Curtailment"] = _SolarPV_curt_inp
+    # vars["Solar|PV|Curtailment"] = _SolarPV_curt_inp
 
     # ---------------------
     # CSP related variables
@@ -4886,13 +4886,17 @@ def retr_SE_elecgen(units):
         inpfilter={"commodity": ["electr"]},
     )
 
-    _Wind_onshore = _Wind_res_act - _Wind_curt_inp * (
-        _Wind_res_act / (_Wind_res_act + _Wind_ref_act)
-    ).fillna(0)
+    # _Wind_onshore = _Wind_res_act - _Wind_curt_inp * (
+    #     _Wind_res_act / (_Wind_res_act + _Wind_ref_act)
+    # ).fillna(0)
 
-    _Wind_offshore = _Wind_ref_act - _Wind_curt_inp * (
-        _Wind_ref_act / (_Wind_res_act + _Wind_ref_act)
-    ).fillna(0)
+    _Wind_onshore = _Wind_ref_act
+
+    # _Wind_offshore = _Wind_ref_act - _Wind_curt_inp * (
+    #     _Wind_ref_act / (_Wind_res_act + _Wind_ref_act)
+    # ).fillna(0)
+
+    _Wind_offshore = _Wind_ref_act
 
     # _Wind = _Wind_onshore + _Wind_offshore
 
@@ -4910,7 +4914,7 @@ def retr_SE_elecgen(units):
 
     vars["Wind|Onshore"] = _Wind_onshore
     vars["Wind|Offshore"] = _Wind_offshore
-    vars["Wind|Curtailment"] = _Wind_curt_inp
+    # vars["Wind|Curtailment"] = _Wind_curt_inp
 
     vars["Hydro"] = pp.out(["hydro_lc", "hydro_hc"], units)
 
