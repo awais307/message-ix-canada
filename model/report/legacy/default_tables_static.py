@@ -4451,6 +4451,8 @@ def retr_SE_synfuels(units):
         ["h2_smr","h2_atr", "h2_pyrolysis"], units, outfilter={"level": ["secondary"], "commodity": ["hydrogen"]}
     )
 
+    
+
     vars["Hydrogen|Gas|w/ CCS"] = pp.out(
         ["h2_smr_ccs","h2_atr_ccs"],
         units,
@@ -7262,7 +7264,6 @@ def retr_fe(units):
     
     H2GASTRP = (
         pp.inp("h2_gas_fc_trp", units, inpfilter={"level": ["final"], "commodity": ["hydrogen"]})
-        + _Hydrogen_trp
     )
 	
     H2TRP_shipping = pp.inp("LH2_bunker", units)
