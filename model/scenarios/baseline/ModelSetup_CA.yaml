@@ -13,9 +13,9 @@ scenario_config:
     jvmargs: -Xmx16g
   source_scenario:
     model: MESSAGEix-CA
-    solve: False
-    scenario: netzero_pes
-    scenario_name: netzero_pes
+    solve: True
+    scenario: baseline
+    scenario_name: Netzero-opt
     annotation: Initial setup for Canadian energy model.
     version: new
   policy_config:
@@ -35,12 +35,12 @@ scenario_config:
       more_than_2035: 170
   post_process_config:
     to_excell: False
-    legacy_reporter: false
+    legacy_reporter: True
     new_reporter: False
-    IDEA_format: False
+    IDEA_format: True
 path_config:
-  provincial_input_file: scenarios/netzero_pes/netzero_OBPS_CER.xlsx
-  scenario_folder: scenarios/netzero
+  provincial_input_file: scenarios/netzero_opt/netzero_opt_test_v2.xlsx
+  scenario_folder: scenarios/netzero_opt
   out_dir: model/output
   ITC_policy_input_data: ./data/assumptions_database_example(ITCs).csv
   OBPS_policy_input_data: ./data/New_OBPS.xlsx

@@ -209,7 +209,7 @@ h2_stor_geo:
   emission_factor: 0
   emission_type: CO2_cc
   capacity_factor: 0.9 #fix this to TC/kWyr
-  investment_lr: 0.8
+  investment_lr: 0.92
   fixed_cost_lr: 1
 
 
