@@ -25,7 +25,7 @@ scenario_config:
     apply_renewable_potential: False
     add_hydrogen_shares_f: False
     add_techs: False
-    investment_tax_credit: False
+    investment_tax_credit: True
     apply_renewable_potential: False
     apply_obps: False
     obps_excel_sheet: 'New_OBPS_Stringent'
@@ -42,7 +42,7 @@ path_config:
   provincial_input_file: scenarios/netzero_opt/netzero_opt_test_v2.xlsx
   scenario_folder: scenarios/netzero_opt
   out_dir: model/output
-  ITC_policy_input_data: ./data/assumptions_database_example(ITCs).csv
+  ITC_policy_input_data: ./data/assumptions_database_example_ITCs_ExtendedAll.csv
   OBPS_policy_input_data: ./data/New_OBPS.xlsx
   var_cost_no_obps_input_data: ./data/var_cost_no_obps.csv
   obps_standart_merged_data_output: ./data/obps_standard.csv
