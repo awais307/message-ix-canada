@@ -30,7 +30,7 @@ def add_investment_tax_credit(model_obj):
         None
     """
 
-    clean_tecnologies = ['wind_cv1', 'wind_cv2', 'wind_cv3', 'wind_cv4', 'wind_ppf', 'wind_ppl', 'solar_cv1', 'solar_cv2', 'solar_cv3', 'solar_cv4', 'solar_i', 'solar_pv_ppl', 'solar_th_ppl', 'solar_th_ppl__air', 'solar_th_ppl__cl_fresh', 'solar_th_ppl__ot_fresh', 'solar_th_ppl__ot_saline', 'hydro_hc', 'hydro_lc','stor_ppl','hp_el_i','hp_gas_i','geo_hpl']
+    clean_tecnologies = ['wind_cv1', 'wind_cv2', 'wind_cv3', 'wind_cv4', 'wind_ppf', 'wind_ppl', 'solar_cv1', 'solar_cv2', 'solar_cv3', 'solar_cv4', 'solar_i', 'solar_pv_ppl', 'solar_th_ppl', 'solar_th_ppl__air', 'solar_th_ppl__cl_fresh', 'solar_th_ppl__ot_fresh', 'solar_th_ppl__ot_saline', 'hydro_hc', 'hydro_lc','stor_ppl','hp_el_i','hp_gas_i','geo_hpl','geo_ppl']
     
     itc_input_df = pd.read_csv(model_obj.ctx.path['ITC_policy_input_data'])
     itc_input_df['value'] = itc_input_df['value'].fillna(0)
