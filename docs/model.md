@@ -22,20 +22,20 @@ The table below summarizes the data sources used for different input parameters:
 | **Data Type**                       | **Sheet Name(s)**                                                                                                                     | **Description**                                                                                                                                                                                                                                                                                                                                             |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Costs**                           | `inv_cost`, `fix_cost`, `var_cost`                                                                                                    | Cost data is sourced from**WEO data**, fuel blending, and energy demands. For more details, refer to the MESSAGEix-GLOBIOM documentation [page](https://docs.messageix.org/projects/global/en/latest/energy/tech.html). At this point, there is no provinciial differentiation in technology costs but future work will explore varying technological costs.  |
-| **Energy Resources**                | `historical_activity`, `bound_activity_up`                                                                                              | Historical oil and gas production data is sourced from**[Canada Energy Future](https://www.cer-rec.gc.ca/en/index.html)**. Data and processing scripts are available in `data/oil_gas_production`.                                                                                                                                                                 |
-| **Energy End-Use**                  | `initial_activity_lo`, `growth_activity_lo`, `growth_activity_up`, `initial_activity_up`                                            | Eneergy edn use asumptions growth rates and diffusion rates are based on SSP2 assumptions. For more details on the assumptions and how end-use technologies are mapped to useful demands refer to the documentation[page](https://docs.messageix.org/projects/global/en/latest/energy/enduse/index.html).                                                           |
+| **Energy Resources**                | `historical_activity`                                                                                                                     | Historical oil and gas production data is sourced from**[Canada Energy Future](https://www.cer-rec.gc.ca/en/index.html)**. Data and processing scripts are available in `data/oil_gas_production`.                                                                                                                                                                 |
+| **Energy End-Use**                  | `initial_activity_lo`, `growth_activity_lo`, `growth_activity_up`, `initial_activity_up`                                            | Eneergy end use asumptions growth rates and diffusion rates are based on SSP2 assumptions. For more details on the assumptions and how end-use technologies are mapped to useful demands refer to the documentation[page](https://docs.messageix.org/projects/global/en/latest/energy/enduse/index.html).                                                           |
 | **Population and GDP**              | `bound_activity_lo`, `bound_activity_up`                                                                                                | Population projections for provinces are sourced from**Statistics Canada** (till 2048) and projected till 2060 using linear regression. GDP projections apply federal growth rate predictions to current provincial GDP values.                                                                                                                             |
 | **Energy Service Demands**          | `demand`                                                                                                                                  | Energy demands are calculated using population and GDP data (`data/population` and `data/gdp`).                                                                                                                                                                                                                                                               |
-| **Power Plant Capacity**            | `historical_new_capacity`, `bound_new_capacity_lo`, `bound_new_capacity_up`, `bound_total_capacity_lo`, `bound_total_capacity_up` | Data from**CODERS**. Vintage years are used to bound new capacity installations based on the technical lifetime of each technology.                                                                                                                                                                                                                         |
-| **Renewable Energy Potentials**     | `renewable_potential`                                                                                                                     | Based on**gridded capacity factors** from CODERS data. The maximum producible solar, onshore wind, and offshore wind energy are multiplied by capacity factors.                                                                                                                                                                                             |
-| **Historical Generation & End-Use** | `historical_activity`                                                                                                                     | Calibrated using**CER current measures**, mapped appropriately to individual technologies.                                                                                                                                                                                                                                                                  |
+| **Power Plant Capacity**            | `historical_new_capacity`, `bound_new_capacity_lo`, `bound_new_capacity_up`, `bound_total_capacity_lo`, `bound_total_capacity_up` | Data is collected and pre-processed from**[CODERS](https://coders.cme-emh.ca/login)**. Vintage years are used to bound new capacity installations based on the technical lifetime of each technology.                                                                                                                                                                |
+| **Renewable Energy Potentials**     | `renewable_potential`                                                                                                                     | Based on**gridded capacity factors** from [CODERS](https://coders.cme-emh.ca/login) data. The maximum producible solar, onshore wind, and offshore wind energy are multiplied by capacity factors.                                                                                                                                                             |
+| **Historical Generation & End-Use** | `historical_activity`                                                                                                                     | Calibrated using **CER current measures**, mapped appropriately to individual technologies.                                                                                                                                                                                                                                                                |
 |                                           |                                                                                                                                             |                                                                                                                                                                                                                                                                                                                                                                   |
 
 ---
 
 ## 🛢️Oil & Gas Resource
 
-MESSAGEix represents fossil-fuel resources via the parameter `resource_volume`, enforcing both cumulative and annual extraction limits so that total withdrawals never exceed the estimated reserves.For details on the mathemartical forumulation for resource, see the `message_ix` equation [here]([https://docs.messageix.org/en/latest/model/MESSAGE/model_core.html#equation-resource-constraint](https://docs.messageix.org/en/latest/model/MESSAGE/model_core.html#equation-resource-constraint)).More details on the fossil fuel implementation and resource supply curves are also mentioned in the global model documentation [here]([https://docs.messageix.org/en/latest/model/MESSAGE/model_core.html#equation-resource-constraint](https://docs.messageix.org/en/latest/model/MESSAGE/model_core.html#equation-resource-constraint)). For Canada, we begin with SSP2 global availability figures and scale them to national totals reported by Natural Resources Canada. We then partition the country-level resource volumes into technology-specific “categories” of oil and gas extraction. Where provincial data on resource volumes are sparse or inconsistent, resources are allocated across provinces in proportion to historical extraction data from the Canada Energy Regulator (CER).
+MESSAGEix represents fossil-fuel resources via the parameter `resource_volume`, enforcing both cumulative and annual extraction limits so that total withdrawals never exceed the estimated reserves.For details on the mathemartical forumulation for resource, see the `message_ix` equation [here](https://docs.messageix.org/en/latest/model/MESSAGE/model_core.html#equation-resource-constraint). More details on the fossil fuel implementation and resource supply curves are also mentioned in the global model documentation [here](https://docs.messageix.org/projects/global/en/latest/energy/resource/fossilfuel.html). For Canada, we begin with SSP2 global availability figures and scale them to national totals reported by Natural Resources Canada. We then partition the country-level resource volumes into technology-specific “categories” of oil and gas extraction. Where provincial data on resource volumes are sparse or inconsistent, resources are allocated across provinces in proportion to historical extraction data from the [Canada Energy Regulator (CER)](https://www.cer-rec.gc.ca/en/data-analysis/canada-energy-future/).We also used the Natural Resources Canada [Fossil Fuels database ](https://natural-resources.canada.ca/energy-sources/fossil-fuels)to adjust the maximum constraints based on the resource availability in each province. 
 
 Oil extraction is divided into six primary categories (I–VI) plus a market-penetration factor; methane-reduction variants (`_ch4`) are defined for the first four categories. Historical CER production categories are mapped to these model codes (e.g., “CONVENTIONAL LIGHT” → `oil_extr_1`). The table below summarizes each oil extraction category, its input/output commodities, and the CER mapping.
 
@@ -78,7 +78,7 @@ Two refinery technologies—“Existing (low yield)” and “New Deeply upgrade
 
 ### Trade Assumptions
 
-* **Free trade** : Oil & gas imports/exports are exogenous and set equal to historical provincial flows.
+* **Exogenous trade** : Oil & gas imports/exports are exogenous and set equal to historical provincial flows.
 * **No explicit bounds** : No capacity or tariff constraints in the current version.
 * **Province-level** : Only provinces with refinery technologies may export refined products; others must import.
 * **Future work** : Endogenous trade constraints (transport costs, tariffs, capacity limits) will be introduced in later model versions.
@@ -87,63 +87,69 @@ Two refinery technologies—“Existing (low yield)” and “New Deeply upgrade
 
 ### Renewable Potentials
 
-Renewable potentials for solar and wind are estimated using gridded capacity factors from the CODERS database. For each grid cell, we calculate the maximum power generation potential from solar and wind based on historical capacity factors. These grid‐level potentials are then aggregated to the provincial scale, grouped into capacity‐factor bins. In MESSAGEix, each bin defines a maximum renewable potential for a given capacity factor range. For more information on grid integration and reliability, see the [Systems Integrtaions & Reliability](https://docs.messageix.org/projects/global/en/v2020/energy/conversion/grid.html#systems-integration-and-reliability) section of the MESSAGEix documentation.
+Renewable potentials for solar and wind are estimated using gridded capacity factors from the [CODERS](https://coders.cme-emh.ca/login) database. For each grid cell, we calculate the maximum power generation potential from solar and wind based on historical capacity factors. These grid‐level potentials are then aggregated to the provincial scale, grouped into capacity‐factor bins. In MESSAGEix, each bin defines a maximum renewable potential for a given capacity factor range. For more information on grid integration and reliability, see the [Systems Integrtaions &amp; Reliability](https://docs.messageix.org/projects/global/en/v2020/energy/conversion/grid.html#systems-integration-and-reliability) section of the MESSAGEix documentation.
 
 ### Historical Power Plant Capacity & Generation
 
-Historical installed capacity and generation data come from CODERS. CODERS provides both capacity factors and the installed capacity for each power plant. We convert these values into historical generation (MWh) and validate them against publicly available Canada Energy Regulator (CER) data by province. Retirement schedules and vintaging of thermal power plants are calibrated using the `technical_lifetime` parameter. Future installations of new power plants are constrained by provincial dynamics (e.g., resource availability, policy targets).
+Historical installed capacity and generation data come from CODERS. CODERS provides both capacity factors and the installed capacity for each power plant. We convert these values into historical generation (MWh) and validate them against publicly available Canada Energy Regulator (CER) data by province. Retirement schedules and vintaging of thermal power plants are calibrated using the[ technical_lifetime parameter](https://docs.messageix.org/en/latest/model/MESSAGE/parameter_def.html). Future installations of new power plants are constrained by provincial dynamics (e.g., resource availability, policy targets).
 
 For detailed information on how MESSAGEix handles historical capacity and activity values, refer to the [Historical Capacity and Activity Values](https://docs.messageix.org/en/latest/model/MESSAGE/parameter_def.html#historical-capacity-and-activity-values) documentation.
 
 ## Energy Demand & End Use
 
-Baseline energy service demands ("exogenous demands") are calculated outside the MESSAGEix model and provided as input parameters. In this version, exogenous demands are projected by scaling historical final‐energy consumption using provincial population and GDP growth rates. A small linear programming (LP) formulation minimizes the maximum difference between projected population‐driven and GDP‐driven growth rates, ensuring consistency between socioeconomic drivers. Future work will link these exogenous demands to MESSAGEix through the [MESSAGEix–MACRO linkage](https://docs.messageix.org/projects/global/en/latest/macro.html), allowing demand adjustments based on iterative price feedback. FOr more details and procedures to calculate energy service demands, refer to the documentation page [here]((https://docs.messageix.org/projects/global/en/latest/energy/demand.html).
+Baseline energy service demands are provided exogenously to MESSAGEix. In this version, we project future demands by scaling historical final-energy consumption using provincial population and GDP growth rates, and then reconcile any year-to-year discrepancies via a minimax LP formulation. Specifically, we introduce a variable \(M\) representing the largest absolute deviation between population-driven and GDP-driven growth rates over the entire projection period and minimize \(M\), thereby enforcing consistency between these two socioeconomic drivers.
 
-### Demand Projections
+Once consistency is ensured, these exogenous service-demand trajectories are converted into final-energy demands (by fuel type) using the model’s relative efficiency assumptions. In future work, we will link these inputs dynamically to MESSAGEix through the [MESSAGEix–MACRO linkage](https://docs.messageix.org/projects/global/en/latest/macro.html) so that demand can respond to iterative price feedback.
+
+### Demand-Projection Workflow
 
 1. **Historical Baseline**
 
-   - Final energy consumption by province is taken from historical statistics.
-   - Historical consumption is disaggregated by end‐use sector (transport, residential, commercial, industrial).
-2. **Socioeconomic Scaling**
+   - Compile provincial final-energy consumption (by end-use technology and fuel) from [CER](https://www.cer-rec.gc.ca/en/data-analysis/canada-energy-future/), [NRCan](https://oee.nrcan.gc.ca/corporate/statistics/neud/dpa/menus/trends/comprehensive_tables/list.cfm), and [Statistics](https://www.statcan.gc.ca/en/subjects-start/energy) Canada.
+2. **Socioeconomic Scaling & Consistency**
 
-   - Population and GDP projections by province are used to project future final energy consumption.
-   - An LP routine minimizes discrepancies between population‐driven and GDP‐driven growth rates, producing a single forecast for each province.
-3. **Exogenous Demand Input**
+   - Apply province-level population and GDP projections to scale historical consumption.
+   - Solve a small LP that minimizes the maximum absolute deviation—across all projection years—between population-driven and GDP-driven growth rates to produce a single, internally consistent demand forecast per province.
+3. **Useful-Final Energy Mapping**
 
-   - Projected service demands (e.g., passenger‐km, area heated, etc.) are converted into final‐energy demands using relative efficiency assumptions.
-   - These final‐energy demand are then mapped directly to MESSAGEix as exogenous inputs.
-   - See the [Energy Demand](https://docs.messageix.org/projects/global/en/latest/energy/demand.html) documentation for further details on SSP‐related assumptions and demand‐projection methodologies.
+   - Those forecasted service demands into MESSAGEix final-energy demands using fixed efficiency factors.
 
-### Energy End Use
+For full details on data sources, SSP-related assumptions, and demand-projection methodologies, see the [Energy Demand documentation](https://docs.messageix.org/projects/global/en/latest/energy/demand.html).
 
-MESSAGEix-Canada represent three primary end‐use sectors—transport, residential (including commercial), and industrial—each with distinct service demands and fuel‐switching options.
+## Energy End Use
+
+MESSAGEix-Canada represent three primary end‐use sectors—transport, buildings, and industrial—each with distinct service demands and fuel‐switching options.
 
 #### Transport
 
-- **Stylized Sector Representation**The transport sector is modeled with stylized “vehicle‐time” or “vehicle‐distance” technologies that allow fuel switching based on relative efficiencies.
-- **Fuel Switching & Electrification**Transport technologies can switch between liquid fuels (gasoline, diesel) and electricity. A maximum electrification rate ensures results remain realistic and aligned with socioeconomic assumptions for vehicle electrification.
+- **Stylized Sector Representation**
+  - The transport sector is modeled with stylized “vehicle‐time” or “vehicle‐distance” technologies that allow fuel switching based on relative efficiencies.
+- **Fuel Switching & Electrification**
+  - Transport technologies can switch between liquid fuels (gasoline, diesel) and electricity. A maximum electrification rate (50% assumed for SSP2) ensures results remain realistic and aligned with socioeconomic assumptions for vehicle electrification.
 - **Service Demand**
-  Transport demand is expressed in passenger‐kilometers or ton‐kilometers and converted to final‐energy demand via technology‐specific energy intensities.
+  - Transport demand is expressed in the total energy service demand which includes transport individual demand side parameters such as passenger‐kilometers or ton‐kilometers converted to energy demand via technology‐specific energy intensities.
 
-For more detailed explanation, refer to the transport documentation [page](https://docs.messageix.org/projects/global/en/latest/energy/enduse/transport.html) of global model. 
+For more detailed explanation, refer to the transport documentation [page](https://docs.messageix.org/projects/global/en/latest/energy/enduse/transport.html) of global model.
+
 #### Residential & Commercial
-Residential & Commercial demands are represented through thermal and specific technologies. 
+
+Residential & Commercial demands are represented through thermal and specific technologies.
 
 - **Thermal Demand**Both residential and commercial sectors have a thermal service demand (space heating and hot water). Fuel‐switching options include natural gas, propane, fuel oil, biomass, and district heating. Switching decisions are based on relative efficiency and cost.
 - **Specific (Electric) Demand**
   Specific electricity demand (lighting, appliances, electronics) is satisfied either by grid‐supplied electricity or decentralized options (e.g., fuel cells, combined heat and power). Rooftop/off‐grid solar PV is _not_ included in this model version.
 
-For more detailed explanation, refer to the transport documentation [page](https://docs.messageix.org/projects/global/en/latest/energy/enduse/resid_commerc.html) of global model. 
+For more detailed explanation, refer to the transport documentation [page](https://docs.messageix.org/projects/global/en/latest/energy/enduse/resid_commerc.html) of global model.
 
 #### Industrial
-Industrial demands are represented through thermal and specific technologies. 
+
+Industrial demands are represented through thermal and specific technologies.
+
 - **Thermal Demand**Industrial thermal demand (process heat) can be met by natural gas, coal, biomass, or process‐heat electricity, depending on cost and efficiency.
 - **Specific Demand**
   Industrial specific electricity demand (motors, drives, etc.) is met by grid electricity. On‐site generation (e.g., gas‐turbine CHP) is also allowed if economically favorable.
 
-For more detailed explanation, refer to the transport documentation [page](https://docs.messageix.org/projects/global/en/latest/energy/enduse/industrial.html) of global model. 
-
+For more detailed explanation, refer to the transport documentation [page](https://docs.messageix.org/projects/global/en/latest/energy/enduse/industrial.html) of global model.
 
 ## **📉 Emissions Accounting**
 
