@@ -190,5 +190,3 @@ def apply_obps(ctx):
     IDEA_df.to_csv("./data/OBPS_credits.csv")
 
     print(f"\n{'#' * 100}\nOBPS applied successfully!\n{'#' * 100}\n")
-
-
