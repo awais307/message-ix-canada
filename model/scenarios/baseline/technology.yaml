@@ -209,7 +209,7 @@ h2_stor_geo:
   emission_factor: 0
   emission_type: CO2_cc
   capacity_factor: 0.9 #fix this to TC/kWyr
-  investment_lr: 0.8
+  investment_lr: 0.92
   fixed_cost_lr: 1
 
 
@@ -429,14 +429,14 @@ h2_pyrolysis:
   emission_factor: 0.2941 
   emission_type: 'CO2_cc'
   capacity_factor: 0.9
-  investment_lr: 0.9168 #not in litterature as new technology. Assumption made that it is the same as other ethane techs
+  investment_lr: 0.9168 #not in litterature as new technology. Assumption made that it is the same as other methane techs
   fixed_cost_lr: 1
   fixed_cost_lr: 0
 
 h2_stor_geo_charge:
   # Technology specs: mode, commodities, description
   description: hydrogen storage charger in salt caverns
-  mode: charge
+  mode: M1
   commodity:
   # Commodities: inputs and outputs 
     - input: 
@@ -479,7 +479,7 @@ h2_stor_geo_charge:
     - cost_value: 6.34
   var_cost_2020:
     - cost_level: primary
-    - cost_value: 0 # example value for now
+    - cost_value: 0 # example value for n
   # Emissions specifications
   emission_factor: 0
   emission_type: CO2_cc
@@ -490,7 +490,7 @@ h2_stor_geo_charge:
 h2_stor_geo_discharge:
   # Technology specs: mode, commodities, description
   description: hydrogen storage in salt caverns
-  mode: discharge
+  mode: M1
   commodity:
   # Commodities: inputs and outputs 
     - input: 
