@@ -148,7 +148,7 @@ def apply_obps(ctx):
     #########################
     # Create Carbon Cost DF #
     #########################
-    df = pd.read_excel("data/obps_inputs_clean.xlsx", sheet_name="Mapping")
+    df = pd.read_excel(ctx.path['OBPS_mapping_input_data'], sheet_name="Mapping")
     OBPS_technologies = list(df["technology"].unique())
     tec_to_IDEA = {row['technology']: row['variable'] for _, row in df.iterrows()}
     ctx.tec_to_IDEA = tec_to_IDEA
@@ -187,6 +187,6 @@ def apply_obps(ctx):
 
             # Append the row
             IDEA_df.loc[len(IDEA_df)] = row
-    IDEA_df.to_csv("./data/OBPS_credits.csv")
+    IDEA_df.to_csv(ctx.path['OBPS_credits_output_path'], index=False)
 
     print(f"\n{'#' * 100}\nOBPS applied successfully!\n{'#' * 100}\n")
