@@ -5,14 +5,14 @@ import itertools
 import os
 import sys
 from functools import cmp_to_key
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
-import pyam 
-from pandas.api.types import is_numeric_dtype
-
+import pyam
 from message_ix_models.util import package_data_path
 from message_ix_models.util.compat.message_data import utilities
+from pandas.api.types import is_numeric_dtype
 
 from . import iamc_tree
 
@@ -41,142 +41,165 @@ index_order = [
     "Vintage",
 ]
 
+
 def OBPS_credits_tracking(scen, years):
-    act_df=scen.var("ACT")
-    act_df["lvl"]=act_df["lvl"]*10**6
-    #TODO move this path to yaml file 
+    act_df = scen.var("ACT")
+    act_df["lvl"] = act_df["lvl"] * 10**6
+    # TODO move this path to yaml file
     carbon_cost_df = pd.read_csv("./data/OBPS_credits.csv")
-    carbon_cost_df = carbon_cost_df[['2025','2030','2035','2040','2045','2050','2055','2060','Model','node_loc','Scenario', 'Unit', 'Variable']]
-    #carbon_cost_df.drop(columns=['2020'], inplace=True)
+    carbon_cost_df = carbon_cost_df[
+        [
+            "2025",
+            "2030",
+            "2035",
+            "2040",
+            "2045",
+            "2050",
+            "2055",
+            "2060",
+            "Model",
+            "node_loc",
+            "Scenario",
+            "Unit",
+            "Variable",
+        ]
+    ]
+    # carbon_cost_df.drop(columns=['2020'], inplace=True)
     carbon_cost_df.fillna(0, inplace=True)
     new_carbon_cost_df = pd.DataFrame(columns=carbon_cost_df.columns.tolist())
     years = sorted(years)
     aggregation_lable_mapping = {
-        'coal_adv_positive': 'Carbon Credit|Bought|coal_elec',
-        'coal_adv_negative': 'Carbon Credit|Sold|coal_elec',
-        'coal_adv_ccs_positive': 'Carbon Credit|Bought|coal_elec',
-        'coal_adv_ccs_negative': 'Carbon Credit|Sold|coal_elec',
-        'coal_fs_positive': 'Carbon Credit|Bought|coal_ind',
-        'coal_fs_negative': 'Carbon Credit|Sold|coal_ind',
-        'coal_gas_positive': 'Carbon Credit|Bought|coal_ind',
-        'coal_gas_negative': 'Carbon Credit|Sold|coal_ind',
-        'coal_i_positive': 'Carbon Credit|Bought|coal_ind',
-        'coal_i_negative': 'Carbon Credit|Sold|coal_ind',
-        'coal_ppl_positive': 'Carbon Credit|Bought|coal_elec',
-        'coal_ppl_negative': 'Carbon Credit|Sold|coal_elec',
-        'coal_ppl_u_positive': 'Carbon Credit|Bought|coal_elec',
-        'coal_ppl_u_negative': 'Carbon Credit|Sold|coal_elec',
-        'foil_fs_positive': 'Carbon Credit|Bought|foil_ind',
-        'foil_fs_negative': 'Carbon Credit|Sold|foil_ind',
-        'foil_i_positive': 'Carbon Credit|Bought|foil_ind',
-        'foil_i_negative': 'Carbon Credit|Sold|foil_ind',
-        'foil_ppl_positive': 'Carbon Credit|Bought|foil_elec',
-        'foil_ppl_negative': 'Carbon Credit|Sold|foil_elec',
-        'gas_cc_positive': 'Carbon Credit|Bought|gas_elec',
-        'gas_cc_negative': 'Carbon Credit|Sold|gas_elec',
-        'gas_cc_ccs_positive': 'Carbon Credit|Bought|gas_elec',
-        'gas_cc_ccs_negative': 'Carbon Credit|Sold|gas_elec',
-        'gas_ct_positive': 'Carbon Credit|Bought|gas_elec',
-        'gas_ct_negative': 'Carbon Credit|Sold|gas_elec',
-        'gas_extr_1_positive': 'Carbon Credit|Bought|gas_extr',
-        'gas_extr_1_negative': 'Carbon Credit|Sold|gas_extr',
-        'gas_extr_2_positive': 'Carbon Credit|Bought|gas_extr',
-        'gas_extr_2_negative': 'Carbon Credit|Sold|gas_extr',
-        'gas_extr_3_positive': 'Carbon Credit|Bought|gas_extr',
-        'gas_extr_3_negative': 'Carbon Credit|Sold|gas_extr',
-        'gas_extr_4_positive': 'Carbon Credit|Bought|gas_extr',
-        'gas_extr_4_negative': 'Carbon Credit|Sold|gas_extr',
-        'gas_extr_5_positive': 'Carbon Credit|Bought|gas_extr',
-        'gas_extr_5_negative': 'Carbon Credit|Sold|gas_extr',
-        'gas_extr_6_positive': 'Carbon Credit|Bought|gas_extr',
-        'gas_extr_6_negative': 'Carbon Credit|Sold|gas_extr',
-        'gas_fs_positive': 'Carbon Credit|Bought|gas_feed',
-        'gas_fs_negative': 'Carbon Credit|Sold|gas_feed',
-        'gas_i_positive': 'Carbon Credit|Bought|gas_ind',
-        'gas_i_negative': 'Carbon Credit|Sold|gas_ind',
-        'gas_ppl_positive': 'Carbon Credit|Bought|gas_elec',
-        'gas_ppl_negative': 'Carbon Credit|Sold|gas_elec',
-        'gas_t_d_positive': 'Carbon Credit|Bought|gas_td',
-        'gas_t_d_negative': 'Carbon Credit|Sold|gas_td',
-        'gas_t_d_ch4_positive': 'Carbon Credit|Bought|gas_td',
-        'gas_t_d_ch4_negative': 'Carbon Credit|Sold|gas_td',
-        'h2_atr_positive': 'Carbon Credit|Bought|h2',
-        'h2_atr_negative': 'Carbon Credit|Sold|h2',
-        'h2_atr_ccs_positive': 'Carbon Credit|Bought|h2',
-        'h2_atr_ccs_negative': 'Carbon Credit|Sold|h2',
-        'h2_coal_positive': 'Carbon Credit|Bought|h2',
-        'h2_coal_negative': 'Carbon Credit|Sold|h2',
-        'h2_coal_ccs_positive': 'Carbon Credit|Bought|h2',
-        'h2_coal_ccs_negative': 'Carbon Credit|Sold|h2',
-        'h2_smr_positive': 'Carbon Credit|Bought|h2',
-        'h2_smr_negative': 'Carbon Credit|Sold|h2',
-        'h2_smr_ccs_positive': 'Carbon Credit|Bought|h2',
-        'h2_smr_ccs_negative': 'Carbon Credit|Sold|h2',
-        'igcc_positive': 'Carbon Credit|Bought|igcc',
-        'igcc_negative': 'Carbon Credit|Sold|igcc',
-        'igcc_ccs_positive': 'Carbon Credit|Bought|igcc',
-        'igcc_ccs_negative': 'Carbon Credit|Sold|igcc',
-        'loil_cc_positive': 'Carbon Credit|Bought|loil_elec',
-        'loil_cc_negative': 'Carbon Credit|Sold|loil_elec',
-        'loil_fs_positive': 'Carbon Credit|Bought|loil_ind',
-        'loil_fs_negative': 'Carbon Credit|Sold|loil_ind',
-        'loil_i_positive': 'Carbon Credit|Bought|loil_ind',
-        'loil_i_negative': 'Carbon Credit|Sold|loil_ind',
-        'loil_ppl_positive': 'Carbon Credit|Bought|loil_elec',
-        'loil_ppl_negative': 'Carbon Credit|Sold|loil_elec',
-        'meth_coal_positive': 'Carbon Credit|Bought|meth',
-        'meth_coal_negative': 'Carbon Credit|Sold|meth',
-        'meth_coal_ccs_positive': 'Carbon Credit|Bought|meth',
-        'meth_coal_ccs_negative': 'Carbon Credit|Sold|meth',
-        'meth_h2_positive': 'Carbon Credit|Bought|meth',
-        'meth_h2_negative': 'Carbon Credit|Sold|meth',
-        'meth_i_positive': 'Carbon Credit|Bought|meth',
-        'meth_i_negative': 'Carbon Credit|Sold|meth',
-        'meth_ng_positive': 'Carbon Credit|Bought|meth',
-        'meth_ng_negative': 'Carbon Credit|Sold|meth',
-        'meth_ng_ccs_positive': 'Carbon Credit|Bought|meth',
-        'meth_ng_ccs_negative': 'Carbon Credit|Sold|meth',
-        'methanol_fs_positive': 'Carbon Credit|Bought|methanol',
-        'methanol_fs_negative': 'Carbon Credit|Sold|methanol',
-        'oil_extr_1_positive': 'Carbon Credit|Bought|oil_extr',
-        'oil_extr_1_negative': 'Carbon Credit|Sold|oil_extr',
-        'oil_extr_1_ch4_positive': 'Carbon Credit|Bought|oil_extr',
-        'oil_extr_1_ch4_negative': 'Carbon Credit|Sold|oil_extr',
-        'oil_extr_2_positive': 'Carbon Credit|Bought|oil_extr',
-        'oil_extr_2_negative': 'Carbon Credit|Sold|oil_extr',
-        'oil_extr_2_ch4_positive': 'Carbon Credit|Bought|oil_extr',
-        'oil_extr_2_ch4_negative': 'Carbon Credit|Sold|oil_extr',
-        'oil_extr_3_positive': 'Carbon Credit|Bought|oil_extr',
-        'oil_extr_3_negative': 'Carbon Credit|Sold|oil_extr',
-        'oil_extr_3_ch4_positive': 'Carbon Credit|Bought|oil_extr',
-        'oil_extr_3_ch4_negative': 'Carbon Credit|Sold|oil_extr',
-        'oil_extr_4_positive': 'Carbon Credit|Bought|oil_extr',
-        'oil_extr_4_negative': 'Carbon Credit|Sold|oil_extr',
-        'oil_extr_4_ch4_positive': 'Carbon Credit|Bought|oil_extr',
-        'oil_extr_4_ch4_negative': 'Carbon Credit|Sold|oil_extr',
-        'oil_extr_5_positive': 'Carbon Credit|Bought|oil_extr',
-        'oil_extr_5_negative': 'Carbon Credit|Sold|oil_extr',
-        'oil_extr_6_positive': 'Carbon Credit|Bought|oil_extr',
-        'oil_extr_6_negative': 'Carbon Credit|Sold|oil_extr',
-        'oil_extr_7_positive': 'Carbon Credit|Bought|oil_extr',
-        'oil_extr_7_negative': 'Carbon Credit|Sold|oil_extr',
-        'ref_hil_positive': 'Carbon Credit|Bought|ref',
-        'ref_hil_negative': 'Carbon Credit|Sold|ref',
-        'ref_lol_positive': 'Carbon Credit|Bought|ref',
-        'ref_lol_negative': 'Carbon Credit|Sold|ref',
-        'syn_liq_positive': 'Carbon Credit|Bought|syn_liq',
-        'syn_liq_negative': 'Carbon Credit|Sold|syn_liq',
-        'syn_liq_ccs_positive': 'Carbon Credit|Bought|syn_liq',
-        'syn_liq_ccs_negative': 'Carbon Credit|Sold|syn_liq',
-        'h2_i_positive': 'Carbon Credit|Bought|h2_ind',
-        'h2_i_negative': 'Carbon Credit|Sold|h2_ind',
-        'biomass_i_positive': 'Carbon Credit|Bought|biomass_ind',
-        'biomass_i_negative': 'Carbon Credit|Sold|biomass_ind',
-        'elec_i_positive': 'Carbon Credit|Bought|elec_ind',
-        'elec_i_negative': 'Carbon Credit|Sold|elec_ind'
+        "coal_adv_positive": "Carbon Credit|Bought|coal_elec",
+        "coal_adv_negative": "Carbon Credit|Sold|coal_elec",
+        "coal_adv_ccs_positive": "Carbon Credit|Bought|coal_elec",
+        "coal_adv_ccs_negative": "Carbon Credit|Sold|coal_elec",
+        "coal_fs_positive": "Carbon Credit|Bought|coal_ind",
+        "coal_fs_negative": "Carbon Credit|Sold|coal_ind",
+        "coal_gas_positive": "Carbon Credit|Bought|coal_ind",
+        "coal_gas_negative": "Carbon Credit|Sold|coal_ind",
+        "coal_i_positive": "Carbon Credit|Bought|coal_ind",
+        "coal_i_negative": "Carbon Credit|Sold|coal_ind",
+        "coal_ppl_positive": "Carbon Credit|Bought|coal_elec",
+        "coal_ppl_negative": "Carbon Credit|Sold|coal_elec",
+        "coal_ppl_u_positive": "Carbon Credit|Bought|coal_elec",
+        "coal_ppl_u_negative": "Carbon Credit|Sold|coal_elec",
+        "foil_fs_positive": "Carbon Credit|Bought|foil_ind",
+        "foil_fs_negative": "Carbon Credit|Sold|foil_ind",
+        "foil_i_positive": "Carbon Credit|Bought|foil_ind",
+        "foil_i_negative": "Carbon Credit|Sold|foil_ind",
+        "foil_ppl_positive": "Carbon Credit|Bought|foil_elec",
+        "foil_ppl_negative": "Carbon Credit|Sold|foil_elec",
+        "gas_cc_positive": "Carbon Credit|Bought|gas_elec",
+        "gas_cc_negative": "Carbon Credit|Sold|gas_elec",
+        "gas_cc_ccs_positive": "Carbon Credit|Bought|gas_elec",
+        "gas_cc_ccs_negative": "Carbon Credit|Sold|gas_elec",
+        "gas_ct_positive": "Carbon Credit|Bought|gas_elec",
+        "gas_ct_negative": "Carbon Credit|Sold|gas_elec",
+        "gas_extr_1_positive": "Carbon Credit|Bought|gas_extr",
+        "gas_extr_1_negative": "Carbon Credit|Sold|gas_extr",
+        "gas_extr_2_positive": "Carbon Credit|Bought|gas_extr",
+        "gas_extr_2_negative": "Carbon Credit|Sold|gas_extr",
+        "gas_extr_3_positive": "Carbon Credit|Bought|gas_extr",
+        "gas_extr_3_negative": "Carbon Credit|Sold|gas_extr",
+        "gas_extr_4_positive": "Carbon Credit|Bought|gas_extr",
+        "gas_extr_4_negative": "Carbon Credit|Sold|gas_extr",
+        "gas_extr_5_positive": "Carbon Credit|Bought|gas_extr",
+        "gas_extr_5_negative": "Carbon Credit|Sold|gas_extr",
+        "gas_extr_6_positive": "Carbon Credit|Bought|gas_extr",
+        "gas_extr_6_negative": "Carbon Credit|Sold|gas_extr",
+        "gas_fs_positive": "Carbon Credit|Bought|gas_feed",
+        "gas_fs_negative": "Carbon Credit|Sold|gas_feed",
+        "gas_i_positive": "Carbon Credit|Bought|gas_ind",
+        "gas_i_negative": "Carbon Credit|Sold|gas_ind",
+        "gas_ppl_positive": "Carbon Credit|Bought|gas_elec",
+        "gas_ppl_negative": "Carbon Credit|Sold|gas_elec",
+        "gas_t_d_positive": "Carbon Credit|Bought|gas_td",
+        "gas_t_d_negative": "Carbon Credit|Sold|gas_td",
+        "gas_t_d_ch4_positive": "Carbon Credit|Bought|gas_td",
+        "gas_t_d_ch4_negative": "Carbon Credit|Sold|gas_td",
+        "h2_atr_positive": "Carbon Credit|Bought|h2",
+        "h2_atr_negative": "Carbon Credit|Sold|h2",
+        "h2_atr_ccs_positive": "Carbon Credit|Bought|h2",
+        "h2_atr_ccs_negative": "Carbon Credit|Sold|h2",
+        "h2_coal_positive": "Carbon Credit|Bought|h2",
+        "h2_coal_negative": "Carbon Credit|Sold|h2",
+        "h2_coal_ccs_positive": "Carbon Credit|Bought|h2",
+        "h2_coal_ccs_negative": "Carbon Credit|Sold|h2",
+        "h2_smr_positive": "Carbon Credit|Bought|h2",
+        "h2_smr_negative": "Carbon Credit|Sold|h2",
+        "h2_smr_ccs_positive": "Carbon Credit|Bought|h2",
+        "h2_smr_ccs_negative": "Carbon Credit|Sold|h2",
+        "igcc_positive": "Carbon Credit|Bought|igcc",
+        "igcc_negative": "Carbon Credit|Sold|igcc",
+        "igcc_ccs_positive": "Carbon Credit|Bought|igcc",
+        "igcc_ccs_negative": "Carbon Credit|Sold|igcc",
+        "loil_cc_positive": "Carbon Credit|Bought|loil_elec",
+        "loil_cc_negative": "Carbon Credit|Sold|loil_elec",
+        "loil_fs_positive": "Carbon Credit|Bought|loil_ind",
+        "loil_fs_negative": "Carbon Credit|Sold|loil_ind",
+        "loil_i_positive": "Carbon Credit|Bought|loil_ind",
+        "loil_i_negative": "Carbon Credit|Sold|loil_ind",
+        "loil_ppl_positive": "Carbon Credit|Bought|loil_elec",
+        "loil_ppl_negative": "Carbon Credit|Sold|loil_elec",
+        "meth_coal_positive": "Carbon Credit|Bought|meth",
+        "meth_coal_negative": "Carbon Credit|Sold|meth",
+        "meth_coal_ccs_positive": "Carbon Credit|Bought|meth",
+        "meth_coal_ccs_negative": "Carbon Credit|Sold|meth",
+        "meth_h2_positive": "Carbon Credit|Bought|meth",
+        "meth_h2_negative": "Carbon Credit|Sold|meth",
+        "meth_i_positive": "Carbon Credit|Bought|meth",
+        "meth_i_negative": "Carbon Credit|Sold|meth",
+        "meth_ng_positive": "Carbon Credit|Bought|meth",
+        "meth_ng_negative": "Carbon Credit|Sold|meth",
+        "meth_ng_ccs_positive": "Carbon Credit|Bought|meth",
+        "meth_ng_ccs_negative": "Carbon Credit|Sold|meth",
+        "methanol_fs_positive": "Carbon Credit|Bought|methanol",
+        "methanol_fs_negative": "Carbon Credit|Sold|methanol",
+        "oil_extr_1_positive": "Carbon Credit|Bought|oil_extr",
+        "oil_extr_1_negative": "Carbon Credit|Sold|oil_extr",
+        "oil_extr_1_ch4_positive": "Carbon Credit|Bought|oil_extr",
+        "oil_extr_1_ch4_negative": "Carbon Credit|Sold|oil_extr",
+        "oil_extr_2_positive": "Carbon Credit|Bought|oil_extr",
+        "oil_extr_2_negative": "Carbon Credit|Sold|oil_extr",
+        "oil_extr_2_ch4_positive": "Carbon Credit|Bought|oil_extr",
+        "oil_extr_2_ch4_negative": "Carbon Credit|Sold|oil_extr",
+        "oil_extr_3_positive": "Carbon Credit|Bought|oil_extr",
+        "oil_extr_3_negative": "Carbon Credit|Sold|oil_extr",
+        "oil_extr_3_ch4_positive": "Carbon Credit|Bought|oil_extr",
+        "oil_extr_3_ch4_negative": "Carbon Credit|Sold|oil_extr",
+        "oil_extr_4_positive": "Carbon Credit|Bought|oil_extr",
+        "oil_extr_4_negative": "Carbon Credit|Sold|oil_extr",
+        "oil_extr_4_ch4_positive": "Carbon Credit|Bought|oil_extr",
+        "oil_extr_4_ch4_negative": "Carbon Credit|Sold|oil_extr",
+        "oil_extr_5_positive": "Carbon Credit|Bought|oil_extr",
+        "oil_extr_5_negative": "Carbon Credit|Sold|oil_extr",
+        "oil_extr_6_positive": "Carbon Credit|Bought|oil_extr",
+        "oil_extr_6_negative": "Carbon Credit|Sold|oil_extr",
+        "oil_extr_7_positive": "Carbon Credit|Bought|oil_extr",
+        "oil_extr_7_negative": "Carbon Credit|Sold|oil_extr",
+        "ref_hil_positive": "Carbon Credit|Bought|ref",
+        "ref_hil_negative": "Carbon Credit|Sold|ref",
+        "ref_lol_positive": "Carbon Credit|Bought|ref",
+        "ref_lol_negative": "Carbon Credit|Sold|ref",
+        "syn_liq_positive": "Carbon Credit|Bought|syn_liq",
+        "syn_liq_negative": "Carbon Credit|Sold|syn_liq",
+        "syn_liq_ccs_positive": "Carbon Credit|Bought|syn_liq",
+        "syn_liq_ccs_negative": "Carbon Credit|Sold|syn_liq",
+        "h2_i_positive": "Carbon Credit|Bought|h2_ind",
+        "h2_i_negative": "Carbon Credit|Sold|h2_ind",
+        "biomass_i_positive": "Carbon Credit|Bought|biomass_ind",
+        "biomass_i_negative": "Carbon Credit|Sold|biomass_ind",
+        "elec_i_positive": "Carbon Credit|Bought|elec_ind",
+        "elec_i_negative": "Carbon Credit|Sold|elec_ind",
     }
-    total_credits = {AP:{year:0 for year in years} for AP in list(carbon_cost_df['node_loc'].unique())}
-    total_debits = {AP:{year:0 for year in years} for AP in list(carbon_cost_df['node_loc'].unique())}
+    total_credits = {
+        AP: {year: 0 for year in years}
+        for AP in list(carbon_cost_df["node_loc"].unique())
+    }
+    total_debits = {
+        AP: {year: 0 for year in years}
+        for AP in list(carbon_cost_df["node_loc"].unique())
+    }
 
     for _, row in carbon_cost_df.iterrows():
         new_row = row.copy()
@@ -189,18 +212,18 @@ def OBPS_credits_tracking(scen, years):
         for year in years:
             try:
                 act_row = act_df[
-                    (act_df['node_loc'] == row['node_loc']) &
-                    (act_df['technology'] == row['Variable']) &
-                    (act_df['year_act'] == year)
+                    (act_df["node_loc"] == row["node_loc"])
+                    & (act_df["technology"] == row["Variable"])
+                    & (act_df["year_act"] == year)
                 ]
             except:
                 print("188")
 
-            #if not act_row.empty:
+            # if not act_row.empty:
             try:
-                activity_value = act_row['lvl'].sum() #list(dict(act_row)['lvl'])[0]
+                activity_value = act_row["lvl"].sum()  # list(dict(act_row)['lvl'])[0]
                 new_row[str(year)] *= activity_value
-                if new_row[str(year)]>=0:
+                if new_row[str(year)] >= 0:
                     new_row_negative[str(year)] = 0
                     new_row_positive[str(year)] = new_row[str(year)]
                     total_debits[province][year] += new_row[str(year)]
@@ -210,63 +233,84 @@ def OBPS_credits_tracking(scen, years):
                     total_credits[province][year] += new_row[str(year)]
                 flag = True
             except:
-                print("act was empty!:  ",act_row)
+                print("act was empty!:  ", act_row)
             # else:
             #     print("scen row Not found!")
             #     print(row['Variable'], year, row['node_loc'])
         if flag:
-            #new_row['Variable'] = aggregation_lable_mapping[variable]
-            new_row_positive["Variable"] = aggregation_lable_mapping[new_row_positive["Variable"]]
-            new_row_negative["Variable"] = aggregation_lable_mapping[new_row_negative["Variable"]]
-            new_carbon_cost_df = pd.concat([new_carbon_cost_df, pd.DataFrame([new_row_positive])], ignore_index=True)
-            new_carbon_cost_df = pd.concat([new_carbon_cost_df, pd.DataFrame([new_row_negative])], ignore_index=True)
+            # new_row['Variable'] = aggregation_lable_mapping[variable]
+            new_row_positive["Variable"] = aggregation_lable_mapping[
+                new_row_positive["Variable"]
+            ]
+            new_row_negative["Variable"] = aggregation_lable_mapping[
+                new_row_negative["Variable"]
+            ]
+            new_carbon_cost_df = pd.concat(
+                [new_carbon_cost_df, pd.DataFrame([new_row_positive])],
+                ignore_index=True,
+            )
+            new_carbon_cost_df = pd.concat(
+                [new_carbon_cost_df, pd.DataFrame([new_row_negative])],
+                ignore_index=True,
+            )
 
-    year_columns = ['2025', '2030', '2035', '2040', '2045', '2050', '2055', '2060']
-    new_carbon_cost_df = new_carbon_cost_df.groupby(['node_loc', 'Variable'])[year_columns].sum().reset_index()
+    year_columns = ["2025", "2030", "2035", "2040", "2045", "2050", "2055", "2060"]
+    new_carbon_cost_df = (
+        new_carbon_cost_df.groupby(["node_loc", "Variable"])[year_columns]
+        .sum()
+        .reset_index()
+    )
 
-    for province in list(carbon_cost_df['node_loc'].unique()):
+    for province in list(carbon_cost_df["node_loc"].unique()):
         new_row = {
-            'Variable': "Carbon Credit|Bought|Total",
-            'Scenario': "baseline",
-            'Unit': "Unit",
-            'node_loc': province,
+            "Variable": "Carbon Credit|Bought|Total",
+            "Scenario": "baseline",
+            "Unit": "Unit",
+            "node_loc": province,
         }
         for year in years:
             new_row[str(year)] = total_debits[province][year]
-        new_carbon_cost_df = pd.concat([new_carbon_cost_df, pd.DataFrame([new_row])], ignore_index=True)
+        new_carbon_cost_df = pd.concat(
+            [new_carbon_cost_df, pd.DataFrame([new_row])], ignore_index=True
+        )
 
-    for province in list(carbon_cost_df['node_loc'].unique()):
+    for province in list(carbon_cost_df["node_loc"].unique()):
         new_row = {
-            'Variable': "Carbon Credit|Sold|Total",
-            'Scenario': "baseline",
-            'Unit': "Unit",
-            'node_loc': province,
+            "Variable": "Carbon Credit|Sold|Total",
+            "Scenario": "baseline",
+            "Unit": "Unit",
+            "node_loc": province,
         }
         for year in years:
             new_row[str(year)] = total_credits[province][year]
-        new_carbon_cost_df = pd.concat([new_carbon_cost_df, pd.DataFrame([new_row])], ignore_index=True)
+        new_carbon_cost_df = pd.concat(
+            [new_carbon_cost_df, pd.DataFrame([new_row])], ignore_index=True
+        )
 
     # Step 1: Ensure numeric columns are actually numeric
     for col in new_carbon_cost_df.columns:
-        if col not in ['Variable', 'Scenario', 'Unit', 'node_loc', 'Unnamed: 0']:
-            new_carbon_cost_df[col] = pd.to_numeric(new_carbon_cost_df[col], errors='coerce')
+        if col not in ["Variable", "Scenario", "Unit", "node_loc", "Unnamed: 0"]:
+            new_carbon_cost_df[col] = pd.to_numeric(
+                new_carbon_cost_df[col], errors="coerce"
+            )
 
     new_carbon_cost_df.to_excel("obps_dbg.xlsx", sheet_name="data")
 
     # Step 2: Define grouping keys
-    group_cols = ['Variable', 'Scenario', 'Unit', 'node_loc']
+    group_cols = ["Variable", "Scenario", "Unit", "node_loc"]
     new_carbon_cost_df["Model"] = scen.model
     # Step 3: Get numeric columns (e.g., years like 2025, 2030)
-    numeric_cols = new_carbon_cost_df.select_dtypes(include='number').columns
+    numeric_cols = new_carbon_cost_df.select_dtypes(include="number").columns
     # Optional: remove index-like columns
-    numeric_cols = [col for col in numeric_cols if not col.startswith('Unnamed')]
+    numeric_cols = [col for col in numeric_cols if not col.startswith("Unnamed")]
     # Step 4: Group and sum
-    #summed_df = new_carbon_cost_df.groupby(group_cols, as_index=False)[numeric_cols].sum()
+    # summed_df = new_carbon_cost_df.groupby(group_cols, as_index=False)[numeric_cols].sum()
     new_carbon_cost_df["Scenario"] = scen.scenario
     new_carbon_cost_df["Model"] = scen.model
     new_carbon_cost_df["Unit"] = "$"
-    
+
     return new_carbon_cost_df
+
 
 def convert_format(scen, input_file, output_file_name):
     # Read the Excel file
@@ -280,16 +324,28 @@ def convert_format(scen, input_file, output_file_name):
         df[year] = df[year].abs()
 
     summed_df = OBPS_credits_tracking(scen, years)
-    
-    summed_df = summed_df.rename(columns={'node_loc': 'Region', '2025':2025, '2030':2030, '2035':2035, '2040':2040, '2045':2045, '2050':2050, '2055':2055, '2060':2060})
+
+    summed_df = summed_df.rename(
+        columns={
+            "node_loc": "Region",
+            "2025": 2025,
+            "2030": 2030,
+            "2035": 2035,
+            "2040": 2040,
+            "2045": 2045,
+            "2050": 2050,
+            "2055": 2055,
+            "2060": 2060,
+        }
+    )
 
     df = pd.concat([df, summed_df[df.columns]], ignore_index=True)
 
     # Drop rows where 'Region' is NaN
-    df = df.dropna(subset=['Region'])
+    df = df.dropna(subset=["Region"])
 
     # Remove duplicate rows
-    df = df.drop_duplicates(subset=['Model', 'Region', 'Scenario', 'Unit', 'Variable'])
+    df = df.drop_duplicates(subset=["Model", "Region", "Scenario", "Unit", "Variable"])
 
     # Now create the pyam.IamDataFrame
     df_pyam = pyam.IamDataFrame(df)
@@ -298,17 +354,17 @@ def convert_format(scen, input_file, output_file_name):
     df = df_pyam.as_pandas()
 
     # Ensure 'value' column is float
-    df['value'] = df['value'].astype(float)
+    df["value"] = df["value"].astype(float)
 
     # Set model name
-    df['model'] = 'MESSAGEix-Canada'
+    df["model"] = "MESSAGEix-Canada"
 
     # Rename 'year' column to 'time'
-    df.rename(columns={'year':'time'}, inplace=True)
+    df.rename(columns={"year": "time"}, inplace=True)
 
     with pd.ExcelWriter(output_file_name, engine="xlsxwriter") as writer:
         df.to_excel(writer, sheet_name="data", index=False)
-    
+
 
 def combineDict(*args):
     result = {}
@@ -625,23 +681,17 @@ def cum_vals(df):
 
 
 def write_xlsx(scen, df, path, out_file_timestamp, IDEA_format=False):
-    """Writes final results dataframe to xlsx file.
+    path = Path(path)  # ✅ ensure 'path' is a Path object
 
-    Parameters
-    ----------
-    df : dataframe
-    path : string
-        path to where the xlsx file should be written
-
-    """
+    # extract model and scenario name safely
+    model_nm = scen.model if hasattr(scen, "model") else "model"
+    scen_nm = scen.scenario if hasattr(scen, "scenario") else "scenario"
 
     out_path = path / f"{model_nm}_{scen_nm}_{out_file_timestamp}.xlsx"
-    pyam_out_path = path / f"output_pyam_{model_nm}_{scen_nm}_{out_file_timestamp}.xlsx" 
+    pyam_out_path = path / f"output_pyam_{model_nm}_{scen_nm}_{out_file_timestamp}.xlsx"
+
     with pd.ExcelWriter(out_path, engine="xlsxwriter") as writer:
-        df.to_excel(writer, sheet_name="data", index=False)
-    
-    if IDEA_format:
-        convert_format(scen, out_path, pyam_out_path)
+        df.to_excel(writer, index=False)
 
     return out_path
 
@@ -936,7 +986,7 @@ def _clean_up_regions(df, units=None):
                 df = pd.concat(dfs, sort=True)
 
     # Removes aggregate region 'WORLD'
-    #df = df[df["Region"] != "World"]
+    # df = df[df["Region"] != "World"]
 
     # for reg in list(regions.keys()):
     for reg in regions.keys():
@@ -2536,7 +2586,7 @@ def _retr_land_act(ds, ix):
                     " correct version of the land emulator is being used",
                 )
             )
-        #sys.exit(1)
+        # sys.exit(1)
         pass
     elif ix:
         drop = ["mrg"]
