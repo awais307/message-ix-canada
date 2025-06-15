@@ -1,10 +1,10 @@
-
 """
 Module: cer_constraints.py
 
 Provides functions to apply CER emission intensity and offset constraints,
 assign technical lifetimes, and a convenience entry point.
 """
+
 import pandas as pd
 from message_ix import make_df
 
@@ -19,7 +19,7 @@ def apply_cer(
     mode: str,
     emission: str,
     intensity_limit: float,
-    offset_limit: float
+    offset_limit: float,
 ):
     """
     Apply CER emission intensity constraints and offset purchase limits to a MESSAGEix Scenario.
@@ -45,41 +45,63 @@ def apply_cer(
             # Direct emission intensity
             for tec in tech_list:
                 rec_dir += [
-                    {"relation": relation_name_direct,
-                     "node_rel": node, "node_loc": node,
-                     "year_rel": year, "technology": emission,
-                     "year_act": year, "mode": mode,
-                     "value": 1.0, "unit": "-"},
-                    {"relation": relation_name_direct,
-                     "node_rel": node, "node_loc": node,
-                     "year_rel": year, "technology": tec,
-                     "year_act": year, "mode": mode,
-                     "value": -intensity_limit, "unit": "-"}
+                    {
+                        "relation": relation_name_direct,
+                        "node_rel": node,
+                        "node_loc": node,
+                        "year_rel": year,
+                        "technology": emission,
+                        "year_act": year,
+                        "mode": mode,
+                        "value": 1.0,
+                        "unit": "-",
+                    },
+                    {
+                        "relation": relation_name_direct,
+                        "node_rel": node,
+                        "node_loc": node,
+                        "year_rel": year,
+                        "technology": tec,
+                        "year_act": year,
+                        "mode": mode,
+                        "value": -intensity_limit,
+                        "unit": "-",
+                    },
                 ]
-            upp_dir.append({
-                "relation": relation_name_direct,
-                "node_rel": node,
-                "year_rel": year,
-                "value": 0,
-                "unit": "-"
-            })
+            upp_dir.append(
+                {
+                    "relation": relation_name_direct,
+                    "node_rel": node,
+                    "year_rel": year,
+                    "value": 0,
+                    "unit": "-",
+                }
+            )
 
             # Offset purchase limit
             for tec in offset_techs:
-                rec_off.append({
+                rec_off.append(
+                    {
+                        "relation": relation_name_offset,
+                        "node_rel": node,
+                        "node_loc": node,
+                        "year_rel": year,
+                        "technology": tec,
+                        "year_act": year,
+                        "mode": mode,
+                        "value": 1.0,
+                        "unit": "-",
+                    }
+                )
+            upp_off.append(
+                {
                     "relation": relation_name_offset,
-                    "node_rel": node, "node_loc": node,
-                    "year_rel": year, "technology": tec,
-                    "year_act": year, "mode": mode,
-                    "value": 1.0, "unit": "-"
-                })
-            upp_off.append({
-                "relation": relation_name_offset,
-                "node_rel": node,
-                "year_rel": year,
-                "value": offset_limit,
-                "unit": "-"
-            })
+                    "node_rel": node,
+                    "year_rel": year,
+                    "value": offset_limit,
+                    "unit": "-",
+                }
+            )
 
     # DataFrames
     df_dir = pd.DataFrame(rec_dir)
@@ -105,10 +127,7 @@ def apply_cer(
 
 
 def add_technical_lifetime(
-    scen,
-    techs: list,
-    start_year: int = 2025,
-    lifetime: int = 25
+    scen, techs: list, start_year: int = 2025, lifetime: int = 25
 ):
     """
     Assign a technical lifetime to specified technologies across subnational nodes.
@@ -122,9 +141,11 @@ def add_technical_lifetime(
             "technology": tec,
             "year_vtg": y,
             "value": lifetime,
-            "unit": "year"
+            "unit": "year",
         }
-        for node in nodes for tec in techs for y in years
+        for node in nodes
+        for tec in techs
+        for y in years
     ]
     df_life = pd.DataFrame(rec)
 
@@ -136,17 +157,27 @@ def apply_cer_policy(ctx):
     """
     Convenience wrapper to apply standard CER constraints and lifetimes.
     """
-    
-    scenario = ctx.source_scenario['scenario']
+
+    scenario = ctx.source_scenario["scenario"]
     # Standard CER technologies
     tech_list_cer = [
-        'bio_istig', 'coal_adv', 'coal_ppl', 'gas_cc',
-        'liq_bio', 'loil_cc', 'loil_ppl', 'syn_liq',
-        'elec_imp', 'gas_ct', 'gas_ppl', 'foil_ppl',
-        'coal_adv_ccs', 'gas_cc_ccs'
+        "bio_istig",
+        "coal_adv",
+        "coal_ppl",
+        "gas_cc",
+        "liq_bio",
+        "loil_cc",
+        "loil_ppl",
+        "syn_liq",
+        "elec_imp",
+        "gas_ct",
+        "gas_ppl",
+        "foil_ppl",
+        "coal_adv_ccs",
+        "gas_cc_ccs",
     ]
-    offset_techs = ['credits_buy']
-    years = [y for y in scenario.set('year') if int(y) >= 2030]
+    offset_techs = ["credits_buy"]
+    years = [y for y in scenario.set("year") if int(y) >= 2030]
 
     apply_cer(
         scen=scenario,
@@ -158,14 +189,11 @@ def apply_cer_policy(ctx):
         mode="M1",
         emission="CO2_TCE",
         intensity_limit=0.5694,
-        offset_limit=0.1
+        offset_limit=0.1,
     )
 
     # Default lifetimes for offset CCS techs
-    lifetime_techs = ['bio_istig_ccs', 'eth_bio_ccs', 'h2_bio_ccs', 'liq_bio_ccs']
+    lifetime_techs = ["bio_istig_ccs", "eth_bio_ccs", "h2_bio_ccs", "liq_bio_ccs"]
     add_technical_lifetime(
-        scen=scenario,
-        techs=lifetime_techs,
-        start_year=2025,
-        lifetime=25
+        scen=scenario, techs=lifetime_techs, start_year=2025, lifetime=25
     )
