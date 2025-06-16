@@ -32,17 +32,16 @@ scenario_config:
       - meth_h2
     process_historical: false
     apply_renewable_potential: false
-    apply_cer: true
+    apply_cer: false
     add_hydrogen_shares_f: false
     add_techs: false
     investment_tax_credit: false
-    apply_obps: false
-    obps_excel_sheet: "New_OBPS"
+    apply_obps: true
+    obps_excel_sheet: "New_OBPS_Stringent"
     obps_policy_carbon_cost:
-      "2025": 165.4251
-      "2030": 285.2156
+      2025: 165.4251
+      2030: 285.2156 
       more_than_2035: 387.89325
-
   post_process_config:
     to_excell: false
     legacy_reporter: true
@@ -51,7 +50,7 @@ scenario_config:
     validation: false
 
 path_config:
-  provincial_input_file: "scenarios/baseline/baseline_v1_OBPS.xlsx"
+  provincial_input_file: "scenarios/baseline/baseline_v2.xlsx"
   scenario_folder: "scenarios/baseline"
   out_dir: "model/output"
   ITC_policy_input_data: "./data/ITC/assumptions_database_example(ITCs).csv"

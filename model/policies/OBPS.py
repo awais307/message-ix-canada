@@ -1,8 +1,9 @@
+import ixmp
+import message_ix
 import numpy as np
 import pandas as pd
-import message_ix
-import ixmp
-from message_ix_models.util import broadcast, make_matched_dfs, same_node, same_time
+from message_ix_models.util import (broadcast, make_matched_dfs, same_node,
+                                    same_time)
 
 
 def apply_obps(ctx):
@@ -142,8 +143,10 @@ def apply_obps(ctx):
     else:
         print("\nAll technologies meet or exceed emission standards")
 
-    # Update fixed costs with validation and non-negative enforcement
-    var_cost_data = pd.read_csv(ctx.path["var_cost_no_obps_input_data"], header=0)
+    # Update variable costs with validation and non-negative enforcement
+    var_cost_data = scenario.par("var_cost")
+    # TODO: Add if else condition to check if var_cost_data exist or scenario being loaded
+    # var_cost_data = pd.read_csv(ctx.path["var_cost_no_obps_input_data"], header=0)
     valid_techs = scenario.set("technology")
 
     # Filter and merge
