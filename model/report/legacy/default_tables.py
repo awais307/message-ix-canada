@@ -9553,4 +9553,3 @@ def retr_supply_inv(units_energy, units_emi, units_ene_mdl):
 
 #     df = pp_utils.make_outputdf(vars, units)
 #     return df
-

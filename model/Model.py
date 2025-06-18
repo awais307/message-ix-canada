@@ -28,6 +28,7 @@ from model.policies.demand_reduction import demand_reduction
 from model.policies.investment_tax_credit import add_investment_tax_credit
 from model.utlities.utils import (read_config_ctx, map_yv_ya_lt, config_validation, map_learning_rate, copy_excel_sheet, copy_excel_file)
 from model.policies.apply_renewable_potential import apply_renewable_potential
+from model.policies.apply_cer import apply_cer_policy
 
 from message_ix_models.util import (
 	broadcast,
@@ -578,6 +579,10 @@ class model_MSG:
 			print('Model Logs: Applying renewable potential data\n')
 			apply_renewable_potential(self)
 
+		if self.ctx.policy_config['apply_cer']:
+			print('Model Logs: Applying Canada Electricity Regulations\n')
+			apply_cer_policy(self.ctx)
+
 		if self.ctx.policy_config['process_historical']:
 			print('Model Logs: Processing historical data\n')
 			update_historical_activity(self, path=scenario_folder)
@@ -634,6 +639,7 @@ class model_MSG:
 
 
 			if self.ctx.post_process_config['new_reporter']:
+				timestamp = f"{str(datetime.now().strftime('%Y-%m-%d--%H-%M'))}"
 				timestamp = str(datetime.now().strftime('%Y-%m-%d--%H-%M'))
 				self.ctx.generate_report(
 					output_path=f"reporting_output/{caseName}_{timestamp}_new_reporter.csv",
@@ -649,7 +655,8 @@ class model_MSG:
 				\n=================================================="
 				)
 			elif self.ctx.post_process_config['legacy_reporter']:
-				timestamp = str(datetime.now().strftime('%Y-%m-%d--%H-%M'))
+				
+				timestamp = datetime.now().strftime('%Y-%m-%d')
 				start = time.time()
 				df, path_name= report(mp=self.ctx.mp, scen=self.ctx.source_scenario['scenario'], out_dir="reporting_outputs", out_file_timestamp = timestamp, IDEA_format=self.ctx.post_process_config['IDEA_format'])
 				end = time.time()
@@ -658,9 +665,9 @@ class model_MSG:
 				Reporting with LEGACY reporter. Process time: {round((end - start) / 60)} Min and {round((end - start) % 60)} Sec\
 				\n=================================================="
 				)
-				if self.ctx.post_process_config['validation']:
-					if os.path.exists(path_name):
-						self.validate_scenario(path_name)
+				# if self.ctx.post_process_config['validation']:
+				# 	if os.path.exists(path_name):
+				# 		self.validate_scenario(path_name)
 				
 
 

@@ -16,12 +16,12 @@ run_tables:
         root: Resource|Cumulative Extraction
         active: True
         function: retr_cumulative_extraction
-        args: {"units": "ZJ"}
+        args: {"units": "PJ"}
     Res_remain:
         root: Resource|Remaining
         active: False # This function is not yet working
         function: retr_remaining_resources
-        args: {"units": "ZJ"}
+        args: {"units": "PJ"}
     Enrgy_PE:
         root: Primary Energy
         active: True

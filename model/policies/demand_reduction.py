@@ -1,17 +1,18 @@
 """
-This module provides functions to implement climate policies in MESSAGEix scenarios, 
+This module provides functions to implement climate policies in MESSAGEix scenarios,
 including federal carbon tax and coal phase-out.
 """
 
 from pathlib import Path
 import yaml
 
+
 def demand_reduction(scenario):
     """
     Reduces demand for a MESSAGEix scenario.
 
-    This function will modify the provided MESSAGEix scenario to include a federal carbon tax. 
-    The specific implementation details, such as the tax rates and the affected sectors, 
+    This function will modify the provided MESSAGEix scenario to include a federal carbon tax.
+    The specific implementation details, such as the tax rates and the affected sectors,
     should be added within this function.
 
     Args:
@@ -21,10 +22,10 @@ def demand_reduction(scenario):
         None
     """
 
-    data = scenario.par('demand')
+    data = scenario.par("demand")
     # Loop through each unique combination of node and commodity
-    nodes = data['node'].unique()
-    commodities = data['commodity'].unique()
+    nodes = data["node"].unique()
+    commodities = data["commodity"].unique()
 
     # Define the reduction factors for the key years
     # reduction_factors = {
@@ -35,10 +36,10 @@ def demand_reduction(scenario):
     #     2060: 0.8    # 20% reduction by 2060
     # }
     policies_config_path = Path("model/policies/policies_input.yaml")
-    with open(policies_config_path, 'r') as f:
+    with open(policies_config_path, "r") as f:
         data = yaml.load(f, Loader=yaml.SafeLoader)
-        reduction_factors = data['reduction_factors']
-        
+        reduction_factors = data["reduction_factors"]
+
     # Print the values as a dictionary
     print(data)
 
@@ -56,18 +57,16 @@ def demand_reduction(scenario):
     # Function to apply reduction
     def apply_reduction(group):
         for index, row in group.iterrows():
-            year = row['year']
+            year = row["year"]
             reduction_factor = calculate_reduction_factor(year)
-            group.at[index, 'value'] = row['value'] * reduction_factor
+            group.at[index, "value"] = row["value"] * reduction_factor
         return group
 
     # Apply the reduction to each combination of node and commodity
     for node in nodes:
         for commodity in commodities:
-            mask = (data['node'] == node) & (data['commodity'] == commodity)
+            mask = (data["node"] == node) & (data["commodity"] == commodity)
             data.loc[mask] = apply_reduction(data.loc[mask])
-
-
 
     # Display the first few rows of the modified data
     data.head(10)

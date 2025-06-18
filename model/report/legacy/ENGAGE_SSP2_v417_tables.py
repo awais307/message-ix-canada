@@ -3112,12 +3112,9 @@ def retr_CO2emi(units_emi, units_ene_mdl):
 
     vars["Energy|Supply|Gases|Coal|Fugitive"] = pp_utils._make_zero()
 
-    vars[
-        "Energy|Supply|Gases|Extraction|Combustion"
-    ] = _Other_gases_extr_comb + _Diff1 * (
-        abs(_Other_gases_extr_comb) / _Total_wo_BECCS
-    ).fillna(
-        0
+    vars["Energy|Supply|Gases|Extraction|Combustion"] = (
+        _Other_gases_extr_comb
+        + _Diff1 * (abs(_Other_gases_extr_comb) / _Total_wo_BECCS).fillna(0)
     )
 
     # _Diff1 is not disctributed across the variable
@@ -3148,32 +3145,24 @@ def retr_CO2emi(units_emi, units_ene_mdl):
 
     vars["Energy|Supply|Gases|Transportation|Fugitive"] = pp_utils._make_zero()
 
-    vars[
-        "Energy|Supply|Liquids|Biomass|Combustion"
-    ] = _Other_liquids_biomass_comb + _Diff1 * (
-        abs(_Other_liquids_biomass_comb_woBECCS) / _Total_wo_BECCS
-    ).fillna(
-        0
+    vars["Energy|Supply|Liquids|Biomass|Combustion"] = (
+        _Other_liquids_biomass_comb
+        + _Diff1
+        * (abs(_Other_liquids_biomass_comb_woBECCS) / _Total_wo_BECCS).fillna(0)
     )
 
     vars["Energy|Supply|Liquids|Biomass|Fugitive"] = pp_utils._make_zero()
 
-    vars[
-        "Energy|Supply|Liquids|Coal|Combustion"
-    ] = _Other_liquids_coal_comb + _Diff1 * (
-        abs(_Other_liquids_coal_comb) / _Total_wo_BECCS
-    ).fillna(
-        0
+    vars["Energy|Supply|Liquids|Coal|Combustion"] = (
+        _Other_liquids_coal_comb
+        + _Diff1 * (abs(_Other_liquids_coal_comb) / _Total_wo_BECCS).fillna(0)
     )
 
     vars["Energy|Supply|Liquids|Coal|Fugitive"] = pp_utils._make_zero()
 
-    vars[
-        "Energy|Supply|Liquids|Extraction|Combustion"
-    ] = _Other_liquids_extr_comb + _Diff1 * (
-        abs(_Other_liquids_extr_comb) / _Total_wo_BECCS
-    ).fillna(
-        0
+    vars["Energy|Supply|Liquids|Extraction|Combustion"] = (
+        _Other_liquids_extr_comb
+        + _Diff1 * (abs(_Other_liquids_extr_comb) / _Total_wo_BECCS).fillna(0)
     )
 
     vars["Energy|Supply|Liquids|Extraction|Fugitive"] = pp_utils._make_zero()
@@ -3210,12 +3199,9 @@ def retr_CO2emi(units_emi, units_ene_mdl):
     vars["Energy|Supply|Solids|Coal|Combustion"] = pp_utils._make_zero()
     vars["Energy|Supply|Solids|Coal|Fugitive"] = pp_utils._make_zero()
 
-    vars[
-        "Energy|Supply|Solids|Extraction|Combustion"
-    ] = _Other_solids_coal_trans_comb + _Diff1 * (
-        abs(_Other_solids_coal_trans_comb) / _Total_wo_BECCS
-    ).fillna(
-        0
+    vars["Energy|Supply|Solids|Extraction|Combustion"] = (
+        _Other_solids_coal_trans_comb
+        + _Diff1 * (abs(_Other_solids_coal_trans_comb) / _Total_wo_BECCS).fillna(0)
     )
 
     vars["Energy|Supply|Solids|Extraction|Fugitive"] = pp_utils._make_zero()
