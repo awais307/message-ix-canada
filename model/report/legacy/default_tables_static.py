@@ -4861,7 +4861,7 @@ def retr_SE_elecgen(units):
             ],
             units,
         )
-        - _SolarPV_curt_inp
+        # - _SolarPV_curt_inp
     )
 
     _SolarPV_onsite = pp.out(["solar_pv_I", "solar_pv_RC"], units)
@@ -5438,11 +5438,12 @@ def retr_pe(units, method=None):
             "wind_ppf",
         ],
         units,
-    ) - pp.inp(
-        ["wind_curtailment1", "wind_curtailment2", "wind_curtailment3"],
-        units,
-        inpfilter={"commodity": ["electr"]},
-    )
+    ) 
+    # - pp.inp(
+    #     ["wind_curtailment1", "wind_curtailment2", "wind_curtailment3"],
+    #     units,
+    #     inpfilter={"commodity": ["electr"]},
+    # )
 
     if method == "substitution":
         vars["Wind"] /= elec_factor
