@@ -33,6 +33,7 @@ scenario_config:
     process_historical: false
     apply_renewable_potential: false
     apply_cer: false
+    cement_material: True
     add_hydrogen_shares_f: false
     add_techs: false
     investment_tax_credit: false

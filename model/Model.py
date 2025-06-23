@@ -27,6 +27,9 @@ from model.policies.investment_tax_credit import add_investment_tax_credit
 from model.utlities.utils import (read_config_ctx, map_yv_ya_lt, config_validation, map_learning_rate)
 from model.policies.apply_renewable_potential import apply_renewable_potential
 from model.policies.apply_cer import apply_cer_policy
+from model.policies.apply_cement_material import gen_mock_demand_cement, gen_data_cement, build
+from model.report.material.reporting import material_report
+#from message_ix_models.model.material.build import build
 
 from message_ix_models.util import (
 	broadcast,
@@ -545,6 +548,20 @@ class model_MSG:
 		# self.ctx.source_scenario['scenario'].read_excel(
 		# 	"model/scenarios/baseline/model_default_v32_override.xlsx", add_units=True, commit_steps=False, init_items=False
 		# )
+
+		if self.ctx.policy_config['cement_material']:
+			# cement_demand_df = gen_mock_demand_cement(self.ctx.source_scenario['scenario'])
+			# cement_data_df = gen_data_cement(self.ctx.source_scenario['scenario'])
+			self.ctx.source_scenario['scenario'].check_out()
+			self.ctx.source_scenario['scenario'].add_set("type_addon", "dry_ccs_cement")
+			self.ctx.source_scenario['scenario'].add_set("type_addon", "wet_ccs_cement")
+			self.ctx.source_scenario['scenario'].commit("addons")
+			build(self.ctx.source_scenario['scenario'], False, iea_data_path=None)
+			# with pd.ExcelWriter("cement_model_data.xlsx", engine="xlsxwriter") as writer:
+			# 	for sheet_name, df in cement_data_df.items():
+			# 		df.to_excel(writer, sheet_name=sheet_name, index=False)
+			# cement_demand_df.to_csv("mock_cement_demand_canada.csv")
+
 		
 		if self.ctx.policy_config['apply_renewable_potential']:
 			print('Model Logs: Applying renewable potential data\n')
@@ -630,6 +647,7 @@ class model_MSG:
 				timestamp = datetime.now().strftime('%Y-%m-%d')
 				start = time.time()
 				df, path_name= report(mp=self.ctx.mp, scen=self.ctx.source_scenario['scenario'], out_dir="reporting_outputs", out_file_timestamp = timestamp, IDEA_format=self.ctx.post_process_config['IDEA_format'])
+				material_report(self.ctx.mp, self.ctx.source_scenario['scenario'])
 				end = time.time()
 				print(
 					f"\n==================================================\n\
