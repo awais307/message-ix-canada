@@ -156,7 +156,7 @@ The ITC implementation currently covers **three main technology scopes**. The fo
   - Applies ITC percentage investment cost reductions to **all CCS technologies except Direct Air Capture (DAC)**. DAC technologies are not modelled in MESSAGEix-Canada; hence, only non-DAC CCS technologies are included.
 - **ITC Reduction Values**:
   - **Original Horizon**: 50% (2022–2030), 25% (2031–2040)
-  - **Extended Horizon**: 50% (2022–2030), 25% (2041–2060)
+  - **Extended Horizon**: 50% (2022–2030), 25% (2031–2060)
 
 ---
 
@@ -165,6 +165,9 @@ The ITC implementation currently covers **three main technology scopes**. The fo
 - **Input Variable**: `Input|Policy|ITCs|Clean Technology`
 - **Scope**:
   - Applies investment cost reductions to technologies classified as clean technology under the ITC.
+- **ITC Reduction Values**:
+  - **Original Horizon**: 30% (2023–2033), 15% (2034)
+  - **Extended Horizon**: 30% (2023–2059), 15% (2060)
 
 ### Clean Technology List and Implementation Status:
 | **Technology Code**                                             | **Description**                                                                                   | **ITC Policy Implementation Status**            |
@@ -214,6 +217,10 @@ The **Open Insight Assumptions Database** defines four ITC value levels based on
 | CI ≥ 4.0                         | 0 or Not Eligible |
 
 > **Note:** In this implementation, the model **uses the highest tier (CI < 0.75)** to determine the ITC reduction value applied to `h2_elec`. Users may modify the CI thresholds and associated ITC values in the input file to enable flexible scenario testing.
+
+- **ITC Reduction Values**:
+  - **Original Horizon**: 40% (2023–2033), 20% (2034)
+  - **Extended Horizon**: 40% (2023–2059), 20% (2060)
 
 ---
 
