@@ -27,7 +27,7 @@ from model.policies.investment_tax_credit import add_investment_tax_credit
 from model.utlities.utils import (read_config_ctx, map_yv_ya_lt, config_validation, map_learning_rate)
 from model.policies.apply_renewable_potential import apply_renewable_potential
 from model.policies.apply_cer import apply_cer_policy
-from model.policies.apply_cement_material import gen_mock_demand_cement, gen_data_cement, build
+from model.policies.apply_material import build
 from model.report.material.reporting import material_report
 #from message_ix_models.model.material.build import build
 
@@ -40,6 +40,7 @@ from message_ix_models.util import (
 from message_ix_models import Context
 from pathlib import Path
 from model.report.legacy.iamc_report_hackathon import report
+from model.report.legacy import pp_utils
 
 warnings.filterwarnings("ignore")  # Ignore warnings to keep the output clean
 
@@ -648,6 +649,10 @@ class model_MSG:
 				start = time.time()
 				df, path_name= report(mp=self.ctx.mp, scen=self.ctx.source_scenario['scenario'], out_dir="reporting_outputs", out_file_timestamp = timestamp, IDEA_format=self.ctx.post_process_config['IDEA_format'])
 				material_report(self.ctx.mp, self.ctx.source_scenario['scenario'])
+				if self.ctx.post_process_config['IDEA_format']:
+					pp_utils.convert_format(self.ctx.source_scenario['scenario'], "material_pyom_report.xlsx", "material_pyom_report.xlsx")
+					pp_utils.material_convert_format("material_pyom_report.xlsx","material_IDEA_report.xlsx", legacy_report_path=path_name)
+
 				end = time.time()
 				print(
 					f"\n==================================================\n\

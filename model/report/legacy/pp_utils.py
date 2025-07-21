@@ -268,22 +268,25 @@ def OBPS_credits_tracking(scen, years):
     
     return new_carbon_cost_df
 
-def convert_format(scen, input_file, output_file_name):
+def convert_format(scen, input_file, output_file_name, OBPS_Credits=True):
     # Read the Excel file
     df = pd.read_excel(input_file)
 
     # Convert only the negative values in the columns from 2020 to 2060 to their absolute values
     # df.loc[:, 2020:2060] = df.loc[:, 2020:2060].abs()
-    years = list(df.columns[0:-5])
-
+    years = [year for year in list(df.columns) if str(year).isdigit()]
+    df[years] = df[years].fillna(0)
     for year in years:
-        df[year] = df[year].abs()
+        df[year] = df[year].astype(float).abs()
 
-    summed_df = OBPS_credits_tracking(scen, years)
-    
-    summed_df = summed_df.rename(columns={'node_loc': 'Region', '2025':2025, '2030':2030, '2035':2035, '2040':2040, '2045':2045, '2050':2050, '2055':2055, '2060':2060})
+    if OBPS_Credits:
+        summed_df = OBPS_credits_tracking(scen, years)
+        summed_df = summed_df.rename(columns={'node_loc': 'Region', '2025':2025, '2030':2030, '2035':2035, '2040':2040, '2045':2045, '2050':2050, '2055':2055, '2060':2060})
+        summed_df.drop(columns=['Unnamed: 0','Unnamed: 0.1'], inplace=True, errors='ignore')
+        df = pd.concat([df, summed_df[df.columns]], ignore_index=True)
 
-    df = pd.concat([df, summed_df[df.columns]], ignore_index=True)
+    # Ensure first charachter is uppercase in all non-integer columns
+    df.columns = [col[0].upper() + col[1:] if not str(col).isdigit() else col for col in df.columns]
 
     # Drop rows where 'Region' is NaN
     df = df.dropna(subset=['Region'])
@@ -308,7 +311,67 @@ def convert_format(scen, input_file, output_file_name):
 
     with pd.ExcelWriter(output_file_name, engine="xlsxwriter") as writer:
         df.to_excel(writer, sheet_name="data", index=False)
-    
+
+def material_convert_format(input_file, output_file_name, legacy_report_path):
+    # Read the Excel file
+    # input_file = "data/materials.xlsx"
+    # output_file_name = "data/materials_converted.xlsx"
+    df = pd.read_excel(input_file)
+    legacy_report_df = pd.read_excel(legacy_report_path)
+
+    region_dict = {'Alberta|Alberta':'Alberta',
+                'BritishColumbia|BritishColumbia':'BritishColumbia',
+                'Manitoba|Manitoba':'Manitoba',
+                'NewBrunswick|NewBrunswick':'NewBrunswick',
+                'NewfoundlandandLabrador|NewfoundlandandLabrador':'NewfoundlandandLabrador', 
+                'NorthwestTerritories|NorthwestTerritories':'NorthwestTerritories', 
+                'NovaScotia|NovaScotia':'NovaScotia', 
+                'Nunavut|Nunavut':'Nunavut', 
+                'Ontario|Ontario':'Ontario', 
+                'PrinceEdwardIsland|PrinceEdwardIsland':'PrinceEdwardIsland', 
+                'Quebec|Quebec':'Quebec', 
+                'Saskatchewan|Saskatchewan':'Saskatchewan', 
+                'Yukon|Yukon':'Yukon',
+                'Alberta':'Alberta',
+                'BritishColumbia':'BritishColumbia',
+                'Manitoba':'Manitoba',
+                'NewBrunswick':'NewBrunswick',
+                'NewfoundlandandLabrador':'NewfoundlandandLabrador', 
+                'NorthwestTerritories':'NorthwestTerritories', 
+                'NovaScotia':'NovaScotia', 
+                'Nunavut':'Nunavut', 
+                'Ontario':'Ontario', 
+                'PrinceEdwardIsland':'PrinceEdwardIsland', 
+                'Quebec':'Quebec', 
+                'Saskatchewan':'Saskatchewan', 
+                'Yukon':'Yukon'}
+    df['Region'] = df['Region'].map(region_dict)
+    # Convert only the negative values in the columns from 2020 to 2060 to their absolute values
+    years = [year for year in list(df.columns) if str(year).isdigit()]
+    df[years] = df[years].fillna(0)
+    for year in years:
+        df[year] = df[year].astype(int).abs()
+
+    # Now create the pyam.IamDataFrame
+    df_pyam = pyam.IamDataFrame(df)
+
+    # Convert back to pandas DataFrame
+    df = df_pyam.as_pandas()
+
+    # Ensure 'value' column is float
+    df['value'] = df['value'].astype(float)
+
+    # Set model name
+    df['model'] = 'MESSAGEix-Canada'
+
+    # Rename 'year' column to 'time'
+    df.rename(columns={'year':'time'}, inplace=True)
+    #df = df.append(legacy_report_df, ignore_index=True)
+    df = pd.concat([df, legacy_report_df], ignore_index=True)
+
+
+    with pd.ExcelWriter(output_file_name, engine="xlsxwriter") as writer:
+        df.to_excel(writer, sheet_name="data", index=False)
 
 def combineDict(*args):
     result = {}

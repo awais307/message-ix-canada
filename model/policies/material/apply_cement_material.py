@@ -694,7 +694,8 @@ def gen_data_cement(
 
     
 
-    replace_CH_with_CA_mock(results, "historical_activity")
+    #replace_CH_with_CA_mock(results, "historical_activity")
+    replace_CH_with_CA_Historical_activity(results, scale=False)
     replace_CH_with_CA_mock(results, "initial_new_capacity_up")
     replace_CH_with_CA_mock(results, "historical_new_capacity")
 
@@ -760,6 +761,46 @@ def replace_CH_with_CA_mock(data, key, scale=True):
     df_canada_by_province = pd.concat(prov_df_list, ignore_index=True)
     data[key] = df_canada_by_province
 
+def replace_CH_with_CA_Historical_activity(data, scale=False):
+    key = "historical_activity"
+    df = data[key]  # already loaded
+    df_base = df.copy()
+
+        # Dictionary of scaling factors
+    province_factors = {
+        #"Canada": 1.0,
+        "Ontario": 0.5,
+        "Quebec": 0.17,
+        "Alberta": 0.17,
+        "BritishColumbia": 0.16,
+        "Manitoba": 0,
+        "Saskatchewan": 0,
+        "NovaScotia": 0,
+        "NewBrunswick": 0,
+        "NewfoundlandandLabrador": 0,
+        "PrinceEdwardIsland": 0,
+        "NorthwestTerritories": 0,
+        "Yukon": 0,
+        "Nunavut": 0,
+
+    }
+
+    # Create a new list of all scaled/provincial dataframes
+    prov_df_list = []
+
+    for province, factor in province_factors.items():
+        temp = df_base.copy()
+        temp["node_loc"] = province
+        temp['node_origin'] = province
+        if scale:
+            temp["value"] = temp["value"] * factor * .0286
+        else:
+            temp["value"] = temp["value"] * factor
+        prov_df_list.append(temp)
+
+    # Combine all into one final dataframe
+    df_canada_by_province = pd.concat(prov_df_list, ignore_index=True)
+    data[key] = df_canada_by_province
 
 DATA_FUNCTIONS_1 = [
     # # gen_data_buildings,
@@ -780,7 +821,7 @@ DATA_FUNCTIONS_2 = [
 SPEC_LIST = [
     "generic",
     "common",
-    # "steel",
+    "steel",
     "cement",
     # "aluminum",
     # "petro_chemicals",
