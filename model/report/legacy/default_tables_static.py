@@ -4876,7 +4876,7 @@ def retr_SE_elecgen(units):
     #     (_SolarPV_OR / (_Wind_OR + _SolarPV_OR)).fillna(0)
 
     vars["Solar|PV"] = SolarPV
-    # vars["Solar|PV|Curtailment"] = _SolarPV_curt_inp
+    vars["Solar|PV|Curtailment"] = _SolarPV_curt_inp
 
     # ---------------------
     # CSP related variables
@@ -4951,17 +4951,17 @@ def retr_SE_elecgen(units):
         inpfilter={"commodity": ["electr"]},
     )
 
-    # _Wind_onshore = _Wind_res_act - _Wind_curt_inp * (
-    #     _Wind_res_act / (_Wind_res_act + _Wind_ref_act)
-    # ).fillna(0)
+    _Wind_onshore = _Wind_res_act - _Wind_curt_inp * (
+        _Wind_res_act / (_Wind_res_act + _Wind_ref_act)
+     ).fillna(0)
 
-    _Wind_onshore = _Wind_ref_act
+    # _Wind_onshore = _Wind_ref_act
 
-    # _Wind_offshore = _Wind_ref_act - _Wind_curt_inp * (
-    #     _Wind_ref_act / (_Wind_res_act + _Wind_ref_act)
-    # ).fillna(0)
+    _Wind_offshore = _Wind_ref_act - _Wind_curt_inp * (
+         _Wind_ref_act / (_Wind_res_act + _Wind_ref_act)
+     ).fillna(0)
 
-    _Wind_offshore = _Wind_ref_act
+    # _Wind_offshore = _Wind_ref_act
 
     # _Wind = _Wind_onshore + _Wind_offshore
 
@@ -4979,7 +4979,7 @@ def retr_SE_elecgen(units):
 
     vars["Wind|Onshore"] = _Wind_onshore
     vars["Wind|Offshore"] = _Wind_offshore
-    # vars["Wind|Curtailment"] = _Wind_curt_inp
+    vars["Wind|Curtailment"] = _Wind_curt_inp
 
     vars["Hydro"] = pp.out(["hydro_lc", "hydro_hc"], units)
 
@@ -7363,10 +7363,10 @@ def retr_fe(units):
     vars["Transportation|Gases|Shipping"] = GasTRP_shipping
     vars["Transportation|Hydrogen"] = H2trp + H2TRP_shipping + H2gastrp
     vars["Transportation|Hydrogen|Shipping"] = H2TRP_shipping
-    vars["Transportation|Liquids|Biomass"] = EthTRP + EthTRP_shipping
-    vars["Transportation|Liquids|Biomass|Shipping"] = EthTRP_shipping
-    vars["Transportation|Liquids|Coal"] = MethTRP + MethTRP_shipping
-    vars["Transportation|Liquids|Coal|Shipping"] = MethTRP_shipping
+    vars["Transportation|Liquids|Ethanol"] = EthTRP + EthTRP_shipping
+    vars["Transportation|Liquids|Methanol|Shipping"] = EthTRP_shipping
+    vars["Transportation|Liquids|Methanol"] = MethTRP + MethTRP_shipping
+    vars["Transportation|Liquids|Methanol|Shipping"] = MethTRP_shipping
 
     vars["Transportation|Liquids|Oil"] = (
         OilTRP + OilTRP_shipping_foil + OilTRP_shipping_loil
