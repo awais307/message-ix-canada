@@ -26,7 +26,7 @@ from model.policies.demand_reduction import demand_reduction
 from model.policies.investment_tax_credit import add_investment_tax_credit
 from model.utlities.utils import (read_config_ctx, map_yv_ya_lt, config_validation, map_learning_rate)
 from model.policies.apply_renewable_potential import apply_renewable_potential
-from model.policies.apply_cer import apply_cer_policy
+from model.policies.apply_cer import add_cer_emission_bounds
 
 from message_ix_models.util import (
 	broadcast,
@@ -552,7 +552,7 @@ class model_MSG:
 
 		if self.ctx.policy_config['apply_cer']:
 			print('Model Logs: Applying Canada Electricity Regulations\n')
-			apply_cer_policy(self.ctx)
+			add_cer_emission_bounds(self.ctx)
 
 		if self.ctx.policy_config['process_historical']:
 			print('Model Logs: Processing historical data\n')
