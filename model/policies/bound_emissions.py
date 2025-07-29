@@ -9,21 +9,6 @@ from geotext import GeoText
 from itertools import product
 
 
-def expand_grid(dictionary):
-    """
-    Create a DataFrame from all combinations of dictionary values.
-
-    Args:
-        dictionary (dict): A dictionary where each key is a column name and the value is a list of column values.
-
-    Returns:
-        pd.DataFrame: A DataFrame containing all combinations of the provided values.
-    """
-    return pd.DataFrame(
-        [row for row in product(*dictionary.values())], columns=dictionary.keys()
-    )
-
-
 def bound_emissions(self, path, nodeName):
     """
     Bound emissions in an extreme climate mitigation scenario.
@@ -35,77 +20,60 @@ def bound_emissions(self, path, nodeName):
         nodeName (str): The name of the node to bound emissions for.
 
     """
-    self.scenario.check_out()
 
-    emissions_df = pd.read_csv(path / "emissions_baseline.csv")
+def assign_cumulative_netzero(self):
+    # Define emissions data for Net-Zero scenario
+    start_year = 2025
+    target_year = 2050
+    end_year = 2060
 
-    # Define the exact emissions trajectory for Canada (in MtCO2eq)
-    canada_trajectory = {
-        2020: 1.81e09,  # 659 MtCO2eq
-        2025: 1.50e09,  # 549 MtCO2eq
-        2030: 1.20e09,  # 439 MtCO2eq
-        2035: 9.01e07,  # 329 MtCO2eq
-        2040: 6.03e07,  # 220 MtCO2eq
-        2045: 3.01e07,  # 110 MtCO2eq
-        2050: 55,  # 50,000 MtCO2eq (likely meant to be 50 MtCO2eq)
-        2055: 55,  # 40,000 MtCO2eq (likely meant to be 40 MtCO2eq)
-        2060: 55,  # 30,000 MtCO2eq (likely meant to be 30 MtCO2eq)
+    initial_emission = 720  # MtCO2e in 2025
+    net_zero_emission = 0  # Target emissions in 2050
+
+    # Assuming a linear decline from 2025 to 2050
+    years = list(range(start_year, end_year + 1))
+    emissions_netzero = []
+
+    # Calculate the annual decline rate for Net-Zero
+    decline_rate_netzero = (net_zero_emission - initial_emission) / (target_year - start_year)
+
+    # Calculate emissions for each year
+    for year in years:
+        if year <= target_year:
+            emissions_netzero.append(initial_emission + (year - start_year) * decline_rate_netzero)
+        else:  # Assuming zero emissions after 2050
+            emissions_netzero.append(net_zero_emission)
+
+    # Calculate cumulative emissions for Net-Zero scenario
+    cumulative_budget_netzero = sum(emissions_netzero)
+
+    # Convert MtCO2e to MtC
+    cumulative_budget_netzero_mtC = cumulative_budget_netzero * 0.2727
+
+    # Display results
+    print(f'{cumulative_budget_netzero_mtC} million tonne of Carbon for Net Zero by 2050')
+
+    import pandas as pd
+
+    # Recreate the original DataFrame with the given trajectory
+    data = {
+        "type_year": list(range(2025, 2061, 5)),
+        "value": [659, 511, 363, 250,  200, 110, 110, 50]  # Original values in MtCO2
     }
 
-    # Extract the unique provinces (nodes) excluding Canada
-    provinces = emissions_df["node"].unique()
-    provinces = provinces[provinces != "Canada"]
+    # Create DataFrame
+    df_bound_net = pd.DataFrame(data)
 
-    # Initialize a list to store the emission trajectories for each province
-    emission_trajectories_list = []
+    # Add required columns
+    df_bound_net.insert(0, "node", "Canada")
+    df_bound_net.insert(1, "type_emission", "TCE")
+    df_bound_net.insert(2, "type_tec", "all")
 
-    # Iterate over each province and apply the reduction schedule
-    for province in provinces:
-        # Extract the emission data for the province
-        province_data = emissions_df[(emissions_df["node"] == province)]
+    # Convert values from MtCO2 to MtC
+    df_bound_net["value"] = df_bound_net["value"] * (12 / 44)
 
-        # Create a dictionary to store the year and emission values
-        province_emissions = {"province": [], "year": [], "emission": []}
-
-        # Get the 2020 base year emission for the province
-        base_year_emission = province_data[province_data["year"] == 2020]["lvl"].values[
-            0
-        ]
-
-        # Get the total emissions for Canada in 2020
-        canada_2020_emission = canada_trajectory[2020]
-
-        # Calculate the proportion of this province's emissions relative to Canada's total in 2020
-        province_proportion = base_year_emission / canada_2020_emission
-
-        # Iterate over the Canada trajectory and calculate the emissions for this province
-        for year, canada_target in canada_trajectory.items():
-            adjusted_emission = province_proportion * canada_target
-
-            # Store the emission value in the dictionary
-            province_emissions["province"].append(province)
-            province_emissions["year"].append(year)
-            province_emissions["emission"].append(adjusted_emission)
-
-        # Convert the dictionary to a DataFrame and append to the list
-        province_emissions_df = pd.DataFrame(province_emissions)
-        emission_trajectories_list.append(province_emissions_df)
-
-    # Concatenate all the DataFrames into a single DataFrame
-    emission_trajectories_df = pd.concat(emission_trajectories_list).reset_index(
-        drop=True
-    )
-
-    df_bound = emission_trajectories_df.copy()
-    df_bound.rename(
-        columns={"province": "node", "year": "type_year", "emission": "value"},
-        inplace=True,
-    )
-    df_bound["type_emission"] = "TCE"
-    df_bound["type_tec"] = "all"
-    df_bound["unit"] = "-"
-
-    self.scenario.add_par("bound_emission", df_bound)
-
-    self.scenario.add_par("bound_emission", df)
-    self.scenario.commit("emissions bounded")
+    with self.scenario.transact():
+        
+        # netzero_1.remove_par('tax_emission', df)
+        # netzero_1.add_par('bound_emission', df)
+        self.scenario.add_par('bound_emission', df_bound_net)
