@@ -23,6 +23,18 @@ def apply_cer(
 ):
     """
     Apply CER emission intensity constraints and offset purchase limits to a MESSAGEix Scenario.
+
+    This function enforces constraints of the form:
+        Emissions(node, year) - intensity_limit × Activity(tech, node, year) ≤ 0
+
+    Where:
+        - Emissions is of type 'CO2_TCE' (e.g., in MtC),
+        - Activity is the electricity generation activity in GWa (GW average over a year),
+        - intensity_limit is the maximum allowed carbon intensity (e.g., 0.002393 MtC/GWa ≈ 1 tCO₂/MWh),
+        - The constraint ensures that average emissions per unit of electricity are below the CER threshold.
+
+        The relation_upper parameter defines the upper bound (RHS = 0) of the relation, ensuring:
+        Emissions_intensity ≤ intensity_limit   
     """
     if not (tech_list and offset_techs and years):
         raise ValueError("tech_list, offset_techs, and years must all be provided.")
@@ -105,9 +117,9 @@ def apply_cer(
 
     # DataFrames
     df_dir = pd.DataFrame(rec_dir)
-    df_off = pd.DataFrame(rec_off)
+    # df_off = pd.DataFrame(rec_off)
     df_upp_dir = pd.DataFrame(upp_dir)
-    df_upp_off = pd.DataFrame(upp_off)
+    # df_upp_off = pd.DataFrame(upp_off)
 
     # Category for offsets
     df_cat = make_df("cat_tec", type_tec="credits_b", technology="credits_buy")
@@ -121,9 +133,9 @@ def apply_cer(
         scen.add_set("cat_tec", df_cat)
 
         scen.add_par("relation_activity", df_dir)
-        scen.add_par("relation_activity", df_off)
+        # scen.add_par("relation_activity", df_off)
         scen.add_par("relation_upper", df_upp_dir)
-        scen.add_par("relation_upper", df_upp_off)
+        # scen.add_par("relation_upper", df_upp_off)
 
 
 def add_technical_lifetime(
@@ -161,20 +173,18 @@ def apply_cer_policy(ctx):
     scenario = ctx.source_scenario["scenario"]
     # Standard CER technologies
     tech_list_cer = [
-        "bio_istig",
         "coal_adv",
         "coal_ppl",
         "gas_cc",
-        "liq_bio",
         "loil_cc",
         "loil_ppl",
-        "syn_liq",
-        "elec_imp",
+        "igcc",
+        "igcc_ccs",
         "gas_ct",
         "gas_ppl",
         "foil_ppl",
         "coal_adv_ccs",
-        "gas_cc_ccs",
+        "gas_cc_ccs"
     ]
     offset_techs = ["credits_buy"]
     years = [y for y in scenario.set("year") if int(y) >= 2030]
@@ -188,8 +198,8 @@ def apply_cer_policy(ctx):
         years=years,
         mode="M1",
         emission="CO2_TCE",
-        intensity_limit=0.5694,
-        offset_limit=0.1,
+        intensity_limit=0.65,
+        offset_limit=0,
     )
 
     # Default lifetimes for offset CCS techs
@@ -197,3 +207,17 @@ def apply_cer_policy(ctx):
     add_technical_lifetime(
         scen=scenario, techs=lifetime_techs, start_year=2025, lifetime=25
     )
+
+
+def add_cer_emission_bounds(ctx):
+    """
+    Convenience wrapper to add CER emission bounds.
+    """
+    scenario = ctx.source_scenario["scenario"]
+
+    df_emis = pd.read_csv(ctx.path["cer_emission_bound"])
+    
+
+    with scenario.transact("Add CER emission bounds"):
+        scenario.add_par("bound_emission", df_emis)
+        
