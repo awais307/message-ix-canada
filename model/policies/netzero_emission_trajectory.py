@@ -3,15 +3,12 @@ This module provides a function to bound emissions in an extreme climate mitigat
 """
 
 import pandas as pd
-import numpy as np
-import pycountry
-from geotext import GeoText
-from itertools import product
 
 
-def bound_emissions(self, path, nodeName):
+
+def assign_cumulative_netzero(ctx):
     """
-    Bound emissions in an extreme climate mitigation scenario.
+    Bound emissions in a climate mitigation scenario.
 
     This function creates and commits a parameter 'bound_emission' for a given node in the MESSAGEix model.
 
@@ -20,8 +17,7 @@ def bound_emissions(self, path, nodeName):
         nodeName (str): The name of the node to bound emissions for.
 
     """
-
-def assign_cumulative_netzero(self):
+    scenario = ctx.source_scenario["scenario"]
     # Define emissions data for Net-Zero scenario
     start_year = 2025
     target_year = 2050
@@ -35,12 +31,16 @@ def assign_cumulative_netzero(self):
     emissions_netzero = []
 
     # Calculate the annual decline rate for Net-Zero
-    decline_rate_netzero = (net_zero_emission - initial_emission) / (target_year - start_year)
+    decline_rate_netzero = (net_zero_emission - initial_emission) / (
+        target_year - start_year
+    )
 
     # Calculate emissions for each year
     for year in years:
         if year <= target_year:
-            emissions_netzero.append(initial_emission + (year - start_year) * decline_rate_netzero)
+            emissions_netzero.append(
+                initial_emission + (year - start_year) * decline_rate_netzero
+            )
         else:  # Assuming zero emissions after 2050
             emissions_netzero.append(net_zero_emission)
 
@@ -51,14 +51,14 @@ def assign_cumulative_netzero(self):
     cumulative_budget_netzero_mtC = cumulative_budget_netzero * 0.2727
 
     # Display results
-    print(f'{cumulative_budget_netzero_mtC} million tonne of Carbon for Net Zero by 2050')
-
-    import pandas as pd
+    print(
+        f"{cumulative_budget_netzero_mtC} million tonne of Carbon for Net Zero by 2050"
+    )
 
     # Recreate the original DataFrame with the given trajectory
     data = {
         "type_year": list(range(2025, 2061, 5)),
-        "value": [659, 511, 363, 250,  200, 110, 110, 50]  # Original values in MtCO2
+        "value": [659, 511, 363, 250, 200, 110, 110, 50],  # Original values in MtCO2
     }
 
     # Create DataFrame
@@ -72,8 +72,8 @@ def assign_cumulative_netzero(self):
     # Convert values from MtCO2 to MtC
     df_bound_net["value"] = df_bound_net["value"] * (12 / 44)
 
-    with self.scenario.transact():
-        
+    with scenario.transact():
+
         # netzero_1.remove_par('tax_emission', df)
         # netzero_1.add_par('bound_emission', df)
-        self.scenario.add_par('bound_emission', df_bound_net)
+        scenario.add_par("bound_emission", df_bound_net)

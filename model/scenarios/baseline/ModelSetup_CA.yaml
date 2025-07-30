@@ -17,7 +17,7 @@ scenario_config:
     model: MESSAGEix-CA
     solve: true          # YAML booleans are lowercase
     scenario: baseline
-    scenario_name: baseline_cer
+    scenario_name: netzero
     annotation: "Initial setup for Canadian energy model."
     version: new
 
@@ -35,8 +35,9 @@ scenario_config:
     apply_cer: true
     add_hydrogen_shares_f: false
     add_techs: false
-    investment_tax_credit: false
-    apply_obps: false
+    investment_tax_credit: true
+    apply_obps: true
+    apply_netzero_emission_trajectory: true
     obps_excel_sheet: "New_OBPS_Stringent"
     obps_policy_carbon_cost:
       2025: 165.4251
