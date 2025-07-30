@@ -1,0 +1,14 @@
+node_loc,technology,year_act,mode,time,value,unit
+Alberta,elec_trp,2020,M1,year,0.020332319,GWa/a
+BritishColumbia,elec_trp,2020,M1,year,0.049987316,GWa/a
+Manitoba,elec_trp,2020,M1,year,0.006392694,GWa/a
+NewBrunswick,elec_trp,2020,M1,year,0.003285134,GWa/a
+NewfoundlandandLabrador,elec_trp,2020,M1,year,0.00275241,GWa/a
+NorthwestTerritories,elec_trp,2020,M1,year,8.87874E-05,GWa/a
+NovaScotia,elec_trp,2020,M1,year,0.003817859,GWa/a
+Nunavut,elec_trp,2020,M1,year,8.87874E-05,GWa/a
+Ontario,elec_trp,2020,M1,year,0.070585997,GWa/a
+PrinceEdwardIsland,elec_trp,2020,M1,year,0.000799087,GWa/a
+Quebec,elec_trp,2020,M1,year,0.072983257,GWa/a
+Saskatchewan,elec_trp,2020,M1,year,0.006659056,GWa/a
+Yukon,elec_trp,2020,M1,year,0.000443937,GWa/a
