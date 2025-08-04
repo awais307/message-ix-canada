@@ -356,18 +356,49 @@ class model_MSG:
     #     The scenarios are not solved as they are incomplete and therefore
     #     infeasible.
     #     """
+    #      output_name = (
+    # 		f"MsgData_{scenario.model}_{scenario.scenario}.gdx"
+    # 		if step_name is None
+    # 		else f"MsgData_{scenario.model}_{scenario.scenario}_{step_name}.gdx"
+    # 	)
+    #      self.mp._backend.write_file(
+    # 		path=swlf.ctx.path_gdx / output_name,
+    # 		item_type=ItemType.SET | ItemType.PAR,
+    # 		filters={"scenario": scenario},
+    # 	)
+    def update_relation(self, nodes, relation, technology, value, years="all"):
+        """
+        Replace max or min shares in "relation_activity" by a new value.
 
-    #     output_name = (
-    #         f"MsgData_{scenario.model}_{scenario.scenario}.gdx"
-    #         if step_name is None
-    #         else f"MsgData_{scenario.model}_{scenario.scenario}_{step_name}.gdx"
-    #     )
+        Parameters
+        ----------
+        nodes : list of str or 'all'
+            Nodes to apply the change in a relation.
+        relation : str
+            Relation name.
+        technology : str
+            Technology to which the value is being updated.
+        value : float
+            New coefficient for the technology in the relation.
+        years : list or "all", optional
+            Years to apply the change. Default is "all".
+        """
+        if nodes == "all":
+            nodes = self.ctx.source_scenario.set("node").tolist()[2:]
 
-    # 	self.mp._backend.write_file(
-    #         path=ctx.path_gdx / output_name,
-    #         item_type=ItemType.SET | ItemType.PAR,
-    #         filters={"scenario": scenario},
-    #     )
+        with self.ctx.source_scenario.transact("Replace values in a relation"):
+            df = self.ctx.source_scenario.par(
+                "relation_activity",
+                {"relation": relation, "technology": technology, "node_loc": nodes},
+            )
+
+            # Filter by specific years if provided
+            if years != "all":
+                df = df.loc[df["year_act"].isin(years)].copy()
+
+            if not df.empty:
+                df["value"] = value
+                self.ctx.source_scenario.add_par("relation_activity", df)
 
     def generate_report(
         self,
@@ -635,6 +666,22 @@ class model_MSG:
         if self.ctx.policy_config["apply_netzero_emission_trajectory"]:
             print("Model Logs: Applying netzero_emission trajectory\n")
             assign_cumulative_netzero(self.ctx)
+        # Increase transport maximum electrification to 90%
+        if self.ctx.policy_config["increase_transport_electrification"]:
+            print("Model Logs: Applying netzero_emission trajectory\n")
+
+            data = {
+                "UE_transport_electric": ("useful_transport", -0.9),
+            }
+
+            for rel, (tec, val) in data.items():
+                update_relation(
+                    self,
+                    nodes="all",
+                    relation=rel,
+                    technology=tec,
+                    value=val,
+                )
 
         # Technologies
         if self.ctx.policy_config["add_techs"]:
