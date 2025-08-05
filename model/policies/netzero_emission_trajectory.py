@@ -5,7 +5,6 @@ This module provides a function to bound emissions in an extreme climate mitigat
 import pandas as pd
 
 
-
 def assign_cumulative_netzero(ctx):
     """
     Bound emissions in a climate mitigation scenario.
@@ -77,3 +76,15 @@ def assign_cumulative_netzero(ctx):
         # netzero_1.remove_par('tax_emission', df)
         # netzero_1.add_par('bound_emission', df)
         scenario.add_par("bound_emission", df_bound_net)
+
+
+def apply_industrial_emission_constraint(ctx):
+    """
+    Add industrial emission constraints based on a predefined Canada trajectory from previous net zero
+    """
+    scenario = ctx.source_scenario["scenario"]
+
+    df_emis = pd.read_csv(ctx.path["industrial_emission_constraint"])
+
+    with scenario.transact("Add industrial emission bounds"):
+        scenario.add_par("bound_emission", df_emis)
