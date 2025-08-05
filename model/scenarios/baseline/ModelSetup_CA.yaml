@@ -17,7 +17,7 @@ scenario_config:
     model: MESSAGEix-CA
     solve: true          # YAML booleans are lowercase
     scenario: baseline
-    scenario_name: netzero
+    scenario_name: netzero_electr_industrial
     annotation: "Initial setup for Canadian energy model."
     version: new
 
@@ -39,6 +39,7 @@ scenario_config:
     apply_obps: true
     apply_netzero_emission_trajectory: true
     increase_transport_electrification: true
+    apply_industrial_emission_constraint: true
     obps_excel_sheet: "New_OBPS_Stringent"
     obps_policy_carbon_cost:
       2025: 165.4251
@@ -63,3 +64,4 @@ path_config:
   var_cost_no_obps_input_data: "./data/OBPS/var_cost_no_obps.csv"
   obps_standart_merged_data_output: "./data/obps_standard.csv"
   cer_emission_bound: "./data/CER/bound_emission.csv"
+  industrial_emission_constraint: "./data/OBPS/bound_emission.csv"
