@@ -1,0 +1,9 @@
+node,type_emission,type_tec,type_year,value,unit
+Canada,TCE,all,2025,180,???
+Canada,TCE_CO2_ind,all,2030,36,???
+Canada,TCE_CO2_ind,all,2035,25,???
+Canada,TCE_CO2_ind,all,2040,18,???
+Canada,TCE_CO2_ind,all,2045,12,???
+Canada,TCE_CO2_ind,all,2050,10,???
+Canada,TCE_CO2_ind,all,2055,10,???
+Canada,TCE_CO2_ind,all,2060,10,???
