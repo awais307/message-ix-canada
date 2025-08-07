@@ -22,9 +22,15 @@ balanced_df.csv
 baseline_v28.xlsx
 /data/data_country
 
-model/utlities/*.py
 /data/assumptions_database_example(ITCs).csv
 
 
 message-ix-canada.code-workspace
 *.textClipping
+model/utlities/utilities_main/get_historical_years.py
+model/utlities/utilities_main/get_nodes.py
+model/utlities/utilities_main/create_tec_catalogue.py
+model/utlities/utilities_main/__init__.py
+model/utlities/update_inconvenience_costs.py
+model/utlities/update_calibration.py
+model/utlities/utilities_main/util1.py

@@ -39,7 +39,7 @@ from model.utlities.utils import (
 from model.policies.apply_renewable_potential import apply_renewable_potential
 from model.policies.apply_cer import add_cer_emission_bounds
 from model.policies.netzero_emission_trajectory import (
-    assign_cumulative_netzero,
+    assign_defined_netzero,
     apply_industrial_emission_constraint,
 )
 from model.utlities.adjust_relation import update_relation
@@ -635,7 +635,7 @@ class model_MSG:
 
         if self.ctx.policy_config["apply_netzero_emission_trajectory"]:
             print("Model Logs: Applying netzero_emission trajectory\n")
-            assign_cumulative_netzero(self.ctx)
+            assign_defined_netzero(self.ctx)
         # Increase transport maximum electrification to 90%
         if self.ctx.policy_config["increase_transport_electrification"]:
             print("Model Logs: Applying netzero_emission trajectory\n")
