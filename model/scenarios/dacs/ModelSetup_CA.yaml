@@ -30,7 +30,7 @@ scenario_config:
     legacy_reporter: False # Use legacy reporter for outputting
     new_reporter: False # Use new reporter for outputting
 path_config:
-  provincial_input_file: scenarios/dacs/model_default_netzero_v7.xlsx
+  provincial_input_file: scenarios/dacs/DAC_mpen_netzero_reduced_costs.xlsx
   scenario_folder: scenarios/dacs
   out_dir: output
   ITC_policy_input_data: ./data/assumptions_database_example(ITCs).csv
