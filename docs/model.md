@@ -249,6 +249,7 @@ Aside from documneted MESSAGEix Hydrogen technologies, the following list of tec
 | h2_pyrolysis         | Methane Pyrolysis to produce Hydorgen                         |
 
 A Hydrogen Flowcart in MESSAGEix-Canada;
+
 ![](include/H2_Framework_2025-03-06.png)
 
 # **🌍 Direct Air Capture (DAC)**
