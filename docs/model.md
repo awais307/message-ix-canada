@@ -246,8 +246,10 @@ Aside from documneted MESSAGEix Hydrogen technologies, the following list of tec
 | liq_h2               | Fischer Tropsch Synthesis - Lightoil Production From Hydrogen |
 | h2_stor_geo          | Geological Hydrogen Storage                                   |
 | meth_h2              | Methanol Production From Hydrogen                             |
-| h2_gas_fc_trp        | Hydrogen Gas fuel Cell Transportation                         |
 | h2_pyrolysis         | Methane Pyrolysis to produce Hydorgen                         |
+
+A Hydrogen Flowcart in MESSAGEix-Canada;
+![](include/H2_Framework_2025-03-06.png)
 
 # **🌍 Direct Air Capture (DAC)**
 
