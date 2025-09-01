@@ -17,7 +17,7 @@ scenario_config:
     model: MESSAGEix-CA
     solve: true          # YAML booleans are lowercase
     scenario: baseline
-    scenario_name: netzero_electr_industrial
+    scenario_name: baseleine_curpol
     annotation: "Initial setup for Canadian energy model."
     version: new
 
@@ -37,9 +37,9 @@ scenario_config:
     add_techs: false
     investment_tax_credit: true
     apply_obps: true
-    apply_netzero_emission_trajectory: true
-    increase_transport_electrification: true
-    apply_industrial_emission_constraint: true
+    apply_netzero_emission_trajectory: false
+    increase_transport_electrification: false
+    apply_industrial_emission_constraint: false
     obps_excel_sheet: "New_OBPS_Stringent"
     obps_policy_carbon_cost:
       2025: 165.4251
@@ -53,7 +53,7 @@ scenario_config:
     validation: false
 
 path_config:
-  provincial_input_file: "scenarios/baseline/baseline_v6.xlsx"
+  provincial_input_file: "scenarios/baseline/baseline_v7.xlsx"
   scenario_folder: "scenarios/baseline"
   out_dir: "model/output"
   ITC_policy_input_data: "./data/ITC/assumptions_database_ITCs_OriginalHorizon.csv"
