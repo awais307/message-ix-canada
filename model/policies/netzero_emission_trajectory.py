@@ -5,7 +5,7 @@ This module provides a function to bound emissions in an extreme climate mitigat
 import pandas as pd
 
 
-def assign_cumulative_netzero(ctx):
+def assign_defined_netzero(ctx):
     """
     Bound emissions in a climate mitigation scenario.
 
