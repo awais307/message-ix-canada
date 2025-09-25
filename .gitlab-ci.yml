@@ -24,7 +24,7 @@ job:
     - python3 MESSAGE_CA.py --report --solve
 
 pages:
-  image: python:3.8-buster
+  image: python:3.11-slim
   before_script: []
   timeout: 10m
   script:
