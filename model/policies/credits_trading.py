@@ -1,12 +1,10 @@
-
-
 scenario.check_out()
 
 # Retrieve sscenarioario regions
-regs =  [n for n in scenario.set("node") if n not in ["World", "Canada"]]
+regs = [n for n in scenario.set("node") if n not in ["World", "Canada"]]
 
 # Retrieve sscenarioario modeling-horizon
-years = [2025, 2030, 2035, 2040, 2045, 2050,2060]
+years = [2025, 2030, 2035, 2040, 2045, 2050, 2060]
 
 # Add dummy level and commodity
 commodity = "credits"

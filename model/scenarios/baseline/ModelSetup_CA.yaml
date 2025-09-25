@@ -17,13 +17,13 @@ scenario_config:
     model: MESSAGEix-CA
     solve: true          # YAML booleans are lowercase
     scenario: baseline
-    scenario_name: baseline_obps
+    scenario_name: baseleine_curpol
     annotation: "Initial setup for Canadian energy model."
     version: new
 
   policy_config:
     add_technology_techs:
-      - h2_atr_ccs
+      - h2_atr_ccs 
       - gas_h2
       - h2_stor_geo
       - liq_h2
@@ -35,14 +35,16 @@ scenario_config:
     apply_cer: true
     add_hydrogen_shares_f: false
     add_techs: false
-    investment_tax_credit: false
-    apply_obps: false
-    obps_excel_sheet: "New_OBPS"
+    investment_tax_credit: true
+    apply_obps: true
+    apply_netzero_emission_trajectory: false
+    increase_transport_electrification: false
+    apply_industrial_emission_constraint: false
+    obps_excel_sheet: "New_OBPS_Stringent"
     obps_policy_carbon_cost:
-      "2025": 165.4251
-      "2030": 285.2156
+      2025: 165.4251
+      2030: 285.2156 
       more_than_2035: 387.89325
-
   post_process_config:
     to_excell: false
     legacy_reporter: true
@@ -51,13 +53,15 @@ scenario_config:
     validation: false
 
 path_config:
-  provincial_input_file: "scenarios/baseline/baseline_v1_OBPS.xlsx"
+  provincial_input_file: "scenarios/baseline/baseline_v7.xlsx"
   scenario_folder: "scenarios/baseline"
   out_dir: "model/output"
-  ITC_policy_input_data: "./data/ITC/assumptions_database_example(ITCs).csv"
+  ITC_policy_input_data: "./data/ITC/assumptions_database_ITCs_OriginalHorizon.csv"
   OBPS_policy_input_data: "./data/OBPS/New_OBPS.xlsx"
   OBPS_credits_output_path : "./data/OBPS/OBPS_credits.csv"
   OBPS_mapping_input_data: "data/OBPS/obps_mapping_msg.xlsx"
   fix_cost_no_obps_input_data: "./data/OBPS/fix_cost_no_obps.csv"
   var_cost_no_obps_input_data: "./data/OBPS/var_cost_no_obps.csv"
   obps_standart_merged_data_output: "./data/obps_standard.csv"
+  cer_emission_bound: "./data/CER/bound_emission.csv"
+  industrial_emission_constraint: "./data/OBPS/bound_emission.csv"

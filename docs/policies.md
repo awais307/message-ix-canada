@@ -135,3 +135,144 @@ These are added via the `tax_emission` parameter.
 ## Conclusion
 
 This implementation of the CER provides a structured and policy-aligned mechanism for regulating emissions from electricity generation, offering flexibility via offsets, and maintaining system integrity through capped compliance mechanisms. This feature allows MESSAGEix-Canada to simulate decarbonization pathways under federal and provincial constraints effectively.
+
+
+# Investment Tax Credit (ITC)
+
+## 1. Policy Overview
+
+The **Federal Investment Tax Credit (ITC)** is a refundable tax credit available to corporations that make capital investments in eligible clean technologies in Canada. The ITC policy is implemented in MESSAGEix-Canada by applying technology-specific investment cost reductions, based on assumptions from the **Open Insight Assumptions Database**. These reductions are applied over the model's time horizon using predefined input files.
+
+---
+
+## 2. Technology Scopes Covered by ITC Policy
+
+The ITC implementation currently covers **three main technology scopes**. The fourth scope (Clean Technology Manufacturing) is not yet included.
+
+### 2.1 Carbon Capture, Utilization, and Storage (CCUS ITC)
+
+- **Input Variable**: `Input|Policy|ITCs|CCUS`
+- **Scope**:
+  - Applies ITC percentage investment cost reductions to **all CCS technologies except Direct Air Capture (DAC)**. DAC technologies are not modelled in MESSAGEix-Canada; hence, only non-DAC CCS technologies are included.
+- **ITC Reduction Values**:
+  - **Original Horizon**: 50% (2022–2030), 25% (2031–2040)
+  - **Extended Horizon**: 50% (2022–2030), 25% (2031–2060)
+
+---
+
+### 2.2 Clean Technology ITC
+
+- **Input Variable**: `Input|Policy|ITCs|Clean Technology`
+- **Scope**:
+  - Applies investment cost reductions to technologies classified as clean technology under the ITC.
+- **ITC Reduction Values**:
+  - **Original Horizon**: 30% (2023–2033), 15% (2034)
+  - **Extended Horizon**: 30% (2023–2059), 15% (2060)
+
+### Clean Technology List and Implementation Status:
+| **Technology Code**                                             | **Description**                                                                                   | **ITC Policy Implementation Status**            |
+|------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|--------------------------------------------------|
+| `wind_cv1`, `wind_cv2`, `wind_cv3`, `wind_cv4`                   | Onshore wind with flexibility requirements and firm capacity contributions. Includes quadratic systems integration costs. | Implemented                                      |
+| `wind_ppf`                                                       | Offshore wind power plant (capacity only)                                                         | Implemented                                      |
+| `wind_ppl`                                                       | Onshore wind power plant (capacity only)                                                          | Implemented                                      |
+| `solar_cv1`, `solar_cv2`, `solar_cv3`, `solar_cv4`               | Solar PV with quadratic system integration costs                                                  | Implemented                                      |
+| `solar_i`                                                        | Solar thermal in the industry thermal sector                                                      | Implemented                                      |
+| `solar_pv_ppl`                                                   | Solar photovoltaic power plant (no storage)                                                       | Implemented                                      |
+| `solar_th_ppl`                                                   | Solar thermal power plant with storage                                                            | Implemented                                      |
+| `hydro_hc`                                                       | High-cost hydro power plant                                                                       | Implemented                                      |
+| `hydro_lc`                                                       | Low-cost hydro power plant                                                                        | Implemented                                      |
+| `stor_ppl`                                                       | Generic electric storage system                                                                   | Implemented – Added After Revision               |
+| `hp_el_i`                                                        | Electric heat pump in the industry thermal sector                                                 | Implemented – Added After Revision               |
+| `hp_gas_i`                                                       | Natural gas heat pump in the industry thermal sector                                              | Implemented – Added After Revision               |
+| `geo_hpl`                                                        | Geothermal heat plant                                                                             | Implemented – Added After Revision               |
+| `geo_ppl`                                                        | Geothermal power plant                                                                            | Implemented – Added After Revision               |
+| `solar_th_ppl__air`, `solar_th_ppl__cl_fresh`, `solar_th_ppl__ot_fresh`, `solar_th_ppl__ot_saline` |                             ---                                                                                                         | Listed but Not Implemented                       |
+
+
+> **Legend – ITC Policy Implementation Status**
+
+- **Implemented**:  
+  Technology included in the Clean Technology ITC input file and successfully implemented in the model.
+
+- **Implemented – Added After Revision**:  
+  Technology not included in the initial Clean Technology ITC input file but added after a revision of model implementation scope and successfully implemented in the model.
+
+- **Listed but Not Implemented**:  
+  Technology included in the initial Clean Technology ITC input file file but not implemented due to missing required parameters (e.g., `inv_cost`) in the model.
+
+---
+### 2.3 Clean Hydrogen ITC
+
+- **Input Variable:** `Input|Policy|ITCs|Clean Hydrogen`
+- **Scope:**  
+  - This scope applies ITC reductions to hydrogen production technologies. In the current version of the model, the ITC is applied **only to the technology `h2_elec` (hydrogen production via electrolysis)**.
+
+The **Open Insight Assumptions Database** defines four ITC value levels based on the carbon intensity (CI) of the hydrogen production technology:
+
+| **Carbon Intensity (CI) Range** | **ITC Reduction Value**       |
+|----------------------------------|---------------------|
+| CI < 0.75                        | 40 %       |
+| 0.75 ≤ CI < 2.0                  | 25 %                |
+| 2.0 ≤ CI < 4.0                   | 15 %              |
+| CI ≥ 4.0                         | 0 or Not Eligible |
+
+> **Note:** In this implementation, the model **uses the highest tier (CI < 0.75)** to determine the ITC reduction value applied to `h2_elec`. Users may modify the CI thresholds and associated ITC values in the input file to enable flexible scenario testing.
+
+- **ITC Reduction Values**:
+  - **Original Horizon**: 40% (2023–2033), 20% (2034)
+  - **Extended Horizon**: 40% (2023–2059), 20% (2060)
+
+---
+
+## 3. Limitations and Special Notes
+
+### 3.1 DAC Technologies
+
+- DAC is excluded since it is not modelled in the current version of MESSAGEix-Canada.
+- `Input|Policy|ITCs|CCUS` applies only to non-DAC CCS technologies.
+
+### 3.2 CO₂ Transport and Storage
+
+- The eligible technology `co2_tr_dis`, which covers CO₂ transportation and disposal, does not have an associated investment cost (`inv_cost`) defined in the model. Therefore, the ITC cannot be applied to this technology.
+- Investment costs related to **CO₂ capture** are incorporated within the corresponding power plant technologies.
+
+### 3.3 Eligible Clean Technologies Without ITC Application
+- The ITC cannot be applied to technologies that lack defined investment costs `inv_cost` or explicit representation in the model. These include:
+  - `hp_el_rc` (electric heat pump in residential/commercial)
+  - `hp_gas_rc` (natural gas heat pump in residential/commercial)
+  - Small Modular Reactors (SMRs) are not modelled explicitly. Only `nuc_hc` and `nuc_lc` nuclear technologies exist; custom model modifications required for SMRs.
+
+### 3.4 Carbon Sequestration Output Variable
+
+- **Output** `Carbon Sequestration|CCS|Industrial`
+represents the total CO₂ captured from industrial processes and stored geologically. This output is linked to industrial technologies that include carbon capture and storage. Since the ITC policy has already been applied to all CCS-related technologies, this output category is effectively covered under the CCS ITC policy.
+
+---
+
+## 4. Model Implementation and Setup
+
+### 4.1 Core ITC Application Function
+
+- The ITC policy is activated by setting the `investment_tax_credit` flag to `true` in the `ModelSetup_CA.yaml` file.
+- The `Investment_tax_credit.py` script contains the function `add_investment_tax_credit()`. This function applies the ITC percentage deduction to the `inv_cost` parameter of eligible technologies for each model year.
+
+**Calculation:**
+
+```python
+adjusted_inv_cost = inv_cost * (1 - (ITC_Value / 100))
+```
+
+### 4.2 ITC Input Files and Time Horizons
+
+The ITC policy uses CSV input files that define the percentage investment cost reduction values by technology scope and year. Two versions of these input files exist:
+
+- **Original Horizon Input File** (`assumptions_database_ITCs_OriginalHorizon.csv`):
+  - Applies ITC values from **2022 to 2040** for CCUS.
+  - Applies ITC values from **2023 to 2034** for Clean Hydrogen and Clean Technology.
+
+- **Extended Horizon Input File** (`assumptions_database_ITCs_ExtendedHorizon.csv`):
+  - Extends the ITC values beyond original time horizon up to **2060** following the original policy format.
+
+Users select which input file to apply when configuring the `ModelSetup_CA.yaml` file.
+
+

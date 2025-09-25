@@ -2,10 +2,10 @@
 
 import numpy as np
 import pandas as pd
-from . import postprocess 
-from . import pp_utils
 
-#pp = postprocess.PostProcess(scen, ix=False)
+from . import postprocess, pp_utils
+
+# pp = postprocess.PostProcess(scen, ix=False)
 pp = None
 mu = None
 run_history = None
@@ -20,7 +20,6 @@ func_dict = {}  # type: dict
 def return_func_dict():
     """Returns functions defined in script"""
     return func_dict
-
 
 
 def _pe_wCCSretro(tec, scrub_tec, group, inpfilter, units, share=1):
@@ -584,7 +583,7 @@ def retr_remaining_resources(units):
 #             "commodity": ["Agricultural Demand|Non-Energy|Livestock|Other|Waste"],
 #         }
 #     )
-    
+
 
 #     df = pp_utils.make_outputdf(vars, units)
 #     return df
@@ -1312,7 +1311,7 @@ def retr_demands_input(units):
         + (
             -1.0
             * pp.out(
-                ["h2_fc_trp","h2_gas_fc_trp"],
+                ["h2_fc_trp", "h2_gas_fc_trp"],
                 units,
                 outfilter={"level": ["final"], "commodity": ["electr"]},
             )
@@ -1331,7 +1330,7 @@ def retr_demands_input(units):
             "coal_trp",
             "elec_trp",
             "h2_fc_trp",
-            "h2_gas_fc_trp"
+            "h2_gas_fc_trp",
         ],
         units,
     )
@@ -1722,12 +1721,12 @@ def retr_price(
     # sums accross regions values.
     scale_tec = "Agricultural Production|Non-Energy|Crops"
 
-    #vars["Agriculture|Non-Energy Crops and Livestock|Index"] = pp.retrieve_lu_price(
+    # vars["Agriculture|Non-Energy Crops and Livestock|Index"] = pp.retrieve_lu_price(
     #    "Price|Agriculture|Non-Energy Crops and Livestock|Index", scale_tec
-    #)
-    #vars["Agriculture|Non-Energy Crops|Index"] = pp.retrieve_lu_price(
+    # )
+    # vars["Agriculture|Non-Energy Crops|Index"] = pp.retrieve_lu_price(
     #    "Price|Agriculture|Non-Energy Crops|Index", scale_tec
-    #)
+    # )
     dfs.append(pp_utils.make_outputdf(vars, units_agri, glb=False))
 
     return pd.concat(dfs, sort=True)
@@ -1893,12 +1892,12 @@ def retr_kyoto(units):
             ) * mu["conv_c2co2"]
 
             # Retrieve land-use related GHGs: CO2+CH4+N2O
-            #land_use = pp.land_out(
+            # land_use = pp.land_out(
             #    lu_out_filter={"level": ["land_use_reporting"], "commodity": ["TCE"]},
             #    units="Mt CO2eq/yr",
-            #)
+            # )
 
-            vars["Kyoto Gases"] += co2 + ch4 + n2o + fgases #+ land_use
+            vars["Kyoto Gases"] += co2 + ch4 + n2o + fgases  # + land_use
 
     df = pp_utils.make_outputdf(vars, units)
     return df
@@ -1980,7 +1979,7 @@ def retr_othemi(var, units):
     # -----------------------------
     # 1.1 Agriculture Waste Bruning
     # -----------------------------
-    '''
+    """
     if var in ["BCA", "OCA", "SO2", "NH3"]:
         # HACK: Variable activity is in kt so GWa -> MWa will * by .001
         AgricultureWasteBurning = pp.emi(
@@ -2196,7 +2195,7 @@ def retr_othemi(var, units):
     )
 
     vars["Energy|Demand|Transportation|Aviation|International"] = Aircraft
-    '''
+    """
     # -----------------------------------------
     # Electricity and heat production (Table 5)
     # -----------------------------------------
@@ -2277,7 +2276,17 @@ def retr_othemi(var, units):
     )
 
     gases_hydrogen = pp.emi(
-        ["h2_smr", "h2_smr_ccs", "h2_coal", "h2_coal_ccs", "h2_bio", "h2_bio_ccs","h2_atr", "h2_atr_ccs", "h2_pyrolysis"],
+        [
+            "h2_smr",
+            "h2_smr_ccs",
+            "h2_coal",
+            "h2_coal_ccs",
+            "h2_bio",
+            "h2_bio_ccs",
+            "h2_atr",
+            "h2_atr_ccs",
+            "h2_pyrolysis",
+        ],
         "GWa",
         emifilter={"relation": [f"{var}_Emission"]},
         emission_units=units,
@@ -2668,7 +2677,7 @@ def retr_othemi(var, units):
             "meth_fc_trp",
             "eth_fc_trp",
             "h2_fc_trp",
-            "h2_gas_fc_trp"
+            "h2_gas_fc_trp",
         ],
         "GWa",
         emifilter={"relation": [f"{var}_Emission"]},
@@ -2806,7 +2815,7 @@ def retr_othemi(var, units):
             + vars["Energy|Demand|Industry"]
             + vars["Energy|Demand|Residential and Commercial"]
             + vars["Energy|Demand|Transportation|Road Rail and Domestic Shipping"]
-            #+ vars["Energy|Demand|Transportation|Aviation|International"]
+            # + vars["Energy|Demand|Transportation|Aviation|International"]
         )
 
     elif var in ["CH4"]:
@@ -2961,7 +2970,7 @@ def retr_CO2_CCS(units_emi, units_ene):
         "meth_ng_ccs",
         "h2_smr",
         "h2_smr_ccs",
-        "h2_atr", 
+        "h2_atr",
         "h2_atr_ccs",
         "h2_pyrolysis",
         "gas_t_d",
@@ -3048,7 +3057,7 @@ def retr_CO2_CCS(units_emi, units_ene):
     _CCS_gas_hydrogen = (
         -1.0
         * pp.emi(
-            ["h2_smr_ccs","h2_atr_ccs"],
+            ["h2_smr_ccs", "h2_atr_ccs"],
             "GWa",
             emifilter={"relation": ["CO2_Emission"]},
             emission_units=units_emi,
@@ -3076,19 +3085,19 @@ def retr_CO2_CCS(units_emi, units_ene):
 
     vars["CCS|Industrial Processes"] = _CCS_cement
 
-    #vars["Land Use"] = -pp.land_out(
+    # vars["Land Use"] = -pp.land_out(
     #    lu_out_filter={
     #        "level": ["land_use_reporting"],
     #        "commodity": ["Emissions|CO2|AFOLU|Negative"],
     #    }
-    #)
+    # )
 
-    #vars["Land Use|Afforestation"] = -pp.land_out(
+    # vars["Land Use|Afforestation"] = -pp.land_out(
     #    lu_out_filter={
     #        "level": ["land_use_reporting"],
     #        "commodity": ["Emissions|CO2|AFOLU|Afforestation"],
     #    }
-    #)
+    # )
 
     df = pp_utils.make_outputdf(vars, units_emi)
     return df
@@ -3135,7 +3144,7 @@ def retr_hfc(hfc_lst):
             "mvac_co2",
             "eth_fc_trp",
             "h2_fc_trp",
-            "h2_gas_fc_trp"
+            "h2_gas_fc_trp",
         ],
         relfilter={"relation": ["HFC_Emission"]},
     )
@@ -3264,7 +3273,16 @@ def retr_CO2emi(units_emi, units_ene_mdl):
     )
 
     _inp_all_gas_tecs = _inp_nonccs_gas_tecs + pp.inp(
-        ["gas_cc_ccs", "meth_ng", "meth_ng_ccs", "h2_smr", "h2_smr_ccs","h2_atr", "h2_atr_ccs", "h2_pyrolysis"],
+        [
+            "gas_cc_ccs",
+            "meth_ng",
+            "meth_ng_ccs",
+            "h2_smr",
+            "h2_smr_ccs",
+            "h2_atr",
+            "h2_atr_ccs",
+            "h2_pyrolysis",
+        ],
         units_ene_mdl,
         inpfilter={"commodity": ["gas"]},
     )
@@ -3327,7 +3345,9 @@ def retr_CO2emi(units_emi, units_ene_mdl):
 
     _Biogas_gases_h2_comb = _Biogas_tot * (
         pp.inp(
-            ["h2_smr", "h2_smr_ccs","h2_atr", "h2_atr_ccs", "h2_pyrolysis"], units_ene_mdl, inpfilter={"commodity": ["gas"]}
+            ["h2_smr", "h2_smr_ccs", "h2_atr", "h2_atr_ccs", "h2_pyrolysis"],
+            units_ene_mdl,
+            inpfilter={"commodity": ["gas"]},
         )
         / _inp_all_gas_tecs
     ).fillna(0)
@@ -3581,10 +3601,7 @@ def retr_CO2emi(units_emi, units_ene_mdl):
     # Note that this is not included in the total because
     # the diff is only calculated from CO2_TCE and doesnt include trade
     _Other_gases_trans_comb_trade = pp.emi(
-        [
-            "LNG_trd",
-            "gas_exp"
-        ],
+        ["LNG_trd", "gas_exp"],
         units_ene_mdl,
         emifilter={"relation": ["CO2_trade"]},
         emission_units=units_emi,
@@ -3609,7 +3626,17 @@ def retr_CO2emi(units_emi, units_ene_mdl):
     #                                       emission_units=units_emi)
 
     _Other_gases_h2_comb = pp.emi(
-        ["h2_smr", "h2_coal", "h2_bio", "h2_coal_ccs", "h2_smr_ccs", "h2_bio_ccs","h2_atr", "h2_atr_ccs", "h2_pyrolysis"],
+        [
+            "h2_smr",
+            "h2_coal",
+            "h2_bio",
+            "h2_coal_ccs",
+            "h2_smr_ccs",
+            "h2_bio_ccs",
+            "h2_atr",
+            "h2_atr_ccs",
+            "h2_pyrolysis",
+        ],
         units_ene_mdl,
         emifilter={"relation": ["CO2_cc"]},
         emission_units=units_emi,
@@ -3815,78 +3842,78 @@ def retr_CO2emi(units_emi, units_ene_mdl):
     # AFOLU
     # -----
 
-    #vars["AFOLU"] = pp.land_out(
+    # vars["AFOLU"] = pp.land_out(
     #    lu_out_filter={
     #        "level": ["land_use_reporting"],
     #        "commodity": ["Emissions|CO2|AFOLU"],
     #    },
     #    units=units_emi,
-    #)
+    # )
 
-    #vars["AFOLU|Afforestation"] = pp.land_out(
+    # vars["AFOLU|Afforestation"] = pp.land_out(
     #    lu_out_filter={
     #        "level": ["land_use_reporting"],
     #        "commodity": ["Emissions|CO2|AFOLU|Afforestation"],
     #    },
     #    units=units_emi,
-    #)
+    # )
 
-    #vars["AFOLU|Agriculture"] = pp.land_out(
+    # vars["AFOLU|Agriculture"] = pp.land_out(
     #    lu_out_filter={
     #        "level": ["land_use_reporting"],
     #        "commodity": ["Emissions|CO2|AFOLU|Agriculture"],
     #    },
     #    units=units_emi,
-    #)
+    # )
 
-    #vars["AFOLU|Deforestation"] = pp.land_out(
+    # vars["AFOLU|Deforestation"] = pp.land_out(
     #    lu_out_filter={
     #        "level": ["land_use_reporting"],
     #        "commodity": ["Emissions|CO2|AFOLU|Deforestation"],
     #    },
     #    units=units_emi,
-    #)
+    # )
 
-    #vars["AFOLU|Forest Management"] = pp.land_out(
+    # vars["AFOLU|Forest Management"] = pp.land_out(
     #    lu_out_filter={
     #        "level": ["land_use_reporting"],
     #        "commodity": ["Emissions|CO2|AFOLU|Forest Management"],
     #    },
     #    units=units_emi,
-    #)
+    # )
 
-    #vars["AFOLU|Negative"] = pp.land_out(
+    # vars["AFOLU|Negative"] = pp.land_out(
     #    lu_out_filter={
     #        "level": ["land_use_reporting"],
     #        "commodity": ["Emissions|CO2|AFOLU|Negative"],
     #    },
     #    units=units_emi,
-    #)
+    # )
 
     ## This variable is used to determine the compensation quantity of GHGs
     ## from land-use to ensure that the there are non non-convexities.
-    #vars["AFOLU|Other"] = pp.land_out(
+    # vars["AFOLU|Other"] = pp.land_out(
     #    lu_out_filter={
     #        "level": ["land_use_reporting"],
     #        "commodity": ["Emissions|CO2|AFOLU|Other"],
     #    },
     #    units=units_emi,
-    #)
-    #vars["AFOLU|Other LUC"] = pp.land_out(
+    # )
+    # vars["AFOLU|Other LUC"] = pp.land_out(
     #    lu_out_filter={
     #        "level": ["land_use_reporting"],
     #        "commodity": ["Emissions|CO2|AFOLU|Other LUC"],
     #    },
     #    units=units_emi,
-    #)
+    # )
 
-    #vars["AFOLU|Positive"] = pp.land_out(
+    # vars["AFOLU|Positive"] = pp.land_out(
     #    lu_out_filter={
     #        "level": ["land_use_reporting"],
     #        "commodity": ["Emissions|CO2|AFOLU|Positive"],
     #    },
     #    units=units_emi,
-    #)
+    # )
 
     #    vars["AFOLU|Soil Carbon"] = pp.land_out(
     #        lu_out_filter={"level": ["land_use_reporting"],
@@ -3897,8 +3924,8 @@ def retr_CO2emi(units_emi, units_ene_mdl):
     # Aircraft (Table 4)
     # ------------------
 
-    #Aircraft = pp_utils._make_zero()
-    #vars["Energy|Demand|Transportation|Aviation|International"] = Aircraft
+    # Aircraft = pp_utils._make_zero()
+    # vars["Energy|Demand|Transportation|Aviation|International"] = Aircraft
 
     # -----------------------------------------
     # Electricity and heat production (Table 5)
@@ -4270,9 +4297,7 @@ def retr_CO2emi(units_emi, units_ene_mdl):
     )
 
     vars["Difference|Stock|Natural Gas"] = pp.emi(
-        [
-            "gas_imp"
-        ],
+        ["gas_imp"],
         units_ene_mdl,
         emifilter={"relation": ["CO2_Emission"]},
         emission_units=units_emi,
@@ -4332,9 +4357,7 @@ def retr_CO2emi(units_emi, units_ene_mdl):
     vars["Difference|Stock|Activity|Natural Gas"] = pp.out(
         ["gas_imp"], units_ene_mdl
     ) - pp.inp(
-        [
-            "gas_exp"
-        ],
+        ["gas_exp"],
         units_ene_mdl,
     )
 
@@ -4406,7 +4429,7 @@ def retr_SE_synfuels(units):
             units,
             outfilter={"level": ["secondary"], "commodity": ["lightoil"]},
         )
-        )
+    )
 
     vars["Liquids|Biomass|w/o CCS"] = pp.out(
         ["eth_bio", "liq_bio"],
@@ -4443,12 +4466,12 @@ def retr_SE_synfuels(units):
     )
 
     vars["Liquids|Hydrogen"] = pp.out(
-        "liq_h2" ,
+        "liq_h2",
         units,
         outfilter={"level": ["secondary"], "commodity": ["lightoil"]},
     )
-    +  pp.out(
-        "meth_h2" ,
+    +pp.out(
+        "meth_h2",
         units,
         outfilter={"level": ["secondary"], "commodity": ["methanol"]},
     )
@@ -4464,7 +4487,9 @@ def retr_SE_synfuels(units):
     )
 
     vars["Hydrogen|Gas|w/o CCS"] = pp.out(
-        ["h2_smr","h2_atr", "h2_pyrolysis"], units, outfilter={"level": ["secondary"], "commodity": ["hydrogen"]}
+        ["h2_smr", "h2_atr", "h2_pyrolysis"],
+        units,
+        outfilter={"level": ["secondary"], "commodity": ["hydrogen"]},
     )
     vars["Hydrogen|Gas|w/o CCS|SMR"] = pp.out(
         ["h2_smr"], units, outfilter={"level": ["secondary"], "commodity": ["hydrogen"]}
@@ -4473,12 +4498,13 @@ def retr_SE_synfuels(units):
         ["h2_atr"], units, outfilter={"level": ["secondary"], "commodity": ["hydrogen"]}
     )
     vars["Hydrogen|Gas|w/o CCS|Pyrolysis"] = pp.out(
-        ["h2_pyrolysis"], units, outfilter={"level": ["secondary"], "commodity": ["hydrogen"]}
+        ["h2_pyrolysis"],
+        units,
+        outfilter={"level": ["secondary"], "commodity": ["hydrogen"]},
     )
 
-
     vars["Hydrogen|Gas|w/ CCS"] = pp.out(
-        ["h2_smr_ccs","h2_atr_ccs"],
+        ["h2_smr_ccs", "h2_atr_ccs"],
         units,
         outfilter={"level": ["secondary"], "commodity": ["hydrogen"]},
     )
@@ -4492,7 +4518,6 @@ def retr_SE_synfuels(units):
         units,
         outfilter={"level": ["secondary"], "commodity": ["hydrogen"]},
     )
-
 
     vars["Hydrogen|Biomass|w/o CCS"] = pp.out(
         "h2_bio", units, outfilter={"level": ["secondary"], "commodity": ["hydrogen"]}
@@ -4510,7 +4535,7 @@ def retr_SE_synfuels(units):
     vars["Hydrogen|Storage Losses"] = pp.inp(
         "h2_stor_geo", units, inpfilter={"commodity": ["hydrogen"]}
     )
-    
+
     df = pp_utils.make_outputdf(vars, units)
     return df
 
@@ -4832,11 +4857,11 @@ def retr_SE_elecgen(units):
                 "solar_res_hist_2010",
                 "solar_res_hist_2015",
                 "solar_res_hist_2020",
-                "solar_pv_ppl"
+                "solar_pv_ppl",
             ],
             units,
         )
-        - _SolarPV_curt_inp
+        # - _SolarPV_curt_inp
     )
 
     _SolarPV_onsite = pp.out(["solar_pv_I", "solar_pv_RC"], units)
@@ -4851,7 +4876,7 @@ def retr_SE_elecgen(units):
     #     (_SolarPV_OR / (_Wind_OR + _SolarPV_OR)).fillna(0)
 
     vars["Solar|PV"] = SolarPV
-    # vars["Solar|PV|Curtailment"] = _SolarPV_curt_inp
+    vars["Solar|PV|Curtailment"] = _SolarPV_curt_inp
 
     # ---------------------
     # CSP related variables
@@ -4926,17 +4951,17 @@ def retr_SE_elecgen(units):
         inpfilter={"commodity": ["electr"]},
     )
 
-    # _Wind_onshore = _Wind_res_act - _Wind_curt_inp * (
-    #     _Wind_res_act / (_Wind_res_act + _Wind_ref_act)
-    # ).fillna(0)
+    _Wind_onshore = _Wind_res_act - _Wind_curt_inp * (
+        _Wind_res_act / (_Wind_res_act + _Wind_ref_act)
+     ).fillna(0)
 
-    _Wind_onshore = _Wind_ref_act
+    # _Wind_onshore = _Wind_ref_act
 
-    # _Wind_offshore = _Wind_ref_act - _Wind_curt_inp * (
-    #     _Wind_ref_act / (_Wind_res_act + _Wind_ref_act)
-    # ).fillna(0)
+    _Wind_offshore = _Wind_ref_act - _Wind_curt_inp * (
+         _Wind_ref_act / (_Wind_res_act + _Wind_ref_act)
+     ).fillna(0)
 
-    _Wind_offshore = _Wind_ref_act
+    # _Wind_offshore = _Wind_ref_act
 
     # _Wind = _Wind_onshore + _Wind_offshore
 
@@ -4954,7 +4979,7 @@ def retr_SE_elecgen(units):
 
     vars["Wind|Onshore"] = _Wind_onshore
     vars["Wind|Offshore"] = _Wind_offshore
-    # vars["Wind|Curtailment"] = _Wind_curt_inp
+    vars["Wind|Curtailment"] = _Wind_curt_inp
 
     vars["Hydro"] = pp.out(["hydro_lc", "hydro_hc"], units)
 
@@ -4991,7 +5016,9 @@ def retr_SE_elecgen(units):
             "h2_fc_trp", units, inpfilter={"level": ["final"], "commodity": ["electr"]}
         )
         + pp.inp(
-            "h2_gas_fc_trp", units, inpfilter={"level": ["final"], "commodity": ["electr"]}
+            "h2_gas_fc_trp",
+            units,
+            inpfilter={"level": ["final"], "commodity": ["electr"]},
         )
         + pp.inp(
             "h2_fc_I", units, inpfilter={"level": ["final"], "commodity": ["electr"]}
@@ -5261,7 +5288,11 @@ def retr_pe(units, method=None):
             inpfilter={"level": ["secondary"], "commodity": ["gas"]},
             units=units,
         )
-        + pp.inp(["gas_cc_ccs", "h2_smr_ccs","h2_atr_ccs"], units, inpfilter={"commodity": ["gas"]})
+        + pp.inp(
+            ["gas_cc_ccs", "h2_smr_ccs", "h2_atr_ccs"],
+            units,
+            inpfilter={"commodity": ["gas"]},
+        )
     )
 
     vars["Gas|w/ CCS"] = _Gas_wCCS * (1 - _BGas_share)
@@ -5404,14 +5435,15 @@ def retr_pe(units, method=None):
             # "wind_ref_hist_2015",
             # "wind_ref_hist_2020",
             "wind_ppl",
-            "wind_ppf"
+            "wind_ppf",
         ],
         units,
-    ) - pp.inp(
-        ["wind_curtailment1", "wind_curtailment2", "wind_curtailment3"],
-        units,
-        inpfilter={"commodity": ["electr"]},
-    )
+    ) 
+    # - pp.inp(
+    #     ["wind_curtailment1", "wind_curtailment2", "wind_curtailment3"],
+    #     units,
+    #     inpfilter={"commodity": ["electr"]},
+    # )
 
     if method == "substitution":
         vars["Wind"] /= elec_factor
@@ -5451,7 +5483,7 @@ def retr_pe(units, method=None):
             "solar_res_hist_2010",
             "solar_res_hist_2015",
             "solar_res_hist_2020",
-            "solar_pv_ppl"
+            "solar_pv_ppl",
         ],
         units,
     )
@@ -5916,7 +5948,7 @@ def retr_pe(units, method=None):
         # -----------------------------------
         # Primary Energy from biomass (other)
         # -----------------------------------
-        '''
+        """
         vars["Biomass|1st Generation"] = pp.land_out(
             lu_out_filter={
                 "level": ["land_use_reporting"],
@@ -5998,7 +6030,7 @@ def retr_pe(units, method=None):
                 "commodity": ["Primary Energy|Biomass|Roundwood harvest"],
             }
         )
-        '''
+        """
         vars["Biomass|Traditional"] = pp.inp("biomass_nc", units)
 
         # ----------------------------------------------------
@@ -6068,7 +6100,9 @@ def retr_pe(units, method=None):
         vars["Gas|Heat"] = pp.inp("gas_hpl", units)
 
         vars["Gas|Hydrogen"] = pp.inp(
-            ["h2_smr", "h2_smr_ccs","h2_atr", "h2_atr_ccs", "h2_pyrolysis"], units, inpfilter={"commodity": ["gas"]}
+            ["h2_smr", "h2_smr_ccs", "h2_atr", "h2_atr_ccs", "h2_pyrolysis"],
+            units,
+            inpfilter={"commodity": ["gas"]},
         )
 
         vars["Gas|Liquids"] = pp.inp(
@@ -6310,8 +6344,8 @@ def retr_ppl_capparameters(prmfunc, units):
     vars["Hydrogen|Coal|w/ CCS"] = prmfunc("h2_coal_ccs")
     vars["Hydrogen|Coal|w/o CCS"] = prmfunc("h2_coal")
     vars["Hydrogen|Electricity"] = prmfunc("h2_elec")
-    vars["Hydrogen|Gas|w/ CCS"] = prmfunc(["h2_smr_ccs","h2_atr_ccs"])
-    vars["Hydrogen|Gas|w/o CCS"] = prmfunc(["h2_smr","h2_atr","h2_pyrolysis"])
+    vars["Hydrogen|Gas|w/ CCS"] = prmfunc(["h2_smr_ccs", "h2_atr_ccs"])
+    vars["Hydrogen|Gas|w/o CCS"] = prmfunc(["h2_smr", "h2_atr", "h2_pyrolysis"])
 
     # ["Note": "Ethanol synthesis via biomass gasification with CCS"]
     vars["Liquids|Biomass|w/ CCS|1"] = prmfunc("eth_bio_ccs")
@@ -6447,8 +6481,10 @@ def retr_ppl_parameters(prmfunc, units):
     vars["Hydrogen|Coal|w/ CCS"] = prmfunc("h2_coal_ccs", units=units)
     vars["Hydrogen|Coal|w/o CCS"] = prmfunc("h2_coal", units=units)
     vars["Hydrogen|Electricity"] = prmfunc("h2_elec", units=units)
-    vars["Hydrogen|Gas|w/ CCS"] = prmfunc(["h2_smr_ccs","h2_atr_ccs"], units=units)
-    vars["Hydrogen|Gas|w/o CCS"] = prmfunc(["h2_smr","h2_atr","h2_pyrolysis"], units=units)
+    vars["Hydrogen|Gas|w/ CCS"] = prmfunc(["h2_smr_ccs", "h2_atr_ccs"], units=units)
+    vars["Hydrogen|Gas|w/o CCS"] = prmfunc(
+        ["h2_smr", "h2_atr", "h2_pyrolysis"], units=units
+    )
 
     # ["Note": "Ethanol synthesis via biomass gasification with CCS"]
     vars["Liquids|Biomass|w/ CCS|1"] = prmfunc("eth_bio_ccs", units=units)
@@ -6677,11 +6713,14 @@ def retr_ppl_opcost_parameters(prmfunc, units):
     )
 
     vars["Hydrogen|Gas|w/ CCS"] = prmfunc(
-        ["h2_smr_ccs","h2_atr_ccs"], units=units, group=group, formatting=formatting
+        ["h2_smr_ccs", "h2_atr_ccs"], units=units, group=group, formatting=formatting
     )
 
     vars["Hydrogen|Gas|w/o CCS"] = prmfunc(
-        ["h2_smr","h2_atr","h2_pyrolysis"], units=units, group=group, formatting=formatting
+        ["h2_smr", "h2_atr", "h2_pyrolysis"],
+        units=units,
+        group=group,
+        formatting=formatting,
     )
 
     # ["Note": "Ethanol synthesis via biomass gasification with CCS"]
@@ -6967,14 +7006,14 @@ def retr_eff_parameters(units):
     )
 
     vars["Hydrogen|Gas|w/ CCS"] = pp.eff(
-        ["h2_smr_ccs","h2_atr_ccs"],
+        ["h2_smr_ccs", "h2_atr_ccs"],
         inpfilter={"commodity": ["gas", "electr"]},
         outfilter=outfilter,
         formatting="reporting",
     )
 
     vars["Hydrogen|Gas|w/o CCS"] = pp.eff(
-        ["h2_smr","h2_atr","h2_pyrolysis"],
+        ["h2_smr", "h2_atr", "h2_pyrolysis"],
         inpfilter={"commodity": ["gas", "electr"]},
         outfilter=outfilter,
         formatting="reporting",
@@ -7203,7 +7242,7 @@ def retr_fe(units):
     OnsitePVIND = pp.out("solar_pv_I", units)
     DheatIND = pp.inp("heat_i", units)
     SolThermIND = pp.out("solar_i", units)
-    H2Ind = pp.inp(["h2_i", "h2_fc_I"], units) 
+    H2Ind = pp.inp(["h2_i", "h2_fc_I"], units)
     # Add blended hydrogen in industry
     H2INDBlend = _Hydrogen_ind
 
@@ -7260,11 +7299,11 @@ def retr_fe(units):
     SolThermRC = pp.out("solar_rc", units)
 
     H2rc = pp.inp(
-            ["h2_rc", "h2_fc_RC"],
-            #  "h2_fc_trp","h2_gas_fc_trp"],
-            units,
-            inpfilter={"level": ["final"], "commodity": ["hydrogen"]},
-        )
+        ["h2_rc", "h2_fc_RC"],
+        #  "h2_fc_trp","h2_gas_fc_trp"],
+        units,
+        inpfilter={"level": ["final"], "commodity": ["hydrogen"]},
+    )
 
     H2rc_blend = _Hydrogen_res
     BiomassNC = pp.inp("biomass_nc", units)
@@ -7310,11 +7349,13 @@ def retr_fe(units):
         pp.inp("h2_fc_trp", units, inpfilter={"level": ["final"], "commodity": ["lh2"]})
         + _Hydrogen_trp
     )
-    
-    H2gastrp = (
-        pp.inp("h2_gas_fc_trp", units, inpfilter={"level": ["final"], "commodity": ["hydrogen"]})
+
+    H2gastrp = pp.inp(
+        "h2_gas_fc_trp",
+        units,
+        inpfilter={"level": ["final"], "commodity": ["hydrogen"]},
     )
-	
+
     H2TRP_shipping = pp.inp("LH2_bunker", units)
 
     vars["Transportation|Electricity"] = ElecTRP
@@ -7322,10 +7363,10 @@ def retr_fe(units):
     vars["Transportation|Gases|Shipping"] = GasTRP_shipping
     vars["Transportation|Hydrogen"] = H2trp + H2TRP_shipping + H2gastrp
     vars["Transportation|Hydrogen|Shipping"] = H2TRP_shipping
-    vars["Transportation|Liquids|Biomass"] = EthTRP + EthTRP_shipping
-    vars["Transportation|Liquids|Biomass|Shipping"] = EthTRP_shipping
-    vars["Transportation|Liquids|Coal"] = MethTRP + MethTRP_shipping
-    vars["Transportation|Liquids|Coal|Shipping"] = MethTRP_shipping
+    vars["Transportation|Liquids|Ethanol"] = EthTRP + EthTRP_shipping
+    vars["Transportation|Liquids|Methanol|Shipping"] = EthTRP_shipping
+    vars["Transportation|Liquids|Methanol"] = MethTRP + MethTRP_shipping
+    vars["Transportation|Liquids|Methanol|Shipping"] = MethTRP_shipping
 
     vars["Transportation|Liquids|Oil"] = (
         OilTRP + OilTRP_shipping_foil + OilTRP_shipping_loil
@@ -7425,21 +7466,16 @@ def retr_trade(units_energy, units_CPrc_co2, units_emi_val, units_emi_vol):
 
     _Gas_total = pp.out(["LNG_imp", "gas_imp"], units=units_energy) - pp.inp(
         [
-            "gas_exp"
-            "LNG_exp",
+            "gas_exp" "LNG_exp",
         ],
         units=units_energy,
     )
 
     _Elec_total = pp.out(
-        [
-            "elec_imp"
-        ],
+        ["elec_imp"],
         units=units_energy,
     ) - pp.inp(
-        [
-            "elec_exp"
-        ],
+        ["elec_exp"],
         units=units_energy,
     )
 
@@ -7946,7 +7982,7 @@ def retr_supply_inv(units_energy, units_emi, units_ene_mdl):
     )
 
     _CCS_gas_synf = -1 * pp.emi(
-        ["h2_smr_ccs","h2_atr_ccs", "meth_ng_ccs"],
+        ["h2_smr_ccs", "h2_atr_ccs", "meth_ng_ccs"],
         units_ene_mdl,
         emifilter={"relation": ["CO2_Emission"]},
         emission_units=units_emi,
@@ -8056,7 +8092,9 @@ def retr_supply_inv(units_energy, units_emi, units_ene_mdl):
     )
 
     _Coal_synf_ccs_h2 = pp.investment("h2_coal_ccs", units=units_energy) * 0.03
-    _Gas_synf_ccs_h2 = pp.investment(["h2_smr_ccs","h2_atr_ccs"], units=units_energy) * 0.17
+    _Gas_synf_ccs_h2 = (
+        pp.investment(["h2_smr_ccs", "h2_atr_ccs"], units=units_energy) * 0.17
+    )
     _Bio_synf_ccs_h2 = pp.investment("h2_bio_ccs", units=units_energy) * 0.02
 
     # Note OFR 25.04.2017: "coal_gas" have been moved to "other"
@@ -8110,9 +8148,11 @@ def retr_supply_inv(units_energy, units_emi, units_ene_mdl):
     # --------
 
     vars["Hydrogen|Fossil"] = (
-        pp.investment(["h2_coal", "h2_smr","h2_atr","h2_pyrolysis"], units=units_energy)
+        pp.investment(
+            ["h2_coal", "h2_smr", "h2_atr", "h2_pyrolysis"], units=units_energy
+        )
         + pp.investment("h2_coal_ccs", units=units_energy) * 0.97
-        + pp.investment(["h2_smr_ccs","h2_atr_ccs"], units=units_energy) * 0.83
+        + pp.investment(["h2_smr_ccs", "h2_atr_ccs"], units=units_energy) * 0.83
         + _Coal_synf_ccs_h2
         + _Gas_synf_ccs_h2
     )
@@ -8122,18 +8162,17 @@ def retr_supply_inv(units_energy, units_emi, units_ene_mdl):
         + _Coal_synf_ccs_h2
     )
     vars["Hydrogen|Fossil|Gas|SMR"] = (
-       pp.investment(["h2_smr"], units=units_energy)
+        pp.investment(["h2_smr"], units=units_energy)
         + pp.investment(["h2_smr_ccs"], units=units_energy) * 0.83
         + _Gas_synf_ccs_h2
     )
     vars["Hydrogen|Fossil|Gas|ATR"] = (
-       pp.investment(["h2_atr"], units=units_energy)
+        pp.investment(["h2_atr"], units=units_energy)
         + pp.investment(["h2_atr_ccs"], units=units_energy) * 0.83
     )
-    vars["Hydrogen|Fossil|Gas|Pyrolosis"] = (
-       pp.investment(["h2_pyrolysis"], units=units_energy)
+    vars["Hydrogen|Fossil|Gas|Pyrolosis"] = pp.investment(
+        ["h2_pyrolysis"], units=units_energy
     )
-
 
     vars["Hydrogen|Renewable|Biomass"] = (
         pp.investment("h2_bio", units=units_energy)
@@ -8157,39 +8196,30 @@ def retr_supply_inv(units_energy, units_emi, units_ene_mdl):
         )
         + pp.act_vom("h2_mix", units=units_energy) * 0.5
     )
-    vars["Hydrogen|Other|Electrolyzer"] = (
-        pp.investment(
-            [
-                "h2_elec",
-            ],
-            units=units_energy,
-        )
+    vars["Hydrogen|Other|Electrolyzer"] = pp.investment(
+        [
+            "h2_elec",
+        ],
+        units=units_energy,
     )
-    vars["Hydrogen|Other|Blend"] = (
-        pp.act_vom("h2_mix", units=units_energy) * 0.5
+    vars["Hydrogen|Other|Blend"] = pp.act_vom("h2_mix", units=units_energy) * 0.5
+    vars["Hydrogen|Other|Liquefaction"] = pp.investment(
+        [
+            "h2_liq",
+        ],
+        units=units_energy,
     )
-    vars["Hydrogen|Other|Liquefaction"] = (
-        pp.investment(
-            [
-                "h2_liq",
-            ],
-            units=units_energy,
-        )
+    vars["Hydrogen|Other|Infrastructure"] = pp.investment(
+        [
+            "h2_t_d",
+            "lh2_exp",
+            "lh2_imp",
+            "lh2_bal",
+            "lh2_regas",
+            "lh2_t_d",
+        ],
+        units=units_energy,
     )
-    vars["Hydrogen|Other|Infrastructure"] = (
-        pp.investment(
-            [
-                "h2_t_d",
-                "lh2_exp",
-                "lh2_imp",
-                "lh2_bal",
-                "lh2_regas",
-                "lh2_t_d",
-            ],
-            units=units_energy,
-        )
-    )
-
 
     # -----
     # Other
@@ -8846,7 +8876,7 @@ def retr_water_use(units, method):
             inpfilter=inpfilter,
             outfilter={"commodity": "electr"},
         )
-        + _out_div_eff(["h2_smr_ccs","h2_atr_ccs"], group, inpfilter, outfilter)
+        + _out_div_eff(["h2_smr_ccs", "h2_atr_ccs"], group, inpfilter, outfilter)
     )
 
     vars["Electricity|Gas|w/ CCS"] = (_Direct_ele_gas_wCCS + _Cooling_ele_gas_wCCS) * (
@@ -8892,7 +8922,9 @@ def retr_water_use(units, method):
             inpfilter=inpfilter,
             outfilter={"commodity": "electr"},
         )
-        + _out_div_eff(["h2_smr","h2_atr","h2_pyrolysis"], group, inpfilter, outfilter)
+        + _out_div_eff(
+            ["h2_smr", "h2_atr", "h2_pyrolysis"], group, inpfilter, outfilter
+        )
     )
 
     vars["Electricity|Gas|w/o CCS"] = (
@@ -9479,11 +9511,11 @@ def retr_water_use(units, method):
     )
 
     vars["Hydrogen|Gas|w/ CCS"] = _out_div_eff(
-        ["h2_smr_ccs","h2_atr_ccs"], group, inpfilter, hydrogen_outputfilter
+        ["h2_smr_ccs", "h2_atr_ccs"], group, inpfilter, hydrogen_outputfilter
     )
 
     vars["Hydrogen|Gas|w/o CCS"] = _out_div_eff(
-        ["h2_smr","h2_atr","h2_pyrolysis"], group, inpfilter, hydrogen_outputfilter
+        ["h2_smr", "h2_atr", "h2_pyrolysis"], group, inpfilter, hydrogen_outputfilter
     )
 
     vars["Hydrogen|Electricity"] = _out_div_eff(
@@ -9508,11 +9540,11 @@ def retr_water_use(units, method):
         )
 
         vars["Hydrogen|Gas|w/ CCS"] -= pp.act_emif(
-            ["h2_smr_ccs","h2_atr_ccs"], units=units, emiffilter=emiffilter
+            ["h2_smr_ccs", "h2_atr_ccs"], units=units, emiffilter=emiffilter
         )
 
         vars["Hydrogen|Gas|w/o CCS"] -= pp.act_emif(
-            ["h2_smr","h2_atr","h2_pyrolysis"], units=units, emiffilter=emiffilter
+            ["h2_smr", "h2_atr", "h2_pyrolysis"], units=units, emiffilter=emiffilter
         )
 
         vars["Hydrogen|Electricity"] -= pp.act_emif(
@@ -9523,7 +9555,7 @@ def retr_water_use(units, method):
     # Irrigation water use
     # --------------------
 
-    #vars["Irrigation"] = (
+    # vars["Irrigation"] = (
     #    pp.land_out(
     #        lu_out_filter={
     #            "level": ["land_use_reporting"],
@@ -9531,9 +9563,9 @@ def retr_water_use(units, method):
     #        }
     #    )
     #    * 0.001
-    #)
+    # )
 
-    #vars["Irrigation|Cereals"] = (
+    # vars["Irrigation|Cereals"] = (
     #    pp.land_out(
     #        lu_out_filter={
     #            "level": ["land_use_reporting"],
@@ -9541,9 +9573,9 @@ def retr_water_use(units, method):
     #        }
     #    )
     #    * 0.001
-    #)
+    # )
 
-    #vars["Irrigation|Oilcrops"] = (
+    # vars["Irrigation|Oilcrops"] = (
     #    pp.land_out(
     #        lu_out_filter={
     #            "level": ["land_use_reporting"],
@@ -9551,9 +9583,9 @@ def retr_water_use(units, method):
     #        }
     #    )
     #    * 0.001
-    #)
+    # )
 
-    #vars["Irrigation|Sugarcrops"] = (
+    # vars["Irrigation|Sugarcrops"] = (
     #    pp.land_out(
     #        lu_out_filter={
     #            "level": ["land_use_reporting"],
@@ -9561,7 +9593,7 @@ def retr_water_use(units, method):
     #        }
     #    )
     #    * 0.001
-    #)
+    # )
 
     if method == "consumption":
         vars["Irrigation"] = pp_utils._make_zero()
@@ -9657,4 +9689,3 @@ def retr_water_use(units, method):
 
     df = pp_utils.make_outputdf(vars, units)
     return df
-

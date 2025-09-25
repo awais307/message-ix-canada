@@ -4,28 +4,31 @@ from typing import Optional
 
 import pandas as pd
 import yaml
-from yaml.loader import SafeLoader
 from message_ix_models import Context
 from message_ix_models.util import package_data_path
-from message_ix_models.util.compat.message_data.get_historical_years import main as get_historical_years
+from message_ix_models.util.compat.message_data.get_historical_years import (
+    main as get_historical_years,
+)
 from message_ix_models.util.compat.message_data.get_nodes import get_nodes
-from message_ix_models.util.compat.message_data.get_optimization_years import main as get_optimization_years
+from message_ix_models.util.compat.message_data.get_optimization_years import (
+    main as get_optimization_years,
+)
 from message_ix_models.util.compat.message_data.utilities import retrieve_region_mapping
+from yaml.loader import SafeLoader
 
-from . import postprocess 
-from . import pp_utils
-from . import default_tables_static
+from . import default_tables_static, postprocess, pp_utils
 
 log = logging.getLogger(__name__)
 
 
 def report_to_xl(dfs):
-    with pd.ExcelWriter("test_report.xlsx", engine='xlsxwriter') as writer:
+    with pd.ExcelWriter("test_report.xlsx", engine="xlsxwriter") as writer:
         for i, df in dfs.items():
             if not df.empty:
                 # Write each DataFrame to a different sheet in the Excel file
                 sheet_name = i  # Create a unique sheet name (Sheet1, Sheet2, etc.)
                 df.to_excel(writer, sheet_name=sheet_name, index=False)
+
 
 def report(
     mp,
@@ -295,12 +298,14 @@ def report(
         default_tables_static.pp = pp
         default_tables_static.mu = mu
         try:
-            return getattr(default_tables_static, run_tables[i]["function"])(**run_tables[i]["args"])
+            return getattr(default_tables_static, run_tables[i]["function"])(
+                **run_tables[i]["args"]
+            )
         except Exception as e:
             print(e)
             return pd.DataFrame()
-        #func_dict[run_tables[i]["function"]](**run_tables[i]["args"])
-    
+        # func_dict[run_tables[i]["function"]](**run_tables[i]["args"])
+
     dfs = {}
     for i in run_tables:
         if run_tables[i]["active"] is True:
@@ -312,11 +317,11 @@ def report(
                 continue
             if "args" in run_tables[i]:
                 dfs[i] = call_tables(i)
-            #dfs[i] = (
+            # dfs[i] = (
             #    func_dict[run_tables[i]["function"]]()
             #    if "args" not in run_tables[i]
             #    else call_tables(i)
-            #)
+            # )
 
     # ---------------------------------
     # Convert dataframes to IAMC-format
@@ -369,7 +374,9 @@ def report(
         if not dfs[i].empty:
             if run_tables[i]["root"] == "Emissions|HFC":
                 df.append(
-                    pp_utils.iamc_it(dfs[i], run_tables[i]["root"], mapping, rm_totals=True)
+                    pp_utils.iamc_it(
+                        dfs[i], run_tables[i]["root"], mapping, rm_totals=True
+                    )
                 )
             else:
                 df.append(pp_utils.iamc_it(dfs[i], run_tables[i]["root"], mapping))
@@ -445,14 +452,14 @@ def report(
     if not out_dir.exists():
         out_dir.mkdir()
 
-    ## code for changing negative values to positive 
-    #index = 0
-    #for col in range(9):
+    ## code for changing negative values to positive
+    # index = 0
+    # for col in range(9):
     #    for index in range(df.shape[0]):
     #        if df.iloc[index, col] < 0:
     #            df.iloc[index, col] = df.iloc[index, col] * -1
-                
-    path_name = pp_utils.write_xlsx(df, out_dir, out_file_timestamp, IDEA_format)
-    
+
+    path_name = pp_utils.write_xlsx(scen, df, out_dir, out_file_timestamp, IDEA_format)
+
     # Return the reeport as a dataframe
     return df, path_name
