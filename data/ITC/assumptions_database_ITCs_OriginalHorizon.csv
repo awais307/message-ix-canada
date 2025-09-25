@@ -1,0 +1,56 @@
+variable,region,time,value,unit,source
+Input|Policy|ITCs|CCUS,Canada,2022,50,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/carbon-capture-itc.html
+Input|Policy|ITCs|CCUS,Canada,2023,50,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/carbon-capture-itc.html
+Input|Policy|ITCs|CCUS,Canada,2024,50,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/carbon-capture-itc.html
+Input|Policy|ITCs|CCUS,Canada,2025,50,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/carbon-capture-itc.html
+Input|Policy|ITCs|CCUS,Canada,2026,50,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/carbon-capture-itc.html
+Input|Policy|ITCs|CCUS,Canada,2027,50,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/carbon-capture-itc.html
+Input|Policy|ITCs|CCUS,Canada,2028,50,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/carbon-capture-itc.html
+Input|Policy|ITCs|CCUS,Canada,2029,50,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/carbon-capture-itc.html
+Input|Policy|ITCs|CCUS,Canada,2030,50,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/carbon-capture-itc.html
+Input|Policy|ITCs|CCUS,Canada,2031,25,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/carbon-capture-itc.html
+Input|Policy|ITCs|CCUS,Canada,2032,25,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/carbon-capture-itc.html
+Input|Policy|ITCs|CCUS,Canada,2033,25,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/carbon-capture-itc.html
+Input|Policy|ITCs|CCUS,Canada,2034,25,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/carbon-capture-itc.html
+Input|Policy|ITCs|CCUS,Canada,2035,25,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/carbon-capture-itc.html
+Input|Policy|ITCs|CCUS,Canada,2036,25,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/carbon-capture-itc.html
+Input|Policy|ITCs|CCUS,Canada,2037,25,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/carbon-capture-itc.html
+Input|Policy|ITCs|CCUS,Canada,2038,25,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/carbon-capture-itc.html
+Input|Policy|ITCs|CCUS,Canada,2039,25,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/carbon-capture-itc.html
+Input|Policy|ITCs|CCUS,Canada,2040,25,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/carbon-capture-itc.html
+Input|Policy|ITCs|Clean Technology,Canada,2023,30,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-technology-itc.html
+Input|Policy|ITCs|Clean Technology,Canada,2024,30,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-technology-itc.html
+Input|Policy|ITCs|Clean Technology,Canada,2025,30,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-technology-itc.html
+Input|Policy|ITCs|Clean Technology,Canada,2026,30,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-technology-itc.html
+Input|Policy|ITCs|Clean Technology,Canada,2027,30,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-technology-itc.html
+Input|Policy|ITCs|Clean Technology,Canada,2028,30,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-technology-itc.html
+Input|Policy|ITCs|Clean Technology,Canada,2029,30,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-technology-itc.html
+Input|Policy|ITCs|Clean Technology,Canada,2030,30,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-technology-itc.html
+Input|Policy|ITCs|Clean Technology,Canada,2031,30,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-technology-itc.html
+Input|Policy|ITCs|Clean Technology,Canada,2032,30,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-technology-itc.html
+Input|Policy|ITCs|Clean Technology,Canada,2033,30,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-technology-itc.html
+Input|Policy|ITCs|Clean Technology,Canada,2034,15,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-technology-itc.html
+Input|Policy|ITCs|Clean Hydrogen,Canada,2023,40,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-hydrogen-itc.html
+Input|Policy|ITCs|Clean Hydrogen,Canada,2024,40,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-hydrogen-itc.html
+Input|Policy|ITCs|Clean Hydrogen,Canada,2025,40,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-hydrogen-itc.html
+Input|Policy|ITCs|Clean Hydrogen,Canada,2026,40,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-hydrogen-itc.html
+Input|Policy|ITCs|Clean Hydrogen,Canada,2027,40,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-hydrogen-itc.html
+Input|Policy|ITCs|Clean Hydrogen,Canada,2028,40,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-hydrogen-itc.html
+Input|Policy|ITCs|Clean Hydrogen,Canada,2029,40,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-hydrogen-itc.html
+Input|Policy|ITCs|Clean Hydrogen,Canada,2030,40,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-hydrogen-itc.html
+Input|Policy|ITCs|Clean Hydrogen,Canada,2031,40,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-hydrogen-itc.html
+Input|Policy|ITCs|Clean Hydrogen,Canada,2032,40,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-hydrogen-itc.html
+Input|Policy|ITCs|Clean Hydrogen,Canada,2033,40,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-hydrogen-itc.html
+Input|Policy|ITCs|Clean Hydrogen,Canada,2034,20,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-hydrogen-itc.html
+Input|Policy|ITCs|Clean Technology Manufacturing,Canada,2023,30,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-technology-manufacturing-itc.html
+Input|Policy|ITCs|Clean Technology Manufacturing,Canada,2024,30,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-technology-manufacturing-itc.html
+Input|Policy|ITCs|Clean Technology Manufacturing,Canada,2025,30,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-technology-manufacturing-itc.html
+Input|Policy|ITCs|Clean Technology Manufacturing,Canada,2026,30,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-technology-manufacturing-itc.html
+Input|Policy|ITCs|Clean Technology Manufacturing,Canada,2027,30,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-technology-manufacturing-itc.html
+Input|Policy|ITCs|Clean Technology Manufacturing,Canada,2028,30,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-technology-manufacturing-itc.html
+Input|Policy|ITCs|Clean Technology Manufacturing,Canada,2029,30,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-technology-manufacturing-itc.html
+Input|Policy|ITCs|Clean Technology Manufacturing,Canada,2030,30,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-technology-manufacturing-itc.html
+Input|Policy|ITCs|Clean Technology Manufacturing,Canada,2031,30,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-technology-manufacturing-itc.html
+Input|Policy|ITCs|Clean Technology Manufacturing,Canada,2032,20,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-technology-manufacturing-itc.html
+Input|Policy|ITCs|Clean Technology Manufacturing,Canada,2033,10,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-technology-manufacturing-itc.html
+Input|Policy|ITCs|Clean Technology Manufacturing,Canada,2034,5,%,https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/business-tax-credits/clean-economy-itc/clean-technology-manufacturing-itc.html

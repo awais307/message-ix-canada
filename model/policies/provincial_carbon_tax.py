@@ -4,7 +4,6 @@ including hydrogen shares, federal carbon tax, coal phase-out, investment tax cr
 """
 
 import pandas as pd
-import numpy as np
 from pathlib import Path
 
 def add_provincial_carbon_tax(scenario, province):
@@ -22,4 +21,14 @@ def add_provincial_carbon_tax(scenario, province):
     Returns:
         None
     """
+    #TODO: At the moment, it reads in a file with a fixed tax for each province. we need to
+    # mod this to be dynamic for different prices. 
+
+    # Read in the carbon tax rates for each province
+    #TODO Fix the path
+    df = pd.read_csv(Path('data')/'carbon_tax_rates.csv')
+    # Fix the scenario 
+    scenario.add_par('tax_emission', df)
+    
+    scenario.commit('Add carbon tax to the scenario')
     pass
