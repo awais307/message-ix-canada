@@ -27,7 +27,7 @@ This page provides an **overview of the repository structure** and **automatical
 The following scripts define policy constraints such as **carbon tax, emissions limits, renewable targets, and investment incentives**.
 
 ::: model.policies.apply_renewable_potential
-::: model.policies.bound_emissions
+<!-- ::: model.policies.bound_emissions -->
 ::: model.policies.bound_renewables
 ::: model.policies.coal_phase_out
 ::: model.policies.demand_reduction

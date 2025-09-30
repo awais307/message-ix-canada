@@ -18,7 +18,7 @@ A list of a MESSAGEix technologies mapped to create standards can be found below
 | ------------------------------------------------------- | ----------------------------- | --------------------------------------------------- |
 | **Mining & Ore Processing, Coal, Sub-bituminous** | coal_extr                     | Coal extraction                                     |
 | **Electricity Generation, Solid Fuels**           | coal_ppl                      | Coal power plant                                    |
-| **Oil & Gas, Natural Gas, Pipieline Quality**     | gas_extr_3                    | Natural Gas extraction from ...                     |
+| **Oil & Gas, Natural Gas, Pipieline Quality**     | gas_extr_3                    | Natural Gas extraction, Cat III.                     |
 | **Final Energy, Industry, Feedstock**             | gas_fs                        | Natural Gas as an industry feedstock                |
 | **Final Energy, Industry**                        | gas_i                         | Natural Gas use in industrial applications          |
 | **Electricity Generation, Gaseous Fuels, New**    | gas_ppl                       | Natural Gas power plant                             |
@@ -27,7 +27,7 @@ A list of a MESSAGEix technologies mapped to create standards can be found below
 | **Oil & Gas, Natural Gas, Liquids**               | LNG_regas                     | Gasification of liquid natural gas                  |
 | **Electricity Generation, Liquid Fuels**          | loil_ppl                      | Light oil power plant                               |
 | **Chemical, Petrochemicals, High Value**          | meth_ng                       | Methanol production from natural gas                |
-| **Oil & Gas, Crude Oil ,Heavys**                  | oil_extr_3                    | Oil extraction from ...                             |
+| **Oil & Gas, Crude Oil ,Heavys**                  | oil_extr_3                    | Crude Oil extraction                             |
 
 The difference between the OBPS emission standard and a technologies emission intensity is the payable emission intensity. For years after 2023, the OBPS standard is decreased by a legislated and mapped tightening rate to further tax applicable tachnologies in the model, as the policy was designed. For model years past 2035, it is assumed that the policy remains active and tightening rates continue to grow following the same trends as before 2035. However, as with many other aspects of the model, users have the ability to vary the tightening rates to explore future scenarios. Where applicable, provinces that have specified their own standards and tightening rates have been mapped and applied. This includes Alberta, British Columbia, New Brunswick, Nova Scotia, Newfoundland and Labrador, Ontario, and Saskatchewan.
 
@@ -40,30 +40,30 @@ This payable emission intensity is then multiplied by the federal carbon price t
 As MESSAGEix-Canada is unable to depict revenue streams, credits must be depicted a different way. When OBPS mapped technologies have a lower emission intensity then the OBPS emission standards a negative “receivable emission intensity” can be defined. The amount of “payable” and “receivable” emission intensities can then be tracked. Through an iterative process, the credit price was varied until supply and demand of credits roughly matched in the model results.
 
 
-# Canada Electricity Regulation (CER) Implementation in MESSAGEix-Canada
+## *Canada Electricity Regulation (CER)*
 
-## Overview
+### Overview
 
 This documentation explains the integration of the **Canada Electricity Regulation (CER)** in the MESSAGEix-Canada energy system model. The CER policy enforces a direct emission intensity limit on electricity generation technologies and allows offset credit purchases to partially comply with the regulation. This implementation reflects the design principles of Canada's  **Clean Electricity Regulations** , as well as regional policy variants from provinces such as **British Columbia (BC)** and  **Alberta** .
 
-## Objective
+### Objective
 
 Ensure that electricity generation emissions remain within a specified emission intensity threshold (e.g., tCO₂/MWh), while enabling partial compliance through the use of  **carbon offset credits** .
 
 ---
 
-## Methodology
+### Methodology
 
-### 1. Relation Setup
+#### 1. Relation Setup
 
 Two new relations are introduced:
 
 * `cer_direct_emission_intensity` → Enforces the main emissions intensity constraint.
 * `cer_offset_limit` → Limits the maximum share of emissions that can be offset using purchased credits.
 
-### 2. Relation Construction
+#### 2. Relation Construction
 
-#### a. Emission Intensity Constraint
+##### a. Emission Intensity Constraint
 
 For each emitting technology:
 
@@ -78,7 +78,7 @@ This defines a linear inequality:
 
 Example: If λ = 0.065 tCO₂/MWh, it is transformed to 0.5694 MtC/GWyr.
 
-#### b. Offset Contribution Constraint
+##### b. Offset Contribution Constraint
 
 Offsets are included with **+1** values in the `cer_direct_emission_intensity` relation. Additionally, the `cer_offset_limit` relation limits the contribution of offset purchases:
 
@@ -91,7 +91,7 @@ This is applied by:
 * **+1** for offset technologies
 * **-0.1 * λ** for electricity-generating technologies
 
-### 3. Bound Setup
+#### 3. Bound Setup
 
 Both relations are given a hard constraint by setting:
 
@@ -104,7 +104,7 @@ This ensures emissions must stay within the permissible limit, including the off
 
 ---
 
-## Provincial Carbon Prices for Offsets
+### Provincial Carbon Prices for Offsets
 
 | Province         | CAD/tCO₂ (2025) | USD2010/tCO₂ |
 | ---------------- | ---------------- | ------------- |
@@ -116,7 +116,7 @@ This ensures emissions must stay within the permissible limit, including the off
 
 These are added via the `tax_emission` parameter.
 
-## References
+### References
 
 * [*Canada Clean Electricity Regulations*](https://www.canada.ca/en/services/environment/weather/climatechange/climate-plan/clean-electricity.html)
 * Alberta TIER Regulation (Add Link)
@@ -124,7 +124,7 @@ These are added via the `tax_emission` parameter.
 
 ---
 
-## Limitations
+### Limitations
 
 * **Vintaging not accounted** : The CER does not currently differentiate between newly built and existing plants based on their commissioning date.
 * **Static Thresholds** : The emission limits are hardcoded per policy design but may require updating for future policy revisions.
@@ -132,24 +132,24 @@ These are added via the `tax_emission` parameter.
 
 ---
 
-## Conclusion
+### Conclusion
 
 This implementation of the CER provides a structured and policy-aligned mechanism for regulating emissions from electricity generation, offering flexibility via offsets, and maintaining system integrity through capped compliance mechanisms. This feature allows MESSAGEix-Canada to simulate decarbonization pathways under federal and provincial constraints effectively.
 
 
-# Investment Tax Credit (ITC)
+## *Investment Tax Credit (ITC)*
 
-## 1. Policy Overview
+### 1. Policy Overview
 
 The **Federal Investment Tax Credit (ITC)** is a refundable tax credit available to corporations that make capital investments in eligible clean technologies in Canada. The ITC policy is implemented in MESSAGEix-Canada by applying technology-specific investment cost reductions, based on assumptions from the **Open Insight Assumptions Database**. These reductions are applied over the model's time horizon using predefined input files.
 
 ---
 
-## 2. Technology Scopes Covered by ITC Policy
+### 2. Technology Scopes Covered by ITC Policy
 
 The ITC implementation currently covers **three main technology scopes**. The fourth scope (Clean Technology Manufacturing) is not yet included.
 
-### 2.1 Carbon Capture, Utilization, and Storage (CCUS ITC)
+#### 2.1 Carbon Capture, Utilization, and Storage (CCUS ITC)
 
 - **Input Variable**: `Input|Policy|ITCs|CCUS`
 - **Scope**:
@@ -160,7 +160,7 @@ The ITC implementation currently covers **three main technology scopes**. The fo
 
 ---
 
-### 2.2 Clean Technology ITC
+#### 2.2 Clean Technology ITC
 
 - **Input Variable**: `Input|Policy|ITCs|Clean Technology`
 - **Scope**:
@@ -169,7 +169,7 @@ The ITC implementation currently covers **three main technology scopes**. The fo
   - **Original Horizon**: 30% (2023–2033), 15% (2034)
   - **Extended Horizon**: 30% (2023–2059), 15% (2060)
 
-### Clean Technology List and Implementation Status:
+#### Clean Technology List and Implementation Status:
 | **Technology Code**                                             | **Description**                                                                                   | **ITC Policy Implementation Status**            |
 |------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|--------------------------------------------------|
 | `wind_cv1`, `wind_cv2`, `wind_cv3`, `wind_cv4`                   | Onshore wind with flexibility requirements and firm capacity contributions. Includes quadratic systems integration costs. | Implemented                                      |
@@ -201,7 +201,7 @@ The ITC implementation currently covers **three main technology scopes**. The fo
   Technology included in the initial Clean Technology ITC input file file but not implemented due to missing required parameters (e.g., `inv_cost`) in the model.
 
 ---
-### 2.3 Clean Hydrogen ITC
+#### 2.3 Clean Hydrogen ITC
 
 - **Input Variable:** `Input|Policy|ITCs|Clean Hydrogen`
 - **Scope:**  
@@ -224,34 +224,34 @@ The **Open Insight Assumptions Database** defines four ITC value levels based on
 
 ---
 
-## 3. Limitations and Special Notes
+### 3. Limitations and Special Notes
 
-### 3.1 DAC Technologies
+#### 3.1 DAC Technologies
 
 - DAC is excluded since it is not modelled in the current version of MESSAGEix-Canada.
 - `Input|Policy|ITCs|CCUS` applies only to non-DAC CCS technologies.
 
-### 3.2 CO₂ Transport and Storage
+#### 3.2 CO₂ Transport and Storage
 
 - The eligible technology `co2_tr_dis`, which covers CO₂ transportation and disposal, does not have an associated investment cost (`inv_cost`) defined in the model. Therefore, the ITC cannot be applied to this technology.
 - Investment costs related to **CO₂ capture** are incorporated within the corresponding power plant technologies.
 
-### 3.3 Eligible Clean Technologies Without ITC Application
+#### 3.3 Eligible Clean Technologies Without ITC Application
 - The ITC cannot be applied to technologies that lack defined investment costs `inv_cost` or explicit representation in the model. These include:
   - `hp_el_rc` (electric heat pump in residential/commercial)
   - `hp_gas_rc` (natural gas heat pump in residential/commercial)
   - Small Modular Reactors (SMRs) are not modelled explicitly. Only `nuc_hc` and `nuc_lc` nuclear technologies exist; custom model modifications required for SMRs.
 
-### 3.4 Carbon Sequestration Output Variable
+#### 3.4 Carbon Sequestration Output Variable
 
 - **Output** `Carbon Sequestration|CCS|Industrial`
 represents the total CO₂ captured from industrial processes and stored geologically. This output is linked to industrial technologies that include carbon capture and storage. Since the ITC policy has already been applied to all CCS-related technologies, this output category is effectively covered under the CCS ITC policy.
 
 ---
 
-## 4. Model Implementation and Setup
+### 4. Model Implementation and Setup
 
-### 4.1 Core ITC Application Function
+#### 4.1 Core ITC Application Function
 
 - The ITC policy is activated by setting the `investment_tax_credit` flag to `true` in the `ModelSetup_CA.yaml` file.
 - The `Investment_tax_credit.py` script contains the function `add_investment_tax_credit()`. This function applies the ITC percentage deduction to the `inv_cost` parameter of eligible technologies for each model year.
@@ -262,7 +262,7 @@ represents the total CO₂ captured from industrial processes and stored geologi
 adjusted_inv_cost = inv_cost * (1 - (ITC_Value / 100))
 ```
 
-### 4.2 ITC Input Files and Time Horizons
+#### 4.2 ITC Input Files and Time Horizons
 
 The ITC policy uses CSV input files that define the percentage investment cost reduction values by technology scope and year. Two versions of these input files exist:
 
