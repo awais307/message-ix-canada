@@ -574,6 +574,7 @@ class PostProcess(object):
             index: Region, Technology (optional)
         """
         df = pp_utils._retr_emiss(self.ds, emission, type_tec).reset_index()
+        df.loc[df['Region'] == 'Canada', [2025, 2030, 2035, 2040, 2045, 2050, 2055, 2060]] = 0
         return df.groupby(group).sum(numeric_only=True)
 
     def par_MERtoPPP(self, group=["Region"]):
