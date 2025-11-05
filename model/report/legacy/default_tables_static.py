@@ -4924,13 +4924,13 @@ def retr_SE_elecgen(units):
             "wind_res_hist_2010",
             "wind_res_hist_2015",
             "wind_res_hist_2020",
+            "wind_ppl",
         ],
         units,
     )
 
     _Wind_ref_act = pp.out(
         [
-            "wind_ppl",
             "wind_ppf",
             "wind_ref1",
             "wind_ref2",
