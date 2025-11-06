@@ -7493,7 +7493,7 @@ def retr_trade(units_energy, units_CPrc_co2, units_emi_val, units_emi_vol):
 
     # Fuel consumption by international shipping in glb region
     # function aggr_glb sets all region values to the value region "World"
-    _FOil_ship = pp_utils.aggr_glb(pp.inp("foil_bunker", units=units_energy))
+    '''_FOil_ship = pp_utils.aggr_glb(pp.inp("foil_bunker", units=units_energy))
     _LOil_ship = pp_utils.aggr_glb(pp.inp("loil_bunker", units=units_energy))
     _BTL_ship = pp_utils.aggr_glb(pp.inp("eth_bunker", units=units_energy))
     _FTL_ship = pp_utils.aggr_glb(pp.inp("meth_bunker", units=units_energy))
@@ -7535,7 +7535,7 @@ def retr_trade(units_energy, units_CPrc_co2, units_emi_val, units_emi_vol):
 
     vars["Secondary Energy|Liquids|Oil|Volume"] = -1 * _Oilprod_total + -1 * (
         _FOil_ship_reg + _LOil_ship_reg
-    )
+    )'''
 
     # -----------
     # Gross trade
@@ -7555,6 +7555,7 @@ def retr_trade(units_energy, units_CPrc_co2, units_emi_val, units_emi_vol):
 
     vars["Gross Export|Primary Energy|Gas|Volume"] = pp.inp(
         [
+            "gas_exp",
             "gas_exp_nam",
             "gas_exp_weu",
             "gas_exp_eeu",

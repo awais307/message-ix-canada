@@ -3347,3 +3347,5 @@ Yield|Energy Crops,t DM/ha/yr,yield of energy crop production per unit of area
 Yield|Non-Energy Crops,t DM/ha/yr,yield of non-energy crop production per unit of area
 Yield|Oilcrops,t DM/ha/yr,"aggregated yield of Oilcrops (e.g. soybean, rapeseed, groundnut, sunflower, oilpalm)"
 Yield|Sugarcrops,t DM/ha/yr,"aggregated yield of Sugarcrops (e.g. sugarbeet, sugarcane)"
+Trade|Gross Export|Secondary Energy|Hydrogen|Volume,EJ/yr,hydrogen export
+Trade|Gross Import|Secondary Energy|Hydrogen|Volume,EJ/yr,hydrogen import
